@@ -10,6 +10,7 @@ Provides searchable access to legacy Xilinx SDK and Platform Studio documentatio
 - [Platform Studio 12.3](platform_studio_12.3/platform_studio/platform_studio_start.htm)
 - [Platform Studio 12.4](platform_studio_12.4/platform_studio/platform_studio_start.htm)
 - [Platform Studio 13.1](platform_studio_13.1/platform_studio/platform_studio_start.htm)
+- [Platform Studio 13.2](platform_studio_13.2/platform_studio/platform_studio_start.htm)
 
 # Why?
 
@@ -25,3 +26,4 @@ To find documentation for older Platform Studio and SDK releases, you must manua
 - https://download.amd.com/docnav/documents/ise/platform_studio_12.4.zip download on 03/13/2026 @ 4:25 PM MST without a login or accepting EULA.
 - https://download.amd.com/docnav/documents/ise/platform_studio_13.1.zip download on 03/13/2026 @ 4:30 PM MST without a login or accepting EULA.
 - https://download.amd.com/docnav/documents/ise/platform_studio_13.2.zip download on 03/13/2026 @ 4:40 PM MST without a login or accepting EULA.
+- https://download.amd.com/docnav/documents/ise/platform_studio_13.3.zip download on 03/13/2026 @ 4:45 PM MST without a login or accepting EULA.
