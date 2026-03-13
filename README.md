@@ -14,3 +14,4 @@ To find documentation for older Platform Studio and SDK releases, you must manua
 
 - https://download.amd.com/docnav/documents/ise/platform_studio_10.zip download on 11/4/2025 @ 10:25 AM MST without a login or accepting an EULA.
 - https://download.amd.com/docnav/documents/ise/platform_studio_11.zip download on 03/13/2026 @ 1:05 PM MST without a login or accepting an EULA.
+- https://download.amd.com/docnav/documents/ise/platform_studio_12.1.zip download on 03/13/2026 @ 1:40 PM MST without a login or accepting a EULA.
