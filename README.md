@@ -5,6 +5,7 @@ Provides searchable access to legacy Xilinx SDK and Platform Studio documentatio
 
 - [Platform Studio 10](platform_studio_10/platform_studio/platform_studio_start.htm)
 - [Platform Studio 11](platform_studio_11/platform_studio_11/platform_studio/platform_studio_start.htm)
+- [Platform Studio 12.1](platform_studio_12.1/platform_studio_12.1/platform_studio/platform_studio_start.htm)
 
 # Why?
 
