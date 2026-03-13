@@ -7,6 +7,7 @@ Provides searchable access to legacy Xilinx SDK and Platform Studio documentatio
 - [Platform Studio 11](platform_studio_11/platform_studio/platform_studio_start.htm)
 - [Platform Studio 12.1](platform_studio_12.1/platform_studio/platform_studio_start.htm)
 - [Platform Studio 12.2](platform_studio_12.2/platform_studio/platform_studio_start.htm)
+- [Platform Studio 12.3](platform_studio_12.3/platform_studio/platform_studio_start.htm)
 # Why?
 
 To find documentation for older Platform Studio and SDK releases, you must manually download a ZIP file, extract it and review the contents. If you need another version, you will need to repeat this. This repo allows you to browse or check out the entire expanded directory tree to search the entire documentation library.
