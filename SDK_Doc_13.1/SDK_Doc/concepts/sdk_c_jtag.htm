@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>JTAG settings</title>
+<link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+
+
+<body>
+
+<h1>JTAG settings</h1>
+
+<HR>
+<p>SDK communicates to the hardware over the JTAG interface for
+debugging, running, and profiling an application and for programming
+FPGA and Flash. You are required to use the Xilinx® JTAG cable or
+third-party cables that provide Xilinx® cable plug-in for communication. The following settings are required for JTAG communication.</p>
+<ul>
+  <li><strong>JTAG Cable </strong>- Xilinx provides different JTAG cable types such as Xilinx Parallel Cable and Xilinx USB Cable. You can connect multiple cables to your host machine. Use this option to select the JTAG cable to use for communication and customize the configurations. The default type of <strong>auto</strong> is recommended when only one cable is 
+  connected to your host machine.</li>
+  
+  <li><strong>3rd Party Cable</strong> - You can use a third party cable
+  manufactured by Xilinx cable partners who provide cable plug-in to
+  integrate with SDK. A list of supported cable partners is available on the Xilinx website.</li> 
+  <li><strong>Board JTAG Device Chain Definition </strong>- The hardware board can have a series of JTAG devices chained together. SDK requires the <strong>JTAG Instruction Register (IR) length</strong>, <strong>IDCODE</strong>, and<strong> position in the chain of each JTAG device</strong> for communication. SDK maintains a list of these values for 
+  Xilinx devices, but you must provide the JTAG information for non-Xilinx 
+  devices present on the board.&nbsp;</li>
+</ul>
+<p><IMG height=21 alt="Related concepts" src ="../images/ngconcepts.gif" width=143 border=0 >
+<br>
+<A href="sdk_c_over_dbg.htm">Debug overview</A><br>
+<A href="sdk_c_over_run.htm">Run overview</A><br>
+<A href="sdk_c_over_profile.htm">Profile overview</A></p>
+<p><IMG height=21 alt="Related tasks" src ="../images/ngtasks.gif" width=143 border=0 >&nbsp;
+<br>
+<A 
+href="../tasks/sdk_t_configure_jtag.htm">Configuring the JTAG settings</A><BR>
+<A href="../tasks/sdk_t_configure_fpga.htm">Programming the FPGA</A><BR>
+<A href="../tasks/sdk_t_program_flash.htm">Programming parallel Flash memory</A><BR>
+<A href="../tasks/sdk_o_debug.htm">Debugging a program</A></p>
+
+<p><IMG height=21 alt="Related reference" src ="../images/ngref.gif" width=143 border=0 ><br>
+<A href="../reference/sdk_u_configure_jtag.htm">Configure JTAG Settings dialog box</A></p>
+
+
+<p><font face="Times New Roman" color="#800000">Copyright © 1995-2011 Xilinx, Inc. All rights reserved.</font></p>
+
+</body>
+
+</html>
