@@ -22,6 +22,7 @@ Provides searchable access to legacy Xilinx SDK and Platform Studio documentatio
 - [Platform Studio 14.7](platform_studio_14.7/platform_studio/platform_studio_start.htm)
 - [SDK_Doc_11](SDK_Doc_11/SDK_Doc)
 - [SDK Doc 12.1](SDK_Doc_12.1/SDK_Doc)
+- [SDK_Doc_12.2](SDK_Doc_12.2/SDK_Doc)
 
 # Why?
 
