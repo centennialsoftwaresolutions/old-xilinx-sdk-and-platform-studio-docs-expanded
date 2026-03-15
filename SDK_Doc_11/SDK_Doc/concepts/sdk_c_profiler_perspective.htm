@@ -1,0 +1,142 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+
+<head><meta name="robots" content="noindex, nofollow" />
+	<meta http-equiv="Content-Language" content="en-us">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Views in the C/C++ perspective</title>
+	<link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+
+<body>
+<h1>Xilinx Profiler perspective</h1>
+<HR>
+<p>The  Xilinx Profiler perspective in Xilinx® SDK presents a collection of views to visualize the statistics for the
+profiled Executable and Linkable Format (ELF) file.</p>
+<h2>  Launching the Profiler perspective</h2>
+<ul>
+  <li>  SDK automatically launches the  Xilinx Profiler perspective if the <strong>Show Profile Results
+    Immediately</strong> check box is selected in the Profiler tab of the Run Configuration dialog box.</li>
+  <li> You can also launch the Xilinx Profiler perspective by selecting <strong>Window &gt; Open
+    Perspective &gt; Xilinx Profiler</strong>.</li>
+</ul>
+<h2>  Perspective overview </h2>
+<p>  The Xilinx Profiler perspective is composed of the following views:</p>
+<table width="631" border="1">
+  <tr>
+    <th width="371" scope="col">View</th>
+    <th width="244" scope="col">Default Location </th>
+  </tr>
+  <tr>
+    <td>C/C++ Projects Management View</td>
+    <td> Top left of perspective</td>
+  </tr>
+  <tr>
+    <td>C/C++ Editor View</td>
+    <td>Top middle of perspective</td>
+  </tr>
+  <tr>
+    <td>C/C++ source code Outline View</td>
+    <td>Top right of perspective</td>
+  </tr>
+</table>
+<p>The tabbed sections at the bottom of the perspective contain the following views, which are
+described further in the next sections.</p>
+<table width="631" border="1">
+  <tr>
+    <th width="371" scope="col">View</th>
+    <th width="244" scope="col">Default Location </th>
+  </tr>
+  <tr>
+    <td> 3D Bar Chart — Number of Calls View</td>
+    <td rowspan="3">Tabbed on bottom left of
+    perspective</td>
+  </tr>
+  <tr>
+    <td>3D Pie Chart — Percentage of Time Spent View</td>
+  </tr>
+  <tr>
+    <td>Time Spent in Function (Self Time) View</td>
+  </tr>
+  <tr>
+    <td>Call Table View</td>
+    <td rowspan="3"> Tabbed on bottom right of perspective</td>
+  </tr>
+  <tr>
+    <td>Flat Profile View</td>
+  </tr>
+  <tr>
+    <td>Console Window <br>
+    (to control the ELF file running on the embedded target) </td>
+  </tr>
+</table>
+<h3>3D Bar Chart — Number of Calls view</h3>
+<p>  The 3-D Bar Chart view shows the profiling result of the number of calls for each non-zero
+  call function. All the functions are shown in a graphical three-dimensional bar chart with
+  the number of calls in the Y axis and function names in the X axis.  </p>
+<p>The functions in the X axis are sorted according to the decreasing percentage of time taken,
+  so that the function on the left is taking more time than the function on the right.</p>
+<p> When you mouse over each bar, the detailed information for each function displays in a
+    tool tip. The information includes:</p>
+<ul>
+  <li>    Number of calls</li>
+  <li> Percentage of time taken</li>
+  <li> Total time taken, in seconds</li>
+  <li> Self time taken, in seconds</li>
+  <li> Self time taken per call</li>
+  <li> Total time taken per call</li>
+</ul>
+<h3>3D Pie Chart — Percentage of Time Spent view</h3>
+<p>  The 3-D Pie Chart view shows the profiling result of the percentage of time spent for each
+  non-zero function. All the functions are shown in a graphical, three-dimensional pie chart
+  with the function name and the percentage of time in the label.</p>
+<p>  When you mouse over each region, the detailed information for each function displays in
+    a tool tip. The information includes:</p>
+<ul>
+  <li>    Percentage of time spent</li>
+  <li> Total time taken, in seconds</li>
+  <li> Self time taken, in seconds</li>
+  <li> Number of calls</li>
+  <li> Self time taken per call</li>
+  <li> Total time taken per call</li>
+</ul>
+<h3>  Time Spent in Function (Self Time) view</h3>
+<p>  The Time Spent in Function view shows the profiling result of the self time spent per call in
+  each non-zero function. All the functions are shown in the Y axis of the graphical, two-dimensional
+  bar chart. The time unit is shown in the X axis.</p>
+<p>  The functions in the Y axis are sorted from top to bottom, according to the decreasing
+  percentage of time taken, which means the function on the top is taking more total time
+  than the function on the bottom.</p>
+<p>  When you point at each bar, SDK displays the detailed information for each function in a
+  tool tip. The information includes:</p>
+<ul>
+  <li>    Number of calls</li>
+  <li> Percentage of time taken</li>
+  <li> Total time taken, in seconds</li>
+  <li> Self time taken, in seconds</li>
+  <li> Number of calls</li>
+  <li> Total time taken per call</li>
+</ul>
+<h3>Call Table view</h3>
+<p>  The Call Table view shows the profiling result for all the functions for the program in a
+  table format. It also specifies the parent and child function call for a particular function.
+  This view contains a call table, and a<strong> Find</strong> field that enables you to locate the specific string
+  inside the table.</p>
+<h3>  Flat Profile view</h3>
+<p>  The Flat Profile view shows the profiling result of all the functions in a table format for the
+  program. It contains a table, as well as a Find field that enables you to find the specific
+  string inside the table.</p>
+<p><img border="0" src="../images/ngconcepts.gif" ALT="Related concepts" width="143" height="21"><br>
+<a href="sdk_c_over_profile.htm">Profile overview</a></p>
+
+
+<p><img border="0" src="../images/ngref.gif" ALT="Related reference" width="143" height="21">
+<br><a href="../reference/cdt_o_views.htm">Views</a>
+</p>
+
+<p><font face="Times New Roman" color="#800000">Copyright © 1995-2009 Xilinx, Inc. All rights reserved.</font>      
+</p>
+
+</body>
+
+</html>

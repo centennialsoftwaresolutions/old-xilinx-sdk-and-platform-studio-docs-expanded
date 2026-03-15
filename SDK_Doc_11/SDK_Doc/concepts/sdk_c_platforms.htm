@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Software Platforms</title>
+<link rel="Stylesheet" type="text/css" media="all" href="../help.css">
+</head>
+
+
+<body>
+
+<h1>Software platforms  </h1>
+
+<HR>
+<p>A <em>software platform</em> is a collection of libraries and drivers that will form
+  the lowest layer of your application software stack. Your software
+  applications must link against or run on top of a given software
+  platform using the APIs that it provides. Therefore, before you can create
+  and use software applications in SDK, you must create a software
+  platform. Xilinx® SDK includes the following two software
+  platforms:</p>
+<ul>
+  <li>
+    <b>Standalone</b> - A simple, semi-hosted and single-threaded environment
+    that provides basic features like standard input/output and access to
+    processor hardware features</li>
+  <li>
+    <b>Xilkernel</b> - A simple and lightweight kernel that provides POSIX style
+    services such as scheduling, threads, synchronization, message passing, and
+    timers</li>
+</ul>
+
+<p>
+  When a software platform is built, the following software components are
+  automatically included into the library: 
+<ul>
+    <li>Standard C Libraries (libc.a, libm.a)</li>
+    <li>Device Drivers for all the peripherals in your design (libxil.a)</li>
+</ul>
+<h3>Other libraries</h3>
+<p>
+Both Standalone and Xilkernel can work with the following libraries from the
+Xilinx software library collection:
+<ul>
+  <li>LibXil MFS   - A Memory File system</li>
+  <li>LibXil FATFS - A Xilinx SysAce-based FAT file system</li> 
+  <li>LibXil Flash - A library that provides read/write/erase/lock/unlock and
+    device specific functionalities for parallel flash devices </li> 
+  <li>LibXil Isf   - In-System-Flash library that supports the Xilinx In System
+    Flash hardware</li> 
+  <li>lwIP         - A third-party light-weight TCP/IP networking library</li>  
+</ul>
+
+<p>
+You can configure these libraries to be in or out of your software application stack.</p>
+<p>
+  In addition to the above software platforms and component libraries, many
+  third party RTOSes and middleware stacks are available and can be used in the
+  SDK environment to develop applications. For a comprehensive listing of all
+  third party offerings, refer to 
+  <a href="http://www.xilinx.com/ise/embedded/epartners/listing.htm"> 
+    http://www.xilinx.com/ise/embedded/epartners/listing.htm</a>.
+</p>
+
+<p>
+  Software platforms and their libraries can be configured in various ways in
+  the <a href="../reference/sdk_u_configure_swplat.htm">Software Platform Settings dialog box</a>. You can also have multiple software
+  platforms in your SDK workspace. This allows you to simultaneously work with
+  different kinds configurations of software platforms, as well as retarget
+  applications from one to the other.</p>
+
+
+<p>
+  <img width="143" height="21" id="_x0000_i1026" src="../images/ngconcepts.gif" alt="Related concepts" border="0"><br>
+    <a href="sdk_c_bsp.htm">Board Support Packages</a></p>
+
+<p>
+  <img border="0" width="143" height="21" id="_x0000_i1027" src="../images/ngtasks.gif" alt="Related tasks"><br>
+
+    <a href="../tasks/sdk_t_create_platform.htm">Creating a software platform</a><br>
+    <a href="../tasks/sdk_t_config_platform.htm">Configuring a software platform</a><br>      
+    <a href="../tasks/sdk_t_build_platform.htm">Building a software platform</a><br>
+    <a href="../tasks/sdk_t_install_third_party_platforms.htm">Installing third-party software components</a></p>
+
+<p><img border="0" width="143" height="21" id="_x0000_i1028" src="../images/ngref.gif" alt="Related reference"><br>
+  <a href="../reference/sdk_u_new_swplat.htm">New Software Platform Project dialog box</a></p>
+
+<p><font face="Times New Roman" color="#800000">Copyright 
+© 1995-2009 Xilinx, Inc. All rights 
+reserved.</font>      
+</p>
+
+
+</body>
+
+</html>

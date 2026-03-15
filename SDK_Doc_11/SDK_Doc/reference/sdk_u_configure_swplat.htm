@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+<head><meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="Content-Language" content="en-us">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <title>New Project Wizard - Managed Make, Name</title>
+  <link rel="stylesheet" type="text/css" href="../help.css">
+  <script language="JavaScript">
+function changeSize(theImage,wd,ht) {
+	wdth=parseInt(theImage.style.width); hght=parseInt(theImage.style.height);
+	if ( !(wdth==(wd*2)) ) {wdth=wd*2; hght=ht*2;}
+	else {wdth=wd;hght=ht;}
+	theImage.style.width=wdth; theImage.style.height=hght;
+}
+  </script>
+</head>
+<body>
+<h1>Software Platform Settings dialog box </h1>
+<HR>
+<p>In the Software Platform Settings dialog box, you can select the drivers and libraries to use in 
+the software platform and configure the parameters. To open this dialog box, select <strong>Tools &gt; Software Platform Settings</strong>. </p>
+
+<p><img src="../images/config_sw_platform_main.png"></p>
+<h2>Software Platform page</h2>
+<p>Use the Software Platform page of the Software Platform Settings dialog box to customize the processor settings and the OS and Libraries options.
+<h3>Processor Settings </h3>
+<p>The Processor Settings area of the Software Platform page contains the following functions: 
+<table border="1" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>Name</th>
+      <th>Function</th>
+    </tr>
+    <tr>
+      <td><b>CPU Driver</b></td>
+      <td>Specifies the name of the CPU driver.</td>
+    </tr>
+  <tr>
+    <td><strong>CPU Driver Version</strong></td>
+    <td>Specifies the version of the CPU driver.</td>
+  </tr>
+  <tr>
+    <td><strong>Processor Parameters</strong></td>
+    <td>Displays a list of parameters for the CPU driver.</td>
+  </tr>
+  <tr>
+    <td><BLOCKQUOTE dir=ltr style="MARGIN-RIGHT: 0px"><strong>Name</strong></BLOCKQUOTE></td>
+    <td>Name of the 
+    Parameter.</td>
+  </tr>
+  <tr>
+    <td><BLOCKQUOTE dir=ltr style="MARGIN-RIGHT: 0px"><strong>Current Value</strong></BLOCKQUOTE></td>
+    <td>User specified value. If you do not specify a value, this field contains the default value.</td>
+  </tr>
+    <tr>
+      <td><BLOCKQUOTE dir=ltr style="MARGIN-RIGHT: 0px"><b>Default Value</b></BLOCKQUOTE></td>
+      <td>Default value of
+the parameter.</td>
+    </tr>
+  <tr>
+    <td><BLOCKQUOTE dir=ltr style="MARGIN-RIGHT: 0px"><strong>Type</strong></BLOCKQUOTE></td>
+    <td>Parameter value type, such as  string, integer, bool, array, or peripheral instance.</td>
+  </tr>
+    <tr>
+      <td><BLOCKQUOTE dir=ltr style="MARGIN-RIGHT: 0px"><b>Description</b></BLOCKQUOTE></td>
+      <td>    
+     Description of the parameter.</td>
+    </tr>
+  </tbody>
+</table>
+</p>
+
+<h3> OS Version and Libraries Selection</h3>
+<p>The OS Version and Libraries Selection area of the Software Platform page contains the following functions:
+<table border="1" cellspacing="0">
+  <tbody>
+    <tr>
+      <th width="94">Name</th>
+      <th width="571">Function</th>
+    </tr>
+    <tr>
+      <td><b>OS</b></td>
+      <td>Specifies the type of software platform.</td>
+    </tr>
+  <tr>
+    <td><strong>Version</strong></td>
+    <td>      Select the version of software 
+    platform.</td>
+  </tr>
+  <tr>
+    <td><strong>Details Table </strong></td>
+    <td>Displays the details for the Libraries. </td>
+  </tr>
+  <tr>
+    <td><BLOCKQUOTE dir=ltr style="MARGIN-RIGHT: 0px"><strong>Use</strong></BLOCKQUOTE></td>
+    <td>Click to select Library checkboxes to include libraries  in the software platform.</td>
+  </tr>
+    <tr>
+      <td><BLOCKQUOTE dir=ltr style="MARGIN-RIGHT: 0px"><b>Library</b></BLOCKQUOTE></td>
+      <td>The name of
+the library.</td>
+    </tr>
+  <tr>
+    <td><BLOCKQUOTE dir=ltr style="MARGIN-RIGHT: 0px"><strong>Version</strong></BLOCKQUOTE></td>
+    <td>The version of the library.</td>
+  </tr>
+    <tr>
+      <td><BLOCKQUOTE dir=ltr style="MARGIN-RIGHT: 0px"><b>Description</b></BLOCKQUOTE></td>
+      <td>    
+     The description of the library.</td>
+    </tr>
+  </tbody>
+</table>
+<p>Click the <b>Download Partner Library Definition Files </b> button to open a Xilinx page containing partner information for various versions of libraries in your default browser.</p>
+<h2>OS and Libraries page </h2>
+Use the OS and Libraries page of the Software Platform Settings dialog box to  configure various parameters of the operating system and its constituent libraries.
+<p><img height="233" src="../images/config_sw_platform_libs.png" width="888"></p>
+<p>The OS  and Libraries  page contains the following functions:
+<table border="1" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>Name</th>
+      <th>Function</th>
+    </tr>  
+  <tr>
+    <td><strong>Name</strong></td>
+    <td>Name of the 
+    Parameter</td></tr>
+  <tr>
+    <td><strong>Current Value</strong></td>
+    <td>User specified value. Contains the default value 
+      if not changed by the user</td></tr>
+    <tr>
+      <td><b> Default Value</b></td>
+      <td>Default value of
+the parameter</td>
+    </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td>Parameter value type. The values can be string, integer, bool, array, peripheral_instance, 
+  etc</td></tr>
+    <tr>
+      <td><b>Description</b></td>
+      <td>    
+     Description of the parameter</td>
+    </tr>
+  </tbody>
+</table>
+</p>
+
+<h2>Drivers page</h2>
+Use the Drivers page of the Software Platform Settings dialog box to select the drivers to use for the peripherals in your system.
+<p><img src="../images/config_sw_platform_drivers.png"></p>
+<p>The Drivers  page contains the following functions:
+<table border="1" cellspacing="0">
+  <tbody>
+      <tr>
+      <th>Name</th>
+      <th>Function</th>
+    </tr>
+  <tr>
+    <td><strong>Peripheral</strong></td>
+    <td>        Name        of the hardware 
+    peripheral.</td>
+  </tr>
+  <tr>
+    <td><strong>HW Version</strong></td>
+    <td>       
+        Version of the hardware peripheral.</td>
+  </tr>
+    <tr>
+      <td><b>Instance</b></td>
+      <td>      Name      of the hardware
+peripheral instance.</td>
+    </tr>
+  <tr>
+    <td><strong>Driver</strong></td>
+    <td>Name of the software driver used. If you don't 
+      want to include this peripheral in the software platform, select 
+      "<strong>none"</strong> as the driver 
+  name.</td>
+  </tr>
+    <tr>
+      <td><b>Version</b></td>
+      <td>    
+     Version of    
+     the software driver used.</td>
+    </tr>
+  </tbody>
+</table>
+<p><img height="21" alt="Related concepts" src="../images/ngconcepts.gif" width="143" border="0"><br>
+<a href="../concepts/sdk_c_platforms.htm">Software platforms</a></p>
+<p><img height="21" alt="Related tasks" src="../images/ngtasks.gif" width="143" border="0"><br>
+<a href="../tasks/sdk_t_config_platform.htm">Configuring a software platform</a></p>
+<p><img height="21" alt="Related reference" src="../images/ngref.gif" width="143" border="0"><br>
+<a href="sdk_u_new_swplat.htm">New Software Platform Project dialog box</a></p>
+<p>
+<font face="Times New Roman" color="#800000">Copyright © 1995-2009 Xilinx, Inc. All rights reserved.</font><br>
+</p>
+
+</body>
+</html>

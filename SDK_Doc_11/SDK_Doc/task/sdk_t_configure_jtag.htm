@@ -1,0 +1,63 @@
+<html>
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Configuring the FPGA</title>
+<link rel="Stylesheet" type="text/css" media="all" href="../help.css">
+<meta name="generator" content="Namo WebEditor(Trial)"></head>
+
+
+<body>
+<H1>Configuring the JTAG settings</H1>
+<HR>
+<p><strong>Note:</strong> In most cases, the default JTAG settings will work for your project and you can skip this task. </p>
+<p>You might need to configure the JTAG settings for your project if you have the following:
+</p>
+<UL>
+  <LI>Multiple JTAG 
+  cables connected to your machine  
+  <LI>Multiple boards 
+    connected to your machine using different cables 
+  <LI>A  custom development board with 
+  non-Xilinx devices</LI>
+</UL>
+<h2>To configure the JTAG settings</h2>
+<ol>
+  <li>Select <STRONG>Tools &gt; </STRONG><STRONG>Configure JTAG Settings</STRONG> to open the Configure JTAG Settings dialog box.</li>
+  <li>In the <strong>JTAG Cable</strong> area of the dialog box, specify the JTAG cable type, port (on the host machine), and frequency.</li>
+  <li>The default JTAG device chain option setting is <strong>Auto-Discover Devices</strong>. With this option, the tools  will automatically discover the JTAG devices for you.<br>
+  Alternately, you can select <strong>Manual Configuration </strong>to specify a non-Xilinx device on the chain. When you select this option, the JTAG Device Chain list becomes available. You can use the device buttons to manage your devices:</li>
+  <ul>
+    <li><img src="../images/icon_device_add.gif" alt="Add Device button" width="24" height="23"><strong>Add Device</strong> button: Adds a device to the list.</li>
+    <li><img src="../images/icon_device_delete.gif" alt="Delete Device button" width="22" height="22"><strong> Delete Device</strong> button: Deletes the selected device from the list.</li>
+    <li><img src="../images/icon_device_move_up.gif" alt="Move Up Device button" width="22" height="22"> <strong>Move Up Device</strong> button: Moves the selected device up in the list.</li>
+    <li><img src="../images/icon_device_move_down.gif" alt="Move Down Device button" width="22" height="22"> <strong>Move Down Device</strong> button: Moves the selected device down in the list. </li>
+  </ul>
+  <li>Click <strong>OK</strong>.</li>
+</ol>
+<FONT size=2><FONT 
+color=#000000></FONT></FONT>
+<p><IMG height=21 alt="Related concepts" 
+src="../images/ngconcepts.gif" width=143 border=0>&nbsp;<BR>
+<A 
+href="../concepts/sdk_c_jtag.htm">JTAG settings</A><BR>
+<A 
+href="../concepts/sdk_c_hwcomponents.htm">Embedded hardware components</A><BR>
+<A 
+href="../concepts/sdk_c_program_flash.htm">Programming parallel Flash</A></p>
+<p><IMG height=21 
+alt="Related tasks" src="../images/ngtasks.gif" width=143 border=0>&nbsp; <BR><A 
+href="./sdk_t_configure_fpga.htm">Program FPGA</A><BR><A 
+href="../tasks/cdt_o_debug.htm">Debugging</A></p>
+<p><IMG height=21 
+alt="Related reference" src="../images/ngref.gif" width=143 border=0> 
+<BR>
+<A href="../reference/sdk_u_configure_jtag.htm">Configure JTAG Settings dialog box</A></p>
+  <p><font face="Times New Roman" color="#800000">Copyright © 1995-2009 Xilinx, Inc. All rights reserved.</font>      
+</p>
+
+</body>
+
+</html>
+
+
+

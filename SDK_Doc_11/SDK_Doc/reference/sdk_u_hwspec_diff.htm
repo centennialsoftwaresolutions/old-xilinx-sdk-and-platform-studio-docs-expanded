@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+<head><meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="Content-Language" content="en-us">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Hardware Design Changes Page</title>
+  <link rel="stylesheet" type="text/css" href="../help.css">
+<meta name="generator" content="Namo WebEditor(Trial)"></head>
+<body>
+<h1>Hardware Design Change Summary page</h1>
+<HR>
+<p>The Hardware Design Changes page appears when you click the <strong>Show Hardware Design Differences</strong> button in the <a href="sdk_u_hwspec.htm">Hardware Specification File dialog box</a>. </p>
+<p>This page shows a high-level summary of the most recent changes your hardware
+  design went through (or is about to go through). Your design is assumed to have
+  changes any time the hardware specification file for your workspace changes.</p>
+<h2>System Level Changes section</h2>
+<p> The System Level Changes section displays  FPGA device  or processor changes found at
+  the system level.</p>
+<p><img alt="System Level Changes" src="../images/sdk_hwdiff_system_info.png" border="0"></p>
+<h2>Module Level Changes section</h2>
+The Module Level Changes section shows changes within each module, including processors. For
+  processors, the section summarizes changes in processor parameters, peripheral
+  set, and memory map. For other modules, the section shows changes in the module
+  parameters.<br>
+<img alt="Module Level Changes" src="../images/sdk_hwdiff_module_info.png" border="0"><br>
+<p>The Module Level Changes section also lists  new modules, including processors, found in your
+  system. For each new processor, the section summarizes some processor
+  parameters, the peripheral set of the processor, and  the processor memory
+  map. For other modules, the section lists the module name, version, and a few
+parameters.</p>
+<p>Any time the hardware specification file changes, SDK  automatically makes
+ changes in the workspace to adapt it to the new hardware design. It might
+provide recommendations on other changes you can make. Beyond these
+automatic and recommended changes, there may be other  changes that are required at the
+application level to match the new hardware. The Hardware Design Changes Summary page provides the requisite
+information in a concise form so you can easily view 
+the retargeting flow.</p>
+
+<p><img height="21" alt="Related concepts" src="../images/ngconcepts.gif" width="143" border="0"><br>
+<a href="../concepts/sdk_o_emb_sw.htm">Xilinx embedded software</a></p>
+<p><img height="21" alt="Related tasks" src="../images/ngtasks.gif" width="143" border="0"><br>
+<a href="../tasks/sdk_t_auto_sync.htm">Auto-synchronization of software projects</a><br>
+<a href="../tasks/sdk_t_retarget.htm">Re-targeting software projects</a></p>
+<p><img height="21" alt="Related reference" src="../images/ngref.gif" width="143" border="0"></p>
+
+<p>
+<font face="Times New Roman" color="#800000">Copyright &copy; 1995-2009 Xilinx, Inc. All rights reserved.</font><br>
+</p>
+</body>
+</html>

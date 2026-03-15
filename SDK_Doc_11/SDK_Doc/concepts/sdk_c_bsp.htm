@@ -1,0 +1,61 @@
+<<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Board Support Packages</title>
+<link rel="Stylesheet" type="text/css" media="all" href="../help.css">
+</head>
+
+<body>
+
+<h1>Board Support Packages</h1>
+
+<HR>
+<p>Board Support Package (BSP) is the collective term referring to all of the
+  software components required to match a given operating system (and its
+  environment) to a given hardware design (board). BSPs commonly contain low-level
+  operating system and device driver code that is dependent on the hardware and
+  upon which the rest of the operating system layers. In addition, a BSP might also
+  contain other files containing directives, compilation parameters, and
+  hardware parameters that are used to configure the operating system. Since a
+  given Xilinx® hardware platform is configurable,
+  fixed board support packages are not possible. Therefore, a custom board support
+  package must be generated for each hardware design that you create.</p>
+
+<p>
+  SDK can be used to create board support packages for third-party operating
+  systems that are supported on the Xilinx processors.  The board support
+  package appears as a project in the SDK Navigator view.  You can configure
+  each BSP project in various ways and then run a BSP generation process.  The
+  BSP generation process typically ends with a collection of files generated in
+  the workspace,  which you must then take into the third-party environment to
+  proceed with building the operating system and applications. The specifics of
+  what files must be collected and how they must be used depends on the third-party operating system in question.</p>
+
+  <p>
+    For a comprehensive listing of all third-party offerings, refer to 
+    <a href="http://www.xilinx.com/ise/embedded/epartners/listing.htm"> 
+    http://www.xilinx.com/ise/embedded/epartners/listing.htm</a>.  </p>
+  
+  <p>
+  <b>Note:</b> You cannot link application projects created in SDK with BSP
+  projects. You must do application development for the BSP only in the
+  development environment offered by the third-party vendor.
+</p>
+  <p><img border="0" width="143" height="21" id="_x0000_i1027" src="../images/ngtasks.gif" alt="Related tasks"><br>
+    <a href="../tasks/sdk_t_create_bsp.htm">Creating a Board Support Package</a><br>
+	<a href="../tasks/sdk_t_config_bsp.htm"> Configuring a Board Support Package</a><br>      
+    <a href="../tasks/sdk_t_build_bsp.htm"> Generating a Board Support Package</a><br>
+    <a href="../tasks/sdk_t_install_third_party_platforms.htm">Installing third-party software components</a></p>
+
+  <p><img border="0" width="143" height="21" id="_x0000_i1028" src="../images/ngref.gif" alt="Related reference"><br>
+    <A href="../reference/sdk_u_new_bsp.htm">New Board Support Package Project dialog box</a></p>
+
+  <p><font face="Times New Roman" color="#800000">Copyright © 1995-2009 Xilinx, Inc. All rights reserved.</font>      
+</p>
+
+</body>
+
+</html>

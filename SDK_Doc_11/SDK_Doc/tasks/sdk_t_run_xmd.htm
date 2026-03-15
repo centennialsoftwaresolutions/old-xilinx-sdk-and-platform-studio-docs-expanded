@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Specifying XMD Target Configuration</title>
+<link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+
+<body>
+<h1>     Specifying XMD target configuration</h1>   
+              
+   <HR>
+   To configure the XMD Target options, do the following: 
+
+   <ol>
+  <li>In the C/C++ Projects view, select a project. 
+  <li>Select <b>Run >  Run</b> or <strong>Run >  Debug</strong>.
+  <li>In the <b>Configurations</b> 
+  box, expand <strong>Xilinx C/C++ 
+  ELF.</strong>
+  <li>Select a run or debug configuration. 
+  <li>Click the <b>XMD Target 
+  Connection</b> tab.<br>
+  <br><img src="../images/sdk_run_xmd_config.png"> 
+  <br>
+  <br>
+  <li>Do the following: </li>
+  <ul>
+    <li>In the<strong> Connection 
+    Type</strong> drop-down list, choose to execute the 
+    application on the hardware, Simulator, or XMDStub (MicroBlaze only) target. 
+    <li>Click<strong> Advanced Options </strong>to view the advanced configuration options you can provide for each communication target type:    </li>        
+       
+    <ul>
+      <li>To specify the <strong>Read-Only Memory</strong> address range, type 
+      the start address in the <strong>Addr </strong>box and size of the memory 
+      (in bytes) in the <strong>Size in Bytes </strong>box.
+      <li>To specify the <strong>Memory Mapping for PowerPC 
+      resources </strong>for a PowerPC target, specify the start addresses in the <strong>I-Cache Addr, D-Cache Addr, 
+      I-Tag Addr, D-Tag Addr, DCR addr,</strong> and <strong>TLB Addr</strong> 
+      boxes. The <strong>ISOCM </strong>addresses for PowerPC 405 is 
+      automatically inferred for the system.
+      <li>To specify the <strong>Configuration File</strong> for a PowerPC 
+      simulator target, specify the configuration file in the <strong>PowerPC 
+      Simulator Config File</strong> box. 
+      <li>To specify the <strong>XMDStub options</strong> 
+      for MicroBlaze XMDStub targets: </li>
+      <ul>
+        <li>To select the mode of communication select either <strong>Use JTAG 
+        </strong>or <strong>Use Serial</strong>.
+        <li>For <strong>Serial Communication</strong>, specify the 
+        <strong>serial port </strong>to use on the host machine and the 
+        <strong>baud rate</strong> of the serial communication.
+        <li>For <strong>JTAG Communication</strong>, the options are inferred 
+        from <strong>Configure JTAG Settings </strong>dialog box.</li>
+        </li></ul></ul></ul>
+    <li>          
+         Click the <strong>Remote Debug </strong>tab. (This 
+  applies to debugging only.)<br>
+  <br>
+  <img src="../images/sdk_run_remote_config.png">
+  <br>
+    <br>
+    <li>Do the following:</li>
+  <ul>
+    <li>Select <strong>Remote 
+    Machine </strong>to connect to a XMD running remotely.</li>
+    <li>Specify the remote host IP address    and XMD process IPC port number.</li>
+    </li></ul>
+  <li>Click <strong>Apply </strong>to save these settings.</li>
+   </ol>
+<p><img height="21" alt="Related concepts" src="../images/ngconcepts.gif" width="143" border="0"> <br>
+<a href="../concepts/sdk_o_dbg_concepts.htm">Debug overview</a><br>
+<a href="../concepts/sdk_c_over_run.htm">Run overview </a><br>
+<a href="../concepts/sdk_c_over_profile.htm">Profile overview</a><br>
+<br>
+
+
+<img height="21" alt="Related tasks" src="../images/ngtasks.gif" width="143" border="0"> <br>
+<a href="sdk_o_run_config.htm">Creating or editing a Run/Debug/Profile configuration</a> <br>
+<a href="cdt_o_debug.htm">Debugging</a><br>
+<a href="sdk_t_run.htm">Running a program</a><br>
+<a href="sdk_t_profile.htm">Profiling</a><br>
+<a href="sdk_t_configure_jtag.htm">Configure JTAG settings</a>
+
+<p><font face="Times New Roman" color="#800000">Copyright © 1995-2009 Xilinx, Inc. All rights reserved.</font>      
+</p>
+
+</body>
+
+</html>

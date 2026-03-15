@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Configuring a Software Platform</title>
+<link rel="stylesheet" type="text/css" href="../help.css"></head>
+<body>
+
+<h1>Configuring a software platform</h1>
+<HR>
+<p>To configure an existing software platform project, in the C/C++ Projects view, right-click on the software platform to configure and select <b>Software Platform Settings</b>. 
+  The Software Platform Settings dialog box opens. The dialog box consists of 
+    three pages:    
+    <b>Software Platform</b>, 
+    <b>OS and Libraries</b>, and 
+    <b>Drivers</b>.</p>
+<h2>Using the Software Platform page </h2>
+<p>In the <b>Software Platform</b> page, you can configure basic settings that
+    apply to the entire platform. This includes the processor-specific
+    parameters section, which contains settings such as the compiler to be
+    used and the extra flags that are passed on to the compile line. In
+    this  page, you can also select the OS version and
+    the OS libraries to be enabled in the platform. <br>
+<br><img src="../images/config_sw_platform_main.png"></p>
+<p><b> Note: </b>You cannot change the OS choice in this page, 
+    since the OS type is determined by the type you chose for the software 
+platform when you created it.</p>
+<h2>Using the OS and Libraries page</h2>
+<p>
+  In the <b>OS and Libraries</b> page, you can configure various
+    parameters of the OS and its constituent libraries. 
+
+  <br>
+<br><img src="../images/config_sw_platform_libs.png"></p>
+<h2>Using the Drivers page </h2>
+<p>The <b>Drivers</b> page lists all the device drivers assigned for each peripheral
+    in your system. You can select each peripheral and change
+    its device driver assignment and its version. If you want to remove a driver
+    for a peripheral, assign the driver to <i>none</i>.</p>
+  <p>Some device drivers export parameters that you can configure. If
+    any driver that you highlight in the driver list has parameters, you can configure them
+    in the <strong>Configuration for Driver Parameters</strong> section at the bottom of the window. </p>
+<p><img src="../images/config_sw_platform_drivers.png"></p>
+  <p>
+  You can cancel out of the dialog at any time. If you are done with all the 
+  settings you want to make, click <b>OK</b> and your changes are 
+committed.</p>
+  <p>If the <b> Build Automatically</b> option is selected in the <strong>Project </strong>menu, your software platform is
+  rebuilt with your new settings applied.</p>
+  <p><strong>Note: </strong>The exact list of software components appearing in the Software Platform
+  Settings dialog box depends on the components available in the SDK install, as well
+  as the list of components found in any software repositories that are set up in your
+  workspace. For information about how software repositories work, refer to <a href="../concepts/sdk_c_repos.htm">Software repositories</a>.</p>
+  <p><img height="21" alt="Related concepts" src="../images/ngconcepts.gif" width="143" border="0">
+  <br>
+  <a href="../concepts/sdk_c_platforms.htm">Software platforms</a> <br>
+  <a href="../concepts/sdk_c_repos.htm">Software repositories</a></p>
+  <p><img height="21" alt="Related tasks" src="../images/ngtasks.gif" width="143" border="0">
+  <br>
+  <a href="sdk_t_build_platform.htm">Building a software platform</a><br>
+  <a href="sdk_t_repos.htm">Setting up software repositories</a><br>
+  <a href="sdk_t_create_new_appln.htm">Creating a C or C++ project</a></p>
+<p><img height="21" alt="Related reference" src="../images/ngref.gif" width="143" border="0">
+  <br>
+<a href="../reference/sdk_u_configure_swplat.htm">Software Platform Settings dialog box</a></p>
+  <p><font face="Times New Roman" color="#800000">Copyright © 1995-2009 Xilinx, Inc. All rights reserved.</font>      
+</p>
+</body>
+</html>

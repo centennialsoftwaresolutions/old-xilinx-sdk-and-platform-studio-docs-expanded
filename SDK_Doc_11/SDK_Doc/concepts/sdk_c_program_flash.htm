@@ -1,0 +1,68 @@
+﻿<html>
+
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Programming Parallel Flash Memory</title>
+<link rel="Stylesheet" type="text/css" media="all" href="../help.css">
+</head>
+
+<body>
+<h1> Programming parallel Flash overview </h1>
+
+<HR>
+<p>Typically, you can program the following in Flash:</p>
+
+<ul style="LIST-STYLE-TYPE: disc"
+	 type=disc>
+	
+	<li class=kadov-p>
+	  <p>Executable and bootloadable images of applications</p>
+	
+	<li class=kadov-p><p>Hardware bitstreams for your FPGA</p>
+	
+	<li class=kadov-p>
+	  <p>File system images; data files such as sample 
+ data and algorithmic tables</p>
+	</li>
+</ul>
+
+<p>The first use case is most common. When the processor in your design 
+ comes out of reset, it starts executing code stored in block RAM at the processor reset location. Typically, block RAM is too small (by a few 
+ kilobytes or so) to accommodate your entire software application image. 
+ Therefore, you must  store your software application image in Flash memory 
+ (typically in the order of megabytes). A small bootloader is then designed 
+ to fit in block RAM. Upon reset the bootloader reads the software application 
+ image from Flash memory, copies it over to larger and more available external 
+ memory, and then transfers control to your software application. The application then continues.</p>
+
+<p>The software application you build from your project is 
+in Executable and Linkable Format (ELF). Storing and bootloading the ELF 
+image itself is not usually done because bootloading an ELF image increases the 
+complexity of the bootloader. Instead, the ELF image is converted to one of the 
+common bootloadable image formats, such as SREC (Motorola S-record). The 
+bootloader then becomes simple and therefore smaller.<BR>
+<BR>
+You can program 
+external Common Flash Interface (CFI) compliant parallel Flash devices on your 
+board, connected through the external memory                       
+             
+         controller (EMC) IP cores. The programming 
+ solution is designed to be generic and targets a wide 
+ variety of Flash hardware and layouts.</p>
+<p>Refer to the  "Flash Memory Programming" chapter of the <span style="FONT-STYLE: italic">Embedded 
+  System Tools Reference Manual </span>for a list of 
+  supported Flash configurations, a discussion of customizing Flash 
+programming, and  other information about tool functionality.</p>
+
+<p><img height="21" alt="Related tasks" src="../images/ngtasks.gif" width="143" border="0"> <br>
+<A href="../tasks/sdk_t_program_flash.htm">Programming parallel Flash memory</A></p>
+
+<p><img height="21" alt="Related reference" src="../images/ngref.gif" width="143" border="0"> <br>
+<A href="../reference/sdk_u_program_flash.htm">Flash Memory Programmer dialog box</A></p>
+
+<p><font face="Times New Roman" color="#800000">Copyright © 1995-2009 Xilinx, Inc. All rights reserved.</font>      
+</p>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+<head><meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="Content-Language" content="en-us">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+  <title>Creating a Software Platform</title>
+  <link rel="stylesheet" type="text/css" href="../help.css">
+<meta name="generator" content="Namo WebEditor(Trial)">
+<style type="text/css">
+<!--
+.style1 {font-style: italic}
+-->
+</style>
+</head>
+
+<body>
+  <h1>Converting from a 10.x SDK project </h1>
+  <HR>  
+  <p>The SDK tool flow has changed in the 11 release. It now uses the Hardware Specification (.xml) file that the Xilinx&reg; Platform Studio (XPS) creates when you export the design to SDK. This is a different flow than in earlier releases, which used the Xilinx Microprocessor Project (.xmp) file.</p>
+  <p>As a first step, you should rev up your 10.x hardware project using XPS 11 and export the hardware specification file. For more information, refer to <a href="sdk_t_export_hwspec.htm">Exporting hardware specification in XPS</a>.</p>
+  <h2>To convert a project (software platform and software application) from SDK version 10.x &nbsp;into&nbsp;your SDK 11 workspace</h2>
+  <ol type="1">
+    <li>Create a <strong>new workspace</strong> using SDK 11 and specify the Hardware Specification file that XPS exported. If you launch SDK directly from XPS, the workspace is automatically created in a default location and SDK uses the Hardware Specification file that was exported by XPS.</li>
+    <li>Select <b>File &gt; Import</b>. The Import wizard opens.</li>
+    <li>Select <b>Existing Projects into Workspace</b>&nbsp;if you <strong>do not want to copy</strong> the project files to your current workspace location.<br>
+    Select this option if you have the project located in your source control repository or centralized directory and you want to use the project files from that location. SDK will modify some metadata files, so make sure the directory has write permission. </li>
+    <li>Select <b>Existing SDK Projects into Workspace</b>&nbsp;if you <strong>want to copy</strong> the project files to your current workspace location.<br>
+    Select this option if you want to maintain a separate copy of the project files and not modify the original contents. If the original project is located in a source control repository, such as CVS, you can use the source control repository to synchronize the project files.</li>
+    <li>Click <b>Next</b>.</li>
+    <li>Click to select  either <strong>Select root directory</strong> or <strong>Select archive file</strong> (if your project was exported as an archive file) and click the associated <b>Browse</b> button to locate the directory or file containing the
+project files.</li>
+    <li>In the <strong>Projects</strong> box, select the project or projects to import.</li>
+    <li>Click <b>Finish</b> to start the import.</li>
+    <li>If SDK prompts&nbsp;a message to overwrite a file, select <strong>Yes.</strong></li>
+</ol>
+<p><i>Note:</i> SDK 11.x cannot differentiate between a Software Platform and Board Support Package 10.x project, since this concept was introduced only in 11.x. Board Support Package projects are treated as  Software Platform projects in 11.x.</p>
+<h2>To modify your older libraries and drivers for use in SDK 11 </h2>
+<p>The drivers and  libraries shipped with SDK follow a versioning scheme, and older versions are  removed from the installation. Therefore, some library and driver versions that you used  in previous projects may no longer be available in the 11 release and you will see build  failures when you import a software platform project. There are multiple ways  to solve this problem that require your manual intervention. The following  are some of the options:</p>
+<ul>
+  <li>Upgrade the driver and library version to  the latest available version. Edit the Microprocessor Software Specification  (*.mss) file located in your project directory and change the failing library  and driver to the latest version. Refer to the Xilinx Device Drivers (xilinx_drivers.htm) and the<span class="style1"> OS and Libraries Document Collection</span> (oslib_rm.pdf) in the doc/usenglish folder of your SDK installation area for the list of available driver and  library versions, respectively, and the change logs.</li>
+  <li>Create a new software platform with the  same name in the workspace. The newly created software platform will use the  latest driver and library version with the default configuration. Then, use the Software Platform Settings dialog box to make  the necessary customizations to the platform.</li>
+  <li>If you want to continue using the older  driver and library version,  you  need the source code of these driver  and library version from a previous SDK installation. Create a software  repository, include these driver and library version, and specify the path to  this software repository in your new workspace. Refer to <a href="sdk_t_repos.htm">Setting  up Software Repositories</a>  for more information.</li>
+</ul>
+<p><em>Note:</em> This information also applies to software projects created using the  9.x version of SDK.</p>
+<p><img height="21" alt="Related concepts" src="../images/ngconcepts.gif" width="143" border="0"><br>
+  <a href="../concepts/sdk_o_emb_sw.htm">Xilinx embedded software</a><br>
+  <a href="../concepts/sdk_o_share.htm">Sharing and archiving software projects</a><br>
+</p>
+  <p><img height="21" alt="Related tasks" src="../images/ngtasks.gif" width="143" border="0"><br>
+    <a href="../tasks/sdk_o_import_project.htm">Importing a software project</a><br>
+    <a href="../tasks/sdk_o_export_project.htm">Exporting a software project</a></p>
+<p><font face="Times New Roman" color="#800000">Copyright © 1995-2009 Xilinx, Inc. All rights reserved.</font></p>
+  
+</body>
+</html>

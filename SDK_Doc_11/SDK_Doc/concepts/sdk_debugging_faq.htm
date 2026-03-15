@@ -1,0 +1,81 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Frequently Asked Questions about Debugging and Target Connection</title>
+<link rel="stylesheet" type="text/css" href="../help.css">
+<style type="text/css">
+<!--
+.style2 {font-weight: bold}
+-->
+</style>
+</head>
+
+<body bgcolor=white lang=EN-US link="#006699" vlink="#996699">
+
+<h1>Frequently asked questions about Debugging and Target Connection</h1>
+<hr>
+<p><a href="#reg">How can I set the register display format so that it defaults to &quot;Hexadecimal<span class=GramE>&quot;?</span></a> </p>
+<p><a href="#debugapp">Can I debug more than one application at the same time<span class=GramE>?</span></a> </p>
+<p><a href="#large_elf">I have a large ELF application file to debug, and SDK seems to time out when I
+am downloading the ELF file. How can I increase the time-out&nbsp;period?</a></p>
+<p><a href="#remote_debug">I have my board connected on one machine, and I would like to debug my application using SDK running on another machine. How to I set up the Launch Configuration to perform this operation?</a></p>
+<p><a href="#dl_data_files">During Debugging (or Running) the application, I would like to download my data files along with my application's ELF file. How do I do this?</a></p>
+<p><a href="#reset">How do I specify the Reset options to be used when a Debug (or Run) session is launched? </a></p>
+<p><a href="#program_size">Why are program section sizes reported by Linker Script Generator IDE different from one's reported after program build?</a></p>
+
+<hr>
+<h3><a name="reg"></a>How can I set the register display format so that it defaults to &quot;Hexadecimal&quot;?</h3>
+<p>To change the default register format: </p>
+  <ol style="margin-bottom: 12.0pt">
+    <li>Select <span class="guimenu"><strong>Window &gt; Preferences</strong></span>. </li>
+    <li>Open the tree for <span class="guilabel"><strong>C/C++</strong></span> in the list on the left-hand side.</li>
+    <li>Click <span class="guilabel"><strong>Debug</strong></span> in the expanded tree.</li>
+    <li>In the <span class="guilabel">Default Register Format</span> drop-down list, select <span class="guilabel"><strong>Hexadecimal</strong></span>.</li>
+  </ol>
+  <hr>
+  <h3><a name="debugapp"></a>Can I debug more than one application at the
+same&nbsp;time?</h3>
+  <p>The SDK Target Manager supports debugging of multiple independent targets. For example, you can debug a processor debug session and a simulation session simultaneously. However, sessions with potential conflicts are not allowed, such as when a similar session is already active.</p>
+  <hr>
+  <h3><a name="large_elf"></a>I have a large ELF application file to debug, and
+    SDK seems to time out when I am downloading the ELF file. How can I increase
+the time-out&nbsp;<span class=GramE>period?</span></h3>
+  <p>For information about this, refer to <span><span style='font-size:10.0pt;font-family:Arial;color:black'><a href="http://www.xilinx.com/xlnx/xil_ans_display.jsp?getPagePath=20653">Xilinx Answer Record #20653</a>.</span></span></p>
+  <hr>
+  <h3><a name="remote_debug" id="remote_debug"></a>I have my board connected on one machine, and I would like to debug my application using SDK running on another machine. How to I set up the Launch Configuration to  perform this remote debug operation?</h3>
+  <p>You can do this  by specifying the remote machine's access information in the Debug Launch Configuration dialog box. Note that this requires that the XMD Agent is already running on the remote machine. </p>
+  <p><strong class="notetitle">Note</strong> This option is only supported when debugging an application on a remote machine. This does not support running applications on the remote machine. </p>
+  <p>Do the following:</p>
+  <ol>
+    <li>Start XMD on the remote machine using the <span class="userinput">xmd <strong>-ipcport &lt;port_number&gt;</strong></span> option.</li>
+    <li>Click the <span class="guilabel">Remote Debug</span> tab and select <span class="guilabel"><strong>Remote Machine</strong></span>.</li>
+    <li>Specify the the remote machine's IP address and the port number where the XMD process is running.</li>
+    <li>Click <span class="guibutton"><strong>Debug</strong></span> to start  the Remote Debug session.</li>
+  </ol>
+  <hr>
+  <h3><a name="dl_data_files" id="dl_data_files"></a>During Debugging (or Running) the application, I would like to download my data files along with my application's ELF file. How do I do this?</h3>
+  <p>To do this, specify the data file information in the Initialization tab of the Debug Launch Configuration dialog box.</p>
+  <hr>
+  <h3><a name="reset"></a>How do I specify the Reset options to be used when a Debug (or Run) session is launched?</h3>
+  <p>You can specify the Reset options  in the Initialization tab of the Debug Launch Configuration dialog box. The following options can be specified:</p>
+  <ul>
+    <li>System reset: To reset the entire system</li>
+    <li>Processor reset: To reset a specific processor</li>
+    <li>No Reset: To not reset anything </li>
+  </ul>
+  
+  <hr>
+  <h3><a name="program_size" id="program_size"></a>Why are program section sizes reported by Linker Script Generator IDE different from those reported after program build?</h3>
+  <p>The linker script generator IDE displays info about each program section. So when it says .text is XX bytes long, the contents of that specific section are XX bytes long. The program section size reported after program build uses the (processor_arch)-size utility which uses the Berkeley style of reporting program statistics. So &quot;text&quot; in the -size report includes not only .text, but other program instructions. Similarly &quot;data&quot; includes.data, .rodata, and .sdata.<br>
+    <br>
+
+The linker script size report should be used when looking at things at more fine-grained level. The program size report is more coarse-grained and should be used to get high level statistics about the program</p>
+
+<p><font face="Times New Roman" color="#800000">Copyright 
+© 1995-2009 Xilinx, Inc. All rights 
+reserved.</font></p>
+</body>
+</html>

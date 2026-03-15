@@ -1,0 +1,428 @@
+﻿<html xmlns="http://www.w3.org/TR/REC-html40">
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<title>Makefile</title>
+<link rel=Stylesheet type="text/css" media=all href="../help.css">
+<style>
+<!--
+h1
+	{font-size:18.0pt;
+	font-weight:bold;}
+h2
+	{font-size:14.0pt;
+	font-weight:bold;}
+h3
+	{font-size:11.0pt;
+	font-weight:bold;}
+h4
+	{font-size:10.0pt;
+	font-weight:bold;
+	font-style:italic;}
+p
+	{font-size:10.0pt;}
+pre
+	{font-size:9.0pt;}
+tt
+	{font-family:"Courier New";}
+p.userinput, li.userinput, div.userinput
+	{font-size:10.0pt;}
+p.guitab, li.guitab, div.guitab
+	{font-size:10.0pt;
+	font-weight:bold;}
+p.important, li.important, div.important
+	{font-size:10.0pt;
+	font-weight:bold;}
+p.guibutton, li.guibutton, div.guibutton
+	{font-size:10.0pt;
+	font-weight:bold;}
+p.selectblue, li.selectblue, div.selectblue
+	{font-size:10.0pt;
+	font-weight:bold;}
+p.guimenu, li.guimenu, div.guimenu
+	{font-size:10.0pt;
+	font-weight:bold;}
+p.guilabel, li.guilabel, div.guilabel
+	{font-size:10.0pt;
+	font-weight:bold;}
+p.notetitle, li.notetitle, div.notetitle
+	{font-size:10.0pt;
+	font-weight:bold;}
+p.firsterm, li.firsterm, div.firsterm
+	{font-size:10.0pt;
+	font-style:italic;}
+span.SpellE
+span.GramE
+-->
+</style>
+<meta http-equiv=Content-Language content=en-us>
+</head>
+<body bgcolor=#FFFFFF lang=EN-US link="#006699" vlink="#996699">
+<div class=Section1>
+  <h1><span class=SpellE><span lang=EN>Makefile</span></span></h1>
+  <p><span lang=EN>A <span class=SpellE>makefile</span> is a text file that is referenced by the make command that describes the
+    building of targets, and contains information such as source-level dependencies
+    and build-order dependencies. </span></p>
+  <p><span lang=EN>The SDK can generate a <span
+class=SpellE>makefile</span> for <span class=GramE>you,</span> such projects
+    are called Managed Make projects. This is the recommended solution. Some
+    projects, known as Standard Make projects, allow you to define your own <span
+class=SpellE>makefile</span>.</span></p>
+  <h2><span lang=EN>Sample <span class=SpellE>Makefile</span></span></h2>
+  <pre><span lang=EN style='color:black;'>&nbsp;</span></pre>
+  <pre><span
+lang=EN style='color:black;'># <span class=GramE>A</span> sample <span
+class=SpellE>Makefile</span></span></pre>
+  <pre><span lang=EN
+style='color:black;'># This <span class=SpellE>Makefile</span> demonstrates and explains </span></pre>
+  <pre><span
+lang=EN style='color:black;'># Make Macros, Macro Expansions,</span></pre>
+  <pre><span
+lang=EN style='color:black;'># Rules, Targets, Dependencies, Commands, Goals</span></pre>
+  <pre><span
+class=GramE><span lang=EN style='color:black;'># Artificial Targets, Pattern Rule, Dependency Rule.</span></span></pre>
+  <pre><span
+lang=EN style='color:black;'>&nbsp;</span></pre>
+  <pre><span
+lang=EN style='color:black;'># Comments start <span
+class=GramE>with a #</span> and go to the end of the line.</span></pre>
+  <pre><span
+lang=EN style='color:black;'>&nbsp;</span></pre>
+  <pre><span
+lang=EN style='color:black;'># <span class=GramE>Here</span> is a simple Make Macro.</span></pre>
+  <pre><span
+lang=EN style='color:black;'>LINK_TARGET = test_me.exe</span></pre>
+  <pre><span
+lang=EN style='color:black;'>&nbsp;</span></pre>
+  <pre><span
+lang=EN style='color:black;'># <span class=GramE>Here</span> is a Make Macro that uses the backslash to extend to multiple lines.</span></pre>
+  <pre><span
+lang=EN style='color:black;'># <span class=GramE>This</span> allows quick modification of more object files.</span></pre>
+  <pre><span
+lang=EN style='color:black;'>OBJS <span class=GramE>=  \</span></span></pre>
+  <pre><span
+lang=EN style='color:black;'> Test1.o \</span></pre>
+  <pre><span
+lang=EN style='color:black;'> Test2.o \</span></pre>
+  <pre><span
+lang=EN style='color:black;'> <span class=SpellE>Main.o</span></span></pre>
+  <pre><span
+lang=EN style='color:black;'>&nbsp;</span></pre>
+  <pre><span
+lang=EN style='color:black;'># <span class=GramE>Here</span> is a Make Macro defined by two Macro Expansions.</span></pre>
+  <pre><span
+lang=EN style='color:black;'># A Macro Expansion may be treated as a textual replacement of the Make Macro.</span></pre>
+  <pre><span
+lang=EN style='color:black;'># Macro Expansions are introduced with $ and enclosed in (parentheses).</span></pre>
+  <pre><span
+lang=EN style='color:black;'>REBUILDABLES = $(OBJS) $(LINK_TARGET)</span></pre>
+  <pre><span
+lang=EN style='color:black;'>&nbsp;</span></pre>
+  <pre><span
+lang=EN style='color:black;'># Make Macros <span
+class=GramE>do</span> not need to be defined before their Macro Expansions,</span></pre>
+  <pre><span
+lang=EN style='color:black;'># <span class=GramE>but</span> they normally should be defined before they appear in any Rules.</span></pre>
+  <pre><span
+lang=EN style='color:black;'># Consequently Make Macros often <span
+class=GramE>appear</span> first in a <span class=SpellE>Makefile</span>.</span></pre>
+  <pre><span
+lang=EN style='color:black;'>&nbsp;</span></pre>
+  <pre><span
+lang=EN style='color:black;'># <span class=GramE>Here</span> is a simple Rule (used for &quot;cleaning&quot; your build environment).</span></pre>
+  <pre><span
+lang=EN style='color:black;'># <span class=GramE>It</span> has a Target named &quot;clean&quot; (left of the colon &quot;:&quot; on the first line),</span></pre>
+  <pre><span
+lang=EN style='color:black;'># <span class=GramE>no</span> Dependencies (right of the colon),</span></pre>
+  <pre><span
+lang=EN style='color:black;'># <span class=GramE>and</span> two Commands (indented by tabs on the lines that follow).</span></pre>
+  <pre><span
+lang=EN style='color:black;'># <span class=GramE>The</span> space before the colon is not required but added here for clarity.</span></pre>
+  <pre><span
+class=GramE><span lang=EN style='color:black;'>clean :</span></span><span
+lang=EN style='color:black;'> </span></pre>
+  <pre><span
+lang=EN style='color:black;'> <span
+class=SpellE><span class=GramE>rm</span></span> -f $(REBUILDABLES)</span></pre>
+  <pre><span
+lang=EN style='color:black;'> <span class=GramE>echo</span> Clean done</span></pre>
+  <pre><span
+lang=EN style='color:black;'>&nbsp;</span></pre>
+  <pre><span
+lang=EN style='color:black;'># <span class=GramE>There</span> are two standard Targets your <span
+class=SpellE>Makefile</span> should probably have:</span></pre>
+  <pre><span
+lang=EN style='color:black;'># &quot;all&quot; and &quot;clean&quot;, because they are often command-line Goals.</span></pre>
+  <pre><span
+lang=EN style='color:black;'># <span class=GramE>Also</span>, these are both typically Artificial Targets, because they don't typically</span></pre>
+  <pre><span
+lang=EN style='color:black;'># <span class=GramE>correspond</span> to real files named &quot;all&quot; or &quot;clean&quot;.  </span></pre>
+  <pre><span
+lang=EN style='color:black;'>&nbsp;</span></pre>
+  <pre><span
+lang=EN style='color:black;'># <span class=GramE>The</span> rule for &quot;all&quot; is used to incrementally build your system.</span></pre>
+  <pre><span
+lang=EN style='color:black;'># <span class=GramE>It</span> does this by expressing a dependency on the results of that system,</span></pre>
+  <pre><span
+lang=EN style='color:black;'># <span class=GramE>which</span> in turn have their own rules and dependencies.</span></pre>
+  <pre><span
+class=GramE><span lang=EN style='color:black;'>all :</span></span><span
+lang=EN style='color:black;'> $(LINK_TARGET)</span></pre>
+  <pre><span
+lang=EN style='color:black;'> <span class=GramE>echo</span> All done</span></pre>
+  <pre><span
+lang=EN style='color:black;'>&nbsp;</span></pre>
+  <pre><span
+lang=EN style='color:black;'># <span class=GramE>There</span> is no required order to the list of rules as they appear in the <span
+class=SpellE>Makefile</span>.</span></pre>
+  <pre><span lang=EN
+style='color:black;'># Make will build its own dependency tree and only execute each rule only once</span></pre>
+  <pre><span
+lang=EN style='color:black;'># <span class=GramE>its</span> dependencies' rules have been executed successfully.</span></pre>
+  <pre><span
+lang=EN style='color:black;'>&nbsp;</span></pre>
+  <pre><span
+lang=EN style='color:black;'># <span class=GramE>Here</span> is a Rule that uses some built-in Make Macros in its command:</span></pre>
+  <pre><span
+lang=EN style='color:black;'># $@ expands to the rule's target, in this case &quot;test_me.exe&quot;.</span></pre>
+  <pre><span
+lang=EN style='color:black;'># $^ expands to the rule's dependencies, in this case the three files</span></pre>
+  <pre><span
+lang=EN style='color:black;'># <span class=SpellE>main.o</span>, test1.o, <span
+class=GramE>and  test2.o</span>.</span></pre>
+  <pre><span
+lang=EN style='color:black;'>$(LINK_TARGET<span
+class=GramE>) :</span> $(OBJS)</span></pre>
+  <pre><span lang=EN
+style='color:black;'> <span class=GramE>g</span>++ -g -o $@ $^</span></pre>
+  <pre><span
+lang=EN style='color:black;'>&nbsp;</span></pre>
+  <pre><span
+lang=EN style='color:black;'># <span class=GramE>Here</span> is a Pattern Rule, often used for compile-line.</span></pre>
+  <pre><span
+lang=EN style='color:black;'># <span class=GramE>It</span> says how to create a file with a .o suffix, given a file with a .<span
+class=SpellE>cpp</span> suffix.</span></pre>
+  <pre><span lang=EN
+style='color:black;'># <span class=GramE>The</span> rule's command uses some built-in Make Macros:</span></pre>
+  <pre><span
+lang=EN style='color:black;'># $@ for the pattern-matched target</span></pre>
+  <pre><span
+lang=EN style='color:black;'># $<span class=SpellE>lt</span>; for the pattern-matched dependency</span></pre>
+  <pre><span
+lang=EN style='color:black;'>%.<span class=GramE>o :</span> %.<span
+class=SpellE>cpp</span></span></pre>
+  <pre><span lang=EN
+style='color:black;'> <span class=GramE>g</span>++ -g -o $@ -c $&lt;</span></pre>
+  <pre><span
+lang=EN style='color:black;'>&nbsp;</span></pre>
+  <pre><span
+lang=EN style='color:black;'># <span class=GramE>These</span> are Dependency Rules, which are rules without any command.</span></pre>
+  <pre><span
+lang=EN style='color:black;'># Dependency Rules indicate that if any file to the right of the colon changes,</span></pre>
+  <pre><span
+lang=EN style='color:black;'># the target to the left of the colon should be considered out-of-date.</span></pre>
+  <pre><span
+lang=EN style='color:black;'># <span class=GramE>The</span> commands for making an out-of-date target up-to-date may be found elsewhere</span></pre>
+  <pre><span
+class=GramE><span lang=EN style='color:black;'># (in this case, by the Pattern Rule above).</span></span></pre>
+  <pre><span
+lang=EN style='color:black;'># Dependency Rules <span
+class=GramE>are</span> often used to capture header file dependencies.</span></pre>
+  <pre><span
+class=SpellE><span class=GramE><span lang=EN style='color:black;'>Main.o</span></span></span><span class=GramE><span lang=EN
+style='color:black;'> :</span></span><span lang=EN
+style='color:black;'> <span class=SpellE>Main.h</span> Test1.h Test2.h</span></pre>
+  <pre><span
+class=GramE><span lang=EN style='color:black;'>Test1.o :</span></span><span
+lang=EN style='color:black;'> Test1.h Test2.h</span></pre>
+  <pre><span
+class=GramE><span lang=EN style='color:black;'>Test2.o :</span></span><span
+lang=EN style='color:black;'> Test2.h</span></pre>
+  <pre><span
+lang=EN style='color:black;'>&nbsp;</span></pre>
+  <pre><span
+lang=EN style='color:black;'># <span class=GramE>Alternatively</span> to manually capturing dependencies, several automated</span></pre>
+  <pre><span
+lang=EN style='color:black;'># <span class=GramE>dependency</span> generators exist.  Here is one possibility (commented out)...</span></pre>
+  <pre><span
+lang=EN style='color:black;'># %.<span class=SpellE><span
+class=GramE>dep</span></span><span class=GramE> :</span> %.<span class=SpellE>cpp</span></span></pre>
+  <pre><span
+lang=EN style='color:black;'>#        g++ -M $(FLAGS) $&lt; &gt; $@</span></pre>
+  <pre><span
+lang=EN style='color:black;'># include $(<span
+class=SpellE>OBJS<span class=GramE>:.</span>o</span>=.<span class=SpellE>dep</span>)</span></pre>
+  <h2><span lang=EN>Frequently Asked Questions:</span></h2>
+  <p><span lang=EN style='font-size:10.0pt;font-family:Arial;
+color:black;'>Your Console view can be very useful for
+    debugging a build. </span></p>
+  <p><b><span lang=EN style='font-size:13.5pt;'>Q1</span></b><span
+lang=EN style='font-size:13.5pt;'>. My Console view says </span><tt><span
+lang=EN>&quot;Error launching builder&quot;</span></tt><span
+lang=EN style='font-size:13.5pt;'>. What does that mean?</span></p>
+  <pre><span lang=EN style='color:black;'>&nbsp;</span></pre>
+  <pre><span
+lang=EN style='color:black;'>Error launching builder (make -k clean <span
+class=GramE>all )</span></span></pre>
+  <pre><span lang=EN
+style='color:black;'>(Exec <span class=SpellE>error<span
+class=GramE>:Launching</span></span> failed)</span></pre>
+  <p><span lang=EN>Most probably, the build command
+    (by default &quot;make&quot;) is not on your path. You can put it on your path
+    and restart Eclipse.<br>
+    You can also change the build command to something that is on your path. If you
+    are using <span class=SpellE>MinGW</span> tools to compile, you should replace
+    the build command with &quot;mingw32-make&quot;.</span></p>
+  <p><b><span lang=EN style='font-size:13.5pt;'>Q2</span></b><span
+lang=EN style='font-size:13.5pt;'>. My Console view says </span><tt><span
+lang=EN>&quot;No rule to make target 'X'&quot;</span></tt><span
+lang=EN style='font-size:13.5pt;'>.</span></p>
+  <pre><span lang=EN style='color:black;'>&nbsp;</span></pre>
+  <pre><span
+class=GramE><span lang=EN style='color:black;'>make</span></span><span
+lang=EN style='color:black;'> -k clean all </span></pre>
+  <pre><span
+class=GramE><span lang=EN style='color:black;'>make</span></span><span
+lang=EN style='color:black;'>: *** No rule to make target 'clean'.</span></pre>
+  <pre><span
+class=GramE><span lang=EN style='color:black;'>make</span></span><span
+lang=EN style='color:black;'>: *** No rule to make target 'all'.</span></pre>
+  <p><span lang=EN>By default, the make program
+    looks for a file most commonly called &quot;<span class=SpellE>Makefile</span>&quot;
+    or &quot;<span class=SpellE>makefile</span>&quot;. If it cannot find such a
+    file in the working directory, or if that file is empty or the file does not
+    contain rules for the command line goals (&quot;clean&quot; and &quot;all&quot;
+    in this case), it will normally fail with an error message similar to those
+    shown. </span></p>
+  <p><span lang=EN>If you already have a valid <span
+class=SpellE>Makefile</span>, you may need to change the working directory of
+    your build. The default working directory for the build command is the project's
+    root directory. You can change this by specifying an alternate Build Directory
+    in the Make Project properties. Or, if your <span class=SpellE>Makefile</span> is named something else (<span class=SpellE>eg</span>. </span><span
+class=SpellE><tt><span lang=EN>buildFile.mk</span></tt></span><span
+lang=EN>), you can specify the name by setting the
+    default Build command to </span><tt><span lang=EN>make -f <span class=SpellE>buildFile.mk</span></span></tt><span lang=EN>.</span></p>
+  <p><span lang=EN>If you do not have a valid <span
+class=SpellE>Makefile</span>, create a new file named <span class=SpellE>Makefile</span> in the root directory. You can then add the contents of the sample <span
+class=SpellE>Makefile</span> (above), and modify it as appropriate.</span></p>
+  <p><b><span lang=EN style='font-size:13.5pt;'>Q3</span></b><span
+lang=EN style='font-size:13.5pt;'>. My Console view says </span><tt><span
+lang=EN>&quot;missing separator&quot;</span></tt><span
+lang=EN style='font-size:13.5pt;'>.</span></p>
+  <pre><span lang=EN style='color:black;'>&nbsp;</span></pre>
+  <pre><span
+class=GramE><span lang=EN style='color:black;'>make</span></span><span
+lang=EN style='color:black;'> -k clean all </span></pre>
+  <pre><span
+class=GramE><span lang=EN style='color:black;'>makefile:</span></span><span
+lang=EN style='color:black;'>12: *** missing separator.  Stop.</span></pre>
+  <p><span lang=EN>The standard syntax of <span
+class=SpellE>Makefiles</span> dictates that every line in a build rule must be
+    preceded by a Tab character. This Tab character is often accidentally replaced
+    with spaces, and because both result in white-space indentation, this problem
+    is easily overlooked. In the sample provided, the error message can be
+    pinpointed to line 12 of the file &quot;<span class=SpellE>makefile</span>&quot;;
+    to fix the problem, insert a tab at the beginning of that line.</span></p>
+  <p><b><span lang=EN style='font-size:13.5pt;'>Q4</span></b><span
+lang=EN style='font-size:13.5pt;'>. My Console view says </span><tt><span
+lang=EN>&quot;Target 'all' not remade because of
+    errors&quot;</span></tt><span lang=EN style='font-size:13.5pt;'>.</span></p>
+  <pre><span lang=EN style='color:black;'>&nbsp;</span></pre>
+  <pre><span
+class=GramE><span lang=EN style='color:black;'>make</span></span><span
+lang=EN style='color:black;'> -k clean all </span></pre>
+  <pre><span
+class=GramE><span lang=EN style='color:black;'>make</span></span><span
+lang=EN style='color:black;'>: *** [clean] Error 255</span></pre>
+  <pre><span
+class=SpellE><span class=GramE><span lang=EN style='color:black;'>rm</span></span></span><span lang=EN style='color:black;'> -f Test1.o Test2.o <span class=SpellE>Main.o</span> test_me.exe</span></pre>
+  <pre><span
+class=GramE><span lang=EN style='color:black;'>g</span></span><span
+lang=EN style='color:black;'>++ -g -o Test1.o -c Test1.cpp</span></pre>
+  <pre><span
+class=GramE><span lang=EN style='color:black;'>make</span></span><span
+lang=EN style='color:black;'>: *** [Test1.o] Error 255</span></pre>
+  <pre><span
+class=GramE><span lang=EN style='color:black;'>make</span></span><span
+lang=EN style='color:black;'>: *** [Test2.o] Error 255</span></pre>
+  <pre><span
+class=GramE><span lang=EN style='color:black;'>make</span></span><span
+lang=EN style='color:black;'>: *** [<span class=SpellE>Main.o</span>] Error 255</span></pre>
+  <pre><span
+class=GramE><span lang=EN style='color:black;'>g</span></span><span
+lang=EN style='color:black;'>++ -g -o Test2.o -c Test2.cpp</span></pre>
+  <pre><span
+class=GramE><span lang=EN style='color:black;'>g</span></span><span
+lang=EN style='color:black;'>++ -g -o <span class=SpellE>Main.o</span> -c <span
+class=SpellE>Main.cpp</span></span></pre>
+  <pre><span class=GramE><span
+lang=EN style='color:black;'>make</span></span><span
+lang=EN style='color:black;'>: Target 'all' not remade because of errors.</span></pre>
+  <p><span lang=EN>The likely culprit here is that
+    g++ is not on your Path.</span></p>
+  <p><span lang=EN>The Error 255 is produced by make
+    as a result of its command shell not being able to find a command for a
+    particular rule.<br>
+    Messages from the standard error stream (the lines saying Error 255) and
+    standard output stream (all the other lines) are merged in the Console view
+    here.</span></p>
+  <p><b><span lang=EN style='font-size:13.5pt;'>Q5</span></b><span
+lang=EN style='font-size:13.5pt;'>. What's with the -k
+    flag?</span></p>
+  <p><span lang=EN>The -k flag tells make to
+    continue making other independent rules even when one rule fails. This is
+    helpful for build large projects.</span></p>
+  <p><span lang=EN>You can remove the -k flag by
+    turning on Project Properties &gt; C/C++ Make Project &gt; Make Builder &gt;
+    Stop on first build error</span></p>
+  <p><b><span lang=EN style='font-size:13.5pt;'>Q6</span></b><span
+lang=EN style='font-size:13.5pt;'>. My Console view looks
+    like:</span></p>
+  <pre><span lang=EN style='color:black;'>&nbsp;</span></pre>
+  <pre><span
+class=GramE><span lang=EN style='color:black;'>mingw32-make</span></span><span
+lang=EN style='color:black;'> clean all </span></pre>
+  <pre><span
+class=SpellE><span lang=EN style='color:black;'>process_begin</span></span><span
+lang=EN style='color:black;'>: <span class=SpellE><span
+class=GramE>CreateProcess</span></span><span class=GramE>(</span>(null), <span
+class=SpellE>rm</span> -f Test1.o Test2.o <span class=SpellE>Main.o</span> test_me.exe, ...) failed.</span></pre>
+  <pre><span
+class=GramE><span lang=EN style='color:black;'>make</span></span><span
+lang=EN style='color:black;'> (e=2): The system cannot find the file specified.</span></pre>
+  <pre><span
+lang=EN style='color:black;'>&nbsp;</span></pre>
+  <pre><span
+class=GramE><span lang=EN style='color:black;'>mingw32-make</span></span><span
+lang=EN style='color:black;'>: *** [clean] Error 2</span></pre>
+  <pre><span
+class=SpellE><span class=GramE><span lang=EN style='color:black;'>rm</span></span></span><span lang=EN style='color:black;'> -f Test1.o Test2.o <span class=SpellE>Main.o</span> test_me.exe</span></pre>
+  <p><span lang=EN>This means that mingw32-make was
+    unable to find the utility &quot;<span class=SpellE>rm</span>&quot;.
+    Unfortunately, <span class=SpellE>MinGW</span> does not come with &quot;<span
+class=SpellE>rm</span>&quot;. To correct this, replace the clean rule in your <span
+class=SpellE>Makefile</span> with:</span></p>
+  <pre><span lang=EN style='color:black;'>&nbsp;</span></pre>
+  <pre><span
+class=GramE><span lang=EN style='color:black;'>clean :</span></span><span
+lang=EN style='color:black;'> </span></pre>
+  <pre><span
+lang=EN style='color:black;'>        -<st1:State w:st="on"><st1:place w:st="on"><span class=GramE>del</span> $(REBUILDABLES)</span></pre>
+  <pre><span
+lang=EN style='color:black;'>        <span class=GramE>echo</span> Clean done</span></pre>
+  <p><span lang=EN>The leading minus sign tells make
+    to consider the clean rule to be successful even if the
+    <st1:State w:st="on">
+    <st1:place
+ w:st="on">
+    <span class=GramE>del</span> command returns
+    failure. This may be acceptable since the
+    <st1:State w:st="on">
+    <st1:place
+ w:st="on">
+    <span class=GramE>del</span> command will
+    fail if the specified files to be deleted do not exist yet (or anymore).</span></p>
+  <p><span lang=EN><img width=324 height=14
+id="_x0000_i1025" src="../images/ng00_04a.gif" alt="IBM Copyright Statement"></span></p>
+</div>
+</body>
+</html>

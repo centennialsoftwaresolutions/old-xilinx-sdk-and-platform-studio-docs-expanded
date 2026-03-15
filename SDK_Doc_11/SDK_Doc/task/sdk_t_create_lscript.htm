@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Creating a Board Support Package</title>
+<link rel="stylesheet" type="text/css" href="../help.css">
+<meta name="generator" content="Namo WebEditor(Trial)"></head>
+<body>
+<h1> Creating a linker script</h1>
+<HR>
+<h2>Generating a linker script for an application </h2>
+<p>To generate a linker script for an application:</p>
+<ol>
+  <li>Click <strong>Tools &gt;  Generate Linker Script</strong> and select the&nbsp;application project, or right-click the application in the <strong>C/C++ Projects </strong>view and select 
+  <strong>Generate Linker Script</strong>.</li>
+  <li>Configure the following sections of the Linker Script Generator dialog box:
+   <ul>
+   <li><strong>Application project name</strong>:  This field displays the application you selected. It is not editable.</li>
+      <li><strong>ELF file used to populate section info</strong>: If an Executable Linked Format 
+(ELF) file is present for the application, it is displayed in this field. The <strong>Code Sections</strong>, <strong>Data Sections</strong>, and <strong>Heap and Stack</strong> areas of the dialog box reflect the settings as defined in the ELF file.</li>
+      <li><strong>Code Sections</strong>: Use this area of the dialog box to map code sections onto memory.</li>
+      <li><strong>Data Sections</strong>: Use this area of the dialog box to map data sections onto memory.</li>
+      <li><strong>Heap and Stack</strong>: Use this area to set heap and stack sizes, and to set the memories.</li>
+      <li><strong>Reference Views</strong>:  This area displays the memory and boot and vector section settings. This area is not editable. </li>
+    </ul>
+  </li>
+  <li>In the <strong>Output Linker Script</strong> field, specify the file name for the output linker script file.</li>
+  <li>Click <strong>OK</strong>. If there are errors, they appear in the Console Window at the bottom of the SDK main window.</li>
+</ol>
+<p><strong>Note</strong>: If the linker script already exists, a message window  appears, asking if you want to overwrite 
+the file. Click <strong>OK</strong> to overwrite the file or <strong>Cancel</strong> to cancel the overwrite.</p>
+<p>SDK automatically adds the linker script to the linker settings for a 
+managed make project.</p>
+<h2><a name="specify_linkerscripts"></a>
+Adding the linker script manually</h2>
+<p> If you want to manually add the linker script for a 
+managed make flow,  do the following:</p>
+<ol>
+  <li>Right-click your&nbsp;managed make project and select <b>Properties</b>. 
+  <li>Click <b>C/C++&nbsp;Build</b>.
+  <li>In the <strong>Tool Settings</strong> tab, select  <strong>Linker Script 
+  </strong>to add the linker script.</li>
+</ol>
+  
+   <p>For standard make projects, add the linker script manually to your makefile linker 
+options.<br>
+  <IMG height=21 alt="Related concepts" src="../images/ngconcepts.gif" width=143 border=0> <br>
+<A href="../concepts/sdk_c_build.htm#linkerscripts">Linker scripts</a></p>
+   <p><IMG height=21 alt="Related tasks" src="../images/ngtasks.gif" width=143 border=0> <br>
+     <A href="cdt_t_mproj_build_set.htm">Managed make build settings</a></p>
+   <p><font face="Times New Roman" color="#800000">Copyright © 1995-2009 Xilinx, Inc. All rights reserved.</font>      
+</p>
+</body>
+</html>

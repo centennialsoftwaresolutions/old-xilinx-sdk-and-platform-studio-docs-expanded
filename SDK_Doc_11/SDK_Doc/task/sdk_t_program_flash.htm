@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Debugging a program</title>
+<link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+
+
+<body>
+<h1>Programming parallel Flash memory</h1>
+<HR>
+<span>To program the 
+parallel Flash memory:<br>
+<br>
+</span>
+<ol type="1">
+  <li>
+    Select <strong>Tools > Program Flash Memory</strong>.
+  <li>    In the Select Processor dialog box that opens, select the processor instance to which the parallel 
+  Flash memory is connected. </li>
+  <li>
+    In the <strong>File to Program</strong> field, specify the executable file, bitstream, or data file to 
+      write to Flash.    
+  <li>
+    If you are programming an executable file (in ELF format) and would like 
+      to use a bootloader to boot the processor after reset, click to select the
+    <strong>Automatically convert file to bootable SREC format when programming 
+      Flash </strong>check box.
+  <li>
+    Select the Flash memory using the <strong>Instance 
+      Name</strong> drop-down list in the <strong>Flash Memory</strong> area.
+  <li>
+    If you want the file to be written at an offset in the Flash memory, 
+      specify the offset using the <strong>Program at 
+        Offset</strong> field.
+  <li>
+    Specify any memory that will be used by the Flash programmer as a scratch 
+      memory using the <strong>Instance Name</strong> drop-down list in the <strong>Scratch Memory</strong> area.<br>
+      <strong> Note</strong>: The current contents 
+    of this memory will be overwritten.
+  <li>
+    If you want to create a bootloader for the executable program in the 
+      Flash memory, click to select the <strong>Create Flash Bootloader Application</strong> 
+    check box. Specify the software platform to use and software 
+        application project name for the bootloader 
+      application.    
+  <li>    Click <strong>OK</strong>.<br>
+  SDK programs the Flash with the 
+    file. If you opted to create a bootloader application, a software 
+    application project is created in the workspace with the source and 
+    header files.</li>
+</ol>
+<blockquote>
+  <p><img src="../images/sdk_program_flash.png" alt="Programming Parallel Flash Memory">
+  
+  <p><img border="0" src="../images/ngconcepts.gif" ALT="Related concepts" width="143" height="21"><br>
+  <a href="../concepts/sdk_c_program_flash.htm">Programming parallel 
+    Flash</a></p>
+  <p><img height="21" alt="Related tasks" src="../images/ngtasks.gif" width="143" border="0"> <br>
+  <a href="sdk_t_configure_jtag.htm">Configuring the JTAG 
+    settings</a><br>
+<a href="sdk_t_configure_fpga.htm">Configuring the 
+    FPGA</a></p>
+<p><img height="21" img="" alt="Related References" src="../images/ngref.gif" width="143" border="0"> <br>
+  <a href="../reference/sdk_u_program_flash.htm">Flash Memory Programmer dialog box</a></p>
+</blockquote>
+<p><font face="Times New Roman" color="#800000">Copyright © 1995-2009 Xilinx, Inc. All rights reserved.</font></p>
+</body>
+
+</html>
