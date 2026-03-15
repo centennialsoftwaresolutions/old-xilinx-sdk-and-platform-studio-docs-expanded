@@ -1,0 +1,65 @@
+<html>
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Re-targeting software projects</title>
+<link rel="Stylesheet" type="text/css" media="all" href="../help.css">
+</head>
+
+<body>
+<h1>Re-targeting software projects</h1>
+<HR>
+<p>
+In an SDK workspace, you can have multiple hardware projects and a single
+software project that is portable across these hardware
+platforms. At any given time, the software BSP project and the
+software applications associated to that BSP project are 
+targeted (or referenced) to a single hardware project. So to run or debug a
+software project on another hardware project, you must
+re-target your software BSP project to another hardware
+project. </p>
+<p>To re-target your software project to
+  another hardware project: </p>
+<ol>
+    <li>Right-click the software BSP project that your software application
+    currently references  and select
+    <b>Properties</b>.</li>
+    <li>Select <b>Project References</b>.</li>
+    <li>Uncheck the reference to the current hardware project and
+    select the hardware project which you would like to
+    re-target.</li>
+    <li>Click <b>OK</b>. SDK  re-targets your BSP project and
+    application project to the new hardware project and starts
+    rebuilding the projects.</li>
+</ol>
+
+<p align="left"><img alt="" src="../images/sdk_retarget_ref.png" border="0">
+
+<p>
+Alternatively, if you have two BSP projects each targeting a
+different hardware project, you can re-target your software application
+to run or debug on a different hardware project by changing the BSP
+reference accordingly. </p>
+<p>To re-target your
+  software project: </p>
+<ol>
+    <li>Right-click the application project in the Project Explorer
+    view and select <b>Change Referenced BSP</b>.</li>
+    <li>SDK lists the BSP projects available in the
+    workspace. Select the  project  to
+    re-target.</b>
+    <li>Click <b>OK</b>. SDK  re-targets your application project
+    to the new BSP project and the new hardware project and starts
+    re-building the project.</li>
+</ol>
+<p align="left"><img alt="" src="../images/sdk_change_ref_bsp.png" border="0">
+
+<p><img height="21" alt="Related concepts" src="../images/ngconcepts.gif" width="143" border="0"><br>
+<a href="../concepts/sdk_c_hwcomponents.htm">Embedded hardware components</a><br>
+<a href="../concepts/sdk_c_hwspec.htm">Hardware platform specification</a></p>
+
+<p><font face="Times New Roman" color="#800000">Copyright © 1995-2010 Xilinx, Inc. All rights reserved.</font>      
+</p>
+</body>
+
+</html>
+

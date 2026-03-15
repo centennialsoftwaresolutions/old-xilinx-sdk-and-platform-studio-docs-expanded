@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Software repositories</title>
+<link rel=Stylesheet type="text/css" media=all href="../help.css">
+<meta http-equiv=Content-Language content=en-us>
+</head>
+<body>
+<h1 >Software repositories </h1>
+<HR>
+<p>A software repository is a directory where you can install third-party
+  software components, as well as  custom copies of drivers, libraries, and
+  operating systems. When you add a software repository,
+  SDK  automatically infers all the components contained with the repository
+  and makes them available for use in its environment.</p>
+<p>Your SDK workspace can point to multiple software repositories. The
+scope of the software repository can be global (available across
+all workspaces) or local (available only to the current
+workspace). Components found in any local software repositories added to an SDK workspace take
+  precedence over identical components (if any) found in the global
+  software repositories, which in turn take higher precedence over identical
+  components found in the SDK installation.</p>
+<p> An SDK repository requires a specific organization of the components. The
+  diagram below gives an overview of how an SDK repository can be
+  structured. Software components in your repository must
+  belong to one of three different directories:
+<ol>
+  <li><span class="userinput">drivers</span>: Used to hold device drivers.</li>
+  <li><span class="userinput"> sw_services</span>: Used to hold libraries.</li>
+  <li><span class="userinput">bsp</span>: Used to hold software platforms and board support packages.</li>
+</ol>
+<p>Within each directory, sub-directories containing the individual software components must be present.</p>
+<p align="center"> <img src="../images/x11040.gif" alt="SDK repository overview" width="555" height="236"
+       border=0/> </p>
+<p> The directory structure of an example repository is shown below. Name the top level repository directory to indicate its function in
+  your development flow. </p>
+<p align="center"> <img src="../images/x11039.gif" alt="SDK repository structure" width="209" height="320"
+       border=0 /> </p>
+<p><img width=143 height=21 id="_x0000_i1026" src="../images/ngconcepts.gif" alt="Related concepts" border=0><br>
+<a href="../concepts/sdk_c_bsp_internal.htm">Board support packages (SDK)</a><br>
+<a href="../concepts/sdk_c_bsp_external.htm">Board support packages (external tools) </a></p>
+
+<p> <img border=0 width=143 height=21 id="_x0000_i1027" src="../images/ngtasks.gif" alt="Related tasks"><br>
+  <a href="../tasks/sdk_t_repos.htm">Setting up software repositories</a></p>
+
+<p><img border=0 width=143 height=21 id="_x0000_i1028" src="../images/ngref.gif" alt="Related reference"><br>
+<a href="../reference/sdk_u_sw_repos.htm">Software Repositories dialog box</a></p>
+
+<p><font face="Times New Roman" color="#800000">Copyright © 1995-2010 Xilinx, Inc. All rights reserved.</font></p>
+</body>
+</html>
