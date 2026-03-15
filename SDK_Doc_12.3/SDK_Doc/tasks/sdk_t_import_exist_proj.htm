@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Importing an existing software project</title>
+<link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+<body>
+<H1>Importing an existing&nbsp;software project</H1>
+<HR>
+<p>You can use the Import 
+wizard to copy a project that exists in a different workspace, or one that 
+previously existed in a workspace, into the current workspace. </p>
+
+<ol>
+  <LI>Select <B>File &gt; Import</B>. The Import wizard 
+  opens.
+  <LI>Select <B>General > Existing Projects into Workspace</B> and click <b>Next</b>.
+
+  <LI>Select either the <STRONG>Select root directory </STRONG>or <STRONG>Select 
+      archive file</STRONG> option button, and click the associated <B>Browse</B> button to locate the 
+      directory or file containing the projects. 
+  <LI>In the <STRONG>Projects</STRONG> area, select the project or
+      projects to import.
+  <li>Select <b>Copy projects into workspace</b> if you <b>do</b> want
+      to copy the project files to your current workspace location.
+  <LI>Click <B>Finish</B> to start the 
+          import. If SDK prompts&nbsp;a message to overwrite a file, select 
+  <STRONG>Yes.</STRONG>
+</ol>
+<h3>Requirements for importing a project into a workspace</h3>
+The software projects in a workspace are associated with a hardware design and targeted to a particular processor and processor sub-system. When you import a software project into a workspace, SDK performs minimal checks to ensure that this software project is usable in the workspace. The following  checks are done for different software project types: <br>
+    <ul>
+      <li>For <b>Board Support Package</b> projects, SDK checks to see if the processor name and type used by the software project exist in the current hardware design. It does not check if all the peripherals required by the drivers and libraries in the software platform exist in the processor sub-system.<br>
+      If there is a mismatch, SDK returns  errors. Such projects cannot be imported into the workspace; you should delete them from the workspace.</li>
+      <li>For <b>Software Application</b> projects, SDK checks to see if the software platform,  processor name, and type used by the software application exist in the current workspace and hardware design. Therefore, when you are importing a software application, you must make sure that the software platform used by this application already exists in the workspace. Alternatively, you can  import the software platform along with the application.</li>
+    </ul>
+    <p><img height="21" alt="Related concepts" src="../images/ngconcepts.gif" width="143" border="0"><br>
+  <a href="../concepts/sdk_o_emb_sw.htm">Xilinx embedded software</a><br>
+  <a href="../concepts/sdk_o_share.htm">Sharing and archiving  projects</a><br>
+</p>
+    <p><img height="21" alt="Related tasks" src="../images/ngtasks.gif" width="143" border="0">&nbsp;<br>
+  <a href="../tasks/sdk_o_export_project.htm">Exporting software projects</a></p>
+
+    <p><font face="Times New Roman" color="#800000">Copyright &copy; 1995-2010 Xilinx, Inc. All rights reserved.</font></p>
+	
+</body>
+</html>

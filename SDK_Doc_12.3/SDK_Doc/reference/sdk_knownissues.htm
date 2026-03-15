@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Xilinx SDK Preferences dialog</title>
+<link rel="stylesheet" type="text/css" href="../help.css"></head>
+
+
+<body>
+
+<h1> Known issues in SDK </h1>
+<HR>
+
+<h2> Target pattern contains % </h2>
+<ul>
+<li> Symptom: Project clean/build/auto rebuild etc. complain with the error message
+that "Target pattern contains %". This issue occurs on Windows only.</li>
+<li> Possible Issue: This situation can arise when a user manually enters a Windows
+style path to the CDT build system. e.g.: If user adds the path "C:\path\to\library"
+as an additional include folder. The issue arises because of conflicts between Cygwin
+make's syntax rules and the Windows style paths that have a drive name (C:). In such
+a case, make assumes that C is a target to be built.
+<li> Solution: Users should be careful not to use any Windows style paths. Ideally,
+relative paths should be used whenever any paths are specified. If relative paths
+are not an option, use a Unix style path suitable for Cygwin.
+In the above case, it should be "/cygdrive/c/path/to/library".
+</ul>
+
+<h2> Renaming h/w platforms </h2>
+<ul>
+<li> Symptom: When a hardware specification project is renamed, the dependent BSP's
+and applications fail to compile. </li>
+<li> Issue: Currently, SDK does not support renaming of hardware specification projects.
+If such a need arises for the user, then the user has to manually change the following items:
+<ol>
+<li>Change Project References in the BSP project to point to the new hardware project.</li>
+<li>Change the libgen.options file to specify the correct hardware specification file.</li>
+<li>Change the ELFCheck options in the application's build settings.</li>
+</ol>
+</li>
+</ul>
+
+<h2>How to stop existing launch (Run/Debug) sessions is not intuitive</h2>
+<ul>
+<li>Issue: When a processor is in use by a Run/Debug session, attempting to Run or Debug again,
+or other global actions such as Configure FPGA, Change JTAG Cable settings, etc. will error
+with the message to stop the existing Run. It is not obvious how exactly to stop the existing session.</li>
+<li>Solution:
+<ul>
+<li>For existing debug sessions, go to the debug perspective. The Debug view part will have a terminate button.</li>
+For existing Run sessions, go to the console, and look for the console associated with the Run.
+<li>Since consoles are stacked one on top of another, this might require going to the toolbar in the Console view,
+and clicking the drop-down menu to "Display Selected Console". Once the correct console is in the foreground,
+a red button will be visible that can be used to terminate the Run session. Alternatively, type stop in the XMD console.</li>
+</ul>
+</li>
+</ul>
+
+<h2>Restore defaults in C/C++ settings causes settings to be lost.</h2>
+<ul>
+<li>Issue: Clicking on Restore Defaults in the C/C++ Build Settings will result in elfcheck not working properly.</li>
+<li>Solution: Manually set the path to the hardware specification and the processor name in the ELFCheck options in Build
+settings after restoring defaults.</li>
+</ul>
+
+<h2>Operations on XMD console can confuse SDK's internal state</h2>
+<ul>
+<li>Currently, SDK uses the same XMD as shown in the XMD console. As a result,
+performing some operations on the XMD console (such as disconnecting targets)
+will cause SDK's state to get out of sync with the actual target state. In such a case,
+it may not be possible to recover and SDK will have to be restarted.</li>
+</ul>
+
+<h2>When SDK opens up, it doesn't have the right menus, or the right icons, or the C/C++ perspective</h2>
+<ul>
+<li>Solution: SDK is probably reading settings from an outdated .eclipse folder, or an outdated workspace.
+Try opening SDK with a fresh workspace. If that doesn't work, remove your $HOME/.eclipse folder.
+(On NT, this is usually C:\Documents and settings\username\.eclipse
+</li>
+</ul>
+</body>
+</html>
+
