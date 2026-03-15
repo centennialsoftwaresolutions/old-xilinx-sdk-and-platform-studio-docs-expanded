@@ -1,0 +1,240 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head><meta name="robots" content="noindex, nofollow" />
+
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="STYLESHEET" href="../book.css" charset="ISO-8859-1" type="text/css">
+<title>What's new in SDK 12.1</title>
+</head>
+
+<body>
+
+<h2>What's new in SDK 12.1</h2>
+<table cellpadding="10" cellspacing="0" width="600">
+  <colgroup>
+  <col width="20%" valign="top" align="right">
+  <col width="80%" valign="top" align="left">
+  </colgroup>
+  <tbody>
+    <tr> 
+      <td colspan="2"><hr></td>
+    </tr>
+    <tr> 
+      <td width="30%" valign="top" align="left"> <p align="right"><b>Xilinx 
+      Software Development Kit Overview</b></p></td>
+      <td width="70%" valign="top"> <p>SDK is available as a separate installation 
+      package in the 12.1 release, which does not require installation of 
+      Xilinx&reg; ISE&reg; Design Suite  or the Xilinx Embedded Design Kit. The separate installation of SDK  
+      includes all features required to develop and debug software applications 
+      on Xilinx embedded processors, including GNU-based compiler toolchain, 
+      GNU debugger (GDB), drivers for Xilinx IPs, libraries for networking and file 
+      handling, POSIX compliant kernel library, and a rich IDE for C/C++ development 
+      and debugging. By not requiring the installation of ISE and EDK, the separate installation package  
+      significantly reduces the amount of installation space (by 90%) required 
+      for software development. 
+      <p>
+      While SDK 12.1 retains a look and feel familiar to existing users, it builds on the latest Eclipse 3.5.1 and CDT 6.0.1 releases and adds new functionality, including simplified flows for creating your initial C application.
+      </p>
+      </td>
+    </tr>
+    <tr> 
+      <td colspan="2"><hr></td>
+    </tr>
+    <tr> 
+      <td width="30%" valign="top" align="left"> <p align="right"><b>Conceptual <br>
+        Changes</b></p></td>
+      <td width="70%" valign="top"> <p>
+      A software platform (a collection of libraries and drivers that form the lowest layer of your application stack) is now referred to as a board support package (BSP), but a distinction is made between a BSP used within SDK to create applications and a BSP created for a third-party operating system such as WindRiver VxWorks for use outside of SDK.</p>
+        <p><strong>File &gt; New </strong>provides access to creation of hardware platform, BSP and applications.</p></td>
+    </tr>
+    <tr> 
+      <td colspan="2"><hr></td>
+    </tr>
+    <tr> 
+      <td valign="top" align="left"> <p align="right"><b>Getting 
+      Started</b></p></td>
+      <td valign="top"> <p>        
+	Getting started is now easier than before. In Xilinx Platform Studio (XPS), create a design and export your hardware design to SDK. In SDK, you can launch the Xilinx C Project wizard, select a sample project, and create a new board support package in the same flow.
+        </p>
+        <p>
+ 	In the Project Explorer, double-click the hardware platform XML file to view a list of IP used and their data sheets.
+ 	Double-click on the board support package MSS file to view information about the BSP, drivers and documentation.
+ 	Then, run or debug your application as in earlier releases
+
+        </p></td>
+    </tr>
+    <tr> 
+      <td colspan="2"><hr></td>
+    </tr>
+    <tr> 
+      <td width="30%" valign="top" align="left"> <p align="right"><b>C/C++
+          Application Wizard</b></p></td>
+      <td width="70%" valign="top">
+      <p>
+	The Xilinx C/C++ Project wizard offers a simplified flow, prompting for the hardware platform specification file and automatically generating a board support package (BSP) before creating a sample application.
+      </p>
+      <P>
+	Bootloader sample application creation is one of the supported sample applications and is no longer created during Flash programming for a cleaner flow.
+      </p>
+		
+	  </td>
+    </tr>
+    <tr> 
+      <td colspan="2"><hr></td>
+    </tr>
+    <tr> 
+      <td width="30%" valign="top" align="left"> <p align="right"><b>Updated 
+          Linker Script Dialog</b></p></td>
+      <td width="70%" valign="top">
+        <p>The Linker Script Generation dialog box has been updated with basic and advanced modes, featuring:<br>
+          - Improved layout with section sizes with human readable values<br>
+          - 
+          Errors during generation shown and correctable in the IDE rather than the console<br>
+          - Linker script can be applied to active or all build configurations<br>
+          - Adding code sections does not replicate names<br>
+          - The dialog box can now be invoked standalone (decoupled from SDK)<br>
+          - You can now 
+        create linker scripts without an application</p>
+      </td>
+    </tr>
+    <tr> 
+      <td colspan="2"><hr></td>
+    </tr>
+    <tr> 
+      <td width="30%" valign="top" align="left"> <p align="right"><b>Unified
+      BSP Generation and Configuration
+          </b></p></td>
+      <td width="70%" valign="top">Board Support Package (BSP) projects can be
+      created for application development within SDK or for external tools
+      using a unified flow that supports multiple BSP projects for the same
+      hardware platform. The updated BSP Configuration feature has a more intuitive
+      layout; it now allows the BSP version to be changed after creation
+      and resolves driver configuration issues when more than one version exists.
+	  </td>
+    </tr>
+    <tr> 
+      <td colspan="2"><hr></td>
+    </tr>
+    <tr> 
+      <td width="30%" valign="top" align="left"> <p align="right"><b>  Improved 
+          Profiling View</b></p></td>
+      <td width="70%" valign="top">The Profiling view 
+      has been enhanced and supports source code linking.
+      </td>
+    </tr>
+    <tr> 
+      <td colspan="2"><hr></td>
+    </tr>
+    <tr> 
+      <td width="30%" valign="top" align="left"> <p align="right"><b>  
+           New Hardware Platform and BSP Views</b></p></td>
+      <td width="70%" valign="top">      
+          <p>
+	The new Hardware Platform view displays IP used in the design with version information and datasheet hyperlink (double-click on the XML file, or right-click the name and select <strong>Open</strong>).</p>
+          <p>
+	The new Board Support Package view displays information about the BSP and drivers, including a link to documentation (double-click on the MSS file, or right-click the name and select <strong>Open</strong>).          </p>
+	  </td>
+    </tr>
+    <tr> 
+      <td colspan="2"><hr></td>
+    </tr>
+    <tr> 
+      <td width="30%" valign="top" align="left"> <p align="right"><b>  
+            Terminal Support</b></p></td>
+      <td width="70%" valign="top">SDK features new terminal support features.
+	  UART output can be redirected to the console when enabled from a run or debug configuration. You may also select <strong>Window &gt; Show View &gt; Terminal</strong> to launch a separate Terminal view. </p></td>
+    </tr>
+    <tr> 
+      <td colspan="2"><hr></td>
+    </tr>
+    <tr> 
+      <td width="30%" valign="top" align="left"> <p align="right"><b>  
+           Device Programming</b></p></td>
+      <td width="70%" valign="top">
+      <p>
+      Device programming updates include FPGA programming progress. The JTAG
+      Settings dialog box supports specification of ChipScope&#8482; plug-ins to enable
+      the user of third-party cables.      </p>
+      </td>
+    </tr>
+	    <tr> 
+      <td colspan="2"><hr></td>
+    </tr>
+    <tr> 
+      <td width="30%" valign="top" align="left"> <p align="right"><b>  
+           Debug Improvements</b></p></td>
+      <td width="70%" valign="top">Debug improvements
+      feature faster debug performance and responsiveness compared
+      to previous releases. The XMD console now supports a command
+      history feature when used within SDK.</td>
+    </tr>
+    <tr> 
+      <td colspan="2"><hr></td>
+    </tr>
+    <tr> 
+      <td align="left" valign="top" width="30%"> <p align="right"><b> 
+       Ease of Use
+          Changes</b></p></td>
+      <td style="VERTICAL-ALIGN: top"> <p>          
+              SDK ease of use improvements include automatic completion of project
+          names, context sensitivity of menus, simplified software
+          repository dialog with support for rescan, scrolling SDK
+          console logging actions taken by the IDE, and more.</p></td>
+    </tr>
+    <tr> 
+      <td colspan="2"><hr></td>
+    </tr>
+    <tr> 
+      <td width="30%" valign="top" align="left"> <p align="right"><b>Other
+          Changes</b></p></td>
+      <td width="70%" valign="top">
+      <p>
+      SDK 12.1 also includes the following changes:<br>
+      - 
+      Project Explorer and C/C++ Project views display hardware platform,
+      board support package and application projects at the same level of
+      hierarchy<br>
+      - After ELF file creation, double click on the ELF file to invoke a disassembly view or on the ELF size file to view that information.<br>
+      - 
+      Xilinx functionality is now found in the Xilinx Tools menu, rather than
+      separate Tools and Hardware Design menus<br>
+      - Command line launch uses the new xsdk command<br>
+      - The
+      hardware differences view is obsolete</p></td>
+    </tr>
+    <tr> 
+      <td colspan="2"><hr></td>
+    </tr>
+    <tr> 
+      <td align="left" valign="top" width="30%"> <p align="right"><b>Updated<br>
+        Cygwin Version</b></p></td>
+      <td valign="top" width="70%">The Cygwin version has now been 
+      updated to 1.7.1.</td>
+    </tr>
+    <tr> 
+      <td colspan="2"><hr></td>
+    </tr>
+    <tr> 
+      <td align="left" valign="top" width="30%"> <p align="right"><b>Updated<br>
+        JRE Version</b></p></td>
+      <td valign="top" width="70%">The JRE version has now been 
+      updated to 1.6.</td>
+    </tr>
+    <tr> 
+      <td colspan="2"><hr></td>
+    </tr>
+    <tr> 
+      <td align="left" valign="top" width="30%"> <p align="right"><b>Integration with Xilinx System Generator</b></p></td>
+      <td valign="top" width="70%">The Xilinx System Generator tool now 
+      supports software development using SDK with co-debugging features. It exports the required hardware files and launches SDK for software development. It also creates a repository with drivers for the DSP IP.</td>
+    </tr>
+    <tr> 
+      <td colspan="2"><font face="Times New Roman" color="#800000">Copyright &copy; 1995-2010 Xilinx, Inc. All rights reserved.</font></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
+

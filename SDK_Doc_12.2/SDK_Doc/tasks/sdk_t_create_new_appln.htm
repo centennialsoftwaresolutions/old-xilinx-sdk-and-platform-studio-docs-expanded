@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+<head><meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="Content-Language" content="en-us">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+
+  <title>Creating a C or C++ project</title>
+  <link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+
+<body>
+  <h1>Creating a C or C++ project</h1>
+  <HR>
+  <p>You can create a C or C++ project. By default, these are managed make projects - SDK creates and maintains make files for you. <br>
+To create a project:</p>
+  <ol>
+    <li>Click <b>File &gt; New &gt; Xilinx C Project</b> (or <b>Xilinx C++ Project</b>). Note that this is equivalent to clicking on <b>File &gt; New &gt; Project</b> to open the New Project wizard, selecting <b>Xilinx C Project</b> and clicking on <b>Next</b>.</li>
+
+    <li>The <b>New Xilinx C Project</b> dialog box appears.<br>
+    	<br><img src="../images/new_app_project_dialog.png"><br><br></li>
+    <li>In the <strong>Project Name</strong> field, type a name for the new project if you do not want to use the default value.</li>
+    <li>Select the location for the project. To use the default location as displayed in the <strong>Location</strong> field, leave the 			
+		<br><br><strong>Use default location</strong> check box selected. Otherwise, click to unselect the check box, then type or browse 
+		to the directory location.</li>
+  	<li>Select the <strong>Hardware Specification </strong>XML file if it was not specified earlier.
+  	<li>From the <strong>Processor </strong>drop-down list, select the processor for which you want to build the application.
+    <li>SDK provides useful sample applications listed in <strong>Select Project Template</strong> that you can use to create your 
+		project. The <strong>Description</strong> box displays a brief description of the selected sample application. When you use a  	
+		sample application for your project, SDK creates the required source and header files and linker script. <br>
+    	To create a <strong>blank project</strong> select the <strong>Empty Application.</strong> You can then add C files to the project.
+		</li>
+    <li>Click <b>Next</b>.</li>
+    <li>In the next page, New Xilinx C Project, you can choose to <strong>Create a new Board Support package</strong> or <strong>Target an 		existing Board Support Package</strong> for which you want to create the application from the list of available platforms.<br>
+    <br><img src="../images/new_app_bsp_dialog.png"><br><br></li>
+    <li>Click <b>Finish</b> to create your application project and board support package (if it does not exist).<br>
+    </li>
+  </ol>
+  	<p>Next, you might want to define your project properties. For more information, refer to the Help topic <b>C/C++ Development User 
+	Guide > Reference > C/C++ Properties</b>.</p>
+    The procedure for creating&nbsp;a managed C++ software application is similar to the C application creation procedure described here. 
+	Select a <strong>Xilinx C++ Project</strong>, then continue with the wizard as described. <br>
+  	<br>
+  	<strong>Note</strong><em>:</em> Xilinx recommends that you use Managed Make flow rather than Standard Make C/C++ unless you are 
+	comfortable working with make files. <br>
+  <br>
+  <img height="21" alt="Related concepts" src="../images/ngconcepts.gif" width="143" border="0"><br>
+  <a href="../concepts/sdk_c_projects.htm">SDK application projects </a><br>
+  <br>
+  <img height="21" alt="Related tasks" src="../images/ngtasks.gif" width="143" border="0"><br>
+  <a href="sdk_o_project_creation.htm">Creating software projects</a><br>
+  <br>
+  <img height="21" alt="Related reference" src="../images/ngref.gif" width="143" border="0"><br>
+  <a href="../reference/sdk_u_new_proj_wiz_m_name.htm">New Xilinx C Application Project dialog box</a><br>
+  <a href="../reference/sdk_o_ref.htm">C/C++ Views</a><br>
+  <br>
+  
+  <p><font face="Times New Roman" color="#800000">Copyright &copy; 1995-2010 Xilinx, Inc. All rights reserved.</font></p>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>SDK application projects</title>
+<link rel="Stylesheet" type="text/css" media="all" href="../help.css">
+</head>
+
+<body>
+<h1>SDK application projects
+</h1>
+
+<HR>
+<p>Software application projects are your final application containers. The
+   project directory that is created contains (or links to) your C/C++ source files,
+  executable output file, and associated utility files, such as the make files
+  used to build the project. Each SDK project produces one executable file
+  called <em>projectname.</em>elf.
+  You can configure the following in a Software Application project:
+<ul>
+    <li>Compilation Settings</li>
+    <li>Build Configurations</li>
+    <li>Run and debug configurations</li>
+</ul>
+
+  Each software application project must link against an SDK board support
+  package project in your workspace. Otherwise, your software image will not
+  link or be functional. Board support packages created for external tools cannot be used.
+</p>
+
+<p>
+  You can have any number of application projects. This allows you to do all
+  of your software development for a given hardware within the same SDK
+  workspace.
+</p> 
+
+<p>  
+    Nested projects are not supported; each project must be organized as a
+    discrete entity. Project dependencies are supported by allowing a project to
+    reference other projects that reside in your workspace. 
+    For more information, refer to the following in the Help navigation pane:
+    <b>C/C++ Development User Guide > Reference > C/C++ Properties > C/C++ Project properties</b>.</p>
+
+<p>For more information about
+projects and where they are stored, refer to the following in the Help navigation pane: </p>
+
+<ul >
+ <li><b>Workbench
+     User Guide > Concepts > Workbench > Resources</b></li>
+ <li><b>Workbench
+     User Guide > Tasks > Running Eclipse</b></li>
+</ul>
+
+<h2>Project types</h2>
+
+<p>You can create a standard make C
+or C++ project or a managed make C or C++ project.</p>
+
+<ul>
+  <li>
+    <strong>SDK managed C or C++ project (recommended
+      for beginners)    </strong><br>
+      An SDK managed
+      make project automatically generates the makefiles for you. These files are
+      required for your managed make projects to build successfully.</li>
+  <li>
+   <strong>Standard make C or C++ project</strong>
+      <br>
+    You must create a makefile or use an existing
+    makefile in order to build your project .  </li>
+</ul>
+<h2>Project conversion
+</h2>
+
+<p>You can convert projects from C
+to C++ (or from C++ to C). If, for example, your requirements change and you
+must convert an existing C project to C++, you can do this without recreating
+the project. The CDT converts your project files and resolves any source
+control issues.</p>
+
+<h2>A few notes about projects
+</h2>
+<p>Note the following about projects: </p>
+<ul>
+ <li>When
+     you create a file within a project, a record of every
+     change is created, called the Local History. For more information about local history, refer to <b>Workbench
+     User Guide > Reference > User interface information > Development
+     environment > Local history</b> in the Help contents. </li>
+ <li>Spaces
+     in projects and filenames can cause problems with some tools, such as the
+     make utility and the compiler.</li>
+ <li >Be
+     careful when you use only capitalization to distinguish files and projects.
+     UNIX-based operating system file names are case sensitive, but Windows
+     filenames are not. Therefore, Hello.c and hello.c are separate files in
+     UNIX but overwrite each other in Windows.</li>
+</ul>
+
+<p>For more information about
+projects, select <b>Workbench User Guide > Concepts > Workbench >
+Resources</b>.
+</p>
+
+<p><img border="0" width="143" height="21" id="_x0000_i1025" src="../images/ngconcepts.gif" alt="Related concepts"><br>
+<a href="sdk_o_share.htm">Sharing and archiving software projects</a></p>
+
+<p><img border="0" width="143" height="21" id="_x0000_i1026" src="../images/ngtasks.gif" alt="Related tasks"><br>
+<a href="../tasks/sdk_t_create_new_appln.htm">Creating a C or C++ project</a></p>
+<p><font face="Times New Roman" color="#800000">Copyright © 1995-2010 Xilinx, Inc. All rights reserved.</font></p>
+</body>
+
+</html>
