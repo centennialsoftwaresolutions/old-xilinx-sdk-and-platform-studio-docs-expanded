@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Xilinx SDK Command Line flows</title>
+<link rel="stylesheet" type="text/css" href="../help.css"></head>
+
+
+<body>
+
+<h1>Xilinx SDK Command Line Flows</h1>
+<hr>
+
+<p>The majority of the flows within SDK are interactive. Most of these flows are not available, neither do they make sense for
+command line users. However, almost all software development teams expect to be able to build executables from sources
+(often present under version control) in a command line flow without invoking the GUI. The following sections explain the
+different Eclipse and SDK entry points for such use cases.</p>
+
+<h2>Building applications</h2>
+
+<p> This section explains how users can build an application from the command line. It is assume that SDK projects are stored
+in a version control system. The steps below show how to import those projects into a new workspace and then build the
+executables. </p>
+
+<h3>Assumptions</h3>
+<p> The variables used in the steps below are as follows:
+<ul>
+<li> XILINX_EDK - environment variable that points to the EDK or SDK installation. </li>
+<li> XILINX - environment variable that points to the XILINX ISE installation. </li>
+<li> ECLIPSE - a shortcut to the Eclipse console application inside SDK installation: $(XILINX_EDK)/eclipse/lin/eclipse/eclipse,
+or $(XILINX_EDK)/eclipse/lin/eclipse/eclipsec.exe depending on the platform.</li>
+<li> WSPACE - path to the workspace to be used.
+<li> VM - Path to Java VM used by SDK. This should be: $(XILINX)/java6/lin/jre/bin</li> 
+</ul>
+
+The steps also reference the following three Eclipse/SDK projects, all of which are typically stored in the same folder.
+<ul>
+<li> HW - path to SDK's hardware platform project. </li>
+<li> BSP - path to SDK's BSP project </li>
+<li> APP - path to SDK C/C++ application project. </li>
+</ul>
+
+<h3>Import Projects into the workspace</h3>
+To import the 3 projects into the workspace, issue the following command from a shell:
+
+<p><font face="monospace">
+       $(ECLIPSE) -vm $(VM) -nosplash -application org.eclipse.cdt.managedbuilder.core.headlessbuild \<br>
+&nbsp;&nbsp;&nbsp;-import $(HW) \<br>
+&nbsp;&nbsp;&nbsp;-import $(BSP) \<br>
+&nbsp;&nbsp;&nbsp;-import $(APP) \<br>
+&nbsp;&nbsp;&nbsp;-data $(WSPACE) \<br>
+&nbsp;&nbsp;&nbsp;-vmargs -Dorg.eclipse.cdt.core.console=org.eclipse.cdt.core.systemConsole<br>
+</font></p>
+
+Note that if your workspace already has these 3 projects, then this step can be skipped.
+
+<h3>Build Imported Projects</h3>
+To compile the BSP and the applicaiton, issue the following commands from the shell:
+<p><font face="monospace">
+$(ECLIPSE) -vm $(VM) -nosplash -application org.eclipse.cdt.managedbuilder.core.headlessbuild \<br>
+&nbsp;&nbsp;&nbsp;-build $(BSP) \<br>
+&nbsp;&nbsp;&nbsp;-data $(WSPACE) \<br>
+&nbsp;&nbsp;&nbsp;-vmargs -Dorg.eclipse.cdt.core.console=org.eclipse.cdt.core.systemConsole<br>
+<br>
+$(ECLIPSE) -vm $(VM) -nosplash -application org.eclipse.cdt.managedbuilder.core.headlessbuild \<br>
+&nbsp;&nbsp;&nbsp;-build $(APP) \<br>
+&nbsp;&nbsp;&nbsp;-data $(WSPACE) \<br>
+&nbsp;&nbsp;&nbsp;-vmargs -Dorg.eclipse.cdt.core.console=org.eclipse.cdt.core.systemConsole<br>
+</font></p>
+
+<h2>Adding Software Repositories to a Workspace</h2> 
+
+If your BSP depends on drivers or libraries present in a software repository, then it is necessary to add the repository
+to the workspace before attempting to compile the projects. This can be performed using the following command:
+
+<p><font face="monospace">
+$(ECLIPSE) -vm $(VM) -nosplash -application com.xilinx.sdk.sw.AddSwRepositoryApp "path/to/repo" \<br>
+&nbsp;&nbsp;&nbsp;-data $(WSPACE) <br>
+</font></p>
+<p><font face="Times New Roman" color="#800000">Copyright &copy; 1995-2011 Xilinx, Inc. All rights reserved.</font></p>
+</body>
+
+</html>

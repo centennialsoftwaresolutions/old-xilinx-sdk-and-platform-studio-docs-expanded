@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Xilinx SDK Known Issues</title>
+<link rel="stylesheet" type="text/css" href="../help.css"></head>
+
+
+<body>
+
+<h1> Known issues in SDK </h1>
+<HR>
+
+<h2> Memory Viewer displays data values in the wrong endian format </h2>
+<ul>
+<li> Issue: The memory viewer displays data in big endian format. </li>
+<li> Unfortunately, there are no solutions for this issue right now. Users have to manually parse
+the memory contents in the correct format. </li>
+</ul>
+
+<h2> While Initializing the bitstream with an ELF file, SDK uses bootloop </h2>
+<ul>
+<li> Issue: The Configure FPGA dialog allows users to select the ELF to be initialized
+in the bitstream. When this dialog is opened, it remembers the ELF used in a previous invocation.
+However, regardless of the ELF shown in the dialog, SDK always uses bootloop to initialize
+the bitstream.</li>
+<li> Solution: In the dialog, manually reselect the ELF to use.</li>
+</ul>
+
+<h2> MSS Viewer does not refresh automatically </h2>
+<ul>
+<li> Issue: The MSS viewer does not automatically refresh when either the MSS is changed
+via BSP settings dialog, or when the hardware specification is updated.</li>
+<li> Solution: Close the MSS viewer, and double click on the MSS file to re-open it.</li>
+</ul>
+
+<h2> Program FPGA dialog does not show up </h2>
+<ul>
+<li>Symptom: The Program FPGA dialog does not show up. Clicking on the Program FPGA
+toolbar item, or the menu item does not result in any action.</li>
+<li>Possible Issue: This issue could potentially arise if any 11.x projects were imported,
+but the import process was not successful. Please make sure that the application project's
+referenced projects includes the BSP, and the BSP's referenced project includes the
+hardware specification project.</li>
+</ul>
+
+<h2> Renaming h/w platforms </h2>
+<ul>
+<li> Symptom: When a hardware specification project is renamed, the dependent BSP's
+and applications fail to compile. </li>
+<li> Issue: Currently, SDK does not support renaming of hardware specification projects.
+If such a need arises for the user, then the user has to manually change the following items:
+<ol>
+<li>Change Project References in the BSP project to point to the new hardware project.</li>
+<li>Change the libgen.options file to specify the correct hardware specification file.</li>
+<li>Change the ELFCheck options in the application's build settings.</li>
+</ol>
+</li>
+</ul>
+
+<h2>Restore defaults in C/C++ settings causes settings to be lost.</h2>
+<ul>
+<li>Issue: Clicking on Restore Defaults in the C/C++ Build Settings will result in elfcheck not working properly.</li>
+<li>Solution: Manually set the path to the hardware specification and the processor name in the ELFCheck options in Build
+settings after restoring defaults.</li>
+</ul>
+
+<h2>Operations on XMD console can confuse SDK's internal state</h2>
+<ul>
+<li>Currently, SDK uses the same XMD as shown in the XMD console. As a result,
+performing some operations on the XMD console (such as disconnecting targets)
+will cause SDK's state to get out of sync with the actual target state. In such a case,
+it may not be possible to recover and SDK will have to be restarted.</li>
+</ul>
+
+<h2>When SDK opens up, it doesn't have the right menus, or the right icons, or the C/C++ perspective</h2>
+<ul>
+<li>Solution: SDK is probably reading settings from an outdated .eclipse folder, or an outdated workspace.
+Try opening SDK with a fresh workspace. If that doesn't work, remove your $HOME/.eclipse folder.
+(On NT, this is usually C:\Documents and settings\username\.eclipse
+</li>
+</ul>
+</body>
+</html>
+
