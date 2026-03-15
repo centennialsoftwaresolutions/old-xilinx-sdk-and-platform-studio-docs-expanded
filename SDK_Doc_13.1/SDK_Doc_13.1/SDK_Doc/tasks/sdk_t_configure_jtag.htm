@@ -1,0 +1,73 @@
+<html>
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Configuring the JTAG settings</title>
+<link rel="Stylesheet" type="text/css" media="all" href="../help.css">
+<meta name="generator" content="Namo WebEditor(Trial)"></head>
+
+
+<body>
+<H1>Configuring the JTAG settings</H1>
+<HR>
+<p><strong>Note:</strong> In most cases, the default JTAG settings will work for your project and you can skip this task. </p>
+<p>You might need to configure the JTAG settings for your project if you have any of the following:
+</p>
+<UL>
+  <LI>Multiple JTAG cables connected to your machine</li>
+  <li>Using 3rd party cable that supports Xilinx cable plug-in mechanism</li>
+  <LI>Multiple boards connected to your machine using different cables </li>
+  <LI>A custom development board with non-Xilinx devices</LI>
+</UL>
+<p>To configure the JTAG settings:</p>
+<ol>
+  <li>Select <STRONG>Tools &gt; </STRONG><STRONG>Configure JTAG Settings</STRONG> to open the Configure JTAG Settings dialog box.</li>
+  <li>In the <strong>JTAG Cable</strong> area of the dialog box,
+  specify the JTAG cable type, port (on the host machine), and
+  frequency.</li>
+  <li>If you have a 3rd party cable, select <b>3rd Party Cable, Xilinx Plug-in</b> type.</li>
+  <li>Specify the cable name and arguments (optional) to the plug-in in the <b>Other Options</b> field. You should specify the complete cable option <b>-cable type xilinx_plugin modulename &#060;cable name&#062; {modulearg &#060;cable args&#062;}</b> text in
+      this field. </li>
+  <li>The default JTAG device chain option setting is
+  <strong>Automatically Discover Devices on JTAG Chain</strong>. With this option, the tools  will automatically discover the JTAG devices for you.<br>
+  Alternately, you can select <strong>Manual Configuration of JTAG Chain</strong> to specify a non-Xilinx device on the chain. When you
+  select this option, the JTAG Device Chain list becomes available. You can use the device buttons to manage your devices:</li>
+  <ul>
+    <li><img src="../images/icon_device_add.gif" alt="Add Device button" width="24" height="23"><strong>Add Device</strong> button: Adds a device to the list.</li>
+    <li><img src="../images/icon_device_delete.gif" alt="Delete Device button" width="22" height="22"><strong> Delete Device</strong> button: Deletes the selected device from the list.</li>
+    <li><img src="../images/icon_device_move_up.gif" alt="Move Up Device button" width="22" height="22"> <strong>Move Up Device</strong> button: Moves the selected device up in the list.</li>
+    <li><img src="../images/icon_device_move_down.gif" alt="Move Down
+  Device button" width="22" height="22"> <strong>Move Down Device</strong> button: Moves the selected device down in the list.</li>
+  </ul>
+    <li>Select the FPGA device in the JTAG chain using the <b>FPGA?</b> field. If you have multiple FPGA devices in the chain, select the one where the hardware design is loaded.</b>
+  <li>Click <strong>OK</strong>.</li>
+</ol>
+
+<p><em>Note: </em> If you are debugging a PowerPC 405 or 440 processor that has JTAG pins are connected to the FPGA I/O pins, select <b>Manual Configuration of JTAG Chain</b>, specify the <b>Device Name</b> and <b>ID Code</b> of the FPGA device and specify the <b>IR Length</b> as <b>&#145;4&#146;</b>.
+</p>
+
+<FONT size=2><FONT 
+color=#000000></FONT></FONT>
+<p><IMG height=21 alt="Related concepts" 
+src="../images/ngconcepts.gif" width=143 border=0>&nbsp;<BR>
+<A 
+href="../concepts/sdk_c_jtag.htm">JTAG settings</A><BR>
+<A 
+href="../concepts/sdk_c_hwcomponents.htm">Embedded hardware components</A><BR>
+<A 
+href="../concepts/sdk_c_program_flash.htm">Programming parallel Flash overview</A></p>
+<p><IMG height=21 
+alt="Related tasks" src="../images/ngtasks.gif" width=143 border=0>&nbsp; <BR><A 
+href="./sdk_t_configure_fpga.htm">Programming the FPGA</A><BR><A 
+href="../tasks/sdk_o_debug.htm">Debugging a program</A></p>
+<p><IMG height=21 
+alt="Related reference" src="../images/ngref.gif" width=143 border=0> 
+<BR>
+<A href="../reference/sdk_u_configure_jtag.htm">Configure JTAG Settings dialog box</A></p>
+  <p><font face="Times New Roman" color="#800000">Copyright © 1995-2011 Xilinx, Inc. All rights reserved.</font></p>
+
+</body>
+
+</html>
+
+
+
