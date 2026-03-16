@@ -1,0 +1,131 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>TCF Debugging</title>
+<link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+<body>
+<h1>Attach and Debug Linux Kernel Using Xilinx System Debugger (TCF) </h1>
+<HR>
+<p> It is possible to debug the Linux Kernel using the Xilinx<sup>®</sup> System Debugger (TCF). Follow the steps below to attach to the Linux Kernel running on the target and to debug the source code. </p>
+<ol>
+  <li> Compile the kernel source using the following configuration options:
+  
+    <ol>
+	<br>
+      <li type="a" value="1">CONFIG_DEBUG_KERNEL=y</li>
+	  <li type="a" value="2">CONFIG_DEBUG_INFO=y </li>
+    </ol>
+  </li>
+<li> Launch SDK.</li>
+<br>
+  <li> Click <span class="guimenu">Window &gt; Open Perspective &gt; Debug</span>.</li>
+  <br>
+    <br>
+  <p><img src="../images/TCF_4.png"></p>
+  <br>
+   <br>
+ 
+<li> Click <span class="guimenu">Run &gt; Debug Configurations</span>.</li>
+<br>
+  <br>
+  <br>
+  <p><img src="../images/TCF_5.png" width="296" height="705"><br></p>
+ <br>
+
+<li> In the Debug Configurations dialog box, select <strong>Xilinx C/C++ application (TCF)</strong> and click the <strong>New</strong> <img src="../images/new_icon.png" width="20" height="22"> icon.  Name the configuration <strong>Zynq_Linux_Kernel_Debug</strong>.</li>
+<br>
+<p><img src="../images/TCF_6.png" width="875" height="556"></p>
+   
+<li>Debugging begins, with the processors  in the running state, as shown below.<br>
+  <br>
+  <img src="../images/TCF_8.png" width="624" height="193"><br>
+  <br>
+</li>
+<li>Click the <img src="../images/TCF_9.png" width="17" height="14"> button to suspend the processor. Debug  starts in the Disassembly mode.<br>
+  <br>
+  <img src="../images/debug_disassembly.PNG" width="955" height="585">  <br>
+  <br>
+</li>
+<li> Add the vmlinux symbol file: 
+  <p><ol>
+    <li type=a>Right click <span class="guimenu">ARM Cortex-A9 MPCore#0</span> and select <span class="guimenu">Symbol Files</span>. <br>
+        <br>
+        <img src="../images/TCF_11.png" width="624" height="529"><br>
+        <br>
+    </li>
+    <li  type=a value=2> Click <span class="guimenu">Add</span>.<br>
+        <br>
+        <img src="../images/TCF_12.png" width="624" height="353"><br>
+        <br>
+    </li>
+    <li type=a value=3> Add the vmlinux symbol file and click <span class="guibutton">OK</span>.</li>
+  </ol>
+</li>
+<br>
+  <br>
+  <p><img src="../images/TCF_13.png" width="624" height="353"></p><br>
+  <br>
+
+<li> You must setup “Source Lookup” if you built the code on a Linux machine and try to run the debugger on Windows.</li><br>
+  <br>
+  <img src="../images/debug_source_lookup.PNG">
+  <br>
+<p>
+<li> Select the debug configuration<strong> Zynq_Linux_Kernel_Debug </strong>and right-click  it to select <span class="guimenu">Edit Source Lookup</span>.</li><br>
+  <br>
+ <p> <img src="../images/TCF_15.png" width="624" height="462"></p><br>
+  <br>
+  <br>
+  <br>
+  <p><img src="../images/TCF_16.png" width="525" height="414"></p><br>
+  <br>
+
+<li> Click <span class="guibutton">Add</span> and select <span class="guibutton">Path Mapping</span> from the Add Source dialog box. </li><br>
+  <br>
+<p><img src="../images/TCF_17.png" width="525" height="364"></p><br>
+  <br>
+
+<li>Add the Compilation path and local file system path by clicking <span class="guimenu">Add</span>.</li>
+<br>
+   <img src="../images/debug_path_mapping.PNG"><br>
+ <li> Successful source lookup takes you to the source code debug.<br>
+  <br>
+  <img src="../images/TCF_19.png" width="624" height="421"><br>
+  <br>
+</li>
+<li> You can add function breakpoints by clicking the <img src="../images/TCF_19b.png" width="17" height="19"> button in the Breakpoints view.</li><br>
+  <br>
+ <p> <img src="../images/TCF_20.png" width="624" height="222"></p><br>
+  <br>
+
+<li> Add a breakpoint at the start_kernel function.<br>
+  <br>
+  <img src="../images/TCF_21.png" width="720" height="636">  <br>
+  <br>
+  <br>
+ <p><img src="../images/TCF_22.png" width="449" height="190"></p><br>
+  <br>
+</li>
+<li> Press the reset button. The Zynq®-7000 processor boots from the SD card and stops at the beginning of the kernel initialization.<strong> <br>
+  <br>
+  <img src="../images/debug_reset.PNG">
+  <p>
+  <p>
+  <strong>Note:</strong> The Linux kernel is always compiled with full optimizations and inlining enabled. Therefore:
+  <ul>
+  
+    <li> Stepping through code might not work as expected due to the possible reordering of some instructions.</li>
+    <li>Some variables might be optimized out by the compiler and therefore not be available for the debugger.</li>
+  </ul>
+</li>
+</ol>
+<p> <img height="21" alt="Related tasks" src="../images/ngtasks.gif" width="143" border="0"><br>
+    <a href="../tasks/sdk_t_tcf_debugging.htm">SDK System Debugger (TCF)</a></p>
+<p><font color="#800000" face="Times New Roman">Copyright 1995-2013 Xilinx, Inc. All rights reserved.</font></p>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+<!-- Defines topics that will be inserted under the Xilinx SDK User Guide menu-->
+<toc label="Tasks" href="tasks/sdk_o_tasks.htm">
+	<topic label="Importing Hardware Platform Specification" href="tasks/sdk_t_hwspec.htm">
+		<topic label="View Hardware Platform" href="tasks/sdk_t_hwspec.htm#view_hardware_platform"/>
+		<topic label="View Hardware Design Report" href="tasks/sdk_t_hwspec.htm#view_report"/>
+	</topic>
+	<topic label="Creating a Software project" href="tasks/sdk_o_project_creation.htm">
+		<topic label="Creating a Board Support Package (SDK)" href="tasks/sdk_t_create_bsp_internal.htm"/>
+		<topic label="Configure a Board Support Package (SDK)" href="tasks/sdk_t_config_bsp_internal.htm"/>
+		<topic label="Creating a Board Support Package (External Tool)" href="tasks/sdk_t_create_bsp_external.htm"/>
+		<topic label="Configure a Board Support Package (External Tool)" href="tasks/sdk_t_config_bsp_external.htm"/>
+		<topic label="View a Board Support Package" href="tasks/sdk_t_view_bsp.htm"/>
+		<topic label="Creating a C/C++ Application" href="tasks/sdk_t_create_new_appln.htm"/>
+		<topic label="Installing Third-Party Software Components" href="tasks/sdk_t_install_third_party_bsp.htm"/>
+		<topic label="Setting up Software Repositories" href="tasks/sdk_t_repos.htm"/>
+	</topic>
+	<topic label="Importing a Software Project" href="tasks/sdk_o_import_project.htm">
+		<topic label="Importing existing projects" href="tasks/sdk_t_import_exist_proj.htm"/>
+		<topic label="Importing resources from the file system" href="tasks/sdk_t_import_file.htm"/>
+		<topic label="Importing resources from an archive file" href="tasks/sdk_t_import_archive.htm"/>
+	</topic>
+	<topic label="Importing existing XPS projects" href="tasks/sdk_t_import_exist_xps_proj.htm"/>
+	<topic label="Exporting a Software Project" href="tasks/sdk_o_export_project.htm">
+		<topic label="Exporting resources to the file system" href="tasks/sdk_t_export_file.htm"/>
+		<topic label="Exporting resources to an archive file" href="tasks/sdk_t_export_archive.htm"/>
+	</topic>
+        <topic label="Monitoring Hardware Project Changes" href="tasks/sdk_t_auto_sync.htm" />
+        <topic label="Changing Hardware Specification File" href="tasks/sdk_t_change_hwspec.htm" />
+        <topic label="Re-Targetting of Software Projects" href="tasks/sdk_t_retarget.htm" />
+	<topic label="Working with software projects" href="tasks/sdk_o_software_task.htm"/>
+	<topic label="Building projects" href="tasks/sdk_o_build_task.htm">
+		<topic label="Building a BSP (SDK)" href="tasks/sdk_t_build_bsp_internal.htm"/>
+		<topic label="Generating a BSP (External Tool)" href="tasks/sdk_t_build_bsp_external.htm"/>
+		<topic label="Specifying Compiler Options" href="tasks/sdk_t_proj_compiler_options.htm"/>
+		<topic label="Creating Linker Scripts" href="tasks/sdk_t_create_lscript.htm"/>
+  <topic href="reference/sdk_u_linker_script_mod.htm" label="Modifying Linker Scripts">
+  </topic>
+		<topic label="Adding Libraries and Library paths" href="tasks/sdk_t_proj_libraries.htm"/>
+		<topic label="Specifying Linker Options" href="tasks/sdk_t_proj_linker_options.htm"/>
+	</topic>
+	<topic label="Running, debugging and profiling projects" href="tasks/sdk_o_run.htm">
+		<topic label="Configuring the JTAG Settings" href="tasks/sdk_t_configure_jtag.htm"/>
+		<topic label="Programming the FPGA" href="tasks/sdk_t_configure_fpga.htm"/>
+		<topic label="Creating or editing a run/debug/profile configuration" href="tasks/sdk_o_run_config.htm">
+			<topic label="Selecting a run or debug or profile configuration" href="tasks/sdk_t_run_config.htm"/>
+			<topic label="Creating a run or debug or profile configuration" href="tasks/sdk_t_new_run_config.htm"/>
+			<topic label="Selecting an application to run or debug or profile" href="tasks/sdk_t_run_main.htm"/>
+			<topic label="Specifying XMD Target Configuration" href="tasks/sdk_t_run_xmd.htm"/>
+			<topic label="Specifying Initialization Tasks" href="tasks/sdk_t_run_init.htm"/>
+			<topic label="Specifying Profiler Configuration" href="tasks/sdk_t_run_profiler.htm"/>
+		</topic>
+		<topic label="Debugging" href="tasks/sdk_o_debug.htm">
+			<topic label="Working with XMD Console" href="tasks/sdk_t_xmd_console.htm"/>
+			<topic label="Debugging With System Debugger (TCF)" href="tasks/sdk_t_tcf_debugging.htm"/>
+			<topic label="Multi-Processor Debugging with System Debugger (TCF)" href="tasks/sdk_t_tcf_multiproc_debugging.htm"/>
+		</topic>
+		<topic label="Running" href="tasks/sdk_t_run.htm"/>
+		<topic label="Profiling" href="tasks/sdk_o_profile.htm"/>
+		<topic label="Program input and output" href="tasks/sdk_t_program_io.htm"/>
+	</topic>
+	<topic label="Programming Flash" href="tasks/sdk_t_program_flash.htm"/>
+ <topic href="tasks/sdk_t_create_zynq_boot_image.htm" label="Create Boot Image">
+ </topic>
+ <topic href="tasks/sdk_t_program_flash_zynq.htm" label="Program Flash for Zynq">
+ </topic>
+</toc>

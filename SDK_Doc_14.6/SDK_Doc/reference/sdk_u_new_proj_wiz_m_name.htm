@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+<head><meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="Content-Language" content="en-us">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <title>New Xilinx C Application Project dialog box</title>
+  <link rel="stylesheet" type="text/css" href="../help.css">
+  <script language="JavaScript">
+function changeSize(theImage,wd,ht) {
+	wdth=parseInt(theImage.style.width); hght=parseInt(theImage.style.height);
+	if ( !(wdth==(wd*2)) ) {wdth=wd*2; hght=ht*2;}
+	else {wdth=wd;hght=ht;}
+	theImage.style.width=wdth; theImage.style.height=hght;
+}
+  </script>
+</head>
+<body>
+<h1>Creating a New Application Project</h1>
+<HR>
+<p> You can create a C or C++ application project by using New Application Project wizard. By default, these are managed make projects - SDK creates and maintains make files for you.</p>
+<p>To create a project: </p>
+<ol>
+  <li> Click <strong>File &gt; New &gt; Application Project</strong>. Note that this is equivalent to clicking on <strong>File &gt; New &gt; Project</strong> to open the New Project wizard, selecting <strong>Xilinx &gt; Application Project</strong> and clicking on <strong>Next</strong>. </li>
+  <li> The <strong>New Application Project</strong> dialog box appears.<strong></strong></li>
+</ol>
+<blockquote>
+  <p><img src="../images/new_project_wiz_appln.png" width="529" height="617"></p>
+</blockquote>
+<ol start="3">
+  <li> In the <strong> Project Name</strong> field, type a name for the new project. </li>
+  <li> Select the location for the project. To use the default location as displayed in the <strong> Location</strong> field, leave the <strong> Use default location</strong> check box selected. Otherwise, click to unselect the check box, then type or browse to the directory location. </li>
+  <li><strong> Hardware Platform </strong> drop-down list comes with pre defined hardware platforms for ZC702 , ZC706 &amp; ZED hardware. You can use this to start your application on-the-fly, instead of going for any hardware design creation tools. These are specific to PS only part of Zynq. Select appropriate target platform from Hardware Platform drop-down list. Select <strong>Create New </strong>option from the list to<strong></strong>create a new hardware platform project by following the instructions<strong></strong>mentioned in <a href="sdk_u_hwspec.htm">Creating a new Hardware Platform Specification</a>.</li>
+  <li> From the <strong>Processor </strong>drop-down lists, select the appropriate target processor. </li>
+  <li> From the <strong>OS Platform </strong>drop-down list, select the target OS Platform. </li>
+  <li> Select the appropriate <strong>Language</strong> check box (C/C++). </li>
+  <li> Select <strong>Create New </strong>option<strong> of Board Support Project </strong>to create new board support package project. Select<strong> Use existing </strong>to select the existing Board Support Package projects. </li>
+  <li> Click <strong>Next</strong>. </li>
+  <li> SDK provides useful sample applications listed in Available Templates that you can use to create your C project. The Description box displays a brief description of the selected sample application. When you use a sample application for your project, SDK creates the required source and header files and linker script. </li>
+</ol>
+<blockquote>
+  <p><img src="../images/new_project_templates.png" width="529" height="617"> </p>
+  <p><br> 
+    To create an empty project, select the Empty Application. You can then add C files to the project. </p>
+  <p><strong>Note</strong>: For C++ project only <strong>Empty Application</strong> template exists. </p>
+</blockquote>
+<ol start="12">
+  <li> Click <strong>Finish</strong> to create your application project and board support package (if it does not exist). </li>
+</ol>
+<p><img height="21" alt="Related concepts" src="../images/ngconcepts.gif" width="143" border="0"><br>
+<a href="../concepts/sdk_c_projects.htm">SDK application projects </a></p>
+<p><img height="21" alt="Related tasks" src="../images/ngtasks.gif" width="143" border="0"><br>
+<a href="../tasks/sdk_t_create_new_appln.htm">Creating a C or C++ project</a></p>
+<p><font face="Times New Roman" color="#800000">Copyright © 1995-2013 Xilinx, Inc. All rights reserved.</font><br>
+</p>
+</body>
+</html>

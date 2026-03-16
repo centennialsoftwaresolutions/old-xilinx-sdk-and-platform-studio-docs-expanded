@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+<head><meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="Content-Language" content="en-us">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Software Changes</title>
+  <link rel="stylesheet" type="text/css" href="../help.css">
+<meta name="generator" content="Namo WebEditor(Trial)"></head>
+<body>
+<h1>Software Changes</h1>
+<HR>
+<p>The Preview Software Changes panel lists the changes that are required in your software projects when the hardware specification file used by the workspace is changed. </p>
+<p>You might see this panel  while <a href="..\tasks\sdk_t_auto_sync.htm">monitoring hardware project changes</a> or <a href="..\tasks\sdk_t_retarget.htm">re-targeting software projects</a>.</p>
+<h3>Processor Changes View </h3>
+<p><img src="../images/sdk_swdiff_proc_change.png"></p>
+<p>If a processor is deleted from the hardware design,  the software projects related to that processor are closed in the workspace, but not removed. They will no longer be listed in the <b>C/C++ Projects view</b>. You can, however, view the contents of these projects in the <b>Navigator view</b>.</p>
+<p>  If the processor is added to the hardware design,  it is listed in the <b>C/C++ Projects view</b>. If the workspace includes any closed software projects for this processor,  they will be re-opened. </p>
+<h3>User Actions Tab </h3>
+<p><img src="../images/sdk_swdiff_user_actions.png"></p>
+Tasks that might require your action or attention due to changes in the hardware design are listed in the User Actions tab under the project name. For example, <b>Memory Map Changes</b> might require you to change the linker script of the software application. The tasks that are listed under User Actions depend on your particular project.
+<h3>SDK Actions Tab </h3>
+<p><img src="../images/sdk_swdiff_sdk_actions.png"></p>
+<p>Tasks that SDK performs  to match the Software Projects to changes in the hardware design are listed in the SDK Actions tab under the project name. The following sections might contain information:</p>
+<table border="1" cellspacing="0">
+  <tbody>
+    <tr>
+      <th width="153">Name</th>
+      <th width="790">Function</th>
+    </tr>
+    <tr>
+      <td><b>Drivers Added</b></td>
+      <td>The default drivers that will be added to the software platform for the new peripherals in the processor sub-system</td>
+    </tr>
+  <tr>
+    <td><b>Drivers Removed</b></td>
+    <td>    The drivers and any reference to drivers that will be removed from the software platform for peripherals that were removed in the processor sub-system</td>
+  </tr>
+  <tr>
+    <td><b>Compiler Flags</b></td>
+    <td>Changes to the compiler flags for building the platform and applications based on changes to the&nbsp;processor configuration</td></tr>
+  </tbody>
+</table>
+<p><img height="21" alt="Related concepts" src="../images/ngconcepts.gif" width="143" border="0"><br>
+<a href="../concepts/sdk_o_emb_sw.htm">Xilinx embedded software</a></p>
+<p><img height="21" alt="Related tasks" src="../images/ngtasks.gif" width="143" border="0"><br>
+<a href="../tasks/sdk_t_auto_sync.htm">Auto-synchronization of software projects</a><br>
+<a href="../tasks/sdk_t_retarget.htm">Monitoring hardware project changes</a></p>
+<p><img height="21" alt="Related reference" src="../images/ngref.gif" width="143" border="0"><br>
+<a href="sdk_u_hwspec_diff.htm">Hardware design changes</a></p>
+<p>
+<font face="Times New Roman" color="#800000">Copyright &copy; 1995-2013 Xilinx, Inc. All rights reserved.</font><br>
+</p>
+</body>
+</html>

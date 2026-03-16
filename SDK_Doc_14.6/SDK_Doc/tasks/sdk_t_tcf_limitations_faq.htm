@@ -1,0 +1,157 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>TCF Debugger FAQs</title>
+<link rel="stylesheet" type="text/css" href="../help.css">
+<style type="text/css">
+<!--
+.style1 {font-size: 9pt}
+-->
+</style>
+</head>
+<body>
+
+<h1>System Debugger (TCF) Known Issues, Limitations, and Frequently Asked Questions</h1>
+
+<h2>Known Issues and Limitations </h2>
+<hr>
+<h3>In which scenario should I use Xilinx<sup>&#174;</sup>
+ System Debugger (TCF), Xilinx C/C++ Debugger(XMD+GDB)?</h3>
+<p> It is preferable to use the Xilinx C++ application, System Debugger (TCF). Use Xilinx C/C++ Debugger (GDB) when you want to debug Linux applications.</p>
+<hr>
+<h3>Changing the cable type in the Configure JTAG Settings dialog box results in a prompt to terminate any active XMD-GDB debug sessions.</h3>
+<p> Because XMD supports one cable type at a time, it is required to terminate any active GDB launches.</p>
+<hr>
+<h3>	Global variables are not displayed with Xilinx C/C++ application (System Debugger).</h3>
+<p>Hover the mouse on the global variable to see the value of the global  variable.</p>
+<hr>
+<h3>	There is no support for Linux Application debug from the Xilinx C/C++ application (System Debugger).</h3>
+<p>Use the Remote ARM Linux Application configuration to debug Linux  Applications.</p>
+<hr>
+<h3>	Deleting the last debugged application immediately (using Xilinx C/C++ application (System Debugger) by choosing the “Delete Project contents on disk” option, causes the exception below:</h3>
+<p>
+<p><img src="../images/limitations_faqs_exception.png" width="548" height="183"></p>
+<p>
+<p>The workaround for this issue is to wait for four seconds after debugging,   then try deleting the application..
+<hr>
+<h3>Cannot perform standalone profiling with Xilinx C/C++ application (System Debugger).</h3>
+<p>Use Xilinx C/C++ Debugger (GDB) debugger to profile the Standalone applications.</p> 
+
+<hr>
+<h3>By default, the Xilinx System Debugger starts at Application entry (main()). How can I tell Xilinx System debugger to start at program entry?
+</h3>
+<p>If you wish to start debugging from program entry,  enable the <strong>Stop at program entry</strong> checkbox in the debug configuration, as shown below..</p>
+<p>&nbsp;</p>
+<p><img src="../images/limitations_faqs_debug_config.png" width="832" height="477"></p>
+<hr>
+<h3>Debug after re-launch does not stop on breakpoints.</h3>
+<p>SDK does a processor reset on every debug session. The interrupt controller is  not reset during processor reset. Change the reset type to <strong>System  Reset</strong> in Target Setup tab of debug configuration, as shown below. </p>
+<p>&nbsp;</p>
+<p><img src="../images/limitations_faqs_reset.png">
+<p>
+<p><strong>Note:</strong> this  is applicable only if you terminate a debug session while the processor  is in interrupt context.
+<p></p>
+<hr>
+<h3>Not able to view the ps7 peripheral registers in  System Debugger (TCF).</strong></h3>
+<p>By default these registers are not shown. Set an environment  variable HW_SERVER_ALLOW_PL_ACCESS in the command prompt, then launch hw_server,  as shown below.</p>
+<p>&nbsp;</p>
+<ol>
+  <li>Close any instance of hw_server that is running</li>
+  <li>Launch a terminal/command prompt from SDK by clicking the  <img src="../images/limitations_faqs_icon_tcprompt.png" width="32" height="21"> button.</li>
+</ol>
+<p>&nbsp;</p>
+<p><img src="../images/limitations_faqs_cmd_term.png" width="677" height="342"></p>
+<p></p>
+<hr>
+<h3>“Build Project” & “Clean Project” context menu options are missing for new BSP projects.</h3>
+<p>BSP projects use “Makebuilder” to build BSP applications. When the <strong>Project &gt; Build Automatically</strong> option is set,  both the “Build Project” and “Clean Project” context menu options are invisible, but any changes  made to the BSP project triggers auto build.  If you wish to see “Build Project” and “Clean Project”  for a BSP project,  disable the <strong>Project &gt; Build  Automatically</strong> option.</p>
+<hr>
+<h3>Xilinx C/C++ Debugger (GDB) debugger hangs when  the Disassembly view is open</strong>. </h3>
+<p>The workaround is to close the Disassembly view and proceed with debugging.</p>
+<hr>
+<h3><strong>I am getting the  error below while debugging an  application</strong>.</h3>
+<p>&nbsp;</p>
+<p><img src="../images/limitations_faqs_error_lnchng_pgrm.png" width="548" height="303"></p>
+<p>&nbsp;</p>
+<p>The workaround for this issue is to restart the  board. This issue will be resolved in the next release.</p>
+<hr>
+<h3><strong>Resuming from breakpoint did not work while  debugging on MicroBlaze&#8482 with System Debugger (TCF). Stepping over/into the breakpoint  works fine</strong>.</h3>
+<p>This issue occurs in  some scenarios. It will be fixed in the next release.</p>
+<hr>
+<h3><strong>Stepping over a watchpoint variable is not  working while debugging on Microblaze with System Debugger (TCF). But resume works fine</strong>.</h3>
+<p>This issue occurs in  some scenarios. It will be fixed in the next release.</p>
+<hr>
+<h3><strong>Not able to perform single step in area  optimized MicroBlaze DDR design using Xilinx C/C++ application, System Debugger (TCF)</strong>.</h3>
+<p>The workaround  is to use Xilinx C/C++ Debugger (GDB). This  issue will be fixed in next release.</p>
+
+<hr>
+<h3><strong>Not able to debug the MicroBlaze startup code  using the Xilinx C/C++ application, System Debugger (TCF) </strong>.</h3>
+<p>This  issue shows up with some designs and will be fixed in the next release.</p>
+
+<hr>
+<h3><strong>arm-xilinx-eabi-gdb is crashed when resuming  from the exit function and discontinuing the debug session with Xilinx C/C++  Debugger (GDB) debugger</strong>.</h3>
+<p>This  issue will be fixed in the next release.</p>
+
+<hr>
+<h3><strong><em>cpu  () - </em>Couldn't figure out compiler's library directory; compilation error occurs during the BSP  compilation</strong>.</h3>
+<p>This  issue occurs with older BSPs. To fix it,  modify the BSP  settings to use the latest CPU driver (1.15a) by going to <strong>Board Support  Package Settings &gt; Drivers &gt; CPU &gt; Driver Version</strong>.</p>
+
+<hr><h1>Frequently Asked Questions </h1>
+<hr>
+<h3><a name="tcf4"></a> Changing cable type in “Configure JTAG Settings” dialog box is prompting to terminate any active XMD-GDB debug sessions. </h3>
+<p>As XMD supports one cable type at a time, it is required to terminate any active launches.</p>
+<hr>
+<h3><a name="tcf5"></a> Global variables are not displayed with Xilinx-customized System Debugger (TCF).</h3>
+<p> Hover the mouse on the global variable to see the value of the global variable or use Xilinx Standard debugger (XMD) to see the global variables values.</p>
+<hr>
+<h3><a name="tcf6"></a> No support for Linux Application debug from Xilinx-customized debugger.</h3>
+<p> Use Remote ARM Linux Application configuration to debug Linux Applications.</p>
+<hr>
+<h3><a name="tcf8"></a> Cannot debug MicroBlaze applications using Xilinx-customized System Debugger (TCF).</h3>
+<p> Use Xilinx Standard debugger to debug the MicroBlaze applications. </p>
+<hr>
+<h3><a name="tcf11"></a> Cannot perform standalone profiling with Xilinx-customized TCF Debugger.</h3>
+<p> Use Xilinx Standard debugger to profile the Standalone applications.</p>
+<hr>
+<h3><a name="tcf21"></a> Compilation happens properly but screen shows red marks indicating as if it failed due to errors.</h3>
+<p>CDT static code analysis is run on your source code by default. Some of the code analysis issues are reported as errors by default. You can switch Code Analysis Severity to <strong>Info</strong> from <strong>Error</strong> by going to <strong>Window > Preferences > C/C++ > Code Analysis</strong>.</p>
+<h3><a name="tcf10"></a> Cannot perform standalone profiling with Xilinx-customized TCF Debugger.</h3>
+<p>Use Xilinx Standard debugger to profile the Standalone applications.</p>
+<hr>
+<h3><a name="tcf14"></a> Why is it that I cannot set more than 5 breakpoints/watchpoints with the TCF Debugger?</h3>
+<p> Internally a breakpoint/watchpoint planted by user is treated as Hardware breakpoints in System Debugger (TCF). For ARM there is a limitation of 6 Hardware breakpoints. Out of 6, one breakpoint is used for the single stepping, other breakpoint is used for stopping at main(). So users are left with four breakpoints. Software breakpoints (No limitation on number of breakpoints) support will be added in next release.</p>
+<hr>
+<h3><a name="tcf19"></a> Cannot perform standalone profiling with Xilinx-customized TCF Debugger.</h3>
+<p> Use Xilinx Standard debugger to profile the Standalone applications.</p>
+<hr>
+<h3><a name="tcf23"></a> Debug after re-launch does not stop on breakpoints.</h3>
+<p>SDK does processor reset on every debug session. The Interrupt Controller is not reset during Processor reset. Change the reset type to <strong>System Reset</strong> in the Device Initialization tab of debug configuration.</p>
+<hr>
+<h3><a name="tcf24"></a> Not able to view the ps7 peripheral registers in System Debugger (TCF).</h3>
+<p>By default these registers are not shown. Set an environment variable, HW_SERVER_ALLOW_PL_ACCESS, in the command prompt, then launch the hw_server.</p>
+<hr>
+<h3><a name="tcf25"></a> FPGA need to program again after System Reset.</h3> 
+<p>This is a change introduced with the latest silicon versions. If you are debugging PS+PL design and have the <strong>Reset Entire System</strong> option in the debug configuration, perform program FPGA when the debugger stops at application <code>main()</code>.</p>
+<hr>
+<h3><a name="tcf26"></a> Xilinx System Debugger (TCF) does not complain whether the FPGA is programmed or not. </h3> 
+<p>This is a known issue.</p>
+<hr>
+<h3><a name="tcf27"></a> Not able to connect to the board when <strong>Verbose</strong> mode is enabled in SDK XMD console.</h3> 
+<p>Turn off <strong>verbose</strong> mode in SDK XMD console.</p>
+<hr>
+<h3><a name="tcf28"></a><strong> Build Project</strong> and <strong>Clean Project</strong> context menu options are missing for new BSP projects.</h3> 
+<p>BSP projects uses <strong>Makebuilder</strong> to build BSP applications. When the <strong>Project > Build Automatically</strong> option is set, both <strong>Build Project</strong> and <strong>Clean Project</strong> are not visible, but any changes made to the BSP project triggers an auto-build. To see these context menu options for a BSP project, unset the <strong>Project > Build Automatically</strong> option.</p>
+<hr>
+<h3><a name="tcf29"></a> I have installed cable drivers in my system. But launching <strong>hw_server</strong> gives a "missing FTD2XX.dll" error message.</h3>
+<p>If you never plugin the digilent cable, you can run into this issue. Plug-in the digilent cable; this copies the required libraries.</p>
+
+<p> <img height="21" alt="Related tasks" src="../images/ngtasks.gif" width="143" border="0"><br>
+    <a href="../tasks/sdk_t_tcf_debugging.htm">SDK System Debugger (TCF) </a></p>
+
+<p><font color="#800000" face="Times New Roman">Copyright 1995-2013 Xilinx, Inc. All rights reserved.</font></p>
+</body>
+
+</html>

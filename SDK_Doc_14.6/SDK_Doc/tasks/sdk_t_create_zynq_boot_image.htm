@@ -1,0 +1,57 @@
+<html>
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Creating software projects</title>
+<link rel="Stylesheet" type="text/css" media="all" href="../help.css">
+</head>
+
+<body>
+<h1>Creating a Zynq Boot Image for an Application</h1>
+<p> To generate a Zynq Boot Image for an application, do the following: </p>
+<ol>
+  <li> Ensure that the <a href="sdk_t_project_creation_zynq_fsbl.htm">FSBL project</a> and <a href="sdk_t_create_new_appln.htm">C application project</a> are created in the SDK workspace and built so that corresponding ELF files are available.</li>
+  <li> Select the application project in the <strong> Project Navigator</strong> or <strong> C/C++ Projects </strong> view and right-click <strong> Create Boot Image</strong>, or click <strong> Xilinx Tools &gt; Create Boot Image</strong>.</li>
+  <li> The Create Zynq Boot Image dialog box appears with default values preselected from the context of the selected C project.<br>
+<br>
+Note the following:
+  <ul>
+    <li> When you run Create Boot Image  the first time for an  application, the dialog box is pre-populated with paths to the selected project ELF file, the FSBL ELF file, and the bitstream for the selected hardware (if it exists in hardware project). </li>
+    <li> If a boot image has previously run for the application, the dialog box is pre-populated with previously used values as per the configuration file present in the project that is in the <span class="userinput">bif</span> folder.</li>
+    <li> You can add new partitions to the boot image by clicking <strong>Add</strong> and specifying the location of the required data files, if any.</li>
+    <li> Specify offset, alignment, and allocation values for partitions in the boot image, if applicable. </li>
+    <li>The output file path is set to the <span class="userinput">bif</span> folder under the selected application project by default.<br>
+ <br>
+ <p><img src="../images/create_zynq_boot_image.png" width="628" height="416"></li>
+  </ul></li>
+<br>
+  <li> In the Advanced tab of the Create Zynq Boot Image dialog box, do the following:</li><br>
+
+    <ul>
+      <li> Specify path to init file by clicking <strong>Browse</strong>. The init file is an optional BootGen feature used to initialize registers at boot time before loading and running the FSBL.</li>
+      <li> Enable/Disable the encryption option using the <strong>Enable Encryption</strong> check box.</li>
+      <li> When encryption is enabled, specify the path to the Key file and optionally provide values for StartCBC, Key0, and HMAC.<br>
+<br>
+<p>&nbsp; </p>
+  <strong>Note</strong>: You can use the following keywords:
+      <ul>
+        <li><span class="userinput"><strong>bbram | efuse</strong></span> -  control what key source will contain the decryption key in the FPGA. The keyword <span class="userinput"><strong>bbram</strong></span> will be used as the default key source.
+        
+        <li><span class="userinput"><strong>StartCBC</strong></span>, <span class="userinput"><strong>Key0</strong></span>, and <span class="userinput"><strong>HMAC - </strong></span> These optional keywords allow overriding the corresponding key in a key file. However, the key in the key file will not be updated with the defined key. If the given key file path does not exist, a new key file is created with file name given with a new set of keys, and then used. If the key file does exist, that files with its key is used.
+          <br>        
+        </ul>
+      </li>
+	  <img src="../images/create_zynq_boot_image_advanced.png">
+      </ul><br>
+
+<li>Click <strong>Create Image</strong> to create a boot image in the specified output location.<br>
+<br>
+<strong>Note</strong>: If the given output file already exists in the file system, a dialog box appears to ask if you want to override the existing file. Click <strong>Yes</strong> to overwrite the previous boot image with a new image. If you select <strong>No</strong>, then no boot image is created.
+</li>
+	  </ol>
+<p><font face="Times New Roman" color="#800000">Copyright &copy; 1995-2013 Xilinx, Inc. All rights reserved.</font> </p>
+</body>
+
+</html>
+
+
+

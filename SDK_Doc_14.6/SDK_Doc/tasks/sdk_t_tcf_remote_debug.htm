@@ -1,0 +1,76 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Remote Debug with TCF Debugger</title>
+<link rel="stylesheet" type="text/css" href="../help.css">
+<style type="text/css">
+<!--
+.style1 {font-size: 12pt}
+-->
+</style>
+</head>
+<body>
+<h1>Remote Debug with System Debugger (TCF) </h1>
+<HR>
+<br>
+<h2 align="left">Setting Up the Remote System Environment</h2>
+<p align="left">&nbsp;</p>
+<ol>
+<li>Running  hw_server with non-default port (for example: 3122) enables remote connections. Use  the following command to launch hw_server on port 3122: <br>
+  </li>
+  <span class="style1"><code>hw_server -s “TCP::3122;Name=Project hello_world Hardware Server”</code></span>
+  
+  <br>
+  <li>Make sure your board is correctly connected. </li>
+  <br>
+  <li>In a <span class="style1"><code>cmd</code></span> window, check the IP Address:<br>
+    <br>
+    <br>
+	<p>
+  <img src="../images/remote_sys_ip.png"><br>
+  </li>
+</ol>
+<h2>Setting Up the Local System for Remote Debug</h2>
+<p>&nbsp;</p>
+<br>
+<ol>
+<li>Launch SDK.</li>
+<br><br>
+<li>To configure the JTAG settings, click  <strong>Xilinx Tools &gt; Configure JTAG Settings</strong>.</li> 
+
+
+  <p><img src="../images/debug_config_jtag.PNG" width="468" height="365"><br>
+    <br>
+  </p>
+<li>Set the JTAG cable type as <strong>Xilinx Hardware Server</strong> and provide Hostname and Port details..</li>  
+  
+<br>
+
+<p><img src="../images/debug_jtag_cable_type.PNG" width="726" height="680"><br>
+  <br>
+</p>
+<li>Select the application to debug remotely. </li>
+
+
+<p><br>
+  <img src="../images/remote_debug_app_select.png" width="523" height="353"><br>
+ <li> Click <strong>Run > Debug As > Launch on Hardware (System Debugger)</strong>.</li> 
+ <br>
+ <img src="../images/debug_as.PNG">
+ <br><br>
+ <img src="../images/debug_mem_final.PNG">
+ <br> <br>
+</ol>  
+<br>
+
+
+</li>
+<p> <img height="21" alt="Related tasks" src="../images/ngtasks.gif" width="143" border="0"><br>
+    <a href="../tasks/sdk_t_tcf_debugging.htm">SDK System Debugger (TCF)</a></p>
+<p><font color="#800000" face="Times New Roman">Copyright 1995-2013 Xilinx, Inc. All rights reserved.</font></p>
+</body>
+
+</html>

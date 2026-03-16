@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Debugging a program</title>
+<link rel="stylesheet" type="text/css" href="help.css">
+<link href="../help.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+.style3 {font-size: 11pt}
+-->
+</style>
+</head>
+
+<body>
+<h1>Multi-Processor Debugging with  System Debugger (TCF)</h1>
+
+<HR>
+<p>You can debug multiple processors simultaneously with a single System Debugger (TCF) debug configuration.</p>
+<ol>
+<li>Create application projects for the processors included in the design.</li>
+<li>	Select any application and click <strong>Run &gt; Debug Configurations</strong>.</li>
+<p>&nbsp;</p>
+<p><img src="../images/debug_configurations.png" width="588" height="434"></p>
+</ol>
+<p>&nbsp;</p>
+<h2>Working in the Debug Configurations Window </h2>
+<ol>
+  <li>In the <strong> Debug Configurations</strong> window, left panel, select the configuration type <strong>Xilinx C/C++ application (TCF)</strong> and click the <strong>New</strong> <img src="../images/new_debug_config.png" width="20" height="24"> button.  </li>
+  <li>Name the configuration &quot;Multi_Processor_ZC706_Debug.&quot; </li>
+  <p>&nbsp;</p>
+  <p><img src="../images/debug_config_dialog_box.png" width="1148" height="676"></p>
+</ol>
+<h3>Debug Configurations Window, Target Setup Tab </h3>
+<ol>
+  <li>In the Target Setup tab, select the appropriate setup.</li>
+  <p>- Select the <strong>Manually setup target</strong>   radio button if you want to initialize and download ELF files. </p>
+  <p>- Select the <strong>Attach to running target</strong> radio button if you want to connect to the target and display the current status of all the processors. With this selection, no resets or initializations are performed on the target before launching the debugger. </p>
+  <p>&nbsp;</p>
+  <p><img src="../images/debug_target_setup_tab.png" width="299" height="54"></p>
+  <p>&nbsp;</p>
+  <li>To automatically populate  bitstream and initialization files: from the Hardware platform drop-down list, select the appropriate hardware platform.</li>
+  <p><strong>Note:</strong> Use the <strong>Browse</strong> buttons if you wish to select different bitstream and initialization files. </p>
+  <p>&nbsp;</p>
+  <p><img src="../images/hardware_platform_dropdown.png"></p>
+  <p>&nbsp;</p>
+  <li>If you wish to reset the entire system, enable the <strong>Reset entire system</strong> checkbox in the Debug Configurations window. </li>
+    <ol type="a">
+    <li>If you also wish to program the bitstream after system reset, enable the <strong>Program FPGA</strong> checkbox. </li>
+  </ol>
+   <li>Enable the<strong> Run Initialization</strong> checkbox to run the PS initialization file. </li>
+    <p><strong>Note:</strong> The Summary window displays a summary of System Debugger (TCF) operations.</p>
+<p>&nbsp;</p>	
+  <p><img src="../images/debug_config_dbox_fullscreen_target_tab.png"></p>
+ <p>&nbsp;</p> 
+</ol>
+<h3>Debug Configurations Window,  Applications Tab</h3>
+<ol>
+  <li>Select the<strong> Applications</strong> tab to display all processors available to the selected hardware platform. </li>
+ <p>&nbsp;</p> 
+  <p><img src="../images/debug_config_dbox_app_tab.png" width="1159" height="698"></p>
+  <p>&nbsp;</p>
+<li>Select the <strong>Download Application</strong> checkbox if you want to download the application to the selected processor. </li>
+<p>Note: If a single project exists for the processor, the Project Name and Application Name fields populate automatically when you select the Download Application checkbox. If more than one project exists for the processor, you must make the Project Name selection manually. </p>
+<li>Select the <strong>Stop at program entry</strong> checkbox if you want to stop the processor before application <span class="userinput style3">main()</span>.</li>
+<p>&nbsp;</p>
+<p><img src="../images/debug_config_dbox_app_tab_proj_app.png"></p>
+<p>&nbsp;</p>
+<li>Click the <strong>Debug</strong> button to launch multi-processor debugging.</li>
+<p>&nbsp;</p>
+<p><img src="../images/debug_launch.png" width="1500" height="805"></p>
+</ol>
+<p><img height="21" alt="Related concepts" src="../images/ngconcepts.gif" width="143" border="0">
+
+	<a href="../concepts/sdk_c_over_dbg.htm">Debug overview </a>
+</p>
+<p><img height="21" alt="Related tasks" src="../images/ngtasks.gif" width="143" border="0"></p>
+<p>Refer to the following sections for information about installation, setting up the environment, and debugging applications using the System Debugger (TCF) integrated SDK:</p>
+<ul>
+  <li><a href="sdk_t_tcf_supported_design_flows.htm">System Debugger (TCF) Supported Design Flows</a>  </li>
+  <li><a href="sdk_t_tcf_standalone_app_debug_gdb.htm">Standalone Application Debug Using GDB</a></li>
+  <li><a href="sdk_t_tcf_standalone_app_debug_tcf.htm">Standalone Application Debug Using Xilinx System Debugger (TCF)</a></li>
+  <li><a href="sdk_t_tcf_attach_debug_linux_kernel_tcf.htm">Attach and Debug Linux Kernel Using Xilinx System Debugger (TCF)</a></li>
+  <li><a href="sdk_t_tcf_limitations_faq.htm">System Debugger (TCF) Limitations, Known Issues, and FAQs</a></li>
+	  
+  
+  
+	
+</p>
+<p><font face="Times New Roman" color="#800000">Copyright  1995-2013 Xilinx, Inc. All rights reserved.</font></p>
+
+</body>
+
+</html>
