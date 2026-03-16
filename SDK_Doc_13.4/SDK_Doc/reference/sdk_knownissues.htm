@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Xilinx SDK Known Issues</title>
+<link rel="stylesheet" type="text/css" href="../help.css"></head>
+
+
+<body>
+
+<h1> Known issues in SDK </h1>
+<HR>
+
+<h2> Memory Viewer displays data values in the wrong endian format</h2>
+<ul>
+<li> Issue: The memory viewer displays data in big endian format.</li>
+<li> Unfortunately, there are no solutions for this issue right now. You must manually parse
+the memory contents in the correct format.</li>
+</ul>
+
+<h2> While Initializing the bitstream with an ELF file, SDK uses bootloop</h2>
+<ul>
+<li> Issue: The Configure FPGA dialog allows you to select the ELF file to be initialized
+in the bitstream. When this dialog box opens, it remembers the ELF file used in a previous invocation.
+However, regardless of the ELF shown in the dialog box, SDK always uses bootloop to initialize
+the bitstream.</li>
+<li> Solution: In the dialog box, manually reselect the ELF to use.</li>
+</ul>
+
+<h2> MSS Viewer does not refresh automatically</h2>
+<ul>
+<li> Issue: The MSS viewer does not automatically refresh when either the MSS is changed
+via the BSP settings dialog box, or when the hardware specification is updated.</li>
+<li> Solution: Close the MSS viewer and then double click on the MSS file to re-open it.</li>
+</ul>
+
+<h2> Program FPGA dialog does not appear</h2>
+<ul>
+<li>Symptom: The Program FPGA dialog does not appear. Clicking on the Program FPGA
+toolbar item or the menu item does not result in any action.</li>
+<li>Possible Issue: This issue could arise if any 11.x projects were imported,
+but the import process was not successful. Make sure that the application project's
+referenced projects includes the board support package (BSP), and that the BSP's referenced project includes the
+hardware specification project.</li>
+</ul>
+
+<h2> Renaming hardware platforms causes compilation errors</h2>
+<ul>
+<li> Symptom: When a hardware specification project is renamed, the dependent BSPs
+and applications fail to compile. </li>
+<li> Issue: Currently, SDK does not support renaming of hardware specification projects.
+In order to do so, you must manually change the following items:
+<ol>
+<li>Change Project References in the BSP project to point to the new hardware project.</li>
+<li>Change the libgen.options file to specify the correct hardware specification file.</li>
+<li>Change the ELFCheck options in the application's build settings.</li>
+</ol>
+</li>
+</ul>
+
+<h2>Restore defaults in C/C++ Build Settings causes settings to be lost</h2>
+<ul>
+<li>Issue: Clicking on Restore Defaults in the C/C++ Build Settings results in elfcheck not working properly.</li>
+<li>Solution: Manually set the path to the hardware specification and the processor name in the ELFCheck options in Build
+settings after restoring defaults.</li>
+</ul>
+
+<h2>Operations on XMD console can confuse SDK's internal state</h2>
+<ul>
+<li>Currently, SDK uses the XMD that is shown in the XMD console. As a result,
+performing some operations on the XMD console (such as disconnecting targets)
+will cause SDK's state to get out of sync with the actual target state. In such a case,
+it might not be possible to recover and you must restart SDK.</li>
+</ul>
+
+<h2>When SDK launches, it doesn't display the correct menus, the correct icons, or the C/C++ Perspective</h2>
+<ul>
+<li>Solution: SDK is probably reading settings from an outdated .eclipse folder or an outdated workspace.
+Try opening SDK with a fresh workspace. If that does not work, remove your $HOME/.eclipse folder.
+(On NT, this is usually C:\Documents and settings\username\.eclipse.)
+</li>
+</ul>
+
+<h2>Kintex&#8482;-7 FPGA KC705 evaluation board with older device revisions require a workaround during debugging to compensate for the memory controller calibration time</h2>
+<ul>
+<li> Symptom: After any reset, the debugger hangs when accessing DDR3 memory.</li>
+<li> Issue: For older device revisions, the memory controller requires one to two minutes to calibrate before you can access DDR3 memory.
+To work around this issue, allow sufficient time for calibration to complete after a reset and disable automatic resets using one of the following methods:
+<ol>
+<li>When using XMD, after connecting to the target, disable resets running the commands <strong>debugconfig -reset_on_run disable</strong> and <strong>debugconfig -reset_on_data_dow disable</strong>.</li>
+<li>When using SDK, in the debug configuration Device Initialization tab specify the Reset Type value <strong>No Reset</strong>. Use XMD to perform the reset and wait for the calibration to complete.</li>
+</ol>
+</li>
+<li>See also: Answer Record <a href="http://www.xilinx.com/cgi-bin/SW_Docs_Redirect/sw_docs_redirect?locale=en&amp;topic=answer+record&sub=43967">43967</a> contains additional information.</li>
+</ul>
+
+<p><font face="Times New Roman" color="#800000">Copyright © 1995-2012 Xilinx, Inc. All rights reserved.</font><br>
+</p>
+
+</body>
+</html>
+

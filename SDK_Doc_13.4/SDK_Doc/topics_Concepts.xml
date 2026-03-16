@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+<!-- Defines topics that will be inserted under the Xilinx Platform Studio SDK User Guide menu-->
+
+<toc label="Concepts">
+	<topic label="SDK Overview" href="concepts/sdk_o_overview_sdk.htm"/> 
+	<topic label="Workspaces" href="concepts/sdk_c_workspace.htm"/> 
+        <topic label="Xilinx Embedded Hardware" href="concepts/sdk_o_hw_target.htm">
+		<topic label="Embedded Hardware Components" href="concepts/sdk_c_hwcomponents.htm" />
+		<topic label="Hardware Platform Specification" href="concepts/sdk_c_hwspec.htm" />
+	</topic>
+        <topic label="Xilinx Embedded Software" href="concepts/sdk_o_emb_sw.htm"> 
+          	<topic label="Board Support Packages (SDK)" href="concepts/sdk_c_bsp_internal.htm"/> 
+	  	<topic label="Board Support Packages (External Tool)" href="concepts/sdk_c_bsp_external.htm"/> 
+	  	<topic label="Software Applications" href="concepts/sdk_c_projects.htm"/>
+		<topic label="Software Repositories" href="concepts/sdk_c_repos.htm"/> 
+        </topic>
+	<topic label="Building Applications" href="concepts/sdk_c_build.htm"> 
+		<topic label="Makefiles" href="concepts/sdk_c_build.htm#makefiles" />
+		<topic label="Build Configurations" href="concepts/sdk_c_build.htm#buildconf" />
+		<topic label="Linker Scripts" href="concepts/sdk_c_build.htm#linkerscripts" />
+	</topic>
+	<topic label="Debugging Applications" href="concepts/sdk_o_dbg_concepts.htm">
+		<topic label="Debug overview" href="concepts/sdk_c_over_dbg.htm"/> 
+		<topic label="Debug Configuration" href="concepts/sdk_c_debug_run_configuration.htm"/> 
+		<topic label="Debug perspective" href="concepts/sdk_c_debug_perspective.htm"/>
+		<topic label="Advanced Debug Concepts" href="concepts/sdk_c_adv_debug.htm"/> 
+		<topic label="JTAG Settings" href="concepts/sdk_c_jtag.htm"/> 
+	</topic>
+	<topic label="Running Applications" href="concepts/sdk_c_over_run.htm"/> 
+	<topic label="Profiling Applications" href="concepts/sdk_c_over_profile.htm"> 
+		<topic label="Profile Configuration" href="concepts/sdk_c_profile_configuration.htm"/> 
+		<topic label="Profiler perspective" href="concepts/sdk_c_profiler_perspective.htm"/>
+	</topic>
+	<topic label="Sharing/Archiving Software Projects" href="concepts/sdk_o_share.htm"/>
+	<topic label="Programming Flash" href="concepts/sdk_c_program_flash.htm"/>
+</toc>

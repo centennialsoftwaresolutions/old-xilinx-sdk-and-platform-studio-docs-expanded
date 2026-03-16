@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Embedded hardware components</title>
+<link rel="Stylesheet" type="text/css" media="all" href="../help.css">
+</head>
+
+<body>
+<h1>Embedded hardware components</h1>
+
+<HR>
+<p>Xilinx&reg; EDK provides great flexibility regarding the kinds of embedded 
+  hardware that can be created. Typically, an embedded platform created 
+  using  EDK contains:
+<ul>
+    <li>One or more PowerPC® 405, PowerPC 440, or MicroBlaze™ 
+  processors</li>
+    <li>Volatile memory internal to the FPGA</li> 
+    <li>Volatile (such as DDR or SDRAM) and/or non-volatile  
+  (Flash) memory external to the FPGAM</li>
+    <li>IP controlling external interfaces, such as GPIOs, 
+  UARTs, or Ethernet MACs</li>
+    <li>Debug IP such as JTAG connections or processor trace 
+  signals</li> 
+    <li>Other custom IP created by the hardware developer</li>
+</ul>
+<p>
+  The task of the software developer is to write software that runs on the
+  processors present on the hardware platform to perform application specific
+  tasks. Xilinx provides drivers for Xilinx IP and some basic software
+  components to help accelerate such software development.
+</p>
+<h2> FPGA Bitstream </h2>
+<p>
+  An FPGA bitstream is a file that contains the programming information for an
+  FPGA. A Xilinx FPGA device must be programmed using a specific bitstream in order for
+  it to behave as an embedded hardware platform. This bitstream is typically
+  provided by the hardware designer who creates the embedded platform.
+</p>
+<p>
+  Programming an FPGA is the process of loading a bitstream into the
+  FPGA. During the development phase, the FPGA device is programmed using
+  utilities such as iMPACT or using menu options in SDK. These tools transfer
+  the bitstream through JTAG connections to the FPGA on board. In production
+  hardware, the bitstream is usually placed in non-volatile memory, and the
+  hardware is configured to program the FPGA when powered on.
+</p>
+<img height="21" alt="Related concepts" src="../images/ngconcepts.gif" width="143" border="0"><br>              
+  <a href="sdk_c_jtag.htm">JTAG settings</a> <br>
+  <br>
+<img height="21" alt="Related tasks" src="../images/ngtasks.gif" width="143" border="0"><br>              
+  <a href="../tasks/sdk_t_configure_jtag.htm">Configuring the JTAG settings</a> <br>
+  <a href="../tasks/sdk_t_configure_fpga.htm">Programming the FPGA</a> 
+  <br><br>
+<img height="21" alt="Related references" src="../images/ngref.gif" width="143" border="0"><br>              
+  <a href="../reference/sdk_u_configure_jtag.htm">Configure JTAG Settings dialog box</a> <br>
+  <a href="../reference/sdk_u_program_fpga.htm">Program FPGA dialog box</a> 
+  <br>
+  <br>
+  
+<p><font face="Times New Roman" color="#800000">Copyright 
+© 1995-2012 Xilinx, Inc. All rights 
+reserved.</font></p>
+
+
+</body>
+</html>
