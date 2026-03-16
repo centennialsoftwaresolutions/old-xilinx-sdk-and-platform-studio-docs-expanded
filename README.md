@@ -30,6 +30,7 @@ Provides searchable access to legacy Xilinx SDK and Platform Studio documentatio
 - [SDK_Doc_13.3](SDK_Doc_13.3/SDK_Doc)
 - [SDK_Doc_13.4](SDK_Doc_13.4/SDK_Doc)
 - [SDK_Doc_14.1](SDK_Doc_14.1/SDK_Doc)
+- [SDK_Doc_14.2](SDK_Doc_14.2/SDK_Doc)
 
 # Why?
 
@@ -65,3 +66,4 @@ To find documentation for older Platform Studio and SDK releases, you must manua
 - https://download.amd.com/docnav/documents/ise/SDK_Doc_13.4.zip download on 03/16/2026 @ 12:00 PM MST without a login or accepting EULA.
 - https://download.amd.com/docnav/documents/ise/SDK_Doc_14.1.zip download on 03/16/2026 @ 12:10 PM MST without a login or accepting EULA.
 - https://download.amd.com/docnav/documents/ise/SDK_Doc_14.2.zip download on 03/16/2026 @ 12:15 PM MST without a login or accepting EULA.
+- https://download.amd.com/docnav/documents/ise/SDK_Doc_14.3.zip download on 03/16/2026 @ 12:20 PM MST without a login or accepting EULA.
