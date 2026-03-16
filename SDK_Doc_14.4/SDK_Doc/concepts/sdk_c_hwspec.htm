@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Hardware platform specification</title>
+<link rel="Stylesheet" type="text/css" media="all" href="../help.css">
+</head>
+
+<body>
+
+<h1>Hardware platform specification</h1>
+
+<HR>
+<p>
+  The Hardware Platform Specification file captures all the information and
+  files from a Xilinx&reg; Embedded Development Kit (EDK) hardware design that
+  is required for a software developer to write, debug, and deploy software
+  applications for that hardware.
+</p>
+<p>  
+  Typically, a hardware designer who develops hardware using Xilinx Platform
+  Studio (XPS) creates the Hardware Platform Specification in a directory. The
+  software developer then uses this information in the Xilinx Software
+  Development Kit (SDK). The main components of this specification are:
+<ul>
+  <li>A Hardware Description in an XML format </li>
+  <li>An FPGA Bitstream corresponding to the Hardware Description</li>
+  <li>A Block RAM Memory Map (BMM) file corresponding to the Bitstream</li>
+</ul>
+<p>
+  SDK uses the Hardware Description file to detect the processor(s) and memory
+  mapped peripherals present in the hardware.
+</p>
+<p>
+  The FPGA bitstream is used to program an FPGA device with the hardware
+  created by the hardware designer.
+</p>
+<p>
+  The BMM file is a description of the internal memories used in the hardware
+  description. It is used to fill in the internal block RAM as necessary with a
+  program or data.
+</p>
+<h2>Auto-synchronization of software projects</h2>
+<p>
+  If you make changes to the hardware in XPS and export the specification file
+  or receive one from the hardware developer, SDK automatically detects any
+  change to the contents of the hardware description file referenced by the
+  software projects. It will display the changes to the hardware design, such as additions or deletions of processor and peripheral IP, changes in the memory
+  map of the processor sub-system, or changes in the IP parameters. It also
+  displays and performs the changes to the software projects based on the
+  hardware modification. Some actions are performed by SDK, such as adding or
+  removing drivers in the platform, enabling or disabling projects for a
+  processor, and changing compiler flags. It also provides recommendation of
+  changes that you should perform, such as changing the linker script if the
+  memory map is changed.</p>
+<h2>Re-targeting software projects</h2>
+<p>
+  If you have similar hardware designs, such as different versions of a
+  hardware, you can re-target the software projects in the workspace to build
+  and run different hardware. Similar to auto-synchronization, SDK will provide
+  you the hardware changes and relevant software changes.
+</p>
+<p><img height="21" alt="Related tasks" src="../images/ngtasks.gif" width="143" border="0"><br>
+<a href="../tasks/sdk_t_hwspec.htm">Importing a hardware platform specification file</a></p>
+
+<p><font face="Times New Roman" color="#800000">Copyright 
+© 1995-2012 Xilinx, Inc. All rights 
+reserved.</font> 
+</body>
+</html>
+

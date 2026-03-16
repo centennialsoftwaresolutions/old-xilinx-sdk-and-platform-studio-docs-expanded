@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Programming parallel Flash memory</title>
+<link rel="stylesheet" type="text/css" href="../help.css">
+<style type="text/css">
+<!--
+.style1 {font-family: "Courier New", Courier, mono}
+-->
+</style>
+</head>
+
+
+<body>
+<h1>Programming parallel Flash memory for Zynq processors </h1>
+<HR>
+<p><span>To program the parallel Flash memory for Zynq&#8482;-7000 All Programamble SoC processors:</span></p>
+<ol>
+  <li>Select <strong> Xilinx Tools &gt; Program Flash</strong>. </li>
+  <li>If only one hardware platform is present in your workspace, it will open the Program Flash Memory dialog box based on whether it is a Zynq processor design or a MicroBlaze<span>&#8482;</span> processor design.</li>
+  <li>If more than one hardware platform exits, a dialog box  opens and prompts you to choose the hardware platform.</li>
+</ol>
+<blockquote>
+  <p><img src="../images/select_hardware_platform_db.png" width="389" height="384"></p>
+</blockquote>
+<ol start="4">
+  <li>SDK  opens the Program Flash Memory dialog box for the Zynq hardware platform.</li>
+</ol>
+<blockquote>
+  <p><img src="../images/program_flash_memory_db.png" width="568" height="281"></p>
+</blockquote>
+<ol start="5">
+  <li>Specify the MCS file and Offset value.</li>
+  <li>Choose the Flash type, qspi_single/qspi_dual_parallel/nand_8/nand_16.</li>
+</ol>
+<blockquote>
+  <p> <strong>Note</strong>: For Flash types nand_8 &amp; nand_16, you must also input the FSBL file. </p>
+  <p><img src="../images/program_flash_memory_db_2.png" width="568" height="281"> </p>
+</blockquote>
+<ol start="7">
+  <li>Click to select the <strong>Verify after flash</strong> check box if you want to verify whether the flashing is done correctly. </li>
+  <li>Click <strong>Program</strong>.</li>
+</ol>
+<p><strong>Note</strong>: The MCS file is created with the <span class="style1">Create Bootgen</span> command in the application project in the <span class="style1">bif</span> folder. If you select the application project  in the Project Explorer while opening the Program Flash Memory dialog box, the MCS file is automatically populated.</p>
+<p><font face="Times New Roman" color="#800000">Copyright © 1995-2012 Xilinx, Inc. All rights reserved.</font></p>
+<blockquote>&nbsp;</blockquote>
+</body>
+
+</html>
