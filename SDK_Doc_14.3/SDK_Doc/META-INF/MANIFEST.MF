@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SDK User docs
+Bundle-SymbolicName: com.xilinx.sdk.docs.user;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Vendor: Xilinx, Inc.
+Require-Bundle: org.eclipse.help
