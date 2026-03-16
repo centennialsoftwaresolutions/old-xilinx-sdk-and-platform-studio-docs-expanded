@@ -1,0 +1,213 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Configuring the JTAG Settings</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50458896_pgfId-294539"></A><A NAME="50458896_24850"></A>Configuring the JTAG Settings</H1>
+<P CLASS="Note"><b>Note:</b>
+<A NAME="50458896_pgfId-332395"></A>In most cases, the default JTAG settings will work for your project and you can skip this task.</P>
+<P>
+<A NAME="50458896_pgfId-332397"></A>You might need to configure the JTAG settings for your project if you have any of the following:</P>
+<UL>
+<LI>
+<A NAME="50458896_pgfId-332399"></A>Multiple JTAG cables connected to your machine</LI>
+<LI>
+<A NAME="50458896_pgfId-332400"></A>Using 3rd party cable that supports Xilinx cable plug-in mechanism</LI>
+<LI>
+<A NAME="50458896_pgfId-332401"></A>Multiple boards connected to your machine using different cables</LI>
+<LI>
+<A NAME="50458896_pgfId-332402"></A>A custom development board with non-Xilinx devices</LI>
+</UL>
+<P>
+<A NAME="50458896_pgfId-332404"></A>To configure the JTAG settings:</P>
+<OL>
+<LI>
+<A NAME="50458896_pgfId-332406"></A>Select <B>
+Tools &gt; Configure JTAG Settings</B>
+ to open the Configure JTAG Settings dialog box.</LI>
+<LI>
+<A NAME="50458896_pgfId-332901"></A>Select relevant type from the drop-down menu:</LI>
+<UL>
+<LI>
+<A NAME="50458896_pgfId-332903"></A>Select <B>
+3rd Party Cable, Xilinx Plug-in,</B>
+ if using a third party cable</LI>
+<LI>
+<A NAME="50458896_pgfId-332966"></A>Select <B>
+Digilent USB cable</B>
+ if you have Digilent JTAG cable on board (Most of the Xilinx Evaluation board have this)</LI>
+<LI>
+<A NAME="50458896_pgfId-332891"></A>Select <B>
+Xilinx USB cable</B>
+ if you are using a Xilinx Platform USB cable.</LI>
+</UL>
+<LI>
+<A NAME="50458896_pgfId-332407"></A>In the <B>
+JTAG Cable</B>
+ area of the dialog box, specify the JTAG cable type, port (on the host machine), and frequency.</LI>
+<LI>
+<A NAME="50458896_pgfId-332408"></A>If you have a 3rd party cable, select <B>
+3rd Party Cable, Xilinx Plug-in</B>
+ type.</LI>
+<LI>
+<A NAME="50458896_pgfId-332409"></A>Specify the cable name and arguments (optional) to the plug-in in the <B>
+Other Options</B>
+ field. You should specify the complete cable option<B>
+ -cable type xilinx_plugin modulename &lt;cable name&gt; {modulearg &lt;cable args&gt;}</B>
+ text in this field.</LI>
+<LI>
+<A NAME="50458896_pgfId-406802"></A>The default JTAG device chain option setting is <B>
+Automatically Discover Devices on JTAG Chain.</B>
+ With this option, the tools will automatically discover the JTAG devices for you.<BR>
+Alternately, you can select <B>
+Manual Configuration of JTAG Chain</B>
+ to specify a non-Xilinx device on the chain. When you select this option, the JTAG Device Chain list becomes available. You can use the device buttons to manage your devices:</LI>
+<TABLE BORDER="1">
+<TR>
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellHeading">
+<A NAME="50458896_pgfId-406878"></A>Button</P>
+</TH>
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellHeading">
+<A NAME="50458896_pgfId-406880"></A>Name</P>
+</TH>
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellHeading">
+<A NAME="50458896_pgfId-406882"></A>Description</P>
+</TH>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="Anchor">
+<A NAME="50458896_pgfId-406884"></A>&nbsp;</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="..\images\../images/icon_device_add.gif">
+</DIV>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50458896_pgfId-406886"></A><B>
+Add Device</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50458896_pgfId-406888"></A>Adds a device to the list.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="Anchor">
+<A NAME="50458896_pgfId-406890"></A>&nbsp;</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="..\images\../images/icon_device_delete.gif">
+</DIV>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50458896_pgfId-406892"></A><B>
+Delete Device</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50458896_pgfId-406894"></A>Deletes the selected device from the list.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="Anchor">
+<A NAME="50458896_pgfId-406896"></A>&nbsp;</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="..\images\../images/icon_device_move_up.gif">
+</DIV>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50458896_pgfId-406898"></A><B>
+Move Up Device</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50458896_pgfId-406900"></A>Moves the selected device up in the list.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="Anchor">
+<A NAME="50458896_pgfId-406902"></A>&nbsp;</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="..\images\../images/icon_device_move_down.gif">
+</DIV>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50458896_pgfId-406904"></A><B>
+Move Down Device</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50458896_pgfId-406906"></A>Moves the selected device down in the list.</P>
+</TD>
+</TR>
+</TABLE>
+<LI value=7>
+<A NAME="50458896_pgfId-332416"></A>Select the FPGA device in the JTAG chain using the <B>
+FPGA?</B>
+ field. If you have multiple FPGA devices in the chain, select the one where the hardware design is loaded.</LI>
+<LI>
+<A NAME="50458896_pgfId-332417"></A>Click <B>
+OK.</B>
+</LI>
+</OL>
+<P>
+<A NAME="50458896_pgfId-332419"></A>Note: If you are debugging a PowerPC 405 or 440 processor that has JTAG pins are connected to the FPGA I/O pins, select <B>
+Manual Configuration of JTAG Chain,</B>
+ specify the <B>
+Device Name</B>
+ and <B>
+ID Code</B>
+ of the FPGA device and specify the <B>
+IR Length</B>
+ as <B>
+4</B>
+.</P>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50458896_pgfId-332421"></A>Related Concepts </H5>
+<P>
+<A NAME="50458896_pgfId-332422"></A><A HREF="sdk_t_configure_jtag.htm#50458896_24850" CLASS="XRef">Configuring the JTAG Settings</A></P>
+<P>
+<A NAME="50458896_pgfId-332423"></A><A HREF="../concepts/sdk_c_hwcomponents.htm#50458650_86112" CLASS="XRef">Embedded Hardware Components</A></P>
+<P>
+<A NAME="50458896_pgfId-332424"></A><A HREF="../concepts/sdk_c_program_flash.htm#50458640_40408" CLASS="XRef">Programming Parallel Flash Overview</A></P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50458896_pgfId-332426"></A>Related Tasks </H5>
+<P>
+<A NAME="50458896_pgfId-332427"></A><A HREF="sdk_t_configure_fpga.htm#50458895_83168" CLASS="XRef">Programming the FPGA</A></P>
+<P>
+<A NAME="50458896_pgfId-332428"></A><A HREF="sdk_o_debug.htm#50458880_72334" CLASS="XRef">Debugging a Program</A></P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50458896_pgfId-332430"></A>Related Reference</H5>
+<P>
+<A NAME="50458896_pgfId-332431"></A><A HREF="../reference/sdk_u_configure_jtag.htm#50458801_38287" CLASS="XRef">Configure JTAG Settings Dialog Box</A></P>
+<P>
+<A NAME="50458896_pgfId-332432"></A>&nbsp;</P>
+<P>
+<A NAME="50458896_pgfId-332373"></A>Copyright &#169; 1995-2013 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

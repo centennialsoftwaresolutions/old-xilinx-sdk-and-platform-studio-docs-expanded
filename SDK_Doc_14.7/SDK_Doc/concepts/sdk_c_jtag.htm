@@ -1,0 +1,72 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> JTAG Settings</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="pgfId-294539"></A><A NAME="27707"></A>JTAG Settings</H1>
+<P>
+<A NAME="pgfId-332272"></A>SDK communicates to the hardware over the JTAG interface for debugging, running, and profiling an application and for programming FPGA and Flash. You are required to use the Xilinx&#174; JTAG cable or third-party cables that provide Xilinx&#174; cable plug-in for communication. The following settings are required for JTAG communication.</P>
+<UL>
+<LI>
+<A NAME="pgfId-332274"></A><B>
+JTAG Cable</B>
+ - Xilinx provides different JTAG cable types such as Xilinx Parallel Cable, Xilinx USB Cable, and Digilent USB Cable. You can connect multiple cables to your host machine. Use this option to select the JTAG cable to use for communication and customize the configurations. The default type of <B>
+Auto Detect</B>
+ is recommended when only one cable is connected to your host machine.</LI>
+<LI>
+<A NAME="pgfId-332275"></A><B>
+Xilinx System Debugger Cable</B>
+ - The cable used when communicating over hw_server. The addtional parameters for this cable include the host machine name on which the hw_server is launched and the related port number.</LI>
+<LI>
+<A NAME="pgfId-332319"></A><B>
+3rd Party Cable</B>
+ - You can use a third party cable manufactured by Xilinx cable partners who provide cable plug-in to integrate with SDK. A list of supported cable partners is available on the Xilinx website.</LI>
+<LI>
+<A NAME="pgfId-332277"></A><B>
+Board JTAG Device Chain Definition</B>
+ - The hardware board can have a series of JTAG devices chained together. SDK requires the <B>
+JTAG Instruction Register (IR) length</B>
+, <B>
+IDCODE</B>
+, and <B>
+position in the chain of each JTAG device</B>
+ for communication. SDK maintains a list of these values for Xilinx devices, but you must provide the JTAG information for non-Xilinx devices present on the board. </LI>
+</UL>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-332279"></A>Related Concepts</H5>
+<P>
+<A NAME="pgfId-332280"></A><A HREF="sdk_c_over_dbg.htm#56005" CLASS="XRef">Debug Overview</A></P>
+<P>
+<A NAME="pgfId-332281"></A><A HREF="sdk_c_over_run.htm#94097" CLASS="XRef">Run Overview</A></P>
+<P>
+<A NAME="pgfId-332282"></A><A HREF="sdk_c_over_profile.htm#13100" CLASS="XRef">Profile Overview</A></P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-332284"></A>Related Tasks</H5>
+<P>
+<A NAME="pgfId-332285"></A><A HREF="../tasks/sdk_t_configure_jtag.htm#24850" CLASS="XRef">Configuring the JTAG Settings</A></P>
+<P>
+<A NAME="pgfId-332286"></A><A HREF="../tasks/sdk_t_configure_fpga.htm#83168" CLASS="XRef">Programming the FPGA</A></P>
+<P>
+<A NAME="pgfId-332288"></A><A HREF="../tasks/sdk_o_debug.htm#72334" CLASS="XRef">Debugging a Program</A></P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-332290"></A>Related Reference</H5>
+<P>
+<A NAME="pgfId-332291"></A><A HREF="../reference/sdk_u_configure_jtag.htm#38287" CLASS="XRef">Configure JTAG Settings Dialog Box</A></P>
+<P>
+<A NAME="pgfId-332292"></A>&nbsp;</P>
+<P>
+<A NAME="pgfId-306634"></A>Copyright &#169; 1995-2013 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

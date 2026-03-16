@@ -1,0 +1,270 @@
+﻿<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> System Debugger Limitations, Known Issues, and FAQs</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50458931_pgfId-294539"></A><A NAME="50458931_74046"></A>System Debugger Limitations, Known Issues, and FAQs</H1>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50458931_pgfId-332462"></A>Known Issues and Limitations</H5>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332463"></A>In which scenario should I use Xilinx&#174; System Debugger or Xilinx C/C++ Debugger (XMD+GDB)?</H6>
+<P>
+<A NAME="50458931_pgfId-332465"></A>It is preferable to use the Xilinx C++ application, System Debugger. Use Xilinx C/C++ Debugger (GDB) when you want to debug Linux applications.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332466"></A>Changing the cable type in the Configure JTAG Settings dialog box results in a prompt to terminate any active XMD-GDB debug sessions.</H6>
+<P>
+<A NAME="50458931_pgfId-332468"></A>Because XMD supports one cable type at a time, it is required to terminate any active GDB launches.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332469"></A>Global variables are not displayed with Xilinx C/C++ application (System Debugger).</H6>
+<P>
+<A NAME="50458931_pgfId-332471"></A>Hover the mouse on the global variable to see the value of the global variable.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332472"></A>There is no support for Linux Application debug from the Xilinx C/C++ application (System Debugger).</H6>
+<P>
+<A NAME="50458931_pgfId-332474"></A>Use the Remote ARM Linux Application configuration to debug Linux Applications.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332475"></A>Deleting the last debugged application immediately (using Xilinx C/C++ application (System Debugger) by choosing the “Delete Project contents on disk” option, causes the exception below:</H6>
+<DIV>
+<IMG style="margin-left: 15px" SRC="..\images\sdk_t_tcf_limitations_faq-1.jpg"></center>
+</DIV>
+<P>
+<A NAME="50458931_pgfId-332477"></A>The workaround for this issue is to wait for four seconds after debugging, then try deleting the application.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332478"></A>Cannot perform standalone profiling with Xilinx C/C++ application (System Debugger).</H6>
+<P>
+<A NAME="50458931_pgfId-332480"></A>Use Xilinx C/C++ Debugger (GDB) debugger to profile the Standalone applications.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332481"></A>By default, the Xilinx System Debugger starts at Application entry (main()). How can I tell Xilinx System debugger to start at program entry?</H6>
+<P>
+<A NAME="50458931_pgfId-403612"></A>If you wish to start debugging from program entry, enable the Stop at program entry checkbox in the debug configuration, as shown below..</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="..\images\sdk_t_tcf_limitations_faq-2.jpg"></center>
+</DIV>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-403616"></A>Debug after re-launch does not stop on breakpoints.</H6>
+<P>
+<A NAME="50458931_pgfId-332489"></A>SDK does a processor reset on every debug session. The interrupt controller is not reset during processor reset. Change the reset type to System Reset in Target Setup tab of debug configuration, as shown below.</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="..\images\sdk_t_tcf_limitations_faq-3.jpg"></center>
+</DIV>
+<P CLASS="Note"><b>Note:</b>
+<A NAME="50458931_pgfId-332493"></A>This is applicable only if you terminate a debug session while the processor is in interrupt context.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332495"></A>Not able to view the ps7 peripheral registers in System Debugger.</H6>
+<P>
+<A NAME="50458931_pgfId-332497"></A>By default these registers are not shown. Set an environment variable HW_SERVER_ALLOW_PL_ACCESS in the command prompt, then launch hw_server, as shown below.</P>
+<OL>
+<LI>
+<A NAME="50458931_pgfId-332501"></A>Close any instance of hw_server that is running</LI>
+<LI>
+<A NAME="50458931_pgfId-332502"></A>Launch a terminal/command prompt from SDK by clicking the <B>
+Terminal/Command</B>
+ button:</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="..\images\sdk_t_tcf_limitations_faq-4.jpg"></center>
+</DIV>
+<P CLASS="Anchor">
+<A NAME="50458931_pgfId-333157"></A>&nbsp;</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="..\images\sdk_t_tcf_limitations_faq-5.jpg"></center>
+</DIV>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332506"></A>“Build Project” &amp; “Clean Project” context menu options are missing for new BSP projects.</H6>
+<P>
+<A NAME="50458931_pgfId-332508"></A>BSP projects use “Makebuilder” to build BSP applications. When the Project &gt; Build Automatically option is set, both the “Build Project” and “Clean Project” context menu options are invisible, but any changes made to the BSP project triggers auto build.  If you wish to see “Build Project” and “Clean Project” for a BSP project, disable the Project &gt; Build Automatically option.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332509"></A>Xilinx C/C++ Debugger (GDB) debugger hangs when the Disassembly view is open.</H6>
+<P>
+<A NAME="50458931_pgfId-404687"></A>The workaround is to close the Disassembly view and proceed with debugging.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-404691"></A>I am getting the error below while debugging an application.</H6>
+<DIV>
+<IMG style="margin-left: 15px" SRC="..\images\sdk_t_tcf_limitations_faq-6.jpg"></center>
+</DIV>
+<P>
+<A NAME="50458931_pgfId-404692"></A>The workaround for this issue is to restart the board. This issue will be resolved in the next release.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332519"></A>Resuming from breakpoint did not work while debugging on MicroBlaze™ with System Debugger. Stepping over/into the breakpoint works fine.</H6>
+<P>
+<A NAME="50458931_pgfId-332521"></A>This issue occurs in some scenarios. It will be fixed in the next release.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332522"></A>Stepping over a watchpoint variable is not working while debugging on Microblaze with System Debugger. But resume works fine.</H6>
+<P>
+<A NAME="50458931_pgfId-332524"></A>This issue occurs in some scenarios. It will be fixed in the next release.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332525"></A>Not able to perform single step in area optimized MicroBlaze DDR design using Xilinx C/C++ application, System Debugger.</H6>
+<P>
+<A NAME="50458931_pgfId-332527"></A>The workaround is to use Xilinx C/C++ Debugger (GDB). This issue will be fixed in next release.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332528"></A>Not able to debug the MicroBlaze startup code using the Xilinx C/C++ application, System Debugger .</H6>
+<P>
+<A NAME="50458931_pgfId-332530"></A>This issue shows up with some designs and will be fixed in the next release.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332531"></A>arm-xilinx-eabi-gdb is crashed when resuming from the exit function and discontinuing the debug session with Xilinx C/C++ Debugger (GDB) debugger.</H6>
+<P>
+<A NAME="50458931_pgfId-332533"></A>This issue will be fixed in the next release.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332534"></A>cpu () - Couldn't figure out compiler's library directory; compilation error occurs during the BSP compilation.</H6>
+<P>
+<A NAME="50458931_pgfId-332536"></A>This issue occurs with older BSPs. To fix it, modify the BSP settings to use the latest CPU driver (1.15a) by going to <B>
+Board Support Package Settings &gt; Drivers &gt; CPU &gt; Driver Version.</B>
+</P>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50458931_pgfId-332537"></A>Frequently Asked Questions</H5>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332538"></A>Changing cable type in “Configure JTAG Settings” dialog box is prompting to terminate any active XMD-GDB debug sessions.</H6>
+<P>
+<A NAME="50458931_pgfId-332540"></A>As XMD supports one cable type at a time, it is required to terminate any active launches.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332541"></A>Global variables are not displayed with Xilinx-customized System Debugger.</H6>
+<P>
+<A NAME="50458931_pgfId-332543"></A>Hover the mouse on the global variable to see the value of the global variable or use Xilinx Standard debugger (XMD) to see the global variables values.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332544"></A>No support for Linux Application debug from Xilinx-customized debugger.</H6>
+<P>
+<A NAME="50458931_pgfId-332546"></A>Use Remote ARM Linux Application configuration to debug Linux Applications.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332547"></A>Cannot debug MicroBlaze applications using Xilinx-customized System Debugger.</H6>
+<P>
+<A NAME="50458931_pgfId-332549"></A>Use Xilinx Standard debugger to debug the MicroBlaze applications.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332550"></A>Cannot perform standalone profiling with Xilinx-customized System Debugger.</H6>
+<P>
+<A NAME="50458931_pgfId-332552"></A>Use Xilinx Standard debugger to profile the Standalone applications.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332553"></A>Compilation happens properly but screen shows red marks indicating as if it failed due to errors.</H6>
+<P>
+<A NAME="50458931_pgfId-332555"></A>CDT static code analysis is run on your source code by default. Some of the code analysis issues are reported as errors by default. You can switch Code Analysis Severity to Info from Error by going to Window &gt; Preferences &gt; C/C++ &gt; Code Analysis.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332556"></A>Cannot perform standalone profiling with Xilinx-customized System Debugger.</H6>
+<P>
+<A NAME="50458931_pgfId-332558"></A>Use Xilinx Standard debugger to profile the Standalone applications.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332559"></A>Why is it that I cannot set more than 5 breakpoints/watchpoints with the System Debugger?</H6>
+<P>
+<A NAME="50458931_pgfId-332561"></A>Internally a breakpoint/watchpoint planted by user is treated as Hardware breakpoints in System Debugger. For ARM there is a limitation of 6 Hardware breakpoints. Out of 6, one breakpoint is used for the single stepping, other breakpoint is used for stopping at main(). So users are left with four breakpoints. Software breakpoints (No limitation on number of breakpoints) support will be added in next release.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332562"></A>Cannot perform standalone profiling with Xilinx-customized System Debugger.</H6>
+<P>
+<A NAME="50458931_pgfId-332564"></A>Use Xilinx Standard debugger to profile the Standalone applications.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332565"></A>Debug after re-launch does not stop on breakpoints.</H6>
+<P>
+<A NAME="50458931_pgfId-332567"></A>SDK does processor reset on every debug session. The Interrupt Controller is not reset during Processor reset. Change the reset type to System Reset in the Device Initialization tab of debug configuration.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332568"></A>Not able to view the ps7 peripheral registers in System Debugger.</H6>
+<P>
+<A NAME="50458931_pgfId-332570"></A>By default these registers are not shown. Set an environment variable, HW_SERVER_ALLOW_PL_ACCESS, in the command prompt, then launch the hw_server.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332571"></A>FPGA need to program again after System Reset.</H6>
+<P>
+<A NAME="50458931_pgfId-332573"></A>This is a change introduced with the latest silicon versions. If you are debugging PS+PL design and have the Reset Entire System option in the debug configuration, perform program FPGA when the debugger stops at application main().</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332574"></A>Xilinx System Debugger does not complain whether the FPGA is programmed or not.</H6>
+<P>
+<A NAME="50458931_pgfId-332576"></A>This is a known issue.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332577"></A>Not able to connect to the board when Verbose mode is enabled in SDK XMD console.</H6>
+<P>
+<A NAME="50458931_pgfId-332579"></A>Turn off verbose mode in SDK XMD console.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332580"></A>Build Project and Clean Project context menu options are missing for new BSP projects.</H6>
+<P>
+<A NAME="50458931_pgfId-332582"></A>BSP projects uses Makebuilder to build BSP applications. When the Project &gt; Build Automatically option is set, both Build Project and Clean Project are not visible, but any changes made to the BSP project triggers an auto-build. To see these context menu options for a BSP project, unset the Project &gt; Build Automatically option.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-332583"></A>I have installed cable drivers in my system. But launching hw_server gives a &quot;missing FTD2XX.dll&quot; error message.</H6>
+<P>
+<A NAME="50458931_pgfId-332585"></A>If you never plugin the digilent cable, you can run into this issue. Plug-in the digilent cable; this copies the required libraries.</P>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50458931_pgfId-332587"></A>Related Tasks</H5>
+<P>
+<A NAME="50458931_pgfId-332588"></A><A HREF="sdk_t_tcf_debugging.htm#50458930_57732" CLASS="XRef">Debugging with the System Debugger</A></P>
+<P>
+<A NAME="50458931_pgfId-332589"></A>&nbsp;</P>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458931_pgfId-306566"></A>Copyright &#169; 1995-2013 Xilinx, Inc. All rights reserved.</H6>
+</DIV>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

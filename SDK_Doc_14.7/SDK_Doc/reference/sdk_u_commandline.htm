@@ -1,0 +1,114 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Xilinx SDK Command Line Flows</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50458798_pgfId-294539"></A><A NAME="50458798_57347"></A>Xilinx SDK Command Line Flows</H1>
+<P>
+<A NAME="50458798_pgfId-332390"></A>The majority of the flows within SDK are interactive. Most of these flows are not available, neither do they make sense for command line users. However, almost all software development teams expect to be able to build executables from sources (often present under version control) in a command line flow without invoking the GUI. The following sections explain the different Eclipse and SDK entry points for such use cases.</P>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50458798_pgfId-332391"></A>Building Applications</H5>
+<P>
+<A NAME="50458798_pgfId-332393"></A>This section explains how you can build an application from the command line. It is assumed that SDK projects are stored in a version control system. The steps below show how to import those projects into a new workspace and then build the executables.</P>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458798_pgfId-332394"></A>Assumptions</H6>
+<P>
+<A NAME="50458798_pgfId-332396"></A>The variables used in the steps below are as follows:</P>
+<UL>
+<LI>
+<A NAME="50458798_pgfId-332398"></A>XILINX_EDK - environment variable that points to the EDK or SDK installation.</LI>
+<LI>
+<A NAME="50458798_pgfId-332399"></A>XILINX - environment variable that points to the XILINX ISE installation.</LI>
+<LI>
+<A NAME="50458798_pgfId-332400"></A>ECLIPSE - a shortcut to the Eclipse console application inside SDK installation: $(XILINX_EDK)/eclipse/lin/eclipse/eclipse, or $(XILINX_EDK)/eclipse/lin/eclipse/eclipsec.exe depending on the platform.</LI>
+<LI>
+<A NAME="50458798_pgfId-332401"></A>WSPACE - path to the workspace to be used.</LI>
+<LI>
+<A NAME="50458798_pgfId-332402"></A>VM - Path to Java VM used by SDK. This should be: $(XILINX)/java6/lin/jre/bin</LI>
+</UL>
+<P>
+<A NAME="50458798_pgfId-332404"></A>The steps also reference the following Eclipse/SDK projects, which are typically stored in the same folder.</P>
+<UL>
+<LI>
+<A NAME="50458798_pgfId-332406"></A>XILINX_SDK - environment variable that points to the SDK installation path.</LI>
+<LI>
+<A NAME="50458798_pgfId-332407"></A>HW - path to the SDK hardware platform project</LI>
+<LI>
+<A NAME="50458798_pgfId-332408"></A>BSP - path to the SDK BSP project</LI>
+<LI>
+<A NAME="50458798_pgfId-332409"></A>BSPNAME - SDK BSP project name</LI>
+<LI>
+<A NAME="50458798_pgfId-332410"></A>APP - path to SDK C/C++ application project</LI>
+<LI>
+<A NAME="50458798_pgfId-332411"></A>APPNAME - SDK C/C++ application project.name</LI>
+</UL>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458798_pgfId-332413"></A>Import Projects into the Workspace</H6>
+<P CLASS="Note"><b>Note:</b>
+<A NAME="50458798_pgfId-332415"></A>If your workspace already includes the three projects specifed below, you can skip this step.</P>
+<P>
+<A NAME="50458798_pgfId-332416"></A>To import the three projects into the workspace, issue the following command from a shell:</P>
+<P CLASS="Code">
+<A NAME="50458798_pgfId-332418"></A>$(ECLIPSE) -vm $(VM) -nosplash -application org.eclipse.cdt.managedbuilder.core.headlessbuild \</P>
+<P CLASS="Code">
+<A NAME="50458798_pgfId-332419"></A>   -import $(HW) \</P>
+<P CLASS="Code">
+<A NAME="50458798_pgfId-332420"></A>   -import $(BSP) \</P>
+<P CLASS="Code">
+<A NAME="50458798_pgfId-332421"></A>   -import $(APP) \</P>
+<P CLASS="Code">
+<A NAME="50458798_pgfId-332422"></A>   -data $(WSPACE) \</P>
+<P CLASS="Code">
+<A NAME="50458798_pgfId-332423"></A>   -vmargs -Dorg.eclipse.cdt.core.console=org.eclipse.cdt.core.systemConsole</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50458798_pgfId-332424"></A>Build Imported Projects</H6>
+<P>
+<A NAME="50458798_pgfId-332425"></A>To compile the BSP and the application, issue the following commands from the shell:</P>
+<P CLASS="Code">
+<A NAME="50458798_pgfId-332427"></A>$(ECLIPSE) -vm $(VM) -nosplash -application org.eclipse.cdt.managedbuilder.core.headlessbuild \</P>
+<P CLASS="Code">
+<A NAME="50458798_pgfId-332428"></A>   -build $(BSPNAME) \</P>
+<P CLASS="Code">
+<A NAME="50458798_pgfId-332429"></A>   -data $(WSPACE) \</P>
+<P CLASS="Code">
+<A NAME="50458798_pgfId-332430"></A>   -vmargs -Dorg.eclipse.cdt.core.console=org.eclipse.cdt.core.systemConsole</P>
+<P CLASS="Code">
+<A NAME="50458798_pgfId-332431"></A>&nbsp;</P>
+<P CLASS="Code">
+<A NAME="50458798_pgfId-332432"></A>$(ECLIPSE) -vm $(VM) -nosplash -application org.eclipse.cdt.managedbuilder.core.headlessbuild \</P>
+<P CLASS="Code">
+<A NAME="50458798_pgfId-332433"></A>   -build $(APPNAME) \</P>
+<P CLASS="Code">
+<A NAME="50458798_pgfId-332434"></A>   -data $(WSPACE) \</P>
+<P CLASS="Code">
+<A NAME="50458798_pgfId-332435"></A>   -vmargs -Dorg.eclipse.cdt.core.console=org.eclipse.cdt.core.systemConsole</P>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50458798_pgfId-332436"></A>Adding Software Repositories to a Workspace</H5>
+<P>
+<A NAME="50458798_pgfId-332437"></A>If your BSP depends on drivers or libraries present in a software repository, then it is necessary to add the repository to the workspace before attempting to compile the projects. This can be performed using the following command:</P>
+<P CLASS="Code">
+<A NAME="50458798_pgfId-332439"></A>$(ECLIPSE) -vm $(VM) -nosplash -application com.xilinx.sdk.sw.AddSwRepositoryApp &quot;path/to/repo&quot; \</P>
+<P CLASS="Code">
+<A NAME="50458798_pgfId-332440"></A>   -data $(WSPACE)</P>
+<P>
+<A NAME="50458798_pgfId-306566"></A>&nbsp;</P>
+<P>
+<A NAME="50458798_pgfId-332561"></A>Copyright &#169; 1995-2013 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

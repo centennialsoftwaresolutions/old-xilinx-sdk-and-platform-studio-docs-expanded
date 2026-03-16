@@ -1,0 +1,133 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Preview Software Changes Panel</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50458815_pgfId-294539"></A>Preview <A NAME="50458815_28122"></A>Software Changes Panel</H1>
+<P>
+<A NAME="50458815_pgfId-332382"></A>The Preview Software Changes panel lists the changes that are required in your software projects when the hardware specification file used by the workspace is changed.</P>
+<P>
+<A NAME="50458815_pgfId-332384"></A>You might see this panel while doing one of the following:</P>
+<UL>
+<LI>
+<A NAME="50458815_pgfId-332472"></A><A HREF="../tasks/sdk_t_auto_sync.htm#50458889_54423" CLASS="XRef">Monitoring Hardware Project Changes</A></LI>
+<LI>
+<A NAME="50458815_pgfId-397975"></A><A HREF="../tasks/sdk_t_retarget.htm#50458921_40553" CLASS="XRef">Re-Targeting Software Projects</A></LI>
+</UL>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50458815_pgfId-397976"></A>Processor Changes View</H5>
+<DIV>
+<IMG style="margin-left: 15px" SRC="..\images\sdk_u_sw_diff-1.jpg"></center>
+</DIV>
+<P>
+<A NAME="50458815_pgfId-397977"></A>If a processor is deleted from the hardware design, the software projects related to that processor are closed in the workspace, but not removed. They will no longer be listed in the <B>
+C/C++ Projects view.</B>
+ You can, however, view the contents of these projects in the <B>
+Navigator view.</B>
+</P>
+<P>
+<A NAME="50458815_pgfId-332389"></A>If the processor is added to the hardware design, it is listed in the <B>
+C/C++ Projects view.</B>
+ If the workspace includes any closed software projects for this processor, they are re-opened.</P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50458815_pgfId-332390"></A>User Actions Tab</H5>
+<DIV>
+<IMG style="margin-left: 15px" SRC="..\images\sdk_u_sw_diff-2.jpg"></center>
+</DIV>
+<P>
+<A NAME="50458815_pgfId-332392"></A>Tasks that might require your action or attention due to changes in the hardware design are listed in the User Actions tab under the project name. For example, <B>
+Memory Map Changes</B>
+ might require you to change the linker script of the software application. The tasks that are listed under User Actions depend on your particular project.</P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50458815_pgfId-332393"></A>SDK Actions Tab</H5>
+<DIV>
+<IMG style="margin-left: 15px" SRC="..\images\sdk_u_sw_diff-3.jpg"></center>
+</DIV>
+<P>
+<A NAME="50458815_pgfId-332395"></A>Tasks that SDK performs to match the Software Projects to changes in the hardware design are listed in the SDK Actions tab under the project name. The following sections might contain information:</P>
+<TABLE border=1>
+<TR>
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellHeading">
+<A NAME="50458815_pgfId-332631"></A>Name</P>
+</TH>
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellHeading">
+<A NAME="50458815_pgfId-332633"></A>Function</P>
+</TH>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50458815_pgfId-332635"></A><B>
+Drivers Added</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50458815_pgfId-332637"></A>The default drivers that will be added to the software platform for the new peripherals in the processor sub-system</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50458815_pgfId-332639"></A><B>
+Drivers Removed</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50458815_pgfId-332641"></A>The drivers and any reference to drivers that will be removed from the software platform for peripherals that were removed in the processor sub-system</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50458815_pgfId-332643"></A><B>
+Compiler Flags</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50458815_pgfId-332645"></A>Changes to the compiler flags for building the platform and applications based on changes to the processor configuration</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50458815_pgfId-332401"></A>Related Concepts</H5>
+<P>
+<A NAME="50458815_pgfId-332402"></A><A HREF="../concepts/sdk_o_emb_sw.htm#50458631_69526" CLASS="XRef">Xilinx Embedded Software</A></P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50458815_pgfId-332404"></A>Related Tasks</H5>
+<P>
+<A NAME="50458815_pgfId-332405"></A><A HREF="../tasks/sdk_t_auto_sync.htm#50458889_54423" CLASS="XRef">Monitoring Hardware Project Changes</A></P>
+<P>
+<A NAME="50458815_pgfId-332406"></A><A HREF="../tasks/sdk_t_retarget.htm#50458921_40553" CLASS="XRef">Re-Targeting Software Projects</A></P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50458815_pgfId-332408"></A>Related Reference</H5>
+<P>
+<A NAME="50458815_pgfId-332409"></A><A HREF="sdk_u_hwspec_diff.htm#50458804_65222" CLASS="XRef">Hardware Design Changes</A></P>
+<P>
+<A NAME="50458815_pgfId-332410"></A>&nbsp;</P>
+<P>
+<A NAME="50458815_pgfId-306566"></A>Copyright &#169; 1995-2013 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

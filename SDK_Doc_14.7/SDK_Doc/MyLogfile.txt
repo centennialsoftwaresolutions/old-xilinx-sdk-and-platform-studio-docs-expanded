@@ -1,0 +1,145 @@
+9/25/2013 2:56:18 PM	
+9/25/2013 2:56:18 PM	@-------- Start Batch Job ---------@
+9/25/2013 2:56:18 PM	
+9/25/2013 2:56:18 PM	Batch Log File: "C:\Users\erinl\Desktop\WORKING\SDK_Doc\MyLogfile.txt"
+9/25/2013 2:56:18 PM	Set Debug_NoCloseFAR
+9/25/2013 2:56:18 PM	
+9/25/2013 2:56:18 PM	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+9/25/2013 2:56:18 PM	>>Processing Batch job - "LoadSrcFiles"
+9/25/2013 2:56:18 PM	     ** No File Filter set! Using current filter settings...
+9/25/2013 2:56:18 PM	     Set Filter1-Skip Folders   = "(None)"
+9/25/2013 2:56:18 PM	     Set Filter2-Skip Files     = "(None)"
+9/25/2013 2:56:18 PM	     Set Filter3-Only Inc Files = "(None)"
+9/25/2013 2:56:18 PM	     *** Error - DirScan= - Invalid Directory name "C:\Users\erinl\Desktop\WORKING\SDK_Doc\getting_started\*.htm"
+9/25/2013 2:56:18 PM	
+9/25/2013 2:56:18 PM	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+9/25/2013 2:56:18 PM	>>Processing Batch job - "Table"
+9/25/2013 2:56:18 PM	     Info: ** No Files added! Using current file list ()...
+9/25/2013 2:56:18 PM	     Info: Files in file list = 0
+9/25/2013 2:56:18 PM	     ** Warning - No files in file list. Nothing to do.
+9/25/2013 2:56:18 PM	
+9/25/2013 2:56:18 PM	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+9/25/2013 2:56:18 PM	>>Processing Batch job - "Bulleted"
+9/25/2013 2:56:18 PM	     Info: ** No Files added! Using current file list ()...
+9/25/2013 2:56:18 PM	     Info: Files in file list = 0
+9/25/2013 2:56:18 PM	     ** Warning - No files in file list. Nothing to do.
+9/25/2013 2:56:18 PM	
+9/25/2013 2:56:18 PM	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+9/25/2013 2:56:18 PM	>>Processing Batch job - "BulletedSub"
+9/25/2013 2:56:18 PM	     Info: ** No Files added! Using current file list ()...
+9/25/2013 2:56:18 PM	     Info: Files in file list = 0
+9/25/2013 2:56:18 PM	     ** Warning - No files in file list. Nothing to do.
+9/25/2013 2:56:18 PM	
+9/25/2013 2:56:18 PM	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+9/25/2013 2:56:18 PM	>>Processing Batch job - "Body"
+9/25/2013 2:56:18 PM	     Info: ** No Files added! Using current file list ()...
+9/25/2013 2:56:18 PM	     Info: Files in file list = 0
+9/25/2013 2:56:18 PM	     ** Warning - No files in file list. Nothing to do.
+9/25/2013 2:56:18 PM	
+9/25/2013 2:56:18 PM	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+9/25/2013 2:56:18 PM	>>Processing Batch job - "Note"
+9/25/2013 2:56:18 PM	     Info: ** No Files added! Using current file list ()...
+9/25/2013 2:56:18 PM	     Info: Files in file list = 0
+9/25/2013 2:56:18 PM	     ** Warning - No files in file list. Nothing to do.
+9/25/2013 2:56:18 PM	
+9/25/2013 2:56:18 PM	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+9/25/2013 2:56:18 PM	>>Processing Batch job - "Numbered"
+9/25/2013 2:56:18 PM	     Info: ** No Files added! Using current file list ()...
+9/25/2013 2:56:18 PM	     Info: Files in file list = 0
+9/25/2013 2:56:18 PM	     ** Warning - No files in file list. Nothing to do.
+9/25/2013 2:56:18 PM	
+9/25/2013 2:56:18 PM	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+9/25/2013 2:56:18 PM	>>Processing Batch job - "NumberedCont"
+9/25/2013 2:56:18 PM	     Info: ** No Files added! Using current file list ()...
+9/25/2013 2:56:18 PM	     Info: Files in file list = 0
+9/25/2013 2:56:18 PM	     ** Warning - No files in file list. Nothing to do.
+9/25/2013 2:56:18 PM	
+9/25/2013 2:56:18 PM	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+9/25/2013 2:56:18 PM	>>Processing Batch job - "NumberedSub"
+9/25/2013 2:56:18 PM	     Info: ** No Files added! Using current file list ()...
+9/25/2013 2:56:18 PM	     Info: Files in file list = 0
+9/25/2013 2:56:18 PM	     ** Warning - No files in file list. Nothing to do.
+9/25/2013 2:56:18 PM	
+9/25/2013 2:56:18 PM	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+9/25/2013 2:56:18 PM	>>Processing Batch job - "NumberedSubCont"
+9/25/2013 2:56:18 PM	     Info: ** No Files added! Using current file list ()...
+9/25/2013 2:56:18 PM	     Info: Files in file list = 0
+9/25/2013 2:56:18 PM	     ** Warning - No files in file list. Nothing to do.
+9/25/2013 2:56:18 PM	
+9/25/2013 2:56:18 PM	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+9/25/2013 2:56:18 PM	>>Processing Batch job - "Image"
+9/25/2013 2:56:18 PM	     Info: ** No Files added! Using current file list ()...
+9/25/2013 2:56:18 PM	     Info: Files in file list = 0
+9/25/2013 2:56:18 PM	     ** Warning - No files in file list. Nothing to do.
+9/25/2013 2:56:18 PM	
+9/25/2013 2:56:18 PM	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+9/25/2013 2:56:18 PM	>>Processing Batch job - "GuiSysIn"
+9/25/2013 2:56:18 PM	     Info: ** No Files added! Using current file list ()...
+9/25/2013 2:56:18 PM	     Info: Files in file list = 0
+9/25/2013 2:56:18 PM	     ** Warning - No files in file list. Nothing to do.
+9/25/2013 2:56:18 PM	
+9/25/2013 2:56:18 PM	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+9/25/2013 2:56:18 PM	>>Processing Batch job - "EM>"
+9/25/2013 2:56:18 PM	     Info: ** No Files added! Using current file list ()...
+9/25/2013 2:56:18 PM	     Info: Files in file list = 0
+9/25/2013 2:56:18 PM	     ** Warning - No files in file list. Nothing to do.
+9/25/2013 2:56:18 PM	
+9/25/2013 2:56:18 PM	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+9/25/2013 2:56:18 PM	>>Processing Batch job - "Image2"
+9/25/2013 2:56:18 PM	     Info: ** No Files added! Using current file list ()...
+9/25/2013 2:56:18 PM	     Info: Files in file list = 0
+9/25/2013 2:56:18 PM	     ** Warning - No files in file list. Nothing to do.
+9/25/2013 2:56:18 PM	
+9/25/2013 2:56:18 PM	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+9/25/2013 2:56:18 PM	>>Processing Batch job - "Bold"
+9/25/2013 2:56:18 PM	     Info: ** No Files added! Using current file list ()...
+9/25/2013 2:56:18 PM	     Info: Files in file list = 0
+9/25/2013 2:56:18 PM	     ** Warning - No files in file list. Nothing to do.
+9/25/2013 2:56:18 PM	
+9/25/2013 2:56:18 PM	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+9/25/2013 2:56:18 PM	>>Processing Batch job - "Note2 (Run until no results)"
+9/25/2013 2:56:18 PM	     Info: ** No Files added! Using current file list ()...
+9/25/2013 2:56:18 PM	     Info: Files in file list = 0
+9/25/2013 2:56:18 PM	     ** Warning - No files in file list. Nothing to do.
+9/25/2013 2:56:18 PM	
+9/25/2013 2:56:18 PM	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+9/25/2013 2:56:18 PM	>>Processing Batch job - "SysOut"
+9/25/2013 2:56:18 PM	     Info: ** No Files added! Using current file list ()...
+9/25/2013 2:56:18 PM	     Info: Files in file list = 0
+9/25/2013 2:56:18 PM	     ** Warning - No files in file list. Nothing to do.
+9/25/2013 2:56:18 PM	
+9/25/2013 2:56:18 PM	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+9/25/2013 2:56:18 PM	>>Processing Batch job - ":"
+9/25/2013 2:56:18 PM	     Info: ** No Files added! Using current file list ()...
+9/25/2013 2:56:18 PM	     Info: Files in file list = 0
+9/25/2013 2:56:18 PM	     ** Warning - No files in file list. Nothing to do.
+9/25/2013 2:56:18 PM	
+9/25/2013 2:56:18 PM	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+9/25/2013 2:56:18 PM	>>Processing Batch job - "Italic"
+9/25/2013 2:56:18 PM	     Info: ** No Files added! Using current file list ()...
+9/25/2013 2:56:18 PM	     Info: Files in file list = 0
+9/25/2013 2:56:18 PM	     ** Warning - No files in file list. Nothing to do.
+9/25/2013 2:56:18 PM	
+9/25/2013 2:56:18 PM	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+9/25/2013 2:56:18 PM	>>Processing Batch job - "css"
+9/25/2013 2:56:18 PM	     Info: ** No Files added! Using current file list ()...
+9/25/2013 2:56:18 PM	     Info: Files in file list = 0
+9/25/2013 2:56:18 PM	     ** Warning - No files in file list. Nothing to do.
+9/25/2013 2:56:18 PM	
+9/25/2013 2:56:18 PM	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+9/25/2013 2:56:18 PM	>>Processing Batch job - "image /center"
+9/25/2013 2:56:18 PM	     Info: ** No Files added! Using current file list ()...
+9/25/2013 2:56:18 PM	     Info: Files in file list = 0
+9/25/2013 2:56:18 PM	     ** Warning - No files in file list. Nothing to do.
+9/25/2013 2:56:18 PM	
+9/25/2013 2:56:18 PM	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+9/25/2013 2:56:18 PM	>>Processing Batch job - "image /center2"
+9/25/2013 2:56:18 PM	     Info: ** No Files added! Using current file list ()...
+9/25/2013 2:56:18 PM	     Info: Files in file list = 0
+9/25/2013 2:56:18 PM	     ** Warning - No files in file list. Nothing to do.
+9/25/2013 2:56:18 PM	
+9/25/2013 2:56:18 PM	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+9/25/2013 2:56:18 PM	>>Processing Batch job - "SysIn"
+9/25/2013 2:56:18 PM	     Info: ** No Files added! Using current file list ()...
+9/25/2013 2:56:18 PM	     Info: Files in file list = 0
+9/25/2013 2:56:18 PM	     ** Warning - No files in file list. Nothing to do.
