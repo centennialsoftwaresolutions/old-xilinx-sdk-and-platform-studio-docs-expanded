@@ -1,0 +1,86 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Remote Debug with TCF Debugger</title>
+<link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+<body>
+<h1>Remote Debug with TCF Debugger</h1>
+<HR>
+<br>
+<h2><h2><h2 align="left">Setting Up the Remote System Environment</h2>
+<p> It is possible to debug the Linux Kernel using the Xilinx TCF debugger. Use the following steps to attach to the Linux Kernel running on target and debug the source code. </p>
+<ol>
+  <li>Running  hw_server with non-default port (for example: 3122) enables remote connections. Use  the following command to launch hw_server on port 3122:</li>
+  <br>
+ 
+<code>hw_server -s “TCP::3122;Name=Project hello_world Hardware Server”</code>
+
+<br>
+  <li>Make sure your board is correctly connected. </li>
+  <li>In a <code>cmd</code> window, check the IP Address:<br>
+    <br>
+    <br>
+	<p>
+  <img src="../images/remote_sys_ip.png"><br>
+  </li>
+<h2>Setting Up the Local System for Remote Debug</h2>
+<ol><li>Launch SDK.</li>
+<li>Create an application.</li> 
+<li>Select the application to remotely debug.</li></ol>
+<p><br>
+  <img src="../images/remote_debug_app.png"width="624" height="193"></p>
+<li>Click <strong>Run &gt; Debug Configurations</strong>. <br>
+</li>
+<li>Create a new TCF Configuration by double-clickig <strong>Xilinx TCF</strong>.</li> 
+<p><br>
+  <br>
+  <img src="../images/xilinx_tcf.png"></p>
+<p><br>
+  <br>
+  <img src="../images/hello_debug.png"><br>
+    <br>  
+    <br>
+</p>
+<li> Go to the Targets tab and unselect <strong>Use Localhost as the target</strong>.</li><br>
+<p>  <br>
+  <img src="../images/target.png"><br></p>
+ 
+  <br>
+
+<li>Click the <strong>New</strong> button to display the TCF Debug Target Setup dialog box.</li><br>
+  <br>
+<p>  <img src="../images/debug_target_setup.png"></p> <br>
+  <br>
+
+<li> Click the <strong>Next</strong> button to display the next screen in the TCF Debug Target Setup dialog box.</li><br>
+  <br>
+ <p> <img src="../images/manual_client_configuration.png"><br></p>
+ 
+  <br>
+
+<li> Click the <span class="guimenu">Add</span> buttonm, and enter the following:</li><br>
+  <br>
+ <p> <img src="../images/tcf_peer_properties.png"></p>
+ <br>
+  <br>
+
+<li> Click <span class="guibutton">OK</span>. The Target tab opens with the remote target displayed.</li>
+<p><br>
+    </p>
+<p> <img src="../images/tcf_target.png"></p>
+  <br>
+  <li> Click the <strong>Debug</strong> button.<br></li>
+  <br>
+  <p><img src="../images/tcf_debug_hello.png"></p><br>
+  <br>
+</ol>
+<p> <img height="21" alt="Related tasks" src="../images/ngtasks.gif" width="143" border="0"><br>
+    <a href="../tasks/sdk_tcf_debugging.htm">SDK TCF Debugger</a></p>
+<p><font color="#800000" face="Times New Roman">Copyright 1995-2013 Xilinx, Inc. All rights reserved.</font></p>
+</body>
+
+</html>

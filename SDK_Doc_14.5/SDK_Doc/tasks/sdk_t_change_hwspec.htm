@@ -1,0 +1,51 @@
+<html>
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Change the Hardware Specification File</title>
+<link rel="Stylesheet" type="text/css" media="all" href="../help.css">
+</head>
+
+<body>
+<h1>Change the Hardware Specification File</h1>
+<HR>
+You can change the hardware specification file of the SDK hardware
+project using this procedure: <br>
+
+<ol>
+    <li>Select the <b>Hardware Project</b> in the Project Explorer
+    view.</li>
+    <li>Right-click on the hardware project and select <b>Change
+    Hardware Specification File...</b>. </li>
+    <li>A dialog will pop-up indicating the changes that will be made
+    to the software projects associated with this hardware platform. Click <b>Yes</b> to continue.</li>
+    <li>In the dialog specify the source hardware specification
+    file and click <b>Ok</b></li>
+</ol>
+
+<p align="left"><img alt="" src="../images/sdk_change_hw_spec.png"
+border="0">
+
+<p>
+SDK will do the following:
+<ul>
+  <li>Update the hardware project with the new hardware specification
+  file, bitstream and BMM file.</li>
+  <li>If a processor sub-system was removed from the hardware design, close the software projects, both board support package and
+  referenced application projects, targetted to that processor.</li>
+  <li>Update the board support package project with changes in the
+  hardware processor sub-system. This include removal of drivers for
+  removed peripherals and addition of default drivers for new
+  peripherals.</li>
+  <li>Re-build all the software projects related to the hardware project.</li>
+</ul>
+</p>
+
+<p><img height="21" alt="Related concepts" src="../images/ngconcepts.gif" width="143" border="0"><br>
+<a href="../concepts/sdk_c_hwcomponents.htm">Embedded hardware components</a><br>
+<a href="../concepts/sdk_c_hwspec.htm">Hardware specification file</a></p>
+
+<p><font face="Times New Roman" color="#800000">Copyright © 1995-2013 Xilinx, Inc. All rights reserved.</font></p>
+</body>
+
+</html>
+

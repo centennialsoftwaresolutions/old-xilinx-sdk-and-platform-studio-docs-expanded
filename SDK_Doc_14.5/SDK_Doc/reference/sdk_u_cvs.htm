@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Using Xilinx SDK with Revision Control Software</title>
+<link rel="stylesheet" type="text/css" href="../help.css"></head>
+
+
+<body>
+
+<h1>Using SDK with Revision Control Software</h1>
+<hr>
+
+<p>
+This section provides details on how to use SDK in conjunction with version control systems (VCS).
+The specific VCS used does not matter - the instructions are applicable across CVS, SVN, Mercurial,
+git, Perforce or anything else. 
+</p> 
+
+<h2>Files to be placed in version control</h2>
+<p>
+To reproduce an SDK application build, the following projects have to be saved in version control:
+<ul>
+<li>Hardware Platform Project</li>
+<li>BSP project</li>
+<li>Application project</li>
+</ul>
+</p>
+
+<p>Within the hardware project, the following files need to be saved:
+<ul>
+<li> system.xml - the hardware platform specification. </li>
+<li> system.bit and system_bd.bmm - the bitstream and BMM files necessary for configuring the FPGA</li>
+<li> .project - The Eclipse project file that contains project specific meta data.</li>
+</ul>
+Note: Typically, the Eclipse resource navigator does not show files that being with a period.
+This setting can be changed by changing the list of filter patterns to be applied. This is available
+in a drop down menu in the resource navigator view.
+</p>
+
+<p>The following files present in the BSP project should be saved:
+<ul>
+<li> libgen.options - command line options provided to libgen </li>
+<li> system.mss - The BSP specification. </li>
+<li> Makefile - The BSP project's Makefile is not automatically generated. So this Makefile should be preserved. </li>
+<li> .project, .sdkproject and .cproject - Eclipse and SDK meta-data files. </li>
+</ul>
+
+<p>The following files present in the application project should be saved:
+<ul>
+<li> All source and header files. </li>
+<li> Any other file user generated file like documentation files. </li>
+<li> .project and .cproject - Eclipse meta-data files. </li>
+</ul>
+
+<h2>Organizing projects in directories</h2>
+
+<p>SDK (or Eclipse) projects can be created either inside a workspace, or in any other folder on the
+hard disk. Due to the various inter dependencies (application projects depend on BSPs and hardware
+projects, and BSPs depend on the hardware projects), SDK generated tool invocations have to point
+to files in their dependent projects. To make builds reproducible, it is highly advantageous if
+there are no absolute paths used in any SDK saved settings.</p>
+
+<p>In order to get SDK to use relative paths, put all the dependent projects in a single folder.
+As long as the hardware, BSP and application projects are in the same folder, all the SDK generated
+command line invocations of various tools will use relative paths.</p>
+
+<p>If software repositories are used to store drivers and libraries that are processed by libgen,
+then these repositories should also be placed in the same folder as the BSP project
+(which is the same folder as the application and h/w projects). If such a directory structure
+is maintained, libgen will use a relative path to access these software repositories.</p>
+
+<p>The use of Eclipse variables (like ${WORKSPACE}), can lead to the use of absolute paths. So the
+use of such variables should be considered on a case by case basis.</p>
+
+<h2>Typical User Flow</h2>
+<h3>Initial Setup</h3>
+<p>Eclipse provides many different team provider plugins. These plugins integrate various source
+control tools into Eclipse. Plugins exist for many different tools and can be obtained from eclipse.org.
+Users may choose to use these plugins for better integration, or they may perform source control 
+operations outside the Eclipse GUI.</p>
+
+<p>When starting from an existing project setup (projects already exist in source control),
+perform the following steps:
+<ol>
+<li> Obtain projects from version control into local hard disk </li>
+<li> If the projects use a EDK repository for drivers or libraries, set that first in the workspace. </li>
+<li> Import the projects into the workspace. Make sure to deselect the "Copy project sources" option provided
+in the import wizard. This will leave the projects in the same place where they were initially checked out from
+source control. </li>
+<li> SDK will automatically build all the projects and produce the artifacts (libraries and executables). </li>
+</ol>
+</p>
+
+<p>When starting from scratch, simply follow the regular steps to create SDK applications, but make sure
+that all the projects are placed in the same folder (it can be inside or outside the workspace).
+Then check in the files specified above into source control. </p>
+
+<h3>Everyday Workflow</h3>
+
+<p>The main work is in the initial setup. Everyday workflow is typically just editing files, building
+and testing them, and finally checking them in. Simply follow the steps required by the version control
+tool to perform these steps.</p>
+
+<h2>Command line Builds</h2>
+<p>Eclipse projects can be built from the command line using GNU make. The steps differ based primarily
+on how the Makefiles will be generated.</p>
+
+<h3>Auto Generated Makefiles </h3>
+<p>By default, SDK auto generates Makefiles for the application project. However, these Makefiles are
+a generated artifact and should not be placed under version control. Users who let SDK generate
+Makefiles then have to invoke SDK/Eclipse in a headless mode to build their software. The build steps
+will typically look like the following:
+<ol>
+<li> Invoke SDK in headless mode and import necessary projects. </li>
+<li> Invoke SDK in headless mode and build necessary projects. The Makefiles will be generated
+as part of this step, and the build artifacts will be generated. </li>
+</ol>
+See the <a href="../reference/sdk_u_commandline.htm">SDK Command Line Flows</a> section for more details on these steps.
+</p>
+
+<h3>User provided Makefiles </h3>
+<p>Users can also provide their own Makefiles for complete control of the build process. In such a case,
+they can instruct the GUI to not generate Makefiles, and invoke make with their Makefile to build
+the software. In such a case, building software from the command line is trivial as it just involves
+invoking make with the user Makefile.</p>
+<p><font face="Times New Roman" color="#800000">Copyright &copy; 1995-2013 Xilinx, Inc. All rights reserved.</font></p>
+</body>
+
+</html>

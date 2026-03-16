@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+<!-- Defines topics that will be inserted under the Xilinx SDK User Guide menu-->
+<toc label="Reference">
+	<topic label="Hardware Platform Specification File Dialog" href="reference/sdk_u_hwspec.htm"/>
+	<topic label="Hardware Design Changes Page" href="reference/sdk_u_hwspec_diff.htm"/>
+	<topic label="Software Changes Preview Panel" href="reference/sdk_u_sw_diff.htm"/>
+	<topic label="Xilinx Tools Menu actions" href="reference/sdk_u_m_tools.htm"/>
+	<topic label="Xilinx preferences" href="reference/sdk_u_xilinx_pref.htm"/>
+	<topic label="Board Support Package (SDK)" href="reference/sdk_u_new_bsp_internal.htm">
+		<topic label="Configure a BSP (SDK)" href="reference/sdk_u_configure_bsp_internal.htm"/>
+	</topic>
+	<topic label="Board Support Package (External Tool)" href="reference/sdk_u_new_bsp_external.htm">
+		<topic label="Configure a BSP (External Tool)" href="reference/sdk_u_configure_bsp_external.htm"/>
+	</topic>
+	<topic href="reference/sdk_u_sw_repos.htm" label="Software Repositories">
+ </topic>
+	<topic label="New C Application Project" href="reference/sdk_u_new_proj_wiz_m_name.htm"/>
+	<topic href="reference/sdk_u_linker_script.htm" label="Generating a Linker Script">
+ </topic>
+ <topic href="reference/sdk_u_linker_script_mod.htm" label="Modifying a Linker Script">
+ </topic>
+
+	<topic label="C/C++ Run and Debug" href="reference/sdk_o_run_dbg_pages.htm">
+		<topic label="Configure JTAG Settings" href="reference/sdk_u_configure_jtag.htm"/>
+		<topic label="Program FPGA" href="reference/sdk_u_program_fpga.htm"/>
+		<topic label="Run or Debug Configurations" href="reference/sdk_u_run_dbg_main.htm"/>
+	</topic>
+	<topic label="Program Flash Memory" href="reference/sdk_u_program_flash.htm"/>
+	<topic label="Program FPGA" href="reference/sdk_u_program_fpga.htm"/>
+	<topic label="System Generator Co-Debug Settings (Beta)" href="reference/sdk_u_sysgen_codebug.htm"/>
+ <topic href="reference/sdk_u_commandline.htm" label="Command Line Flows">
+ </topic>
+ <topic href="reference/sdk_u_cvs.htm" label="SDK with Version Control Software">
+ </topic>
+</toc>

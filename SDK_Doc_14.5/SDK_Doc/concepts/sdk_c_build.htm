@@ -1,0 +1,109 @@
+﻿<html>
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<title>Building applications in SDK</title>
+<link rel=Stylesheet type="text/css" media=all href="../help.css">
+</head>
+
+<body>
+<h1>Building applications in SDK </h1>
+
+<HR>
+<p>The software workflow in SDK is  described in the following figure.</p>
+<p align="left"><img src="../images/x11037.gif" alt="SDK software workflow" border=0 /></p>
+
+<p>The first step in developing a software application is to create a <a href="../concepts/sdk_c_bsp_internal.htm">Board Support Package (SDK)</a> 
+that will be used by the application. Then, you can create an application project.
+<p>To build an executable for this application, SDK automatically performs the following actions. Configuration options can also be provided 
+for these steps.
+<ol>
+  <li>SDK builds the board support package using Libgen. This is sometimes called a software platform.</li>
+  <li>SDK compiles the  application software using a platform-specific gcc/g++ compiler.</li>
+  <li>The object files from the application and the Board Support Package are linked together to form the final executable. This step is performed by a linker which takes as input a set of object files and a linker script that specifies where object files should be placed in memory.</li>
+</ol>
+<p> The following sections provide an overview of concepts involved in
+building applications.</p>
+<h2><a name="makefiles"></a>
+  Makefiles
+</h2>
+<p>Compilation of source files into object files is controlled using Makefiles. With SDK, there
+are two possible options for Makefiles:</p>
+<ul>
+<li><b>Managed Make</b>: For Managed Make projects, SDK automatically creates Makefiles. 
+Makefiles created by SDK typically compile the sources into object files, and finally link
+the different object files into an executable. In most cases, managed make simply eliminates
+the job of writing Makefiles. This is the suggested option. </li>
+<li><b>Standard Make</b>: If you want  ultimate control over the compilation 
+process, use standard make projects. In this case, you must manually write 
+a Makefile with steps to compile and link an application. Using the Standard Make flow
+hides a number of dependencies from SDK, so you must  follow manual steps 
+for other tasks such as debugging or running the application from within SDK. Therefore, the
+Standard Make flow is not recommended for general use.
+</ul>
+
+<h2><a name="buildconf"></a>
+  Build configurations
+</h2>
+<p>Software developers typically build different versions of executables, with different
+settings used to build those executables. For example, an application that is built 
+for debugging uses a certain set of options (such as compiler flags and macro definitions),
+while the same application is built with a different set of options for eventual
+release to customers. SDK makes it easier to maintain these different profiles using
+the concept of build configurations.</p>
+
+<p>Each build configuration could customize:
+<ul>
+<li>Compiler Settings: Debug and Optimization levels
+<li>Macros passed for compilation
+<li>Linker Settings
+</ul>
+</p>
+
+By default,  SDK provides three build configurations, as shown here:<br>
+<br>
+<table border=0>
+ <thead>
+ <tr> <th>Configuration Type</th><th>Compiler Flags</th> </tr>
+ </thead>
+ <tr> <td>Debug</td>   <td>-O0 -g</td> </tr>
+ <tr> <td>Release</td> <td>-O2</td> </tr>
+ <tr> <td>Profile</td> <td>-O2 -g -pg</td> </tr>
+</table>
+<h3>MicroBlaze-specific   options</h3>
+<p>Applications specific to the MicroBlaze&#8482; processor can be compiled in one of two modes:
+<ul>
+  <li><strong>Executable Mode: </strong>This is the default mode. It creates an executable application.</li>
+  <li><strong>XMD Stub Mode: </strong>Applications running on hardware without an MDM connection to the MicroBlaze
+    processor can be debugged if they are compiled in the XMD Stub Mode. This mode is not recommended for general use.</li>
+</ul>
+<h2><a name="linkerscripts"></a>
+  Linker scripts
+</h2>
+<p>The final step in creating an executable from object files and libraries is linking.
+This is performed by a linker which accepts linker command language files called linker
+scripts. The primary purpose of a linker script is to describe the memory layout of 
+the target machine, and specify where each section of the program should be placed 
+in memory.  </p>
+<p>SDK provides a linker script generator to simplify the task of creating
+a linker script. The linker script generator GUI examines the target hardware platform and
+determines the available memory sections. The only action required by you is to assign 
+the different code and data sections in the ELF file to different memory regions.</p>
+<p><strong>Note</strong>: For multi-processor systems, each processor will be running a different ELF file,
+and each ELF file requires its own linker script. Ensure that the
+two ELF files do not overlap in memory.</p>
+
+<p><img width=143 height=21 src="../images/ngconcepts.gif" alt="Related concepts" border=0><br>
+<a href="../concepts/sdk_c_bsp_internal.htm">Board support package (SDK)</a><br>
+<a href="../concepts/sdk_c_projects.htm">SDK application projects</a></p>
+<p><img width=143 height=21 src="../images/ngtasks.gif" alt="Related tasks" border=0><br>
+<a href="../tasks/sdk_o_project_creation.htm">Creating software projects</a></p>
+
+<p><img width=143 height=21 src="../images/ngref.gif" alt="Related references" border=0><br>
+<a href="../reference/sdk_o_ref.htm">Reference</a></p>
+
+<p><font face="Times New Roman" color="#800000">Copyright © 1995-2013 Xilinx, Inc. All rights reserved.</font></p>
+
+</body>
+
+</html>
+

@@ -1,0 +1,57 @@
+<html xmlns="http://www.w3.org/TR/REC-html40">
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<title>Run overview</title>
+<link rel=Stylesheet type="text/css" media=all href="../help.css">
+<meta http-equiv=Content-Language content=en-us>
+</head>
+<body bgcolor=#FFFFFF lang=EN-US link="#006699" vlink="#996699">
+<h1><span lang=EN>Run overview</span></h1>
+<HR>
+<p><span lang=EN>
+  You can run software applications on a hardware target using SDK. The
+  program will run to termination. You can also stop the program at any time of
+  execution. The run workflow is described in the following diagram: 
+</span></p> 
+<p align="left"><img src="../images/x11038.gif" alt="SDK Run Workflow"
+  width="369" height="304"></p>
+<p>
+  The workflow is made up of the following components:
+</p>
+<ul>
+  <li><strong>Executable ELF File</strong>: <span lang=EN>To debug your
+  application, you must use a compiled Executable and Linkable Format (ELF)
+  file.</span> Refer to <a href="sdk_c_build.htm#buildconf">Build
+  configurations</a> for more information.</li>
+  <li><strong>Run Configuration</strong>: To launch the run session, you must
+  create a run configuration in SDK. This configuration captures options
+  required to start a run session, including the executable name, processor
+  target to run and other information. Refer to <a
+  href="sdk_c_debug_run_configuration.htm">Debug/Run  configurations</a> for more
+  information.</li>
+  <li><strong>JTAG Settings</strong>: In most cases, SDK can automatically
+  detect the JTAG settings and does not require special settings. Refer to <a
+  href="sdk_c_jtag.htm">JTAG settings</a> for more information.</li>
+  <li><strong>Run Console</strong>: This XMD console view enables you to 
+  stop the program execution or terminate the run session.</li>
+</ul>
+<p>
+  You can repeat the cycle of modifying the code, building the executable, and
+  running the program in SDK. The program can be run on all supported debug targets. For more information, refer to <a
+  href="sdk_c_over_dbg.htm#DebugTargets">Debug overview</a>.
+</p> 
+<p><span lang=EN>
+<img width=143 height=21 id="_x0000_i1025"
+  src="../images/ngconcepts.gif" alt="Related concepts" border=0><br> 
+  <a href="sdk_c_build.htm#buildconf">Build configurations</a><br>
+  <a href="sdk_c_debug_run_configuration.htm">Debug/Run configurations</a><br>
+  <a href="sdk_c_jtag.htm">JTAG settings</a>
+</span></p>
+<p><span lang=EN>
+<img border=0 width=143 height=21 id="_x0000_i1026"
+  src="../images/ngtasks.gif" alt="Related tasks"><br>
+  <a href="../tasks/sdk_t_run.htm">Running a program</a>
+</span></p>
+<p><font face="Times New Roman" color="#800000">Copyright  © 1995-2013 Xilinx, Inc. All rights reserved.</font></p>
+</body>
+</html>

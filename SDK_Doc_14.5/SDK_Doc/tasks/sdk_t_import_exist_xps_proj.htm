@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+<head><meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="Content-Language" content="en-us">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+
+  <title>Importing an existing XPS application project</title>
+  <link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+
+<body>
+  <h1>Importing an existing XPS application project</h1>
+  <HR>
+  <p>    The Import Application wizard that existed in the 10.1 release of  SDK, which  automatically imported XPS software projects into the SDK workspace, is no longer available in SDK. You should manually import the XPS
+  projects into SDK workspace.</p>
+  <p>To import an existing XPS software application into your workspace:</p>
+  <ol type="1">
+    <li>Create a new <strong>Empty Application</strong> managed make project by following the steps mentioned in <a href="sdk_t_create_new_appln.htm">Creating a
+    C or C++ project</a>.</li>
+
+    <li>Import the source files into the workspace by following the steps mentioned in <a href="sdk_t_import_file.htm">Importing resources from the file
+    system</a>.</li>
+
+    <li>If the XPS project uses a linker script, specify this linker script in the linker options as described in <a href="sdk_t_create_lscript.htm#specify_linkerscripts">Adding the linker script manually</a>.</li>
+
+    <li>If you have changed the <strong>Debug and Optimization flags</strong> of the project, follow the steps mentioned in <a href="sdk_t_proj_compiler_options.htm#opt_compiler">Specifying debug and optimization compiler flags</a>.</li>
+
+
+    <li>If you have added any custom libraries and library paths,  follow the steps mentioned in <a href="sdk_t_proj_libraries.htm">Adding libraries and library paths</a>.</li>
+
+    <li>If you have specified custom compiler and linker flags,  follow the steps mentioned in <a href="sdk_t_proj_compiler_options.htm">Specifying the compiler options</a> and
+    <a href="sdk_t_proj_linker_options.htm">Specifying the linker options</a>.</li>
+  </ol>
+  
+  <p><img height="21" alt="Related concepts" src="../images/ngconcepts.gif" width="143" border="0"><br>
+  <a href="../concepts/sdk_o_emb_sw.htm">Xilinx embedded software</a><br>
+  <a href="../concepts/sdk_c_build.htm">Building applications in SDK</a><br>
+</p>
+  <p><img height="21" alt="Related tasks" src="../images/ngtasks.gif" width="143" border="0">&nbsp;<br>
+  <a href="sdk_t_create_new_appln.htm">Creating a C or C++ project</a><br>
+  <a href="sdk_t_proj_compiler_options.htm">Specifying the compiler options</a><br>
+  <a href="sdk_t_proj_libraries.htm">Adding libraries and library paths</a><br>
+  <a href="sdk_t_proj_linker_options.htm">Specifying the linker options</a></p>
+
+  <p><img height="21" alt="Related reference" src="../images/ngref.gif" width="143" border="0"><br>
+  <a href="../reference/sdk_o_run_dbg_pages.htm">Run and Debug dialog boxes</a></p>
+   	
+  <p><font face="Times New Roman" color="#800000">Copyright &copy; 1995-2013 Xilinx, Inc. All rights reserved.</font></p>
+</body>
+</html>

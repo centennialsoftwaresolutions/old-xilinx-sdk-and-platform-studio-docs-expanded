@@ -1,0 +1,147 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>TCF Debugger FAQs</title>
+<link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+<body>
+
+<h1>TCF Debugger Limitations, Known Issues, and Frequently Asked Questions</h1>
+<HR>
+<h2>Known Issues and Limitations </h2>
+<p><a href="#tcf4">Changing cable type in “Configure JTAG Settings” dialog box is prompting to terminate any active XMD-GDB debug sessions.</a></p>
+<p><a href="#tcf3">Cleaning/importing old BSP projects results in build error(or) Modifying the BSP settings does not compile automatically.</a></p>
+<p><a href="#tcf7">Automatic perspective switch from C/C++ to Debug perspective is not happening with Xilinx customized TCF debugger.</a></p>
+<p><a href="#tcf2">Debug stack trace is not showing automatically as shown below with Xilinx customized TCF debugger.</a></p>
+<p><a href="#tcf13">Watchpoints that are set from the Outline View are not working with Xilinx customized TCF debugger.</a></p>
+<p><a href="#tcf15">Global variables are not displayed with Xilinx Customized TCF debugger.</a></p>
+<p><a href="#tcf16">No support for Linux Application debug from Xilinx Customized debugger.</a></p>
+<p><a href="#tcf17">Deleting the last debugged application immediately (using Xilinx Customized TCF Debugger) using the <strong>Delete Project contents on disk</strong> option, causes an exception.</a></p>
+<p><a href="#tcf18">Cannot debug Microbalze applications using Xilinx Customized TCF debugger.</a></p>
+<p><a href="#tcf19">Cannot perform standalone profiling with Xilinx Customized TCF Debugger.</a></p>
+<p><a href="#tcf20">TCF debugger by default starts at Application entry (main()). </a></p>
+<p><a href="#tcf21">Compilation happens properly but screen shows red marks indicating as if it failed due to errors.</a></p>
+<p><a href="#tcf22">Some of the variables listed in the Variables view do not show their values.</a></p>
+<p><a href="#tcf23">Debug after re-launch does not stop on breakpoints.</a></p>
+<p><a href="#tcf24">Not able to view the ps7 peripheral registers in TCF debugger.</a></p>
+<p><a href="#tcf25">FPGA need to program again after System Reset.</a></p>
+<p><a href="#tcf26">Xilinx TCF debugger does not complain whether the FPGA is programmed or not.</a></p>
+<p><a href="#tcf27">Not able to connect to the board when <strong>Verbose</strong> mode is enabled in SDK XMD console.</a></p>
+<p><a href="#tcf28"><strong>Build Project</strong> and <strong>Clean Project</strong> context menu options are missing in new BSP projects.</a></p> 
+<h2>Frequently Asked Questions</h2>
+<p><a href="#tcf1">In which scenario I should use Xilinx TCF debugger, Xilinx C/C++ Debugger(XMD+GDB)?</a></p>
+<p><a href="#tcf20">TCF debugger by default starts at Application entry (main()). How can I tell TCF debugger to start at program entry?.</a></p>
+<p><a href="#tcf5">Global variables are not displayed with Xilinx Customized TCF debugger.</a></p>
+<p><a href="#tcf6">No support for Linux Application debug from Xilinx Customized debugger.</a></p>
+<p><a href="#tcf8">Cannot debug MicroBlaze applications using Xilinx Customized TCF debugger.</a></p>
+<p><a href="#tcf10">Cannot perform standalone profiling with Xilinx Customized TCF Debugger.</a></p>
+<p><a href="#tcf11">Cannot run application with the Xilinx Customized TCF Debugger using “Launch on Hardware (TCF)”.</a></p>
+<p><a href="#tcf14">Why is it that I cannot set more than 5 breakpoints/watchpoints with Xilinx TCF Debugger?</a></p>
+<p><a href="#tcf29">I have installed cable drivers in my system. But launching <strong>hw_server</strong> gives a "missing FTD2XX.dll" error message.</a></p>
+
+<h1>Known Issues and Limitations </h1>
+<hr>
+<h3><a name="tcf1">In which scenario I should use Xilinx TCF debugger, Xilinx C/C++ Debugger(XMD+GDB).</h3>
+<p> It is preferable to use Xilinx TCF debugger for debugging ARM applications and use Xilinx C/C++ Debugger (XMD+GDB) to debug Microblaze applications, if you are connected with “Digilent” cable.</p>
+<hr>
+<h3><a name="tcf2"></a> Debug Stack Trace is not showing automatically as with the Xilinx customized TCF Debugger.</h3>
+<p>Expand the tree and choose the correct processor core to see the debug stack trace.</p>
+<hr>
+<h3><a name="tcf3"></a> Cleaning/importing old BSP projects results in build error(or) Modifying the BSP settings does not compile automatically.</h3>
+<p>Workaround for this issue is to build all applications once again using <strong>Run > Build All</strong> or <strong>Ctrl+B</strong>. 
+<p> <strong>Note:</strong> BSP project that is created with the latest version of SDK will not have this problem.</p>
+<hr>
+<h3><a name="tcf7"></a> Automatic perspective switch from C/C++ to Debug perspective is not happening with Xilinx customized TCF debugger.</h3>
+<p>Workaround for this issue is to either:</p>
+<ul> <li>Go to <strong>Window > Preferences > Run/ Debug > Perspectives > Open the associated perspective when launching > Always</strong><br>
+</li>
+<li> Manually switch from C/C++ to Debug perspective by clicking <strong>Window > Open Perspective > Debug</strong>.</p> </li>
+</li></ul>
+<hr><h3><a name="tcf2"></a> Debug stack trace is not showing automatically as shown below with Xilinx customized TCF debugger.</p></h3>
+<p>Expand the tree and choose the correct processor Core to see the debug stack trace.</p>
+<hr>
+<h3><a name="tcf13"></a> Watchpoints that are set from the Outline View are not working with Xilinx customized TCF debugger.</h3>
+<p> Set watch points either from editor (Right-click on a <strong>variable > Add Watchpoint</strong>) or from Breakpoints view.</p>
+<h3></h3>
+<p></p>
+<hr>
+<h3><a name="tcf15"></a> Global variables are not displayed with Xilinx Customized TCF debugger.</h3>
+<p> Hover the mouse on the global variable to see the value of the global variable or use Xilinx Standard debugger (XMD) to see the global variables values.</p>
+<h3></h3>
+<p></p>
+<hr>
+<h3><a name="tcf16"></a> No support for Linux Application debug from Xilinx Customized debugger.<br>
+</h3>
+<p>Use Remote ARM Linux Application configuration to debug Linux Applications.</p>
+<hr>
+<h3><a name="tcf17"></a> Deleting the last debugged application immediately (using Xilinx Customized TCF Debugger) using the <strong>Delete Project contents on disk</strong> option, causes an exception. </h3>
+<p>Workaround for this issue is to wait for 4 seconds after debugging, then try deleting the application.</p>
+<hr>
+<h3><a name="tcf18"></a> Cannot debug MicroBlaze applications using Xilinx Customized TCF debugger.</h3>
+<p> Use Xilinx Standard debugger to debug the Microbalze applications.</p>
+<hr>
+<h3><a name="tcf20"></a> TCF debugger by default starts at Application entry (main()).</h3>
+<p> To start debugging from program entry, check the <strong>Stop at program entry</strong> checkbox in the debug configuration.</p<hr>
+<h3><a name="tcf22"></a> Some of the variables listed in the Variables view do not show their values.</h3>
+<p>This is a known issue.</p>
+<hr>
+<h3><a name="tcf25"></a> FPGA need to program again after System Reset.</h3>
+<hr><h1>Frequently Asked Questions </h1>
+<hr>
+<h3><a name="tcf4"></a> Changing cable type in “Configure JTAG Settings” dialog box is prompting to terminate any active XMD-GDB debug sessions. </h3>
+<p>As XMD supports one cable type at a time, it is required to terminate any active launches.</p>
+<hr>
+<h3><a name="tcf5"></a> Global variables are not displayed with Xilinx Customized TCF debugger.</h3>
+<p> Hover the mouse on the global variable to see the value of the global variable or use Xilinx Standard debugger (XMD) to see the global variables values.</p>
+<hr>
+<h3><a name="tcf6"></a> No support for Linux Application debug from Xilinx Customized debugger.</h3>
+<p> Use Remote ARM Linux Application configuration to debug Linux Applications.</p>
+<hr>
+<h3><a name="tcf8"></a> Cannot debug MicroBlaze applications using Xilinx Customized TCF debugger.</h3>
+<p> Use Xilinx Standard debugger to debug the MicroBlaze applications. </p>
+<hr>
+<h3><a name="tcf11"></a> Cannot perform standalone profiling with Xilinx Customized TCF Debugger.</h3>
+<p> Use Xilinx Standard debugger to profile the Standalone applications.</p>
+<hr>
+<h3><a name="tcf21"></a> Compilation happens properly but screen shows red marks indicating as if it failed due to errors.</h3>
+<p>CDT static code analysis is run on your source code by default. Some of the code analysis issues are reported as errors by default. You can switch Code Analysis Severity to <strong>Info</strong> from <strong>Error</strong> by going to <strong>Window > Preferences > C/C++ > Code Analysis</strong>.</p>
+<h3><a name="tcf10"></a> Cannot perform standalone profiling with Xilinx Customized TCF Debugger.</h3>
+<p>Use Xilinx Standard debugger to profile the Standalone applications.</p>
+<hr>
+<h3><a name="tcf14"></a> Why is it that I cannot set more than 5 breakpoints/watchpoints with the TCF Debugger?</h3>
+<p> Internally a breakpoint/watchpoint planted by user is treated as Hardware breakpoints in TCF debugger. For ARM there is a limitation of 6 Hardware breakpoints. Out of 6, one breakpoint is used for the single stepping, other breakpoint is used for stopping at main(). So users are left with four breakpoints. Software breakpoints (No limitation on number of breakpoints) support will be added in next release.</p>
+<hr>
+<h3><a name="tcf19"></a> Cannot perform standalone profiling with Xilinx Customized TCF Debugger.</h3>
+<p> Use Xilinx Standard debugger to profile the Standalone applications.</p>
+<hr>
+<h3><a name="tcf23"></a> Debug after re-launch does not stop on breakpoints.</h3>
+<p>SDK does processor reset on every debug session. The Interrupt Controller is not reset during Processor reset. Change the reset type to <strong>System Reset</strong> in the Device Initialization tab of debug configuration.</p>
+<hr>
+<h3><a name="tcf24"></a> Not able to view the ps7 peripheral registers in TCF debugger.</h3>
+<p>By default these registers are not shown. Set an environment variable, HW_SERVER_ALLOW_PL_ACCESS, in the command prompt, then launch the hw_server.</p>
+<hr>
+<h3><a name="tcf25"></a> FPGA need to program again after System Reset.</h3> 
+<p>This is a change introduced with the latest silicon versions. If you are debugging PS+PL design and have the <strong>Reset Entire System</strong> option in the debug configuration, perform program FPGA when the debugger stops at application <code>main()</code>.</p>
+<hr>
+<h3><a name="tcf26"></a> Xilinx TCF debugger does not complain whether the FPGA is programmed or not. </h3> 
+<p>This is a known issue.</p>
+<hr>
+<h3><a name="tcf27"></a> Not able to connect to the board when <strong>Verbose</strong> mode is enabled in SDK XMD console.</h3> 
+<p>Turn off <strong>verbose</strong> mode in SDK XMD console.</p>
+<hr>
+<h3><a name="tcf28"></a><strong> Build Project</strong> and <strong>Clean Project</strong> context menu options are missing for new BSP projects.</h3> 
+<p>BSP projects uses <strong>Makebuilder</strong> to build BSP applications. When the <strong>Project > Build Automatically</strong> option is set, both <strong>Build Project</strong> and <strong>Clean Project</strong> are not visible, but any changes made to the BSP project triggers an auto-build. To see these context menu options for a BSP project, unset the <strong>Project > Build Automatically</strong> option.</p>
+<hr>
+<h3><a name="tcf29"></a> I have installed cable drivers in my system. But launching <strong>hw_server</strong> gives a "missing FTD2XX.dll" error message.</h3>
+<p>If you never plugin the digilent cable, you can run into this issue. Plug-in the digilent cable; this copies the required libraries.</p>
+
+<p> <img height="21" alt="Related tasks" src="../images/ngtasks.gif" width="143" border="0"><br>
+    <a href="../tasks/sdk_tcf_debugging.htm">SDK TCF Debugger</a></p>
+
+<p><font color="#800000" face="Times New Roman">Copyright 1995-2013 Xilinx, Inc. All rights reserved.</font></p>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+<head><meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="Content-Language" content="en-us">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <title>Configure JTAG Settings</title>
+  <link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+<body>
+<h1>Configure JTAG Settings dialog box </h1>
+<HR>
+<p>In the Configure JTAG Settings dialog box, specify the JTAG cable to use for communication and 
+  the&nbsp;JTAG Device Chain information for the board.<br>To open the
+  Configure JTAG Settings dialog box, select <strong>Xilinx Tools &gt; Configure JTAG Settings</strong>. </p>
+<p align=justify><IMG src="../images/sdk_configure_jtag.png" ></p>
+<p>The Configure JTAG Settings dialog box contains the following functions.</p>
+<table border="1" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>Name</th>
+      <th>Function</th>
+    </tr>
+    <tr>
+      <td><b>  
+       JTAG Cable</b></td>
+      <td>  Specify the JTAG Cable settings.</td>
+    </tr>
+  <TR>
+    <TD>
+      <BLOCKQUOTE dir=ltr style="MARGIN-RIGHT: 0px">
+        <P><STRONG>Type</STRONG></P></BLOCKQUOTE></TD>
+    <TD>Specify the Cable type. The default is "auto".</TD>
+  </TR>
+  <TR>
+    <TD>
+      <BLOCKQUOTE dir=ltr style="MARGIN-RIGHT: 0px">
+        <P><STRONG>Port</STRONG></P></BLOCKQUOTE></TD>
+    <TD>Specify the port on the host machine where the cable is 
+connected.</TD>
+  </TR>
+  <TR>
+    <TD>
+      <BLOCKQUOTE dir=ltr style="MARGIN-RIGHT: 0px">
+        <P><STRONG>Frequency</STRONG></P></BLOCKQUOTE></TD>
+    <TD>Specify the frequency to run the cable.</TD>
+  </TR>
+  <TR>
+    <TD>
+      <BLOCKQUOTE dir=ltr style="MARGIN-RIGHT: 0px">
+        <P><STRONG>Other Options</STRONG></P></BLOCKQUOTE></TD>
+    <TD><p>Specify the cable name and arguments for third party cable
+      types in this field. Specify the full cable option:<br> 
+      <strong>(-cable type xilinx_plugin
+      modulename &lt;cable name&gt; {modulearg &lt;cable args&gt;}</strong></p>
+      </TD>
+  </TR>
+  <tr>
+    <td><strong>  
+       JTAG Device Chain</strong></td>
+    <td>        Specify the JTAG Device chain information for the 
+    board.</td>
+  </tr>
+  <TR>
+    <TD><STRONG>Automatically Discover Devices on JTAG Chain</STRONG></TD>
+    <TD>Use this option for SDK to automatically detect the devices in the 
+      chain. This is recommended for most users.</TD>
+  </TR>
+  <TR>
+    <TD><STRONG>Maunal Configuration</STRONG></TD>
+    <TD>Use this option if the auto-discover failed.</TD>
+  </TR>
+  <TR>
+    <TD>
+      <BLOCKQUOTE dir=ltr style="MARGIN-RIGHT: 0px">
+        <P><STRONG>FPGA?</STRONG></P></BLOCKQUOTE></TD>
+    <TD>Specify the FPGA device for communication by SDK.</TD>
+  </TR>
+  <TR>
+    <TD>
+      <BLOCKQUOTE dir=ltr style="MARGIN-RIGHT: 0px">
+        <P><STRONG>Device Name</STRONG></P></BLOCKQUOTE></TD>
+    <TD>Name of the Device.</TD>
+  </TR>
+  <TR>
+    <TD>
+      <BLOCKQUOTE dir=ltr style="MARGIN-RIGHT: 0px">
+        <P><STRONG>ID Code</STRONG></P></BLOCKQUOTE></TD>
+    <TD>The JTAG ID code of the device.</TD>
+  </TR>
+  <TR>
+    <TD>
+      <BLOCKQUOTE dir=ltr style="MARGIN-RIGHT: 0px">
+        <P><STRONG>IR Length</STRONG></P></BLOCKQUOTE></TD>
+    <TD>The JTAG IR Length of the device.</TD>
+  </TR>
+  <tr>
+    <td><strong> Add/Delete/Move Up/Down</strong></td>
+    <td>Use these options to specify the devices in the chain.</td>
+  </tr>
+  </tbody>
+</table>
+<p><IMG height=21 alt="Related concepts" src="../images/ngconcepts.gif" width=143 border=0><br>
+<A href="../concepts/sdk_c_jtag.htm">JTAG settings</a><br>
+<A href="../concepts/sdk_c_hwcomponents.htm">Embedded hardware components</a><br>
+<A href="../concepts/sdk_c_program_flash.htm">Programming parallel Flash overview</a></p>
+
+<p><IMG height=21 alt="Related tasks" src="../images/ngtasks.gif" width=143 border=0><br>
+<A href="../tasks/sdk_t_configure_jtag.htm">Configuring the JTAG settings</a><br>
+<A href="../tasks/sdk_t_configure_fpga.htm">Programming the FPGA</a><br>
+<A href="../tasks/sdk_t_program_flash.htm">Programming parallel Flash memory</a><br>
+<A href="../tasks/sdk_o_debug.htm">Debugging a program</a></p>
+
+<p>
+<font face="Times New Roman" color="#800000">Copyright © 1995-2013 Xilinx, Inc. All rights reserved.</font><br>
+</p>
+</body>
+</html>

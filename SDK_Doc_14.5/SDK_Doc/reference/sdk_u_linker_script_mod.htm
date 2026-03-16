@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+<head><meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="Content-Language" content="en-us">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <title>Modifying Linker Scripts</title>
+  <link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+<body>
+<h1>Modifying a Linker Script</h1>
+
+<p>
+Once a linker script is generated, there are multiple ways in which it can be updated.
+<ul>
+<li> You can open the linker script using a text editor, and directly edit the linker script.
+Right click on the linker script and select "Open With -> Text Editor" to do so. </li>
+<li> You can regenerate the linker script with different settings using the linker script generator. </li>
+<li> You can use the linker script editor to make modifications. To do this, simply double click on the linker
+script and the custom linker script editor will display relevant sections of the linker script.</li> 
+</ul>
+</p>
+
+<p>
+<img src="../images/modify_lscript.png" />
+</p>
+
+<p>
+The linker script editor provides the following functionality.
+<table border="1" cellspacing="0">
+  <tbody>
+    <tr>
+      <th width="232">Name</th>
+      <th width="819">Function</th>
+    </tr>
+
+    <tr>
+      <td><strong>Available Memory Regions</strong></td>
+      <td>This section lists the memory regions specified in the linker script. You can add a new 
+          region by clicking on the Add button to the right. You can modify the name, base address
+          and size of each defined memory region.</td>
+    </tr>
+    
+    <tr>
+      <td><strong>Stack and Heap Sizes</strong></td>
+      <td>This section displays the sizes of the stack and heap sections. Simply edit the value
+      in the text box to update the sizes for these sections.</td>
+    </tr>
+    
+    <tr>
+      <td><strong>Section to Memory Region Mapping</strong></td>
+      <td>This section provides a way to change the assigned memory region for any section defined
+      in the linker script. To change the assigned memory region, simply click on the memory region
+      to bring a drop down menu from which an alternative memory region can be selected.</td>
+    </tr>
+    
+  </tbody>
+</table>
+</p>
+<p><IMG height=21 alt="Related concepts" src="../images/ngconcepts.gif" width=143 border=0><br>
+<A href="../concepts/sdk_c_build.htm#linkerscripts">Linker scripts</A></p>
+<p><IMG height=21 alt="Related tasks" src="../images/ngtasks.gif" width=143 border=0><br>
+<A href="../tasks/sdk_t_create_lscript.htm">Creating a linker script</A><br>
+<A href="../tasks/sdk_t_create_lscript.htm#specify_linkerscripts">Adding the linker script manually</A></p>
+<p><font face="Times New Roman" color="#800000">Copyright © 1995-2013 Xilinx, Inc. All rights reserved.</font><br>
+</p>
+</body>
+</html>
