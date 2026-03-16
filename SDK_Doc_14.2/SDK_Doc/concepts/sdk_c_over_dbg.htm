@@ -1,0 +1,72 @@
+<html xmlns="http://www.w3.org/TR/REC-html40">
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<title>Debug overview</title>
+<link rel=Stylesheet type="text/css" media=all href="../help.css">
+
+<meta http-equiv=Content-Language content=en-us>
+</head>
+<body bgcolor=#FFFFFF lang=EN-US link="#006699" vlink="#996699">
+  <h1><span lang=EN>Debug overview</span></h1>
+  <HR>
+  <p><span lang=EN>With the SDK debugger, you can see what is happening to a program while it executes. You can set breakpoints or watchpoints to stop the processor, step through program execution, view the program variables and stack, and view the contents of the memory in the system.
+    
+    The SDK debugger uses the GNU Debugger (<strong>GDB</strong>) with Xilinx&reg; Microprocessor Debugger (<strong>XMD</strong>) as the underlying debug engine. It translates each user interface action into a
+    sequence of GDB commands and processes the output from GDB to display the
+    current state of the program being debugged. It communicates to the processor
+    on the hardware and ISS target using XMD. </span></p>
+  <p><span lang=EN>The debug workflow is described in the following diagram:</span></p>
+  <p align="left"><img src="../images/x11042.gif" alt="SDK Debug Overflow" width="369" height="304"></p>
+  <p>The workflow is made up of the following components: </p>
+  <ul>
+    <li><strong>Executable ELF File</strong>: <span lang=EN>To debug your
+        application, you must use an Executable and Linkable Format (ELF) file compiled for debugging. The debug ELF
+        file contains additional debug information for the debugger to make direct
+        associations between the source code and the binaries generated from that
+        original source.</span> Refer to <a href="sdk_c_build.htm#buildconf">Build configurations</a> for more information.</li>
+    <li><strong>Debug Configuration</strong>: In order to launch the debug session, you must create a debug configuration in SDK. This configuration captures  options required to start a debug session, including the executable name, processor target to debug, and other information. Refer to <a href="sdk_c_debug_run_configuration.htm">Debug/Run configuration</a> for more information.</li>
+    <li><strong>JTAG Settings</strong>: When debugging the program on a hardware target, SDK uses XMD for communication to the processor using a JTAG interface on the board. The JTAG settings for the debug session can be specified in the JTAG Settings dialog box. In most cases, the debugger can automatically detect the JTAG settings and do not need to provide special settings. Refer to <a href="sdk_c_jtag.htm">JTAG settings</a> for more information.</li>
+    <li><strong>SDK Debug Perspective</strong>: Using the Debug perspective, you can manage the debugging or running of a program 
+      in the Workbench. You can control the execution of your program by setting 
+      breakpoints, suspending launched programs, stepping through your code, and 
+      examining the contents of variables. Refer to <a href="sdk_c_debug_perspective.htm">Debug Perspective</a> for more information.</li>
+  </ul>
+  <p>You can repeat the cycle of modifying the code, building the executable, and debugging the program in SDK.</p>
+  <p><b><span lang=EN>Note:</span></b><span lang=EN> If you edit the source after compiling, the
+    line numbering will be out of step because the debug information is tied directly
+    to the source. Similarly, debugging optimized binaries can also cause
+  unexpected jumps in the execution trace.</span></p>
+  <h3>Hardware debug target</h3>
+  <p>SDK supports debugging of a program on processor running on a FPGA. All processor architectures (MicroBlaze&#8482;, PowerPC&reg; 405,  PowerPC 440, and ARM Cortex A9 processors) are supported. SDK communicates to the processor on the FPGA over the JTAG interface using the Xilinx JTAG cable. Before you debug the processor on the FPGA, you should configure the FPGA with the appropriate system bitstream. Refer to <a href="sdk_o_hw_target.htm">Xilinx embedded hardware</a> for more information.</p>
+  <p>The debug logic for each processor  enables program debugging by controlling the processor execution. The debug logic on <em>hard </em>PowerPC processor cores is built in and always available for debugging. However, the debug logic on <em>soft </em>MicroBlaze processor cores is configurable and can be enabled or disabled by the hardware designer when building the embedded hardware.</p>
+  <p>Enabling the debug logic on MicroBlaze processors provides
+  advanced debugging capabilities such as hardware breakpoints,
+  read/write memory watchpoints, safe-mode debugging, and more
+  visibility into MicroBlaze processors. This is the <b>recommended
+  method</b> of debugging MicroBlaze software. 
+  </p>
+  <p>If the debug logic is disabled on the hardware, you can debug programs using XMDStub (a
+  ROM monitor). XMDStub is a small debug stub that runs on MicroBlaze
+  processors and can perform basic debug operations such as reading and
+  writing memory and register values and controlling the program
+  execution. It should be initialized to the processor local memory at
+  the reset location, so when the processor resets, the XMDStub is run
+  and ready for debugging. It communicates to XMD over a Universal
+  Asynchronous Receiver-Transmitter (UART), which could be JTAG-based
+  or RS232-based. This method is not supported in SDK and you should
+  use the XMD command-line tool for debugging</p>
+  <p><span lang=EN><img width=143 height=21
+id="_x0000_i1025" src="../images/ngconcepts.gif" alt="Related concepts"
+border=0><br>
+      <a href="sdk_c_build.htm#buildconf">Build configurations</a><br>
+      <a href="sdk_c_debug_run_configuration.htm">Debug/Run configurations</a><br>
+      <a href="sdk_c_jtag.htm">JTAG settings</a><br>
+    <a href="sdk_c_debug_perspective.htm">Debug Perspective</a> <br>
+    <a href="sdk_c_adv_debug.htm">Advanced debug concepts</a> </span></p>
+  <p><span lang=EN><img border=0 width=143
+height=21 id="_x0000_i1026" src="../images/ngtasks.gif" alt="Related tasks"><br>
+    <a href="../tasks/sdk_o_debug.htm">Debugging a program</a></span></p>
+
+  <p><font face="Times New Roman" color="#800000">Copyright © 1995-2012 Xilinx, Inc. All rights reserved.</font></p>
+</body>
+</html>
