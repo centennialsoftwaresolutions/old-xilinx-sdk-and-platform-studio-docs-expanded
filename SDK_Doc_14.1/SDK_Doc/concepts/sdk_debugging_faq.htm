@@ -1,0 +1,90 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Frequently asked questions about debugging and target connection</title>
+<link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+
+<body bgcolor=white lang=EN-US link="#006699" vlink="#996699">
+<h1>Frequently asked questions about debugging and target connection</h1>
+<hr>
+<p><a href="#reg">How can I set the register display format so that it defaults to &quot;Hexadecimal&quot;?</a> </p>
+<p><a href="#debugapp">Can I debug more than one application at the same time?</a> </p>
+<p><a href="#large_elf">I have a large ELF application file to debug, and SDK seems to time out when I
+am downloading the ELF file. How can I increase the time-out&nbsp;period?</a></p>
+<p><a href="#remote_debug">I have my board connected on one machine, and I would like to debug my application using SDK running on another machine. How to I set up the Launch Configuration to perform this remote debug operation?</a></p>
+<p><a href="#debug_ELF">I  want to debug an ELF file using SDK without creating a C/C++ Project. How do I do   that?</a></p>
+<p><a href="#dl_data_files">During Debugging (or Running) the application, I would like to download my data files along with my application's ELF file. How do I do this?</a></p>
+<p><a href="#reset">How do I specify the Reset options to be used when a Debug (or Run) session is launched? </a></p>
+<p><a href="#program_size">Why are program section sizes reported by Linker Script Generator IDE different from one's reported after program build?</a></p>
+
+<hr>
+<h3><a name="reg"></a>How can I set the register display format so that it defaults to &quot;Hexadecimal&quot;?</h3>
+<p>To change the default register format: </p>
+  <ol style="margin-bottom: 12.0pt">
+    <li>Select <strong>Window &gt; Preferences</strong>. </li>
+    <li>Open the tree for <strong>C/C++</strong> in the list on the left-hand side.</li>
+    <li>Click <strong>Debug</strong> in the expanded tree.</li>
+    <li>In the <strong>Default Register Format</strong> drop-down list, select <strong>Hexadecimal</strong>.</li>
+  </ol>
+  <hr>
+  <h3><a name="debugapp"></a>Can I debug more than one application at the
+same&nbsp;time?</h3>
+  <p>The SDK Target Manager supports debugging of multiple independent targets. For example, you can debug a processor debug session and a simulation session simultaneously. However, sessions with potential conflicts are not allowed, such as when a similar session is already active.</p>
+  <hr>
+  <h3><a name="large_elf"></a>I have a large ELF application file to debug, and
+    SDK seems to time out when I am downloading the ELF file. How can I increase
+the time-out&nbsp;period?</h3>
+  <p>For information about this, refer to <a href="http://www.xilinx.com/xlnx/xil_ans_display.jsp?getPagePath=20653">Xilinx Answer Record #20653</a>.</p>
+  <hr>
+  <h3><a name="remote_debug" id="remote_debug"></a>I have my board connected on one machine, and I would like to debug my application using SDK running on another machine. How do I set up the Launch Configuration to perform this remote debug operation?</h3>
+  <p>You can do this by specifying the remote machine's access information in the Debug Launch Configuration dialog box. Note that this requires that the XMD Agent is already running on the remote machine. </p>
+  <p><strong class="notetitle">Note</strong> This option is only supported when debugging an application on a remote machine. This does not support running applications on the remote machine. </p>
+  <ol>
+    <li>Start XMD on the remote machine.
+	<ol>
+		<li type="a">Type the command to connect to the processor on which you want the executable to be debugged. For example, <span class="guibutton">connect mb mdm</span> or <span class="guibutton">connect ppc hw</span> or <span class="guibutton">connect arm hw</span>. </li>
+		<li type="a">When XMD connects to the processor, it will report that it has opened a gdbserver at a specific port. Make note of this port number, as you will use it in step 3.</li>
+	  </ol>
+    <li>In the SDK Debug Configuration dialog box, click the <strong>Remote Debug</strong> tab and select <strong>Connect to gdbserver on a different machine</strong>.</li>
+    <li>Specify the the remote machine's IP address (or type the machine name) and the <strong>Port</strong> number where the gdbserver is open, as determined in step 1b.</li>
+    <li>Click <strong>Debug</strong> to start the Remote Debug session.</li>
+  </ol>
+  <hr>
+  <h3> <a name="debug_ELF"></a>I want to debug an ELF file using SDK without creating a C/C++ Project. How do I   do that?</h3>
+<p>    SDK allows creation of projects that contain an ELF file. With a few   manual steps, this allows debugging of the ELF file without having to do other steps, such as specifying   the hardware platform, creating a BSP, and creating an C/C++ project. The steps   to follow are:</p>
+  <ol>
+    <li>  Select <strong>File &gt; Import &gt; C/C++ &gt; C/C++ Executable</strong>.</li>
+    <li>Navigate to the ELF file that you want to debug.</li>
+    <li>Choose the appropriate binary   parser (such as MicroBlaze,  PowerPC, or ARM). Then allow the wizard to create a new project   with this ELF file.</li>
+    <li>Do not select the option to create a debug configuration   (this will create a C/C++ debug configuration, whereas we need a Xilinx C/C++   configuration).</li>
+    <li>Create a Xilinx C/C++ Debug configuration. For this   project, the only tab that is valid is the Remote Debug options tab. Specify the   gdbserver port and hostname. See the previous question  for more information about Remote Debug.</li>
+    <li>Click <strong>debug </strong>to start debugging the ELF file. </li>
+  </ol>
+  <hr>
+  <h3><a name="dl_data_files" id="dl_data_files"></a>During Debugging (or Running) the application, I would like to download my data files along with my application's ELF file. How do I do this?</h3>
+  <p>To do this, specify the data file information in the Initialization tab of the Debug Launch Configuration dialog box.</p>
+  <hr>
+  <h3><a name="reset"></a>How do I specify the Reset options to be used when a Debug (or Run) session is launched?</h3>
+  <p>You can specify the Reset options  in the Initialization tab of the Debug Launch Configuration dialog box. The following options can be specified:</p>
+  <ul>
+    <li>System reset: To reset the entire system</li>
+    <li>Processor reset: To reset a specific processor</li>
+    <li>No Reset: To not reset anything </li>
+  </ul>
+  
+  <hr>
+  <h3><a name="program_size" id="program_size"></a>Why are program section sizes reported by Linker Script Generator IDE different from those reported after program build?</h3>
+  <p>The linker script generator IDE displays info about each program section. So when it says .text is XX bytes long, the contents of that specific section are XX bytes long. The program section size reported after program build uses the (processor_arch)-size utility which uses the Berkeley style of reporting program statistics. So &quot;text&quot; in the -size report includes not only .text, but other program instructions. Similarly &quot;data&quot; includes.data, .rodata, and .sdata.<br>
+    <br>
+
+The linker script size report should be used when looking at things at more fine-grained level. The program size report is more coarse-grained and should be used to get high level statistics about the program</p>
+
+<p><font face="Times New Roman" color="#800000">Copyright 
+© 1995-2012 Xilinx, Inc. All rights 
+reserved.</font></p>
+</body>
+</html>

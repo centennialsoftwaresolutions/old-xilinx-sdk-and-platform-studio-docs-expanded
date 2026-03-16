@@ -1,0 +1,132 @@
+﻿<html xmlns="http://www.w3.org/TR/REC-html40">
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<title>Profile overview</title>
+<link rel=Stylesheet type="text/css" media=all href="../help.css">
+
+<meta http-equiv=Content-Language content=en-us>
+</head>
+<body bgcolor=#FFFFFF lang=EN-US link="#006699" vlink="#996699">
+<h1><span lang=EN>Profile overview</span></h1>
+<HR>
+<p>
+  In SDK, you can profile a program running on embedded hardware. The
+  Profiling feature is software-intrusive, and is based on the GNU gprof
+  tool. GNU gprof provides two kinds of information that you can use to
+  optimize the program:</p>
+<ul>
+  <li>A histogram with which you can identify the functions in the program that
+  take up the most execution time</li>
+  <li>A call graph that shows what functions called which other functions, and
+  how many times</li>
+</ul>
+<p>
+  For additional information about GNU gprof, refer to
+  <a href="http://sourceware.org/binutils/docs-2.18/gprof/index.html">http://sourceware.org/binutils/docs-2.18/gprof/index.html</a>.
+</p>
+<h2>How profiling works</h2>
+<p>
+  The execution flow of the program is altered so that gprof can obtain
+  data. Consequently, this method of profiling is considered
+  “software-intrusive”. The program flow is altered in two
+  ways:
+</p>
+<ul>
+  <li>To obtain histogram data, the program is periodically interrupted to
+  obtain a sample of its program counter location. This user-defined interval
+  is usually measured in milliseconds. The program counter location helps
+  identify which function was being executed at that particular sample. Taking
+  multiple samples over a long interval of a few seconds helps identify which
+  functions execute for the longest time in the program.</li>
+  <li>To obtain the call graph information, the compiler annotates every
+  function call to store the caller and callee information in a data
+  structure.</li>
+</ul>
+<p>
+  The profiling workflow is described in the following diagram:
+</p>
+<p align="left">
+  <img src="../images/x11041.gif" alt="SDK Profile Workflow" width="467"
+  height="437">
+</p>
+<h2><a name="SetupProfileHw"></a>Setting up the hardware for profiling</h2>
+<p>
+  To profile a software application, you must ensure that interrupts are raised
+  periodically to sample the program counter (PC) value. To do this, you must
+  program a timer and use the timer interrupt handler to collect and store the
+  PC. The profile interrupt handler requires full access to the timer, so a
+  separate timer that is not used by the application itself must be available
+  in the system.
+</p>
+<p>
+  Xilinx® profiling libraries that provide the profile interrupt handler
+  support the <span class="userinput">xps_timer</span> core. </p>
+<p>When profiling on
+    PowerPC® processors, the internal Programmable Interrupt Timer (PIT) can
+    also be used. Either one of these timers should be available for exclusive
+    use by the profile libraries. The timer interrupt signal is connected to the
+    processor either directly or through an interrupt controller.</p>
+<p>When profiling on Zynq&#8482; ARM processors, the internal SCU timer should be used.</p>
+<h2><a name="SetupProfileSw"></a>Setting up the software for profiling</h2>
+<p>
+  There are three important steps involved in setting up the software
+  application for profiling:
+</p>
+<ol>
+  <li>Enable profiling in the Software Platform to include profiling
+  libraries. Profiling is supported only for standalone software
+  platforms.</li>
+  <li>Modify the software application code to enable interrupts. If
+  the profile timer is directly connected to the processor without an interrupt
+  controller, you must enable interrupts in the processor. If there is an
+  interrupt controller present in the system, then in addition to enabling
+  interrupts in the processor, the interrupt controller should also be enabled
+  and allowed to pass interrupts from the profile timer to the processor.</li>
+  <li>Use an executable compiled for profiling (such as the <span
+  class="guilabel">-pg</span> compiler switch). You should use the profile
+  build configuration to build your application.</span> Refer to <a
+  href="sdk_c_build.htm#buildconf">Build configurations</a> for more
+  information.</li>
+</ol>
+<h2>Generating and viewing profile data</h2>
+<ol>
+  <li>To profile the application, you must create a <em>run configuration</em>
+  in SDK and provide options in the Profiler tab.  Refer to <a
+  href="sdk_c_debug_run_configuration.htm">Debug/Run configurations</a> and <a
+  href="sdk_c_profile_configuration.htm">Profile configuration</a> for more
+  information.</li>
+  <li>When profiling the program on a hardware target, SDK uses Xilinx
+  Microprocessor Debugger (XMD) for communication to the processor using a JTAG
+  interface on the board. The JTAG settings for the profile session can be
+  specified in the JTAG Settings dialog box. In most cases, SDK can
+  automatically detect the JTAG settings and does not require special
+  settings. Refer to <a href="sdk_c_jtag.htm">JTAG settings</a> for more
+  information.</li>
+  <li>The XMD <em>Run Console</em> allows you to stop the program
+  execution. When the program completes execution, the Profiler  automatically
+  stops the program, then reads the profile data and processes it. You can also
+  choose to stop program execution at any time.</li>
+  <li>The <em>Xilinx Profiler View</em> enables you
+  to visualize the statistics for the profiled program. To open
+  the Xilinx Profiler View, double-click the profile results data file in the Project Explorer view after the program execution
+  completes or stops. Refer to <a href="sdk_c_profiler_perspective.htm">Xilinx
+  Profiling view</a> for more information.</li>
+</ol>
+<h2><a name="ProfileTargets" id="ProfileTargets"></a>Supported profile targets</h2>
+<p>
+  SDK supports profiling the application on all processor architecture targets
+  running on a hardware board. As mentioned here, the hardware system should
+  have a timer interrupt for generating periodic sampling interrupts.</p>
+<p><span lang=EN>
+  <img width=143 height=21 id="_x0000_i1025" src="../images/ngconcepts.gif"
+  alt="Related concepts" border=0><br>
+  <a href="sdk_c_build.htm#buildconf">Build configurations</a><br>
+  <a href="sdk_c_debug_run_configuration.htm">Debug/Run  configurations</a><br>
+  <a href="sdk_c_jtag.htm">JTAG settings</a><br>
+  <a href="sdk_c_profile_configuration.htm">Profile configuration</a> <br>
+  <a href="sdk_c_profiler_perspective.htm">Xilinx Profiing view</a>
+</span></p>
+<p><font face="Times New Roman" color="#800000">Copyright © 1995-2012 Xilinx,
+  Inc. All rights reserved.</font></p>
+</body>
+</html>

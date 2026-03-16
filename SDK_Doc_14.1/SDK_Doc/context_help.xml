@@ -1,0 +1,95 @@
+<contexts>
+ <context id="new_hw_project_page" title="New Hardware Platform">
+    <description>Create a new hardware platform. See the following links for more information.</description>
+    <topic href="reference/sdk_u_hwspec.htm" label="New Hardware Platform"/>
+    <topic href="concepts/sdk_c_hwspec.htm" label="Concept: Hardware Platform Specification"/>
+    <topic href="tasks/sdk_t_hwspec.htm" label="Task: Importing Hardware Platform Specification"/>
+    <topic href="tasks/sdk_t_hwspec.htm#view_hardware_platform" label="Task: View Hardware Platform"/>
+    <topic href="tasks/sdk_t_hwspec.htm#view_report" label="Task: View Hardware Design Report"/>
+    <topic href="tasks/sdk_t_change_hwspec.htm" label="Task: Changing Hardware Specification File"/>
+ </context>
+ <context id="new_bsp_project_page" title="New Board Support Package">
+    <description>Create a new Board Support Package. See the following links for more information.</description>
+    <topic href="reference/sdk_u_new_bsp_internal.htm" label="New Board Support Package"/>
+    <topic href="reference/sdk_u_new_bsp_external.htm" label="Reference: New Board Support Package (External Tools)"/>
+    <topic href="concepts/sdk_c_bsp_internal.htm" label="Concept: Board Support Package (SDK)"/>
+    <topic href="concepts/sdk_c_bsp_external.htm" label="Concept: Board Support Package (External Tools)"/>
+    <topic href="tasks/sdk_t_create_bsp_internal.htm" label="Task: Creating a Board Support Package (SDK)"/>
+    <topic href="tasks/sdk_t_create_bsp_external.htm" label="Task: Creating a Board Support Package (External Tools)"/>
+    <topic href="tasks/sdk_t_config_bsp_internal.htm" label="Task: Configure a Board Support Package (SDK)"/>
+    <topic href="tasks/sdk_t_config_bsp_external.htm" label="Task: Configure a Board Support Package (External Tools)"/>
+    <topic href="tasks/sdk_t_view_bsp.htm" label="Task: View a Board Support Package"/>
+    <topic href="tasks/sdk_t_install_third_party_bsp.htm" label="Task: Installing Third-Party Software Components"/>
+    <topic href="tasks/sdk_t_build_bsp_internal.htm" label="Task: Building a BSP (SDK)"/>
+    <topic href="tasks/sdk_t_build_bsp_external.htm" label="Task: Generating a BSP (External Tools)"/>
+    <topic href="reference/sdk_u_configure_bsp_internal.htm" label="Reference: Configure a BSP (SDK)"/>
+    <topic href="reference/sdk_u_configure_bsp_external.htm" label="Reference: Configure a BSP (External Tools)"/>
+ </context>
+ <context id="new_app_page" title="Create New C/C++ Project for Xilinx Hardware Platform">
+    <description>New Xilinx C/C++ Application. See the following links for more information.</description>
+    <topic href="reference/sdk_u_new_proj_wiz_m_name.htm" label="New C/C++ Project"/>
+    <topic href="concepts/sdk_c_projects.htm" label="Concept: Software Applications"/>
+    <topic href="concepts/sdk_c_build.htm" label="Concept: Building Applications"/>
+    <topic href="concepts/sdk_o_dbg_concepts.htm" label="Concept: Debugging Applications"/>
+    <topic href="tasks/sdk_o_project_creation.htm" label="Task: Creating a Software project"/>
+ </context>
+ <context id="new_lscript_dialog" title="New Linker Script">
+    <description>Create a new linker script. See the following links for more information.</description>
+    <topic href="reference/sdk_u_linker_script.htm" label="New Linker Script"/>
+    <topic href="concepts/sdk_c_build.htm#linkerscripts" label="Concept: Linker Scripts"/>
+    <topic href="tasks/sdk_t_create_lscript.htm" label="Task: Creating Linker Scripts"/>
+ </context>
+ <context id="internal_bsp_settings_dialog" title="BSP Settings">
+    <description>Configure BSP Settings. See the following links for more information.</description>
+    <topic href="reference/sdk_u_configure_bsp_internal.htm" label="BSP Settings"/>
+    <topic href="concepts/sdk_c_bsp_internal.htm" label="Concept: Board Support Package (SDK)"/>
+    <topic href="tasks/sdk_t_create_bsp_internal.htm" label="Task: Creating a Board Support Package (SDK)"/>
+    <topic href="tasks/sdk_t_config_bsp_internal.htm" label="Task: Configure a Board Support Package (SDK)"/>
+    <topic href="tasks/sdk_t_view_bsp.htm" label="Task: View a Board Support Package"/>
+    <topic href="tasks/sdk_t_install_third_party_bsp.htm" label="Task: Installing Third-Party Software Components"/>
+    <topic href="tasks/sdk_t_build_bsp_internal.htm" label="Task: Building a BSP (SDK)"/>
+ </context>
+ <context id="external_bsp_settings_dialog" title="BSP Settings">
+    <description>Configure BSP Settings. See the following links for more information.</description>
+    <topic href="reference/sdk_u_configure_bsp_external.htm" label="BSP Settings"/>
+    <topic href="concepts/sdk_c_bsp_external.htm" label="Concept: Board Support Package (External Tools)"/>
+    <topic href="tasks/sdk_t_create_bsp_external.htm" label="Task: Creating a Board Support Package (External Tools)"/>
+    <topic href="tasks/sdk_t_config_bsp_external.htm" label="Task: Configure a Board Support Package (External Tools)"/>
+    <topic href="tasks/sdk_t_view_bsp.htm" label="Task: View a Board Support Package"/>
+    <topic href="tasks/sdk_t_install_third_party_bsp.htm" label="Task: Installing Third-Party Software Components"/>
+    <topic href="tasks/sdk_t_build_bsp_external.htm" label="Task: Generating a BSP (External Tools)"/>
+    <topic href="reference/sdk_u_configure_bsp_external.htm" label="Reference: Configure a BSP (External Tools)"/>
+ </context>
+ <context id="sysgen_codebug_settings" title="System Generator Co-Debug Settings Dialog">
+    <description>System Generator Co-Debug Settings Dialog. See the following links for more information.</description>
+    <topic href="reference/sdk_u_sysgen_codebug.htm" label="System Generator Co-Debug Settings Dialog"/>
+ </context>
+ <context id="program_flash" title="Program Flash Memory">
+    <description>Program Flash Memory. See the following links for more information.</description>
+    <topic href="reference/sdk_u_program_flash.htm" label="Program Flash Memory Reference"/>
+    <topic href="concepts/sdk_c_program_flash.htm" label="Concept: Programming Flash"/>
+    <topic href="tasks/sdk_t_program_flash.htm" label="Task: Programming Flash"/>
+ </context>
+ <context id="program_fpga" title="Program FPGA">
+	<description>Use this dialog to configure your FPGA with a bitstream. See the following links for more information.</description>
+	<topic href="reference/sdk_u_program_fpga.htm" label="Program FPGA Reference"/>
+	<topic href="tasks/sdk_t_configure_fpga.htm" label="Task: Programming the FPGA"/>
+ </context>
+ <context id="config_jtag" title="Configure JTAG Cable Settings">
+    <description>Configure JTAG Cable Settings. See the following links for more information.</description>
+    <topic href="concepts/sdk_c_jtag.htm" label="Configure JTAG Cable Settings"/>
+    <topic href="tasks/sdk_t_configure_jtag.htm" label="Task: Configuring the JTAG Settings"/>
+ </context>
+ <context id="changehwspec">
+    <description>Change Hardware Specification associated with a Hardware Platform. See the following links for more information.</description>
+    <topic href="reference/sdk_u_hwspec.htm" label="Change Hardware Specification Dialog"/>
+    <topic href="tasks/sdk_t_change_hwspec.htm" label="Task: Changing Hardware Specification File"/>
+    <topic href="reference/sdk_u_hwspec_diff.htm" label="Reference: Hardware Design Changes Page"/>
+ </context>
+ <context id="swrepos">
+    <description>Modify Software Repositories known to SDK. See the following links for more information.</description>
+    <topic href="reference/sdk_u_sw_repos.htm" label="Software Repositories Reference"/>
+    <topic href="concepts/sdk_c_repos.htm" label="Concept: Software Repositories"/>
+    <topic href="tasks/sdk_t_repos.htm" label="Task: Setting up Software Repositories"/>
+ </context>
+</contexts>

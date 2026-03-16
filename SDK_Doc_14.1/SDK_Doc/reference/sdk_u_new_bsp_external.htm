@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+<head><meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="Content-Language" content="en-us">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <title>New Board Support Package (External Tools)</title>
+  <link rel="stylesheet" type="text/css" href="../help.css">
+  <script language="JavaScript">
+function changeSize(theImage,wd,ht) {
+	wdth=parseInt(theImage.style.width); hght=parseInt(theImage.style.height);
+	if ( !(wdth==(wd*2)) ) {wdth=wd*2; hght=ht*2;}
+	else {wdth=wd;hght=ht;}
+	theImage.style.width=wdth; theImage.style.height=hght;
+}
+  </script></head>
+<body>
+<h1>New Board Support Package (External Tools) Project dialog box </h1>
+<HR>
+<p>In the New Board Support Package Project dialog box, you can create a new board support package project for external tools. To open this page, select <strong>File &gt; New &gt; Xilinx Board Support Package</strong>.</p>
+<p>Select a name for the project, the CPU processor, and the Board Support Package OS type. You can use the default location, or specify a path for
+  your project by deselecting the <b>Use default location</b> checkbox
+  and typing the new path in the <b>Location</b> field .</p>
+<p><img src="../images/new_bsp_external.png"></p>
+<p>The New Board Support Package Project page contains the following items:
+<table border="1" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>Name</th>
+      <th>Function</th>
+    </tr>
+    <tr>
+      <td><b>Name</b></td>
+      <td>Specify a name for the  project.</td>
+    </tr>
+    <tr>
+      <td><b>Use default location</b></td>
+      <td>When this check box is selected, SDK creates the new project in the default
+workspace location.</td>
+    </tr>
+    <tr>
+      <td><b>Location</b></td>
+      <td>If <b>Use default location</b> is not selected, specify
+the location where the project is to be created.</td>
+    </tr>
+  <tr>
+    <td><strong>Hardware Specification</strong></td>
+    <td> Specify the hardware platform specification file if it has not been
+    defined.</td>
+  </tr>
+  <tr>
+    <td><strong>CPU</strong></td>
+    <td> Select the processor for which you want to build the 
+    BSP.</td>
+  </tr>
+  <tr>
+    <td><strong>Board Support 
+      Package OS </strong></td>
+    <td>Select the BSP type from the  available BSPs for the processor.</td>
+  </tr>
+  </tbody>
+</table>
+<p><img height="21" alt="Related concepts" src="../images/ngconcepts.gif" width="143" border="0"><br>
+<a href="../concepts/sdk_c_bsp_external.htm">Board support packages (external tools)</a></p>
+<p><img height="21" alt="Related tasks" src="../images/ngtasks.gif" width="143" border="0"><br>
+<a href="../tasks/sdk_t_create_bsp_external.htm">Creating a board support package (external tools)</a></p>
+<p><img height="21" alt="Related reference" src="../images/ngref.gif" width="143" border="0"><br>
+<a href="sdk_u_configure_bsp_external.htm">Configure a BSP project for external tools</a></p>
+<p>
+<font face="Times New Roman" color="#800000">Copyright © 1995-2012 Xilinx, Inc. All rights reserved.</font><br>
+</p>
+</body>
+</html>

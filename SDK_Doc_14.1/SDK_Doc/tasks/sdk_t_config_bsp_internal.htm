@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Configuring a board support package (SDK)</title>
+<link rel="stylesheet" type="text/css" href="../help.css"></head>
+<body>
+
+<h1>Configuring a board support package (SDK)</h1>
+<HR>
+<p>To configure an existing board support package project used to develop applications within SDK, do the following:
+<ol>
+<li>In either the <strong>Project Explorer</strong> or <strong>C/C++ Projects</strong> view, right-click on the board support package to configure.</li>
+<li>Select <b>Board Support Package Settings</b>. The Board Support Package Settings dialog box opens.<br>
+<strong>Note</strong>: You can also select <b>Xilinx Tools > Board Support Package Settings</b> to open this dialog box.</li>
+</ol>
+<p>The Board Support Package Settings dialog box consists of the following pages:
+<ul>
+<li><a href="#Overview">Overview</a></li>
+<li><a href="#BSP_Settings">Board Support Package Configuration</a></li>
+<li><a href="#Drivers">Drivers</a></li>
+<li><a href="#Driver_Config">Driver Configuration</a></li>
+</ul>
+
+<!-- BSP Overview page-->
+<h2><a name="Overview"></a>Using the Board Support Package Overview page </h2>
+<p>In the <b>Overview</b> page, you can configure basic settings for the OS Version and the Supported Libraries to be enabled in the platform.<br>
+<b> Note:</b> You cannot change the OS choice in this page, because the OS type is determined by the type you chose for the software platform when you created it.</p>
+<img src="../images/config_bsp_internal_overview.png"></p>
+
+<!--BSP Settings page-->
+<h2><a name="BSP_Settings"></a>Using the Board Support Package Settings page</h2>
+<p>In the <b>Board Support Package</b> settings page, you can configure parameters of the OS and its constituent libraries.</p>
+<img src="../images/config_bsp_internal_libs.png"></p>
+
+<!--Drivers page-->
+<h2><a name="Drivers"></a>Using the Drivers page</h2>
+<p>The <b>Drivers</b> page lists all the device drivers assigned for each peripheral in your system. You can select each peripheral and change its device driver assignment and its version. If you want to remove a driver for a peripheral, assign the driver to <i>none</i>.</p>
+ <p>Some device drivers export parameters that you can configure. If a driver in the driver list has parameters, it is listed in navigation pane on the left and you can configure them by clicking on the driver name.</p>
+<p><img src="../images/config_bsp_internal_drivers.png"></p>
+
+<!--Driver Config page-->
+<h2><a name="Driver_Config"></a>Using the Driver configuration page </h2>
+<p>The <b>Driver Configuration</b> page lists all of the configurable driver parameters. To change a parameter, click on the corresponding
+    <b>Value</b> field and type the new setting.</p>
+<p>When you finish with all the settings you want to make, click <b>OK</b> and SDK commits your changes.</p>
+<p>If the <b> Build Automatically</b> option is selected in the <strong>Project</strong> menu, SDK automatically rebuilds your software platform with your new settings applied.</p>
+  <p><strong>Note:</strong> The exact list of software components appearing in the Board Support Package Settings dialog box depends on the components available in the SDK install, as well as the list of components found in any software repositories that are set up in your workspace. For information about how software repositories work, refer to <a href="../concepts/sdk_c_repos.htm">Software repositories</a>.</p>
+  <p><img src="../images/config_bsp_internal_drivers_settings.png"></p>
+  <p><img height="21" alt="Related concepts" src="../images/ngconcepts.gif" width="143" border="0">
+  <br>
+  <a href="../concepts/sdk_c_bsp_internal.htm">Board support packages (SDK)</a> <br>
+  <a href="../concepts/sdk_c_repos.htm">Software repositories</a></p>
+  <p><img height="21" alt="Related tasks" src="../images/ngtasks.gif" width="143" border="0">
+  <br>
+  <a href="sdk_t_build_bsp_internal.htm">Building a board support package for SDK</a><br>
+  <a href="sdk_t_repos.htm">Setting up software repositories</a><br>
+  <a href="sdk_t_create_new_appln.htm">Creating a C or C++ project</a></p>
+<p><img height="21" alt="Related reference" src="../images/ngref.gif" width="143" border="0">
+  <br>
+<a href="../reference/sdk_u_configure_bsp_internal.htm">Board Support Package (SDK) Settings dialog box</a></p>
+  <p><font face="Times New Roman" color="#800000">Copyright © 1995-2012 Xilinx, Inc. All rights reserved.</font></p>
+</body>
+</html>

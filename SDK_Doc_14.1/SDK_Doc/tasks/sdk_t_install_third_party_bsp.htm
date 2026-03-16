@@ -1,0 +1,38 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Installing third party software Components</title>
+<link rel="stylesheet" type="text/css" href="../help.css"></head>
+<body>
+
+<h1>Installing third-party software components</h1>
+<hr>
+<p>
+  Third-party software components and board support packages (BSPs) typically need to be installed (copied) into a
+software repository of your choice.</p>
+<p>For example:</p>
+<blockquote>
+  <p>Assume that you want to install a custom board support package called my_sw_platform_v1_00_a, and that your  software repository is located in <code>/home/sdk/sw_repos/dvi_demo_repository</code>. </p>
+  <p>In this case, you create  a library directory under your repository directory, such as <code>/home/sdk/sw_repos/dvi_demo_repository/demo_library</code>.</p>
+  <p>You then paste your custom board support package files into <code>/home/sdk/sw_repos/dvi_demo_repository/demo_library/bsp/my_sw_platform_v1_00_a</code>. For information on how software  repositories must be structured, refer to <a href="../concepts/sdk_c_repos.htm">Software repositories</a>.</p>
+  <p>Finally, you must  configure your SDK workspace to recognize the new repository. To do this, add the path to the library <code>/home/sdk/sw_repos/dvi_demo_repository/demo_library</code> to the Software Repositories list  maintained by SDK for your workspace. </p>
+<p>
+<strong>Note</strong>: SDK 12.1 performs searches using lists of library paths. Although a repository search patch can be accepted for backward compatibility, this usage is not recommended.
+</p>
+</blockquote>
+<p> For information about adding repositories to
+your workspace, refer to <a href="sdk_t_repos.htm">Setting up software repositories</a>. </p>
+<p><img border="0" src="../images/ngconcepts.gif" ALT="Related concepts" width="143" height="21">
+  <br>
+  <a href="../concepts/sdk_c_repos.htm">Software repositories</a></p>
+<p><img border="0" src="../images/ngtasks.gif" ALT="Related tasks" width="143"
+        height="21">
+  <br>
+<a href="sdk_t_repos.htm">Setting up software repositories</a></p>
+
+<p><font face="Times New Roman" color="#800000">Copyright © 1995-2012 Xilinx, Inc. All rights reserved.</font></p>
+</body>
+</html>

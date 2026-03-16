@@ -1,0 +1,30 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+
+<head><meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Advanced debug concepts</title>
+<link rel="stylesheet" type="text/css" href="../help.css"></head>
+
+<body>
+<h1>Advanced debug concepts</h1>
+<HR>
+<h2>Breakpoints</h2>
+<p>A breakpoint suspends the execution of a program at the location where the breakpoint is set. By default, SDK sets breakpoints at <strong>main( ) </strong> and <strong>exit( )</strong> functions. When you start a debug session, the processor stops at the start of the  <strong>main( )</strong> function of the program. There are two types of breakpoints used by the debugger:</p>
+<ul>
+  <li><strong>Software Breakpoint</strong><strong> - </strong>To set a software breakpoint, the debugger modifies the program instruction at the breakpoint address. The debugger does not require any hardware resources for setting a software breakpoint, so you can essentially set any number of software breakpoints in your debug session. The debugger  requires access to read and write to the breakpoint address location. This is the default breakpoint used by the debugger.</li>
+  <li><strong>Hardware Breakpoint</strong><strong> - </strong>To set a hardware breakpoint, the debugger does not require modification of the program instruction at the breakpoint address. Each processor provides a limited set of hardware breakpoints. In the case of MicroBlaze&#8482; processors,  this is configurable and set by the hardware developer and should be used wisely. You should use hardware breakpoints when the debugger cannot read or write to the program memory, such as when using Flash memory.</li>
+</ul>
+<h2>Watchpoints</h2>
+<p>A watchpoint suspends the execution of a program at the location where the read or write access condition is set. Each processor provides a limited set of hardware watchpoints. In the case of MicroBlaze processors, this is configurable and set by the hardware developer. There are read and write watchpoints used for monitoring read and write data access patterns of the processor, respectively. The condition can be based on data address access addresses or data access patterns, or a combination of both.</p>
+<h2>Safe-mode debugging</h2>
+<p>During program debugging, it is sometimes unknown  which part of the code is behaving incorrectly or where to set breakpoints. SDK provides a safe mode of debugging that can help you locate the problem or narrow down the search of locating the buggy software. The debugger traps the program execution by looking for critical errors and exception conditions. Looking at the stack trace of the stopped program or register values should help you identify the problem. For MicroBlaze processors, Xilinx recommends that you enable most exceptions when building the hardware system.</p>
+ <p><span lang=EN><img width=143 height=21
+id="_x0000_i1025" src="../images/ngconcepts.gif" alt="Related concepts"
+border=0><br>
+    <a href="sdk_c_over_dbg.htm">Debug overview</a> </span></p>
+  <p><font face="Times New Roman" color="#800000">Copyright © 1995-2012 Xilinx, Inc. All rights reserved.</font></p>
+</body>
+
+</html>
