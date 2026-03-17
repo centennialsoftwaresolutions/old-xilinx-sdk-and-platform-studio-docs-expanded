@@ -1,0 +1,62 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Hardware Platform Specification</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50593817_pgfId-294539"></A><A NAME="50593817_93340"></A>Hardware Platform Specification</H1>
+<P>
+<A NAME="50593817_pgfId-332284"></A>The Hardware Platform Specification file captures all the information and files from a Xilinx&#174; Embedded Development Kit (EDK) hardware design that is required for a software developer to write, debug, and deploy software applications for that hardware.</P>
+<P>
+<A NAME="50593817_pgfId-332286"></A>Typically, a hardware designer who develops hardware using Xilinx Platform Studio (XPS) creates the Hardware Platform Specification in a directory. The software developer then uses this information in the Xilinx Software Development Kit (SDK). The main components of this specification are:</P>
+<UL>
+<LI>
+<A NAME="50593817_pgfId-332288"></A>A Hardware Description in an XML format</LI>
+<LI>
+<A NAME="50593817_pgfId-332351"></A>An FPGA Bitstream corresponding to the Hardware Description</LI>
+<LI>
+<A NAME="50593817_pgfId-332360"></A>A Block RAM Memory Map (BMM) file corresponding to the Bitstream</LI>
+<LI>
+<A NAME="50593817_pgfId-332369"></A>Zynq&#174; Initialization Files</LI>
+<UL>
+<LI>
+<A NAME="50593817_pgfId-332383"></A>ps7_init.tcl file. This is the pre-initialization file that is to be sourced and executed before any application is downloaded onto the target. this tcl contains the clock, pll and ddr initialization code.</LI>
+<LI>
+<A NAME="50593817_pgfId-332398"></A>ps7_init.c/.h files. Thes files are the C-equivalent files for the ps7_init.tcl file. The ps7_init.c and .h files are used during the FSBL application project creation.</LI>
+</UL>
+</UL>
+<P>
+<A NAME="50593817_pgfId-332295"></A>SDK uses the Hardware Description file to detect the processor(s) and memory-mapped peripherals present in the hardware.</P>
+<P>
+<A NAME="50593817_pgfId-332297"></A>The FPGA bitstream programs an FPGA device with the hardware created by the hardware designer.</P>
+<P>
+<A NAME="50593817_pgfId-332299"></A>The BMM file is a description of the internal memories used in the hardware description. It fills in the internal block RAM as necessary with a program or data.</P>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50593817_pgfId-332300"></A>Auto-Synchronization of Software Projects</H5>
+<P>
+<A NAME="50593817_pgfId-332302"></A>If you make changes to the hardware in XPS and export the specification file or receive one from the hardware developer, SDK automatically detects any change to the contents of the hardware description file referenced by the software projects. It will display the changes to the hardware design, such as additions or deletions of processor and peripheral IP, changes in the memory map of the processor sub-system, or changes in the IP parameters. It also displays and performs the changes to the software projects based on the hardware modification. Some actions are performed by SDK, such as adding or removing drivers in the platform, enabling or disabling projects for a processor, and changing compiler flags. It also provides recommendation of changes that you should perform, such as changing the linker script if the memory map is changed.</P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50593817_pgfId-332303"></A>Re-Targeting Software Projects</H5>
+<P>
+<A NAME="50593817_pgfId-332305"></A>If you have similar hardware designs, such as different versions of hardware, you can re-target the software projects in the workspace to build and run different hardware. Similar to auto-synchronization, SDK provides you with the hardware changes and relevant software changes.</P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50593817_pgfId-332307"></A>Related Tasks</H5>
+<P>
+<A NAME="50593817_pgfId-332308"></A><A HREF="../tasks/sdk_t_hwspec.htm#50594073_79930" CLASS="XRef">Importing a Hardware Platform Specification File</A></P>
+<P>
+<A NAME="50593817_pgfId-332309"></A>&nbsp;</P>
+<P>
+<A NAME="50593817_pgfId-306634"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

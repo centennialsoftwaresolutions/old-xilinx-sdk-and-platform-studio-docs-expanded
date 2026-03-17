@@ -1,0 +1,439 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> SDK Headless Mode</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="pgfId-294539"></A><A NAME="40408"></A>SDK Headless Mode</H1>
+<P>
+<A NAME="pgfId-410591"></A>SDK headless mode can be used to create, import and build projects using the command line.</P>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-438999"></A>Assumptions</H5>
+<P>
+<A NAME="pgfId-439036"></A>The variables used in the steps below are as follows:</P>
+<UL>
+<LI>
+<A NAME="pgfId-439037"></A><B>
+XILINX_SDK_PATH:</B>
+ SDK installation Path (C:/Xilinx/SDK/2014.1).</LI>
+<LI>
+<A NAME="pgfId-439038"></A><B>
+ECLIPSE:</B>
+ a shortcut to the Eclipse console application inside SDK installation: <BR>
+$( XILINX_SDK_PATH)/eclipse/win64.o/eclipsec.exe, or $(XILINX_SDK_PATH)/eclipse/lnx64.o/eclipse depending on the platform.</LI>
+<LI>
+<A NAME="pgfId-439039"></A><B>
+WSPACE:</B>
+ path to the workspace to be used.</LI>
+<LI>
+<A NAME="pgfId-439040"></A><B>
+VM:</B>
+ Path to Java VM used by SDK. This should be: $(XILINX_SDK_PATH)/tps/win64/jre/bin</LI>
+</UL>
+<P>
+<A NAME="pgfId-439042"></A>The steps also reference the following Eclipse/SDK projects, all of which are typically stored in the same folder.</P>
+<UL>
+<LI>
+<A NAME="pgfId-439043"></A><B>
+HW:</B>
+ path to the SDK hardware platform project</LI>
+<LI>
+<A NAME="pgfId-439044"></A><B>
+BSP:</B>
+ path to the SDK BSP project</LI>
+<LI>
+<A NAME="pgfId-439045"></A><B>
+BSPNAME:</B>
+ SDK BSP project name</LI>
+<LI>
+<A NAME="pgfId-439046"></A><B>
+APP:</B>
+ path to SDK C/C++ application project</LI>
+<LI>
+<A NAME="pgfId-439047"></A><B>
+APPNAME:</B>
+ SDK C/C++ application project name</LI>
+</UL>
+<P>
+<A NAME="pgfId-439049"></A>User has to source the settings file in the shell/command prompt depending on the platform.</P>
+<P CLASS="Code">
+<A NAME="pgfId-439020"></A>$(XILINX_SDK_PATH)/settings64.bat (or) $(XILINX_SDK_PATH)/settings64.csh</P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-439247"></A>Creating Projects</H5>
+<P>
+<A NAME="pgfId-439270"></A>User can create below mentioned project types in headless mode.</P>
+<UL>
+<LI>
+<A NAME="pgfId-439338"></A>Hardware Platform Project</LI>
+<LI>
+<A NAME="pgfId-439272"></A>Board Support Package Project</LI>
+<LI>
+<A NAME="pgfId-439273"></A>Application Project</LI>
+</UL>
+<P>
+<A NAME="pgfId-439274"></A>To create projects in headless mode, a script file need to be given as input for SDK.</P>
+<P>
+<A NAME="pgfId-439275"></A>Syntax: </P>
+<P CLASS="Code">
+<A NAME="pgfId-439345"></A>xsdk -script &lt;script.xml&gt; -workspace &lt;workspace directory path&gt;</P>
+<P>
+<A NAME="pgfId-439277"></A>This script file(script.xml) contains information about the projects to be created. The script file can contain one or multiple tasks to create one of the project types.</P>
+<P CLASS="Code">
+<A NAME="pgfId-439278"></A><B>
+&lt;project name=&quot;SDK Script&quot; default=&quot;main&quot;&gt; </B>
+</P>
+<P CLASS="Code">
+<A NAME="pgfId-439279"></A><B>
+&lt;target name=&quot;main&quot;&gt; </B>
+</P>
+<P CLASS="Code">
+<A NAME="pgfId-439280"></A>	&lt;createHwProject ...</P>
+<P CLASS="Code">
+<A NAME="pgfId-439281"></A>	&lt;createBspProject ...</P>
+<P CLASS="Code">
+<A NAME="pgfId-439282"></A>	&lt;createAppProject ...</P>
+<P CLASS="Code">
+<A NAME="pgfId-439283"></A>	&lt;createAppProject ...</P>
+<P CLASS="Code">
+<A NAME="pgfId-439284"></A>	&lt;createAppProject ...</P>
+<P CLASS="Code">
+<A NAME="pgfId-439285"></A><B>
+&lt;/target&gt; </B>
+</P>
+<P CLASS="Code">
+<A NAME="pgfId-439286"></A><B>
+&lt;/project&gt; </B>
+</P>
+<P>
+<A NAME="pgfId-439287"></A>Each script file must have project and target xml tags as specified above. In addition to these mandatory tags, there are three tasks (each specified with an xml tag) which can be specified in the file. It is allowed to have multiple tasks of a type in a single script. Given below is the description of the tasks.</P>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="pgfId-439421"></A>createHwProject</H6>
+<P>
+<A NAME="pgfId-439438"></A>This task is used to create a Hardware Platform project. Parameters that you must specify for the task are:</P>
+<UL>
+<LI>
+<A NAME="pgfId-439439"></A>projname: Name of the Hardware Platform project to be created in the workspace.</LI>
+<LI>
+<A NAME="pgfId-439440"></A>hwspecpath: Path of the design specification file exported from Vivado/XPS.</LI>
+</UL>
+<DIV>
+<H6 CLASS="Heading4">
+<A NAME="pgfId-439441"></A>Example</H6>
+<P CLASS="Code">
+<A NAME="pgfId-439442"></A>&lt;createHwProject projname=&quot;zynq706_two_mb&quot; hwspecpath=&quot;C:\Designs\ zynq706_two_mb\system.xml &quot; /&gt;</P>
+</DIV>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="pgfId-439469"></A>createBspProject</H6>
+<P>
+<A NAME="pgfId-439591"></A>This task is used to create a Board Support Package project. Parameters that you must specify for the task are:</P>
+<TABLE BORDER="1">
+<TR>
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellHeading">
+<A NAME="pgfId-411288"></A>Parameter</P>
+</TH>
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellHeading">
+<A NAME="pgfId-411290"></A>Description</P>
+</TH>
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellHeading">
+<A NAME="pgfId-411292"></A>Example</P>
+</TH>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411294"></A><B>
+projname</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411347"></A>Name of the Board Support Package project to be created in the workspace.</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411298"></A>&nbsp;</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411300"></A><B>
+hwprojname</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411302"></A>Name of the hardware platform project existing in the workspace.</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411304"></A>&nbsp;</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411306"></A><B>
+processor</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411308"></A>Name of the processor supported by the hardware platform.</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411310"></A><B>
+ps7_cortexa9_0</B>
+, <B>
+microblaze_0</B>
+</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411312"></A><B>
+os</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411314"></A>Name of the operating system supported by the processor.</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411316"></A><B>
+standalone</B>
+, <B>
+linux</B>
+, <B>
+xilkernel</B>
+</P>
+</TD>
+</TR>
+</TABLE>
+<DIV>
+<H6 CLASS="Heading4">
+<A NAME="pgfId-411095"></A>Example</H6>
+<P CLASS="Code">
+<A NAME="pgfId-411111"></A>&lt;createBspProject projname=&quot;zynq706_two_mb_bsp1&quot; hwprojname=&quot;zynq706_two_mb&quot; processor=&quot; ps7_cortexa9_0&quot; os=&quot;standalone&quot; /&gt;</P>
+</DIV>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="pgfId-410614"></A>createAppProject</H6>
+<P>
+<A NAME="pgfId-410615"></A>This task is used to create an Application project. Parameters that you must specify for the task are:</P>
+<TABLE BORDER="1">
+<TR>
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellHeading">
+<A NAME="pgfId-411599"></A>Parameter</P>
+</TH>
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellHeading">
+<A NAME="pgfId-411601"></A>Description</P>
+</TH>
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellHeading">
+<A NAME="pgfId-411603"></A>Example</P>
+</TH>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411605"></A><B>
+projname</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411607"></A>Name of the Application project to be created in the workspace.</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411609"></A><B>
+</B>
+&nbsp;</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411611"></A><B>
+hwprojname</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411613"></A>Name of the hardware platform existing in workspace or one of the predefined templates.</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411615"></A><B>
+MicroZed_hw_platform, ZC702_hw_platform, ZC706_hw_platform, zed_hw_platform</B>
+</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411617"></A><B>
+processor</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411619"></A>Name of the processor supported by hardware platform.</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411621"></A><B>
+ps7_cortexa9_0, microblaze_0</B>
+</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411623"></A><B>
+os</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411625"></A>Name of the operating system supported by the processor</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411627"></A><B>
+standalone, linux, xilkernel</B>
+</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411722"></A><B>
+language</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411724"></A>ID of the languages supported.</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411726"></A><B>
+C, CPP</B>
+</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411716"></A><B>
+template</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411718"></A>Name of the template supported for the configuration</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411720"></A><B>
+Hello World, Empty Application</B>
+</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411710"></A><B>
+bspprojname</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411712"></A>Name of the bsp project to be created or name of the valid existing bsp project.</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBody">
+<A NAME="pgfId-411714"></A><B>
+</B>
+&nbsp;</P>
+</TD>
+</TR>
+</TABLE>
+<DIV>
+<H6 CLASS="Heading4">
+<A NAME="pgfId-410623"></A>Example</H6>
+<P CLASS="Code">
+<A NAME="pgfId-411881"></A>&lt;createAppProject projname=&quot;zynq706_two_mb_perph_app&quot; hwprojname=&quot;zynq706_two_mb&quot; processor=&quot;ps7_cortexa9_0&quot; bspprojname=&quot;zynq706_two_mb_bsp1&quot; os=&quot;standalone&quot; template=&quot;Peripheral Tests&quot; language=&quot;C&quot; /&gt;</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading4">
+<A NAME="pgfId-410624"></A>Sample File Reference</H6>
+<P CLASS="Code">
+<A NAME="pgfId-421064"></A>xsdk -script &lt;script.xml&gt; -workspace &lt;workspace directory path&gt;</P>
+<P CLASS="Normal">
+<A NAME="pgfId-410630"></A>Refer to the sample <A HREF="../resources/script.xml" CLASS="URL">script.xml</A> file.</P>
+</DIV>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-439850"></A>Importing Projects</H5>
+<P>
+<A NAME="pgfId-439852"></A>To import the three projects into the workspace, issue the following command from a shell:</P>
+<P CLASS="Code">
+<A NAME="pgfId-439853"></A>$(ECLIPSE) -vm $(VM) -nosplash -application org.eclipse.cdt.managedbuilder.core.headlessbuild -import $(HW) -import $(BSP) -import $(APP) -data $(WSPACE) -vmargs -Dorg.eclipse.cdt.core.console=org.eclipse.cdt.core.systemConsole</P>
+<P CLASS="Note"><b>Note:</b>
+<A NAME="pgfId-439854"></A>If your workspace already has these three projects, then this step can be skipped.</P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-439855"></A>Building Projects</H5>
+<P>
+<A NAME="pgfId-439857"></A>To compile projects from command line, issue following commands based on your requirement.</P>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="pgfId-439858"></A>Build All Projects:</H6>
+<P CLASS="Code">
+<A NAME="pgfId-439859"></A>$(ECLIPSE) -vm $(VM)-nosplash -application org.eclipse.cdt.managedbuilder.core.headlessbuild -build all  -data $(WSPACE)-vmargs -Dorg.eclipse.cdt.core.console=org.eclipse.cdt.core.systemConsole</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="pgfId-439860"></A>Build BSP:</H6>
+<P CLASS="Code">
+<A NAME="pgfId-439861"></A>$(ECLIPSE) -vm $(VM)-nosplash -application com.xilinx.sdk.sw.BspBuilder $(BSPNAME) -data $(WSPACE) -vmargs -Dorg.eclipse.cdt.core.console=org.eclipse.cdt.core.systemConsole</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="pgfId-439862"></A>Build Application:</H6>
+<P CLASS="Code">
+<A NAME="pgfId-439989"></A>$(ECLIPSE) -vm $(VM)-nosplash -application org.eclipse.cdt.managedbuilder.core.headlessbuild -build $(APPNAME) -data $(WSPACE)-vmargs -Dorg.eclipse.cdt.core.console=org.eclipse.cdt.core.systemConsole</P>
+<P>
+<A NAME="pgfId-434387"></A>&nbsp;</P>
+<P>
+<A NAME="pgfId-434376"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

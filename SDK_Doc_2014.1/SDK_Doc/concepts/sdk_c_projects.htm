@@ -1,0 +1,110 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> SDK Application Projects</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50593806_pgfId-294539"></A><A NAME="50593806_26707"></A>SDK Application Projects</H1>
+<P>
+<A NAME="50593806_pgfId-332278"></A>Software application projects are your final application containers. The project directory that is created contains (or links to) your C/C++ source files, executable output file, and associated utility files, such as the make files used to build the project. Each SDK project produces one executable file called <b>
+projectname</B>
+.elf. You can configure the following in a Software Application project:</P>
+<UL>
+<LI>
+<A NAME="50593806_pgfId-332280"></A>Compilation Settings</LI>
+<LI>
+<A NAME="50593806_pgfId-332281"></A>Build Configurations</LI>
+<LI>
+<A NAME="50593806_pgfId-332282"></A>Run and debug configurations</LI>
+</UL>
+<P>
+<A NAME="50593806_pgfId-332284"></A>Each software application project must link against an SDK board support package project in your workspace. Otherwise, your software image will not link or be functional. Board support packages created for external tools cannot be used.</P>
+<P>
+<A NAME="50593806_pgfId-332286"></A>You can have any number of application projects. This allows you to do all of your software development for a given hardware within the same SDK workspace.</P>
+<P>
+<A NAME="50593806_pgfId-332288"></A>Nested projects are not supported; each project must be organized as a discrete entity. Project dependencies are supported by allowing a project to reference other projects that reside in your workspace. For more information, refer to the following in the Help navigation pane: <B>
+C/C++ Development User Guide &gt; Reference &gt; C/C++ Properties &gt; C/C++ Project properties.</B>
+</P>
+<P>
+<A NAME="50593806_pgfId-332290"></A>For more information about projects and where they are stored, refer to the following in the Help navigation pane:</P>
+<UL>
+<LI>
+<A NAME="50593806_pgfId-332292"></A><B>
+Workbench User Guide &gt; Concepts &gt; Workbench &gt; Resources</B>
+</LI>
+<LI>
+<A NAME="50593806_pgfId-332293"></A><B>
+Workbench User Guide &gt; Tasks &gt; Running Eclipse</B>
+</LI>
+</UL>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50593806_pgfId-332295"></A>Project Types</H5>
+<P>
+<A NAME="50593806_pgfId-332297"></A>You can create a standard make C or C++ project or a managed make C or C++ project.</P>
+<UL>
+<LI>
+<A NAME="50593806_pgfId-332299"></A><B>
+SDK managed C or C++ project (recommended for beginners)</B>
+</LI>
+</UL>
+<P CLASS="Body2">
+<A NAME="50593806_pgfId-332300"></A>An SDK managed make project automatically generates the makefiles for you. These files are required for your managed make projects to build successfully.</P>
+<UL>
+<LI>
+<A NAME="50593806_pgfId-332301"></A><B>
+Standard make C or C++ project</B>
+</LI>
+</UL>
+<P CLASS="Body2">
+<A NAME="50593806_pgfId-332302"></A>You must create a makefile or use an existing makefile in order to build your project .</P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50593806_pgfId-332304"></A>Project Conversion</H5>
+<P>
+<A NAME="50593806_pgfId-332306"></A>You can convert projects from C to C++ (or from C++ to C). If, for example, your requirements change and you must convert an existing C project to C++, you can do this without recreating the project. The CDT converts your project files and resolves any source control issues.</P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50593806_pgfId-332307"></A>A Few Notes About Projects</H5>
+<P>
+<A NAME="50593806_pgfId-332309"></A>Note the following about projects:</P>
+<UL>
+<LI>
+<A NAME="50593806_pgfId-332311"></A>When you create a file within a project, a record of every change is created, called the Local History. For more information about local history, refer to <B>
+Workbench User Guide &gt; Reference &gt; User interface information &gt; Development environment &gt; Local history</B>
+ in the Help contents.</LI>
+<LI>
+<A NAME="50593806_pgfId-332312"></A>Spaces in projects and filenames can cause problems with some tools, such as the make utility and the compiler.</LI>
+<LI>
+<A NAME="50593806_pgfId-332313"></A>Be careful when you use only capitalization to distinguish files and projects. UNIX-based operating system file names are case sensitive, but Windows filenames are not. Therefore, Hello.c and hello.c are separate files in UNIX but overwrite each other in Windows.</LI>
+</UL>
+<P>
+<A NAME="50593806_pgfId-332315"></A>For more information about projects, select <B>
+Workbench User Guide &gt; Concepts &gt; Workbench &gt; Resources.</B>
+</P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50593806_pgfId-332317"></A>Related Concepts</H5>
+<P>
+<A NAME="50593806_pgfId-332318"></A><A HREF="sdk_o_share.htm#50593796_33432" CLASS="XRef">Sharing and Archiving Software Projects</A></P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50593806_pgfId-332320"></A>Related Tasks</H5>
+<P>
+<A NAME="50593806_pgfId-332321"></A><A HREF="../tasks/sdk_t_create_new_appln.htm#50594068_84561" CLASS="XRef">Creating a C or C++ Project</A></P>
+<P>
+<A NAME="50593806_pgfId-306634"></A>&nbsp;</P>
+<P>
+<A NAME="50593806_pgfId-332497"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

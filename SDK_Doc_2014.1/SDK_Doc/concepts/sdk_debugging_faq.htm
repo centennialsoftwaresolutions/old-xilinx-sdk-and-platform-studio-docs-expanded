@@ -1,0 +1,160 @@
+﻿<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Frequently Asked Questions About Debugging and Target Connection</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50593801_pgfId-294539"></A>Frequently Asked Questions About Debugging and Target Connection</H1>
+<UL>
+<LI>
+<A NAME="50593801_pgfId-332329"></A><A HREF="sdk_debugging_faq.htm#50593801_63033" CLASS="XRef">How can I set the register display format so that it defaults to &quot;Hexadecimal&quot;?</A></LI>
+<LI>
+<A NAME="50593801_pgfId-332331"></A><A HREF="sdk_debugging_faq.htm#50593801_33888" CLASS="XRef">Can I debug more than one application at the same time?</A></LI>
+<LI>
+<A NAME="50593801_pgfId-332333"></A><A HREF="sdk_debugging_faq.htm#50593801_41420" CLASS="XRef">I have a large ELF application file to debug, and SDK seems to time out when I am downloading the ELF file. How can I increase the time-out period?</A></LI>
+<LI>
+<A NAME="50593801_pgfId-332335"></A><A HREF="sdk_debugging_faq.htm#50593801_81565" CLASS="XRef">I have my board connected on one machine, and I would like to debug my application using SDK running on another machine. How do I set up the Launch Configuration to perform this remote debug operation?</A></LI>
+<LI>
+<A NAME="50593801_pgfId-332339"></A><A HREF="sdk_debugging_faq.htm#50593801_49528" CLASS="XRef">I want to debug an ELF file using SDK without creating a C/C++ Project. How do I do that?</A></LI>
+<LI>
+<A NAME="50593801_pgfId-332717"></A><A HREF="sdk_debugging_faq.htm#50593801_45886" CLASS="XRef">During Debugging (or Running) the application, I would like to download my data files along with my application's ELF file. How do I do this?</A></LI>
+<LI>
+<A NAME="50593801_pgfId-332341"></A><A HREF="sdk_debugging_faq.htm#50593801_55420" CLASS="XRef">How do I specify the Reset options to be used when a Debug (or Run) session is launched?</A></LI>
+<LI>
+<A NAME="50593801_pgfId-332343"></A><A HREF="sdk_debugging_faq.htm#50593801_62435" CLASS="XRef">Why are program section sizes reported by Linker Script Generator IDE different from those reported after program build?</A></LI>
+</UL>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50593801_pgfId-332344"></A><A NAME="50593801_63033"></A>How can I set the register display format so that it defaults to &quot;Hexadecimal&quot;?</H5>
+<P>
+<A NAME="50593801_pgfId-332346"></A>To change the default register format:</P>
+<OL>
+<LI>
+<A NAME="50593801_pgfId-332348"></A>Select <B>
+Window &gt; Preferences.</B>
+</LI>
+<LI>
+<A NAME="50593801_pgfId-332349"></A>Open the tree for C/C++ in the list on the left-hand side.</LI>
+<LI>
+<A NAME="50593801_pgfId-332350"></A>Click <B>
+Debug</B>
+ in the expanded tree.</LI>
+<LI>
+<A NAME="50593801_pgfId-332351"></A>In the Default Register Format drop-down list, select <B>
+Hexadecimal.</B>
+</LI>
+</OL>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50593801_pgfId-332353"></A><A NAME="50593801_33888"></A>Can I debug more than one application at the same time?</H5>
+<P>
+<A NAME="50593801_pgfId-332355"></A>The SDK Target Manager supports debugging of multiple independent targets. For example, you can debug a processor debug session and a simulation session simultaneously. However, sessions with potential conflicts are not allowed, such as when a similar session is already active.</P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50593801_pgfId-332356"></A><A NAME="50593801_41420"></A>I have a large ELF application file to debug, and SDK seems to time out when I am downloading the ELF file. How can I increase the time-out period?</H5>
+<P>
+<A NAME="50593801_pgfId-332358"></A>For information about this, refer to Xilinx Answer Record #20653.</P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50593801_pgfId-332359"></A><A NAME="50593801_81565"></A>I have my board connected on one machine, and I would like to debug my application using SDK running on another machine. How do I set up the Launch Configuration to perform this remote debug operation?</H5>
+<P>
+<A NAME="50593801_pgfId-332361"></A>You can do this by specifying the remote machine's access information in the Debug Launch Configuration dialog box. Note that this requires that the XMD Agent is already running on the remote machine.</P>
+<P CLASS="Note"><b>Note:</b>
+<A NAME="50593801_pgfId-332363"></A>This option is only supported when debugging an application on a remote machine. This does not support running applications on the remote machine.</P>
+<OL>
+<LI>
+<A NAME="50593801_pgfId-332365"></A>Start XMD on the remote machine.</LI>
+<OL>
+<LI type="a">
+<A NAME="50593801_pgfId-332366"></A>Type the command to connect to the processor on which you want the executable to be debugged. For example, <B>
+connect mb mdm</B>
+ or <B>
+connect ppc hw</B>
+ or <B>
+connect arm hw</B>
+.</LI>
+<LI type="a">
+<A NAME="50593801_pgfId-332542"></A>When XMD connects to the processor, it will report that it has opened a gdbserver at a specific port. Make note of this port number, as you will use it in step 3.</LI>
+</OL>
+<LI>
+<A NAME="50593801_pgfId-332368"></A>In the SDK Debug Configuration dialog box, click the <B>
+Remote Debug</B>
+ tab and select <B>
+Connect to gdbserver on a different machine.</B>
+</LI>
+<LI>
+<A NAME="50593801_pgfId-332369"></A>Specify the remote machine's IP address (or type the machine name) and the <B>
+Port</B>
+ number where the gdbserver is open, as determined in step 1b.</LI>
+<LI>
+<A NAME="50593801_pgfId-332370"></A>Click <B>
+Debug</B>
+ to start the Remote Debug session.</LI>
+</OL>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50593801_pgfId-332372"></A><A NAME="50593801_49528"></A>I want to debug an ELF file using SDK without creating a C/C++ Project. How do I do that?</H5>
+<P>
+<A NAME="50593801_pgfId-332374"></A>SDK allows creation of projects that contain an ELF file. With a few manual steps, this allows debugging of the ELF file without having to do other steps, such as specifying the hardware platform, creating a BSP, and creating an C/C++ project. The steps to follow are:</P>
+<OL>
+<LI>
+<A NAME="50593801_pgfId-332376"></A>Select <B>
+File &gt; Import &gt; C/C++ &gt; C/C++ Executable.</B>
+</LI>
+<LI>
+<A NAME="50593801_pgfId-332377"></A>Navigate to the ELF file that you want to debug.</LI>
+<LI>
+<A NAME="50593801_pgfId-332378"></A>Choose the appropriate binary parser (such as MicroBlaze™ or ARM). Then allow the wizard to create a new project with this ELF file.</LI>
+<LI>
+<A NAME="50593801_pgfId-332379"></A>Do not select the option to create a debug configuration (this will create a C/C++ debug configuration, whereas we need a Xilinx C/C++ configuration).</LI>
+<LI>
+<A NAME="50593801_pgfId-332380"></A>Create a Xilinx C/C++ Debug configuration. For this project, the only tab that is valid is the Remote Debug options tab. Specify the gdbserver port and hostname. See the previous question for more information about Remote Debug.</LI>
+<LI>
+<A NAME="50593801_pgfId-332381"></A>Click <B>
+debug</B>
+ to start debugging the ELF file.</LI>
+</OL>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50593801_pgfId-332383"></A><A NAME="50593801_45886"></A>During Debugging (or Running) the application, I would like to download my data files along with my application's ELF file. How do I do this?</H5>
+<P>
+<A NAME="50593801_pgfId-332385"></A>To do this, specify the data file information in the Initialization tab of the Debug Launch Configuration dialog box.</P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50593801_pgfId-332386"></A><A NAME="50593801_55420"></A>How do I specify the Reset options to be used when a Debug (or Run) session is launched?</H5>
+<P>
+<A NAME="50593801_pgfId-332388"></A>You can specify the Reset options in the Initialization tab of the Debug Launch Configuration dialog box. The following options can be specified:</P>
+<UL>
+<LI>
+<A NAME="50593801_pgfId-332390"></A>System reset: To reset the entire system</LI>
+<LI>
+<A NAME="50593801_pgfId-332391"></A>Processor reset: To reset a specific processor</LI>
+<LI>
+<A NAME="50593801_pgfId-332392"></A>No Reset: To not reset anything</LI>
+</UL>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50593801_pgfId-332394"></A><A NAME="50593801_62435"></A>Why are program section sizes reported by Linker Script Generator IDE different from those reported after program build?</H5>
+<P>
+<A NAME="50593801_pgfId-332396"></A>The linker script generator IDE displays info about each program section. So when it says .text is XX bytes long, the contents of that specific section are XX bytes long. The program section size reported after program build uses the (processor_arch)-size utility which uses the Berkeley style of reporting program statistics. So &quot;text&quot; in the -size report includes not only .text, but other program instructions. Similarly &quot;data&quot; includes.data, .rodata, and .sdata.</P>
+<P>
+<A NAME="50593801_pgfId-332398"></A>The linker script size report should be used when looking at things at more fine-grained level. The program size report is more coarse-grained and should be used to get high level statistics about the program</P>
+<P>
+<A NAME="50593801_pgfId-332399"></A>&nbsp;</P>
+<P>
+<A NAME="50593801_pgfId-306634"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

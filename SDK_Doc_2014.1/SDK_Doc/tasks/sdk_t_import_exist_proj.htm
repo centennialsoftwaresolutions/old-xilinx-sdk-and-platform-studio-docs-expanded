@@ -1,0 +1,90 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Importing an Existing Software Project</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50594075_pgfId-294539"></A><A NAME="50594075_66577"></A>Importing an Existing Software Project</H1>
+<P>
+<A NAME="50594075_pgfId-332405"></A>You can use the Import wizard to copy a project that exists in a different workspace, or one that previously existed in a workspace, into the current workspace.</P>
+<OL>
+<LI>
+<A NAME="50594075_pgfId-332407"></A>Select <B>
+File &gt; Import.<BR>
+</B>
+The Import wizard opens.</LI>
+<LI>
+<A NAME="50594075_pgfId-332408"></A>Select <B>
+General &gt; Existing Projects into Workspace.</B>
+</LI>
+<LI>
+<A NAME="50594075_pgfId-332548"></A>Click <B>
+Next.</B>
+</LI>
+<LI>
+<A NAME="50594075_pgfId-332409"></A>Select either the <B>
+Select root directory</B>
+ or <B>
+Select archive file</B>
+ option button, and click the associated <B>
+Browse</B>
+ button to locate the directory or file containing the projects.</LI>
+<LI>
+<A NAME="50594075_pgfId-332410"></A>In the <B>
+Projects</B>
+ area, select the project or projects to import.</LI>
+<LI>
+<A NAME="50594075_pgfId-332411"></A>Select <B>
+Copy projects into workspace</B>
+ if you do want to copy the project files to your current workspace location.</LI>
+<LI>
+<A NAME="50594075_pgfId-332412"></A>Click <B>
+Finish</B>
+ to start the import.</LI>
+<LI>
+<A NAME="50594075_pgfId-332573"></A>If SDK prompts a message to overwrite a file, click <B>
+Yes.</B>
+</LI>
+</OL>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50594075_pgfId-332414"></A>Requirements for Importing a Project into a Workspace</H5>
+<P>
+<A NAME="50594075_pgfId-332415"></A>The software projects in a workspace are associated with a hardware design and targeted to a particular processor and processor sub-system. When you import a software project into a workspace, SDK performs minimal checks to ensure that this software project is usable in the workspace. The following checks are done for different software project types:</P>
+<UL>
+<LI>
+<A NAME="50594075_pgfId-332417"></A>For <B>
+Board Support Package</B>
+ projects, SDK checks to see if the processor name and type used by the software project exist in the current hardware design. It does not check if all the peripherals required by the drivers and libraries in the software platform exist in the processor sub-system.<BR>
+If there is a mismatch, SDK returns errors. Such projects cannot be imported into the workspace; you should delete them from the workspace.</LI>
+<LI>
+<A NAME="50594075_pgfId-332419"></A>For <B>
+Software Application</B>
+ projects, SDK checks to see if the software platform, processor name, and type used by the software application exist in the current workspace and hardware design. Therefore, when you are importing a software application, you must make sure that the software platform used by this application already exists in the workspace. Alternatively, you can import the software platform along with the application.</LI>
+</UL>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50594075_pgfId-332421"></A>Related Concepts</H5>
+<P>
+<A NAME="50594075_pgfId-332422"></A><A HREF="../concepts/sdk_o_emb_sw.htm#50593799_69526" CLASS="XRef">Xilinx Embedded Software</A></P>
+<P>
+<A NAME="50594075_pgfId-332423"></A><A HREF="../concepts/sdk_o_share.htm#50593796_33432" CLASS="XRef">Sharing and Archiving Software Projects</A></P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50594075_pgfId-332425"></A>Related Tasks </H5>
+<P>
+<A NAME="50594075_pgfId-332426"></A><A HREF="sdk_o_export_project.htm#50594049_21496" CLASS="XRef">Exporting Software Projects</A></P>
+<P>
+<A NAME="50594075_pgfId-332427"></A>&nbsp;</P>
+<P>
+<A NAME="50594075_pgfId-306566"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

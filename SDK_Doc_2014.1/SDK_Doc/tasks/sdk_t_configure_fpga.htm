@@ -1,0 +1,69 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Programming the FPGA</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50594063_pgfId-294539"></A><A NAME="50594063_83168"></A>Programming the FPGA</H1>
+<P>
+<A NAME="50594063_pgfId-332386"></A>To program the FPGA device with the bitstream, do the following:</P>
+<OL>
+<LI>
+<A NAME="50594063_pgfId-332388"></A>Select <B>
+Xilinx Tools &gt; Program FPGA.</B>
+</LI>
+<LI>
+<A NAME="50594063_pgfId-332389"></A>In the <B>
+Bitstream</B>
+ and <B>
+BMM File</B>
+ fields, specify the bitstream (.bit) and Block RAM Memory Map (.bmm) files to use for programming the FPGA. If these files are provided as part of the file exported by Vivado&#174; IP integrator, SDK automatically picks them up and populate these fields.</LI>
+<LI>
+<A NAME="50594063_pgfId-332390"></A>SDK automatically detects the processors in the system and shows them in a table at the bottom of the window. Under <B>
+Software Configuration,</B>
+ select the executable (.elf) file to initialize at the reset start address for each processor. This is the program the processor will start executing when it comes out of reset. From the drop-down list, you can select <B>
+BootLoop</B>
+ or <B>
+Browse</B>
+ to any other ELF file.</LI>
+<LI>
+<A NAME="50594063_pgfId-332391"></A>Click <B>
+Program.</B>
+</LI>
+</OL>
+<P CLASS="Body2">
+<A NAME="50594063_pgfId-332500"></A>SDK programs the FPGA using the settings you specified. Depending on the size of the FPGA device and the JTAG cable frequency, programming the FPGA could take longer than expected.</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="..\images\sdk_t_configure_fpga-1.jpg"></center>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50594063_pgfId-332397"></A>Related Concepts </H5>
+<P>
+<A NAME="50594063_pgfId-332399"></A><A HREF="../concepts/sdk_c_hwcomponents.htm#50593818_86112" CLASS="XRef">Embedded Hardware Components</A></P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50594063_pgfId-332401"></A>Related Tasks </H5>
+<P>
+<A NAME="50594063_pgfId-332402"></A><A HREF="sdk_t_target_connections.htm#50594176_78828" CLASS="XRef">Target Connections</A></P>
+<P>
+<A NAME="50594063_pgfId-332403"></A><A HREF="sdk_o_debug.htm#50594048_72334" CLASS="XRef">Debugging a Program</A></P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50594063_pgfId-332405"></A>Related Reference</H5>
+<P>
+<A NAME="50594063_pgfId-332406"></A><A HREF="../reference/sdk_u_program_fpga.htm#50593981_20334" CLASS="XRef">Program FPGA Dialog Box</A></P>
+<P>
+<A NAME="50594063_pgfId-332407"></A>&nbsp;</P>
+<P>
+<A NAME="50594063_pgfId-306566"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>
