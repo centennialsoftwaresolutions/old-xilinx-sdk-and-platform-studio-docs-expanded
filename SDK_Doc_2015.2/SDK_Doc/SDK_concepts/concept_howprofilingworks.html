@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="The execution flow of the program is altered so that gprof can obtain data. Consequently, this method of profiling is considered “software-intrusive”. The program flow is altered in two ways: To ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="concept"></meta><meta name="DC.Title" content="How Profiling Works"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="br332285"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>How Profiling Works</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="br332285">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+
+<h1 class="title topictitle1">How Profiling Works</h1>
+
+<div class="body conbody">
+<p class="p">The execution flow of the program is altered so that gprof can obtain
+data. Consequently, this method of profiling is considered “software-intrusive”.
+The program flow is altered in two ways:</p>
+
+<ul class="ul">
+<li class="li">To obtain histogram data, the program is periodically interrupted to
+obtain a sample of its program counter location. This user-defined interval
+is usually measured in milliseconds. The program counter location helps
+identify which function was being executed at that particular sample.
+Taking multiple samples over a long interval of a few seconds helps identify
+which functions execute for the longest time in the program.</li>
+
+<li class="li">To obtain the call graph information, the compiler annotates every
+function call to store the caller and callee information in a data structure.</li>
+
+</ul>
+
+<p class="p">The profiling workflow is described in the following diagram:</p>
+
+<br></br><img class="image" src="../images/x11041.gif" height="262" width="280"></img><br></br></div>
+
+<div class="navfooter"><!----></div>
+</body>
+</html>

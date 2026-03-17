@@ -1,0 +1,105 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Select the Use Encryption check box to encrypt the boot image or any of the particular partitions of the boot image. When you enable encryption, you must specify the key file, source, and part name. ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Using Encryption"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="fo366203"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Using Encryption</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="fo366203">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+
+<h1 class="title topictitle1">Using Encryption</h1>
+
+<div class="body taskbody"><div class="section context">
+<p class="p">Select the Use Encryption check box to encrypt the boot image or any
+of the particular partitions of the boot image.</p>
+
+<br></br><img class="image" src="../images/sdk_t_create_zynq_boot_image-3.png" height="79" width="429"></img><br></br><p class="p">When you enable encryption, you must
+specify the key file, source, and part name.</p>
+
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="fo366203__fo368082" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1. Encryption Settings</span></caption>
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="13.003901170351103%" id="d42637e35">
+                                <p class="p">Setting</p>
+
+                            </th>
+
+                            <th class="entry" valign="top" width="86.9960988296489%" id="d42637e41">
+                                <p class="p">Description</p>
+
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="13.003901170351103%" headers="d42637e35 ">
+                                <p class="p">Key File</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="86.9960988296489%" headers="d42637e41 ">
+                                <p class="p">The AES key file contains the key for encryption.</p>
+
+                                <p class="p">The supported file format for AES key file is *.nky. </p>
+
+                                <p class="p">This key file contains the values like Key 0, StartCBC and HMAC
+                                    values. If the key file is not given, then this tool generates a
+                                    key file and stores in the current working directory, which is
+                                    used for encrypting the partitions.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="13.003901170351103%" headers="d42637e35 ">
+                                <p class="p">Key Store</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="86.9960988296489%" headers="d42637e41 ">
+                                <p class="p">The Key Store is the location where the AES key will be written
+                                    to for decryption purpose.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="13.003901170351103%" headers="d42637e35 ">
+                                <p class="p">Part Name</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="86.9960988296489%" headers="d42637e41 ">
+                                <p class="p">This field specifies the Xilinx part name. This is needed when
+                                    generating an encryption key. The name is copied verbatim to the
+                                    NKY file in the “Device” line.</p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+
+</div>
+
+
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

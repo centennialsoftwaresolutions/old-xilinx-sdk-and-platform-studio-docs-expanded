@@ -1,0 +1,210 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Below are the details about the first stage bootloader (FSBL) parameters. Parameter Description Default Value PS Clock Frequency (MHz) The clock frequency of the Zynq-7000 AP SoC PS (specified in ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="FSBL Parameters"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="sdk_u_fsbl_parameters"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>FSBL Parameters</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="sdk_u_fsbl_parameters">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+
+<h1 class="title topictitle1">FSBL Parameters</h1>
+
+<div class="body">
+<p class="p">Below are the details about the first stage bootloader (FSBL) parameters.</p>
+
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="sdk_u_fsbl_parameters__en433643" class="table" frame="border" border="1" rules="all">
+
+
+
+<thead class="thead" align="left">
+<tr class="row">
+<th class="entry" valign="top" width="97pt" id="d23269e29"><p class="p">Parameter</p>
+</th>
+
+<th class="entry" valign="top" width="NaN%" id="d23269e33"><p class="p">Description</p>
+</th>
+
+<th class="entry" valign="top" width="NaN%" id="d23269e37"><p class="p">Default Value</p>
+</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr class="row">
+<td class="entry" valign="top" width="97pt" headers="d23269e29 "><p class="p">PS Clock Frequency (MHz)</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d23269e33 "><p class="p">The clock frequency of the Zynq-7000 AP SoC
+PS (specified in MHz).</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d23269e37 "><p class="p">666.7 MHz </p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="97pt" headers="d23269e29 "><p class="p">PL Clock Frequency (MHz)</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d23269e33 "><p class="p">The clock frequency of the Zynq-7000 AP SoC
+PL (specified in MHz).</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d23269e37 "><p class="p">100.0 MHz.</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="97pt" headers="d23269e29 "><p class="p">DDR Clock Frequency (MHz)</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d23269e33 "><p class="p">The clock frequency of the DDR memory (specified
+in MHz).</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d23269e37 "><p class="p">533.3 MHz</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="97pt" headers="d23269e29 "><p class="p">DDR Data Path Width</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d23269e33 "><p class="p">The bit width used in the DDR memory data path.
+Possible values are 16 and 32 bits.</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d23269e37 "><p class="p">32 bits</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="97pt" headers="d23269e29 "><p class="p">DDR Port 0 - Enable HPR</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d23269e33 "><p class="p">This enables the usage of high priority reads
+on DDR port 0. This port is used by the CPUs and the ACP via the L2 Cache.</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d23269e37 "><p class="p">Unchecked</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="97pt" headers="d23269e29 "><p class="p">DDR Port 1 - Enable HPR</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d23269e33 "><p class="p">This enable the usage of high priority reads
+on DDR port 1. This port is used by other masters via the central interconnect.</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d23269e37 "><p class="p">Unchecked</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="97pt" headers="d23269e29 "><p class="p">DDR Port 2 - Enable HPR</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d23269e33 "><p class="p">This enables the usage of high priority reads
+on DDR port 2. This port is used by HP2 and HP3.</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d23269e37 "><p class="p">Unchecked</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="97pt" headers="d23269e29 "><p class="p">DDR Port 3 - Enable HPR</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d23269e33 "><p class="p">This enable the usage of high priority reads
+on DDR port 3. This port is used by HP0 and HP1.</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d23269e37 "><p class="p">Unchecked</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="97pt" headers="d23269e29 "><p class="p">HPR/LPR Queue Partitioning</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d23269e33 "><p class="p">Indicates the desired partitioning for high
+and low priority reads in the queue. Note that the queue has a depth
+of 32 read requests. There are four values provided in a drop-down menu.</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d23269e37 "><p class="p">HPR(0)/LPR(32)</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="97pt" headers="d23269e29 "><p class="p">LPR to Critical Priority Level</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d23269e33 "><p class="p">The number of clocks that the LPR queue can
+be starved before it goes critical. Unit: 32 DDR clock cycles. This value
+sets the DDR LPR_reg register [1]. Valid values are between 0 and 2047.</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d23269e37 "><p class="p">2</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="97pt" headers="d23269e29 "><p class="p">HPR to Critical Priority Level</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d23269e33 "><p class="p">The number of clocks that the HPR queue can
+be starved before it goes critical. Unit: 32 DDR clock cycles. This value
+sets the DDR HPR_reg register [1]. Valid values are between 0 and 2047.</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d23269e37 "><p class="p">15</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="97pt" headers="d23269e29 "><p class="p">Write to Critical Priority Level</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d23269e33 "><p class="p">The number of clocks that the write queue can
+be starved before it goes critical. Unit: 32 DDR clock cycles. This value
+sets the DDR WR_reg register [1]. Valid values are between 0 and 2047.</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d23269e37 "><p class="p">2</p>
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+
+</div>
+
+<div class="navfooter"><!----></div>
+</body>
+</html>

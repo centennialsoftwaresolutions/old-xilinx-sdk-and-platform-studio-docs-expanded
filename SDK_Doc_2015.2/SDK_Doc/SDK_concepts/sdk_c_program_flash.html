@@ -1,0 +1,61 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Typically, you can program the following in Flash: Executable and bootloadable images of applications Hardware bitstreams for your FPGA File system images; data files such as sample data and ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="concept"></meta><meta name="DC.Title" content="Programming Flash Overview"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="sdk_c_program_flash"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Programming Flash Overview</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="sdk_c_program_flash">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+
+<h1 class="title topictitle1">Programming Flash Overview</h1>
+
+<div class="body conbody">
+<p class="p">Typically, you can program the following in Flash:</p>
+
+<ul class="ul">
+<li class="li">Executable and bootloadable images of applications</li>
+
+<li class="li">Hardware bitstreams for your FPGA</li>
+
+<li class="li">File system images; data files such as sample data and algorithmic
+tables</li>
+
+</ul>
+
+<p class="p">The first use case is most common. When the processor in your design comes
+out of reset, it starts executing code stored in block RAM at the processor
+reset location. Typically, block RAM is too small (by a few kilobytes
+or so) to accommodate your entire software application image. Therefore,
+you must store your software application image in Flash memory (typically
+in the order of megabytes). A small bootloader is then designed to fit
+in block RAM. Upon reset the bootloader reads the software application
+image from Flash memory, copies it over to larger and more available
+external memory, and then transfers control to your software application.
+The application then continues.</p>
+
+<p class="p">The software application you build from your project is in Executable
+and Linkable Format (ELF). Storing and bootloading the ELF image itself
+is not usually done because bootloading an ELF image increases the complexity
+of the bootloader. Instead, the ELF image is converted to one of the
+common bootloadable image formats, such as SREC (Motorola S-record).
+The bootloader then becomes simple and therefore smaller.</p>
+
+<p class="p">You can program external Common Flash Interface (CFI) compliant parallel
+Flash devices on your board, connected through the external memory controller
+(EMC) IP cores. The programming solution is designed to be generic and
+targets a wide variety of Flash hardware and layouts.</p>
+
+<p class="p">Refer to the "Flash Memory Programming" chapter of the <strong class="ph b">Embedded
+System Tools Reference Manual</strong> (<a class="xref" href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=14_7;d=est_rm.pdf" target="_blank"><strong class="ph b">UG111</strong></a>) for a list of supported
+Flash configurations, a discussion of customizing Flash programming,
+and other information about tool functionality.</p>
+
+</div>
+
+<div class="navfooter"><!----></div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Description Start or Stop reading from JTAG UART. Usage readjtaguart [OPTIONS] Start/Stop reading from the ARM DCC or MDM UART Tx interface. JTAG UART output can be printed on stdout or redirected to ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="readjtaguart"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="sdk_u_xsd_xsdb_streams"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>readjtaguart</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="sdk_u_xsd_xsdb_streams">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+<h1 class="title topictitle1">readjtaguart</h1>
+
+<div class="body">
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="sdk_u_xsd_xsdb_streams__do968832" class="table" frame="border" border="1" rules="all">
+
+
+
+<tbody class="tbody">
+<tr class="row">
+<td class="entry" valign="top" width="79pt"><p class="p"><strong class="ph b">Description</strong></p>
+</td>
+
+<td class="entry" colspan="2" valign="top"><p class="p">Start or Stop reading from JTAG
+UART.</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="79pt"><p class="p"><strong class="ph b">Usage</strong></p>
+</td>
+
+<td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b">readjtaguart [OPTIONS]</strong></samp></td>
+
+<td class="entry" valign="top" width="282pt"><p class="p">Start/Stop reading from the ARM DCC or MDM UART
+Tx interface.</p>
+<p class="p">JTAG UART output can be printed on stdout or redirected
+to a file.</p>
+
+    <div class="note note"><span class="notetitle">Note:</span> Select a MDM or ARM processor target
+before running this command.</div>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" rowspan="3" valign="top" width="79pt"><p class="p"><strong class="ph b">Options</strong></p>
+</td>
+
+<td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b">-start</strong></samp></td>
+
+<td class="entry" valign="top" width="282pt"><p class="p">Start reading the JTAG UART output.</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b">-stop</strong></samp></td>
+
+<td class="entry" valign="top" width="282pt"><p class="p">Stop reading the JTAG UART output.</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b">-handle &lt;file-handle&gt;</strong></samp></td>
+
+<td class="entry" valign="top" width="282pt"><p class="p">Specify the file handle to which the data should
+be redirected. If no file handle is given, data is printed on stdout.</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" rowspan="3" valign="top" width="79pt"><p class="p"><strong class="ph b">Examples</strong></p>
+</td>
+
+<td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b">readjtaguart</strong></samp></td>
+
+<td class="entry" valign="top" width="282pt"><p class="p">Start reading from the JTAG UART and print the
+output on stdout.</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b">set fp [open test.log w]</strong></samp><p class="p"><samp class="ph codeph"><strong class="ph b">readjtaguart
+    -start -handle $fp</strong></samp></p>
+</td>
+
+<td class="entry" valign="top" width="282pt"><p class="p">Start reading from the JTAG UART and print the
+output to test.log.</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b">readjtaguart -stop</strong></samp></td>
+
+<td class="entry" valign="top" width="282pt"><p class="p">Stop reading from the JTAG UART.</p>
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+</div>
+
+<div class="navfooter"><!----></div>
+</body>
+</html>
