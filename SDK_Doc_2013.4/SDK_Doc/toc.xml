@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+<!-- Defines topics that will be inserted under the Xilinx Software Development Kit User Guide menu-->
+
+<toc id="xsdk" label="Xilinx Software Development Kit User Guide" topic="getting_started/sdk_getting_started.htm">
+
+	<topic label="Getting Started" href="getting_started/sdk_getting_started.htm">
+		<link toc="topics_Getting_Started.xml" />
+	</topic>	
+	<topic label="Concepts" href="concepts/sdk_o_overview_sdk.htm">
+		<link toc="topics_Concepts.xml" />
+	</topic>
+	<topic label="Tasks"  href="tasks/sdk_o_tasks.htm">
+		<link toc="topics_Tasks.xml" />
+	</topic>
+	<topic label="Reference"  href="reference/sdk_o_ref.htm">
+		<link toc="topics_Reference.xml" />
+	</topic>
+	<!-- <topic label="Before you begin"  href="concepts/sdk_c_before_you_begin.htm"/> -->
+	<topic label="What's new"  href="concepts/sdk_c_whatsnew.htm"/>
+	<topic label="FAQ and Miscellaneous topics" href="concepts/sdk_debugging_faq.htm">
+		<!--
+		<topic label="SDK FAQ" href="concepts/sdk_faq.htm"/>
+		<topic label="Debugging FAQ" href="concepts/sdk_debugging_faq.htm"/>
+		-->
+        </topic>
+ <topic href="reference/sdk_knownissues.htm" label="Known Issues and Caveats">
+ </topic>
+ <topic href="reference/sdk_project_migration.htm" label="Migrating Projects from older versions of SDK">
+ </topic>
+
+</toc>

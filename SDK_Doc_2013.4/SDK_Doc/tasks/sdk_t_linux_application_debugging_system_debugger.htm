@@ -1,0 +1,183 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Linux Application Debugging with System Debugger</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50434211_pgfId-335529"></A>Linux Application Debugging with System Debugger</H1>
+<OL>
+<LI>
+<A NAME="50434211_pgfId-372906"></A>Launch SDK.</LI>
+<LI>
+<A NAME="50434211_pgfId-372907"></A>Create a Linux application.</LI>
+<LI>
+<A NAME="50434211_pgfId-372908"></A>Select the application you want to debug.</LI>
+<LI>
+<A NAME="50434211_pgfId-372909"></A>Select <B>
+Run &gt; Debug Configurations.</B>
+</LI>
+<LI>
+<A NAME="50434211_pgfId-372933"></A>Click <B>
+Xilinx C/C++ application (System Debugger)</B>
+ to create a new configuration.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_linux_application_debugging_system_debugger-1.jpg"></center>
+</DIV>
+<P>
+<A NAME="50434211_pgfId-372956"></A>&nbsp;</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_linux_application_debugging_system_debugger-2.jpg"></center>
+</DIV>
+<P>
+<A NAME="50434211_pgfId-374603"></A>In the Debug Configuration window:</P>
+<OL>
+<LI>
+<A NAME="50434211_pgfId-422796"></A>Click the <B>
+Target Setup</B>
+ tab.</LI>
+<LI>
+<A NAME="50434211_pgfId-374443"></A>From the <B>
+Debug Type</B>
+ drop-down list, select <B>
+Linux Application Debug</B>
+.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_linux_application_debugging_system_debugger-3.jpg"></center>
+</DIV>
+<OL>
+<LI value=3>
+<A NAME="50434211_pgfId-372940"></A>Provide the Linux host name or IP address in the <B>
+Host Name</B>
+ field.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_linux_application_debugging_system_debugger-4.jpg"></center>
+</DIV>
+<OL>
+<LI value=4>
+<A NAME="50434211_pgfId-374676"></A>By default, tcf-agent runs on the 1534 port on the Linux. If you are running tcf-agent on a different port, update the <B>
+Port</B>
+ field with the correct port number.</LI>
+<LI>
+<A NAME="50434211_pgfId-374677"></A>In the Application Tab, click <B>
+Browse</B>
+ and select the project name. SDK automatically fills the information in the application.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_linux_application_debugging_system_debugger-5.jpg"></center>
+</DIV>
+<OL>
+<LI value=6>
+<A NAME="50434211_pgfId-374791"></A>In the <B>
+Remote File Path</B>
+ field, specify the path where you want to download the application in Linux.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_linux_application_debugging_system_debugger-6.jpg"></center>
+</DIV>
+<OL>
+<LI value=7>
+<A NAME="50434211_pgfId-373570"></A>If your application is expecting some arguments, specify them in the <B>
+Arguments</B>
+ tab.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_linux_application_debugging_system_debugger-7.jpg"></center>
+</DIV>
+<OL>
+<LI value=8>
+<A NAME="50434211_pgfId-375130"></A>If your application is expecting to set some environment variables, specify them in the <B>
+Environments</B>
+ tab.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_linux_application_debugging_system_debugger-8.jpg"></center>
+</DIV>
+<OL>
+<LI value=9>
+<A NAME="50434211_pgfId-375134"></A>Click the <B>
+Debug</B>
+ button.<BR>
+A separate console automatically opens for process standard I/O operations.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_linux_application_debugging_system_debugger-9.jpg"></center>
+</DIV>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_linux_application_debugging_system_debugger-10.jpg"></center>
+</DIV>
+<P>
+<A NAME="50434211_pgfId-373135"></A>Click the <B>
+Terminate</B>
+ button to terminate the application.</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_linux_application_debugging_system_debugger-11.jpg"></center>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50434211_pgfId-375254"></A>Assumptions</H5>
+<UL>
+<LI>
+<A NAME="50434211_pgfId-375255"></A>tcf-agent, which is required to communicate with the system debugger, is running on Linux.</LI>
+<LI>
+<A NAME="50434211_pgfId-375298"></A>Proper network communication is established between the host and Linux.</LI>
+</UL>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50434211_pgfId-375258"></A>FAQ</H5>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50434211_pgfId-375522"></A>My application already exists in the Linux target. How can I tell system debugger to use my existing application, instead of downloading the application?</H6>
+<OL>
+<LI>
+<A NAME="50434211_pgfId-375261"></A>In the Application tab of System Debugger, leave the <B>
+Project Name</B>
+ and <B>
+Local File Path</B>
+ fields empty.</LI>
+<LI>
+<A NAME="50434211_pgfId-375562"></A>In the <B>
+Remote File Path</B>
+ field, specify the remote application path and click the <B>
+Debug</B>
+ button.<BR>
+System debugger loads the specified application.</LI>
+</OL>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50434211_pgfId-375681"></A>I want to debug all the applications that are running on my Linux target. How can I achieve it?</H6>
+<OL>
+<LI>
+<A NAME="50434211_pgfId-375896"></A>In the Application tab of System Debugger, leave the <B>
+Project Name</B>
+, <B>
+Local File Path</B>
+, and <B>
+Remote File Path</B>
+ fields empty.</LI>
+<LI>
+<A NAME="50434211_pgfId-375897"></A>Click the <B>
+Debug</B>
+ button.<BR>
+System debugger shows all processes that are running on the target.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_linux_application_debugging_system_debugger-12.jpg"></center>
+</DIV>
+<P>
+<A NAME="50434211_pgfId-373795"></A>&nbsp;</P>
+<P>
+<A NAME="50434211_pgfId-373012"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

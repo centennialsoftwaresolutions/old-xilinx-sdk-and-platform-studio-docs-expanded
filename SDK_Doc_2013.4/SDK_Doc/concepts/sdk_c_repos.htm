@@ -1,0 +1,64 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Software Repositories</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50434061_pgfId-294539"></A><A NAME="50434061_86840"></A>Software Repositories</H1>
+<P>
+<A NAME="50434061_pgfId-332244"></A>A software repository is a directory where you can install third-party software components, as well as custom copies of drivers, libraries, and operating systems. When you add a software repository, SDK automatically infers all the components contained with the repository and makes them available for use in its environment.</P>
+<P>
+<A NAME="50434061_pgfId-332246"></A>Your SDK workspace can point to multiple software repositories. The scope of the software repository can be global (available across all workspaces) or local (available only to the current workspace). Components found in any local software repositories added to an SDK workspace take precedence over identical components (if any) found in the global software repositories, which in turn take higher precedence over identical components found in the SDK installation.</P>
+<P>
+<A NAME="50434061_pgfId-332248"></A>An SDK repository requires a specific organization of the components. The diagram below gives an overview of how an SDK repository can be structured. Software components in your repository must belong to one of three different directories:</P>
+<OL>
+<LI>
+<A NAME="50434061_pgfId-332250"></A>drivers: Used to hold device drivers.</LI>
+<LI>
+<A NAME="50434061_pgfId-332333"></A>sw_services: Used to hold libraries.</LI>
+<LI>
+<A NAME="50434061_pgfId-332341"></A>bsp: Used to hold software platforms and board support packages.</LI>
+</OL>
+<P>
+<A NAME="50434061_pgfId-332254"></A>Within each directory, sub-directories containing the individual software components must be present.</P>
+<P>
+<A NAME="50434061_pgfId-332255"></A>&nbsp;</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/x11040.gif">
+</DIV>
+<P>
+<A NAME="50434061_pgfId-332258"></A>The directory structure of an example repository is shown below. Name the top level repository directory to indicate its function in your development flow.</P>
+<P>
+<A NAME="50434061_pgfId-332259"></A>&nbsp;</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/x11039.gif">
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50434061_pgfId-332262"></A>Related Concepts</H5>
+<P>
+<A NAME="50434061_pgfId-332263"></A><A HREF="sdk_c_bsp_internal.htm#50434080_86840" CLASS="XRef">Board Support Packages (SDK)</A></P>
+<P>
+<A NAME="50434061_pgfId-332264"></A><A HREF="sdk_c_bsp_external.htm#50434049_86840" CLASS="XRef">Board Support Packages (External Tools)</A></P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50434061_pgfId-332266"></A>Related Tasks</H5>
+<P>
+<A NAME="50434061_pgfId-332267"></A><A HREF="../tasks/sdk_t_repos.htm#50434344_86840" CLASS="XRef">Setting Up Software Repositories</A></P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50434061_pgfId-332269"></A>Related Reference</H5>
+<P>
+<A NAME="50434061_pgfId-306436"></A><A HREF="../reference/sdk_u_sw_repos.htm#50434240_38306" CLASS="XRef">Software Repositories Dialog Box</A></P>
+</DIV>
+</DIV>
+<P>
+<A NAME="50434406_pgfId-331993"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</BODY>
+</HTML>

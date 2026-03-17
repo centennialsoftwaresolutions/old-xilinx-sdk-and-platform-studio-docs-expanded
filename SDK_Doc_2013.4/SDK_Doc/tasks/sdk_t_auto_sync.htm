@@ -1,0 +1,79 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Monitoring Hardware Project Changes</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50434313_pgfId-294539"></A><A NAME="50434313_54423"></A>Monitoring Hardware Project Changes</H1>
+<P>
+<A NAME="50434313_pgfId-332403"></A>If you are developing both the hardware (using XPS/Vivado&#174;) and software at the same time, you might want to use SDK to monitor any change to the original hardware specification file that is exported from XPS/Vivado. The hardware project in SDK maintains the link to the original hardware specification file and monitors the file for changes that affect software projects for that hardware. This includes changes such as:</P>
+<UL>
+<LI>
+<A NAME="50434313_pgfId-332405"></A>Addition or removal of processors or peripherals</LI>
+<LI>
+<A NAME="50434313_pgfId-332406"></A>Changes to the processor memory map</LI>
+<LI>
+<A NAME="50434313_pgfId-332407"></A>Changes to the hardware component parameters</LI>
+</UL>
+<P>
+<A NAME="50434313_pgfId-332409"></A>When a change is made to the original hardware specification file used by the hardware project, SDK opens the Warning! Hardware Specification File Change dialog box.</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_auto_sync-1.jpg"></center>
+</DIV>
+<P>
+<A NAME="50434313_pgfId-332411"></A>Click <B>
+Yes</B>
+ to update your project. SDK does the following:</P>
+<UL>
+<LI>
+<A NAME="50434313_pgfId-332413"></A>Updates the hardware project with the new hardware specification file, bitstream, and BMM file.</LI>
+<LI>
+<A NAME="50434313_pgfId-332414"></A>If a processor sub-system was removed from the hardware design, SDK closes the software projects, both board support package and referenced application projects, that are targeted to that processor.</LI>
+<LI>
+<A NAME="50434313_pgfId-332415"></A>Updates the board support package project with changes in the hardware processor sub-system. This includes removing drivers for removed peripherals and adding default drivers for new peripherals.</LI>
+<LI>
+<A NAME="50434313_pgfId-332416"></A>Re-builds all the software projects related to the hardware project.</LI>
+</UL>
+<P>
+<A NAME="50434313_pgfId-332418"></A>If you do not want to update your SDK projects, click <B>
+No.</B>
+ The source hardware specification file will no longer be monitored for changes. To re-enable monitoring, select <B>
+Window &gt; Preferences &gt; Xilinx SDK &gt; Hardware Specification</B>
+ and unselect the <B>
+Do not monitor the original source locations of hardware specification file for changes</B>
+ check box.</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_auto_sync-2.jpg"></center>
+</DIV>
+<P>
+<A NAME="50434313_pgfId-332420"></A>If you want SDK to automatically update your SDK projects without warning you when the source hardware specification file changes, check the <B>
+Do not show a warning or ask for confirmation on hardware specification file changes</B>
+ check box in the Preferences dialog box.</P>
+<P>
+<A NAME="50434313_pgfId-332422"></A>If the source hardware specification file was moved or removed from the original location or if the SDK projects were moved to another machine where the source hardware specification file is no longer accessible, SDK stops monitoring the source hardware specification file and removes the internal association of the SDK hardware project to the source hardware specification file.</P>
+<P>
+<A NAME="50434313_pgfId-332424"></A>To associate the source hardware specification file with a hardware project and restart monitoring of changes, right-click the hardware project and select <B>
+Change Hardware Specification File.</B>
+ In the Change Hardware Platform Specification dialog box, specify the source hardware specification file.</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_auto_sync-3.jpg"></center>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50434313_pgfId-332426"></A>Related Concepts</H5>
+<P>
+<A NAME="50434313_pgfId-332427"></A><A HREF="../concepts/sdk_c_hwcomponents.htm#50434074_86112" CLASS="XRef">Embedded Hardware Components</A></P>
+<P>
+<A NAME="50434313_pgfId-332428"></A><A HREF="../concepts/sdk_c_hwspec.htm#50434073_93340" CLASS="XRef">Hardware Platform Specification</A></P>
+<P>
+<A NAME="50434313_pgfId-306566"></A>&nbsp;</P>
+<P>
+<A NAME="50434313_pgfId-332610"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

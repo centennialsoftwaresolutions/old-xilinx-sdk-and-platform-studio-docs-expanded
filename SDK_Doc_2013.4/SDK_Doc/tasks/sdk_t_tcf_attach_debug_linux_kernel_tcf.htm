@@ -1,0 +1,180 @@
+﻿<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Attach and Debug Linux Kernel Using Xilinx System Debugger</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50434353_pgfId-294539"></A><A NAME="50434353_83586"></A>Attach and Debug Linux Kernel Using Xilinx System Debugger</H1>
+<P>
+<A NAME="50434353_pgfId-332439"></A>It is possible to debug the Linux Kernel using the Xilinx&#174; System Debugger. Follow the steps below to attach to the Linux Kernel running on the target and to debug the source code.</P>
+<OL>
+<LI>
+<A NAME="50434353_pgfId-332441"></A>Compile the kernel source using the following configuration options:</LI>
+</OL>
+<P CLASS="Body2">
+<A NAME="50434353_pgfId-332443"></A><B>
+CONFIG_DEBUG_KERNEL=y</B>
+</P>
+<P CLASS="Body2">
+<A NAME="50434353_pgfId-332444"></A><B>
+CONFIG_DEBUG_INFO=y</B>
+</P>
+<OL>
+<LI value=2>
+<A NAME="50434353_pgfId-332445"></A>Launch SDK.</LI>
+<LI>
+<A NAME="50434353_pgfId-332447"></A>Click <B>
+Window &gt; Open Perspective &gt; Debug.</B>
+</LI>
+<LI value=4>
+<A NAME="50434353_pgfId-332452"></A>Click <B>
+Run &gt; Debug Configurations.</B>
+</LI>
+<LI value=5>
+<A NAME="50434353_pgfId-332458"></A>In the Debug Configurations dialog box, select <B>
+Xilinx C/C++ application </B>
+and click the <B>
+New</B>
+ button:</LI>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_tcf_attach_debug_linux_kernel_tcf-1.jpg" ALIGN="BASELINE">
+</OL>
+<OL>
+<LI value=6>
+<A NAME="50434353_pgfId-403560"></A>Name the configuration <B>
+Zynq_Linux_Kernel_Debug</B>
+.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_tcf_attach_debug_linux_kernel_tcf-2.jpg"></center>
+</DIV>
+<OL>
+<LI value=7>
+<A NAME="50434353_pgfId-403564"></A>Debugging begins, with the processors in the running state, as shown below.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_tcf_attach_debug_linux_kernel_tcf-3.jpg"></center>
+</DIV>
+<OL>
+<LI value=8>
+<A NAME="50434353_pgfId-403568"></A>Click the <B>
+Pause</B>
+ button to suspend the processor:</LI>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_tcf_attach_debug_linux_kernel_tcf-4.jpg" ALIGN="BASELINE">
+<BR>
+Debug starts in the Disassembly mode.</OL>
+<OL>
+<LI value=9>
+<A NAME="50434353_pgfId-332946"></A>Add the vmlinux symbol file:</LI>
+<OL>
+<LI type="a">
+<A NAME="50434353_pgfId-332947"></A>Right click ARM Cortex-A9 MPCore#0 and select <B>
+Symbol Files.</B>
+</LI>
+<LI type="a">
+<A NAME="50434353_pgfId-332948"></A>Click <B>
+Add.</B>
+</LI>
+<LI type="a">
+<A NAME="50434353_pgfId-332478"></A>Add the vmlinux symbol file and click <B>
+OK.</B>
+</LI>
+<LI type="a">
+<A NAME="50434353_pgfId-413547"></A>You must set up “Source Lookup” if you built the code on a Linux machine and try to run the debugger on Windows.</LI>
+</OL>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_tcf_attach_debug_linux_kernel_tcf-5.jpg"></center>
+</DIV>
+<OL>
+<LI value=10>
+<A NAME="50434353_pgfId-332487"></A>Select the debug configuration <B>
+Zynq_Linux_Kernel_Debug,</B>
+ then right-click it and select <B>
+Edit Source Lookup.</B>
+</LI>
+<LI>
+<A NAME="50434353_pgfId-403758"></A>Click <B>
+Add.</B>
+</LI>
+</OL>
+<P CLASS="Anchor">
+<A NAME="50434353_pgfId-332496"></A>&nbsp;</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_tcf_attach_debug_linux_kernel_tcf-6.jpg"></center>
+</DIV>
+<OL>
+<LI value=12>
+<A NAME="50434353_pgfId-333041"></A>Select <B>
+Path Mapping</B>
+ from the <B>
+Add Source </B>
+dialog box.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_tcf_attach_debug_linux_kernel_tcf-7.jpg"></center>
+</DIV>
+<OL>
+<LI value=13>
+<A NAME="50434353_pgfId-332501"></A>Add the Compilation path and local file system path by clicking <B>
+Add.</B>
+</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_tcf_attach_debug_linux_kernel_tcf-8.jpg"></center>
+</DIV>
+<OL>
+<LI value=14>
+<A NAME="50434353_pgfId-332504"></A>Successful source lookup takes you to the source code debug.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_tcf_attach_debug_linux_kernel_tcf-9.jpg"></center>
+</DIV>
+<OL>
+<LI value=15>
+<A NAME="50434353_pgfId-332508"></A>You can add function breakpoints by clicking this button in the Breakpoints view:</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_tcf_attach_debug_linux_kernel_tcf-10.jpg"></center>
+</DIV>
+<OL>
+<LI value=16>
+<A NAME="50434353_pgfId-332513"></A>Add a breakpoint at the start_kernel function.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_tcf_attach_debug_linux_kernel_tcf-11.jpg"></center>
+</DIV>
+<OL>
+<LI value=17>
+<A NAME="50434353_pgfId-332520"></A>Click the reset button. The Zynq&#174;-7000 processor boots from the SD card and stops at the beginning of the kernel initialization.<BR>
+<B>
+Note: </B>
+The Linux kernel is always compiled with full optimizations and in-lining enabled. Therefore:</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_tcf_attach_debug_linux_kernel_tcf-12.jpg"></center>
+</DIV>
+<UL>
+<UL>
+<LI>
+<A NAME="50434353_pgfId-332523"></A>Stepping through code might not work as expected due to the possible reordering of some instructions.</LI>
+<LI>
+<A NAME="50434353_pgfId-332524"></A>Some variables might be optimized out by the compiler and therefore not be available for the debugger.</LI>
+</UL>
+</UL>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50434353_pgfId-332526"></A>Related Tasks</H5>
+<P>
+<A NAME="50434353_pgfId-332527"></A><A HREF="sdk_t_tcf_debugging.htm#50434354_57732" CLASS="XRef">Debugging with the System Debugger</A></P>
+<P>
+<A NAME="50434353_pgfId-332528"></A>&nbsp;</P>
+<P>
+<A NAME="50434353_pgfId-306566"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

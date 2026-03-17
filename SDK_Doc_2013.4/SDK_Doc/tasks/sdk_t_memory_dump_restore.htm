@@ -1,0 +1,84 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Memory Dump and Restore Using the System Debugger</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50434213_pgfId-335529"></A>Memory Dump and Restore Using the System Debugger</H1>
+<P>
+<A NAME="50434213_pgfId-433071"></A>The SDK Memory window does not have the ability to load or dump memory contents to or from a file. </P>
+<P>
+<A NAME="50434213_pgfId-433194"></A>You can use the <B>
+Dump/Restore Data File</B>
+ function to dump data file contents to memory and restore memory contents to a data file. To do this:</P>
+<OL>
+<LI>
+<A NAME="50434213_pgfId-335919"></A>Launch the hardware server, if it is not already running.</LI>
+<LI>
+<A NAME="50434213_pgfId-367882"></A>Select <B>
+Xilinx Tools &gt; Dump/Restore Data File.</B>
+</LI>
+<LI>
+<A NAME="50434213_pgfId-335926"></A>The Dump/Restore Data File dialog box opens.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_memory_dump_restore-1.jpg"></center>
+</DIV>
+<OL>
+<LI value=4>
+<A NAME="50434213_pgfId-335992"></A>Click <B>
+Select</B>
+ to select a Processor from the Select Peer and Context window.<BR>
+GDB creates a Peer with the details of the JTAG settings you specified.<BR>
+For this example, SDK creates a Peer named SDK Hardware Server. </LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_memory_dump_restore-2.jpg"></center>
+</DIV>
+<OL>
+<LI value=5>
+<A NAME="50434213_pgfId-433751"></A>Select the peer corresponding to your JTAG settings from the <B>
+Peers</B>
+ list (in this case, SDK Hardware Server), and then select the related processor, <B>
+ARM Cortex-A9 MPCore #0,</B>
+ from the APU Context.<BR>
+<B>
+Note:</B>
+ Select the processor context, not the device context. In the example here, the processor context is <B>
+APU</B>
+.</LI>
+<LI>
+<A NAME="50434213_pgfId-368202"></A>Click <B>
+OK</B>
+ to select the processor.</LI>
+<LI>
+<A NAME="50434213_pgfId-368281"></A>Set the location of the data file to restore from or dump to.</LI>
+<LI>
+<A NAME="50434213_pgfId-367957"></A>Select either the <B>
+Restore Memory</B>
+ or <B>
+Dump Memory</B>
+ option button.</LI>
+<LI>
+<A NAME="50434213_pgfId-336216"></A>In the <B>
+Start</B>
+ field, specify the starting memory address from which you want to dump or restore memory.</LI>
+<LI>
+<A NAME="50434213_pgfId-336331"></A>In the Size (in bytes) field, specify the number of bytes to be dumped or restored.</LI>
+<LI>
+<A NAME="50434213_pgfId-336438"></A>Click <B>
+OK.<BR>
+</B>
+SDK dumps or restores data from the starting address specified.</LI>
+</OL>
+<P>
+<A NAME="50434213_pgfId-335243"></A>&nbsp;</P>
+<P>
+<A NAME="50434213_pgfId-336555"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</BODY>
+</HTML>

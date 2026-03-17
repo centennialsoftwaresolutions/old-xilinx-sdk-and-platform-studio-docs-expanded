@@ -1,0 +1,151 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Run Configuration Settings</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50434347_pgfId-294539"></A><A NAME="50434347_62044"></A>Run Configuration Settings</H1>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50434347_pgfId-332660"></A>Standalone Application</H5>
+<OL>
+<LI>
+<A NAME="50434347_pgfId-332661"></A>In the <B>
+Name</B>
+ field, type a descriptive name for the launch configuration.</LI>
+<LI>
+<A NAME="50434347_pgfId-332662"></A>In the <B>
+Main</B>
+ tab, set the following fields.<BR>
+<B>
+Note: </B>
+If you opened this dialog box by right-clicking on an application name and selecting <B>
+Run &gt; Run Configurations,</B>
+ these fields are automatically populated for that application.</LI>
+<OL>
+<LI type="a">
+<A NAME="50434347_pgfId-332664"></A>In the <B>
+Project</B>
+ field, type the name of the project containing the application that you want to run, or browse to it.</LI>
+<LI type="a">
+<A NAME="50434347_pgfId-333195"></A>In the <B>
+C/C++ Application</B>
+ field, type the name of the executable that you want to run. You can also search for the file or browse to it.</LI>
+</OL>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_run_config-1.jpg"></center>
+</DIV>
+<OL>
+<LI value=3>
+<A NAME="50434347_pgfId-333199"></A>In the <B>
+Device Initialization</B>
+ tab, specify initialization tasks as per requirement</LI>
+<OL>
+<LI type="a">
+<A NAME="50434347_pgfId-332673"></A>In the <B>
+Reset Type</B>
+ drop-down list, select the reset type. </LI>
+<LI type="a">
+<A NAME="50434347_pgfId-332674"></A>If your program is in Flash and you do not want to download the ELF program file, select <B>
+Do not download program to memory.</B>
+</LI>
+<LI type="a">
+<A NAME="50434347_pgfId-332676"></A>If you want to download any data files, add the data files to the download list, along with address at which you want to download them. </LI>
+</OL>
+<LI>
+<A NAME="50434347_pgfId-332678"></A>If required you can also use the console as STDIO terminal. In STDIO Connection Tab, select <B>
+connect STDIO to Console,</B>
+ and set the Port and BAUD Rate.</LI>
+<LI>
+<A NAME="50434347_pgfId-333292"></A>Click <B>
+Apply</B>
+ to save the settings.</LI>
+<LI>
+<A NAME="50434347_pgfId-333297"></A>Click <B>
+Run.</B>
+</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_run_config-2.jpg"></center>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50434347_pgfId-332687"></A>Linux Application</H5>
+<P>
+<A NAME="50434347_pgfId-333463"></A>First, do the following in the <B>
+Main</B>
+ tab:</P>
+<OL>
+<LI>
+<A NAME="50434347_pgfId-332689"></A>In the <B>
+Project</B>
+ field, type the name of the project containing the application that you want to run, or browse to it.</LI>
+<LI>
+<A NAME="50434347_pgfId-333395"></A>In the <B>
+C/C++ Application</B>
+ field, type the name of the executable that you want to run. You can also search for the file or browse to it.</LI>
+<LI>
+<A NAME="50434347_pgfId-333405"></A>In connection field, select <B>
+New &gt; General &gt; SSH Only</B>
+ and click <B>
+Next.</B>
+</LI>
+<OL>
+<LI type="a">
+<A NAME="50434347_pgfId-333435"></A>In the New connection window, enter the Target board IP in the <B>
+Host name</B>
+ field</LI>
+<LI type="a">
+<A NAME="50434347_pgfId-332694"></A>Type the connection name and description in the respective fields.</LI>
+<LI type="a">
+<A NAME="50434347_pgfId-333504"></A>Click <B>
+Finish</B>
+ to create the connection.</LI>
+</OL>
+</OL>
+<P CLASS="Body2">
+<A NAME="50434347_pgfId-333513"></A>The Connection field now shows the Target IP.</P>
+<OL>
+<LI value=4>
+<A NAME="50434347_pgfId-332697"></A>In the <B>
+Remote Absolute File Path for C/C++ Application</B>
+ field, type the path in Linux Target that contains the location of the Application to be loaded and run.</LI>
+<LI>
+<A NAME="50434347_pgfId-332698"></A>In the <B>
+Commands to execute before application</B>
+ field, type the commands that need to be executed before running the application.<BR>
+For example, as shown in the figure below, the application FastCorner_sdk.elf uses OpenCV libraries Path, which is set in this field.</LI>
+<LI>
+<A NAME="50434347_pgfId-332701"></A>Click <B>
+Apply</B>
+ to save the settings.</LI>
+<LI>
+<A NAME="50434347_pgfId-333666"></A>Click <B>
+Run.</B>
+ </LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_run_config-3.jpg"></center>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50434347_pgfId-333365"></A>Related Concepts</H5>
+<P>
+<A NAME="50434347_pgfId-332563"></A><A HREF="../concepts/sdk_c_over_run.htm#50434069_94097" CLASS="XRef">Run Overview</A></P>
+<P>
+<A NAME="50434347_pgfId-332568"></A><A HREF="../concepts/sdk_c_over_profile.htm#50434070_13100" CLASS="XRef">Profile Overview</A></P>
+<P>
+<A NAME="50434347_pgfId-332431"></A>&nbsp;</P>
+<P>
+<A NAME="50434347_pgfId-306566"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>
