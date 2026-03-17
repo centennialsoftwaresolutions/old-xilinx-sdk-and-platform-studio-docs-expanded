@@ -41,7 +41,7 @@ Provides searchable access to legacy Xilinx SDK and Platform Studio documentatio
 - [SDK_Doc_2014.2](SDK_Doc_2014.2/SDK_Doc)
 - [SDK_Doc_2014.3](SDK_Doc_2014.3/SDK_Doc)
 - [SDK_Doc_2014.4](SDK_Doc_2014.4/SDK_Doc)
-- [SDK_Doc_2014.5](SDK_Doc_2014.5/SDK_Doc)
+- [SDK_Doc_2015.1](SDK_Doc_2015.1/SDK_Doc)
 
 # Why?
 
