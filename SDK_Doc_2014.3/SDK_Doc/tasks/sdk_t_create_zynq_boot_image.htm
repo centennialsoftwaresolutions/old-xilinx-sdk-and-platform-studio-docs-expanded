@@ -1,0 +1,633 @@
+﻿<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Creating a Zynq Boot Image for an Application</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50655509_pgfId-294539"></A>Creating a Zynq Boot Image for an Application</H1>
+<P>
+<A NAME="50655509_pgfId-332359"></A>This topic describes generating a Zynq&#174; Boot Image for an application.</P>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655509_pgfId-364722"></A>Opening the Create Zynq Boot Image Dialog Box</H5>
+<OL>
+<LI>
+<A NAME="50655509_pgfId-332361"></A>Ensure that the FSBL project and C application project are created in the SDK workspace and built so that corresponding ELF files are available.<BR>
+<B>
+Note:</b> For more information, refer to <A HREF="sdk_t_project_creation_zynq_fsbl.htm#50655526_38123" CLASS="XRef">Creating a New Zynq FSBL Application Project</A> and <A HREF="sdk_t_create_new_appln.htm#50655508_84561" CLASS="XRef">Creating a C or C++ Project</A>.</LI>
+<LI>
+<A NAME="50655509_pgfId-332362"></A>Select the application project in the <B>
+Project Navigator</B>
+ or <B>
+C/C++ Projects</B>
+ view and right-click <B>
+Create Boot Image.</B>
+<BR>
+Alternately, click <B>
+Xilinx Tools &gt; Create Boot Image.</B>
+<BR>
+The Create Zynq Boot Image dialog box appears with default values preselected from the context of the selected C project.<BR>
+Note the following:</LI>
+<UL>
+<LI>
+<A NAME="50655509_pgfId-332698"></A>When you run Create Boot Image the first time for an application, the dialog box is pre-populated with paths to the selected project ELF file, the FSBL ELF file, and the bitstream for the selected hardware (if it exists in hardware project).</LI>
+<LI>
+<A NAME="50655509_pgfId-332367"></A>If a boot image has previously run for the application, the dialog box is pre-populated with previously used values as per the configuration file present in the project that is in the bif folder.</LI>
+<LI>
+<A NAME="50655509_pgfId-332368"></A>You can add new partitions to the boot image by clicking Add and specifying the location of the required data files, if any.</LI>
+<LI>
+<A NAME="50655509_pgfId-332369"></A>Specify offset, alignment, and allocation values for partitions in the boot image, if applicable.</LI>
+<LI>
+<A NAME="50655509_pgfId-364627"></A>The output file path is set to the bif folder under the selected application project by default.</LI>
+</UL>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_create_zynq_boot_image-1.jpg"></center>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655509_pgfId-364404"></A>Using the Create Zynq Boot Image Dialog Box</H5>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50655509_pgfId-370688"></A>Working with Boot Image Format Files</H6>
+<P>
+<A NAME="50655509_pgfId-364962"></A>The utility is driven by a configuration file known as the Boot Image Format (BIF) file, with a file extension of *.bif. The BIF file lists the input files to the boot image, along with optional attributes for addressing and optional encryption, authentication or checksums. </P>
+<P>
+<A NAME="50655509_pgfId-364963"></A>There are two options for working with BIF files:</P>
+<UL>
+<LI>
+<A NAME="50655509_pgfId-364964"></A>Create a new BIF file: A new BIF file is created at the specified path with the given name. Select this option and use the BIF file path field to specify the location to which SDK will save the BIF file when it is created.</LI>
+<LI>
+<A NAME="50655509_pgfId-365031"></A>Import from an existing BIF file: Specify an existing BIF file to import. SDK populates the fields with the values specified in the BIF file. Select this option and use the BIF file path field to specify the location of the existing BIF file.</LI>
+</UL>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50655509_pgfId-365643"></A>Using Authentication</H6>
+<P>
+<A NAME="50655509_pgfId-365675"></A>Select the Use Authentication check box to authenticate the boot image or any of the partitions of the boot image.</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_create_zynq_boot_image-2.jpg"></center>
+</DIV>
+<P>
+<A NAME="50655509_pgfId-365804"></A>When using authentication, you must specify the authentication keys. The following authentication keys are available:</P>
+<TABLE BORDER="1">
+<CAPTION>
+<H6 CLASS="TableTitle">
+<A NAME="50655509_pgfId-366382"></A>Authentication Keys</H6>
+</CAPTION>
+<TR>
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellHeading">
+<A NAME="50655509_pgfId-366390"></A>Key</P>
+</TH>
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellHeading">
+<A NAME="50655509_pgfId-366392"></A>Name</P>
+</TH>
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellHeading">
+<A NAME="50655509_pgfId-366394"></A>Description</P>
+</TH>
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellHeading">
+<A NAME="50655509_pgfId-366396"></A>Supported File Formats</P>
+</TH>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-366398"></A>PPK</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-366400"></A>Primary Public Key</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-366402"></A>This key is used to authenticate a partition. </P>
+<P>
+<A NAME="50655509_pgfId-366940"></A>It should always be specified when authenticating a partition.</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-366892"></A>*.txt</P>
+<P>
+<A NAME="50655509_pgfId-366721"></A>*.pem</P>
+<P>
+<A NAME="50655509_pgfId-366728"></A>*.pub</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-366406"></A>SPK</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-366408"></A>Secondary Public Key</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-366410"></A>This key is used to authenticate a partition. </P>
+<P>
+<A NAME="50655509_pgfId-366936"></A>It should always be specified when authenticating a partition.</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-366917"></A>*.txt</P>
+<P>
+<A NAME="50655509_pgfId-366738"></A>*.pem</P>
+<P>
+<A NAME="50655509_pgfId-366412"></A>*.pub</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-366414"></A>PSK</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-366416"></A>Primary Secret Key</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-366418"></A>This key is used to sign a partition. </P>
+<P>
+<A NAME="50655509_pgfId-366943"></A>It is not mandatory.</P>
+<P>
+<A NAME="50655509_pgfId-366968"></A>There are two options:</P>
+<UL>
+<LI>
+<A NAME="50655509_pgfId-367006"></A>PSK specified: If you specify the PSK, the tool calculates the SPK signature with PSK and puts it in the boot image.</LI>
+<LI>
+<A NAME="50655509_pgfId-367141"></A>PSK not specified: If you no not want to specify or reveal the secret key PSK, you can give the SPK signature directly. See SPK Signature in this table.</LI>
+</UL>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-366420"></A>*.txt</P>
+<P>
+<A NAME="50655509_pgfId-367352"></A>*.pem</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-366422"></A>SSK</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-366424"></A>Secondary Secret Key</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-367389"></A>This key is used to sign a partition. </P>
+<P>
+<A NAME="50655509_pgfId-367390"></A>It is not mandatory.</P>
+<P>
+<A NAME="50655509_pgfId-367391"></A>There are two options:</P>
+<UL>
+<LI>
+<A NAME="50655509_pgfId-367392"></A>SSK specified: If you specify the SSK, the tool calculates the partition signatures with SSK and puts it in the boot image.</LI>
+<LI>
+<A NAME="50655509_pgfId-366426"></A>SSK not specified: If you no not want to specify or reveal the secret key SSK, you should presign the partition given directly to the tool. See SPK Signature in this table.</LI>
+</UL>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-366428"></A>*.txt</P>
+<P>
+<A NAME="50655509_pgfId-367552"></A>*.sig</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-367562"></A>SPK Signature</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-367564"></A>Secondary Public Key Signature</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-367566"></A>The SPK Signature can be directly specified in cases where you do not want to share the secret key.</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-367568"></A>*.txt</P>
+<P>
+<A NAME="50655509_pgfId-367795"></A>*.sig</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50655509_pgfId-366203"></A>Using Encryption</H6>
+<P>
+<A NAME="50655509_pgfId-364828"></A>Select the Use Encryption check box to encrypt the boot image or any of the particular partitions of the boot image.</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_create_zynq_boot_image-3.jpg"></center>
+</DIV>
+<P>
+<A NAME="50655509_pgfId-367957"></A>When you enable encryption, you must specify the key file, source, and part name.</P>
+<TABLE BORDER="1">
+<CAPTION>
+<H6 CLASS="TableTitle">
+<A NAME="50655509_pgfId-368084"></A>Encryption Settings</H6>
+</CAPTION>
+<TR>
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellHeading">
+<A NAME="50655509_pgfId-368088"></A>Setting</P>
+</TH>
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellHeading">
+<A NAME="50655509_pgfId-368090"></A>Description</P>
+</TH>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-368092"></A>Key File</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-368094"></A>The AES key file contains the key for encryption.</P>
+<P>
+<A NAME="50655509_pgfId-368269"></A>The supported file format for AES key file is *.nky. </P>
+<P>
+<A NAME="50655509_pgfId-368272"></A>This key file contains the values like Key 0, StartCBC and HMAC values. If the key file is not given, then this tool generates a key file and stores in the current working directory, which is used for encrypting the partitions.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-368096"></A>Key Store</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-368098"></A>The Key Store is the location where the AES key will be written to for decryption purpose.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-368100"></A>Part Name</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-368243"></A>This field specifies the Xilinx part name. This is needed when generating an encryption key. The name is copied verbatim to the NKY file in the “Device” line.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50655509_pgfId-368070"></A>Boot Image Partitions</H6>
+<P>
+<A NAME="50655509_pgfId-368707"></A>You can specify the partitions and related information in the Boot Image Partitions area. Use this area to add, delete, modify, and reorder the partitions. You can also set values for enabling encryption, authentication, and checksum, and specifying some other partition related values like Load, Alignment and Offset.</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_create_zynq_boot_image-4.jpg"></center>
+</DIV>
+<P>
+<A NAME="50655509_pgfId-368719"></A>The partitions list displays the summary of the partitions in the BIF file. It shows the file path, encryption settings, and authentication settings.</P>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50655509_pgfId-368711"></A>Adding a Partition</H6>
+<P CLASS="Anchor">
+<A NAME="50655509_pgfId-368712"></A>&nbsp;</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_create_zynq_boot_image-5.jpg"></center>
+</DIV>
+<P>
+<A NAME="50655509_pgfId-369139"></A>The Add Partition window contains the following settings:</P>
+<TABLE BORDER="1">
+<CAPTION>
+<H6 CLASS="TableTitle">
+<A NAME="50655509_pgfId-369142"></A>Add Partition Window Settings</H6>
+</CAPTION>
+<TR>
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellHeading">
+<A NAME="50655509_pgfId-369146"></A>Setting</P>
+</TH>
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellHeading">
+<A NAME="50655509_pgfId-369148"></A>Description</P>
+</TH>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-369150"></A>Partition Type</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-369152"></A>Select the partition type:</P>
+<UL>
+<LI>
+<A NAME="50655509_pgfId-369318"></A><B>
+bootloader</B>
+ - This specifies the partition is a boot loader like FSBL. This is the first  partition in any boot image.</LI>
+<LI>
+<A NAME="50655509_pgfId-369353"></A><B>
+init</B>
+ - This specifies that the partition is a register initialization file. This is required to set up some register values to access the hardware.</LI>
+<LI>
+<A NAME="50655509_pgfId-369383"></A><B>
+bootimage</B>
+ - This specifies that partition is an already encrypted or signed partition.</LI>
+<LI>
+<A NAME="50655509_pgfId-369419"></A><B>
+datafile</B>
+ - This specifies that the partition is a normal partition like an application, bit stream, or u-boot.</LI>
+</UL>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-369154"></A>File Path</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-369156"></A>The path to the partition file.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-369158"></A>Authentication</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-369160"></A>Select from the drop down menu, if authentication needs to be made applicable to this partition. </P>
+<UL>
+<LI>
+<A NAME="50655509_pgfId-369500"></A>rsa: enables rsa authentication for this partition.</LI>
+<LI>
+<A NAME="50655509_pgfId-369514"></A>none: disables the authentication for this partition.</LI>
+</UL>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-369162"></A>Encryption</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-369164"></A>Select from the drop down menu, if encryption needs to be made applicable to this partition.</P>
+<UL>
+<LI>
+<A NAME="50655509_pgfId-369546"></A>aes: enables aes encryption for this partition.</LI>
+<LI>
+<A NAME="50655509_pgfId-369549"></A>none: disables the encryption for this partition.</LI>
+</UL>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-369166"></A>Checksum</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-369168"></A>Select from the drop down menu, if checksum needs to be made applicable to this partition. </P>
+<P>
+<A NAME="50655509_pgfId-369614"></A>md5: enables md5 checksum for this partition.</P>
+<P>
+<A NAME="50655509_pgfId-369617"></A>none: disables the checksum for this partition.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-369170"></A>Presign</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-369172"></A>When SSK authentication is not given in the main menu, user needs to make sure that presign file, which is nothing but presigned partition signature is specified. This field is enabled only when authentication is enabled.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-369174"></A>Alignment</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-369176"></A>Sets the byte alignment of the package. Cannot be used with Offset. The partition will be padded to be aligned to a multiple of this value.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-369178"></A>Offset</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-369180"></A>Sets the absolute offset of the package in the boot image. Cannot be used with Alignment.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-369182"></A>Reserve</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-369184"></A>Reserves a total amount of memory for this partition. The partition will be padded to this amount.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-369186"></A>Load</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-369188"></A>Sets the load address for the partition, such as where it will be written to.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-369190"></A>Startup</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655509_pgfId-369192"></A>Sets the entry address for the partition, after it is loaded. This is ignored for partitions that don’t execute.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50655509_pgfId-369823"></A>Deleting a Partition</H6>
+<P>
+<A NAME="50655509_pgfId-370028"></A>Select any partition and click Delete to remove it from the list.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50655509_pgfId-370103"></A>Editing a Partition</H6>
+<P>
+<A NAME="50655509_pgfId-370130"></A>Select any partition and click Edit to modify the options for that partition.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50655509_pgfId-370225"></A>Rearranging Partitions</H6>
+<P>
+<A NAME="50655509_pgfId-370262"></A>Select any partition and click Up or Down to rearrange their order in the partition list.</P>
+</DIV>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50655509_pgfId-370371"></A>Output File</H6>
+<P>
+<A NAME="50655509_pgfId-369831"></A>The output file and path name are specified in the Output Path field. This identifies where the output binary image is generated.</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_create_zynq_boot_image-6.jpg"></center>
+</DIV>
+<P>
+<A NAME="50655509_pgfId-369836"></A>Two output formats are supported: *.bin and *.mcs . The final boot image format is set based on the extension specified in the output path.</P>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655509_pgfId-370577"></A>Creating a Boot Image</H5>
+<P>
+<A NAME="50655509_pgfId-370930"></A>Creating a boot image requires the following steps:</P>
+<OL>
+<LI>
+<A NAME="50655509_pgfId-369840"></A>Make sure that the FSBL project and any C application project are created in the SDK workspace and built so that corresponding ELF files are available.</LI>
+<LI>
+<A NAME="50655509_pgfId-369843"></A>Create a new BIF file, select the path for creating a BIF file. The output path at the bottom is automatically populated with same path as that of BIF file path with the output image name as output.bin</LI>
+<LI>
+<A NAME="50655509_pgfId-1190215"></A>Enable authentication and select PPK, SPK PSK and SSK values.</LI>
+<LI>
+<A NAME="50655509_pgfId-1190219"></A>Enable encryption and select the key file and key source.<BR>
+<B>
+Note:</B>
+ SPK signature is not required here, as you will provide the secret key PSK.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_create_zynq_boot_image-7.jpg"></center>
+</DIV>
+<OL>
+<LI value=5>
+<A NAME="50655509_pgfId-497805"></A>Add the partitions one at a time, starting from the bootloader.</LI>
+<OL>
+<LI type="a">
+<A NAME="50655509_pgfId-371221"></A>Select the Partition type as “bootloader”.</LI>
+<LI type="a">
+<A NAME="50655509_pgfId-371229"></A>Select the FSBL “zynq_fsbl.elf” path.</LI>
+<LI type="a">
+<A NAME="50655509_pgfId-371236"></A>Select the authentication as rsa and encryption as aes.</LI>
+<LI type="a">
+<A NAME="50655509_pgfId-371240"></A>Click OK.<BR>
+<B>
+Note:</b> Presign is not required here, as we are providing the secret key SSK.</LI>
+</OL>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_create_zynq_boot_image-8.jpg"></center>
+</DIV>
+<OL>
+<LI value=6>
+<A NAME="50655509_pgfId-371519"></A>Click <B>
+OK.</B>
+<BR>
+Notice that the list in Boot Image Partitions is populated.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_create_zynq_boot_image-9.jpg"></center>
+</DIV>
+<OL>
+<LI value=7>
+<A NAME="50655509_pgfId-369872"></A>Add the second partition. For this example, you will add a C application.</LI>
+<OL>
+<LI type="a">
+<A NAME="50655509_pgfId-371699"></A>Select the Partition type as <B>
+datafile.</B>
+</LI>
+<LI type="a">
+<A NAME="50655509_pgfId-371707"></A>Select the application <B>
+zynq_hello.elf</B>
+ path.</LI>
+<LI type="a">
+<A NAME="50655509_pgfId-371727"></A>Select the authentication as <B>
+rsa</B>
+ and encryption as <B>
+aes.</B>
+</LI>
+<LI type="a">
+<A NAME="50655509_pgfId-371740"></A>Click <B>
+OK.</B>
+<BR>
+<B>
+Note:</b> Presign is not required here, as we are providing the secret key SSK.</LI>
+</OL>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_create_zynq_boot_image-10.jpg"></center>
+</DIV>
+<OL>
+<LI value=8>
+<A NAME="50655509_pgfId-369880"></A>Click <B>
+OK.<BR>
+</B>
+Notice that the list in Boot Image Partitions is updated with the second partition.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_create_zynq_boot_image-11.jpg"></center>
+</DIV>
+<OL>
+<LI value=9>
+<A NAME="50655509_pgfId-369886"></A>Click <B>
+Create Image</B>
+ to create the final boot image “output.bin”.</LI>
+</OL>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655509_pgfId-369888"></A>Assumptions</H5>
+<P>
+<A NAME="50655509_pgfId-369890"></A>Comments in BIF file are always given in single line style, such as:</P>
+<P CLASS="Code">
+<A NAME="50655509_pgfId-369891"></A>// comments</P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655509_pgfId-369895"></A>Limitations</H5>
+<UL>
+<LI>
+<A NAME="50655509_pgfId-369897"></A>Importing from already existing BIF file is supported in Read-only mode. You cannot modify or edit the contents of a BIF file after importing it.</LI>
+<LI>
+<A NAME="50655509_pgfId-369898"></A>Multiline comments are not supported. For example:</LI>
+</UL>
+<P CLASS="Code">
+<A NAME="50655509_pgfId-369899"></A>/*</P>
+<P CLASS="Code">
+<A NAME="50655509_pgfId-372075"></A>	Comments - 1</P>
+<P CLASS="Code">
+<A NAME="50655509_pgfId-372081"></A>	Comments - 2	</P>
+<P CLASS="Code">
+<A NAME="50655509_pgfId-369902"></A>*/</P>
+<P>
+<A NAME="50655509_pgfId-306566"></A></P>
+<P>
+<A NAME="50655509_pgfId-332828"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

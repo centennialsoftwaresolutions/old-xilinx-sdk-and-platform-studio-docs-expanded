@@ -1,0 +1,218 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> FSBL Parameters</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50655759_pgfId-433630"></A><A NAME="50655759_24185"></A>FSBL Parameters</H1>
+<P>
+<A NAME="50655759_pgfId-433585"></A>Below are the details about the first stage bootloader (FSBL) parameters.</P>
+<TABLE width=80% BORDER="1">
+<TR>
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellHeading">
+<A NAME="50655759_pgfId-433651"></A>Parameter</P>
+</TH>
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellHeading">
+<A NAME="50655759_pgfId-433653"></A>Description</P>
+</TH>
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellHeading">
+<A NAME="50655759_pgfId-433655"></A>Default Value</P>
+</TH>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433657"></A>PS Clock Frequency (MHz)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433659"></A>The clock frequency of the Zynq PS (specified in MHz).</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433661"></A>666.7 MHz </P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433663"></A>PL Clock Frequency (MHz)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433665"></A>The clock frequency of the Zynq PL (specified in MHz).</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433667"></A>100.0 MHz.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433669"></A>DDR Clock Frequency (MHz)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433671"></A>The clock frequency of the DDR memory (specified in MHz).</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433673"></A>533.3 MHz</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433675"></A>DDR Data Path Width</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433677"></A>The bit width used in the DDR memory data path. Possible values are 16 and 32 bits.</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433679"></A>32 bits</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433681"></A>DDR Port 0 - Enable HPR</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433683"></A>This enables the usage of high priority reads on DDR port 0. This port is used by the CPUs and the ACP via the L2 Cache.</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433685"></A>Unchecked</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433687"></A>DDR Port 1 - Enable HPR</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433689"></A>This enable the usage of high priority reads on DDR port 1. This port is used by other masters via the central interconnect.</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433691"></A>Unchecked</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433693"></A>DDR Port 2 - Enable HPR</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433695"></A>This enables the usage of high priority reads on DDR port 2. This port is used by HP2 and HP3.</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433697"></A>Unchecked</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433699"></A>DDR Port 3 - Enable HPR</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433701"></A>This enable the usage of high priority reads on DDR port 3. This port is used by HP0 and HP1.</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433703"></A>Unchecked</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433705"></A>HPR/LPR Queue Partitioning</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433707"></A>Indicates the desired partitioning for high and low priority reads in the queue. Note that the queue has a depth of 32 read requests. There are four values provided in a drop-down menu.</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433709"></A>HPR(0)/LPR(32)</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433711"></A>LPR to Critical Priority Level</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433713"></A>The number of clocks that the LPR queue can be starved before it goes critical. Unit: 32 DDR clock cycles. This value sets the DDR LPR_reg register [1]. Valid values are between 0 and 2047.</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433715"></A>2</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433717"></A>HPR to Critical Priority Level</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433719"></A>The number of clocks that the HPR queue can be starved before it goes critical. Unit: 32 DDR clock cycles. This value sets the DDR HPR_reg register [1]. Valid values are between 0 and 2047.</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433721"></A>15</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433723"></A>Write to Critical Priority Level</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433725"></A>The number of clocks that the write queue can be starved before it goes critical. Unit: 32 DDR clock cycles. This value sets the DDR WR_reg register [1]. Valid values are between 0 and 2047.</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655759_pgfId-433727"></A>2</P>
+</TD>
+</TR>
+</TABLE>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655759_pgfId-433565"></A>Related Concepts</H5>
+<P>
+<A NAME="50655759_pgfId-332420"></A><A HREF="../concepts/sdk_c_spm_over_spm.htm#50655620_99596" CLASS="XRef">System Performance Modeling</A></P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655759_pgfId-332422"></A>Related Tasks</H5>
+<P>
+<A NAME="50655759_pgfId-332424"></A><A HREF="../tasks/sdk_t_spm_predefined.htm#50655903_86840" CLASS="XRef">System Performance Modeling Using the SDK Predefined Design</A></P>
+<P>
+<A NAME="50655759_pgfId-433490"></A><A HREF="../tasks/sdk_t_spm_using_performance_analysis_tools.htm#50655902_22707" CLASS="XRef">Using Performance Analysis Tools</A></P>
+<P>
+<A NAME="50655759_pgfId-332428"></A>&nbsp;</P>
+<P>
+<A NAME="50655759_pgfId-306566"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

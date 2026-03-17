@@ -1,0 +1,92 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Board Support Packages (SDK)</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50655264_pgfId-294539"></A><A NAME="50655264_86840"></A>Board Support Packages (SDK)</H1>
+<P>
+<A NAME="50655264_pgfId-332021"></A>You can create a board support package (BSP) for application development within Xilinx&#174; SDK, or for use in external tool flows. This topic describes BSPs used within SDK.</P>
+<P>
+<A NAME="50655264_pgfId-332023"></A>A board support package (BSP) is a collection of libraries and drivers that will form the lowest layer of your application software stack. Your software applications must link against or run on top of a given software platform using the APIs that it provides. Therefore, before you can create and use software applications in SDK, you must create a board support package.</P>
+<P>
+<A NAME="50655264_pgfId-332025"></A>SDK includes the following two board support packages for application development:</P>
+<UL>
+<LI>
+<A NAME="50655264_pgfId-332027"></A><B>
+Standalone</B>
+ - A simple, semi-hosted, and single-threaded environment that provides basic features such as standard input/output and access to processor hardware features</LI>
+<LI>
+<A NAME="50655264_pgfId-332028"></A><B>
+Xilkernel</B>
+ - A simple and lightweight kernel that provides POSIX style services such as scheduling, threads, synchronization, message passing, and timers</LI>
+</UL>
+<P>
+<A NAME="50655264_pgfId-332030"></A>When a board support package is built, the following software components are automatically included into the library:</P>
+<UL>
+<LI>
+<A NAME="50655264_pgfId-332032"></A>Standard C Libraries (libc.a, libm.a)</LI>
+<LI>
+<A NAME="50655264_pgfId-332176"></A>Device Drivers for all the peripherals in your design (libxil.a)</LI>
+</UL>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655264_pgfId-332035"></A>Other Libraries</H5>
+<P>
+<A NAME="50655264_pgfId-332037"></A>Both Standalone and Xilkernel can work with the following libraries from the Xilinx software library collection:</P>
+<UL>
+<LI>
+<A NAME="50655264_pgfId-332039"></A>LibXil MFS - A Memory File system</LI>
+<LI>
+<A NAME="50655264_pgfId-332040"></A>LibXil FATFS - A Xilinx SysAce-based FAT file system</LI>
+<LI>
+<A NAME="50655264_pgfId-332041"></A>LibXil Flash - A library that provides read/write/erase/lock/unlock and device specific functionalities for parallel flash devices</LI>
+<LI>
+<A NAME="50655264_pgfId-332042"></A>LibXil Isf - In-System-Flash library that supports the Xilinx In System Flash hardware</LI>
+<LI>
+<A NAME="50655264_pgfId-332043"></A>lwIP - A third-party light-weight TCP/IP networking library</LI>
+<LI>
+<A NAME="50655264_pgfId-361435"></A>LibXil Skey - Xilinx Secure Key Library</LI>
+</UL>
+<P>
+<A NAME="50655264_pgfId-332045"></A>You can configure these libraries to be in or out of your software application stack.</P>
+<P>
+<A NAME="50655264_pgfId-332047"></A>In addition to the above board support packages and component libraries, many third party RTOSes and middleware stacks are available and can be used in the SDK environment to develop applications. For a comprehensive listing of all third party offerings, refer to <A HREF="http://www.xilinx.com/ise/embedded/epartners/listing.htm" CLASS="URL">http://www.xilinx.com/ise/embedded/epartners/listing.htm</A>.</P>
+<P>
+<A NAME="50655264_pgfId-332049"></A>Board support packages and their libraries can be configured in various ways in the Board Support Package (SDK) Settings dialog box. You can also have multiple board support packages in your SDK workspace. This allows you to simultaneously work with different kinds configurations of board support packages, as well as re-target applications from one to the other.</P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655264_pgfId-332051"></A>Related Concepts</H5>
+<P>
+<A NAME="50655264_pgfId-332052"></A><A HREF="sdk_c_bsp_external.htm#50655233_86840" CLASS="XRef">Board Support Packages (External Tools)</A></P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655264_pgfId-332054"></A>Related Tasks</H5>
+<P>
+<A NAME="50655264_pgfId-332055"></A><A HREF="../tasks/sdk_t_create_bsp_internal.htm#50655506_86840" CLASS="XRef">Creating a Board Support Package (SDK)</A></P>
+<P>
+<A NAME="50655264_pgfId-332056"></A><A HREF="../tasks/sdk_t_config_bsp_internal.htm#50655502_86840" CLASS="XRef">Configuring a Board Support Package (SDK)</A></P>
+<P>
+<A NAME="50655264_pgfId-332057"></A><A HREF="../tasks/sdk_t_build_bsp_internal.htm#50655499_86840" CLASS="XRef">Building a Board Support Package for SDK</A></P>
+<P>
+<A NAME="50655264_pgfId-332058"></A><A HREF="../tasks/sdk_t_install_third_party_bsp.htm#50655518_86840" CLASS="XRef">Importing Third-Party Software Components</A></P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655264_pgfId-332060"></A>Related Reference</H5>
+<P>
+<A NAME="50655264_pgfId-306436"></A><A HREF="../reference/sdk_u_new_bsp_internal.htm#50655417_86840" CLASS="XRef">New Board Support Package (SDK) Project Dialog Box</A></P>
+<P>
+<A NAME="50655264_pgfId-910889"></A>&nbsp;</P>
+<P>
+<A NAME="50655264_pgfId-910891"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

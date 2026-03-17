@@ -1,0 +1,502 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> XSDB Commands: Running</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50655808_pgfId-965821"></A><A NAME="50655808_26190"></A>XSDB Commands: Running</H1>
+<P>
+<A NAME="50655808_pgfId-967597"></A>The Xilinx System Debugger CLI (XSDB) Running commands can be used for program execution, target state, and disassembly.</P>
+<P>
+<A NAME="50655808_pgfId-971930"></A>The following commands are available:</P>
+<UL>
+<LI>
+<A NAME="50655808_pgfId-967897"></A><A HREF="sdk_u_xsd_xsdb_running.htm#50655808_27405" CLASS="XRef">con</A></LI>
+<LI>
+<A NAME="50655808_pgfId-967920"></A><A HREF="sdk_u_xsd_xsdb_running.htm#50655808_91625" CLASS="XRef">stop</A></LI>
+<LI>
+<A NAME="50655808_pgfId-967956"></A><A HREF="sdk_u_xsd_xsdb_running.htm#50655808_93693" CLASS="XRef">state</A></LI>
+<LI>
+<A NAME="50655808_pgfId-967990"></A><A HREF="sdk_u_xsd_xsdb_running.htm#50655808_71899" CLASS="XRef">stp</A></LI>
+<LI>
+<A NAME="50655808_pgfId-968024"></A><A HREF="sdk_u_xsd_xsdb_running.htm#50655808_39495" CLASS="XRef">stpi</A></LI>
+<LI>
+<A NAME="50655808_pgfId-968048"></A><A HREF="sdk_u_xsd_xsdb_running.htm#50655808_66908" CLASS="XRef">nxt</A></LI>
+<LI>
+<A NAME="50655808_pgfId-968079"></A><A HREF="sdk_u_xsd_xsdb_running.htm#50655808_98057" CLASS="XRef">nxti</A></LI>
+<LI>
+<A NAME="50655808_pgfId-968105"></A><A HREF="sdk_u_xsd_xsdb_running.htm#50655808_13288" CLASS="XRef">stpout</A></LI>
+<LI>
+<A NAME="50655808_pgfId-968131"></A><A HREF="sdk_u_xsd_xsdb_running.htm#50655808_14200" CLASS="XRef">dis</A></LI>
+</UL>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655808_pgfId-967607"></A><A NAME="50655808_27405"></A>con</H5>
+<TABLE width=80% BORDER="1">
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-970167"></A><B>
+Description</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="50655808_pgfId-970169"></A>Resume the active target.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-970173"></A><B>
+Usage</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-970175"></A><B>
+con</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-970688"></A>Resume execution of the active target.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655808_pgfId-967612"></A><A NAME="50655808_91625"></A>stop</H5>
+<TABLE width=80% BORDER="1">
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-970231"></A><B>
+Description</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="50655808_pgfId-970233"></A>Stop the active target.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-970237"></A><B>
+Usage</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-970790"></A><B>
+stop</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-970792"></A>Suspend execution of the active target.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655808_pgfId-967617"></A><A NAME="50655808_93693"></A>state</H5>
+<TABLE width=80% BORDER="1">
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-970285"></A><B>
+Description</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="50655808_pgfId-970287"></A>Display the current execution state.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-970291"></A><B>
+Usage</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-970889"></A><B>
+state</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-970891"></A>Display the current execution state of the active target.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655808_pgfId-967622"></A><A NAME="50655808_71899"></A>stp</H5>
+<TABLE width=80% BORDER="1">
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-970340"></A><B>
+Description</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="50655808_pgfId-970342"></A>Step into a line of source code.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-970346"></A><B>
+Usage</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-971016"></A><B>
+stp [count]</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-971794"></A>Resume execution of the active target until control reaches instruction that belongs to a different line of source code. If a function is called, stop at first line of the function code. Error is returned if line number information is not available.</P>
+<P>
+<A NAME="50655808_pgfId-971795"></A>If <B>
+&lt;count&gt;</B>
+ is greater than 1, repeat &lt;<B>
+count</B>
+&gt; times.</P>
+<P>
+<A NAME="50655808_pgfId-971020"></A>Default value of <B>
+count</B>
+ is 1.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655808_pgfId-968998"></A><A NAME="50655808_39495"></A>stpi</H5>
+<TABLE width=80% BORDER="1">
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-970391"></A><B>
+Description</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="50655808_pgfId-970393"></A>Execute a machine instruction.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-970397"></A><B>
+Usage</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-971120"></A><B>
+stpi [count]</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-971122"></A>Execute a single machine instruction. If instruction is function call, stop at first instruction of the function code.</P>
+<P>
+<A NAME="50655808_pgfId-971123"></A>If <B>
+&lt;count&gt;</B>
+ is greater than 1, repeat &lt;count&gt; times.</P>
+<P>
+<A NAME="50655808_pgfId-971124"></A>Default value of <B>
+count</B>
+ is 1.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655808_pgfId-971246"></A><A NAME="50655808_66908"></A>nxt</H5>
+<TABLE width=80% BORDER="1">
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-971217"></A><B>
+Description</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="50655808_pgfId-971219"></A>Step over a line of source code.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-971223"></A><B>
+Usage</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-971300"></A><B>
+nxt [count]</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-971302"></A>Resume execution of the active target until control reaches instruction that belongs to a different line of source code, but runs any functions called at full speed.</P>
+<P>
+<A NAME="50655808_pgfId-971303"></A>Error is returned if line number information not available.</P>
+<P>
+<A NAME="50655808_pgfId-971304"></A>If <B>
+&lt;count&gt;</B>
+ is greater than 1, repeat <B>
+&lt;count&gt;</B>
+ times.</P>
+<P>
+<A NAME="50655808_pgfId-971305"></A>Default value of <B>
+count</B>
+ is 1.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655808_pgfId-971288"></A><A NAME="50655808_98057"></A>nxti</H5>
+<TABLE width=80% BORDER="1">
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-971259"></A><B>
+Description</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="50655808_pgfId-971261"></A>Step over a machine instruction.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-971265"></A><B>
+Usage</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-971355"></A><B>
+nxti [count]</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-971357"></A>Step over a single machine instruction. If instruction is function call, execution continues until control returns from the function.</P>
+<P>
+<A NAME="50655808_pgfId-971358"></A>If <B>
+&lt;count&gt;</B>
+ is greater than 1, repeat <B>
+&lt;count&gt;</B>
+ times.</P>
+<P>
+<A NAME="50655808_pgfId-971359"></A>Default value of <B>
+count</B>
+ is 1.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655808_pgfId-969502"></A><A NAME="50655808_13288"></A>stpout</H5>
+<TABLE width=80% BORDER="1">
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-970540"></A><B>
+Description</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="50655808_pgfId-970542"></A>Step out from current function.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-970546"></A><B>
+Usage</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-971397"></A><B>
+stpout [count]</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-971399"></A>Resume execution of current target until control returns from current function.</P>
+<P>
+<A NAME="50655808_pgfId-971400"></A>If <B>
+&lt;count&gt;</B>
+ is greater than 1, repeat <B>
+&lt;count&gt;</B>
+ times.</P>
+<P>
+<A NAME="50655808_pgfId-971401"></A>Default value of <B>
+count</B>
+ is 1.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655808_pgfId-971475"></A><A NAME="50655808_14200"></A>dis</H5>
+<TABLE width=80% BORDER="1">
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-971504"></A><B>
+Description</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="50655808_pgfId-971506"></A>Disassemble Instructions.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-971510"></A><B>
+Usage</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-971512"></A><B>
+dis &lt;address&gt; [num]</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-971514"></A>Disassemble <B>
+&lt;num&gt;</B>
+ instructions at address specified by <B>
+&lt;address&gt;</B>
+. </P>
+<P>
+<A NAME="50655808_pgfId-971515"></A>The keyword &quot;pc&quot; can be used to disassemble instructions at current PC.</P>
+<P>
+<A NAME="50655808_pgfId-971516"></A>Default value for <B>
+num</B>
+ is 1.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="3" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-971518"></A><B>
+Examples</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-971565"></A><B>
+dis</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-971567"></A>Disassemble an instruction at the current PC value.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-971569"></A><B>
+dis pc 2</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-971571"></A>Disassemble two instructions at the current PC value</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-971573"></A><B>
+dis 0x0 2</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655808_pgfId-971575"></A>Disassemble two instructions at address <B>
+0x0</B>
+</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655808_pgfId-967473"></A>Related Concepts</H5>
+<P>
+<A NAME="50655808_pgfId-967477"></A><A HREF="../concepts/sdk_c_xsd_over.htm#50655644_89495" CLASS="XRef">Xilinx System Debugger Overview</A></P>
+<P>
+<A NAME="50655808_pgfId-967481"></A><A HREF="../concepts/sdk_c_xsd_xmd_xsdb.htm#50655645_86860" CLASS="XRef">XMD vs XSDB</A></P>
+<P>
+<A NAME="50655808_pgfId-967485"></A><A HREF="../concepts/sdk_c_xsd_xsdb_commands.htm#50655646_75465" CLASS="XRef">XSDB Commands</A></P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655808_pgfId-967541"></A>Related Reference</H5>
+<P>
+<A NAME="50655808_pgfId-967545"></A><A HREF="sdk_u_xsd_xsdb_connections.htm#50655802_26190" CLASS="XRef">XSDB Commands: Connections</A></P>
+<P>
+<A NAME="50655808_pgfId-967549"></A><A HREF="sdk_u_xsd_xsdb_breakpoints.htm#50655801_26190" CLASS="XRef">XSDB Commands: Breakpoints</A></P>
+<P>
+<A NAME="50655808_pgfId-967553"></A><A HREF="sdk_u_xsd_xsdb_download.htm#50655803_26190" CLASS="XRef">XSDB Commands: Download</A></P>
+<P>
+<A NAME="50655808_pgfId-967557"></A><A HREF="sdk_u_xsd_xsdb_jtag.htm#50655804_26190" CLASS="XRef">XSDB Commands: JTAG</A></P>
+<P>
+<A NAME="50655808_pgfId-967561"></A><A HREF="sdk_u_xsd_xsdb_memory.htm#50655805_26190" CLASS="XRef">XSDB Commands: Memory</A></P>
+<P>
+<A NAME="50655808_pgfId-967565"></A><A HREF="sdk_u_xsd_xsdb_registers.htm#50655806_26190" CLASS="XRef">XSDB Commands: Registers</A></P>
+<P>
+<A NAME="50655808_pgfId-967569"></A><A HREF="sdk_u_xsd_xsdb_reset.htm#50655807_26190" CLASS="XRef">XSDB Commands: Reset</A></P>
+<P>
+<A NAME="50655808_pgfId-967577"></A><A HREF="sdk_u_xsd_xsdb_running.htm#50655808_26190" CLASS="XRef">XSDB Commands: Running</A></P>
+<P>
+<A NAME="50655808_pgfId-967533"></A><A HREF="sdk_u_xsd_xsdb_streams.htm#50655809_26190" CLASS="XRef">XSDB Commands: Streams</A></P>
+<P>
+<A NAME="50655808_pgfId-971867"></A>&nbsp;</P>
+<P>
+<A NAME="50655808_pgfId-965724"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

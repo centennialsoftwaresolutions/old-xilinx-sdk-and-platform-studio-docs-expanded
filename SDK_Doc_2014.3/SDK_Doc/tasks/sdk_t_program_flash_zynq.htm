@@ -1,0 +1,90 @@
+﻿<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Programming Parallel Flash Memory for Zynq Processors</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50655521_pgfId-294539"></A>Programming Parallel Flash Memory for Zynq Processors</H1>
+<P>
+<A NAME="50655521_pgfId-332414"></A>To program the parallel Flash memory for Zynq&#174;-7000 All Programamble SoC processors:</P>
+<OL>
+<LI>
+<A NAME="50655521_pgfId-332416"></A>Select <B>
+Xilinx Tools &gt; Program Flash.<BR>
+</B>
+If only one hardware platform is present in your workspace, it will open the Program Flash Memory dialog box based on whether it is a Zynq processor design or a MicroBlaze™ processor design.<BR>
+If more than one hardware platform exits, a dialog box opens and prompts you to choose the hardware platform.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_program_flash_zynq-1.jpg"></center>
+</DIV>
+<OL>
+<LI value=2>
+<A NAME="50655521_pgfId-332419"></A>Select the hardware platform and click <B>
+OK.<BR>
+</B>
+SDK opens the Program Flash Memory dialog box for the Zynq hardware platform.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_program_flash_zynq-2.jpg"></center>
+</DIV>
+<OL>
+<LI value=3>
+<A NAME="50655521_pgfId-332422"></A>Specify the MCS file and Offset value.</LI>
+<LI>
+<A NAME="50655521_pgfId-332423"></A>Choose the Flash type. The options are:</LI>
+<UL>
+<LI>
+<A NAME="50655521_pgfId-332624"></A><B>
+qspi_single</B>
+</LI>
+<LI>
+<A NAME="50655521_pgfId-332631"></A><B>
+qspi_dual_parallel</B>
+</LI>
+<LI>
+<A NAME="50655521_pgfId-451258"></A>qspi_dual_stacked</LI>
+<LI>
+<A NAME="50655521_pgfId-332634"></A><B>
+nand_8</B>
+</LI>
+<LI>
+<A NAME="50655521_pgfId-332637"></A><B>
+nand_16</B>
+</LI>
+<LI>
+<A NAME="50655521_pgfId-451279"></A>nor</LI>
+</UL>
+</OL>
+<P CLASS="Body2">
+<A NAME="50655521_pgfId-332425"></A><B>
+Note: </B>
+For Flash types nand_8 and nand_16, you must also input the FSBL file.</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_program_flash_zynq-3.jpg"></center>
+</DIV>
+<OL>
+<LI value=5>
+<A NAME="50655521_pgfId-332427"></A>Click to select the <B>
+Verify after flash</B>
+ check box if you want to verify whether the flashing is done correctly.</LI>
+<LI>
+<A NAME="50655521_pgfId-332673"></A>Click <B>
+Program.</B>
+</LI>
+</OL>
+<P>
+<A NAME="50655521_pgfId-406474"></A><B>
+Note: </B>
+The MCS file is created with the Create Bootgen command in the application project in the bif folder. If you select the application project in the Project Explorer while opening the Program Flash Memory dialog box, the MCS file is automatically populated.</P>
+<P>
+<A NAME="50655521_pgfId-332431"></A>&nbsp;</P>
+<P>
+<A NAME="50655521_pgfId-306566"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</BODY>
+</HTML>

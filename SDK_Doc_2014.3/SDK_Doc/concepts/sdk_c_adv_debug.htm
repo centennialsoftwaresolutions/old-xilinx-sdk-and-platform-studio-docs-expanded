@@ -1,0 +1,60 @@
+﻿<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Advanced Debug Concepts</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50655265_pgfId-294539"></A><A NAME="50655265_86840"></A>Advanced Debug Concepts</H1>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655265_pgfId-332154"></A>Breakpoints</H5>
+<P>
+<A NAME="50655265_pgfId-332156"></A>A breakpoint suspends the execution of a program at the location where the breakpoint is set. By default, SDK sets breakpoints at <B>
+main( )</B>
+ and <B>
+exit( )</B>
+ functions. When you start a debug session, the processor stops at the start of the <B>
+main( )</B>
+ function of the program. There are two types of breakpoints used by the debugger:</P>
+<UL>
+<LI>
+<A NAME="50655265_pgfId-332158"></A><B>
+Software Breakpoint</B>
+ - To set a software breakpoint, the debugger modifies the program instruction at the breakpoint address. The debugger does not require any hardware resources for setting a software breakpoint, so you can essentially set any number of software breakpoints in your debug session. The debugger requires access to read and write to the breakpoint address location. This is the default breakpoint used by the debugger.</LI>
+<LI>
+<A NAME="50655265_pgfId-332225"></A><B>
+Hardware Breakpoint</B>
+ - To set a hardware breakpoint, the debugger does not require modification of the program instruction at the breakpoint address. Each processor provides a limited set of hardware breakpoints. In the case of MicroBlaze™ processors, this is configurable and set by the hardware developer and should be used wisely. You should use hardware breakpoints when the debugger cannot read or write to the program memory, such as when using Flash memory.</LI>
+</UL>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655265_pgfId-332161"></A>Watchpoints</H5>
+<P>
+<A NAME="50655265_pgfId-332163"></A>A watchpoint suspends the execution of a program at the location where the read or write access condition is set. Each processor provides a limited set of hardware watchpoints. In the case of MicroBlaze processors, this is configurable and set by the hardware developer. There are read and write watchpoints used for monitoring read and write data access patterns of the processor, respectively. The condition can be based on data address access addresses or data access patterns, or a combination of both.</P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655265_pgfId-332164"></A>Safe-Mode Debugging</H5>
+<P>
+<A NAME="50655265_pgfId-332166"></A>During program debugging, it is sometimes unknown which part of the code is behaving incorrectly or where to set breakpoints. SDK provides a safe mode of debugging that can help you locate the problem or narrow down the search of locating the buggy software. The debugger traps the program execution by looking for critical errors and exception conditions. Looking at the stack trace of the stopped program or register values should help you identify the problem. For MicroBlaze processors, Xilinx recommends that you enable most exceptions when building the hardware system.</P>
+<P>
+<A NAME="50655265_pgfId-356944"></A>Safe Mode debugging is applicable only for MicroBlaze processors, with no effect on ARM cores.</P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655265_pgfId-332168"></A>Related Concepts</H5>
+<P>
+<A NAME="50655265_pgfId-331993"></A><A HREF="sdk_c_over_dbg.htm#50655255_56005" CLASS="XRef">Debug Overview</A></P>
+<P>
+<A NAME="50655265_pgfId-1197264"></A>&nbsp;</P>
+<P>
+<A NAME="50655265_pgfId-1197266"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

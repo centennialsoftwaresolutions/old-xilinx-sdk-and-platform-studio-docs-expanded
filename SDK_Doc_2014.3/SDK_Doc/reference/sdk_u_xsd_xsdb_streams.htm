@@ -1,0 +1,256 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> XSDB Commands: Streams</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50655809_pgfId-965821"></A><A NAME="50655809_26190"></A>XSDB Commands: Streams</H1>
+<P>
+<A NAME="50655809_pgfId-967610"></A>The Xilinx System Debugger CLI (XSDB) Streams commands can be used to connect to JTAG UART (MDM or ARM DCC).</P>
+<P>
+<A NAME="50655809_pgfId-969167"></A>The following commands are available:</P>
+<UL>
+<LI>
+<A NAME="50655809_pgfId-967759"></A><A HREF="sdk_u_xsd_xsdb_streams.htm#50655809_93944" CLASS="XRef">jtagterminal</A></LI>
+<LI>
+<A NAME="50655809_pgfId-967770"></A><A HREF="sdk_u_xsd_xsdb_streams.htm#50655809_37197" CLASS="XRef">readjtaguart</A></LI>
+</UL>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655809_pgfId-967613"></A><A NAME="50655809_93944"></A>jtagterminal</H5>
+<TABLE width=80% BORDER="1">
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655809_pgfId-968720"></A><B>
+Description</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="50655809_pgfId-968722"></A>Start or Stop the JTAG-based hyper-terminal.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655809_pgfId-968726"></A><B>
+Usage</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655809_pgfId-968785"></A><B>
+jtagterminal [Options]</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655809_pgfId-968787"></A>Startor Stop a JTAG based hyper-terminal to communicate with ARM DCC or MDM UART interface.</P>
+<P>
+<A NAME="50655809_pgfId-968788"></A><B>
+Note:</b> Select a MDM or ARM processor target before running this command.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="2" COLSPAN="1">
+<P>
+<A NAME="50655809_pgfId-968738"></A><B>
+Options</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655809_pgfId-968809"></A><B>
+-start</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655809_pgfId-968811"></A>Start the JTAG UART terminal. This is the default option.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655809_pgfId-968813"></A><B>
+-stop</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655809_pgfId-968815"></A>Stop the JTAG UART terminal.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655809_pgfId-967629"></A><A NAME="50655809_37197"></A>readjtaguart</H5>
+<TABLE width=80% BORDER="1">
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655809_pgfId-968834"></A><B>
+Description</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="50655809_pgfId-968836"></A>Start or Stop reading from JTAG UART.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655809_pgfId-968840"></A><B>
+Usage</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655809_pgfId-968911"></A><B>
+readjtaguart [OPTIONS]</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655809_pgfId-968913"></A>Start/Stop reading from the ARM DCC or MDM UART Tx interface.</P>
+<P>
+<A NAME="50655809_pgfId-968914"></A>JTAG UART output can be printed on stdout or redirected to a file.</P>
+<P>
+<A NAME="50655809_pgfId-968915"></A><B>
+Note:</b> Select a MDM or ARM processor target before running this command.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="3" COLSPAN="1">
+<P>
+<A NAME="50655809_pgfId-968846"></A><B>
+Options</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655809_pgfId-968925"></A><B>
+-start</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655809_pgfId-968927"></A>Start reading the JTAG UART output.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655809_pgfId-968929"></A><B>
+-stop</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655809_pgfId-968931"></A>Stop reading the JTAG UART output.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655809_pgfId-968933"></A><B>
+-handle &lt;file-handle&gt;</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655809_pgfId-968935"></A>Specify the file handle to which the data should be redirected. If no file handle is given, data is printed on stdout.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="3" COLSPAN="1">
+<P>
+<A NAME="50655809_pgfId-968958"></A><B>
+Examples</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655809_pgfId-969008"></A><B>
+readjtaguart</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655809_pgfId-969010"></A>Start reading from the JTAG UART and print the output on stdout.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655809_pgfId-969012"></A><B>
+set fp [open test.log w]</B>
+</P>
+<P>
+<A NAME="50655809_pgfId-969013"></A><B>
+readjtaguart -start -handle $fp</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655809_pgfId-969015"></A>Start reading from the JTAG UART and print the output to test.log.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655809_pgfId-969017"></A><B>
+readjtaguart -stop</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655809_pgfId-969019"></A>Stop reading from the JTAG UART.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655809_pgfId-967504"></A>Related Concepts</H5>
+<P>
+<A NAME="50655809_pgfId-967508"></A><A HREF="../concepts/sdk_c_xsd_over.htm#50655644_89495" CLASS="XRef">Xilinx System Debugger Overview</A></P>
+<P>
+<A NAME="50655809_pgfId-967512"></A><A HREF="../concepts/sdk_c_xsd_xmd_xsdb.htm#50655645_86860" CLASS="XRef">XMD vs XSDB</A></P>
+<P>
+<A NAME="50655809_pgfId-967516"></A><A HREF="../concepts/sdk_c_xsd_xsdb_commands.htm#50655646_75465" CLASS="XRef">XSDB Commands</A></P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655809_pgfId-967517"></A>Related Reference</H5>
+<P>
+<A NAME="50655809_pgfId-967525"></A><A HREF="sdk_u_xsd_xsdb_connections.htm#50655802_26190" CLASS="XRef">XSDB Commands: Connections</A></P>
+<P>
+<A NAME="50655809_pgfId-967529"></A><A HREF="sdk_u_xsd_xsdb_breakpoints.htm#50655801_26190" CLASS="XRef">XSDB Commands: Breakpoints</A></P>
+<P>
+<A NAME="50655809_pgfId-967533"></A><A HREF="sdk_u_xsd_xsdb_download.htm#50655803_26190" CLASS="XRef">XSDB Commands: Download</A></P>
+<P>
+<A NAME="50655809_pgfId-967537"></A><A HREF="sdk_u_xsd_xsdb_jtag.htm#50655804_26190" CLASS="XRef">XSDB Commands: JTAG</A></P>
+<P>
+<A NAME="50655809_pgfId-967541"></A><A HREF="sdk_u_xsd_xsdb_memory.htm#50655805_26190" CLASS="XRef">XSDB Commands: Memory</A></P>
+<P>
+<A NAME="50655809_pgfId-967545"></A><A HREF="sdk_u_xsd_xsdb_registers.htm#50655806_26190" CLASS="XRef">XSDB Commands: Registers</A></P>
+<P>
+<A NAME="50655809_pgfId-967549"></A><A HREF="sdk_u_xsd_xsdb_reset.htm#50655807_26190" CLASS="XRef">XSDB Commands: Reset</A></P>
+<P>
+<A NAME="50655809_pgfId-967596"></A><A HREF="sdk_u_xsd_xsdb_running.htm#50655808_26190" CLASS="XRef">XSDB Commands: Running</A></P>
+<P>
+<A NAME="50655809_pgfId-967564"></A>&nbsp;</P>
+<P>
+<A NAME="50655809_pgfId-965724"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

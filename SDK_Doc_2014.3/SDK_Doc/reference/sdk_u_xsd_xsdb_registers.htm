@@ -1,0 +1,260 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> XSDB Commands: Registers</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50655806_pgfId-965821"></A><A NAME="50655806_26190"></A>XSDB Commands: Registers</H1>
+<P>
+<A NAME="50655806_pgfId-967534"></A>The Xilinx System Debugger CLI (XSDB) Registers commands can be used to Read and Write to the target registers.</P>
+<P>
+<A NAME="50655806_pgfId-977939"></A>The following commands are available:</P>
+<UL>
+<LI>
+<A NAME="50655806_pgfId-967664"></A><A HREF="sdk_u_xsd_xsdb_registers.htm#50655806_29377" CLASS="XRef">rrd</A></LI>
+<LI>
+<A NAME="50655806_pgfId-967695"></A><A HREF="sdk_u_xsd_xsdb_registers.htm#50655806_51321" CLASS="XRef">rwr</A></LI>
+</UL>
+<P>
+<A NAME="50655806_pgfId-967537"></A>These commands can access General Purpose registers, System registers like ARM Coprocessor registers. IOU registers in Zynq can be accessed by running these commands on 'APU target'.</P>
+<P>
+<A NAME="50655806_pgfId-968434"></A>'rrd' can also read register definitions, instead of their values.</P>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655806_pgfId-968436"></A><A NAME="50655806_29377"></A>rrd</H5>
+<TABLE width=80% BORDER="1">
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655806_pgfId-968455"></A><B>
+Description</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="50655806_pgfId-968457"></A>Read register definitions or values for the active target.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655806_pgfId-968461"></A><B>
+Usage</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655806_pgfId-968562"></A><B>
+rrd [options] [reg]</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655806_pgfId-968587"></A>Read registers or register groups for active target.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655806_pgfId-968467"></A><B>
+Options</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655806_pgfId-968469"></A><B>
+-defs</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655806_pgfId-968471"></A>Read register definitions instead of values</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="4" COLSPAN="1">
+<P>
+<A NAME="50655806_pgfId-968473"></A><B>
+Examples</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655806_pgfId-968674"></A><B>
+rrd</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655806_pgfId-968676"></A>Read top level registers or groups</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655806_pgfId-968678"></A><B>
+rrd r0</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655806_pgfId-968680"></A>Read register r0</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655806_pgfId-968682"></A><B>
+rrd usr r8</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655806_pgfId-968684"></A>Read register <B>
+r8</B>
+ in group <B>
+usr</B>
+</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655806_pgfId-968686"></A><B>
+Rrd -defs</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655806_pgfId-968688"></A>Read definitions for top level registers or groups</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655806_pgfId-967561"></A><A NAME="50655806_51321"></A>rwr</H5>
+<TABLE width=80% BORDER="1">
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655806_pgfId-977599"></A><B>
+Description</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="50655806_pgfId-977601"></A>Write to a register on active target</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655806_pgfId-977605"></A><B>
+Usage</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655806_pgfId-977607"></A><B>
+rwr &lt;reg&gt; &lt;value&gt;</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655806_pgfId-977705"></A>Write the <B>
+&lt;value&gt;</B>
+ to active target register specified by <B>
+&lt;reg&gt;</B>
+.</P>
+<P>
+<A NAME="50655806_pgfId-977609"></A><B>
+&lt;reg&gt;</B>
+ can specify a top level register and a register within a group.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="2" COLSPAN="1">
+<P>
+<A NAME="50655806_pgfId-977753"></A><B>
+Examples</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655806_pgfId-977783"></A><B>
+rwr r8 0x0</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655806_pgfId-977785"></A>Write <B>
+0x0</B>
+ to register <B>
+r8</B>
+.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655806_pgfId-977787"></A><B>
+rwr usr r8 0x0</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655806_pgfId-977789"></A>Write <B>
+0x0</B>
+ to register <B>
+r8</B>
+ in group <B>
+usr</B>
+</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655806_pgfId-967413"></A>Related Concepts</H5>
+<P>
+<A NAME="50655806_pgfId-967417"></A><A HREF="../concepts/sdk_c_xsd_over.htm#50655644_89495" CLASS="XRef">Xilinx System Debugger Overview</A></P>
+<P>
+<A NAME="50655806_pgfId-967421"></A><A HREF="../concepts/sdk_c_xsd_xmd_xsdb.htm#50655645_86860" CLASS="XRef">XMD vs XSDB</A></P>
+<P>
+<A NAME="50655806_pgfId-967425"></A><A HREF="../concepts/sdk_c_xsd_xsdb_commands.htm#50655646_75465" CLASS="XRef">XSDB Commands</A></P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655806_pgfId-967478"></A>Related Reference</H5>
+<P>
+<A NAME="50655806_pgfId-967482"></A><A HREF="sdk_u_xsd_xsdb_connections.htm#50655802_26190" CLASS="XRef">XSDB Commands: Connections</A></P>
+<P>
+<A NAME="50655806_pgfId-967486"></A><A HREF="sdk_u_xsd_xsdb_breakpoints.htm#50655801_26190" CLASS="XRef">XSDB Commands: Breakpoints</A></P>
+<P>
+<A NAME="50655806_pgfId-967490"></A><A HREF="sdk_u_xsd_xsdb_download.htm#50655803_26190" CLASS="XRef">XSDB Commands: Download</A></P>
+<P>
+<A NAME="50655806_pgfId-967494"></A><A HREF="sdk_u_xsd_xsdb_jtag.htm#50655804_26190" CLASS="XRef">XSDB Commands: JTAG</A></P>
+<P>
+<A NAME="50655806_pgfId-967498"></A><A HREF="sdk_u_xsd_xsdb_memory.htm#50655805_26190" CLASS="XRef">XSDB Commands: Memory</A></P>
+<P>
+<A NAME="50655806_pgfId-967506"></A><A HREF="sdk_u_xsd_xsdb_reset.htm#50655807_26190" CLASS="XRef">XSDB Commands: Reset</A></P>
+<P>
+<A NAME="50655806_pgfId-967510"></A><A HREF="sdk_u_xsd_xsdb_running.htm#50655808_26190" CLASS="XRef">XSDB Commands: Running</A></P>
+<P>
+<A NAME="50655806_pgfId-967514"></A><A HREF="sdk_u_xsd_xsdb_registers.htm#50655806_26190" CLASS="XRef">XSDB Commands: Registers</A></P>
+<P>
+<A NAME="50655806_pgfId-977847"></A><A HREF="sdk_u_xsd_xsdb_streams.htm#50655809_26190" CLASS="XRef">XSDB Commands: Streams</A></P>
+<P>
+<A NAME="50655806_pgfId-965722"></A>&nbsp;</P>
+<P>
+<A NAME="50655806_pgfId-965724"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

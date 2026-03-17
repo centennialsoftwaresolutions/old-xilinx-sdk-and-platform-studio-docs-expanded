@@ -1,0 +1,40 @@
+<project name="SDK Script" default="main">
+	<target name="main">
+		
+		<!-- createHwProject task is used to create a hardware platform project.
+		  'projname' - Name of the hardware platform project to be created in the workspace
+		  'hwspecpath' - Path of the design specification file exported from Vivado/XPS
+ 		-->
+		<createHwProject projname="zynq706_two_mb" hwspecpath="C:\Designs\zynq706_two_mb\system.xml" />
+
+		
+		<!-- createBspProject task is used to create a Board Support Package.
+				  'projname' - Name of the Board Support Package project to be created in the workspace
+				  'hwprojname'- Name of the hardware platform existing in workspace.
+				  'processor' - Name of the processor supported by hardware platform (Ex: ps7_cortexa9_0, microblaze_0)
+				  'os' - Name of the os supported by processor (Ex: standalone, linux, xilkernel)
+		 -->
+		<createBspProject projname="zynq706_two_mb_bsp1" hwprojname="zynq706_two_mb" processor="ps7_cortexa9_0" os="standalone" />
+
+		<!-- createAppProject task is used to create an Application project.  Given below is short description about each of the parameters used for the task.
+			  'projname' - Name of the Application project to be created in the workspace
+			  'hwprojname'- Name of the hardware platform existing in workspace or one of the predefined templates (MicroZed_hw_platform, ZC702_hw_platform, ZC706_hw_platform, zed_hw_platform)
+			  'processor' - Name of the processor supported by hardware platform (Ex: ps7_cortexa9_0, microblaze_0)
+			  'os' - Name of the os supported by processor (Ex: standalone, linux, xilkernel)
+			  'language' - Id of the languages supported (C, CPP)
+			  'template' - Name of the template supported for the configuration (Ex:  Hello World, Empty Application etc.)
+			  'bspprojname'- Name of the bsp project to be created or name of the valid existing bsp project. 
+		-->
+		
+		<!-- creates Application project using hardware platform and bsp created above -->
+		<createAppProject projname="zynq706_two_mb_perph_app" hwprojname="zynq706_two_mb" processor="ps7_cortexa9_0" bspprojname="zynq706_two_mb_bsp1" os="standalone" template="Peripheral Tests" language="C" />
+
+			
+		<!-- Below tasks creates application projects using one of the existing hardware templates-->
+		<!-- Multiple projects can be created using single script file 	-->
+		<createAppProject projname="ZC702_HelloWorldApp" hwprojname="ZC702_hw_platform" processor="ps7_cortexa9_0" os="standalone" language="C" template="Hello World" bspprojname="ZC702_HelloWorldBsp" />
+		<createAppProject projname="ZC702_EmptyApp" hwprojname="ZC702_hw_platform" processor="ps7_cortexa9_0" os="standalone" language="C" template="Empty Application" bspprojname="ZC702_HelloWorldBsp" />
+
+		
+	</target>
+</project>

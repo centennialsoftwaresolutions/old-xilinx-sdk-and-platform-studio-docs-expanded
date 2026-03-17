@@ -1,0 +1,109 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Using a Remote Host with System Debugger</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50655542_pgfId-294539"></A><A NAME="50655542_25723"></A>Using a Remote Host with System Debugger</H1>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655542_pgfId-332448"></A>Setting Up the Remote System Environment</H5>
+<OL>
+<LI>
+<A NAME="50655542_pgfId-332452"></A>Running hw_server with non-default port (for example: 3122) enables remote connections. Use the following command to launch hw_server on port 3122:</LI>
+</OL>
+<P CLASS="Code">
+<A NAME="50655542_pgfId-332453"></A>    hw_server -s TCP::3122</P>
+<OL>
+<LI value=2>
+<A NAME="50655542_pgfId-332454"></A>Make sure your board is correctly connected.</LI>
+<LI>
+<A NAME="50655542_pgfId-332541"></A>In a cmd window of the host machine, check the IP Address:</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_tcf_remote_debug-1.jpg"></center>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655542_pgfId-332460"></A>Setting Up the Local System for Remote Debug</H5>
+<OL>
+<LI>
+<A NAME="50655542_pgfId-332464"></A>Launch SDK.</LI>
+<LI>
+<A NAME="50655542_pgfId-424903"></A>Select the application to debug remotely.</LI>
+<LI>
+<A NAME="50655542_pgfId-424948"></A>Select <B>
+Run &gt; Debug Configurations</B>
+.</LI>
+<LI>
+<A NAME="50655542_pgfId-424985"></A>Create a new System Debugger configuration.</LI>
+<LI>
+<A NAME="50655542_pgfId-425031"></A>In the Target Setup tab, click <B>
+New</B>
+ to create a new connection.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_tcf_remote_debug-2.jpg"></center>
+</DIV>
+<OL>
+<LI value=6>
+<A NAME="50655542_pgfId-332601"></A>In the New Target Connection dialog box, add the required details for the remote host that is connected to the target.</LI>
+<OL>
+<LI type="a">
+<A NAME="50655542_pgfId-425315"></A><B>
+Target Name:</B>
+ Type a name for the target.</LI>
+<LI type="a">
+<A NAME="50655542_pgfId-425385"></A><B>
+Host:</B>
+ IP address or name of the host machine.</LI>
+<LI type="a">
+<A NAME="50655542_pgfId-425437"></A><B>
+Port:</B>
+ Port on which the hardware server was launched, such as 3122.</LI>
+</OL>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_tcf_remote_debug-3.jpg"></center>
+</DIV>
+<OL>
+<LI value=7>
+<A NAME="50655542_pgfId-425146"></A>Click <B>
+OK.</B>
+</LI>
+<LI>
+<A NAME="50655542_pgfId-425591"></A>Now you can see that there are two available connections. In this case, <B>
+remote_zc702_1</B>
+ is the remote connection.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_tcf_remote_debug-4.jpg"></center>
+</DIV>
+<OL>
+<LI value=9>
+<A NAME="50655542_pgfId-425567"></A>Select or add the remaining debug configuration details and click <B>
+Debug.</B>
+</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_tcf_remote_debug-5.jpg"></center>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655542_pgfId-332486"></A>Related Tasks</H5>
+<P>
+<A NAME="50655542_pgfId-332487"></A><A HREF="sdk_t_tcf_debugging.htm#50655538_57732" CLASS="XRef">Debugging with the System Debugger</A></P>
+<P>
+<A NAME="50655542_pgfId-332488"></A>&nbsp;</P>
+<P>
+<A NAME="50655542_pgfId-306566"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

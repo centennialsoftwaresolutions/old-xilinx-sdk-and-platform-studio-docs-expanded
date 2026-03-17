@@ -1,0 +1,128 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Using the OpenCV Template Application</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50655745_pgfId-294539"></A>Using the OpenCV Template Application</H1>
+<P>
+<A NAME="50655745_pgfId-332798"></A>OpenCV (Open Source Computer Vision Library) is a library of programming functions mainly aimed at real-time computer. The library is cross-platform. It focuses mainly on real-time image processing. If the library finds Intel's integrated Performance Primitives on the system, it will use these proprietary optimized routines to accelerate itself. SDK provides a facility to develop OpenCV application as part of this it provides a template application (which reverses an image). User can create his own applications. SDK also provides all the required openCV libraries with SDK install (OpenCV install path <B>
+..\SDK\&lt;Release&gt;\sw\ThirdParty\opencv</B>
+) and template application is having all openCV path set for building the template application. SDK supports only for Linux OS only. It supports only for ARM processor. </P>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50655745_pgfId-332801"></A>Creating an OpenCV Template Application</H6>
+<P>
+<A NAME="50655745_pgfId-332974"></A>To create an OpenCV template application:</P>
+<OL>
+<LI>
+<A NAME="50655745_pgfId-332802"></A>Select <B>
+New &gt; Application Project.<BR>
+</B>
+The New Project wizard opens and displays the Application Project page.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_opencv_template-1.jpg"></center>
+</DIV>
+<OL>
+<LI value=2>
+<A NAME="50655745_pgfId-332803"></A>In the <B>
+Processor</B>
+ drop-down box, select the processor of any ARM core.</LI>
+<LI>
+<A NAME="50655745_pgfId-333207"></A>In the <B>
+OS Platform </B>
+drop-down box, select <B>
+Linux.</B>
+</LI>
+<LI>
+<A NAME="50655745_pgfId-332805"></A>Click <B>
+Next.<BR>
+</B>
+The Templates page opens.</LI>
+<LI>
+<A NAME="50655745_pgfId-333295"></A>Select the template type <B>
+OpenCV Example Application.</B>
+</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_opencv_template-2.jpg"></center>
+</DIV>
+<OL>
+<LI value=6>
+<A NAME="50655745_pgfId-332811"></A>Click <B>
+Finish.<BR>
+</B>
+SDK creates an OpenCV example application. You can edit and change this application as required.</LI>
+</OL>
+<P>
+<A NAME="50655745_pgfId-332812"></A>You can add additional header files. To do this:</P>
+<OL>
+<LI>
+<A NAME="50655745_pgfId-576195"></A>Right-click on the project name and select <B>
+C/C++ Build Settings.<BR>
+</B>
+The Properties dialog box opens, with the C/C++ Build &gt; Settings pane selected.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_opencv_template-3.jpg"></center>
+</DIV>
+<OL>
+<LI value=2>
+<A NAME="50655745_pgfId-576202"></A>Add header files by clicking the <B>
+Add </B>
+button:</LI>
+<IMG style="margin-left: 15px" SRC="../images/icon_device_add.gif" ALIGN="BASELINE">
+</OL>
+<OL>
+<LI value=3>
+<A NAME="50655745_pgfId-594654"></A>Exclude header file paths by clicking the <B>
+Delete</B>
+ button:</LI>
+<IMG style="margin-left: 15px" SRC="../images/icon_device_delete.gif" ALIGN="BASELINE">
+</OL>
+<OL>
+<LI value=4>
+<A NAME="50655745_pgfId-594655"></A>Add library paths in the Libraries settings page.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_opencv_template-6.jpg"></center>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655745_pgfId-594656"></A>Running an OpenCV Application on a Target</H5>
+<P>
+<A NAME="50655745_pgfId-334598"></A>To run an OpenCV application on a target:</P>
+<OL>
+<LI>
+<A NAME="50655745_pgfId-334642"></A>Build your application and prepare the Linux kernel image.</LI>
+<LI>
+<A NAME="50655745_pgfId-334723"></A>Select <B>
+Run &gt; Debug Configurations</B>
+ to open the Debug Configurations page for your application.</LI>
+<LI>
+<A NAME="50655745_pgfId-594534"></A>In the <B>
+Commands to execute before application</B>
+ field, set the OpenCV libraries in the LD_LIBRARY_PATH.<BR>
+<B>
+Note: </B>
+OpenCV libraries are located in the <B>
+\sw\ThirdParty\opencv</B>
+ folder of your SDK installation.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_opencv_template-7.jpg"></center>
+</DIV>
+<P>
+<A NAME="50655745_pgfId-594535"></A>&nbsp;</P>
+<P>
+<A NAME="50655745_pgfId-335243"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

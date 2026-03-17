@@ -1,0 +1,123 @@
+﻿<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> System Debugger Limitations, Known Issues, and FAQs</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50655539_pgfId-294539"></A><A NAME="50655539_74046"></A>System Debugger Limitations, Known Issues, and FAQs</H1>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655539_pgfId-332462"></A>Known Issues and Limitations</H5>
+<UL>
+<LI>
+<A NAME="50655539_pgfId-410782"></A>SDK Doesn’t Support SVF Format.</LI>
+</UL>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655539_pgfId-410846"></A>Frequently Asked Questions</H5>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50655539_pgfId-332463"></A>In which scenario should I use Xilinx&#174; System Debugger or Xilinx C/C++ Debugger (XMD+GDB)?</H6>
+<P>
+<A NAME="50655539_pgfId-332465"></A>It is preferable to use the Xilinx C++ application, System Debugger. Use Xilinx C/C++ Debugger (GDB) when you want to debug Linux applications.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50655539_pgfId-332481"></A>By default, the Xilinx System Debugger starts at Application entry (main()). How can I tell Xilinx System debugger to start at program entry?</H6>
+<P>
+<A NAME="50655539_pgfId-403612"></A>If you wish to start debugging from program entry, enable the Stop at program entry checkbox in the debug configuration, as shown below..</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_tcf_limitations_faq-1.jpg"></center>
+</DIV>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50655539_pgfId-403616"></A>Debug after re-launch does not stop on breakpoints.</H6>
+<P>
+<A NAME="50655539_pgfId-332489"></A>SDK does a processor reset on every debug session. The interrupt controller is not reset during processor reset. Change the reset type to System Reset in Target Setup tab of debug configuration, as shown below.</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_tcf_limitations_faq-2.jpg"></center>
+</DIV>
+<P CLASS="Note"><b>Note:</b>
+<A NAME="50655539_pgfId-332493"></A>This is applicable only if you terminate a debug session while the processor is in interrupt context.</P>
+<P>
+<A NAME="50655539_pgfId-332508"></A>&nbsp;</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50655539_pgfId-332509"></A>Xilinx C/C++ Debugger (GDB) debugger hangs when the Disassembly view is open.</H6>
+<P>
+<A NAME="50655539_pgfId-404687"></A>The workaround is to close the Disassembly view and proceed with debugging.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50655539_pgfId-404691"></A>I am getting the error below while debugging an application.</H6>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_tcf_limitations_faq-3.jpg"></center>
+</DIV>
+<P>
+<A NAME="50655539_pgfId-404692"></A>The workaround for this issue is to restart the board. This issue will be resolved in the next release.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50655539_pgfId-332541"></A>Global variables are not displayed with Xilinx-customized System Debugger.</H6>
+<P>
+<A NAME="50655539_pgfId-332543"></A>Hover the mouse on the global variable to see the value of the global variable or use Xilinx Standard debugger (XMD) to see the global variables values.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50655539_pgfId-332550"></A>Cannot perform standalone profiling with Xilinx-customized System Debugger.</H6>
+<P>
+<A NAME="50655539_pgfId-332552"></A>Use Xilinx Standard debugger to profile the Standalone applications.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50655539_pgfId-332559"></A>Why is it that I cannot set more than 5 breakpoints/watchpoints with the System Debugger?</H6>
+<P>
+<A NAME="50655539_pgfId-332561"></A>Internally a breakpoint/watchpoint planted by user is treated as Hardware breakpoints in System Debugger. For ARM there is a limitation of 6 Hardware breakpoints. Out of 6, one breakpoint is used for the single stepping, other breakpoint is used for stopping at main(). So users are left with four breakpoints. Software breakpoints (No limitation on number of breakpoints) support will be added in next release.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50655539_pgfId-332562"></A>Cannot perform standalone profiling with Xilinx-customized System Debugger.</H6>
+<P>
+<A NAME="50655539_pgfId-332564"></A>Use Xilinx Standard debugger to profile the Standalone applications.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50655539_pgfId-332565"></A>Debug after re-launch does not stop on breakpoints.</H6>
+<P>
+<A NAME="50655539_pgfId-332567"></A>SDK does processor reset on every debug session. The Interrupt Controller is not reset during Processor reset. Change the reset type to System Reset in the Device Initialization tab of debug configuration.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50655539_pgfId-332577"></A>Not able to connect to the board when Verbose mode is enabled in SDK XMD console.</H6>
+<P>
+<A NAME="50655539_pgfId-332579"></A>Turn off verbose mode in SDK XMD console.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50655539_pgfId-332583"></A>I have installed cable drivers in my system. But launching hw_server gives a &quot;missing FTD2XX.dll&quot; error message.</H6>
+<P>
+<A NAME="50655539_pgfId-332585"></A>If you never plugin the digilent cable, you can run into this issue. Plug-in the digilent cable; this copies the required libraries.</P>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655539_pgfId-332587"></A>Related Tasks</H5>
+<P>
+<A NAME="50655539_pgfId-332588"></A><A HREF="sdk_t_tcf_debugging.htm#50655538_57732" CLASS="XRef">Debugging with the System Debugger</A></P>
+<P>
+<A NAME="50655539_pgfId-332589"></A>&nbsp;</P>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50655539_pgfId-306566"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</H6>
+</DIV>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

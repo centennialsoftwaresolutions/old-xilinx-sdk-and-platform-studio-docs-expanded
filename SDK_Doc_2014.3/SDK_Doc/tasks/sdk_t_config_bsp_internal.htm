@@ -1,0 +1,135 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Configuring a Board Support Package (SDK)</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50655502_pgfId-294539"></A>Configuring a Board Support Package (SDK)<A NAME="50655502_86840"></A></H1>
+<P>
+<A NAME="50655502_pgfId-332404"></A>To configure an existing board support package project used to develop applications within SDK, do the following:</P>
+<OL>
+<LI>
+<A NAME="50655502_pgfId-332405"></A>In either the <B>
+Project Explorer </B>
+or<B>
+ C/C++ Projects</B>
+ view, right-click on the board support package to configure.</LI>
+<LI>
+<A NAME="50655502_pgfId-332406"></A>Select <B>
+Board Support Package Settings.</B>
+ The Board Support Package Settings dialog box opens.<BR>
+<B>
+Note: </B>
+You can also select <B>
+Xilinx Tools &gt; Board Support Package Settings</B>
+ to open this dialog box.</LI>
+</OL>
+<P>
+<A NAME="50655502_pgfId-332408"></A>The Board Support Package Settings dialog box consists of the following pages:</P>
+<UL>
+<LI>
+<A NAME="50655502_pgfId-332409"></A>Overview - see <A HREF="sdk_t_config_bsp_internal.htm#50655502_94431" CLASS="XRef">Using the Board Support Package Overview Page</A></LI>
+<LI>
+<A NAME="50655502_pgfId-332410"></A>Board Support Package Configuration - see <A HREF="sdk_t_config_bsp_internal.htm#50655502_53126" CLASS="XRef">Using the Board Support Package Settings Page</A></LI>
+<LI>
+<A NAME="50655502_pgfId-332411"></A>Drivers - see <A HREF="sdk_t_config_bsp_internal.htm#50655502_77144" CLASS="XRef">Using the Drivers Page</A></LI>
+<LI>
+<A NAME="50655502_pgfId-332412"></A>Driver Configuration - see <A HREF="sdk_t_config_bsp_internal.htm#50655502_20492" CLASS="XRef">Using the Driver Configuration Page</A></LI>
+</UL>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655502_pgfId-332413"></A><A NAME="50655502_94431"></A>Using the Board Support Package Overview Page</H5>
+<P>
+<A NAME="50655502_pgfId-332414"></A>In the Overview page, you can configure basic settings for the OS Version and the Supported Libraries to be enabled in the platform.</P>
+<P>
+<A NAME="50655502_pgfId-621133"></A><B>
+Note: </B>
+You cannot change the OS choice in this page, because the OS type is determined by the type you chose for the software platform when you created it.</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_config_bsp_internal-1.jpg"></center>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655502_pgfId-332419"></A><A NAME="50655502_53126"></A>Using the Board Support Package Settings Page</H5>
+<P>
+<A NAME="50655502_pgfId-621467"></A>In the <B>
+Board Support Package</B>
+ settings page, you can configure parameters of the OS and its constituent libraries.</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_config_bsp_internal-2.jpg"></center>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655502_pgfId-621472"></A><A NAME="50655502_77144"></A>Using the Drivers Page</H5>
+<P>
+<A NAME="50655502_pgfId-332425"></A>The <B>
+Drivers</B>
+ page lists all the device drivers assigned for each peripheral in your system. You can select each peripheral and change its device driver assignment and its version. If you want to remove a driver for a peripheral, assign the driver to <B>
+none.</B>
+</P>
+<P>
+<A NAME="50655502_pgfId-332426"></A>Some device drivers export parameters that you can configure. If a driver in the driver list has parameters, it is listed in navigation pane on the left and you can configure them by clicking on the driver name.</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_config_bsp_internal-3.jpg"></center>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655502_pgfId-332430"></A><A NAME="50655502_20492"></A>Using the Driver Configuration Page</H5>
+<P>
+<A NAME="50655502_pgfId-332431"></A>The <B>
+Driver Configuration</B>
+ page lists all of the configurable driver parameters. To change a parameter, click on the corresponding <B>
+Value</B>
+ field and type the new setting.</P>
+<P>
+<A NAME="50655502_pgfId-332432"></A>When you finish with all the settings you want to make, click <B>
+OK</B>
+ and SDK commits your changes.</P>
+<P>
+<A NAME="50655502_pgfId-332433"></A>If the <B>
+Build Automatically</B>
+ option is selected in the <B>
+Project</B>
+ menu, SDK automatically rebuilds your software platform with your new settings applied.</P>
+<P CLASS="Note"><b>Note:</b>
+<A NAME="50655502_pgfId-332434"></A>The exact list of software components appearing in the Board Support Package Settings dialog box depends on the components available in the SDK install, as well as the list of components found in any software repositories that are set up in your workspace. For information about how software repositories work, refer to <A HREF="../concepts/sdk_c_repos.htm#50655245_86840" CLASS="XRef">Software Repositories</A>.</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_config_bsp_internal-4.jpg"></center>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655502_pgfId-332441"></A>Related Concepts</H5>
+<P>
+<A NAME="50655502_pgfId-332445"></A><A HREF="../concepts/sdk_c_bsp_internal.htm#50655264_86840" CLASS="XRef">Board Support Packages (SDK)</A></P>
+<P>
+<A NAME="50655502_pgfId-332449"></A><A HREF="../concepts/sdk_c_repos.htm#50655245_86840" CLASS="XRef">Software Repositories</A></P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655502_pgfId-332450"></A>Related Tasks</H5>
+<P>
+<A NAME="50655502_pgfId-332454"></A><A HREF="sdk_t_repos.htm#50655528_86840" CLASS="XRef">Setting Up Software Repositories</A></P>
+<P>
+<A NAME="50655502_pgfId-332458"></A><A HREF="sdk_t_create_new_appln.htm#50655508_84561" CLASS="XRef">Creating a C or C++ Project</A></P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655502_pgfId-332459"></A>Related Reference</H5>
+<P>
+<A NAME="50655502_pgfId-332463"></A><A HREF="../reference/sdk_u_configure_bsp_internal.htm#50655408_26948" CLASS="XRef">Board Support Package (SDK) Settings Dialog Box</A></P>
+<P>
+<A NAME="50655502_pgfId-332464"></A>&nbsp;</P>
+<P>
+<A NAME="50655502_pgfId-332468"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

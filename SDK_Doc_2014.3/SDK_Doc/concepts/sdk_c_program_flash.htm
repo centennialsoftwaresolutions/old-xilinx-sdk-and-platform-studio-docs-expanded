@@ -1,0 +1,44 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Programming Parallel Flash Overview</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50655248_pgfId-294539"></A><A NAME="50655248_40408"></A>Programming Parallel Flash Overview</H1>
+<P>
+<A NAME="50655248_pgfId-332244"></A>Typically, you can program the following in Flash:</P>
+<UL>
+<LI>
+<A NAME="50655248_pgfId-332246"></A>Executable and bootloadable images of applications</LI>
+<LI>
+<A NAME="50655248_pgfId-332248"></A>Hardware bitstreams for your FPGA</LI>
+<LI>
+<A NAME="50655248_pgfId-332250"></A>File system images; data files such as sample data and algorithmic tables</LI>
+</UL>
+<P>
+<A NAME="50655248_pgfId-332252"></A>The first use case is most common. When the processor in your design comes out of reset, it starts executing code stored in block RAM at the processor reset location. Typically, block RAM is too small (by a few kilobytes or so) to accommodate your entire software application image. Therefore, you must store your software application image in Flash memory (typically in the order of megabytes). A small bootloader is then designed to fit in block RAM. Upon reset the bootloader reads the software application image from Flash memory, copies it over to larger and more available external memory, and then transfers control to your software application. The application then continues.</P>
+<P>
+<A NAME="50655248_pgfId-332254"></A>The software application you build from your project is in Executable and Linkable Format (ELF). Storing and bootloading the ELF image itself is not usually done because bootloading an ELF image increases the complexity of the bootloader. Instead, the ELF image is converted to one of the common bootloadable image formats, such as SREC (Motorola S-record). The bootloader then becomes simple and therefore smaller.</P>
+<P>
+<A NAME="50655248_pgfId-332256"></A>You can program external Common Flash Interface (CFI) compliant parallel Flash devices on your board, connected through the external memory controller (EMC) IP cores. The programming solution is designed to be generic and targets a wide variety of Flash hardware and layouts.</P>
+<P>
+<A NAME="50655248_pgfId-332258"></A>Refer to the &quot;Flash Memory Programming&quot; chapter of the <b>
+Embedded System Tools Reference Manual</B>
+ (<A HREF="http://www.xilinx.com/cgi-bin/docs/rdoc?v=14_7;d=est_rm.pdf" CLASS="URL">UG111</A>) for a list of supported Flash configurations, a discussion of customizing Flash programming, and other information about tool functionality.</P>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655248_pgfId-332263"></A>Related Reference</H5>
+<P>
+<A NAME="50655248_pgfId-332264"></A><A HREF="../reference/sdk_u_program_flash.htm#50655420_15460" CLASS="XRef">Program Flash Memory Dialog Box</A></P>
+<P>
+<A NAME="50655248_pgfId-332404"></A>&nbsp;</P>
+<P>
+<A NAME="50655248_pgfId-306634"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

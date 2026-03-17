@@ -1,0 +1,168 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Multi-Processor Debugging with System Debugger</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50655540_pgfId-294539"></A>Multi-Processor Debugging with System Debugger</H1>
+<P>
+<A NAME="50655540_pgfId-332463"></A>You can debug multiple processors simultaneously with a single System Debugger debug configuration.</P>
+<OL>
+<LI>
+<A NAME="50655540_pgfId-332465"></A>Create application projects for the processors included in the design.</LI>
+<LI>
+<A NAME="50655540_pgfId-332580"></A>Select any application and click <B>
+Run &gt; Debug Configurations.</B>
+</LI>
+</OL>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655540_pgfId-332471"></A>Working in the Debug Configurations Window</H5>
+<OL>
+<LI>
+<A NAME="50655540_pgfId-475248"></A>In the <B>
+Debug Configurations</B>
+ window, left panel, select the configuration type <B>
+Xilinx C/C++ application </B>
+and click the <B>
+New</B>
+ button:</LI>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_tcf_multiproc_debugging-1.jpg" ALIGN="BASELINE">
+</OL>
+<OL>
+<LI value=2>
+<A NAME="50655540_pgfId-475255"></A>Name the configuration <B>
+Multi_Processor_ZC706_Debug.</B>
+</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_tcf_multiproc_debugging-2.jpg"></center>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655540_pgfId-475256"></A>Debug Configurations Window, Target Setup Tab</H5>
+<OL>
+<LI>
+<A NAME="50655540_pgfId-332480"></A>In the Target Setup tab, select the appropriate setup.</LI>
+<UL>
+<LI>
+<A NAME="50655540_pgfId-332482"></A>Select the <B>
+Manually setup target</B>
+ radio button if you want to initialize and download ELF files.</LI>
+<LI>
+<A NAME="50655540_pgfId-332790"></A>Select the <B>
+Attach to running target</B>
+ radio button if you want to connect to the target and display the current status of all the processors. With this selection, no resets or initializations are performed on the target before launching the debugger.</LI>
+</UL>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_tcf_multiproc_debugging-3.jpg"></center>
+</DIV>
+<OL>
+<LI value=2>
+<A NAME="50655540_pgfId-332489"></A>To automatically populate bitstream and initialization files, from the <B>
+Hardware platform</B>
+ drop-down list, select the appropriate hardware platform.<BR>
+Use the Browse buttons if you wish to select different bitstream and initialization files.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_tcf_multiproc_debugging-4.jpg"></center>
+</DIV>
+<OL>
+<LI value=3>
+<A NAME="50655540_pgfId-332496"></A>If you want to reset the entire system, enable the <B>
+Reset entire system</B>
+ checkbox in the Debug Configurations window.</LI>
+<LI>
+<A NAME="50655540_pgfId-332925"></A>If you want to program the bitstream after system reset, enable the <B>
+Program FPGA</B>
+ checkbox.</LI>
+<LI>
+<A NAME="50655540_pgfId-403029"></A>Enable the <B>
+Run ps7_init</B>
+ checkbox to run the PS initialization file.<BR>
+<B>
+Note: </B>
+The Summary window displays a summary of System Debugger operations.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_tcf_multiproc_debugging-5.jpg"></center>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655540_pgfId-403033"></A>Debug Configurations Window, Applications Tab</H5>
+<OL>
+<LI>
+<A NAME="50655540_pgfId-332508"></A>Select the <B>
+Applications</B>
+ tab to display all processors available to the selected hardware platform.</LI>
+<LI value=2>
+<A NAME="50655540_pgfId-332513"></A>Select the <B>
+Download Application</B>
+ checkbox if you want to download the application to the selected processor.<BR>
+<B>
+Note:</B>
+ If a single project exists for the processor, the <B>
+Project Name</B>
+ and <B>
+Application Name</B>
+ fields populate automatically when you select the <B>
+Download Application</B>
+ checkbox. If more than one project exists for the processor, you must make the <B>
+Project Name</B>
+ selection manually.</LI>
+<LI>
+<A NAME="50655540_pgfId-332516"></A>Select the <B>
+Stop at program entry</B>
+ checkbox if you want to stop the processor before application main().</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_tcf_multiproc_debugging-6.jpg"></center>
+</DIV>
+<OL>
+<LI value=4>
+<A NAME="50655540_pgfId-332521"></A>Click the <B>
+Debug</B>
+ button to launch multi-processor debugging.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_tcf_multiproc_debugging-7.jpg"></center>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655540_pgfId-332525"></A>Related Concepts</H5>
+<P>
+<A NAME="50655540_pgfId-333170"></A><A HREF="../concepts/sdk_c_over_dbg.htm#50655255_56005" CLASS="XRef">Debug Overview</A></P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655540_pgfId-332527"></A>Related Tasks</H5>
+<P>
+<A NAME="50655540_pgfId-332529"></A>Refer to the following sections for information about installation, setting up the environment, and debugging applications using the System Debugger integrated SDK:</P>
+<UL>
+<LI>
+<A NAME="50655540_pgfId-332531"></A><A HREF="sdk_t_tcf_supported_design_flows.htm#50655545_18008" CLASS="XRef">System Debugger Supported Design Flows</A></LI>
+<LI>
+<A NAME="50655540_pgfId-333227"></A><A HREF="sdk_t_tcf_standalone_app_debug_gdb.htm#50655543_58597" CLASS="XRef">Standalone Application Debug Using GNU Debugger (GDB)</A></LI>
+<LI>
+<A NAME="50655540_pgfId-333232"></A><A HREF="sdk_t_tcf_standalone_app_debug_tcf.htm#50655544_43001" CLASS="XRef">Standalone Application Debug Using Xilinx System Debugger</A></LI>
+<LI>
+<A NAME="50655540_pgfId-333237"></A><A HREF="sdk_t_tcf_attach_debug_linux_kernel_tcf.htm#50655537_83586" CLASS="XRef">Attach and Debug Linux Kernel Using Xilinx System Debugger</A></LI>
+<LI>
+<A NAME="50655540_pgfId-333242"></A><A HREF="sdk_t_tcf_limitations_faq.htm#50655539_74046" CLASS="XRef">System Debugger Limitations, Known Issues, and FAQs</A></LI>
+</UL>
+<P>
+<A NAME="50655540_pgfId-332536"></A>&nbsp;</P>
+<P>
+<A NAME="50655540_pgfId-306566"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

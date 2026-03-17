@@ -1,0 +1,136 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> XSDB Commands: Reset</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50655807_pgfId-965821"></A><A NAME="50655807_26190"></A>XSDB Commands: Reset</H1>
+<P>
+<A NAME="50655807_pgfId-967566"></A>The Xilinx System Debugger CLI (XSDB) Reset commands can be used to reset the target.</P>
+<P>
+<A NAME="50655807_pgfId-968219"></A>The following commands are available:</P>
+<UL>
+<LI>
+<A NAME="50655807_pgfId-967625"></A><A HREF="sdk_u_xsd_xsdb_reset.htm#50655807_44117" CLASS="XRef">rst</A></LI>
+</UL>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655807_pgfId-967568"></A><A NAME="50655807_44117"></A>rst</H5>
+<TABLE width=80% BORDER="1">
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655807_pgfId-968065"></A><B>
+Description</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="50655807_pgfId-968067"></A>Reset the active target. This command can be used to reset a processor or a group of processors or the entire system.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655807_pgfId-968071"></A><B>
+Usage</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655807_pgfId-968129"></A><B>
+rst [options]</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655807_pgfId-968131"></A>Reset the active target</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="3" COLSPAN="1">
+<P>
+<A NAME="50655807_pgfId-968077"></A><B>
+Options</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655807_pgfId-968133"></A><B>
+-processor</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655807_pgfId-968135"></A>Reset the active processor group. This reset type is supported only on Zynq. A processor group is defined as a set of processors and on-chip peripherals like OCM.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655807_pgfId-968137"></A><B>
+-system</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655807_pgfId-968139"></A>Reset the active System.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655807_pgfId-968141"></A><B>
+-srst</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50655807_pgfId-968143"></A>Generate system reset for active target.  With JTAG this is done by generating a pulse on the SRST pin on the JTAG cable associated with the active target.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655807_pgfId-967442"></A>Related Concepts</H5>
+<P>
+<A NAME="50655807_pgfId-967446"></A><A HREF="../concepts/sdk_c_xsd_over.htm#50655644_89495" CLASS="XRef">Xilinx System Debugger Overview</A></P>
+<P>
+<A NAME="50655807_pgfId-967450"></A><A HREF="../concepts/sdk_c_xsd_xmd_xsdb.htm#50655645_86860" CLASS="XRef">XMD vs XSDB</A></P>
+<P>
+<A NAME="50655807_pgfId-967454"></A><A HREF="../concepts/sdk_c_xsd_xsdb_commands.htm#50655646_75465" CLASS="XRef">XSDB Commands</A></P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655807_pgfId-967510"></A>Related Reference</H5>
+<P>
+<A NAME="50655807_pgfId-967514"></A><A HREF="sdk_u_xsd_xsdb_connections.htm#50655802_26190" CLASS="XRef">XSDB Commands: Connections</A></P>
+<P>
+<A NAME="50655807_pgfId-967518"></A><A HREF="sdk_u_xsd_xsdb_breakpoints.htm#50655801_26190" CLASS="XRef">XSDB Commands: Breakpoints</A></P>
+<P>
+<A NAME="50655807_pgfId-967522"></A><A HREF="sdk_u_xsd_xsdb_download.htm#50655803_26190" CLASS="XRef">XSDB Commands: Download</A></P>
+<P>
+<A NAME="50655807_pgfId-967526"></A><A HREF="sdk_u_xsd_xsdb_jtag.htm#50655804_26190" CLASS="XRef">XSDB Commands: JTAG</A></P>
+<P>
+<A NAME="50655807_pgfId-967530"></A><A HREF="sdk_u_xsd_xsdb_memory.htm#50655805_26190" CLASS="XRef">XSDB Commands: Memory</A></P>
+<P>
+<A NAME="50655807_pgfId-967534"></A><A HREF="sdk_u_xsd_xsdb_registers.htm#50655806_26190" CLASS="XRef">XSDB Commands: Registers</A></P>
+<P>
+<A NAME="50655807_pgfId-967542"></A><A HREF="sdk_u_xsd_xsdb_running.htm#50655808_26190" CLASS="XRef">XSDB Commands: Running</A></P>
+<P>
+<A NAME="50655807_pgfId-967546"></A><A HREF="sdk_u_xsd_xsdb_reset.htm#50655807_26190" CLASS="XRef">XSDB Commands: Reset</A></P>
+<P>
+<A NAME="50655807_pgfId-968165"></A><A HREF="sdk_u_xsd_xsdb_streams.htm#50655809_26190" CLASS="XRef">XSDB Commands: Streams</A></P>
+<P>
+<A NAME="50655807_pgfId-967502"></A>&nbsp;</P>
+<P>
+<A NAME="50655807_pgfId-965724"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

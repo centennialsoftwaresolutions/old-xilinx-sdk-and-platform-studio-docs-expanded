@@ -1,0 +1,189 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Profiling a Program</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50655491_pgfId-294539"></A>Profiling a Program<A NAME="50655491_86840"></A></H1>
+<P>
+<A NAME="50655491_pgfId-332380"></A>Profiling an application involves multiple steps from setting up the hardware in Xilinx&#174; Platform Studio (XPS), setting up the software platform and application, and running the application. These steps are described in detail below.</P>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655491_pgfId-332381"></A>Setting up the Hardware</H5>
+<P>
+<A NAME="50655491_pgfId-332382"></A>To profile a software application, you must ensure that interrupts are raised periodically to sample the program counter (PC) value. To do this, you must program a timer and use the timer interrupt handler to collect and store the PC. The profile interrupt handler requires full access to the timer, so a separate timer that is not used by the application itself must be available in the system.</P>
+<P>
+<A NAME="50655491_pgfId-332386"></A>The timer interrupt signal is connected directly to the processor, or it is connected to the processor through an interrupt controller. Look at the hardware design report (double-click the Hardware Platform Specification XML file in the Project Explorer to open its viewer and click on the hardware design report link), to check if the connectivity exists in the system.</P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655491_pgfId-332387"></A>Setting up the Board Support Package</H5>
+<OL>
+<LI>
+<A NAME="50655491_pgfId-332389"></A>Select the Board Support Package (BSP) of the software application in the Project Explorer View, then right-click and select <B>
+Board Support Package Settings</B>
+ (or select <B>
+Xilinx Tools &gt; Board Support Package Settings</B>
+).</LI>
+<LI>
+<A NAME="50655491_pgfId-332390"></A>Click on the OS name, such as <B>
+standalone</B>
+, to configure its parameters.</LI>
+<LI>
+<A NAME="50655491_pgfId-332559"></A>Set the <B>
+enable_sw_intrusive_profiling</B>
+ field to <B>
+true</B>
+ and select the timer for use by the profile libraries.</LI>
+<LI>
+<A NAME="50655491_pgfId-332391"></A>The BSP should be compiled with the <B>
+-pg compiler</B>
+ option. To perform this step, click on the drivers item and select the cpu driver. Add the <B>
+-pg flag</B>
+ to the <B>
+extra_compiler_flags</B>
+ option.</LI>
+<LI>
+<A NAME="50655491_pgfId-332392"></A>Click <B>
+OK.</B>
+</LI>
+</OL>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655491_pgfId-332394"></A>Setting Up the Software Application</H5>
+<OL>
+<LI>
+<A NAME="50655491_pgfId-332396"></A>Modify the software application code to enable interrupts. If there is an interrupt controller present in the system with multiple interrupt sources, you must enable interrupts in the processor and the interrupt controller to allow interrupts from the profile timer to reach the processor. Example code is shown below:</LI>
+</OL>
+<P CLASS="Code">
+<A NAME="50655491_pgfId-332398"></A>/* enable interrupt controller */</P>
+<P CLASS="Code">
+<A NAME="50655491_pgfId-332399"></A>        XIntc_mMasterEnable(SYSINTC_BASEADDR);</P>
+<P CLASS="Code">
+<A NAME="50655491_pgfId-332400"></A>&nbsp;</P>
+<P CLASS="Code">
+<A NAME="50655491_pgfId-332401"></A>        /* service all interrupts */</P>
+<P CLASS="Code">
+<A NAME="50655491_pgfId-332402"></A>        XIntc_SetIntrSvcOption(SYSINTC_BASEADDR, XIN_SVC_ALL_ISRS_OPTION);</P>
+<P CLASS="Code">
+<A NAME="50655491_pgfId-332403"></A>&nbsp;</P>
+<P CLASS="Code">
+<A NAME="50655491_pgfId-332404"></A>        /* enable the profile timer interrupt */</P>
+<P CLASS="Code">
+<A NAME="50655491_pgfId-332405"></A>        XIntc_mEnableIntr(SYSINTC_BASEADDR, PROFILE_TIMER_INTR_MASK);</P>
+<P CLASS="Code">
+<A NAME="50655491_pgfId-332406"></A>&nbsp;</P>
+<P CLASS="Code">
+<A NAME="50655491_pgfId-332407"></A>        /* enable interrupts in the processor */</P>
+<P CLASS="Code">
+<A NAME="50655491_pgfId-332408"></A>        microblaze_enable_interrupts();</P>
+<OL>
+<LI value=2>
+<A NAME="50655491_pgfId-332410"></A>If the profiling timer is the only entity that connects to the input of interrupt controller or directly to the processor, the tool sets up the interrupt for you automatically, and no change is required in the application code.</LI>
+<LI>
+<A NAME="50655491_pgfId-332411"></A>Right-click the software application and select <B>
+C/C++ Settings</B>
+ (or <B>
+Properties &gt; C/C++ Build &gt; Settings</B>
+).</LI>
+<LI>
+<A NAME="50655491_pgfId-332642"></A>Select <B>
+gcc compiler &gt; Profiling</B>
+ and enable profiling by selecting <B>
+Enable Profiling (-pg).</B>
+</LI>
+<LI>
+<A NAME="50655491_pgfId-332412"></A>Click <B>
+OK.</B>
+</LI>
+</OL>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655491_pgfId-332414"></A>Creating a Profile Run Configuration</H5>
+<P>
+<A NAME="50655491_pgfId-332415"></A>To profile an application, you must create a configuration that captures the settings for profiling the application. Once the configuration has been created, it can be used to again debug the application.</P>
+<OL>
+<LI>
+<A NAME="50655491_pgfId-332417"></A>In the C/C++ Projects View, select the application to debug.</LI>
+<LI>
+<A NAME="50655491_pgfId-332418"></A>Select <B>
+Run &gt; Run.</B>
+</LI>
+<LI>
+<A NAME="50655491_pgfId-332419"></A>In the Run Configurations dialog box, expand <B>
+Xilinx C/C++ ELF.</B>
+</LI>
+<LI>
+<A NAME="50655491_pgfId-332420"></A>Click <B>
+New.<BR>
+</B>
+The name of the new project is displayed in the Configurations box. The default name is the name of the project.</LI>
+<LI>
+<A NAME="50655491_pgfId-332421"></A>Make sure the ELF file generated using profile configuration is selected in the C/C++ Application field.</LI>
+<LI>
+<A NAME="50655491_pgfId-332422"></A>In the Profiler tab, do the following:</LI>
+<OL>
+<LI type="a">
+<A NAME="50655491_pgfId-332423"></A>Click to select the <B>
+Enable Profiling</B>
+ check box.</LI>
+<LI type="a">
+<A NAME="50655491_pgfId-332424"></A>Specify the <B>
+Scratch Memory Address to Collect Profile Data</B>
+ to use for profiling in hex. This is a valid system memory address that is not used by the software application.</LI>
+<LI type="a">
+<A NAME="50655491_pgfId-332425"></A>Use the defaults for the <B>
+Sampling Frequency</B>
+ and <B>
+Histogram Bin Size</B>
+ values.</LI>
+</OL>
+<LI>
+<A NAME="50655491_pgfId-332426"></A>Use the default settings for the other tabs and click <B>
+Run.</B>
+</LI>
+</OL>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655491_pgfId-332428"></A>Profiling the Application</H5>
+<P>
+<A NAME="50655491_pgfId-332429"></A>When the application finishes running (reaches exit), or when the stop button is pressed to stop the program, SDK downloads the profile data and stores it in a file named <B>
+gmon.out.</B>
+ To view the profile results, double click on the <B>
+gmon.out</B>
+ file associated with the application in the Project Explorer view. The profiling view is opened at the bottom of the SDK window.</P>
+<P>
+<A NAME="50655491_pgfId-332431"></A>For more information on interpreting the profile data in the profiler perspective, refer to <A HREF="../concepts/sdk_c_profiler_perspective.htm#50655249_55081" CLASS="XRef">Xilinx Profiling View</A>.</P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655491_pgfId-332433"></A>Related Concepts</H5>
+<P>
+<A NAME="50655491_pgfId-332434"></A><A HREF="../concepts/sdk_c_over_profile.htm#50655254_13100" CLASS="XRef">Profiling Overview</A></P>
+<P>
+<A NAME="50655491_pgfId-332435"></A><A HREF="../concepts/sdk_c_profile_configuration.htm#50655250_56360" CLASS="XRef">Profile Configuration</A></P>
+<P>
+<A NAME="50655491_pgfId-332436"></A><A HREF="../concepts/sdk_c_profiler_perspective.htm#50655249_55081" CLASS="XRef">Xilinx Profiling View</A></P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655491_pgfId-332438"></A>Related Tasks</H5>
+<P>
+<A NAME="50655491_pgfId-332439"></A><A HREF="sdk_t_config_bsp_internal.htm#50655502_86840" CLASS="XRef">Configuring a Board Support Package (SDK)</A></P>
+<P>
+<A NAME="50655491_pgfId-332440"></A><A HREF="sdk_o_run_config.htm#50655494_75125" CLASS="XRef">Creating or Editing a Run/Debug/Profile Configuration</A></P>
+<P>
+<A NAME="50655491_pgfId-332441"></A>&nbsp;</P>
+<P>
+<A NAME="50655491_pgfId-332371"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

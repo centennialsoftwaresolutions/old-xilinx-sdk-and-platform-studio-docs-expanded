@@ -1,0 +1,77 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> System Performance Modeling</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50655620_pgfId-965821"></A><A NAME="50655620_99596"></A>System Performance Modeling</H1>
+<P>
+<A NAME="50655620_pgfId-965837"></A>System Performance Modeling (SPM) offers system-level performance analysis for characterizing and evaluating the performance of hardware and software systems. In particular, it enables analysis of the critical partitioning trade-offs between the ARM Cortex A9 processors and the programmable fabric for a variety of different traffic scenarios. It provides graphical visualizations of AXI transaction traces and system-level performance metrics such as throughput, latency, utilization, and congestion.</P>
+<P>
+<A NAME="50655620_pgfId-965838"></A>SPM can be used in two ways:</P>
+<UL>
+<LI>
+<A NAME="50655620_pgfId-966080"></A>Using a predefined design provided with the SDK</LI>
+<LI>
+<A NAME="50655620_pgfId-966096"></A>With the user design</LI>
+</UL>
+<P>
+<A NAME="50655620_pgfId-966103"></A>In the current release, SPM is supported only for bare metal/standalone applications.</P>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655620_pgfId-965861"></A>SDK Predefined Design Flow</H5>
+<P>
+<A NAME="50655620_pgfId-965862"></A>The predefined flow provided with SDK uses the fixed design, and comes with a fixed bitstream.  In this design, there are five AXI Traffic Generators (ATGs), with one connected to each of the four High Performance ports (HP0-3) and one connected to the Accelerator Coherency Port (ACP). The ATGs are set up and controlled using one of the General Purpose (GP) ports. In addition, an AXI Performance Monitor (APM) is included in order to monitor the AXI traffic on the HP0-3 and ACP ports.</P>
+<P>
+<A NAME="50655620_pgfId-966174"></A>The SDK predefined design flow includes the following steps:</P>
+<OL>
+<LI>
+<A NAME="50655620_pgfId-966118"></A><A HREF="../tasks/sdk_t_spm_predefined.htm#50655903_86840" CLASS="XRef">System Performance Modeling Using the SDK Predefined Design</A></LI>
+<LI>
+<A NAME="50655620_pgfId-965751"></A><A HREF="../tasks/sdk_t_changing_fsbl_config.htm#50656046_86840" CLASS="XRef">Changing the FSBL Configuration</A></LI>
+<LI>
+<A NAME="50655620_pgfId-965755"></A><A HREF="../tasks/sdk_t_spm_using_performance_analysis_tools.htm#50655902_22707" CLASS="XRef">Using Performance Analysis Tools</A></LI>
+</OL>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655620_pgfId-966378"></A>User Defined Flow</H5>
+<P>
+<A NAME="50655620_pgfId-966379"></A>Performance Analysis can be done on any user defined applications. For information, see <A HREF="../tasks/sdk_t_spm_user_defined.htm#50656045_48715" CLASS="XRef">System Performance Modeling Using a User-Defined Flow</A>.</P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655620_pgfId-332523"></A>SPM Limitations in 2014.3 Release</H5>
+<UL>
+<LI>
+<A NAME="50655620_pgfId-965936"></A>The 2014.3 release supports SPM only for bare metal/Standalone applications.</LI>
+<LI>
+<A NAME="50655620_pgfId-965937"></A>The 2014.3 release supports monitoring over HP0,HP1,HP2,HP3 and ACP ports.</LI>
+<LI>
+<A NAME="50655620_pgfId-966638"></A>In the user design flow, the Port Location in the ATG Configuration is pre-populated from the Hardware handoff file. The Port location is the instance name given to the ATG, not the APM port to which the ATG instance is connected. For example, as shown in the following figure, the Port Locations are named axi_traffic_gen0. Note the connection between axi_traffic_gen0 and the APM port.</LI>
+</UL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_c_spm_over_spm-1.jpg"></center>
+</DIV>
+<UL>
+<LI>
+<A NAME="50655620_pgfId-966639"></A>SPM functionality is validated only on ZC702 and ZC706 boards.</LI>
+</UL>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50655620_pgfId-965914"></A>Related Concepts</H5>
+<P>
+<A NAME="50655620_pgfId-332528"></A><A HREF="sdk_c_perf_metrics.htm#50655619_23066" CLASS="XRef">System Performance Metrics and Graphs</A></P>
+<P>
+<A NAME="50655620_pgfId-965722"></A>&nbsp;</P>
+<P>
+<A NAME="50655620_pgfId-965724"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>
