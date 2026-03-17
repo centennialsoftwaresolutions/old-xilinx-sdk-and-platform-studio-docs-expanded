@@ -1,0 +1,162 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="In the PL Performance tab, you can graphs of the metrics for the PL. For each metric, each port data is plotted in a different color. The PL Performance tab graphs the following metrics: Metric ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="PL Performance"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/sdk_c_spm_over_spm.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/sdk_c_perf_metrics.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="sdk_u_pl_performance"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>PL Performance</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="sdk_u_pl_performance">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+
+<h1 class="title topictitle1">PL Performance</h1>
+
+<div class="body">
+<p class="p">In the <strong class="ph b">PL Performance</strong> tab, you can graphs of the metrics for
+the PL. For each metric, each port data is plotted in a different color.</p>
+
+<br></br><img class="image" src="../images/sdk_u_pl_performance-1.jpg" height="221" width="439"></img><br></br><p class="p">The PL Performance tab graphs the following metrics:</p>
+
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="sdk_u_pl_performance__db417377" class="table" frame="border" border="1" rules="all">
+
+
+<thead class="thead" align="left">
+<tr class="row">
+<th class="entry" valign="top" width="102pt" id="d27494e34"><p class="p">Metric</p>
+</th>
+
+<th class="entry" valign="top" width="NaN%" id="d27494e38"><p class="p">Description</p>
+</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr class="row">
+<td class="entry" valign="top" width="102pt" headers="d27494e34 "><p class="p">Write Transactions</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d27494e38 "><p class="p">The number of write transactions within the
+specified time window.</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="102pt" headers="d27494e34 "><p class="p">Average Write Latency</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d27494e38 "><p class="p">The average latency (in HW cycles) for all write
+transactions within the specified time window.</p>
+</td>
+
+</tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" width="102pt" headers="d27494e34 ">Maximum Write Latency</td>
+
+                        <td class="entry" valign="top" width="NaN%" headers="d27494e38 ">
+                            <p class="p" id="sdk_u_pl_performance__p_u1x_2dp_gr">The maximum latency (in HW cycles) for all write
+                                transactions within the specified time window.</p>
+
+                        </td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" width="102pt" headers="d27494e34 ">Minimum Write Latency</td>
+
+                        <td class="entry" valign="top" width="NaN%" headers="d27494e38 ">
+                            <p class="p" id="sdk_u_pl_performance__p_bhg_fdp_gr">The minimum latency (in HW cycles) for all write
+                                transactions within the specified time window.</p>
+
+                        </td>
+
+                    </tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="102pt" headers="d27494e34 "><p class="p">Write Throughput (MB/sec)</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d27494e38 "><p class="p">The average throughput of the 64-bit data channel
+within the specified time window. Note that this is calculated using
+the number of write transactions, the bytes per transaction (as specified
+on the PL Traffic worksheet), and the specified time window (in usec).</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="102pt" headers="d27494e34 "><p class="p">Read Transactions</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d27494e38 "><p class="p">The number of read transactions within the specified
+time window.</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="102pt" headers="d27494e34 "><p class="p">Average Read Latency</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d27494e38 "><p class="p">The average latency (in HW cycles) for all read
+transactions within the specified time window </p>
+</td>
+
+</tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" width="102pt" headers="d27494e34 ">Maximum Read Latency</td>
+
+                        <td class="entry" valign="top" width="NaN%" headers="d27494e38 ">
+                            <p class="p" id="sdk_u_pl_performance__p_ilm_gdp_gr">The maximum latency (in HW cycles) for all read
+                                transactions within the specified time window.</p>
+
+                        </td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" width="102pt" headers="d27494e34 ">Minimum Read Latency</td>
+
+                        <td class="entry" valign="top" width="NaN%" headers="d27494e38 ">
+                            <p class="p" id="sdk_u_pl_performance__p_gjm_gdp_gr">The minimum latency (in HW cycles) for all read
+                                transactions within the specified time window.</p>
+
+                        </td>
+
+                    </tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="102pt" headers="d27494e34 "><p class="p">Read Throughput (MB/sec) </p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d27494e38 "><p class="p">The average throughput of the 64-bit data channel
+within the specified time window. Note that this is calculated using
+the number of transactions, the bytes per transaction (as specified on
+the PL Traffic worksheet), and the specified time window (in usec).</p>
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+
+</div>
+
+<div class="related-links"><div class="relinfo relconcepts"><strong>Related concepts</strong><br></br>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/sdk_c_spm_over_spm.html" title="System Performance Modeling">System Performance Modeling</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/sdk_c_perf_metrics.html" title="System Performance Metrics and Grabs">System Performance Metrics and Grabs</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div><div class="footer">WebHelp output generated by<a href="http://www.oxygenxml.com" target="_blank"><span class="oXygenLogo"><img src="../oxygen-webhelp/resources/img/LogoOxygen100x22.png" alt="Oxygen"></img></span><span class="xmlauthor">XML Author</span></a></div>
+</body>
+</html>

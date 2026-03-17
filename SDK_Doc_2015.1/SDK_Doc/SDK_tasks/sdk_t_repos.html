@@ -1,0 +1,62 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Do the following to add or remove software repositories in your SDK workspace: Click Xilinx Tools &gt; Repositories to open the Software Repositories tab in the Preferences dialog box. To add a local or ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Setting Up Software Repositories"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/sdk_c_repos.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/sdk_c_bsp_internal.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/sdk_c_bsp_external.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_sw_repos.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/sdk_c_repos.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_sw_repos.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/sdk_c_bsp_internal.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/sdk_c_repos.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_configure_bsp_internal.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/sdk_c_repos.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="sdk_t_repos"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Setting Up Software Repositories</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="sdk_t_repos">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+
+<h1 class="title topictitle1">Setting Up Software Repositories</h1>
+
+<div class="body taskbody"><div class="section context">
+<p class="p"> Do the following to add or remove software repositories in your SDK
+workspace:</p>
+
+</div>
+<ol class="ol steps"><li class="li step stepexpand"><span class="ph cmd">Click <strong class="ph b">Xilinx Tools &gt; Repositories</strong> to open the Software Repositories
+tab in the Preferences dialog box.</span></li>
+<li class="li step stepexpand"><span class="ph cmd">To add a local or global repository, click <strong class="ph b">New.</strong></span></li>
+<li class="li step stepexpand"><span class="ph cmd">Browse to and select your repository library directory. </span>
+    <div class="itemgroup info"><div class="note note"><span class="notetitle">Note:</span> The top-level of your repository is defined as the directory containing
+your repository library directory. For instance, suppose that you have
+a repository structure such as <strong class="ph b">$HOME/Xilinx/myrepositories/my_sdk_repos/{drivers,sw_services,bsp}/...</strong>, where
+<strong class="ph b"> my_sdk_repos</strong> is the repository library directory and <strong class="ph b">$HOME/Xilinx/myrepositories</strong>
+is the top-level. In this case, type the path <strong class="ph b">$HOME/Xilinx/myrepositories/my_sdk_repos</strong>
+when you add the repository to SDK (although the top-level repository
+continues to be accepted for backward compatibility, this use is not
+recommended).</div>
+</div></li>
+<li class="li step stepexpand"><span class="ph cmd">To remove a repository, click an item in the repository list and click
+<strong class="ph b">Remove.</strong></span></li>
+<li class="li step stepexpand"><span class="ph cmd">To change the order of precedence in the list of repositories, select
+a repository and click <strong class="ph b">Up</strong> or <strong class="ph b">Down.</strong></span></li>
+<li class="li step stepexpand"><span class="ph cmd">To update the list of software libraries, board support packages,
+and drivers in SDK, click <strong class="ph b">Rescan Repositories.</strong></span>
+    <div class="itemgroup info"><div class="note note"><span class="notetitle">Note:</span> The order in which you add repository paths is important. Items earlier
+        in the list will take precedence over items that follow, and local repository
+        settings take precedence over global repository settings.</div>
+</div>
+</li>
+</ol>
+
+
+</div>
+
+<div class="related-links"><div class="relinfo relconcepts"><strong>Related concepts</strong><br></br>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/sdk_c_repos.html" title="Software Repositories">Software Repositories</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/sdk_c_bsp_internal.html" title="Board Support Packages (SDK)">Board Support Packages (SDK)</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/sdk_c_bsp_external.html" title="Board Support Packages (External Tools)">Board Support Packages (External Tools)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br></br>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/sdk_u_sw_repos.html" title="Software Repositories Dialog Box">Software Repositories Dialog Box</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/sdk_u_configure_bsp_internal.html" title="Board Support Package (SDK) Settings Dialog Box">Board Support Package (SDK) Settings Dialog Box</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div><div class="footer">WebHelp output generated by<a href="http://www.oxygenxml.com" target="_blank"><span class="oXygenLogo"><img src="../oxygen-webhelp/resources/img/LogoOxygen100x22.png" alt="Oxygen"></img></span><span class="xmlauthor">XML Author</span></a></div>
+</body>
+</html>

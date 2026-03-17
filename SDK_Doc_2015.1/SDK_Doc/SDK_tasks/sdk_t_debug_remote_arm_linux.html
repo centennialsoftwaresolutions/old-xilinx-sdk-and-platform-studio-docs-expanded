@@ -1,0 +1,58 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="To debug a remote ARM Linux application, first open the Run Configurations dialog box by selecting Run &gt; Run Configurations, or by right-clicking on your application and selecting Run &gt; Run ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Debugging a Remote ARM Linux Application"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="sdk_t_debug_remote_arm_linux"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Debugging a Remote ARM Linux Application</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="sdk_t_debug_remote_arm_linux">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+
+<h1 class="title topictitle1">Debugging a Remote ARM Linux Application</h1>
+
+<div class="body taskbody"><div class="section context">
+<p class="p">To debug a remote ARM Linux application, first open the Run Configurations
+dialog box by selecting <strong class="ph b">Run &gt; Run Configurations,</strong> or by right-clicking
+on your application and selecting <strong class="ph b">Run &gt; Run Configurations.</strong></p>
+
+<p class="p">Do the following in the <strong class="ph b">Main</strong> tab:</p>
+
+</div>
+<ol class="ol steps"><li class="li step stepexpand"><span class="ph cmd">In the <strong class="ph b">Project</strong> field, type the name of the project containing
+the application that you want to run, or browse to it.</span></li>
+<li class="li step stepexpand"><span class="ph cmd">In the <strong class="ph b">C/C++ Application</strong> field, type the name of the executable
+that you want to run. You can also search for the file or browse to it.</span></li>
+<li class="li step stepexpand"><span class="ph cmd">In the connection field, select <strong class="ph b">New &gt; General &gt; SSH Only</strong> and click <strong class="ph b">Next.</strong></span>
+    <div class="itemgroup info"><ul class="ul">
+                    <li class="li">In the New connection window, type the Target board IP in the <strong class="ph b">Host
+                            name</strong> field</li>
+
+                    <li class="li">Type the connection name and description in the respective fields.</li>
+
+                    <li class="li">Click <strong class="ph b">Finish</strong> to create the connection.</li>
+
+    </ul>
+<p class="p">The Connection field now shows the Target IP.</p>
+</div>
+</li>
+<li class="li step stepexpand"><span class="ph cmd">In the <strong class="ph b">Remote Absolute File Path for C/C++ Application</strong> field,
+type the path in Linux Target that contains the location of the Application
+to be loaded and run.</span></li>
+<li class="li step stepexpand"><span class="ph cmd">In the <strong class="ph b">Commands to execute before application</strong> field, type
+the commands that need to be executed before running the application. For
+example, as shown in the figure below, the application FastCorner_sdk.elf
+uses OpenCV libraries Path, which is set in this field.</span></li>
+<li class="li step stepexpand"><span class="ph cmd">Click <strong class="ph b">Apply</strong> to save the settings.</span></li>
+<li class="li step stepexpand"><span class="ph cmd">Click <strong class="ph b">Run.</strong>
+    <br></br><img class="image" src="../images/sdk_t_debug_remote_arm_linux-1.png" height="308" width="453"></img><br></br></span></li>
+</ol>
+
+
+</div>
+
+<div class="navfooter"><!----></div><div class="footer">WebHelp output generated by<a href="http://www.oxygenxml.com" target="_blank"><span class="oXygenLogo"><img src="../oxygen-webhelp/resources/img/LogoOxygen100x22.png" alt="Oxygen"></img></span><span class="xmlauthor">XML Author</span></a></div>
+</body>
+</html>

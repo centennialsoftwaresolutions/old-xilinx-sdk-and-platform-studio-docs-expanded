@@ -1,0 +1,124 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Description Connect to hw_server. Unlike with XMD, the connect command in XSDB doesn't connect to a debug target on the hardware. You must use the &#34;targets&#34; command to list the available targets and ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="connect"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="sdk_u_xsd_xsdb_connections"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>connect</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="sdk_u_xsd_xsdb_connections">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+    <h1 class="title topictitle1">connect</h1>
+
+
+<div class="body">
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+
+
+
+<tbody class="tbody">
+<tr class="row">
+<td class="entry" valign="top" width="79pt"><p class="p"><strong class="ph b">Description</strong></p>
+</td>
+
+<td class="entry" colspan="2" valign="top"><p class="p">Connect to hw_server. Unlike with
+XMD, the connect command in XSDB doesn't connect to a debug target on
+the hardware. You must use the "targets" command to list the available
+targets and select a debug target before issuing commands to the debug
+target.</p>
+<p class="p">If no options are used with the connect command, XSDB launches
+hw_server at localhost:3121 and connects to it.</p>
+<p class="p">The <samp class="ph codeph">connect</samp>
+command returns the channel ID of the connection to the hw_server.</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="79pt"><p class="p"><strong class="ph b">Usage</strong></p>
+</td>
+
+<td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b">connect [Options]</strong></samp></td>
+
+<td class="entry" valign="top" width="282pt"> </td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" rowspan="5" valign="top" width="79pt"><p class="p"><strong class="ph b">Options</strong></p>
+</td>
+
+<td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b">-host &lt;host name/ip&gt;</strong></samp></td>
+
+<td class="entry" valign="top" width="282pt"><p class="p">Name/IP address of the host machine</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b">-port &lt;port num&gt;</strong></samp></td>
+
+<td class="entry" valign="top" width="282pt"><p class="p">TCP port number</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b">-url &lt;url&gt;</strong></samp></td>
+
+<td class="entry" valign="top" width="282pt"><p class="p">URL description of <samp class="ph codeph">hw_server</samp></p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b">-list</strong></samp></td>
+
+<td class="entry" valign="top" width="282pt"><p class="p">List open connections</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b">-set &lt;channel-id&gt;</strong></samp></td>
+
+<td class="entry" valign="top" width="282pt"><p class="p">Set active connection</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" rowspan="2" valign="top" width="79pt"><p class="p"><strong class="ph b">Examples</strong></p>
+</td>
+
+<td class="entry" valign="top" width="141pt"><p class="p"><strong class="ph b">connect -host localhost -port 3121</strong></p>
+</td>
+
+<td class="entry" valign="top" width="282pt"><p class="p">Connect to <samp class="ph codeph">hw_server</samp> on host <samp class="ph codeph">localhost</samp>
+and port <strong class="ph b">3121</strong></p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="141pt"><p class="p"><strong class="ph b">connect -url tcp:localhost:3121</strong></p>
+</td>
+
+<td class="entry" valign="top" width="282pt"><p class="p">Identical to previous example</p>
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+</div>
+
+<div class="navfooter"><!----></div><div class="footer">WebHelp output generated by<a href="http://www.oxygenxml.com" target="_blank"><span class="oXygenLogo"><img src="../oxygen-webhelp/resources/img/LogoOxygen100x22.png" alt="Oxygen"></img></span><span class="xmlauthor">XML Author</span></a></div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Create a hardware design with only one AXI Performance Monitor using the Vivado® Design Suite and export the design to SDK. APM slots from 0 to 5 should be connected to HP0, HP1, HP2, HP3, HP4 and ACP ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Using the Performance Monitoring Feature"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="usingtheperformancemonitoringfeature"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Using the Performance Monitoring Feature</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="usingtheperformancemonitoringfeature">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+
+<h1 class="title topictitle1">Using the Performance Monitoring Feature</h1>
+
+<div class="body taskbody"><div class="section context">
+</div>
+<ol class="ol steps"><li class="li step stepexpand"><span class="ph cmd">Create a hardware design with only one AXI Performance Monitor using
+the Vivado® Design Suite and export the design to SDK. </span></li>
+<li class="li step stepexpand"><span class="ph cmd">APM slots from 0 to 5 should be connected to HP0, HP1, HP2, HP3, HP4 and
+ACP ports in that order.</span></li>
+<li class="li step stepexpand"><span class="ph cmd">Create an application and BSP project for the exported hardware design.</span></li>
+<li class="li step stepexpand"><span class="ph cmd">Program the FPGA with the bitstream of the hardware project using
+the Program FPGA dialog box (<strong class="ph b">Xilinx Tools &gt; Program FPGA</strong>).</span>
+ <div class="itemgroup info"><br></br><img class="image" src="../images/sdk_t_performance_monitoring_system_debugger-1.png" height="303" width="319"></img><br></br></div></li>
+<li class="li step stepexpand"><span class="ph cmd">Select the application
+project and select <strong class="ph b">Run &gt; Debug Configurations.</strong></span></li>
+<li class="li step stepexpand"><span class="ph cmd">Double-click <strong class="ph b">Xilinx C/C++ application(System Debugger)</strong> to
+create a new configuration. Notice all the default values are populated
+in the Debug Configuration for the selected application project. The
+selected project is also selected for download in the Applications tab.</span>
+ <div class="itemgroup info"><br></br><img class="image" src="../images/sdk_t_performance_monitoring_system_debugger-2.png" height="306" width="456"></img><br></br>
+  <br></br><img class="image" src="../images/sdk_t_performance_monitoring_system_debugger-3.png" height="308" width="453"></img><br></br></div></li>
+<li class="li step stepexpand"><span class="ph cmd">Click <strong class="ph b">Debug. </strong>The application is downloaded to the target
+board and stopped at the main.</span></li>
+<li class="li step stepexpand"><span class="ph cmd">Click the <strong class="ph b">Resume</strong> button.<img class="image" src="../images/performance_monitoring_4.png"></img></span></li>
+<li class="li step stepexpand"><span class="ph cmd"> The application resumes. Traffic is generated on the HP and ACP ports.</span></li>
+<li class="li step stepexpand"><span class="ph cmd">Select <strong class="ph b">Window &gt; Show View &gt; Others</strong> to open the Performance
+ Counters view.</span><div class="itemgroup info"><br></br><img class="image" src="../images/performance_monitoring_5.png" height="262" width="186"></img><br></br></div></li>
+<li class="li step stepexpand"><span class="ph cmd">Select any of the APU contexts in the Debug View
+and click the <strong class="ph b">Start</strong> button in the Performance Counters view. </span>
+ <div class="itemgroup info"><br></br><img class="image" src="../images/performance_monitoring_6.png" height="19" width="52"></img><br></br>
+ <br></br><img class="image" src="../images/performance_monitoring_7.png" height="76" width="184"></img><br></br></div></li>
+<li class="li step stepexpand"><span class="ph cmd">Notice that the Performance Counters view is updated in real-time
+for every two seconds with counter values coming from AXI Performance
+Monitor (APM) and Zynq-7000 AP SoC Performance Monitor (ZPM) on processing
+system. </span>
+<div class="itemgroup info">
+ <br></br><img class="image" src="../images/sdk_t_performance_monitoring_system_debugger-8.jpg" height="454" width="459"></img><br></br><br></br><img class="image" src="../images/sdk_t_performance_monitoring_system_debugger-11.png" height="264" width="454"></img><br></br>
+</div></li>
+<li class="li step stepexpand"><span class="ph cmd">You can stop the data collection by clicking the <strong class="ph b">Stop</strong> button
+at the top right corner of the view. The data collection will also be
+stopped when System Debugger is disconnected.</span>
+<div class="itemgroup info">
+ <img class="image" src="../images/sdk_t_performance_monitoring_system_debugger-9.png"></img>
+</div></li>
+<li class="li step stepexpand"><span class="ph cmd">Once the data collection stops, the raw data of counters will be stored
+in the workspace directory as CSV file. You can find the path of the
+CSV file in the SDK log.</span>
+<div class="itemgroup info">
+ <br></br><img class="image" src="../images/performance_monitoring_11.png" height="71" width="471"></img><br></br>
+</div></li>
+</ol>
+
+</div>
+<div class="navfooter"><!----></div><div class="footer">WebHelp output generated by<a href="http://www.oxygenxml.com" target="_blank"><span class="oXygenLogo"><img src="../oxygen-webhelp/resources/img/LogoOxygen100x22.png" alt="Oxygen"></img></span><span class="xmlauthor">XML Author</span></a></div>
+</body>
+</html>
