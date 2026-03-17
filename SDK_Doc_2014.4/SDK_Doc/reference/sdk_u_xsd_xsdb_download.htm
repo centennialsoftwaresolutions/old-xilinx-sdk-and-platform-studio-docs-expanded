@@ -1,0 +1,192 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="../help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> XSDB Commands: Download</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50516539_pgfId-965821"></A><A NAME="50516539_26190"></A>XSDB Commands: Download</H1>
+<P>
+<A NAME="50516539_pgfId-967438"></A>The Xilinx System Debugger CLI (XSDB) Download commands can be used to download elf/binary files to the target or configure FPGA.</P>
+<P>
+<A NAME="50516539_pgfId-968404"></A>The following commands are available:</P>
+<UL>
+<LI>
+<A NAME="50516539_pgfId-967542"></A><A HREF="sdk_u_xsd_xsdb_download.htm#50516539_31168" CLASS="XRef">dow</A></LI>
+<LI>
+<A NAME="50516539_pgfId-967556"></A><A HREF="sdk_u_xsd_xsdb_download.htm#50516539_19211" CLASS="XRef">fpga</A></LI>
+</UL>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50516539_pgfId-967441"></A><A NAME="50516539_31168"></A>dow</H5>
+<TABLE BORDER="1">
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50516539_pgfId-968003"></A><B>
+Description</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="50516539_pgfId-968005"></A>Download elf/binary files to the active target</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="4" COLSPAN="1">
+<P>
+<A NAME="50516539_pgfId-968009"></A><B>
+Usage</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50516539_pgfId-968128"></A><B>
+dow [-clear] &lt;file&gt;</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50516539_pgfId-968130"></A>Download ELF file <B>
+&lt;file&gt;</B>
+ to active target.</P>
+<P>
+<A NAME="50516539_pgfId-968131"></A>The 'clear' option can be used to clear non-loadable sections like bss, during ELF download</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="3" COLSPAN="1">
+<P>
+<A NAME="50516539_pgfId-968133"></A><B>
+dow -data &lt;file&gt; &lt;addr&gt;</B>
+</P>
+</TD>
+<TD ROWSPAN="3" COLSPAN="1">
+<P>
+<A NAME="50516539_pgfId-968135"></A>Download binary file <B>
+&lt;file&gt;</B>
+ to active target address specified by <B>
+&lt;addr&gt;</B>
+</P>
+</TD>
+</TR>
+<TR>
+</TR>
+<TR>
+</TR>
+</TABLE>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50516539_pgfId-967451"></A><A NAME="50516539_19211"></A>fpga</H5>
+<TABLE BORDER="1">
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50516539_pgfId-968071"></A><B>
+Description</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="50516539_pgfId-968073"></A>Configure FPGA with a bitstream.</P>
+<P>
+<A NAME="50516539_pgfId-968216"></A>FPGA device should be selected through the 'targets' command before running <B>
+fpga</B>
+ command.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50516539_pgfId-968077"></A><B>
+Usage</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50516539_pgfId-968234"></A><B>
+fpga [options] &lt;bitstream-file&gt;</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50516539_pgfId-968236"></A>Configure FPGA with given bitstream</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="3" COLSPAN="1">
+<P>
+<A NAME="50516539_pgfId-968083"></A><B>
+Options</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50516539_pgfId-968242"></A><B>
+-file &lt;bitstream-file&gt;</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50516539_pgfId-968244"></A>Specify file containing bitstream</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="2" COLSPAN="1">
+<P>
+<A NAME="50516539_pgfId-968246"></A><B>
+-partial</B>
+</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P>
+<A NAME="50516539_pgfId-968248"></A>Configure FPGA without first clearing current configuration</P>
+</TD>
+</TR>
+<TR>
+</TR>
+</TABLE>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50516539_pgfId-967315"></A>Related Concepts</H5>
+<P>
+<A NAME="50516539_pgfId-967319"></A><A HREF="../concepts/sdk_c_xsd_over.htm#50516380_89495" CLASS="XRef">Xilinx System Debugger Overview</A></P>
+<P>
+<A NAME="50516539_pgfId-967323"></A><A HREF="../concepts/sdk_c_xsd_xmd_xsdb.htm#50516381_86860" CLASS="XRef">XMD vs XSDB</A></P>
+<P>
+<A NAME="50516539_pgfId-967327"></A><A HREF="../concepts/sdk_c_xsd_xsdb_commands.htm#50516382_75465" CLASS="XRef">XSDB Commands</A></P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50516539_pgfId-967380"></A>Related Reference</H5>
+<P>
+<A NAME="50516539_pgfId-967384"></A><A HREF="sdk_u_xsd_xsdb_connections.htm#50516538_26190" CLASS="XRef">XSDB Commands: Connections</A></P>
+<P>
+<A NAME="50516539_pgfId-967388"></A><A HREF="sdk_u_xsd_xsdb_breakpoints.htm#50516537_26190" CLASS="XRef">XSDB Commands: Breakpoints</A></P>
+<P>
+<A NAME="50516539_pgfId-967396"></A><A HREF="sdk_u_xsd_xsdb_jtag.htm#50516540_26190" CLASS="XRef">XSDB Commands: JTAG</A></P>
+<P>
+<A NAME="50516539_pgfId-967400"></A><A HREF="sdk_u_xsd_xsdb_memory.htm#50516541_26190" CLASS="XRef">XSDB Commands: Memory</A></P>
+<P>
+<A NAME="50516539_pgfId-967404"></A><A HREF="sdk_u_xsd_xsdb_registers.htm#50516542_26190" CLASS="XRef">XSDB Commands: Registers</A></P>
+<P>
+<A NAME="50516539_pgfId-967408"></A><A HREF="sdk_u_xsd_xsdb_reset.htm#50516543_26190" CLASS="XRef">XSDB Commands: Reset</A></P>
+<P>
+<A NAME="50516539_pgfId-967412"></A><A HREF="sdk_u_xsd_xsdb_running.htm#50516544_26190" CLASS="XRef">XSDB Commands: Running</A></P>
+<P>
+<A NAME="50516539_pgfId-967416"></A><A HREF="sdk_u_xsd_xsdb_download.htm#50516539_26190" CLASS="XRef">XSDB Commands: Download</A></P>
+<P>
+<A NAME="50516539_pgfId-968316"></A><A HREF="sdk_u_xsd_xsdb_streams.htm#50516545_26190" CLASS="XRef">XSDB Commands: Streams</A></P>
+<P>
+<A NAME="50516539_pgfId-965722"></A>&nbsp;</P>
+<P>
+<A NAME="50516539_pgfId-965724"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

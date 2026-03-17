@@ -1,0 +1,7 @@
+<contexts>
+ <context id="launch_configuration_view_context">
+    <description>Launch configuration dialogs provide the options available for launching (Running or Debugging) programs.</description>
+    <topic href="concepts/sdk_c_debug_run_configuration.htm" label="Run/Debug Configuration Concepts"/>
+    <topic href="reference/sdk_u_run_dbg_main.htm" label="Run/Debug Configuration Reference"/>
+ </context>
+</contexts>

@@ -1,0 +1,115 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="../help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Building Applications in SDK</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50515999_pgfId-528836"></A><A NAME="50515999_24455"></A>Building Applications in SDK</H1>
+<P>
+<A NAME="50515999_pgfId-528837"></A>The software workflow in SDK is described in the following figure.</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_c_build-1.jpg"></center>
+</DIV>
+<P>
+<A NAME="50515999_pgfId-528840"></A>The first step in developing a software application is to create a <A HREF="sdk_c_bsp_internal.htm#50516000_86840" CLASS="XRef">Board Support Packages (SDK)</A> that will be used by the application. Then, you can create an application project.</P>
+<P>
+<A NAME="50515999_pgfId-332023"></A>To build an executable for this application, SDK automatically performs the following actions. Configuration options can also be provided for these steps.</P>
+<OL>
+<LI>
+<A NAME="50515999_pgfId-332025"></A>SDK builds the board support package. This is sometimes called a software platform.</LI>
+<LI>
+<A NAME="50515999_pgfId-332143"></A>SDK compiles the application software using a platform-specific gcc/g++ compiler.</LI>
+<LI>
+<A NAME="50515999_pgfId-332152"></A>The object files from the application and the Board Support Package are linked together to form the final executable. This step is performed by a linker which takes as input a set of object files and a linker script that specifies where object files should be placed in memory.</LI>
+</OL>
+<P>
+<A NAME="50515999_pgfId-332029"></A>The following sections provide an overview of concepts involved in building applications.</P>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50515999_pgfId-332030"></A>Makefiles</H5>
+<P>
+<A NAME="50515999_pgfId-332032"></A>Compilation of source files into object files is controlled using Makefiles. With SDK, there are two possible options for Makefiles:</P>
+<UL>
+<LI>
+<A NAME="50515999_pgfId-332034"></A><B>
+Managed Make:</b> For Managed Make projects, SDK automatically creates Makefiles. Makefiles created by SDK typically compile the sources into object files, and finally link the different object files into an executable. In most cases, managed make simply eliminates the job of writing Makefiles. This is the suggested option.</LI>
+<LI>
+<A NAME="50515999_pgfId-332035"></A><B>
+Standard Make:</b> If you want ultimate control over the compilation process, use standard make projects. In this case, you must manually write a Makefile with steps to compile and link an application. Using the Standard Make flow hides a number of dependencies from SDK, so you must follow manual steps for other tasks such as debugging or running the application from within SDK. Therefore, the Standard Make flow is not recommended for general use. </LI>
+</UL>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50515999_pgfId-332037"></A><A NAME="50515999_74172"></A>Build Configurations</H5>
+<P>
+<A NAME="50515999_pgfId-332039"></A>Software developers typically build different versions of executables, with different settings used to build those executables. For example, an application that is built for debugging uses a certain set of options (such as compiler flags and macro definitions), while the same application is built with a different set of options for eventual release to customers. SDK makes it easier to maintain these different profiles using the concept of build configurations.</P>
+<P>
+<A NAME="50515999_pgfId-332041"></A>Each build configuration could customize:</P>
+<UL>
+<LI>
+<A NAME="50515999_pgfId-332043"></A>Compiler Settings: Debug and Optimization levels</LI>
+<LI>
+<A NAME="50515999_pgfId-332219"></A>Macros passed for compilation</LI>
+<LI>
+<A NAME="50515999_pgfId-332228"></A>Linker Settings </LI>
+</UL>
+<P>
+<A NAME="50515999_pgfId-332047"></A>By default, SDK provides three build configurations, as shown here:</P>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50515999_pgfId-332049"></A>Configuration Type	Compiler Flags</H6>
+<P>
+<A NAME="50515999_pgfId-332050"></A>Debug 	-O0 -g</P>
+<P>
+<A NAME="50515999_pgfId-332051"></A>Release 	-O2</P>
+<P>
+<A NAME="50515999_pgfId-332052"></A>Profile 	-O2 -g -pg</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50515999_pgfId-332053"></A><A NAME="50515999_47529"></A>Linker Scripts</H6>
+<P>
+<A NAME="50515999_pgfId-332055"></A>The final step in creating an executable from object files and libraries is linking. This is performed by a linker that accepts linker command language files called linker scripts. The primary purpose of a linker script is to describe the memory layout of the target machine, and specify where each section of the program should be placed in memory.</P>
+<P>
+<A NAME="50515999_pgfId-332057"></A>SDK provides a linker script generator to simplify the task of creating a linker script. The linker script generator GUI examines the target hardware platform and determines the available memory sections. The only action required by you is to assign the different code and data sections in the ELF file to different memory regions.</P>
+<P CLASS="Note"><b>Note:</b>
+<A NAME="50515999_pgfId-332059"></A>&nbsp;</P>
+<UL>
+<LI>
+<A NAME="50515999_pgfId-332061"></A>For multi-processor systems, each processor runs a different ELF file, and each ELF file requires its own linker script. Ensure that the two ELF files do not overlap in memory.</LI>
+<LI>
+<A NAME="50515999_pgfId-332062"></A>The default linker always points to the DDR address available in memory. If you are creating an app under a given hardware/BSP project, the memory will overlap for the applications.</LI>
+</UL>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50515999_pgfId-332064"></A>Related Concepts</H5>
+<P>
+<A NAME="50515999_pgfId-332065"></A><A HREF="sdk_c_bsp_internal.htm#50516000_86840" CLASS="XRef">Board Support Packages (SDK)</A></P>
+<P>
+<A NAME="50515999_pgfId-332066"></A><A HREF="sdk_c_projects.htm#50515982_26707" CLASS="XRef">SDK Application Projects</A></P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50515999_pgfId-332068"></A>Related Tasks</H5>
+<P>
+<A NAME="50515999_pgfId-332069"></A><A HREF="../tasks/sdk_o_project_creation.htm#50516228_86840" CLASS="XRef">Creating Software Projects</A></P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50515999_pgfId-332071"></A>Related References</H5>
+<P>
+<A NAME="50515999_pgfId-306634"></A><A HREF="../reference/sdk_o_ref.htm#50516139_88161" CLASS="XRef">Reference</A></P>
+<P>
+<A NAME="50515999_pgfId-528138"></A>&nbsp;</P>
+<P>
+<A NAME="50515999_pgfId-528140"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

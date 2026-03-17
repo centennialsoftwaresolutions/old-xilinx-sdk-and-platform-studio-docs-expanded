@@ -1,0 +1,58 @@
+﻿<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="../help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Embedded Hardware Components</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50515994_pgfId-294539"></A><A NAME="50515994_86112"></A>Embedded Hardware Components</H1>
+<P>
+<A NAME="50515994_pgfId-348352"></A>Xilinx&#174; Vivado&#174; IP integrator provides great flexibility regarding the kinds of embedded hardware that can be created. Typically, an embedded platform created using IP integrator contains:</P>
+<UL>
+<LI>
+<A NAME="50515994_pgfId-348353"></A>One or more MicroBlaze™ or ARM Cortex A9 processors</LI>
+<LI>
+<A NAME="50515994_pgfId-332278"></A>Volatile memory internal to the FPGA</LI>
+<LI>
+<A NAME="50515994_pgfId-332279"></A>Volatile (such as DDR or SDRAM) and/or non-volatile (Flash) memory external to the FPGAM</LI>
+<LI>
+<A NAME="50515994_pgfId-332280"></A>IP controlling external interfaces, such as GPIOs, UARTs, or Ethernet MACs</LI>
+<LI>
+<A NAME="50515994_pgfId-332281"></A>Debug IP such as processor trace signals</LI>
+<LI>
+<A NAME="50515994_pgfId-332282"></A>Other custom IP created by the hardware developer</LI>
+</UL>
+<P>
+<A NAME="50515994_pgfId-332284"></A>The task of the software developer is to write software that runs on the processors present on the hardware platform to perform application specific tasks. Xilinx provides drivers for Xilinx IP and some basic software components to help accelerate such software development.</P>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50515994_pgfId-332353"></A>FPGA Bitstream</H5>
+<P>
+<A NAME="50515994_pgfId-332354"></A>An FPGA bitstream is a file that contains the programming information for an FPGA. A Xilinx FPGA device must be programmed using a specific bitstream in order for it to behave as an embedded hardware platform. This bitstream is typically provided by the hardware designer who creates the embedded platform.</P>
+<P>
+<A NAME="50515994_pgfId-332289"></A>Programming an FPGA is the process of loading a bitstream into the FPGA. During the development phase, the FPGA device is programmed using utilities such as iMPACT or using menu options in SDK. These tools transfer the bitstream to the FPGA on board. In production hardware, the bitstream is usually placed in non-volatile memory, and the hardware is configured to program the FPGA when powered on.</P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50515994_pgfId-332293"></A>Related Tasks</H5>
+<P>
+<A NAME="50515994_pgfId-332294"></A><A HREF="../tasks/sdk_t_target_connections.htm#50516352_78828" CLASS="XRef">Target Connections</A></P>
+<P>
+<A NAME="50515994_pgfId-332295"></A><A HREF="../tasks/sdk_t_configure_fpga.htm#50516239_83168" CLASS="XRef">Programming the FPGA</A></P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50515994_pgfId-332297"></A>Related References</H5>
+<P>
+<A NAME="50515994_pgfId-332299"></A><A HREF="../reference/sdk_u_program_fpga.htm#50516157_20334" CLASS="XRef">Program FPGA Dialog Box</A></P>
+<P>
+<A NAME="50515994_pgfId-332300"></A>&nbsp;</P>
+<P>
+<A NAME="50515994_pgfId-306634"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

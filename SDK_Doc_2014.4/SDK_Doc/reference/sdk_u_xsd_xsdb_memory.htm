@@ -1,0 +1,243 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="../help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> XSDB Commands: Memory</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50516541_pgfId-965821"></A><A NAME="50516541_26190"></A>XSDB Commands: Memory</H1>
+<P>
+<A NAME="50516541_pgfId-967498"></A>The Xilinx System Debugger CLI (XSDB) Memory commands can be used to Read and Write to the target memory space.</P>
+<P>
+<A NAME="50516541_pgfId-968671"></A>The following commands are available:</P>
+<UL>
+<LI>
+<A NAME="50516541_pgfId-967677"></A><A HREF="sdk_u_xsd_xsdb_memory.htm#50516541_35567" CLASS="XRef">mrd</A></LI>
+<LI>
+<A NAME="50516541_pgfId-967741"></A><A HREF="sdk_u_xsd_xsdb_memory.htm#50516541_31970" CLASS="XRef">mwr</A></LI>
+</UL>
+<P>
+<A NAME="50516541_pgfId-967742"></A><B>
+Note:</b> The 'force' option can be used to with these commands to over-write access protection.</P>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50516541_pgfId-967502"></A><A NAME="50516541_35567"></A>mrd</H5>
+<TABLE BORDER="1">
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50516541_pgfId-968294"></A><B>
+Description</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="50516541_pgfId-968296"></A>Read memory address of the active target.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50516541_pgfId-968300"></A><B>
+Usage</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50516541_pgfId-968362"></A><B>
+mrd [-force] &lt;address&gt; [num]</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50516541_pgfId-968364"></A>Read <B>
+&lt;num&gt;</B>
+ words from active target memory address specified by <B>
+&lt;address&gt;</B>
+</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="3" COLSPAN="1">
+<P>
+<A NAME="50516541_pgfId-968306"></A><B>
+Examples</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50516541_pgfId-968371"></A><B>
+mrd 0x0</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50516541_pgfId-968373"></A>Read a word at <B>
+0x0</B>
+</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50516541_pgfId-968375"></A><B>
+mrd 0x0 10</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50516541_pgfId-968377"></A>Read 10 words at <B>
+0x0</B>
+</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50516541_pgfId-968379"></A><B>
+mrd -force 0xe0000000</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50516541_pgfId-968381"></A>Over-write access protection and read a word at address <B>
+0xe0000000</B>
+</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50516541_pgfId-967517"></A><A NAME="50516541_31970"></A>mwr</H5>
+<TABLE BORDER="1">
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50516541_pgfId-968424"></A><B>
+Description</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="50516541_pgfId-968426"></A>Write to the memory address of the active target.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50516541_pgfId-968430"></A><B>
+Usage</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50516541_pgfId-968487"></A><B>
+mwr [-force] &lt;address&gt; &lt;values&gt; [&lt;num&gt;]</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50516541_pgfId-968489"></A>Write <B>
+&lt;num&gt;</B>
+ words from list of <B>
+&lt;values&gt;</B>
+ to active target memory address specified by <B>
+&lt;address&gt;</B>
+</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="3" COLSPAN="1">
+<P>
+<A NAME="50516541_pgfId-968436"></A><B>
+Examples</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50516541_pgfId-968495"></A><B>
+mwr 0x0 0x1234</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50516541_pgfId-968497"></A>Write <B>
+0x1234</B>
+ to address <B>
+0x0</B>
+</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50516541_pgfId-968499"></A><B>
+mwr 0x0 {0x12 0x23 0x34 0x45} 4</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50516541_pgfId-968501"></A>Write 4 values from the list of values to address <B>
+0x0</B>
+</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50516541_pgfId-968503"></A><B>
+mwr -force 0xe0000000 0x1234</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="50516541_pgfId-968505"></A>Over-write access protection and write <B>
+0x1234</B>
+ to address <B>
+0xe0000000</B>
+</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50516541_pgfId-967374"></A>Related Concepts</H5>
+<P>
+<A NAME="50516541_pgfId-967378"></A><A HREF="../concepts/sdk_c_xsd_over.htm#50516380_89495" CLASS="XRef">Xilinx System Debugger Overview</A></P>
+<P>
+<A NAME="50516541_pgfId-967382"></A><A HREF="../concepts/sdk_c_xsd_xmd_xsdb.htm#50516381_86860" CLASS="XRef">XMD vs XSDB</A></P>
+<P>
+<A NAME="50516541_pgfId-967386"></A><A HREF="../concepts/sdk_c_xsd_xsdb_commands.htm#50516382_75465" CLASS="XRef">XSDB Commands</A></P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50516541_pgfId-967442"></A>Related Reference</H5>
+<P>
+<A NAME="50516541_pgfId-967446"></A><A HREF="sdk_u_xsd_xsdb_connections.htm#50516538_26190" CLASS="XRef">XSDB Commands: Connections</A></P>
+<P>
+<A NAME="50516541_pgfId-967450"></A><A HREF="sdk_u_xsd_xsdb_breakpoints.htm#50516537_26190" CLASS="XRef">XSDB Commands: Breakpoints</A></P>
+<P>
+<A NAME="50516541_pgfId-967454"></A><A HREF="sdk_u_xsd_xsdb_download.htm#50516539_26190" CLASS="XRef">XSDB Commands: Download</A></P>
+<P>
+<A NAME="50516541_pgfId-967458"></A><A HREF="sdk_u_xsd_xsdb_jtag.htm#50516540_26190" CLASS="XRef">XSDB Commands: JTAG</A></P>
+<P>
+<A NAME="50516541_pgfId-967466"></A><A HREF="sdk_u_xsd_xsdb_registers.htm#50516542_26190" CLASS="XRef">XSDB Commands: Registers</A></P>
+<P>
+<A NAME="50516541_pgfId-967470"></A><A HREF="sdk_u_xsd_xsdb_reset.htm#50516543_26190" CLASS="XRef">XSDB Commands: Reset</A></P>
+<P>
+<A NAME="50516541_pgfId-967474"></A><A HREF="sdk_u_xsd_xsdb_running.htm#50516544_26190" CLASS="XRef">XSDB Commands: Running</A></P>
+<P>
+<A NAME="50516541_pgfId-968579"></A><A HREF="sdk_u_xsd_xsdb_streams.htm#50516545_26190" CLASS="XRef">XSDB Commands: Streams</A></P>
+<P>
+<A NAME="50516541_pgfId-967434"></A>&nbsp;</P>
+<P>
+<A NAME="50516541_pgfId-965724"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

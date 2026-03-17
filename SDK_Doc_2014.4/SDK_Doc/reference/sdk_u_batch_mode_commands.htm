@@ -1,0 +1,715 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="../help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> SDK Batch Mode Commands</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="pgfId-965821"></A><A NAME="26190"></A>SDK Batch Mode Commands</H1>
+<P>
+<A NAME="pgfId-981009"></A>SDK batch mode supports all the commands supported by the Hardware Software Interface (HSI), which are listed in the <b>
+Generating Basic Software Platforms Reference Guide </B>
+(<A HREF="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2014_3/ug1138-generating-basic-software-platforms.pdf" CLASS="URL">UG1138</A>). It also supports the following commands.</P>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-981010"></A>set_workspace</H5>
+<TABLE BORDER="1">
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-981498"></A><B>
+Description</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="pgfId-981502"></A>You can use this to set your workspace.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-981506"></A><B>
+Usage</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="pgfId-981508"></A><B>
+set_workspace &lt;Workspace Path&gt;</B>
+</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-981013"></A>get_workspace</H5>
+<TABLE BORDER="1">
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-981579"></A><B>
+Description</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="pgfId-981581"></A>Display current workspace path.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-982835"></A><B>
+Usage</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="pgfId-982837"></A><B>
+get_workspace</B>
+</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-981015"></A>set_user_repo_path</H5>
+<TABLE BORDER="1">
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-982538"></A><B>
+Description</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="pgfId-982540"></A>Use this command to set your repository. This repository path will be used when you run the <B>
+create_project</B>
+ command.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-982544"></A><B>
+Usage</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="pgfId-982546"></A>set_user_repo_path  &lt;Repository Path&gt;<B>
+</B>
+</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-981018"></A>get_user_repo_path</H5>
+<TABLE BORDER="1">
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-981728"></A><B>
+Description</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="pgfId-981730"></A>Display the currently set repository path.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-982817"></A><B>
+Usage</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="pgfId-982819"></A><B>
+get_user_repo_path</B>
+</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-981020"></A>get_app_templates</H5>
+<P>
+<A NAME="pgfId-986644"></A><B>
+Note:</b> Use brackets around the template name. For example, to create an RSA application template, use <B>
+[RSA Authentication App}</B>
+. To view a list of supported templates, type <B>
+get_app_templates</B>
+.</P>
+<TABLE BORDER="1">
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-982963"></A><B>
+Description</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="pgfId-982965"></A>Displays all supported application templates.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-982969"></A><B>
+Usage</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="pgfId-982971"></A><B>
+get_app_templates</B>
+</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="5" COLSPAN="1">
+<P>
+<A NAME="pgfId-982975"></A><B>
+Displays</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-982977"></A>Standalone/bare metal and xilkernel OS Application Templates for Language C</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-983089"></A>{Hello World}</P>
+<P>
+<A NAME="pgfId-983090"></A>{Empty Application}</P>
+<P>
+<A NAME="pgfId-983091"></A>{Peripheral Tests}</P>
+<P>
+<A NAME="pgfId-983092"></A>{Memory Tests}</P>
+<P>
+<A NAME="pgfId-983093"></A>{Zynq FSBL}</P>
+<P>
+<A NAME="pgfId-983094"></A>{Zynq DRAM tests}</P>
+<P>
+<A NAME="pgfId-983095"></A>{Dhrystone}</P>
+<P>
+<A NAME="pgfId-983096"></A>{lwIP Echo Server}</P>
+<P>
+<A NAME="pgfId-983097"></A>{RSA Authentication App}</P>
+<P>
+<A NAME="pgfId-983098"></A>{SREC Bootloader}</P>
+<P>
+<A NAME="pgfId-982979"></A>{Xilkernel POSIX Threads Demo}</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-982983"></A>Standalone/Bare metal and xilkernel OS Application Templates for Language C++</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-982985"></A>{Empty Application}</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-982989"></A>Linux OS Application Templates for Language C<B>
+</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-983383"></A>{Linux Hello World}</P>
+<P>
+<A NAME="pgfId-983384"></A>{Linux Empty Application}</P>
+<P>
+<A NAME="pgfId-982991"></A>{OpenCV Example Application}</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="2" COLSPAN="1">
+<P>
+<A NAME="pgfId-982995"></A>Linux OS Application Templates for Language C++</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P>
+<A NAME="pgfId-982997"></A>{Linux Empty Application}</P>
+</TD>
+</TR>
+<TR>
+</TR>
+</TABLE>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-981048"></A>create_project</H5>
+<TABLE BORDER="1">
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-987465"></A><B>
+Description</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="pgfId-987467"></A>You can use this command to create the hardware platform project, Board Support Package (BSP) project, and application project using this command. </P>
+<P>
+<A NAME="pgfId-987468"></A>Make sure that you set the workspace before using this command.</P>
+<P>
+<A NAME="pgfId-987469"></A>When creating a BSP, specify the hardware platform project available in the workspace.</P>
+<P>
+<A NAME="pgfId-987470"></A>When creating an application project, specify the hardware platform and bsp projects that should be available in the workspace.</P>
+<P>
+<A NAME="pgfId-987471"></A>For full information on this command, use <B>
+create_project -help</B>
+.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="6" COLSPAN="1">
+<P>
+<A NAME="pgfId-984135"></A><B>
+Usage</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-984137"></A><B>
+create_project [options]</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-984139"></A>Create a hw/bsp/application project</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-985916"></A><B>
+create_project -type hw -name &lt;HW Project Name&gt; -hwspec &lt;Hw Design path .xml/.hddf&gt;</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-985901"></A>Create a Hardware (hw) Project.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-985893"></A><B>
+create_project -type bsp -name &lt;BSP Project Name&gt; -hwproject &lt; HW Project Name&gt; -proc &lt;Processor&gt; -os &lt;OS&gt;</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-985895"></A>Create a BSP Project.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-985887"></A><B>
+create_project -type app -name &lt;App Project Name&gt; -hwproject &lt; HW Project Name&gt; -proc &lt;Processor&gt; -os &lt;OS&gt; -lang &lt;Language C/C++&gt; -app &lt;Application Template&gt; -bsp &lt;BSP Project Name&gt;</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-985889"></A>Create an Application Project for bare-meta/standalone OS usage</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="2" COLSPAN="1">
+<P>
+<A NAME="pgfId-985881"></A><B>
+create_project -type app -name &lt;App Project Name&gt; -hwproject  &lt; HW Project Name&gt; -proc &lt;Processor&gt; -os &lt;OS&gt; -lang &lt;Language C/C++&gt; -app &lt;Application Template&gt;</B>
+</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P>
+<A NAME="pgfId-985883"></A>Create an Application Project for Linux OS usage</P>
+</TD>
+</TR>
+<TR>
+</TR>
+<TR>
+<TD ROWSPAN="10" COLSPAN="1">
+<P>
+<A NAME="pgfId-984141"></A><B>
+Options</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-984143"></A><B>
+-type &lt;project-type&gt;</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-984298"></A>Project type can be <B>
+hw</B>
+, <B>
+bsp</B>
+, or <B>
+app</B>
+.</P>
+<P>
+<A NAME="pgfId-984145"></A>Default type is <B>
+hw</B>
+.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-984149"></A><B>
+-name &lt;project-name&gt;</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-984151"></A>Project name that should be created.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-984155"></A><B>
+-app &lt;template-application-name&gt;</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-984444"></A>Name of the template application.</P>
+<P>
+<A NAME="pgfId-984500"></A>Default is &quot;Hello World&quot;.</P>
+<P>
+<A NAME="pgfId-984157"></A>This option is valid only for creating application projects.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-984161"></A><B>
+-proc &lt;processor-name&gt;</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-984629"></A>Processor instance to use for creating application/bsp project.</P>
+<P>
+<A NAME="pgfId-984163"></A>This option is valid only for creating application/bsp projects.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-984167"></A><B>
+-hwspec &lt;HW specification file&gt;</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-984850"></A>HW specification file for creating a hardware project.</P>
+<P>
+<A NAME="pgfId-984931"></A>This option is valid only for creating hardware projects.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-985035"></A><B>
+-hwproject &lt;hw project name&gt;</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-985137"></A>HW project for which the application or bsp project should be created.</P>
+<P>
+<A NAME="pgfId-985197"></A>This option is valid only for creating application/bsp projects.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-985029"></A><B>
+-bsp &lt;BSP project name&gt;</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-985314"></A>BSP project for which the application project should be created.</P>
+<P>
+<A NAME="pgfId-985345"></A>This option is valid only for creating application projects.</P>
+<P>
+<A NAME="pgfId-985366"></A>If this option is not specified, a default bsp is created.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-985023"></A><B>
+-os &lt;OS name&gt;</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-985408"></A>OS type for the application project.</P>
+<P>
+<A NAME="pgfId-985438"></A>Default type is <B>
+standalone</B>
+.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-985017"></A><B>
+-lang &lt;programming language&gt;</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-985019"></A>Programming language can be <B>
+c</B>
+ or <B>
+c++</B>
+.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-985011"></A><B>
+-help</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-985013"></A>Print the help for the command.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-981114"></A>build</H5>
+<TABLE BORDER="1">
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-981954"></A><B>
+Description</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="pgfId-981956"></A>Build projects available in the workspace.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-981960"></A><B>
+Usage</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-981962"></A>build [options]<B>
+</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-981964"></A>Build a bsp/application project or all projects in the workspace.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="5" COLSPAN="1">
+<P>
+<A NAME="pgfId-981966"></A><B>
+Options</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-981968"></A>-type &lt;project-type&gt;<B>
+</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-986905"></A>Project type can be <B>
+all</B>
+, <B>
+bsp</B>
+, or <B>
+app</B>
+.</P>
+<P>
+<A NAME="pgfId-981970"></A>Default type is <B>
+all</B>
+.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-981974"></A>-name &lt;project-name&gt;<B>
+</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-981976"></A>Project name to be built.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="3" COLSPAN="1">
+<P>
+<A NAME="pgfId-981980"></A>-help</P>
+</TD>
+<TD ROWSPAN="3" COLSPAN="1">
+<P>
+<A NAME="pgfId-987023"></A>Print the help for the command.</P>
+<P>
+<A NAME="pgfId-981982"></A><B>
+</B>
+&nbsp;</P>
+</TD>
+</TR>
+<TR>
+</TR>
+<TR>
+</TR>
+</TABLE>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-981132"></A>clean</H5>
+<TABLE BORDER="1">
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-982030"></A><B>
+Description</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P>
+<A NAME="pgfId-982032"></A>Clean projects available in workspace.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-982036"></A><B>
+Usage</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-982038"></A>clean [options]<B>
+</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-982040"></A>Clean a bsp/application project or all projects in workspace.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="5" COLSPAN="1">
+<P>
+<A NAME="pgfId-982042"></A><B>
+Options</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-982044"></A>-type &lt;project-type&gt;<B>
+</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-987237"></A>Project type can be <B>
+all</B>
+, <B>
+bsp</B>
+, or <B>
+app</B>
+.</P>
+<P>
+<A NAME="pgfId-987238"></A>Default type is <B>
+all</B>
+.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-982050"></A>-name &lt;project-name&gt;<B>
+</B>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P>
+<A NAME="pgfId-982052"></A>Project name that should be cleaned</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="3" COLSPAN="1">
+<P>
+<A NAME="pgfId-987342"></A>-help</P>
+</TD>
+<TD ROWSPAN="3" COLSPAN="1">
+<P>
+<A NAME="pgfId-987344"></A>Print the help for the command.</P>
+<P>
+<A NAME="pgfId-987345"></A><B>
+</B>
+&nbsp;</P>
+</TD>
+</TR>
+<TR>
+</TR>
+<TR>
+</TR>
+</TABLE>
+<P>
+<A NAME="pgfId-981189"></A>&nbsp;</P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-987398"></A>Related Concepts</H5>
+<P>
+<A NAME="pgfId-987423"></A><A HREF="../concepts/sdk_c_batch_mode.htm#26190" CLASS="XRef">Using SDK Batch Mode</A></P>
+<P>
+<A NAME="pgfId-987453"></A>&nbsp;</P>
+<P>
+<A NAME="pgfId-987431"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

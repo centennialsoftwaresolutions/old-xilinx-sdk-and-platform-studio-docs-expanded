@@ -1,0 +1,71 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="../help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Specifying Profiler Configuration</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50516270_pgfId-294539"></A><A NAME="50516270_41974"></A>Specifying Profiler Configuration</H1>
+<P>
+<A NAME="50516270_pgfId-332419"></A>To configure options for the Profiler, do the following:</P>
+<OL>
+<LI>
+<A NAME="50516270_pgfId-332421"></A>In the Project Explorer or C/C++ Projects view, select a project.</LI>
+<LI>
+<A NAME="50516270_pgfId-332422"></A>Select <B>
+Run &gt; Run.</B>
+</LI>
+<LI>
+<A NAME="50516270_pgfId-332423"></A>In the <B>
+Configurations</B>
+ dialog box, expand <B>
+Xilinx C/C++ Application (GDB).</B>
+</LI>
+<LI>
+<A NAME="50516270_pgfId-332424"></A>Select a run configuration.</LI>
+<LI>
+<A NAME="50516270_pgfId-332425"></A>Click the <B>
+Profile Options</B>
+ tab.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_run_profiler-1.jpg"></center>
+</DIV>
+<OL>
+<LI value=6>
+<A NAME="50516270_pgfId-332429"></A>Click to select the <B>
+Enable Profiling</B>
+ check box.</LI>
+<LI>
+<A NAME="50516270_pgfId-332431"></A>In the <B>
+Profile Options</B>
+ area, specify the sampling frequency, histogram bin size, and the scratch memory to use for profiling, where:</LI>
+<OL>
+<LI type="a">
+<A NAME="50516270_pgfId-332722"></A>The sampling frequency is the interrupt interval that the profiling routine uses to periodically check which function is currently being executed. The routine performs the sampling by examining the program counter at each interrupt.</LI>
+<LI type="a">
+<A NAME="50516270_pgfId-332827"></A>The histogram bin size is the resolution for examining the program counter location used to determine the function that is currently being executed.</LI>
+<LI type="a">
+<A NAME="50516270_pgfId-332844"></A>The scratch memory address is the location in DDR3 memory that the BSP profiling services use for data collection. The application program should never touch this space.</LI>
+</OL>
+<LI>
+<A NAME="50516270_pgfId-332432"></A>Click <B>
+Run</B>
+ to profile the application</LI>
+</OL>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50516270_pgfId-332434"></A>Related Concepts</H5>
+<P>
+<A NAME="50516270_pgfId-332435"></A><A HREF="../concepts/sdk_c_over_profile.htm#50515990_13100" CLASS="XRef">Profiling Overview</A></P>
+<P>
+<A NAME="50516270_pgfId-332440"></A>&nbsp;</P>
+<P>
+<A NAME="50516270_pgfId-306566"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

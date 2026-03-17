@@ -1,0 +1,163 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="../help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> System Performance Modeling Using the SDK Predefined Design</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50516639_pgfId-433970"></A>System Performance Modeling Using the SDK Predefined Design<A NAME="50516639_86840"></A></H1>
+<P>
+<A NAME="50516639_pgfId-433974"></A>The predefined flow provided with SDK uses the fixed design, and comes with a fixed bitstream.  In this design, there are five AXI Traffic Generators (ATGs), with one connected to each of the four High Performance ports (HP0-3) and one connected to the Accelerator Coherency Port (ACP). The ATGs are set up and controlled using one of the General Purpose (GP) ports. In addition, an AXI Performance Monitor (APM) is included in order to monitor the AXI traffic on the HP0-3 and ACP ports.</P>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50516639_pgfId-434040"></A>Establishing a Target Connection</H5>
+<P>
+<A NAME="50516639_pgfId-434041"></A>To establish a target connection, you can use either the local board or the remote board.</P>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50516639_pgfId-434042"></A>Establishing a Target Connection Using a Local Board</H6>
+<P>
+<A NAME="50516639_pgfId-441214"></A>By default, the local target connection is selected by default in the Target Connections window. You can confirm connections to the local board by checking the local connection as shown in the following figure.</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_spm_predefined-1.jpg"></center>
+</DIV>
+<P>
+<A NAME="50516639_pgfId-441224"></A>&nbsp;</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading2">
+<A NAME="50516639_pgfId-441225"></A>Establishing a Target Connection Using a Remote Board</H6>
+<P>
+<A NAME="50516639_pgfId-433635"></A>To use a remote board to establish a target connection:</P>
+<OL>
+<LI>
+<A NAME="50516639_pgfId-438678"></A>Run the hw_server on the machine that connects to the board.</LI>
+<LI>
+<A NAME="50516639_pgfId-438777"></A>Select the port number and the hostname to create a target connection to the host running the hw_server.</LI>
+<LI>
+<A NAME="50516639_pgfId-438828"></A>Right-click the newly created target connection and select <B>
+Set As Default.</B>
+</LI>
+</OL>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50516639_pgfId-433828"></A>Creating the System Performance Modeling Project</H5>
+<OL>
+<LI>
+<A NAME="50516639_pgfId-433857"></A>Select <B>
+File &gt; New &gt; SPM Project</B>
+ to start the System Peformance Modeling application.</LI>
+<LI>
+<A NAME="50516639_pgfId-438988"></A>Click <B>
+Finish.</B>
+</LI>
+</OL>
+<P CLASS="Body2">
+<A NAME="50516639_pgfId-439003"></A>The SPM Launcher opens.</P>
+<P>
+<A NAME="50516639_pgfId-433860"></A>The following figure shows the Edit Configuration dialog box for a local connection. To start the SPM with the default traffic configuration, click <B>
+Debug.</B>
+ The default traffic section is explained in <A HREF="sdk_t_spm_predefined.htm#50516639_88035" CLASS="XRef">Selecting an ATG Traffic Configuration</A></P>
+<P>
+<A NAME="50516639_pgfId-439277"></A>It first programs the FPGA and then starts the SPM.</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_spm_predefined-2.jpg"></center>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50516639_pgfId-433830"></A><A NAME="50516639_88035"></A>Selecting an ATG Traffic Configuration</H5>
+<P>
+<A NAME="50516639_pgfId-439420"></A>To select a traffic configuration:</P>
+<OL>
+<LI>
+<A NAME="50516639_pgfId-433894"></A>In the Project Explorer, right-click the hardware platform and select <B>
+Debug As &gt; Debug Configurations.</B>
+</LI>
+<LI>
+<A NAME="50516639_pgfId-433897"></A>Under <B>
+Performance Analysis</B>
+, select <B>
+Performance Analysis on &lt;</B>
+<b>
+filename</B>
+<B>
+&gt;.elf.</B>
+</LI>
+<LI>
+<A NAME="50516639_pgfId-433901"></A>You can use the ATG Configuration tab to define multiple traffic configurations and select the traffic to be used for the current run. The following figure shows the traffic that is defined in the Default configuration.</LI>
+</OL>
+<P CLASS="Note2">
+<A NAME="50516639_pgfId-440297"></A>The port location is taken from the Hardware handoff file. If no ATG was configured in the design, the ATG Configuration tab is empty.</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="../images/sdk_t_spm_predefined-3.jpg"></center>
+</DIV>
+<OL>
+<LI value=4>
+<A NAME="50516639_pgfId-433903"></A>You can use the ATG Configuration dialog box to add and edit configurations.</LI>
+<UL>
+<LI>
+<A NAME="50516639_pgfId-440137"></A>To add a configuration to the list of configurations, click the <B>
++</B>
+ button.</LI>
+<LI>
+<A NAME="50516639_pgfId-440772"></A>To edit a configuration, select the <B>
+Configuration:</B>
+ drop-down list to choose the configuration that you want to edit.</LI>
+</UL>
+<LI value=5>
+<A NAME="50516639_pgfId-440773"></A>For ease of defining an ATG configuration, you can create Configuration Templates. These templates are saved for the user workspace and can be used across the Projects for ATG traffic definitions. To create a template, do the following:</LI>
+<OL>
+<LI type="a">
+<A NAME="50516639_pgfId-440386"></A>Click <B>
+Configure Templates.</B>
+</LI>
+<LI type="a">
+<A NAME="50516639_pgfId-440432"></A>Click the <B>
++</B>
+ button to add a new user defined configuration template. </LI>
+</OL>
+</OL>
+<P CLASS="Body3">
+<A NAME="50516639_pgfId-440543"></A>The newly created template is assigned a Template ID with the pattern of &quot;UserDef_*&quot; by default. You can change the ID and also define the rest of the fields. </P>
+<P CLASS="Body2">
+<A NAME="50516639_pgfId-440568"></A>You can use these defined templates to define an ATG configuration. To delete a Configuration Template, select it and click the <B>
+X</B>
+ button.</P>
+<DIV>
+<H6 CLASS="Heading4">
+<A NAME="50516639_pgfId-440704"></A>Tip</H6>
+<P CLASS="Body2">
+<A NAME="50516639_pgfId-440657"></A>In an ATG configuration, to set a port so that it does not have any traffic, set the Template ID for that port to <B>
+None.</B>
+</P>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50516639_pgfId-332419"></A>Related Concepts</H5>
+<P>
+<A NAME="50516639_pgfId-332420"></A><A HREF="../concepts/sdk_c_spm_over_spm.htm#50516356_99596" CLASS="XRef">System Performance Modeling</A></P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50516639_pgfId-332422"></A>Related Tasks</H5>
+<P>
+<A NAME="50516639_pgfId-332424"></A><A HREF="sdk_t_changing_fsbl_config.htm#50516782_86840" CLASS="XRef">Changing the FSBL Configuration</A></P>
+<P>
+<A NAME="50516639_pgfId-433576"></A><A HREF="sdk_t_spm_using_performance_analysis_tools.htm#50516638_22707" CLASS="XRef">Using Performance Analysis Tools</A></P>
+<P>
+<A NAME="50516639_pgfId-433581"></A><A HREF="sdk_t_spm_user_defined.htm#50516781_48715" CLASS="XRef">System Performance Modeling Using a User-Defined Flow</A></P>
+<P>
+<A NAME="50516639_pgfId-332426"></A>&nbsp;</P>
+<P>
+<A NAME="50516639_pgfId-306566"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

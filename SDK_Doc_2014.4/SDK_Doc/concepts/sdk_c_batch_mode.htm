@@ -1,0 +1,158 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="../help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Using SDK Batch Mode</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50516408_pgfId-965821"></A><A NAME="50516408_26190"></A>Using SDK Batch Mode</H1>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50516408_pgfId-987485"></A>SDK Help Commands</H5>
+<P>
+<A NAME="50516408_pgfId-987486"></A>SDK help commands are different from the Hardware Software Interface (HSI) help commands.</P>
+<P>
+<A NAME="50516408_pgfId-987496"></A>All SDK help commands are formatted as help_&lt;command name&gt;, such as help_create_project.</P>
+<P>
+<A NAME="50516408_pgfId-987680"></A>Help for the commands <B>
+create_project</B>
+, <B>
+build</B>
+, and <B>
+clean</B>
+ can also work with the format <B>
+&lt;command name&gt; -help</B>
+,<B>
+ </B>
+such as <B>
+create_project -help.</B>
+</P>
+<P>
+<A NAME="50516408_pgfId-982183"></A>All of the HSI commands are exported through SDK batch mode. HSI commands don't consider workspace. For usage details refer to the <b>
+Generating Basic Software Platforms Reference Guide </B>
+(<A HREF="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2014_3/ug1138-generating-basic-software-platforms.pdf" CLASS="URL">UG1138</A>).</P>
+<P>
+<A NAME="50516408_pgfId-988312"></A>SDK batch mode commands are listed in <A HREF="../reference/sdk_u_batch_mode_commands.htm#50516582_26190" CLASS="XRef">SDK Batch Mode Commands</A>.</P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50516408_pgfId-981156"></A>How it Works</H5>
+<P>
+<A NAME="50516408_pgfId-981157"></A>The SDK batch mode utility is based on Tcl and is delivered in the SDK install.</P>
+<P>
+<A NAME="50516408_pgfId-981158"></A>To start SDK batch mode, use the command <B>
+xsdk -batch</B>
+.</P>
+<P>
+<A NAME="50516408_pgfId-981159"></A>Once SDK is started in batch mode, it provides the Tcl prompt and you can use all of the supported commands.</P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50516408_pgfId-981162"></A>How to Run Tcl Script Files</H5>
+<P>
+<A NAME="50516408_pgfId-993324"></A>You can run your Tcl script file using the <B>
+xsdk -batch -source test.tcl</B>
+ command.</P>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50516408_pgfId-993325"></A>Example test.tcl</H6>
+<P CLASS="Code">
+<A NAME="50516408_pgfId-981168"></A>#!/usr/bin/tclsh</P>
+<P CLASS="Code">
+<A NAME="50516408_pgfId-981169"></A>set_workspace /tmp/test1</P>
+<P CLASS="Code">
+<A NAME="50516408_pgfId-981170"></A>create_project -type hw -name hw_0 -hwspec system.hdf</P>
+<P CLASS="Code">
+<A NAME="50516408_pgfId-981171"></A>create_project -type bsp -name bsp_0 -hwproject hw_0 -proc microblaze_0 -os standalone</P>
+<P CLASS="Code">
+<A NAME="50516408_pgfId-981172"></A>create_project -type app -name helloworld -hwproject hw_0 -proc microblaze_0 -os standalone -lang C -app {Hello World} -bsp bsp_0</P>
+<P CLASS="Code">
+<A NAME="50516408_pgfId-981173"></A>build -type bsp bsp_0</P>
+<P CLASS="Code">
+<A NAME="50516408_pgfId-981174"></A>build -type app helloworld</P>
+<P CLASS="Code">
+<A NAME="50516408_pgfId-981175"></A>clean -type bsp bsp_0</P>
+<P CLASS="Code">
+<A NAME="50516408_pgfId-981176"></A>clean -type all</P>
+<P CLASS="Code">
+<A NAME="50516408_pgfId-981177"></A>build -type all</P>
+<P CLASS="Code">
+<A NAME="50516408_pgfId-981178"></A>exit</P>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50516408_pgfId-981180"></A>User Flow</H5>
+<P>
+<A NAME="50516408_pgfId-981181"></A>The following user flow describes how you can use the SDK batch mode.</P>
+<OL>
+<LI>
+<A NAME="50516408_pgfId-981182"></A>Start sdk batch mode using the command:</LI>
+</OL>
+<P CLASS="Body2">
+<A NAME="50516408_pgfId-988227"></A><B>
+xsdk -batch</B>
+.</P>
+<OL>
+<LI value=2>
+<A NAME="50516408_pgfId-981183"></A>Set the workspace (where you want to create SDK projects) using the command:</LI>
+</OL>
+<P CLASS="Code">
+<A NAME="50516408_pgfId-988411"></A>set_workspace &lt;Workspace Path&gt;</P>
+<OL>
+<LI value=3>
+<A NAME="50516408_pgfId-981184"></A>If you have any local repositories, set the user repository path using the command: </LI>
+</OL>
+<P CLASS="Code">
+<A NAME="50516408_pgfId-988468"></A>set_user_repo_path  &lt;Repository Path&gt;</P>
+<OL>
+<LI value=4>
+<A NAME="50516408_pgfId-981185"></A>Create a hardware project using the command: </LI>
+</OL>
+<P CLASS="Code">
+<A NAME="50516408_pgfId-988510"></A>create_project -type hw -name &lt;hw project&gt; -hwspec &lt;.hdf/.xml path&gt;</P>
+<OL>
+<LI value=5>
+<A NAME="50516408_pgfId-981186"></A>Create a BSP for the hardware project using the command:</LI>
+</OL>
+<P CLASS="Code">
+<A NAME="50516408_pgfId-988536"></A>create_project -type bsp -name &lt;bsp project name&gt; -hwproject &lt;hw project&gt; -proc &lt;processor&gt; -os &lt;OS Name&gt;</P>
+<OL>
+<LI value=6>
+<A NAME="50516408_pgfId-981187"></A>Create an application project using the command:</LI>
+</OL>
+<P CLASS="Code">
+<A NAME="50516408_pgfId-988566"></A>create_project -type app -name &lt;Application Name&gt; -hwproject &lt;hw Project&gt; -proc &lt;processor&gt; -os &lt;Os Name&gt; -lang &lt;Language&gt; -app &lt;Application Template&gt; -bsp &lt;Bsp Project&gt;</P>
+<OL>
+<LI value=7>
+<A NAME="50516408_pgfId-981188"></A>Build the projects using the command:</LI>
+</OL>
+<P CLASS="Code">
+<A NAME="50516408_pgfId-988589"></A>build</P>
+<OL>
+<LI value=8>
+<A NAME="50516408_pgfId-988595"></A>Clean the projects using the command:</LI>
+</OL>
+<P CLASS="Code">
+<A NAME="50516408_pgfId-988638"></A>clean</P>
+<P>
+<A NAME="50516408_pgfId-981189"></A>You can also open the projects created in SDK GUI mode with the command:</P>
+<P CLASS="Code">
+<A NAME="50516408_pgfId-988707"></A>xsdk -workspace &lt;workspace path&gt;</P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50516408_pgfId-987451"></A>Related Reference</H5>
+<P>
+<A NAME="50516408_pgfId-987475"></A><A HREF="../reference/sdk_u_batch_mode_commands.htm#50516582_26190" CLASS="XRef">SDK Batch Mode Commands</A></P>
+<P>
+<A NAME="50516408_pgfId-987388"></A>&nbsp;</P>
+<P>
+<A NAME="50516408_pgfId-987397"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>
