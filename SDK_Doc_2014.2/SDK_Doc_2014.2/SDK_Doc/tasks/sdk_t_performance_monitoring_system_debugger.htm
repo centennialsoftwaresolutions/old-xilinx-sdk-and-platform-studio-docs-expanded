@@ -1,0 +1,176 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Performance Monitoring Using the System Debugger</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="pgfId-335529"></A>Performance Monitoring Using the System Debugger</H1>
+<P>
+<A NAME="pgfId-372928"></A>The Performance Monitoring feature in SDK collects AXI Performance Monitor (APM) Event Count Module data from the PL, and ARM Performance Monitor Unit (PMU) data from a Zynq&#174; Processing System.</P>
+<P CLASS="Note"><b>Note:</b>
+<A NAME="pgfId-440218"></A>The Performance Monitoring feature is in Beta release for 2014.1.</P>
+<P>
+<A NAME="pgfId-440215"></A>The data is collected in SDK in real-time. The values from these counters are sampled every 10 milliseconds. These values are used to calculate metrics shown in the <B>
+Performance Counters</B>
+ view.</P>
+<P>
+<A NAME="pgfId-372975"></A>SDK monitors the following PMU events for each Cortex-A9 CPU:</P>
+<UL>
+<LI>
+<A NAME="pgfId-372931"></A>Data cache refill</LI>
+<LI>
+<A NAME="pgfId-372932"></A>Data cache access</LI>
+<LI>
+<A NAME="pgfId-372933"></A>Data stall</LI>
+<LI>
+<A NAME="pgfId-372934"></A>Write stall</LI>
+<LI>
+<A NAME="pgfId-372935"></A>Instruction  rename</LI>
+<LI>
+<A NAME="pgfId-372936"></A>Branch miss</LI>
+</UL>
+<P>
+<A NAME="pgfId-372937"></A>The following two Level-2 cache controller (L2C-PL330) counters are monitored:</P>
+<UL>
+<LI>
+<A NAME="pgfId-372938"></A>Number of cache hits</LI>
+<LI>
+<A NAME="pgfId-372939"></A>Number of cache accesses</LI>
+</UL>
+<P>
+<A NAME="pgfId-372941"></A>The following APM counters for each HP and ACP port are monitored:</P>
+<UL>
+<LI>
+<A NAME="pgfId-372942"></A>Write Byte Count</LI>
+<LI>
+<A NAME="pgfId-372943"></A>Read Byte Count</LI>
+<LI>
+<A NAME="pgfId-372944"></A>Write Transaction Count</LI>
+<LI>
+<A NAME="pgfId-372945"></A>Total Write Latency</LI>
+<LI>
+<A NAME="pgfId-372946"></A>Read Transaction Count</LI>
+<LI>
+<A NAME="pgfId-372947"></A>Total Read Latency</LI>
+</UL>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-372949"></A>Using the Performance Monitoring Feature</H5>
+<OL>
+<LI>
+<A NAME="pgfId-373766"></A>Create a hardware design with only one AXI Performance Monitor using the Vivado&#174; Design Suite and export the design to SDK. </LI>
+</OL>
+<P CLASS="Note2">
+<A NAME="pgfId-438906"></A>APM slots from 0 to 5 should be connected to HP0, HP1, HP2, HP3, HP4 and ACP ports in that order.</P>
+<OL>
+<LI value=2>
+<A NAME="pgfId-373014"></A>Create an application and BSP project for the exported hardware design.</LI>
+<LI>
+<A NAME="pgfId-373019"></A>Program the FPGA with the bitstream of the hardware project using the Program FPGA dialog box (<B>
+Xilinx Tools &gt; Program FPGA</B>
+).</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="..\images\sdk_t_performance_monitoring_system_debugger-1.jpg"></center>
+</DIV>
+<P>
+<A NAME="pgfId-373032"></A>&nbsp;</P>
+<OL>
+<LI value=4>
+<A NAME="pgfId-450867"></A>Select the application project and select <B>
+Run &gt; Debug Configurations.</B>
+</LI>
+<LI value=5>
+<P>
+<A NAME="pgfId-373189"></A>Double-click <B>
+Xilinx C/C++ application(System Debugger)</B>
+ to create a new configuration.<BR>
+Notice all the default values are populated in the Debug Configuration for the selected application project. The selected project is also selected for download in the Applications tab.</P>
+</li>
+</ol><DIV>
+<IMG style="margin-left: 15px" SRC="..\images\sdk_t_performance_monitoring_system_debugger-2.jpg"></center>
+</DIV>
+<DIV>
+<IMG style="margin-left: 15px" SRC="..\images\sdk_t_performance_monitoring_system_debugger-3.jpg"></center>
+</DIV>
+<OL>
+<LI value=6>
+<A NAME="pgfId-450935"></A>Click <B>
+Debug.<BR>
+</B>
+The application is downloaded to the target board and stopped at the main.</LI>
+<LI value=7>
+<A NAME="pgfId-440580"></A>Click the <B>
+Resume</B>
+ button.<br>
+<IMG style="margin-left: 15px" SRC="..\images\sdk_t_performance_monitoring_system_debugger-4.jpg" ALIGN="BASELINE">
+<br>
+<A NAME="pgfId-450917"></A><BR>
+The application resumes. Traffic is generated on the HP and ACP ports.</P></li>
+<LI value=8>
+<A NAME="pgfId-440584"></A>Select <B>
+Window &gt; Show View &gt; Others</B>
+ to open the Performance Counters view.</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="..\images\sdk_t_performance_monitoring_system_debugger-5.jpg"></center>
+</DIV>
+<OL>
+<LI value=9>
+<A NAME="pgfId-450972"></A>Select any of the APU contexts in the Debug View and click the <B>
+Start</B>
+ button in the Performance Counters view.<BR>
+</LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="..\images\sdk_t_performance_monitoring_system_debugger-6.jpg"></center>
+</DIV>
+<DIV>
+<IMG style="margin-left: 15px" SRC="..\images\sdk_t_performance_monitoring_system_debugger-7.jpg"></center>
+</DIV>
+<OL>
+<LI value=10>
+<A NAME="pgfId-450998"></A>Notice that the Performance Counters view is updated in real-time for every two seconds with counter values coming from AXI Performance Monitor (APM) and Zynq Performance Monitor (ZPM) on processing system. </LI>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="..\images\sdk_t_performance_monitoring_system_debugger-8.jpg"></center>
+</DIV>
+<DIV>
+<IMG style="margin-left: 15px" SRC="..\images\sdk_t_performance_monitoring_system_debugger-9.jpg"></center>
+</DIV>
+
+<OL>
+<LI value=11>
+<A NAME="pgfId-451024"></A>You can stop the data collection by clicking the <B>
+Stop</B>
+ button at the top right corner of the view. The data collection will also be stopped when System Debugger is disconnected.</LI>
+<IMG style="margin-left: 15px" SRC="..\images\sdk_t_performance_monitoring_system_debugger-10.jpg" ALIGN="BASELINE">
+</OL>
+
+<P CLASS="Body2">
+<A NAME="pgfId-441143"></A>Once the data collection stops, the raw data of counters will be stored in the workspace directory as CSV file. You can find the path of the CSV file in the SDK log.</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="..\images\sdk_t_performance_monitoring_system_debugger-11.jpg"></center>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-373154"></A>Limitations</H5>
+<UL>
+<LI>
+<A NAME="pgfId-373155"></A>Performance monitoring feature is available only while debugging an application using the System Debugger in Standalone Application mode.</LI>
+<LI>
+<A NAME="pgfId-373742"></A>The hardware design should have one and only one AXI Performance Unit, and its slots from 0 to 5 should be connected in HP0, HP1, HP2, HP3, HP4 and ACP ports in that order.</LI>
+</UL>
+<P>
+<A NAME="pgfId-373148"></A>&nbsp;</P>
+<P>
+<A NAME="pgfId-336555"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

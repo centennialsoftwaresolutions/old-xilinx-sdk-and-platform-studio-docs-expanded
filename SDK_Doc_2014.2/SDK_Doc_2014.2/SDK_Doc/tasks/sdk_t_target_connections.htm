@@ -1,0 +1,76 @@
+﻿<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Target Connections</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="pgfId-294539"></A><A NAME="78828"></A>Target Connections</H1>
+<P>
+<A NAME="pgfId-416875"></A>Target connections view allows users to configure multiple remote targets. It shows connected targets and gives you an option to add or delete target connections.</P>
+<P>
+<A NAME="pgfId-416877"></A>SDK establishes target connections through the Hardware Server agent. In order to connect to remote targets, the hardware server agent must be running on the remote host, which is connected to the target.</P>
+<P>
+<A NAME="pgfId-412038"></A>The target connection has been extended to all SDK utilities that deal with targets at runtime.</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="..\images\sdk_t_target_connections-1.jpg"></center>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-411401"></A>Creating a New Target Connection</H5>
+<P>
+<A NAME="pgfId-411445"></A>The user can configure the remote target details by adding a new connection in the Target Connections view.</P>
+<P>
+<A NAME="pgfId-416928"></A>To create new target connection:</P>
+<OL>
+<LI>
+<A NAME="pgfId-411577"></A>In the Target Connections window of the SDK interface, click the <B>
+Add Target Connection</B>
+ button.</LI>
+<IMG style="margin-left: 15px" SRC="..\images\sdk_t_target_connections-2.jpg" ALIGN="BASELINE">
+</OL>
+<P CLASS="Body2">
+<A NAME="pgfId-411403"></A>The Target Connection Details dialog box opens.</P>
+<DIV>
+<IMG style="margin-left: 15px" SRC="..\images\sdk_t_target_connections-3.jpg"></center>
+</DIV>
+<OL>
+<LI value=2>
+<A NAME="pgfId-416985"></A>In the Target Name field, type a name for the new remote connection.</LI>
+<LI>
+<A NAME="pgfId-417038"></A>Check “Set as default target” checkbox to make this target as default. SDK will use default target for all the future interactions with the board.</LI>
+<LI>
+<A NAME="pgfId-417046"></A>In the Host field, type the name or IP address of the remote host machine. This is the machine that is connected to the target and hw_server is running.</LI>
+<LI>
+<A NAME="pgfId-417055"></A>In the Port field, enter the port number on which hw_server is running. By default, hw_server runs on 3121.</LI>
+</OL>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-417003"></A>Assumptions</H5>
+<OL>
+<LI>
+<A NAME="pgfId-417139"></A>Ensure that the target(board) is connected to the remote host.</LI>
+<LI>
+<A NAME="pgfId-417140"></A>Launch hw_server manually on the remote as mentioned below.</LI>
+<OL>
+<LI type="a">
+<A NAME="pgfId-417148"></A>Take a shell on the remote host.</LI>
+<LI type="a">
+<A NAME="pgfId-417163"></A>Source the setup scripts<BR>
+C:/Xilinx/SDK/2014.1/settings64.bat (or) /opt/ Xilinx/SDK/2014.1/settings64.csh</LI>
+<LI type="a">
+<A NAME="pgfId-417101"></A>hw_server</LI>
+</OL>
+</OL>
+<P>
+<A NAME="pgfId-417083"></A>&nbsp;</P>
+<P>
+<A NAME="pgfId-412121"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

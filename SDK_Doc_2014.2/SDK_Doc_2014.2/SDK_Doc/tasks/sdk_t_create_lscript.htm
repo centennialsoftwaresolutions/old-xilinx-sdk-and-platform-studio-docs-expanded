@@ -1,0 +1,135 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Creating a Linker Script</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50594067_pgfId-294539"></A><A NAME="50594067_30144"></A>Creating a Linker Script</H1>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50594067_pgfId-306566"></A>Generating a Linker Script for an Application</H5>
+<P>
+<A NAME="50594067_pgfId-332494"></A>To generate a linker script for an application, do the following:</P>
+<OL>
+<LI>
+<A NAME="50594067_pgfId-406786"></A>Select the application project in the <B>
+Project Navigator</B>
+ or <B>
+C/C++ Projects</B>
+ view, and right-click <B>
+Generate Linker Script.<BR>
+</B>
+Alternately, you can click <B>
+Xilinx Tools &gt; Generate Linker Script.<BR>
+</B>
+The left side of the dialog box is read-only, except for Output Script name and project build settings in the <B>
+Modify project build settings as follows</B>
+ field.</LI>
+<LI>
+<A NAME="50594067_pgfId-332498"></A>Configure the following sections of the Linker Script Generator dialog box <B>
+Basic</B>
+ tab:</LI>
+<UL>
+<LI>
+<A NAME="50594067_pgfId-332499"></A><B>
+Code Sections:</b> Use this area of the dialog box to map code sections onto memory.</LI>
+<LI>
+<A NAME="50594067_pgfId-332500"></A><B>
+Data Sections:</b> Use this area of the dialog box to map data sections onto memory.</LI>
+<LI>
+<A NAME="50594067_pgfId-332501"></A><B>
+Heap and Stack:</b> Use this area to map the heap and stack onto memory.</LI>
+<LI>
+<A NAME="50594067_pgfId-332502"></A><B>
+Heap Size:</b> Use this box set the heap size.</LI>
+<LI>
+<A NAME="50594067_pgfId-332503"></A><B>
+Stack Size:</b> Use this box set the stack size.</LI>
+</UL>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="..\images\sdk_t_create_lscript-1.jpg"></center>
+</DIV>
+<OL>
+<LI value=3>
+<A NAME="50594067_pgfId-332507"></A>If you require more control over the definition of memory sections and assignments to them, use the Linker Script Generator dialog box <B>
+Advanced</B>
+ tab:</LI>
+<UL>
+<LI>
+<A NAME="50594067_pgfId-332508"></A><B>
+Code Section Assignments:</b> Use this area of the dialog box to map code sections onto memory.</LI>
+<LI>
+<A NAME="50594067_pgfId-332509"></A><B>
+Data Sections Assignments:</b> Use this area of the dialog box to map data sections onto memory.</LI>
+<LI>
+<A NAME="50594067_pgfId-332510"></A><B>
+Heap and Stack Section Assignments:</b> Use this area to map the heap and stack onto memory and define their sizes.</LI>
+</UL>
+</OL>
+<DIV>
+<IMG style="margin-left: 15px" SRC="..\images\sdk_t_create_lscript-2.jpg"></center>
+</DIV>
+<OL>
+<LI value=4>
+<A NAME="50594067_pgfId-332514"></A>Click <B>
+OK.<BR>
+</B>
+If there are errors, they must be corrected before you can build your application with the new linker script.<BR>
+<B>
+Note: </B>
+If the linker script already exists, a message window appears, asking if you want to overwrite the file. Click <B>
+OK</B>
+ to overwrite the file or <B>
+Cancel</B>
+ to cancel the overwrite.<BR>
+SDK automatically adds the linker script to the linker settings for a managed make project based on the options selected in <B>
+Modify project build settings as follows.</B>
+</LI>
+</OL>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50594067_pgfId-332443"></A><A NAME="50594067_95407"></A>Manually Adding the Linker Script</H5>
+<P>
+<A NAME="50594067_pgfId-332542"></A>If you want to manually add the linker script for a managed make flow, do the following:</P>
+<OL>
+<LI>
+<A NAME="50594067_pgfId-332544"></A>Right-click your managed make project and select <B>
+C/C++ Build Settings.</B>
+</LI>
+<LI>
+<A NAME="50594067_pgfId-332545"></A>Click the linker corresponding to your target processor, for example <B>
+MicroBlaze gcc linker.</B>
+</LI>
+<LI>
+<A NAME="50594067_pgfId-332546"></A>Select <B>
+Linker Script</B>
+ to add the linker script.</LI>
+</OL>
+<P>
+<A NAME="50594067_pgfId-332548"></A>For standard make projects, add the linker script manually to your makefile linker options.</P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50594067_pgfId-332549"></A>Related Concepts</H5>
+<P>
+<A NAME="50594067_pgfId-332550"></A><A HREF="../concepts/sdk_c_build.htm#50593823_47529" CLASS="XRef">Linker Scripts</A></P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50594067_pgfId-332552"></A>Related Tasks</H5>
+<P>
+<A NAME="50594067_pgfId-332553"></A><A HREF="sdk_o_build_task.htm#50594047_71628" CLASS="XRef">Building Projects</A></P>
+<P>
+<A NAME="50594067_pgfId-332554"></A>&nbsp;</P>
+<P>
+<A NAME="50594067_pgfId-332483"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

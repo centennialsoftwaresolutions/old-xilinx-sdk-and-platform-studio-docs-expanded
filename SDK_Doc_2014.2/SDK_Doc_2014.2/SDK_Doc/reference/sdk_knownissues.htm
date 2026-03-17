@@ -1,0 +1,210 @@
+﻿<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Known Issues in SDK</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="pgfId-294539"></A><A NAME="59939"></A>Known Issues in SDK</H1>
+<P>
+<A NAME="pgfId-437617"></A>The following are known issues in SDK:</P>
+<UL>
+<LI>
+<A NAME="pgfId-437685"></A><A HREF="sdk_knownissues.htm#72870" CLASS="XRef">While Initializing the bitstream with an ELF file, SDK uses bootloop</A></LI>
+<LI>
+<A NAME="pgfId-437735"></A><A HREF="sdk_knownissues.htm#56039" CLASS="XRef">MSS Viewer does not refresh automatically</A></LI>
+<LI>
+<A NAME="pgfId-437769"></A><A HREF="sdk_knownissues.htm#84007" CLASS="XRef">Renaming hardware platforms causes compilation errors</A></LI>
+<LI>
+<A NAME="pgfId-437803"></A><A HREF="sdk_knownissues.htm#80018" CLASS="XRef">Restore defaults in C/C++ Build Settings causes settings to be lost</A></LI>
+<LI>
+<A NAME="pgfId-437837"></A><A HREF="sdk_knownissues.htm#58247" CLASS="XRef">Operations on XMD console can confuse the internal state of SDK</A></LI>
+<LI>
+<A NAME="pgfId-437866"></A><A HREF="sdk_knownissues.htm#18385" CLASS="XRef">When SDK launches, it does not display the correct menus, the correct icons, or the C/C++ Perspective</A></LI>
+<LI>
+<A NAME="pgfId-437884"></A><A HREF="sdk_knownissues.htm#98811" CLASS="XRef">Kintex&#174;-7 FPGA KC705 evaluation board with older device revisions require a workaround during debugging to compensate for the memory controller calibration time</A></LI>
+<LI>
+<A NAME="pgfId-437927"></A><A HREF="sdk_knownissues.htm#20069" CLASS="XRef">SDK internal state gets out of sync with actual target status if Zynq board is switched off during execution of an application</A></LI>
+<LI>
+<A NAME="pgfId-437977"></A><A HREF="sdk_knownissues.htm#80613" CLASS="XRef">Semaphores left on XMD exit</A></LI>
+<LI>
+<A NAME="pgfId-438042"></A><A HREF="sdk_knownissues.htm#55633" CLASS="XRef">Debug System Reset doesn’t work on a 2.0. Zc706 board that has the 2.0 silicon</A></LI>
+<LI>
+<A NAME="pgfId-438079"></A><A HREF="sdk_knownissues.htm#70552" CLASS="XRef">SVF Support Does Not Exist in 2014.1 Release.</A></LI>
+<LI>
+<A NAME="pgfId-438121"></A><A HREF="sdk_knownissues.htm#91863" CLASS="XRef">SDK 2014.1 Does Not Support 6 Series and Below Devices.</A></LI>
+<LI>
+<A NAME="pgfId-438559"></A><A HREF="sdk_knownissues.htm#91803" CLASS="XRef">SDK XMD Fails to Download ELF File</A></LI>
+<LI>
+<A NAME="pgfId-439075"></A><A HREF="sdk_knownissues.htm#67579" CLASS="XRef">SDK Hangs After Design Changes in Block Design and Export Hardware (Design with User IP)</A></LI>
+</UL>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-332425"></A><A NAME="72870"></A>While Initializing the bitstream with an ELF file, SDK uses bootloop</H5>
+<UL>
+<LI>
+<A NAME="pgfId-332427"></A><B>
+Issue:</b> The Configure FPGA dialog allows you to select the ELF file to be initialized in the bitstream. When this dialog box opens, it remembers the ELF file used in a previous invocation. However, regardless of the ELF shown in the dialog box, SDK always uses bootloop to initialize the bitstream.</LI>
+<LI>
+<A NAME="pgfId-332554"></A><B>
+Solution:</b> In the dialog box, manually reselect the ELF to use.</LI>
+</UL>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-332430"></A><A NAME="56039"></A>MSS Viewer does not refresh automatically</H5>
+<UL>
+<LI>
+<A NAME="pgfId-332432"></A><B>
+Issue:</b> The MSS viewer does not automatically refresh when either the MSS is changed via the BSP settings dialog box, or when the hardware specification is updated.</LI>
+<LI>
+<A NAME="pgfId-332433"></A><B>
+Solution:</b> Close the MSS viewer and then double click on the MSS file to re-open it.</LI>
+</UL>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-332440"></A><A NAME="84007"></A>Renaming hardware platforms causes compilation errors</H5>
+<UL>
+<LI>
+<A NAME="pgfId-332442"></A><B>
+Symptom:</b> When a hardware specification project is renamed, the dependent BSPs and applications fail to compile.</LI>
+<LI>
+<A NAME="pgfId-332443"></A><B>
+Issue:</b> Currently, SDK does not support renaming of hardware specification projects. In order to do so, you must manually change the following items:</LI>
+<OL>
+<LI type="a">
+<A NAME="pgfId-332444"></A>Change Project References in the BSP project to point to the new hardware project.</LI>
+<LI type="a">
+<A NAME="pgfId-332446"></A>Change the ELFCheck options in the application's build settings</LI>
+</OL>
+</UL>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-332448"></A><A NAME="80018"></A>Restore defaults in C/C++ Build Settings causes settings to be lost</H5>
+<UL>
+<LI>
+<A NAME="pgfId-332450"></A><B>
+Issue:</b> Clicking on Restore Defaults in the C/C++ Build Settings results in elfcheck not working properly.</LI>
+<LI>
+<A NAME="pgfId-332451"></A><B>
+Solution:</b> Manually set the path to the hardware specification and the processor name in the ELFCheck options in Build settings after restoring defaults.</LI>
+</UL>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-332453"></A><A NAME="58247"></A>Operations on XMD console can confuse the internal state of SDK</H5>
+<P>
+<A NAME="pgfId-332455"></A>Currently, SDK uses the XMD that is shown in the XMD console. As a result, performing some operations on the XMD console (such as disconnecting targets) will cause SDK's state to get out of sync with the actual target state. In such a case, it might not be possible to recover and you must restart SDK.</P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-332457"></A><A NAME="18385"></A>When SDK launches, it does not display the correct menus, the correct icons, or the C/C++ Perspective</H5>
+<UL>
+<LI>
+<A NAME="pgfId-332459"></A><B>
+Solution:</b> SDK is probably reading settings from an outdated .eclipse folder or an outdated workspace. Try opening SDK with a fresh workspace. If that does not work, remove your $HOME/.eclipse folder. (On NT, this is usually C:\Documents and settings\username\.eclipse.)</LI>
+</UL>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-332461"></A><A NAME="98811"></A>Kintex&#174;-7 FPGA KC705 evaluation board with older device revisions require a workaround during debugging to compensate for the memory controller calibration time</H5>
+<UL>
+<LI>
+<A NAME="pgfId-332463"></A><B>
+Symptom:</b> After any reset, the debugger hangs when accessing DDR3 memory.</LI>
+<LI>
+<A NAME="pgfId-332464"></A><B>
+Issue:</b> For older device revisions, the memory controller requires one to two minutes to calibrate before you can access DDR3 memory. To work around this issue, allow sufficient time for calibration to complete after a reset and disable automatic resets using one of the following methods:</LI>
+<UL>
+<LI>
+<A NAME="pgfId-332465"></A>When using XMD, after connecting to the target, disable resets running the commands debugconfig -reset_on_run disable and debugconfig -reset_on_data_dow disable.</LI>
+<LI>
+<A NAME="pgfId-332466"></A>When using SDK, in the debug configuration Device Initialization tab specify the Reset Type value No Reset. Use XMD to perform the reset and wait for the calibration to complete.</LI>
+</UL>
+</UL>
+<P>
+<A NAME="pgfId-332467"></A>See <A HREF="http://www.xilinx.com/cgi-bin/SW_Docs_Redirect/sw_docs_redirect?locale=en&amp;topic=answer+record&amp;sub=43967" CLASS="URL">Answer Record 43967</A> for additional information.</P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-332474"></A><A NAME="20069"></A>SDK internal state gets out of sync with actual target status if Zynq board is switched off during execution of an application</H5>
+<UL>
+<LI>
+<A NAME="pgfId-332476"></A><B>
+Issue:</b> If the Zynq board is switched off during execution of an application, SDK does not get the power-off notification and does not update its status about the target. This causes any consequent operations on the board to give errors.</LI>
+<LI>
+<A NAME="pgfId-332477"></A><B>
+Solution:</b> Restart the XMD session from the XMD console view or restart SDK.</LI>
+</UL>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-332479"></A><A NAME="80613"></A>Semaphores left on XMD exit</H5>
+<UL>
+<LI>
+<A NAME="pgfId-332481"></A><B>
+Workaround:</b> Use the xclean command to clean semaphores.</LI>
+</UL>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-332491"></A><A NAME="55633"></A>Debug System Reset doesn’t work on a 2.0. Zc706 board that has the 2.0 silicon</H5>
+<UL>
+<LI>
+<A NAME="pgfId-332493"></A><B>
+Workaround:</b>  Power cycle the board.</LI>
+</UL>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-332503"></A><A NAME="70552"></A>SVF Support Does Not Exist in 2014.1 Release.</H5>
+<UL>
+<LI>
+<A NAME="pgfId-437321"></A><B>
+Solution:</b> Use an earlier release of SDK for SVF support.</LI>
+</UL>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-437267"></A><A NAME="91863"></A>SDK 2014.1 Does Not Support 6 Series and Below Devices.</H5>
+<UL>
+<LI>
+<A NAME="pgfId-437469"></A><B>
+Solution:</b> Use an earlier release of SDK for support of 6 series and below devices.</LI>
+</UL>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-437392"></A><A NAME="91803"></A>SDK XMD Fails to Download ELF File</H5>
+<UL>
+<LI>
+<A NAME="pgfId-438570"></A><B>
+Error:</b> Section, 0x80000000 - 0x8000c147 Not Accessible from Processor I-Side Interface</LI>
+<LI>
+<A NAME="pgfId-438663"></A><B>
+Explanation:</B>
+ This error message is due to a bug in IP integrator, in which it does not provide a memory map for the I-Side interface. It provides a memory map only for the D-Side Interface.</LI>
+</UL>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="pgfId-438925"></A><A NAME="67579"></A>SDK Hangs After Design Changes in Block Design and Export Hardware (Design with User IP)</H5>
+<UL>
+<LI>
+<A NAME="pgfId-439027"></A><B>
+Solution: </B>
+Restart SDK.</LI>
+</UL>
+<P>
+<A NAME="pgfId-306566"></A>&nbsp;</P>
+<P>
+<A NAME="pgfId-439100"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

@@ -1,0 +1,50 @@
+<!DOCTYPE HTML FM_PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<head><meta name="robots" content="noindex, nofollow" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 10.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="..\help.css" CHARSET="UTF-8" TYPE="text/css">
+<TITLE> Board Support Packages (External Tools)</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<H1 CLASS="SingleChapTitle">
+<A NAME="50593793_pgfId-332271"></A><A NAME="50593793_86840"></A>Board Support Packages (External Tools)</H1>
+<P>
+<A NAME="50593793_pgfId-332273"></A><A NAME="50593793_sdk_u_hwspec"></A>You can create a board support package (BSP) for application development within SDK, or for use in external tool flows. This topic describes BSPs used in external tool flows.</P>
+<P>
+<A NAME="50593793_pgfId-306438"></A>For external tools, a board support package (BSP) is the collective term referring to all of the software components required to match a given operating system (and its environment) to a given hardware design (board). BSPs commonly contain low-level operating system and device driver code that is dependent on the hardware and upon which the rest of the operating system layers. In addition, a BSP might also contain other files containing directives, compilation parameters, and hardware parameters that are used to configure the operating system. Since a given Xilinx&#174; hardware platform is configurable, fixed board support packages are not possible. Therefore, a custom board support package must be generated for each hardware design that you create.</P>
+<P>
+<A NAME="50593793_pgfId-550942"></A>SDK can be used to create board support packages for third-party operating systems that are supported on the Xilinx processors. The board support package appears as a project in the SDK Navigator view. You can configure each BSP project in various ways and then run a BSP generation process. The BSP generation process typically ends with a collection of files generated in the workspace, which you must then take into the third-party environment to proceed with building the operating system and applications. The specifics of what files must be collected and how they must be used depends on the third-party operating system in question.</P>
+<P>
+<A NAME="50593793_pgfId-550943"></A>For a comprehensive listing of all third-party offerings, refer to <A HREF="http://www.xilinx.com/ise/embedded/epartners/listing.htm" CLASS="URL">http://www.xilinx.com/ise/embedded/epartners/listing.htm</A>.</P>
+<P CLASS="Note"><b>Note:</b>
+<A NAME="50593793_pgfId-306444"></A>You cannot link application projects created in SDK with BSP projects created for external tools. You must perform application development for the external tool BSP only in the development environment offered by the third-party vendor.</P>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50593793_pgfId-306446"></A>Related Tasks</H5>
+<UL>
+<LI>
+<A NAME="50593793_pgfId-306447"></A><A HREF="../tasks/sdk_t_create_bsp_external.htm#50594065_86840" CLASS="XRef">Creating a Board Support Package (External Tools)</A></LI>
+<LI>
+<A NAME="50593793_pgfId-306448"></A><A HREF="../tasks/sdk_t_config_bsp_external.htm#50594061_86840" CLASS="XRef">Configuring a Board Support Package (External Tools)</A></LI>
+<LI>
+<A NAME="50593793_pgfId-306449"></A><A HREF="../tasks/sdk_t_build_bsp_external.htm#50594058_86840" CLASS="XRef">Generating a Board Support Package for External Tools</A></LI>
+<LI>
+<A NAME="50593793_pgfId-306450"></A><A HREF="../tasks/sdk_t_install_third_party_bsp.htm#50594078_86840" CLASS="XRef">Importing Third-Party Software Components</A></LI>
+</UL>
+</DIV>
+<DIV>
+<H5 CLASS="Heading1">
+<A NAME="50593793_pgfId-306452"></A>Related Reference</H5>
+<UL>
+<LI>
+<A NAME="50593793_pgfId-306277"></A><A HREF="../reference/sdk_u_new_bsp_external.htm#50593976_86840" CLASS="XRef">New Board Support Package (External Tools) Project Dialog Box</A></LI>
+</UL>
+<P>
+<A NAME="50593793_pgfId-1152482"></A>&nbsp;</P>
+<P>
+<A NAME="50593793_pgfId-1152484"></A>Copyright &#169; 1995-2014 Xilinx, Inc. All rights reserved.</P>
+</DIV>
+</DIV>
+</BODY>
+</HTML>
