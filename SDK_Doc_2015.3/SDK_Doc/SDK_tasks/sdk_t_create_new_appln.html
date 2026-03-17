@@ -1,0 +1,104 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="You can create a C or C++ standalone application project by using New Application Project wizard. To create a project: Click File &gt; New &gt; Application Project . The New Application Project dialog box ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Creating a Standalone Application Project"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_create_new_linux_appln.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_zynq_dram.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_opencv_template.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="sdk_t_create_new_appln"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Creating a Standalone Application Project</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="sdk_t_create_new_appln">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+
+<h1 class="title topictitle1">Creating a Standalone Application Project</h1>
+
+<div class="body taskbody"><div class="section context">
+<p class="p">You can create a C or C++ standalone application project by using New Application Project
+                wizard.</p>
+
+<p class="p">To create a project:</p>
+
+</div>
+<ol class="ol steps"><li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">File &gt; New &gt; Application Project</strong>. The New Application
+                    Project dialog box appears.</span>
+                <div class="itemgroup info">
+                    <div class="note note"><span class="notetitle">Note:</span>  This is equivalent to clicking on <strong class="ph b">File &gt; New &gt; Project</strong> to
+                        open the New Project wizard, selecting <strong class="ph b">Xilinx &gt; Application
+                            Project</strong>, and clicking <strong class="ph b">Next. </strong></div>
+
+                    <br xmlns="http://www.w3.org/1999/xhtml" /><img class="image" src="../images/sdk_t_create_new_appln-1.png" height="642" width="527"></img><br xmlns="http://www.w3.org/1999/xhtml" />
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Type a project name into the <strong class="ph b">Project Name</strong> field.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select the location for the project. You can use the default location as
+                    displayed in the <strong class="ph b">Location</strong> field by leaving the <strong class="ph b">Use default
+                        location</strong> check box selected. Otherwise, click the check box and type or
+                    browse to the directory location.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">The <strong class="ph b">OS Platform</strong> allows you to select which operating system you will be
+                    writing code for. Select <strong class="ph b">standalone</strong>.</span>
+                <div class="itemgroup info"><div class="note note"><span class="notetitle">Note:</span> This selection alters what templates
+                    you view in the next screen and what supporting code is provided in your
+                    project.</div>
+</div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select the <strong class="ph b">Hardware Specification</strong> XML or HDF file, if it was not specified earlier.</span>
+                <div class="itemgroup info">If you have not build hardware yet, you can select one of the pre-defined platforms. You can view a list of the pre-defined platforms by selecting the drop-down arrow in this field. Otherwise, you can browse to an existing Hardware Specification by clicking the <strong class="ph b">New</strong> button and create a new hardware project. After completing the new hardware project creation, you are returned to the <strong class="ph b">New Application Project</strong> dialog box.</div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">From the <strong class="ph b">Processor</strong> drop-down list, select the processor for which you
+                    want to build the application. This is an important step when there are multiple
+                    processors in your design such as any Zynq® PS.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select your preferred language: <strong class="ph b">C</strong>or <strong class="ph b">C++</strong>.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select a Board Support Package. You can opt to have the tools build a
+                    customizable BSP for this application, or you can choose an existing BSP.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">Next</strong> to advance to the <strong class="ph b">Templates</strong> screen.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">SDK provides useful sample applications listed in <strong class="ph b">Templates</strong> dialog box
+                    that you can use to create your project. The <strong class="ph b">Description</strong> box displays a
+                    brief description of the selected sample application. When you use a sample
+                    application for your project, SDK creates the required source and header files
+                    and linker script.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select the desired template. If you want to create a blank project, select
+                        the<strong class="ph b"> Empty Application.</strong> You can then add C files to the project, after
+                    the project is created.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">Finish</strong> to create your application project and board support
+                    package (if it does not exist).</span>
+                <div class="itemgroup info">
+                    <div class="note note"><span class="notetitle">Note:</span> Xilinx recommends that you use Managed Make flow rather than Standard Make
+                        C/C++ unless you are comfortable working with make files.</div>
+
+                </div>
+            </li>
+</ol>
+
+</div>
+<div class="related-links"><div class="relinfo reltasks"><strong>Related tasks</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_create_new_linux_appln.html" title="Creating a Linux Application Project">Creating a Linux Application Project</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_opencv_template.html" title="Using the OpenCV Template Application">Using the OpenCV Template Application</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/sdk_u_zynq_dram.html" title="Zynq DRAM Diagnostics Test">Zynq DRAM Diagnostics Test</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

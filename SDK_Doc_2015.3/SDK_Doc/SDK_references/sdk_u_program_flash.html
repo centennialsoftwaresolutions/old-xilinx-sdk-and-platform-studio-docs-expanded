@@ -1,0 +1,238 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Program Flash is a SDK tool used to program the flash memories in the design. Various types of flash types are supported by SDK for programming. For Non Zynq devices – Parallel Flash (BPI) and Serial ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Program Flash Memory"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/sdk_c_repos.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_bspsettings.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_generatelinkerscript.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_program_fpga.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_dump_restoredatefile.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_xmdconsole.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_xsdb_console.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_launchshell.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_create_zynq_bootimage.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_sysgen_codebug.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_configure_qemu_settings.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="sdk_u_program_flash"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Program Flash Memory</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="sdk_u_program_flash">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+
+<h1 class="title topictitle1">Program Flash Memory</h1>
+
+<div class="body">
+        <p class="p" id="sdk_u_program_flash__p_p3c_5dz_fr">Program Flash is a SDK tool used to program the flash memories in the
+            design. Various types of flash types are supported by SDK for programming. </p>
+
+        <ul class="ul" id="sdk_u_program_flash__ul_fm1_ydz_fr">
+            <li class="li"> For Non Zynq devices – Parallel Flash (BPI) and Serial Flash (SPI) from various
+                makes such as Micron, Spansion. </li>
+
+            <li class="li">For Zynq Devices – QSPI, NAND &amp; NOR. QSPI can used in different configurations
+                such as QSPI SINGLE, QSPI DUAL PARALLEL, QSPI DUAL STACKED. </li>
+
+        </ul>
+
+        <br xmlns="http://www.w3.org/1999/xhtml" /><img class="image" src="../images/sdk_u_program_flash-1.png" height="423" width="525"></img><br xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="p">The table below lists all the options available on the <span class="keyword wintitle">Program Flash Memory</span> dialog box:</p>
+
+        
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="sdk_u_program_flash__cb407575" class="table" frame="border" border="1" rules="all">
+                
+                
+                <thead class="thead" align="left">
+                    <tr class="row">
+                        <th class="entry" valign="top" width="127pt" id="d44598e44">
+                            <p class="p">Option</p>
+
+                        </th>
+
+                        <th class="entry" valign="top" width="NaN%" id="d44598e50">
+                            <p class="p">Description</p>
+
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry" valign="top" width="127pt" headers="d44598e44 ">
+                            <p class="p"><span class="ph uicontrol">Hardware Platform</span></p>
+
+                        </td>
+
+                        <td class="entry" valign="top" width="NaN%" headers="d44598e50 ">Select the hardware platform you plan to use.</td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" width="127pt" headers="d44598e44 ">
+                            <p class="p"><span class="ph uicontrol">Connection</span></p>
+
+                        </td>
+
+                        <td class="entry" valign="top" width="NaN%" headers="d44598e50 ">
+                            <p class="p">Select the connection to hardware server.</p>
+
+                        </td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" width="127pt" headers="d44598e44 ">
+                            <p class="p"><span class="ph uicontrol">Device</span></p>
+
+                        </td>
+
+                        <td class="entry" valign="top" width="NaN%" headers="d44598e50 ">Select a device. <span class="ph uicontrol">Auto Detect</span> selects the first
+                            device on the chain, by default.</td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" width="127pt" headers="d44598e44 "><span class="ph uicontrol">Image File</span></td>
+
+                        <td class="entry" valign="top" width="NaN%" headers="d44598e50 ">
+                            <p class="p" id="sdk_u_program_flash__p_nl4_r2z_fr">Select the file to write to the flash memory.</p>
+
+                            <ul class="ul">
+                                <li class="li">Zynq Devices: <ul class="ul">
+                                        <li class="li">Supported file formats for qspi flash types are BIN or
+                                            MCS formats.</li>
+
+                                        <li class="li">Supported file formats for nor &amp; nand types are only
+                                            BIN format.</li>
+
+                                    </ul>
+</li>
+
+                                <li class="li">Non-Zynq Devices: <ul class="ul">
+                                        <li class="li">Supported types for flash parts in non-zynq devices are
+                                            BIT, ELF, SREC, MCS, BIN.</li>
+
+                                    </ul>
+</li>
+
+                            </ul>
+
+                        </td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" width="127pt" headers="d44598e44 "><span class="ph uicontrol">Offsest</span></td>
+
+                        <td class="entry" valign="top" width="NaN%" headers="d44598e50 ">
+                            <p class="p" id="sdk_u_program_flash__p_ekh_dfz_fr">Specify the offset relative to the Flash Base
+                                Address, where the file should be programmed.</p>
+
+                            <div class="note note"><span class="notetitle">Note:</span> Offset is not required for MCS files.</div>
+
+                        </td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" width="127pt" headers="d44598e44 "><span class="ph uicontrol">FSBL File</span></td>
+
+                        <td class="entry" valign="top" width="NaN%" headers="d44598e50 ">The FSBL <samp class="ph codeph">.elf</samp> file is mandatory for
+                            the NOR flash types in Zynq devices. <div class="note note"><span class="notetitle">Note:</span> Not required for non-zynq
+                                devices.</div>
+</td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" width="127pt" headers="d44598e44 "><span class="ph uicontrol">Flash Type</span></td>
+
+                        <td class="entry" valign="top" width="NaN%" headers="d44598e50 ">Select a flash type.<ul class="ul">
+                                <li class="li">Zynq devices: <ul class="ul" id="sdk_u_program_flash__ul_dqv_4fz_fr">
+                                        <li class="li">qspi_single</li>
+
+                                        <li class="li">qspi_dual_parallel</li>
+
+                                        <li class="li">qspi_dual_stacked</li>
+
+                                        <li class="li">nand_8</li>
+
+                                        <li class="li">nand_16</li>
+
+                                        <li class="li">nor</li>
+
+                                    </ul>
+</li>
+
+                                <li class="li">Non-Zynq devices: <ul class="ul" id="sdk_u_program_flash__ul_gqv_4fz_fr">
+                                        <li class="li">The flash type drop down list is populated based on the
+                                            FPGA detected in the connection. If the connection to
+                                            hardware server doesn’t exist, error - <span class="ph uicontrol">Could not
+                                                retrieve Flash Part information. Please check
+                                                hardware server connection</span>, is displayed on the
+                                            dialog box. Based on the device detected, the dialog
+                                            populates all the flash parts supported for the device.
+                                        </li>
+
+                                    </ul>
+</li>
+
+                            </ul>
+<div class="note note"><span class="notetitle">Note:</span> Appropriate part can be selected based on design. For Xilinx
+                                boards the part name can found from the respective boards’ user
+                                guide.</div>
+
+                        </td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" width="127pt" headers="d44598e44 "><span class="ph uicontrol">Convert ELF to Bootable SREC format and
+                            program</span></td>
+
+                        <td class="entry" valign="top" width="NaN%" headers="d44598e50 ">The ELF file provided as the image file is
+                                converted into SREC format and programmed. This is a typical use
+                                case in non zynq devices. The SREC bootloader can be built and used
+                                to read the SREC converted ELF from flash, load it into RAM and
+                                boot.</td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" width="127pt" headers="d44598e44 "><span class="ph uicontrol">Blank check after erase</span></td>
+
+                        <td class="entry" valign="top" width="NaN%" headers="d44598e50 ">The blank check is performed to verify if the erase
+                            operation was properly done. The contents are read back and check if the
+                            region erased is blank.</td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" width="127pt" headers="d44598e44 "><span class="ph uicontrol">Verify after flash</span></td>
+
+                        <td class="entry" valign="top" width="NaN%" headers="d44598e50 ">
+                            <p class="p" id="sdk_u_program_flash__p_bgk_mgz_fr">The verify operation is cross check the flash
+                                programming operation. The flash contents are read back and cross
+                                checked against the programmed data.</p>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+</div>
+
+    </div>
+
+<div class="related-links"><div class="relinfo relconcepts"><strong>Related concepts</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/sdk_c_repos.html" title="Repositories">Repositories</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_bspsettings.html" title="Board Support Package Settings">Board Support Package Settings</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_generatelinkerscript.html" title="Generate Linker Script">Generate Linker Script</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/sdk_u_program_fpga.html" title="Program FPGA">Program FPGA</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_dump_restoredatefile.html" title="Dump/Restore Data File">Dump/Restore Data File</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_xmdconsole.html" title="XMD Console">XMD Console</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_xsdb_console.html" title="XSDB Console">XSDB Console</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_launchshell.html" title="Launch Shell">Launch Shell</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_create_zynq_bootimage.html" title="Create Zynq Boot Image">Create Zynq Boot Image</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/sdk_u_sysgen_codebug.html" title="System Generator Co-Debug Settings">System Generator Co-Debug Settings</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_configure_qemu_settings.html" title="Configure QEMU Settings">Configure QEMU Settings</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

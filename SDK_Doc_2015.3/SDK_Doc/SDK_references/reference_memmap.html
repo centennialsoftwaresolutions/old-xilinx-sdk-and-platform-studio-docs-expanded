@@ -1,0 +1,152 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Description Modify memory map. Usage memmap &lt;options&gt; Add or remove a memory map entry for the active target. Options -addr &lt;memory-address&gt; Address of the memory region that should be added/removed ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="memmap"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/reference_mrd.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/reference_mwr.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="sdk_u_xsd_xsdb_memmap"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>memmap</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="sdk_u_xsd_xsdb_memmap">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+<h1 class="title topictitle1">memmap</h1>
+
+<div class="body">
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="sdk_u_xsd_xsdb_memmap__dj9684221" class="table" frame="border" border="1" rules="all">
+
+
+
+<tbody class="tbody">
+<tr class="row">
+<td class="entry" valign="top" width="79pt"><p class="p"><strong class="ph b">Description</strong></p>
+</td>
+
+<td class="entry" colspan="2" valign="top"><p class="p">Modify memory map.</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="79pt">
+                            <p class="p"><strong class="ph b">Usage</strong></p>
+
+                        </td>
+
+<td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b"> memmap &lt;options&gt;</strong></samp></td>
+
+<td class="entry" valign="top" width="282pt"> Add or remove a memory map entry for the active target.</td>
+
+</tr>
+
+                    
+                    <tr class="row">
+                        <td class="entry" rowspan="5" valign="top" width="79pt">
+                            <p class="p" id="sdk_u_xsd_xsdb_memmap__p_qts_vhc_ht1"><strong class="ph b">Options</strong></p>
+
+                        </td>
+
+                        <td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b"> -addr &lt;memory-address&gt;</strong></samp></td>
+
+                        <td class="entry" valign="top" width="282pt">
+                            <p class="p" id="sdk_u_xsd_xsdb_memmap__p_n5j_xhc_ht1"> Address of the memory region that should be added/removed from the target's memory map.</p>
+
+                        </td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b"> -size &lt;memory-size&gt; </strong></samp></td>
+
+                        <td class="entry" valign="top" width="282pt">
+                            <p class="p" id="sdk_u_xsd_xsdb_memmap__p_llb_13c_ht1"> Size of the memory region.</p>
+
+                        </td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b"> -flags &lt;protection-flags&gt;</strong></samp></td>
+
+                        <td class="entry" valign="top" width="282pt">
+                            <p class="p" id="sdk_u_xsd_xsdb_memmap__p_cnd_13c_ht1"> Protection flags for the memory region.<samp class="ph codeph"> &lt;protection-flags&gt;</samp> can be a bitwise OR of the values below:</p>
+
+                            <ul class="ul" id="sdk_u_xsd_xsdb_memmap__ul_bcc_4pc_ht">
+                                <li class="li"><samp class="ph codeph">0x1</samp> = Read access is allowed</li>
+
+                                <li class="li"><samp class="ph codeph">0x2</samp> = Write access is allowed</li>
+
+                                <li class="li"><samp class="ph codeph">0x4</samp> = Instruction fetch access is allowed</li>
+
+                            </ul>
+
+                            <p class="p" id="sdk_u_xsd_xsdb_memmap__p_ftl_ppc_ht"> Default value of <samp class="ph codeph">&lt;protection-flags&gt;</samp> is <samp class="ph codeph">0x3</samp> (Read/Write Access)</p>
+
+                        </td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b"> -list</strong></samp></td>
+
+                        <td class="entry" valign="top" width="282pt">
+                            <p class="p" id="sdk_u_xsd_xsdb_memmap__p_djf_13c_ht1"> List the memory regions added to the active target's memory map.</p>
+
+                        </td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b"> -clear </strong></samp></td>
+
+                        <td class="entry" valign="top" width="282pt">
+                            <p class="p" id="sdk_u_xsd_xsdb_memmap__p_v51_vpc_ht"> Specify whether the memory region should be removed from the target's memory map.</p>
+
+                            <div class="note note"><span class="notetitle">Note:</span> Only the memory regions previously added through memmap command can be removed.</div>
+
+                        </td>
+
+                    </tr>
+
+<tr class="row">
+<td class="entry" rowspan="2" valign="top" width="79pt">
+                            <p class="p"><strong class="ph b">Examples</strong></p>
+
+                        </td>
+
+<td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b">memmap -addr 0xfc000000 -size 0x1000 -flags 3</strong></samp></td>
+
+<td class="entry" valign="top" width="282pt"><p class="p" id="sdk_u_xsd_xsdb_memmap__p_ufb_zpc_ht"> Add the memory region <samp class="ph codeph">0xfc000000 - 0xfc000fff</samp> to target's memory map.</p>
+
+                            <p class="p" id="sdk_u_xsd_xsdb_memmap__p_vfb_zpc_ht">Read/Write accesses are allowed to this region.</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="141pt"><p class="p"><samp class="ph codeph"> memmap -addr 0xfc000000 -clear</samp></p>
+</td>
+
+<td class="entry" valign="top" width="282pt"><p class="p"> Remove the previously added memory region at <samp class="ph codeph">0xfc000000</samp> from the target's memory map.</p>
+</td>
+
+</tr>
+
+
+
+</tbody>
+
+</table>
+</div>
+
+</div>
+
+<div class="related-links"><div class="relinfo"><strong>Related information</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/reference_mrd.html" title="mrd">mrd</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/reference_mwr.html" title="mwr">mwr</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

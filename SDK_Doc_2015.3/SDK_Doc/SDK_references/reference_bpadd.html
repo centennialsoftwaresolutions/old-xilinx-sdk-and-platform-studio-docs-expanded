@@ -1,0 +1,225 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Description Add a breakpoint/watchpoint. For simplicity, this document refers to breakpoints and watchpoints as breakpoints. A breakpoint can be added irrespective of whether there is a connection to ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="bpadd"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/reference_bpremove.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/reference_bpenable.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/reference_bpdisable.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/reference_bplist.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="sdk_u_xsd_xsdb_breakpoints"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>bpadd</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="sdk_u_xsd_xsdb_breakpoints">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+<h1 class="title topictitle1">bpadd</h1>
+
+<div class="body">
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="sdk_u_xsd_xsdb_breakpoints__dg974537" class="table" frame="border" border="1" rules="all">
+
+
+
+<tbody class="tbody">
+<tr class="row">
+<td class="entry" valign="top" width="79pt"><p class="p"><strong class="ph b">Description</strong></p>
+</td>
+
+<td class="entry" colspan="2" valign="top"><p class="p">Add a breakpoint/watchpoint. For
+simplicity, this document refers to breakpoints and watchpoints as breakpoints.</p>
+<p class="p">A
+breakpoint can be added irrespective of whether there is a connection
+to hw_server. Breakpoints are retained until they are removed by the
+user or XSDB is terminated. Breakpoints can be set at an address or file:line.</p>
+<p class="p">bpadd
+returns the ID of the breakpoint.</p>
+
+                            <div class="note note"><span class="notetitle">Note:</span> Breakpoints can be set in XSDB before connecting to hw_server/TCF agent. If there is an active target when a breakpoint is set, the breakpoint will be enabled only for that active target. If there is no active target, the breakpoint will be enabled for all the targets.</div>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="79pt"><p class="p"><strong class="ph b">Usage</strong></p>
+</td>
+
+<td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b">bpadd &lt;Options&gt;</strong></samp></td>
+
+<td class="entry" valign="top" width="282pt"> </td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" rowspan="9" valign="top" width="79pt">
+                            <p class="p"><strong class="ph b">Options</strong></p>
+
+                        </td>
+
+<td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b">-addr &lt;breakpoint-address&gt;</strong></samp></td>
+
+<td class="entry" valign="top" width="282pt"><p class="p">Specify the address at which the Breakpoint
+should be set</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b">-file &lt;file-name&gt;</strong></samp></td>
+
+<td class="entry" valign="top" width="282pt"><p class="p">Specify the file-name in which the Breakpoint
+should be set</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b">-line &lt;line-number&gt;</strong></samp></td>
+
+<td class="entry" valign="top" width="282pt"><p class="p">Specify the line-number within the file, where
+Breakpoint should be set</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b">-type &lt;breakpoint-type&gt;</strong></samp></td>
+
+<td class="entry" valign="top" width="282pt"><p class="p">Specify the Breakpoint type. Type can be one
+of the following values:</p>
+<ul class="ul">
+<li class="li"><samp class="ph codeph">auto</samp>    = Auto - Breakpoint type is chosen by hw_server. This
+is the default type</li>
+<li class="li"><samp class="ph codeph">hw</samp>      = Hardware Breakpoint</li>
+<li class="li"><samp class="ph codeph">sw</samp>
+     = Software Breakpoint</li>
+</ul>
+
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b">-mode &lt;breakpoint-mode&gt;</strong></samp></td>
+
+<td class="entry" valign="top" width="282pt"><p class="p"> Specify the access mode that will trigger the
+breakpoint. The mode can be a bitwise OR one of the following values:</p>
+<ul class="ul">
+<li class="li"><samp class="ph codeph">0x1</samp>     = Triggered by a read from the breakpoint location.</li>
+<li class="li"><samp class="ph codeph">0x2</samp>
+    = Triggered by a write to the breakpoint location.</li>
+<li class="li"><samp class="ph codeph">0x4</samp>
+    = Triggered by an instruction execution at the breakpoint location.
+This is the default for Line and Address breakpoints.</li>
+<li class="li"><samp class="ph codeph">0x8</samp>
+    = Triggered by a data change (not an explicit write) at the breakpoint
+location.</li>
+</ul>
+
+</td>
+
+</tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b">-enable &lt;mode&gt;</strong></samp></td>
+
+                        <td class="entry" valign="top" width="282pt">
+                            <p class="p" id="sdk_u_xsd_xsdb_breakpoints__p_xkk_h3x_gt">Specify initial enablement state of breakpoint. When &lt;mode&gt;  is 0 the breakpoint is disabled, otherwise the breakpoint is enabled. The default is enabled.</p>
+
+                        </td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" width="141pt">
+                            <p class="p" id="sdk_u_xsd_xsdb_breakpoints__p_dkw_l3x_gt"><samp class="ph codeph"><strong class="ph b">-ct-input &lt;list&gt;</strong></samp></p>
+
+                            <p class="p" id="sdk_u_xsd_xsdb_breakpoints__p_dvm_m3x_gt"><samp class="ph codeph"><strong class="ph b">-ct-output &lt;list&gt;</strong></samp></p>
+
+                        </td>
+
+                        <td class="entry" valign="top" width="282pt">
+                            <p class="p" id="sdk_u_xsd_xsdb_breakpoints__p_xgk_t3x_gt">Specify input and output cross triggers. &lt;list&gt; is a list of numbers identifying the cross trigger pin. For Zynq 0-7 is CTI for core 0, 8-15 is CTI for core 1, 16-23 is CTI ETB and TPIU, and 24-31 is CTI for FTM.</p>
+
+                        </td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b">-properties &lt;dict&gt;</strong></samp></td>
+
+                        <td class="entry" valign="top" width="282pt">
+                            <p class="p" id="sdk_u_xsd_xsdb_breakpoints__p_k1d_cjx_gt">Specify advanced breakpoint properties.</p>
+
+                        </td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b">-meta-data &lt;dict&gt;</strong></samp></td>
+
+                        <td class="entry" valign="top" width="282pt">
+                            <p class="p" id="sdk_u_xsd_xsdb_breakpoints__p_ddk_fjx_gt"> Specify meta-data of advances breakpoint properties.</p>
+
+                        </td>
+
+                    </tr>
+
+<tr class="row">
+<td class="entry" rowspan="4" valign="top" width="79pt">
+                            <p class="p"><strong class="ph b">Examples</strong></p>
+
+                        </td>
+
+<td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b">bpadd -addr 0x100000</strong></samp></td>
+
+<td class="entry" valign="top" width="282pt"><p class="p">Set a Breakpoint at address <samp class="ph codeph">0x100000</samp>.
+Breakpoint type is chosen by <strong class="ph b">hw_server</strong></p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b">bpadd -file test.c -line 23 -type hw</strong></samp></td>
+
+<td class="entry" valign="top" width="282pt"><p class="p">Set a Hardware Breakpoint at <strong class="ph b">test.c:23</strong></p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="141pt"><p class="p"><samp class="ph codeph">bpadd -addr &amp;fooVar -type hw -mode 0x3</samp></p>
+</td>
+
+<td class="entry" valign="top" width="282pt"><p class="p">Set a Read_Write Watchpoint on variable <strong class="ph b">fooVar</strong></p>
+</td>
+
+</tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" width="141pt">
+                            <p class="p" id="sdk_u_xsd_xsdb_breakpoints__p_sgl_gkx_gt"><samp class="ph codeph"> bpadd -ct-input 0 -ct-output 8</samp></p>
+
+                        </td>
+
+                        <td class="entry" valign="top" width="282pt">
+                            <p class="p" id="sdk_u_xsd_xsdb_breakpoints__p_rpv_hkx_gt">Set a cross trigger to stop Zynq core 1 when core 0 stops.</p>
+
+                        </td>
+
+                    </tr>
+
+</tbody>
+
+</table>
+</div>
+
+</div>
+
+<div class="related-links"><div class="relinfo"><strong>Related information</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/reference_bpremove.html" title="bpremove">bpremove</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/reference_bpenable.html" title="bpenable">bpenable</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/reference_bpdisable.html" title="bpdisable">bpdisable</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/reference_bplist.html" title="bplist">bplist</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

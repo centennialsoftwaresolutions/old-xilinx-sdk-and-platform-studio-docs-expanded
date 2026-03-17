@@ -1,0 +1,45 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="To profile a software application, you must ensure that interrupts are raised periodically to sample the program counter (PC) value. To do this, you must program a timer and use the timer interrupt ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="concept"></meta><meta name="DC.Title" content="Setting Up the Hardware for Profiling"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_run_profiler.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_settingupswforprofiling.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_settinguptheboardsupportpackage.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_settingupthesoftwareapplication.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_creatingaprofilerunconfiguration.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_launchingprofilingview.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="br332295"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Setting Up the Hardware for Profiling</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="br332295">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+
+<h1 class="title topictitle1">Setting Up the Hardware for Profiling</h1>
+
+<div class="body conbody">
+<p class="p">To profile a software application, you must ensure that interrupts are
+raised periodically to sample the program counter (PC) value. To do this,
+you must program a timer and use the timer interrupt handler to collect
+and store the PC. The profile interrupt handler requires full access
+to the timer, so a separate timer that is not used by the application
+itself must be available in the system.</p>
+
+<p class="p">Xilinx® profiling libraries that provide the profile interrupt handler
+support the axi_timer core.</p>
+
+<p class="p">When profiling on Zynq®-7000 AP SoC processors, the internal SCU
+timer should be used.</p>
+
+</div>
+
+<div class="related-links"><div class="relinfo relconcepts"><strong>Related concepts</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_settingupswforprofiling.html" title="Setting Up the Software for Profiling">Setting Up the Software for Profiling</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_launchingprofilingview.html" title="Viewing the Profiling Results">Viewing the Profiling Results</a></div>
+</div>
+<div class="relinfo reltasks"><strong>Related tasks</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_run_profiler.html" title="Specifying Profiler Configuration">Specifying Profiler Configuration</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/task_settinguptheboardsupportpackage.html" title="Setting up the Board Support Package">Setting up the Board Support Package</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/task_settingupthesoftwareapplication.html" title="Setting Up the Software Application">Setting Up the Software Application</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/task_creatingaprofilerunconfiguration.html" title="Creating a Profile Run Configuration">Creating a Profile Run Configuration</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>
