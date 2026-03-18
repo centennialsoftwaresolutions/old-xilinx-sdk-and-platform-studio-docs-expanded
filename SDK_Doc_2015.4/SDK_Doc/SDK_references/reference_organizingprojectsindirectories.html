@@ -1,0 +1,43 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="SDK projects can be created either inside a workspace, or in any other folder on the hard disk. Due to the various inter dependencies (application projects depend on BSPs and hardware projects, and ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Organizing Projects in Directories"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="organizingprojectsindirectories"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Organizing Projects in Directories</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="organizingprojectsindirectories">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+
+<h1 class="title topictitle1">Organizing Projects in Directories</h1>
+
+<div class="body">
+<p class="p">SDK projects can be created either inside a workspace, or in any other
+folder on the hard disk. Due to the various inter dependencies (application
+projects depend on BSPs and hardware projects, and BSPs depend on the
+hardware projects), SDK generated tool invocations have to point to files
+in their dependent projects. To make builds reproducible, it is highly
+advantageous if there are no absolute paths used in any SDK saved settings.</p>
+
+<p class="p">In order to get SDK to use relative paths, put all the dependent projects
+in a single folder. As long as the hardware, BSP and application projects
+are in the same folder, all the SDK generated command line invocations
+of various tools will use relative paths.</p>
+
+<p class="p">If software repositories are used to store drivers and libraries that
+are processed by SDK, then these repositories should also be placed in
+the same folder as the BSP project (which is the same folder as the application
+and hardware projects). If such a directory structure is maintained,
+SDK uses a relative path to access these software repositories.</p>
+
+<p class="p">The use of Eclipse variables (like ${WORKSPACE}), can lead to the
+use of absolute paths. So the use of such variables should be considered
+on a case by case basis.</p>
+
+</div>
+
+<div class="navfooter"><!----></div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Description You can use this command to create a Board Support Package (BSP) project. Make sure that you set the workspace before using this command. Specify the hardware platform project available in ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="sdk create_bsp_project"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="sdk_u_batch_mode_commands"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>sdk create_bsp_project</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="sdk_u_batch_mode_commands">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+<h1 class="title topictitle1">sdk create_bsp_project</h1>
+
+<div class="body">
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="sdk_u_batch_mode_commands__dq9841335" class="table" frame="border" border="1" rules="all">
+
+
+
+<tbody class="tbody">
+<tr class="row">
+<td class="entry" valign="top" width="79pt"><p class="p"><strong class="ph b">Description</strong></p>
+</td>
+
+<td class="entry" colspan="2" valign="top"><p class="p">You can use this command to create a Board Support Package (BSP) project. </p>
+<p class="p">Make sure that you set the workspace before using this command. Specify the hardware platform
+                                project available in the workspace.</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="79pt"><p class="p"><strong class="ph b">Usage</strong></p>
+</td>
+
+<td class="entry" valign="top" width="260pt"><samp class="ph codeph"><strong class="ph b">sdk create_bsp_project [options]</strong></samp></td>
+
+<td class="entry" valign="top" width="159pt"><p class="p">Create a BSP project.</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" rowspan="5" valign="top" width="79pt"><p class="p"><strong class="ph b">Options</strong></p>
+</td>
+
+<td class="entry" valign="top" width="260pt"><samp class="ph codeph"><strong class="ph b">-name &lt;project-name&gt;</strong></samp></td>
+
+<td class="entry" valign="top" width="159pt"><p class="p">Project name that should be created.</p>
+</td>
+
+</tr>
+
+    <tr class="row">
+        <td class="entry" valign="top" width="260pt"><samp class="ph codeph"><strong class="ph b">-proc &lt;processor-name&gt;</strong></samp></td>
+
+        <td class="entry" valign="top" width="159pt"><p class="p">Processor instance that should be used for extracting the BSP project.</p>
+
+        </td>
+
+    </tr>
+    
+<tr class="row">
+<td class="entry" valign="top" width="260pt"><samp class="ph codeph"><strong class="ph b">-hwproject &lt;hw project name&gt;</strong></samp></td>
+
+<td class="entry" valign="top" width="159pt"><p class="p">HW project for which the application or bsp
+project should be created.</p>
+<p class="p">This option is valid only for creating
+application/bsp projects.</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="260pt"><samp class="ph codeph"><strong class="ph b">-os &lt;OS name&gt;</strong></samp></td>
+
+<td class="entry" valign="top" width="159pt"><p class="p">OS type for the application project.</p>
+<p class="p">Default
+type is <samp class="ph codeph">standalone</samp>.</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="260pt"><samp class="ph codeph"><strong class="ph b">-mss &lt;MSS File Path&gt;</strong></samp></td>
+
+<td class="entry" valign="top" width="159pt"><p class="p">MSS file path for creating a BSP file. </p>
+ <p class="p">This option can be used for creating a BSP from user mss
+    file. </p>
+
+                                <div class="note note"><span class="notetitle">Note:</span> When .mss file is specified, the <samp class="ph codeph">-processor</samp>
+                                and the <samp class="ph codeph">-os</samp> options are ignored. The processor/os
+                                    details are extracted from the .mss file. </div>
+</td>
+
+</tr>
+
+
+</tbody>
+
+</table>
+</div>
+
+</div>
+
+<div class="navfooter"><!----></div>
+</body>
+</html>

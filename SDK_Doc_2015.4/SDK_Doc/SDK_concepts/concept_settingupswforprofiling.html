@@ -1,0 +1,43 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="There are three important steps involved in setting up the software application for profiling: Enable profiling in the Software Platform to include profiling libraries. Note: Profiling is supported ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="concept"></meta><meta name="DC.Title" content="Setting Up the Software for Profiling"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="br332304"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Setting Up the Software for Profiling</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="br332304">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+ 
+ <h1 class="title topictitle1">Setting Up the Software for Profiling</h1>
+
+ <div class="body conbody">
+  <p class="p">There are three important steps involved in setting up the software
+   application for profiling:</p>
+
+  <ol class="ol">
+   <li class="li">Enable profiling in the Software Platform to include profiling libraries. 
+    <div class="note note"><span class="notetitle">Note:</span> Profiling is supported only for standalone software platforms.</div>
+</li>
+
+   
+   <li class="li">Modify the software application code to enable interrupts. If the profile
+    timer is directly connected to the processor without an interrupt controller,
+    you must enable interrupts in the processor. If there is an interrupt
+    controller present in the system, then in addition to enabling interrupts
+    in the processor, the interrupt controller should also be enabled and
+    allowed to pass interrupts from the profile timer to the processor.</li>
+
+   <li class="li">Use an executable compiled for profiling (such as the <samp class="ph codeph">-pg</samp> compiler switch). You
+    should use the profile build configuration to build your application. Refer to <a class="xref" href="concept_sdk_build_configurations.html">Build Configurations</a> for more
+    information.</li>
+
+  </ol>
+
+ </div>
+
+<div class="navfooter"><!----></div>
+</body>
+</html>

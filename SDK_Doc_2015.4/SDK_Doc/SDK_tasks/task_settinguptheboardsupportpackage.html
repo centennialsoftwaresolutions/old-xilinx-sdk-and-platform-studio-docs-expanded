@@ -1,0 +1,34 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Select the Board Support Package (BSP) of the software application in the Project Explorer View, then right-click and select Board Support Package Settings (or select Xilinx Tools &gt; Board Support ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Setting up the Board Support Package"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="settinguptheboardsupportpackage"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Setting up the Board Support Package</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="settinguptheboardsupportpackage">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+
+<h1 class="title topictitle1">Setting up the Board Support Package</h1>
+
+<div class="body taskbody"><div class="section context">
+</div>
+<ol class="ol steps"><li class="li step"><span class="ph cmd">Select the Board Support Package (BSP) of the software application in
+the Project Explorer View, then right-click and select <strong class="ph b">Board Support
+Package Settings</strong> (or select <strong class="ph b">Xilinx Tools &gt; Board Support
+Package Settings</strong>).</span></li>
+<li class="li step"><span class="ph cmd">Click on the OS name, such as <strong class="ph b">standalone</strong>, to configure its parameters.</span></li>
+<li class="li step"><span class="ph cmd">Set the <strong class="ph b">enable_sw_intrusive_profiling</strong> field to <strong class="ph b">true</strong>
+and select the timer for use by the profile libraries.</span></li>
+<li class="li step"><span class="ph cmd">The BSP should be compiled with the <strong class="ph b">-pg compiler</strong> option.
+To perform this step, click on the drivers item and select the cpu driver.
+Add the <strong class="ph b">-pg flag</strong> to the <strong class="ph b">extra_compiler_flags</strong> option.</span></li>
+<li class="li step"><span class="ph cmd">Click <strong class="ph b">OK.</strong></span></li>
+</ol>
+
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>
