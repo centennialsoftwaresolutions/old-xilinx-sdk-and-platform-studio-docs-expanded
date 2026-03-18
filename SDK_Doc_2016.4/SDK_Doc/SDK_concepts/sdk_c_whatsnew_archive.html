@@ -1,0 +1,408 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="description" content="The following sections describe changes for earlier releases of Xilinx SDK. What's New in SDK 2016.3 General Support Shared library (Linux only) and Static library creation. Ability to create new, ..." /><meta name="copyright" content="(C) Copyright 2016" /><meta name="DC.rights.owner" content="(C) Copyright 2016" /><meta name="DC.Type" content="concept" /><meta name="DC.Title" content="What’s New in Xilinx SDK (Earlier Releases)" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.tutorial" /><meta name="dictionary_reference" content="com.ibm.eou.tmtool.domainDictionary.core" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.cshelp" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.messaging" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.taxonomyContributions" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.troubleshooting" /><meta name="vis_node" content="com.ibm.ut.ditamap.domainDictionary.dita.concept" /><meta name="vis_labels" content="com.ibm.eou.tmtool.domainAttribute.core.name" /><meta name="vis_zoom" content="2" /><meta name="vis_view" content="com.ibm.eou.tmtool.representation.outline" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="sdk_c_whatsnew_archive" /><meta name="DC.Language" content="en" /><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>What’s New in Xilinx SDK (Earlier Releases)</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css" /><script type="text/javascript"><!--
+            
+            var prefix = "../index.html";
+            
+            --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="sdk_c_whatsnew_archive">
+<header role="banner"><table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td style="width:75%;"><span class="topic_breadcrumb_links"></span></td><td><span id="topic_navigation_links" class="navheader"></span></td></tr></tbody></table></header><main role="main"><article role="article" aria-labelledby="sdk_c_whatsnew_archive__ci294539">
+
+        <h1 class="title topictitle1" id="sdk_c_whatsnew_archive__ci294539">What’s New in Xilinx SDK (Earlier Releases)</h1>
+
+        <div class="body conbody">
+                <p class="p">The following sections describe changes for earlier releases of Xilinx SDK.</p>
+
+                
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><colgroup><col style="width:50%" /><col style="width:50%" /></colgroup><tbody class="tbody">
+                                  
+                                  <tr>
+                                    <td class="entry cellrowborder" colspan="2"><strong class="ph b">What's New in SDK
+                                      2016.3</strong></td>
+
+                                  </tr>
+                                  
+                                  
+                                  <tr>
+                                    <td class="entry cellrowborder">General</td>
+
+                                    <td class="entry cellrowborder">
+                                      <ul class="ul" id="sdk_c_whatsnew_archive__ul_ldg_zb1_gr">
+                                        <li class="li">Support Shared library (Linux only) and Static library creation.</li>
+
+                                        <li class="li">Ability to create new, edit or remove existing cross trigger breakpoints.</li>
+
+                                        <li class="li">All new Xilinx® Software Command-Line (XSCT) console. No references to
+                                          XMD.</li>
+
+                                        <li class="li">Ability to drag-and-drop hardware design file (HDF/XML) to generate hardware
+                                          platform.</li>
+
+                                        <li class="li">Support standalone application debug using System Debugger on QEMU.</li>
+
+                                        <li class="li">Ability to interact with the program running on QEMU using the QEMU
+                                          console.</li>
+
+                                        <li class="li">Support source-level debug in XSDB.</li>
+
+                                        <li class="li">Availability of Open CV libraries ARM® v7 and ARM v8.</li>
+
+                                        <li class="li">Support security configuration exported from PCW.</li>
+
+                                        <li class="li">Added support for ARMCC as a useable third party compiler.</li>
+
+                                        <li class="li">Availability of ZCU102 1.0 silicon version based hardware design file (HDF) as
+                                          a part of Xilinx SDK templates.</li>
+
+                                      </ul>
+
+                                    </td>
+
+                                  </tr>
+
+                                  <tr>
+                                    <td class="entry cellrowborder">Performance Analysis</td>
+
+                                    <td class="entry cellrowborder">
+                                      <ul class="ul" id="sdk_c_whatsnew_archive__ul_e1j_1c1_gr">
+                                        <li class="li">Support non-intrusive (hardware-based) profiling for MicroBlaze™
+                                          processors.</li>
+
+                                        <li class="li">Ability to collect and view FreeRTOS trace events.</li>
+
+                                      </ul>
+
+                                    </td>
+
+                                  </tr>
+
+                                  <tr>
+                                    <td class="entry cellrowborder">Tool Chain</td>
+
+                                    <td class="entry cellrowborder">
+                                      <ul class="ul" id="sdk_c_whatsnew_archive__ul_zwt_cc1_gr">
+                                        <li class="li">Upgraded GCC toolchain version to 5.2.</li>
+
+                                      </ul>
+
+                                    </td>
+
+                                  </tr>
+                                
+                                  
+                                        <tr>
+                                                <td class="entry cellrowborder" colspan="2"><strong class="ph b">What's New in SDK
+                2016.2</strong></td>
+
+                                        </tr>
+
+                                  
+          <tr>
+            <td class="entry cellrowborder">
+              <p class="p">General</p>
+
+            </td>
+
+            <td class="entry cellrowborder">
+              <p class="p">The following updates were made in SDK 2016.2:</p>
+
+              <ul class="ul">
+                <li class="li">This release is focused on quality.  A number of quality related issues were
+                  addressed in this release.</li>
+
+              </ul>
+
+            </td>
+
+          </tr>
+
+          <tr>
+            <td class="entry cellrowborder" colspan="2"><strong class="ph b">What's New in SDK 2016.1</strong></td>
+
+          </tr>
+
+                                        <tr>
+                                                <td class="entry cellrowborder">
+                                                        General
+                                                </td>
+
+                                                <td class="entry cellrowborder">
+                                                        <ul class="ul" id="sdk_c_whatsnew_archive__ul_agh_syx_st">
+                                                                <li class="li">Linux OS Aware Debug <ul class="ul">
+                                                                        <li class="li">Processes on Linux Kernel</li>
+
+                                                                        <li class="li">Threads in each process</li>
+
+                                                                        <li class="li">Call stack for each thread</li>
+
+                                                                </ul>
+</li>
+
+                                                                <li class="li">Zynq®
+                                                                        UltraScale+™ MPSoC Support Enhancements <ul class="ul">
+                                                                                <li class="li">Linux application debugging using TCF agent for A53</li>
+
+                                                                                <li class="li">GUI support for Bootgen</li>
+
+                                                                                <li class="li">Cross Triggering support through XSDB</li>
+
+                                                                                <li class="li">SPM design for PS – PL interface performance and A53 performance</li>
+
+                                                                                <li class="li">Flash Support</li>
+
+                                                                        </ul>
+</li>
+
+                                                                <li class="li"> XSCT Enhancements <ul class="ul">
+                                                                        <li class="li">No group name prefix for SDK/XSDB commands</li>
+
+                                                                        <li class="li">No need of mixing hsi and XSCT command for complete flow</li>
+
+                                                                        <li class="li">PetaLinux commands over XSCT shell</li>
+
+                                                                        <li class="li">Compiler options settings from XSCT</li>
+
+                                                                </ul>
+</li>
+
+                                                                <li class="li"> XSDB Enhancements <ul class="ul">
+                                                                        <li class="li">Source level debugging</li>
+
+                                                                        <li class="li">gprof support</li>
+
+                                                                </ul>
+</li>
+
+                                                                <li class="li"> Compiler Tool chain <ul class="ul">
+                                                                        <li class="li">Hard float support for A9 compiler</li>
+
+                                                                        <li class="li">Linaro Compiler for A9, A53 and R5 version 4.9.x</li>
+
+                                                                        <li class="li">MB compiler upgraded to 5.2 version</li>
+
+                                                                        <li class="li">Default toolchain for A9 is Linaro</li>
+
+                                                                </ul>
+</li>
+
+                                                                <li class="li">XMD is deprecated. </li>
+
+                                                                <li class="li">Ease of use enhancements and bug fixes</li>
+
+                                                        </ul>
+
+                                                </td>
+
+                                        </tr>
+
+                                        <tr>
+                                                <td class="entry cellrowborder" colspan="2"><strong class="ph b">What's New in SDK 2015.4</strong></td>
+
+                                        </tr>
+
+                                        <tr>
+                                                <td class="entry cellrowborder">
+                                                        General
+                                                </td>
+
+                                                <td class="entry cellrowborder">
+                                                        <ul class="ul" id="sdk_c_whatsnew_archive__ul_agh_syx_st20154">
+                                                                <li class="li">This release is focused on quality. A number of quality related issues were addressed in this release.</li>
+
+                                                                <li class="li">Added support for filtering application templates based on the processor and OS</li>
+
+                                                                <li class="li">Added new commands in XSCT (<code class="ph codeph">get_projects</code>, <code class="ph codeph">delete_projects</code>, <code class="ph codeph">set_build_config</code>, and <code class="ph codeph">get_build_config</code>).</li>
+
+                                                                <li class="li">Updated XSCT command, <code class="ph codeph">import_sources</code>, to allow for inclusion of the linker script in the import</li>
+
+                                                                <li class="li">Added new option to xsdb <code class="ph codeph">memmap</code> command to relocate the address map of the program sections for self-relocating code.</li>
+
+                                                                <li class="li"> Delivered new BETA hardware template for Zynq®
+                                                                        UltraScale+™ MPSoC ZCU102 development board.</li>
+
+                                                        </ul>
+
+                                                </td>
+
+                                        </tr>
+
+                                        <tr>
+                                                <td class="entry cellrowborder" colspan="2"><strong class="ph b">What's New in SDK 2015.3</strong></td>
+
+                                        </tr>
+
+                                        <tr>
+                                                <td class="entry cellrowborder">Installer</td>
+
+                                                <td class="entry cellrowborder">Xilinx® SDK now supports standalone installation of the following:<ul class="ul" id="sdk_c_whatsnew_archive__ul_wcj_nc2_ht">
+                                                                <li class="li">Xilinx Software Development Kit (XSDK) - An Eclipse-based integrated development environment (IDE) for creating, debugging, optimizing, and downloading software applications for Xilinx processors. </li>
+
+                                                                <li class="li">Xilinx Software Command-Line Tool (XSCT) -An unified scriptable interface for creating, building, and debugging software applications, creating bootable images, programming FPGA and writing flash devices.</li>
+
+                                                        </ul>
+<p class="p" id="sdk_c_whatsnew_archive__p_gv1_2d2_ht">In both the installation modes, you can deselect the ARM®
+                                                                Cortex™-A53 and ARM®
+                                                                Cortex™ R5 compilers.</p>
+</td>
+
+                                        </tr>
+
+                                        <tr>
+                                                <td class="entry cellrowborder">General</td>
+
+                                                <td class="entry cellrowborder">
+                                                        <ul class="ul" id="sdk_c_whatsnew_archive__ul_npj_122_ht">
+                                                                <li class="li">Support for MultiBD designs from Vivado</li>
+
+                                                                <li class="li">Source Control support in SDK : Git plug-in integration</li>
+
+                                                                <li class="li">TCF agent for MicroBlaze allowing Linux application debug using System Debugger</li>
+
+                                                                <li class="li">Soft IP register view in debugging view<ul class="ul" id="sdk_c_whatsnew_archive__ul_opj_122_ht">
+                                                                                <li class="li">GPIO, CAN and I2C</li>
+
+                                                                        </ul>
+</li>
+
+                                                                <li class="li">Improved performance views using the Trace Compass Framework<ul class="ul" id="sdk_c_whatsnew_archive__ul_ppj_122_ht">
+                                                                                <li class="li">More configurable control (interface name display, session configuration)</li>
+
+                                                                                <li class="li">Tool tips</li>
+
+                                                                                <li class="li">Selectable graph display</li>
+
+                                                                        </ul>
+</li>
+
+                                                                <li class="li">Offline Trace Support</li>
+
+                                                                <li class="li">SDK New Terminal</li>
+
+                                                        </ul>
+
+                                                </td>
+
+                                        </tr>
+
+                                        <tr>
+                                                <td class="entry cellrowborder">Help</td>
+
+                                                <td class="entry cellrowborder">
+                                                        <ul class="ul" id="sdk_c_whatsnew_archive__ul_vfg_d22_ht">
+                                                                <li class="li">Quick access to OS and library documentation</li>
+
+                                                                <li class="li">Improved SDK driver API documentation</li>
+
+                                                                <li class="li">Content reorganization</li>
+
+                                                        </ul>
+
+                                                </td>
+
+                                        </tr>
+
+
+
+                                        <tr>
+                                                <td class="entry cellrowborder" colspan="2"><strong class="ph b">What's New in SDK 2015.2</strong></td>
+
+                                        </tr>
+
+                                        <tr>
+                                                <td class="entry cellrowborder"><p class="p">General</p>
+</td>
+
+                                                <td class="entry cellrowborder"><p class="p">The following updates were made in SDK 2015.2:</p>
+<ul class="ul">
+                                                                <li class="li">This release is focused on quality. A number of bugs were fixed in this release.</li>
+
+                                                        </ul>
+
+                                                </td>
+
+                                        </tr>
+
+                                        <tr>
+                                                <td class="entry cellrowborder" colspan="2"><strong class="ph b">What's New in SDK 2015.1</strong></td>
+
+                                        </tr>
+
+                                        <tr>
+                                                <td class="entry cellrowborder">General</td>
+
+                                                <td class="entry cellrowborder">
+                                                        <ul class="ul" id="sdk_c_whatsnew_archive__ul_ldg_zb1_gr">
+                                                                <li class="li">Improved Help homepage for usability and branding standards.</li>
+
+                                                                <li class="li">All new Xilinx® Software Command-Line tool. No references to XSDB/HSI/SDK
+     batchmode.</li>
+
+                                                                <li class="li">Ability to select the cable-type and device, from various available multiple cable-types
+     and devices, connected to the host. </li>
+
+                                                                <li class="li">Support RSA keys authentication key generation from bootgen command-line.</li>
+
+                                                        </ul>
+
+                                                </td>
+
+                                        </tr>
+
+                                        <tr>
+                                                <td class="entry cellrowborder">Performance Analysis</td>
+
+                                                <td class="entry cellrowborder">
+                                                        <ul class="ul">
+                                                                <li class="li">Support extended for multiple APM.</li>
+
+                                                                <li class="li">Supports GP ports and internal IP ports in Zynq® designs.</li>
+
+                                                                <li class="li">Added System Performance Modeling reference designs for ZC706 template.</li>
+
+                                                        </ul>
+
+                                                </td>
+
+                                        </tr>
+
+                                        <tr>
+                                                <td class="entry cellrowborder">Tool Chain</td>
+
+                                                <td class="entry cellrowborder">
+                                                        <ul class="ul">
+                                                                <li class="li">Upgraded GCC toolchain version to 4.9.2 for MicroBlaze™.</li>
+
+                                                                <li class="li">Upgraded ARM® Cortex™-A9 GCC version to 4.9.1.</li>
+
+                                                        </ul>
+
+                                                </td>
+
+                                        </tr>
+
+                                        <tr>
+                                                <td class="entry cellrowborder">Flash Program</td>
+
+                                                <td class="entry cellrowborder">
+                                                        <ul class="ul">
+                                                                <li class="li">Added support for SPI Flash Programming for Non-Zynq devices.</li>
+
+                                                                <li class="li">Added support for additional flash parts for both BPI and SPI Flash Memory.</li>
+
+                                                        </ul>
+
+                                                </td>
+
+                                        </tr>
+
+
+                                </tbody>
+</table>
+</div>
+
+        </div>
+
+</article></main><footer role="contentinfo"><div class="navfooter"><!----></div></footer></body>
+</html>

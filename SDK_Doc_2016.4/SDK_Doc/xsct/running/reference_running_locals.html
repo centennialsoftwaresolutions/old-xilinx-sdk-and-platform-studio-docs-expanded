@@ -1,0 +1,112 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="description" content="Get or set the value of a local variable Syntax locals [options] [variable-name [variable-value]] Get or set the value of a variable specified by &lt;variable-name&gt; . When variable name and value are not ..." /><meta name="copyright" content="(C) Copyright 2016" /><meta name="DC.rights.owner" content="(C) Copyright 2016" /><meta name="DC.Type" content="reference" /><meta name="DC.Title" content="locals" /><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_state.html" /><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_stop.html" /><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_con.html" /><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_stp.html" /><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_nxt.html" /><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_stpi.html" /><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_nxti.html" /><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_stpout.html" /><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_dis.html" /><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_print.html" /><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_backtrace.html" /><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_profile.html" /><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_mbprofile.html" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.tutorial" /><meta name="dictionary_reference" content="com.ibm.eou.tmtool.domainDictionary.core" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.cshelp" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.messaging" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.taxonomyContributions" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.troubleshooting" /><meta name="vis_node" content="com.ibm.ut.ditamap.domainDictionary.dita.concept" /><meta name="vis_labels" content="com.ibm.eou.tmtool.domainAttribute.core.name" /><meta name="vis_zoom" content="2" /><meta name="vis_view" content="com.ibm.eou.tmtool.representation.outline" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="xsct_running_locals" /><meta name="DC.Language" content="en" /><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>locals</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/skins/skin.css" /><script type="text/javascript"><!--
+            
+            var prefix = "../../index.html";
+            
+            --></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="xsct_running_locals">
+<header role="banner"><table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td style="width:75%;"><span class="topic_breadcrumb_links"></span></td><td><span id="topic_navigation_links" class="navheader"></span></td></tr></tbody></table></header><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+	<h1 class="title topictitle1" id="ariaid-title1">locals</h1>
+
+	<div class="body refbody">
+<section class="section"> <p class="p">Get or set the value of a local variable</p>
+ </section>
+
+<section class="section command"><h2 class="title sectiontitle">Syntax</h2> 
+			<p class="p"><span class="ph synph"><span class="keyword option">locals</span> <span class="keyword kwd">[options] [variable-name [variable-value]]</span></span></p>
+
+			<p class="p">Get or set the value of a variable specified by <code class="ph codeph">&lt;variable-name&gt;</code>. When variable name and value are not specified, values of all the local variables are returned. Elements of a complex data types like a structure can be accessed through '.' operator. For example, var1.int_type refers to int_type element in var1 struct. Array elements can be accessed through their indices. For example, array1[0] refers to the element at index 0 in array1. </p>
+
+		</section>
+
+<section class="section command"><h2 class="title sectiontitle">Options</h2>  
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><colgroup><col /><col /></colgroup><thead class="thead" style="text-align:left;">
+					<tr>
+						 <th class="entry cellrowborder" id="d66581e64">Option                      </th>
+
+						<th class="entry cellrowborder" id="d66581e67">Description</th>
+
+					</tr>
+
+				</thead>
+<tbody class="tbody">
+					<tr>
+						<td class="entry cellrowborder" headers="d66581e64 "><span class="keyword cmdname">-defs</span></td>
+
+						<td class="entry cellrowborder" headers="d66581e67 ">Return the variable definitions like address, type, size and RW flags. </td>
+
+					</tr>
+
+					<tr>
+						<td class="entry cellrowborder" headers="d66581e64 "><span class="keyword cmdname">-dict [expression]</span></td>
+
+						<td class="entry cellrowborder" headers="d66581e67 ">Return the result in Tcl dict format, with variable names as dict keys and variable values as dict values. For complex data like structures, names are in the form of parent.child </td>
+
+					</tr>
+
+				</tbody>
+</table>
+</div>
+ </section>
+
+<section class="section command"><h2 class="title sectiontitle">Returns</h2> 
+			<p class="p">The return value depends on the options used. </p>
+
+			<p class="p"><code class="ph codeph">&lt;none&gt;</code>: Variable value(s) </p>
+
+			<p class="p"><code class="ph codeph">-defs</code>: Variable definition(s) </p>
+
+			<p class="p">Nothing, when variable value is set. Error string, if variable value  can't be read or set. </p>
+
+		</section>
+
+<section class="section command"><h2 class="title sectiontitle">Example(s)</h2> 
+
+			<pre class="pre codeblock"><code>locals Int_Loc</code></pre>
+			<p class="p">Return the value of the local variable Int_Loc </p>
+
+
+			<pre class="pre codeblock"><code>locals</code></pre>
+			<p class="p">Return the values of all the local variables in the current stack frame </p>
+
+
+			<pre class="pre codeblock"><code>locals -defs</code></pre>
+			<p class="p">Return definitions of all the local variables in the current stack frame </p>
+
+
+			<pre class="pre codeblock"><code>locals Int_Loc 23</code></pre>
+			<p class="p">Set the value of the local variable Int_Loc to 23 </p>
+
+
+			<pre class="pre codeblock"><code>locals tmp_var.var1.int_type</code></pre>
+			<p class="p">Return the value of int_type element in var1 struct, where var1 is a member of tmp_var struct </p>
+
+
+			<pre class="pre codeblock"><code>locals tmp_var.var1.array1[0]</code></pre>
+			<p class="p">Return the value of the element at index 0 in array array1. array1 is a member of var1 struct, which is in turn a member of tmp_var struct </p>
+
+		</section>
+
+	</div>
+
+<nav role="navigation" class="related-links">
+<div class="linklist linklist relinfo relref"><strong>Related reference</strong><br />
+
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_state.html" title="state">state</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_stop.html" title="stop">stop</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_con.html" title="con">con</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_stp.html" title="stp">stp</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_nxt.html" title="nxt">nxt</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_stpi.html" title="stpi">stpi</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_nxti.html" title="nxti">nxti</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_stpout.html" title="stpout">stpout</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_dis.html" title="dis">dis</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_print.html" title="print">print</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_backtrace.html" title="backtrace">backtrace</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_profile.html" title="profile">profile</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_mbprofile.html" title="mbprofile">mbprofile</a></div></div>
+</nav></article></main><footer role="contentinfo"><div class="navfooter"><!----></div></footer></body>
+</html>

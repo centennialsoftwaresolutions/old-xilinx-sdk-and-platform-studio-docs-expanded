@@ -1,0 +1,151 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="description" content="Set a Breakpoint/Watchpoint Syntax bpadd &lt;options&gt; Set a SW/HW breakpoint at addr, function or file:line, or set a read/write watchpoint Options Option                       Description -addr ..." /><meta name="copyright" content="(C) Copyright 2016" /><meta name="DC.rights.owner" content="(C) Copyright 2016" /><meta name="DC.Type" content="reference" /><meta name="DC.Title" content="bpadd" /><meta name="DC.Relation" scheme="URI" content="../../xsct/breakpoints/reference_breakpoints_bpremove.html" /><meta name="DC.Relation" scheme="URI" content="../../xsct/breakpoints/reference_breakpoints_bpenable.html" /><meta name="DC.Relation" scheme="URI" content="../../xsct/breakpoints/reference_breakpoints_bpdisable.html" /><meta name="DC.Relation" scheme="URI" content="../../xsct/breakpoints/reference_breakpoints_bplist.html" /><meta name="DC.Relation" scheme="URI" content="../../xsct/breakpoints/reference_breakpoints_bpstatus.html" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.tutorial" /><meta name="dictionary_reference" content="com.ibm.eou.tmtool.domainDictionary.core" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.cshelp" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.messaging" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.taxonomyContributions" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.troubleshooting" /><meta name="vis_node" content="com.ibm.ut.ditamap.domainDictionary.dita.concept" /><meta name="vis_labels" content="com.ibm.eou.tmtool.domainAttribute.core.name" /><meta name="vis_zoom" content="2" /><meta name="vis_view" content="com.ibm.eou.tmtool.representation.outline" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="xsct_breakpoints_bpadd" /><meta name="DC.Language" content="en" /><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>bpadd</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/skins/skin.css" /><script type="text/javascript"><!--
+            
+            var prefix = "../../index.html";
+            
+            --></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="xsct_breakpoints_bpadd">
+<header role="banner"><table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td style="width:75%;"><span class="topic_breadcrumb_links"></span></td><td><span id="topic_navigation_links" class="navheader"></span></td></tr></tbody></table></header><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+	<h1 class="title topictitle1" id="ariaid-title1">bpadd</h1>
+
+	<div class="body refbody">
+<section class="section"> <p class="p">Set a Breakpoint/Watchpoint</p>
+ </section>
+
+<section class="section command"><h2 class="title sectiontitle">Syntax</h2> 
+			<p class="p"><span class="ph synph"><span class="keyword option">bpadd</span> <span class="keyword kwd">&lt;options&gt;</span></span></p>
+
+			<p class="p">Set a SW/HW breakpoint at addr, function or file:line, or set a read/write watchpoint </p>
+
+		</section>
+
+<section class="section command"><h2 class="title sectiontitle">Options</h2>  
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><colgroup><col /><col /></colgroup><thead class="thead" style="text-align:left;">
+					<tr>
+						 <th class="entry cellrowborder" id="d49325e61">Option                      </th>
+
+						<th class="entry cellrowborder" id="d49325e64">Description</th>
+
+					</tr>
+
+				</thead>
+<tbody class="tbody">
+					<tr>
+						<td class="entry cellrowborder" headers="d49325e61 "><span class="keyword cmdname">-addr &lt;breakpoint-address&gt;</span></td>
+
+						<td class="entry cellrowborder" headers="d49325e64 ">Specify the address at which the Breakpoint should be set </td>
+
+					</tr>
+
+					<tr>
+						<td class="entry cellrowborder" headers="d49325e61 "><span class="keyword cmdname">-file &lt;file-name&gt;</span></td>
+
+						<td class="entry cellrowborder" headers="d49325e64 ">Specify the <code class="ph codeph">&lt;file-name&gt;</code> in which the Breakpoint should be set </td>
+
+					</tr>
+
+					<tr>
+						<td class="entry cellrowborder" headers="d49325e61 "><span class="keyword cmdname">-line &lt;line-number&gt;</span></td>
+
+						<td class="entry cellrowborder" headers="d49325e64 ">Specify the <code class="ph codeph">&lt;line-number&gt;</code> within the file, where Breakpoint should be set </td>
+
+					</tr>
+
+					<tr>
+						<td class="entry cellrowborder" headers="d49325e61 "><span class="keyword cmdname">-type &lt;breakpoint-type&gt;</span></td>
+
+						<td class="entry cellrowborder" headers="d49325e64 ">Specify the Breakpoint type <code class="ph codeph">&lt;breakpoint-type&gt;</code> can be one of the values below: auto = Auto - Breakpoint type is chosen by hw_server/TCF agent. This is the default type hw   = Hardware Breakpoint sw   = Software Breakpoint </td>
+
+					</tr>
+
+					<tr>
+						<td class="entry cellrowborder" headers="d49325e61 "><span class="keyword cmdname">-mode &lt;breakpoint-mode&gt;</span></td>
+
+						<td class="entry cellrowborder" headers="d49325e64 ">Specify the access mode that will trigger the breakpoint. <code class="ph codeph">&lt;breakpoint-mode&gt;</code> can be a bitwise OR of the values below: 0x1  = Triggered by a read from the breakpoint location 0x2  = Triggered by a write to the breakpoint location 0x4  = Triggered by an instruction execution at the breakpoint location This is the default for Line and Address breakpoints 0x8  = Triggered by a data change (not an explicit write) at the breakpoint location </td>
+
+					</tr>
+
+					<tr>
+						<td class="entry cellrowborder" headers="d49325e61 "><span class="keyword cmdname">-enable &lt;mode&gt;</span></td>
+
+						<td class="entry cellrowborder" headers="d49325e64 ">Specify initial enablement state of breakpoint.  When <code class="ph codeph">&lt;mode&gt;</code> is 0 the breakpoint is disabled, otherwise the breakpoint is enabled.  The default is enabled. </td>
+
+					</tr>
+
+					<tr>
+						<td class="entry cellrowborder" headers="d49325e61 "><span class="keyword cmdname">-ct-input &lt;list&gt; -ct-output &lt;list&gt;</span></td>
+
+						<td class="entry cellrowborder" headers="d49325e64 ">Specify input and output cross triggers.  <code class="ph codeph">&lt;list&gt;</code> is a list of numbers identifying the cross trigger pin.  For Zynq 0-7 is CTI for core 0, 8-15 is CTI for core 1, 16-23 is CTI ETB and TPIU, and 24-31 is CTI for FTM. </td>
+
+					</tr>
+
+					<tr>
+						<td class="entry cellrowborder" headers="d49325e61 "><span class="keyword cmdname">-properties &lt;dict&gt;</span></td>
+
+						<td class="entry cellrowborder" headers="d49325e64 ">Specify advances breakpoint properties. </td>
+
+					</tr>
+
+					<tr>
+						<td class="entry cellrowborder" headers="d49325e61 "><span class="keyword cmdname">-meta-data &lt;dict&gt;</span></td>
+
+						<td class="entry cellrowborder" headers="d49325e64 ">Specify meta-data of advances breakpoint properties. </td>
+
+					</tr>
+
+				</tbody>
+</table>
+</div>
+ </section>
+
+<section class="section command"><h2 class="title sectiontitle">Note(s)</h2> 
+			<ul class="ul">
+			<li class="li">Breakpoints can be set in XSDB before connecting to hw_server/TCF agent. If there is an active target when a Breakpoint is set, the Breakpoint will be enabled only for that active target. If there is no active target, the Breakpoint will be enabled for all the targets. </li>
+
+			</ul>
+
+		</section>
+
+<section class="section command"><h2 class="title sectiontitle">Returns</h2> 
+			<p class="p">Breakpoint id </p>
+
+		</section>
+
+<section class="section command"><h2 class="title sectiontitle">Example(s)</h2> 
+
+			<pre class="pre codeblock"><code>bpadd -addr 0x100000</code></pre>
+			<p class="p">Set a Breakpoint at address 0x100000 Breakpoint type is chosen by hw_server/TCF agent </p>
+
+
+			<pre class="pre codeblock"><code>bpadd -addr &amp;main</code></pre>
+			<p class="p">Set a function Breakpoint at main Breakpoint type is chosen by hw_server/TCF agent </p>
+
+
+			<pre class="pre codeblock"><code>bpadd -file test.c -line 23 -type hw</code></pre>
+			<p class="p">Set a Hardware Breakpoint at test.c:23 </p>
+
+
+			<pre class="pre codeblock"><code>bpadd -addr &amp;fooVar -type hw -mode 0x3</code></pre>
+			<p class="p">Set a Read_Write Watchpoint on variable fooVar </p>
+
+
+			<pre class="pre codeblock"><code>bpadd -ct-input 0 -ct-output 8</code></pre>
+			<p class="p">Set a cross trigger to stop Zynq core 1 when core 0 stops. </p>
+
+		</section>
+
+	</div>
+
+<nav role="navigation" class="related-links">
+<div class="linklist linklist relinfo relref"><strong>Related reference</strong><br />
+
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/breakpoints/reference_breakpoints_bpremove.html" title="bpremove">bpremove</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/breakpoints/reference_breakpoints_bpenable.html" title="bpenable">bpenable</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/breakpoints/reference_breakpoints_bpdisable.html" title="bpdisable">bpdisable</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/breakpoints/reference_breakpoints_bplist.html" title="bplist">bplist</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/breakpoints/reference_breakpoints_bpstatus.html" title="bpstatus">bpstatus</a></div></div>
+</nav></article></main><footer role="contentinfo"><div class="navfooter"><!----></div></footer></body>
+</html>

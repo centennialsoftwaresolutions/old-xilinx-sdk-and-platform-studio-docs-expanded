@@ -1,0 +1,155 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="description" content="Memory Read Syntax mrd [options] &lt;address&gt; [num] Read &lt;num&gt; words from the active target's memory address specified by &lt;address&gt; Options Option                       Description -force Overwrite ..." /><meta name="copyright" content="(C) Copyright 2016" /><meta name="DC.rights.owner" content="(C) Copyright 2016" /><meta name="DC.Type" content="reference" /><meta name="DC.Title" content="mrd" /><meta name="DC.Relation" scheme="URI" content="../../xsct/memory/reference_memory_mwr.html" /><meta name="DC.Relation" scheme="URI" content="../../xsct/memory/reference_memory_osa.html" /><meta name="DC.Relation" scheme="URI" content="../../xsct/memory/reference_memory_memmap.html" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.tutorial" /><meta name="dictionary_reference" content="com.ibm.eou.tmtool.domainDictionary.core" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.cshelp" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.messaging" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.taxonomyContributions" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.troubleshooting" /><meta name="vis_node" content="com.ibm.ut.ditamap.domainDictionary.dita.concept" /><meta name="vis_labels" content="com.ibm.eou.tmtool.domainAttribute.core.name" /><meta name="vis_zoom" content="2" /><meta name="vis_view" content="com.ibm.eou.tmtool.representation.outline" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="xsct_memory_mrd" /><meta name="DC.Language" content="en" /><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>mrd</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/skins/skin.css" /><script type="text/javascript"><!--
+            
+            var prefix = "../../index.html";
+            
+            --></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="xsct_memory_mrd">
+<header role="banner"><table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td style="width:75%;"><span class="topic_breadcrumb_links"></span></td><td><span id="topic_navigation_links" class="navheader"></span></td></tr></tbody></table></header><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+	<h1 class="title topictitle1" id="ariaid-title1">mrd</h1>
+
+	<div class="body refbody">
+<section class="section"> <p class="p">Memory Read</p>
+ </section>
+
+<section class="section command"><h2 class="title sectiontitle">Syntax</h2> 
+			<p class="p"><span class="ph synph"><span class="keyword option">mrd</span> <span class="keyword kwd">[options] &lt;address&gt; [num]</span></span></p>
+
+			<p class="p">Read <code class="ph codeph">&lt;num&gt;</code> words from the active target's memory address specified by <code class="ph codeph">&lt;address&gt;</code> </p>
+
+		</section>
+
+<section class="section command"><h2 class="title sectiontitle">Options</h2>  
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><colgroup><col /><col /></colgroup><thead class="thead" style="text-align:left;">
+					<tr>
+						 <th class="entry cellrowborder" id="d59537e67">Option                      </th>
+
+						<th class="entry cellrowborder" id="d59537e70">Description</th>
+
+					</tr>
+
+				</thead>
+<tbody class="tbody">
+					<tr>
+						<td class="entry cellrowborder" headers="d59537e67 "><span class="keyword cmdname">-force</span></td>
+
+						<td class="entry cellrowborder" headers="d59537e70 ">Overwrite access protection. By default accesses to reserved and invalid address ranges are blocked </td>
+
+					</tr>
+
+					<tr>
+						<td class="entry cellrowborder" headers="d59537e67 "><span class="keyword cmdname">-size &lt;access-size&gt;</span></td>
+
+						<td class="entry cellrowborder" headers="d59537e70 "><code class="ph codeph">&lt;access-size&gt;</code> can be one of the values below: b = Bytes accesses h = Half-word accesses w = Word accesses Default access size is w Address will be aligned to access-size before reading memory </td>
+
+					</tr>
+
+					<tr>
+						<td class="entry cellrowborder" headers="d59537e67 "><span class="keyword cmdname">-value</span></td>
+
+						<td class="entry cellrowborder" headers="d59537e70 ">Return a Tcl list of values, instead of displaying the result on console </td>
+
+					</tr>
+
+					<tr>
+						<td class="entry cellrowborder" headers="d59537e67 "><span class="keyword cmdname">-bin</span></td>
+
+						<td class="entry cellrowborder" headers="d59537e70 ">Return data read from the target in binary format </td>
+
+					</tr>
+
+					<tr>
+						<td class="entry cellrowborder" headers="d59537e67 "><span class="keyword cmdname">-file &lt;file-name&gt;</span></td>
+
+						<td class="entry cellrowborder" headers="d59537e70 ">Write binary data read from the target to <code class="ph codeph">&lt;file-name&gt;</code> </td>
+
+					</tr>
+
+					<tr>
+						<td class="entry cellrowborder" headers="d59537e67 "><span class="keyword cmdname">-address-space &lt;name&gt;</span></td>
+
+						<td class="entry cellrowborder" headers="d59537e70 ">Access specified memory space instead default memory space of current target. For ARM DAP targets, address spaces DPR, APR and AP<code class="ph codeph">&lt;n&gt;</code> can be used to access DP Registers, AP Registers and MEM-AP addresses, respectively.  For backwards compatibility -arm-dap and -arm-ap options can be used as shorthand for "-address-space APR" and "-address-space AP<code class="ph codeph">&lt;n&gt;</code>", respectively. The APR address range is 0x0 - 0xfffc, where the higher 8 bits select an AP and lower 8 bits are the register address for that AP </td>
+
+					</tr>
+
+					<tr>
+						<td class="entry cellrowborder" headers="d59537e67 "><span class="keyword cmdname">-unaligned-access</span></td>
+
+						<td class="entry cellrowborder" headers="d59537e70 ">Memory address is not aligned to access size, before performing a read operation. Support for unaligned accesses is target architecture dependent. If this option is not specified, addresses are automatically aligned to access size </td>
+
+					</tr>
+
+				</tbody>
+</table>
+</div>
+ </section>
+
+<section class="section command"><h2 class="title sectiontitle">Note(s)</h2> 
+			<ul class="ul">
+			<li class="li">Select a APU target to access ARM DAP and MEM-AP address space </li>
+
+			</ul>
+
+		</section>
+
+<section class="section command"><h2 class="title sectiontitle">Returns</h2> 
+			<p class="p">Memory addresses and data in requested format, if successful. Error string, if the target memory can't be read. </p>
+
+		</section>
+
+<section class="section command"><h2 class="title sectiontitle">Example(s)</h2> 
+
+			<pre class="pre codeblock"><code>mrd 0x0</code></pre>
+			<p class="p">Read a word at 0x0 </p>
+
+
+			<pre class="pre codeblock"><code>mrd 0x0 10</code></pre>
+			<p class="p">Read 10 words at 0x0 </p>
+
+
+			<pre class="pre codeblock"><code>mrd -value 0x0 10</code></pre>
+			<p class="p">Read 10 words at 0x0 and return a Tcl list of values </p>
+
+
+			<pre class="pre codeblock"><code>mrd -size b 0x1 3</code></pre>
+			<p class="p">Read 3 bytes at address 0x1 </p>
+
+
+			<pre class="pre codeblock"><code>mrd -size h 0x2 2</code></pre>
+			<p class="p">Read 2 half-words at address 0x2 </p>
+
+
+			<pre class="pre codeblock"><code>mrd -bin -file mem.bin 0 100</code></pre>
+			<p class="p">Read 100 words at address 0x0 and write the binary data to mem.bin </p>
+
+
+			<pre class="pre codeblock"><code>mrd -address-space APR 0x100</code></pre>
+			<p class="p">Read APB-AP CSW on Zynq The higher 8 bits (0x1) select the APB-AP and lower 8 bits (0x0) is the address of CSW </p>
+
+
+			<pre class="pre codeblock"><code>mrd -address-space APR 0x04</code></pre>
+			<p class="p">Read AHB-AP TAR on Zynq The higher 8 bits (0x0) select the AHB-AP and lower 8 bits (0x4) is the address of TAR </p>
+
+
+			<pre class="pre codeblock"><code>mrd -address-space AP1 0x80090088</code></pre>
+			<p class="p">Read address 0x80090088 on DAP APB-AP 0x80090088 corresponds to DBGDSCR register of Cortex-A9#0, on Zynq AP 1 selects the APB-AP </p>
+
+
+			<pre class="pre codeblock"><code>mrd -address-space AP0 0xe000d000</code></pre>
+			<p class="p">Read address 0xe000d000 on DAP AHB-AP 0xe000d000 corresponds to QSPI device on Zynq AP 0 selects the AHB-AP </p>
+
+		</section>
+
+	</div>
+
+<nav role="navigation" class="related-links">
+<div class="linklist linklist relinfo relref"><strong>Related reference</strong><br />
+
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/memory/reference_memory_mwr.html" title="mwr">mwr</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/memory/reference_memory_osa.html" title="osa">osa</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/memory/reference_memory_memmap.html" title="memmap">memmap</a></div></div>
+</nav></article></main><footer role="contentinfo"><div class="navfooter"><!----></div></footer></body>
+</html>

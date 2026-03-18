@@ -1,0 +1,97 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="description" content="To create a new Zynq®-7000 AP SoC FSBL application in SDK, do the following: Click File &gt; New &gt; Application Project. The New Application Project dialog box appears. In the Project Name field, type a ..." /><meta name="copyright" content="(C) Copyright 2016" /><meta name="DC.rights.owner" content="(C) Copyright 2016" /><meta name="DC.Type" content="task" /><meta name="DC.Title" content="Creating a New Zynq FSBL Application Project" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_openingthecreatezynqbootimagedialogbox.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_workingwithbootimagefiles.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_creatingabootimage.html" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.tutorial" /><meta name="dictionary_reference" content="com.ibm.eou.tmtool.domainDictionary.core" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.cshelp" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.messaging" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.taxonomyContributions" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.troubleshooting" /><meta name="vis_node" content="com.ibm.ut.ditamap.domainDictionary.dita.concept" /><meta name="vis_labels" content="com.ibm.eou.tmtool.domainAttribute.core.name" /><meta name="vis_zoom" content="2" /><meta name="vis_view" content="com.ibm.eou.tmtool.representation.outline" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="creatinganewzynqfsblapplicationproject" /><meta name="DC.Language" content="en" /><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Creating a New Zynq FSBL Application Project</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css" /><script type="text/javascript"><!--
+            
+            var prefix = "../index.html";
+            
+            --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="creatinganewzynqfsblapplicationproject">
+<header role="banner"><table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td style="width:75%;"><span class="topic_breadcrumb_links"></span></td><td><span id="topic_navigation_links" class="navheader"></span></td></tr></tbody></table></header><main role="main"><article role="article" aria-labelledby="creatinganewzynqfsblapplicationproject__fp332410">
+
+<h1 class="title topictitle1" id="creatinganewzynqfsblapplicationproject__fp332410">Creating a New Zynq FSBL Application Project</h1>
+
+<div class="body taskbody"><section class="section context">
+<p class="p">To create a new Zynq®-7000 AP SoC FSBL application in SDK, do the following:</p>
+
+</section>
+<ol class="ol steps"><li class="li step stepexpand">
+        <span class="ph cmd">Click <strong class="ph b">File &gt; New &gt; Application Project. </strong></span>
+        <div class="itemgroup info">
+          <p class="p">The New Application Project dialog box appears. </p>
+
+          <br /><img class="image" src="../images/sdk_t_project_creation_zynq_fsbl-1.png" height="638" width="523" /><br />
+        </div>
+      </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">In the <strong class="ph b">Project Name</strong> field, type a name for the new project.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select the location for the project. To use the default location as displayed
+                    in the <strong class="ph b">Location</strong> field, leave the <strong class="ph b">Use default location</strong> check box
+                    selected. Otherwise, click to unselect the check box, then type or browse to the
+                    directory location. </span>
+                <div class="itemgroup info">
+                    <p class="p">The <strong class="ph b">Hardware Platform</strong> drop-down list comes with pre-defined hardware
+                        platforms for ZC702 , ZC706 &amp; ZED hardware. You can use this to start
+                        your application on the fly, instead of going for any hardware design
+                        creation tools. These are specific to the PS-only part of Zynq-7000 AP SoC
+                        devices.</p>
+
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">From the <strong class="ph b">OS Platform</strong> drop-down list, select the target OS
+                    Platform.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select the options for the target hardware:</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select the appropriate target platform from the <strong class="ph b">Hardware Platform</strong>
+                    drop-down list.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select the <strong class="ph b">Create New</strong> option from the list to create a new hardware
+                    platform project.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">From the <strong class="ph b">Processor</strong> drop-down lists, select the appropriate target
+                    processor.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select the options for the target software:</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select the appropriate Language option. For this example, select
+                    <strong class="ph b">C/C++.</strong></span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select the <strong class="ph b">Create New</strong> option of <strong class="ph b">Board Support Project</strong> to create a
+                    new board support package project. <strong class="ph b">Note: </strong>Alternately, select <strong class="ph b">Use
+                        existing</strong> to select the existing Board Support Package projects.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">Next.</strong></span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">In the Templates dialog box, select the Zynq-7000 AP SoC FSBL template. <br /><img class="image" src="../images/sdk_t_project_creation_zynq_fsbl-2.png" height="448" width="534" /><br /></span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">Finish</strong> to create your application project and board support
+                    package (if it does not exist).</span>
+            </li>
+</ol>
+
+
+
+</div>
+<nav role="navigation" class="related-links">
+<div class="linklist linklist relinfo reltasks"><strong>Related tasks</strong><br />
+
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/task_openingthecreatezynqbootimagedialogbox.html" title="Opening the Create Boot Image Dialog Box">Opening the Create Boot Image Dialog Box</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/task_workingwithbootimagefiles.html" title="Working with Boot Image Format Files">Working with Boot Image Format Files</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/task_creatingabootimage.html" title="Creating a Boot Image">Creating a Boot Image</a></div></div>
+</nav></article></main><footer role="contentinfo"><div class="navfooter"><!----></div></footer></body>
+</html>

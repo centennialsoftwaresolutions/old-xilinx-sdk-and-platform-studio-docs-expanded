@@ -1,0 +1,81 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><meta name="robots" content="noindex, nofollow" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />        
+      <meta name="copyright" content="(C) Copyright 2016" /><meta name="DC.rights.owner" content="(C) Copyright 2016" /><meta name="DC.Type" content="task" /><meta name="DC.Title" content="Enabling OS Aware Debug" /><meta name="abstract" content="" /><meta name="description" content="This section describes setting up OS aware debug for a Zynq board running Linux from SD card, using the SDK IDE. It is assumed that users are aware of setting up a Jtag connection to the board, ..." /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.tutorial" /><meta name="dictionary_reference" content="com.ibm.eou.tmtool.domainDictionary.core" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.cshelp" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.messaging" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.taxonomyContributions" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.troubleshooting" /><meta name="vis_node" content="com.ibm.ut.ditamap.domainDictionary.dita.concept" /><meta name="vis_labels" content="com.ibm.eou.tmtool.domainAttribute.core.name" /><meta name="vis_zoom" content="2" /><meta name="vis_view" content="com.ibm.eou.tmtool.representation.outline" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="task_gcz_z2z_1t" /><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Enabling OS Aware Debug</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css" /><script type="text/javascript"><!--
+            
+            var prefix = "../index.html";
+            
+            --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="task_gcz_z2z_1t">
+<header role="banner"><table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td style="width:75%;"><span class="topic_breadcrumb_links"></span></td><td><span id="topic_navigation_links" class="navheader"></span></td></tr></tbody></table></header><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Enabling OS Aware Debug</h1>
+
+    
+    <div class="body taskbody"><p class="shortdesc"></p>
+
+        <section class="section context">
+            <p class="p">This section describes setting up OS aware debug for a Zynq board running Linux from SD card, using the SDK IDE. It is assumed that users are aware of setting up a Jtag connection to the board, building Linux kernel and booting it from SD card. For details on how to set up the kernel debug, refer <a class="xref" href="sdk_t_tcf_attach_debug_linux_kernel_tcf.html">Attach and Debug using Xilinx System Debugger</a>.</p>
+
+        </section>
+
+        <ol class="ol steps" id="task_gcz_z2z_1t__kerneldebug"><li class="li step stepexpand">
+                <span class="ph cmd">Compile the kernel source using the following configuration options:</span>
+                <div class="itemgroup info">
+                    <pre class="pre codeblock"><code>CONFIG_DEBUG_KERNEL=y
+CONFIG_DEBUG_INFO=y</code></pre>
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Launch SDK.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">Window &gt; Open Perspective &gt; Debug</strong>.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">Run &gt; Debug Configurations</strong>.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">In the Debug Configurations dialog box, select <strong class="ph b">Xilinx C/C++ application </strong>and click the <strong class="ph b">New</strong> button (<img class="image" id="task_gcz_z2z_1t__image_uqk_ynz_1t" src="../images/new_icon.png" />).</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click <span class="ph uicontrol">Debug</span></span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Debugging begins, with the processors in the running state.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select the <span class="ph uicontrol">Enable Linux OS Awareness</span> option from the <span class="ph uicontrol">Debug</span> view in the processor context.</span>
+                <div class="itemgroup info">
+                    <br /><img class="image" id="task_gcz_z2z_1t__image_wqk_ynz_1t" src="../images/enable_linux_os_awareness.png" height="259" width="499" /><br />
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">You can also perform the following actions from the menu that appears.</span>
+                <div class="itemgroup info">
+                    <ul class="ul" id="task_gcz_z2z_1t__ul_cqh_mfw_gv">
+                        <li class="li"><span class="ph uicontrol">Refresh OSA Processes</span>: Select this option to refresh the list of running processes.</li>
+
+                        <li class="li"><span class="ph uicontrol">Auto refresh on exec</span>: When selected, all the running processes are refreshed and seen in the <span class="ph uicontrol">Debug</span> view. When not selected, new processes are not visible in the debug view.</li>
+
+                        <li class="li"><span class="ph uicontrol">Auto refresh on suspend</span>: When selected, all the processes will be re-synced whenever the processor suspends. When not selected, only the current process is re-synced.</li>
+
+                        <li class="li"><span class="ph uicontrol">Linux OSA File Selection</span>: Select this option to change the symbol file.</li>
+
+                    </ul>
+
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Alternatively, OS aware debugging can also be enabled using the <span class="keyword cmdname">-osa</span> command in the Xilinx System Debugger (XSDB) command-line console.</span>
+                <div class="itemgroup info">
+                    <pre class="pre codeblock"><code>osa -file &lt;symbol-file&gt; -fast-step -fast-exec</code></pre>
+                </div>
+            </li>
+</ol>
+
+    </div>
+
+</article></main><footer role="contentinfo"><div class="navfooter"><!----></div></footer></body>
+</html>

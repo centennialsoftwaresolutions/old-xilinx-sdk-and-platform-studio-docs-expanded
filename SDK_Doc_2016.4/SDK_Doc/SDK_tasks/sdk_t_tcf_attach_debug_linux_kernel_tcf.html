@@ -1,0 +1,110 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="description" content="It is possible to debug the Linux kernel using the Xilinx® System Debugger. Follow the steps below to attach to the Linux kernel running on the target and to debug the source code. Compile the kernel ..." /><meta name="copyright" content="(C) Copyright 2016" /><meta name="DC.rights.owner" content="(C) Copyright 2016" /><meta name="DC.Type" content="task" /><meta name="DC.Title" content="Attach and Debug using Xilinx System Debugger" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_tcf_standalone_app_debug_tcf.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_linux_application_debugging_system_debugger.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_qemu_debugging_system_debugger.html" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.tutorial" /><meta name="dictionary_reference" content="com.ibm.eou.tmtool.domainDictionary.core" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.cshelp" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.messaging" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.taxonomyContributions" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.troubleshooting" /><meta name="vis_node" content="com.ibm.ut.ditamap.domainDictionary.dita.concept" /><meta name="vis_labels" content="com.ibm.eou.tmtool.domainAttribute.core.name" /><meta name="vis_zoom" content="2" /><meta name="vis_view" content="com.ibm.eou.tmtool.representation.outline" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="sdk_t_tcf_attach_debug_linux_kernel_tcf" /><meta name="DC.Language" content="en" /><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Attach and Debug using Xilinx System Debugger</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css" /><script type="text/javascript"><!--
+            
+            var prefix = "../index.html";
+            
+            --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="sdk_t_tcf_attach_debug_linux_kernel_tcf">
+<header role="banner"><table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td style="width:75%;"><span class="topic_breadcrumb_links"></span></td><td><span id="topic_navigation_links" class="navheader"></span></td></tr></tbody></table></header><main role="main"><article role="article" aria-labelledby="sdk_t_tcf_attach_debug_linux_kernel_tcf__cq294539">
+
+<h1 class="title topictitle1" id="sdk_t_tcf_attach_debug_linux_kernel_tcf__cq294539">Attach and Debug using Xilinx System Debugger</h1>
+
+<div class="body taskbody"><section class="section context">
+<p class="p">It is possible to debug the Linux kernel using the Xilinx® System Debugger. Follow the steps below to attach to the Linux kernel running on the target and to debug the source code.</p>
+
+</section>
+<ol class="ol steps" id="sdk_t_tcf_attach_debug_linux_kernel_tcf__kerneldebug"><li class="li step stepexpand"><span class="ph cmd">Compile the kernel source using the following configuration options:</span>
+    <div class="itemgroup info"><pre class="pre codeblock"><code>CONFIG_DEBUG_KERNEL=y
+CONFIG_DEBUG_INFO=y</code></pre></div></li>
+<li class="li step stepexpand"><span class="ph cmd">Launch SDK.</span></li>
+<li class="li step stepexpand"><span class="ph cmd">Click <strong class="ph b">Window &gt; Open Perspective &gt; Debug.</strong></span></li>
+<li class="li step stepexpand"><span class="ph cmd">Click <strong class="ph b">Run &gt; Debug Configurations.</strong></span></li>
+<li class="li step stepexpand"><span class="ph cmd">In the Debug Configurations dialog box, select <strong class="ph b">Xilinx C/C++ application
+</strong>and click the <strong class="ph b">New</strong> button:<img class="image" src="../images/new_icon.png" /></span></li>
+<li class="li step stepexpand"><span class="ph cmd">Name the configuration <strong class="ph b">Zynq_Linux_Kernel_Debug</strong>.
+<br /><img class="image" src="../images/sdk_t_tcf_attach_debug_linux_kernel_tcf-2.png" height="329" width="592" /><br /></span></li>
+<li class="li step stepexpand"><span class="ph cmd">Debugging begins,
+with the processors in the running state, as shown below.
+<br /><img class="image" src="../images/sdk_t_tcf_attach_debug_linux_kernel_tcf-3.png" height="246" width="525" /><br /></span></li>
+<li class="li step stepexpand"><span class="ph cmd">Click the <strong class="ph b">Pause</strong>
+button to suspend the processor:<img class="image" src="../images/TCF_9.png" /> Debug
+starts in the Disassembly mode.</span></li>
+<li class="li step stepexpand">
+    <span class="ph cmd">Add vmlinux symbol files to both processor cores.</span>
+    <ol type="a" class="ol substeps">
+     <li class="li substep">
+      <span class="ph cmd"> Right-click on ARM Cortex-A9 MPCore#0 and select Symbol Files.</span>
+     </li>
+
+     <li class="li substep">
+      <span class="ph cmd">Click add and add vmlinux symbol files.</span>
+     </li>
+
+     <li class="li substep">
+      <span class="ph cmd">Click OK.</span>
+     </li>
+
+     <li class="li substep">
+      <span class="ph cmd">Right click on ARM Cortex-A9 MPCore#1 and select Symbol Files.</span>
+     </li>
+
+     <li class="li substep">
+      <span class="ph cmd">Click add and add vmlinux symbol files.</span>
+     </li>
+
+     <li class="li substep">
+      <span class="ph cmd">Click OK.</span>
+     </li>
+
+    </ol>
+
+   </li>
+<li class="li step stepexpand"><span class="ph cmd">You must set up “Source Lookup” if you built the code on a Linux
+machine and try to run the debugger on Windows.
+<br /><img class="image" src="../images/sdk_t_tcf_attach_debug_linux_kernel_tcf-5.png" height="313" width="522" /><br /></span></li>
+<li class="li step stepexpand"><span class="ph cmd">Select the debug
+configuration <strong class="ph b">Zynq_Linux_Kernel_Debug,</strong> then right-click it and
+select <strong class="ph b">Edit Source Lookup.</strong></span></li>
+<li class="li step stepexpand"><span class="ph cmd">Click <strong class="ph b">Add.</strong>
+<br /><img class="image" src="../images/sdk_t_tcf_attach_debug_linux_kernel_tcf-6.png" height="413" width="524" /><br /></span></li>
+<li class="li step stepexpand"><span class="ph cmd">Select <strong class="ph b">Path Mapping</strong>
+from the <strong class="ph b">Add Source </strong>dialog box.
+<br /><img class="image" src="../images/sdk_t_tcf_attach_debug_linux_kernel_tcf-7.png" height="363" width="525" /><br /></span></li>
+<li class="li step stepexpand"><span class="ph cmd">Add the Compilation
+path and local file system path by clicking <strong class="ph b">Add.</strong>
+<br /><img class="image" src="../images/sdk_t_tcf_attach_debug_linux_kernel_tcf-8.png" height="305" width="535" /><br /></span></li>
+<li class="li step stepexpand"><span class="ph cmd">Successful source
+lookup takes you to the source code debug.
+<br /><img class="image" src="../images/sdk_t_tcf_attach_debug_linux_kernel_tcf-9.png" height="503" width="560" /><br /></span></li>
+<li class="li step stepexpand"><span class="ph cmd">You can add function breakpoints using the <span class="ph uicontrol">Breakpoints</span> view toolbar:
+            <br /><img class="image" src="../images/TCF_20.png" height="202" width="182" /><br /></span></li>
+<li class="li step stepexpand"><span class="ph cmd">Add
+a breakpoint at the start_kernel function.
+<br /><img class="image" src="../images/sdk_t_tcf_attach_debug_linux_kernel_tcf-11.png" height="376" width="515" /><br /></span></li>
+<li class="li step stepexpand"><span class="ph cmd">Click the reset button.
+The Zynq®-7000 AP SoC processor boots from the SD card and stops at
+the beginning of the kernel initialization. 
+   
+   <strong class="ph b">Note: </strong>The Linux
+kernel is always compiled with full optimizations and in-lining enabled.
+Therefore:
+<br /><img class="image" src="../images/debug_reset.PNG" height="308" width="527" /><br /></span></li>
+<li class="li step stepexpand"><span class="ph cmd">Stepping through code might not work as expected
+due to the possible reordering of some instructions.</span></li>
+<li class="li step stepexpand"><span class="ph cmd">Some variables might be optimized out by the compiler and therefore
+not be available for the debugger.</span></li>
+</ol>
+
+
+</div>
+<nav role="navigation" class="related-links">
+<div class="linklist linklist relinfo reltasks"><strong>Related tasks</strong><br />
+
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_tcf_standalone_app_debug_tcf.html" title="Standalone Application Debug Using Xilinx System Debugger">Standalone Application Debug Using Xilinx System Debugger</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_linux_application_debugging_system_debugger.html" title="Linux Application Debugging with System Debugger">Linux Application Debugging with System Debugger</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_qemu_debugging_system_debugger.html" title="Standalone Application Debug using System Debugger on QEMU">Standalone Application Debug using System Debugger on QEMU</a></div></div>
+</nav></article></main><footer role="contentinfo"><div class="navfooter"><!----></div></footer></body>
+</html>

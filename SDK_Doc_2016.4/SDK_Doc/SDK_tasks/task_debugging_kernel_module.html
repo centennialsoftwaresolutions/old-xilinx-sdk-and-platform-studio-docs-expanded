@@ -1,0 +1,50 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><meta name="robots" content="noindex, nofollow" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />        
+      <meta name="copyright" content="(C) Copyright 2016" /><meta name="DC.rights.owner" content="(C) Copyright 2016" /><meta name="DC.Type" content="task" /><meta name="DC.Title" content="Debugging a Loadable Kernel Module" /><meta name="abstract" content="" /><meta name="description" content="To debug a kernel module, set path mapping to map the module name to symbol file of the module. To see loaded modules, select Kernel in the Debug view, and look at the Modules view. Kernel modules are ..." /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.tutorial" /><meta name="dictionary_reference" content="com.ibm.eou.tmtool.domainDictionary.core" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.cshelp" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.messaging" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.taxonomyContributions" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.troubleshooting" /><meta name="vis_node" content="com.ibm.ut.ditamap.domainDictionary.dita.concept" /><meta name="vis_labels" content="com.ibm.eou.tmtool.domainAttribute.core.name" /><meta name="vis_zoom" content="2" /><meta name="vis_view" content="com.ibm.eou.tmtool.representation.outline" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="task_jqg_b3w_gv" /><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Debugging a Loadable Kernel Module</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css" /><script type="text/javascript"><!--
+            
+            var prefix = "../index.html";
+            
+            --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="task_jqg_b3w_gv">
+<header role="banner"><table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td style="width:75%;"><span class="topic_breadcrumb_links"></span></td><td><span id="topic_navigation_links" class="navheader"></span></td></tr></tbody></table></header><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Debugging a Loadable Kernel Module</h1>
+
+    
+    <div class="body taskbody"><p class="shortdesc"></p>
+
+        <section class="section context"><p class="p">To debug a kernel module, set path mapping to map the module name to symbol file of the module. To see loaded modules, select <span class="ph uicontrol">Kernel</span> in the <span class="ph uicontrol">Debug</span> view, and look at the <span class="ph uicontrol">Modules</span> view. Kernel modules are listed by name and not by the file path. </p>
+<p class="p" id="task_jqg_b3w_gv__p_xd3_f3w_gv">To debug a kernel module:</p>
+</section>
+
+                <ol class="ol steps" id="task_jqg_b3w_gv__steps_yd3_f3w_gv"><li class="li step stepexpand">
+                        <span class="ph cmd">Select a project in the <span class="ph uicontrol">Project Explorer</span> view.</span>
+                    </li>
+<li class="li step stepexpand">
+                        <span class="ph cmd">Select <span class="ph menucascade"><span class="ph uicontrol">Run</span> &gt; <span class="ph uicontrol">Debug Configurations</span></span></span>
+                        <div class="itemgroup stepresult">The <span class="ph uicontrol">Debug Configurations</span> window appears.</div>
+                    </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click the <span class="ph uicontrol">Path Map</span> tab to set the path mappings for the selected debug configuration. </span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click <span class="ph uicontrol">Add</span> to insert the kernel module.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Insert a function or line breakpoint and run the core. As soon as the breakpoint is hit, the debug view is updated with all the information.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Similar to any other process or thread level debugging, you can insert breakpoints, step in, step out, watch variables, stack trace or perform other source level debugging tasks. </span>
+                <div class="itemgroup info">
+                    <div class="note note"><span class="notetitle">Note:</span> Pre-built kernel images for zc706 (<strong class="ph b">zc706_os_aware_debug.zip</strong>) can be downloaded from <a class="xref" href="http://xinc/sites/epd/pmt/sdk/default.aspx" target="_blank">http://xinc/sites/epd/pmt/sdk/default.aspx</a></div>
+
+                </div>
+            </li>
+</ol>
+
+    </div>
+
+</article></main><footer role="contentinfo"><div class="navfooter"><!----></div></footer></body>
+</html>
