@@ -1,0 +1,72 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="description" content="Graphical development environments such as the Xilinx® Software Development Kit (Xilinx SDK) are useful for getting up to speed on development for a new processor architecture. It helps to abstract ..." /><meta name="copyright" content="(C) Copyright 2017" /><meta name="DC.rights.owner" content="(C) Copyright 2017" /><meta name="DC.Type" content="concept" /><meta name="DC.Title" content="Xilinx Software Command-Line Tool (XSCT)" /><meta name="DC.Relation" scheme="URI" content="../../xsct/intro/xsct_install_launch.html" /><meta name="DC.Relation" scheme="URI" content="../../xsct/intro/xsct_commands.html" /><meta name="DC.Relation" scheme="URI" content="../../xsct/use_cases/xsct_use_cases.html" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.tutorial" /><meta name="dictionary_reference" content="com.ibm.eou.tmtool.domainDictionary.core" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.cshelp" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.messaging" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.taxonomyContributions" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.troubleshooting" /><meta name="vis_node" content="com.ibm.ut.ditamap.domainDictionary.dita.concept" /><meta name="vis_labels" content="com.ibm.eou.tmtool.domainAttribute.core.name" /><meta name="vis_zoom" content="2" /><meta name="vis_view" content="com.ibm.eou.tmtool.representation.outline" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="sdk_c_batch_mode" /><meta name="DC.Language" content="en" /><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Xilinx Software Command-Line Tool (XSCT)</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/skins/skin.css" /><script type="text/javascript"><!--
+            
+            var prefix = "../../index.html";
+            
+            --></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="sdk_c_batch_mode">
+<header role="banner"><table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td style="width:75%;"><span class="topic_breadcrumb_links"></span></td><td><span id="topic_navigation_links" class="navheader"></span></td></tr></tbody></table></header><main role="main"><article role="article" aria-labelledby="sdk_c_batch_mode__dp965821">
+    <h1 class="title topictitle1" id="sdk_c_batch_mode__dp965821">Xilinx Software Command-Line Tool (XSCT)</h1>
+
+    <div class="body conbody">
+        <p class="p" id="sdk_c_batch_mode__p_nx5_zjj_zv">Graphical development environments such as the Xilinx® Software Development Kit (Xilinx SDK) are useful for getting up to speed on development for a new processor architecture. It helps to abstract away and group most of the common functions into logical wizards that even the novice can use. However, scriptability of a tool is also essential for providing the flexibility to extend what is done with that tool. It is particularly useful when developing regression tests that will be run nightly or running a set of commands that are used often by the developer. </p>
+
+        <div class="p" id="sdk_c_batch_mode__p_rrr_vkj_zv">Xilinx Software Command-line Tool (XSCT) is an interactive and
+            scriptable command-line interface to Xilinx SDK. As with other Xilinx tools, the
+            scripting language for XSCT is based on Tools Command Language (Tcl). You can run XSCT
+            commands interactively or script the commands for automation. XSCT supports the
+            following actions:<ul class="ul" id="sdk_c_batch_mode__ul_pcw_l2y_zv">
+                <li class="li">Create hardware, board support packages (BSPs), and application projects</li>
+
+                <li class="li">Manage repositories</li>
+
+                <li class="li">Set toolchain preferences</li>
+
+                <li class="li">Configure and build BSPs/applications</li>
+
+                <li class="li">Download and run applications on hardware targets</li>
+
+                <li class="li">Create and flash boot images by running Bootgen and program_flash tools.</li>
+
+            </ul>
+</div>
+
+        <p class="p" id="sdk_c_batch_mode__p_m3r_bkj_zv">This reference guide is intended to provide information you need to
+            develop scripts for software development and debug targeting the Xilinx family of
+            processors.</p>
+
+        <div class="p" id="sdk_c_batch_mode__p_f4s_2xg_bw">As you read the document you will notice usage of some abbreviations for various products produced by Xilinx. For example:<ul class="ul" id="sdk_c_batch_mode__ul_lsq_vqq_zv">
+            <li class="li">Use of <code class="ph codeph">ps7</code> in the source code implies that these files are targeting the Zynq® - 7000 AP SoC family of products, and specifically the dual-core Cortex™ ARM® A9 processors in the SoC.</li>
+
+            <li class="li">Use of <code class="ph codeph">psu</code> in the source code implies that this code is targeting a
+            Zynq UltraScale+™ MPSoC device, which contains a
+          Cortex Quad-core ARM A53, dual-core ARM R5, ARM Mali 400 GPU, and a MicroBlaze™ processor
+          based platform management unit (PMU).</li>
+
+            <li class="li">Hardware definition  files (HDF) are used to transfer the information about the
+                    hardware system that includes a processor to the embedded software development
+                    tools such as Xilinx SDK (XSDK) and Xilinx Software Command-Line Tools (XSCT).
+                    It includes information about which peripherals are instantiated, clocks, memory
+                    interfaces, and memory maps.</li>
+
+            <li class="li">Microprocessor Software Specification (MSS) files are used to store information about the BSP. They contain OS information for the BSP, software drivers associated with each peripheral of the hardware design, STDIO settings, and compiler flags like optimization and debug information level.</li>
+
+            </ul>
+</div>
+
+    </div>
+
+<nav role="navigation" class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../../xsct/intro/xsct_install_launch.html">Installing and Launching XSCT</a></strong><br />
+</li>
+<li class="link ulchildlink"><strong><a href="../../xsct/intro/xsct_commands.html">XSCT Commands</a></strong><br />
+</li>
+<li class="link ulchildlink"><strong><a href="../../xsct/use_cases/xsct_use_cases.html">XSCT Use Cases</a></strong><br />
+</li>
+</ul>
+</nav></article></main><footer role="contentinfo"><div class="navfooter"><!----></div></footer></body>
+</html>

@@ -1,0 +1,55 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="description" content="Modify the software application code to enable interrupts. If there is an interrupt controller present in the system with multiple interrupt sources, you must enable interrupts in the processor and ..." /><meta name="copyright" content="(C) Copyright 2017" /><meta name="DC.rights.owner" content="(C) Copyright 2017" /><meta name="DC.Type" content="task" /><meta name="DC.Title" content="Setting Up the Software Application" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_run_profiler.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_settinguphwforprofiling.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_settingupswforprofiling.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_settinguptheboardsupportpackage.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_launchingprofilingview.html" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.tutorial" /><meta name="dictionary_reference" content="com.ibm.eou.tmtool.domainDictionary.core" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.cshelp" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.messaging" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.taxonomyContributions" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.troubleshooting" /><meta name="vis_node" content="com.ibm.ut.ditamap.domainDictionary.dita.concept" /><meta name="vis_labels" content="com.ibm.eou.tmtool.domainAttribute.core.name" /><meta name="vis_zoom" content="2" /><meta name="vis_view" content="com.ibm.eou.tmtool.representation.outline" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="settingupthesoftwareapplication" /><meta name="DC.Language" content="en" /><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Setting Up the Software Application</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css" /><script type="text/javascript"><!--
+            
+            var prefix = "../index.html";
+            
+            --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="settingupthesoftwareapplication">
+<header role="banner"><table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td style="width:75%;"><span class="topic_breadcrumb_links"></span></td><td><span id="topic_navigation_links" class="navheader"></span></td></tr></tbody></table></header><main role="main"><article role="article" aria-labelledby="settingupthesoftwareapplication__bt332394">
+
+<h1 class="title topictitle1" id="settingupthesoftwareapplication__bt332394">Setting Up the Software Application</h1>
+
+<div class="body taskbody"><section class="section context">
+</section>
+<ol class="ol steps"><li class="li step stepexpand"><span class="ph cmd">Modify the software application code to enable interrupts. If there
+is an interrupt controller present in the system with multiple interrupt
+sources, you must enable interrupts in the processor and the interrupt
+controller to allow interrupts from the profile timer to reach the processor.
+Example code is shown below:</span>
+<div class="itemgroup info"><pre class="pre codeblock"><code>/* enable interrupt controller */
+        XIntc_mMasterEnable(SYSINTC_BASEADDR);
+        /* service all interrupts */
+        XIntc_SetIntrSvcOption(SYSINTC_BASEADDR, XIN_SVC_ALL_ISRS_OPTION);
+        /* enable the profile timer interrupt */
+        XIntc_mEnableIntr(SYSINTC_BASEADDR, PROFILE_TIMER_INTR_MASK);
+        /* enable interrupts in the processor */
+        microblaze_enable_interrupts();</code></pre></div>
+</li>
+<li class="li step stepexpand"><span class="ph cmd">If the profiling timer is the only entity that connects to the input
+of interrupt controller or directly to the processor, the tool sets up
+the interrupt for you automatically, and no change is required in the
+application code.</span></li>
+<li class="li step stepexpand"><span class="ph cmd">Right-click the software application and select <strong class="ph b">C/C++ Settings</strong>
+(or <strong class="ph b">Properties &gt; C/C++ Build &gt; Settings</strong>).</span></li>
+<li class="li step stepexpand"><span class="ph cmd">Select <strong class="ph b">gcc compiler &gt; Profiling</strong> and enable profiling by
+selecting <strong class="ph b">Enable Profiling (-pg).</strong></span></li>
+<li class="li step stepexpand"><span class="ph cmd">Click <strong class="ph b">OK.</strong></span></li>
+</ol>
+
+</div>
+<nav role="navigation" class="related-links">
+<div class="linklist linklist relinfo relconcepts"><strong>Related concepts</strong><br />
+
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_settinguphwforprofiling.html" title="Setting Up the Hardware for Profiling">Setting Up the Hardware for Profiling</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_settingupswforprofiling.html" title="Setting Up the Software for Profiling">Setting Up the Software for Profiling</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_launchingprofilingview.html" title="Viewing the Profiling Results">Viewing the Profiling Results</a></div></div>
+
+<div class="linklist linklist relinfo reltasks"><strong>Related tasks</strong><br />
+
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_run_profiler.html" title="Specifying Profiler Configuration">Specifying Profiler Configuration</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/task_settinguptheboardsupportpackage.html" title="Setting up the Board Support Package">Setting up the Board Support Package</a></div></div>
+</nav></article></main><footer role="contentinfo"><div class="navfooter"><!----></div></footer></body>
+</html>

@@ -1,0 +1,72 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="description" content="When the hardware platform specification file is updated, SDK compares the information with the previous version of the file stored in the project. Any time the hardware specification file changes, ..." /><meta name="copyright" content="(C) Copyright 2017" /><meta name="DC.rights.owner" content="(C) Copyright 2017" /><meta name="DC.Type" content="task" /><meta name="DC.Title" content="Changing the Hardware Specification File" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_u_new_hardware_platform_spec.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_toviewahardwareplatformspecification.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_importingahardwareplatformspecificationfile.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_export_hwspec.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_auto_sync.html" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.tutorial" /><meta name="dictionary_reference" content="com.ibm.eou.tmtool.domainDictionary.core" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.cshelp" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.messaging" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.taxonomyContributions" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.troubleshooting" /><meta name="vis_node" content="com.ibm.ut.ditamap.domainDictionary.dita.concept" /><meta name="vis_labels" content="com.ibm.eou.tmtool.domainAttribute.core.name" /><meta name="vis_zoom" content="2" /><meta name="vis_view" content="com.ibm.eou.tmtool.representation.outline" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="sdk_t_change_hwspec" /><meta name="DC.Language" content="en" /><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Changing the Hardware Specification File</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css" /><script type="text/javascript"><!--
+            
+            var prefix = "../index.html";
+            
+            --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="sdk_t_change_hwspec">
+<header role="banner"><table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td style="width:75%;"><span class="topic_breadcrumb_links"></span></td><td><span id="topic_navigation_links" class="navheader"></span></td></tr></tbody></table></header><main role="main"><article role="article" aria-labelledby="sdk_t_change_hwspec__ev294539">
+
+<h1 class="title topictitle1" id="sdk_t_change_hwspec__ev294539">Changing the Hardware Specification File</h1>
+
+<div class="body taskbody"><section class="section context">
+            <p class="p" id="sdk_t_change_hwspec__p_bpv_pj3_zs">When the hardware platform specification file is updated, SDK compares the information with the previous version of the file stored in the project.</p>
+
+            <p class="p" id="sdk_t_change_hwspec__p_cpv_pj3_zs">Any time the hardware specification file changes, SDK automatically makes changes in the workspace to adapt it to the new hardware design. It might provide recommendations on other changes you can make. Beyond these automatic and recommended changes, there might be other changes that are required at the application level to match the new hardware.</p>
+
+            <p class="p" id="sdk_t_change_hwspec__p_psw_ldz_fs">For example, if you remove a peripheral from the design, the BSP will be automatically updated immediately following the hardware change detection. This means that the API for the removed peripheral will no longer be available to the application and any files or references to that removed peripheral will appear as an error.</p>
+
+<p class="p">You can change the hardware specification file of the SDK hardware project
+using this procedure:</p>
+
+</section>
+<ol class="ol steps"><li class="li step stepexpand"><span class="ph cmd">Select the Hardware Project in the <strong class="ph b">Project Explorer</strong> view.</span></li>
+<li class="li step stepexpand"><span class="ph cmd">Right-click on the hardware project and select <strong class="ph b">Change Hardware Specification
+File.</strong></span></li>
+<li class="li step stepexpand"><span class="ph cmd">A dialog box opens to indicate the changes that will be made to the software projects
+                    associated with this hardware platform. Click <strong class="ph b">Yes</strong> to continue.</span></li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Specify the source hardware specification file.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">OK.</strong></span>
+                <div class="itemgroup info">
+                    <br /><img class="image" id="sdk_t_change_hwspec__image_n33_tsw_2r" src="../images/sdk_t_change_hwspec-1.png" height="199" width="544" /><br />
+                </div>
+                <div class="itemgroup stepresult">
+                    <p class="p" id="sdk_t_change_hwspec__p_o33_tsw_2r">SDK does the following:</p>
+
+                    <ul class="ul" id="sdk_t_change_hwspec__ul_cj3_tsw_2r">
+                        <li class="li">Updates the hardware project with the new hardware specification file,
+                            bitstream and BMM file.</li>
+
+                        <li class="li">If a processor sub-system was removed from the hardware design, SDK
+                            closes the software projects, any board support packages based on the
+                            previous hardware design, and any application projects, targeted to the
+                            removed processor subsystem.</li>
+
+                        <li class="li">Updates the board support package project with changes in the hardware processor sub-system. This include removal of drivers for removed peripherals and addition of default drivers for new peripherals.</li>
+
+                        <li class="li">Re-builds all the software projects related to the hardware
+                            project.</li>
+
+                    </ul>
+
+                </div>
+            </li>
+</ol>
+
+</div>
+<nav role="navigation" class="related-links">
+<div class="linklist linklist relinfo reltasks"><strong>Related tasks</strong><br />
+
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_u_new_hardware_platform_spec.html" title="Creating a New Hardware Platform Specification">Creating a New Hardware Platform Specification</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/task_toviewahardwareplatformspecification.html" title="Viewing a Hardware Platform Specification">Viewing a Hardware Platform Specification</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/task_importingahardwareplatformspecificationfile.html" title="Importing a Hardware Platform Specification File">Importing a Hardware Platform Specification File</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_export_hwspec.html" title="Exporting a Hardware Specification in Vivado">Exporting a Hardware Specification in Vivado</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_auto_sync.html" title="Monitoring Hardware Project Changes">Monitoring Hardware Project Changes</a></div></div>
+</nav></article></main><footer role="contentinfo"><div class="navfooter"><!----></div></footer></body>
+</html>

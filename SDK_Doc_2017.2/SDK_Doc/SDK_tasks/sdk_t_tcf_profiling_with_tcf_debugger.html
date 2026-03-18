@@ -1,0 +1,59 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="description" content="TCF profiler supports profiling of both standalone and Linux applications. TCF profiling doesn’t require any additional compiler flags to be set while building the application. Profiling standalone ..." /><meta name="copyright" content="(C) Copyright 2017" /><meta name="DC.rights.owner" content="(C) Copyright 2017" /><meta name="DC.Type" content="task" /><meta name="DC.Title" content="TCF Profiling" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_profilingtheapplication.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_profiling_linux_apps_with_sysdbg.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/non-intrusive-profiling.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_freertos_analysis.html" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.tutorial" /><meta name="dictionary_reference" content="com.ibm.eou.tmtool.domainDictionary.core" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.cshelp" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.messaging" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.taxonomyContributions" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.troubleshooting" /><meta name="vis_node" content="com.ibm.ut.ditamap.domainDictionary.dita.concept" /><meta name="vis_labels" content="com.ibm.eou.tmtool.domainAttribute.core.name" /><meta name="vis_zoom" content="2" /><meta name="vis_view" content="com.ibm.eou.tmtool.representation.outline" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="sdk_t_tcf_profiling_with_tcf_debugger" /><meta name="DC.Language" content="en" /><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>TCF Profiling</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css" /><script type="text/javascript"><!--
+            
+            var prefix = "../index.html";
+            
+            --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="sdk_t_tcf_profiling_with_tcf_debugger">
+<header role="banner"><table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td style="width:75%;"><span class="topic_breadcrumb_links"></span></td><td><span id="topic_navigation_links" class="navheader"></span></td></tr></tbody></table></header><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+
+<h1 class="title topictitle1" id="ariaid-title1">TCF Profiling</h1>
+
+<div class="body taskbody"><section class="section context">
+  <p class="p">TCF profiler supports profiling of both standalone and Linux applications. TCF profiling doesn’t require any additional compiler flags to be set while building the application. Profiling standalone applications over Jtag is based on sampling the Program Counter through debug interface. It doesn’t alter the program execution flow and is non-intrusive when stack trace is not enabled. When stack trace is enabled, program execution speed decreases as the debugger has to collect stack trace information.</p>
+
+</section>
+<ol class="ol steps"><li class="li step stepexpand"><span class="ph cmd">Select the application you want to profile.</span></li>
+<li class="li step stepexpand"><span class="ph cmd">Select <strong class="ph b">Run &gt; Debug As &gt; Launch on Hardware (System Debugger).</strong></span></li>
+<li class="li step stepexpand"><span class="ph cmd">When the application stops at main, open the TCF profiler view by
+selecting <strong class="ph b">Window &gt; Show View &gt; Other &gt; Debug &gt; TCF Profiler.</strong>
+ <br /><img class="image" src="../images/sdk_t_tcf_profiling_with_tcf_debugger-1.png" height="225" width="536" /><br /></span></li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Click the <img class="image" id="sdk_t_tcf_profiling_with_tcf_debugger__image_tv4_1rm_dt" src="../images/sdk_t_tcf_profiling_with_tcf_debugger-2.png" />button to start profiling. 
+        </span>
+   <div class="itemgroup stepresult">The <span class="ph uicontrol">Profiler Configuration</span> dialog box appears.
+     <br /><img class="image" id="sdk_t_tcf_profiling_with_tcf_debugger__image_uv4_1rm_dt" src="../images/sdk_t_tcf_profiling_with_tcf_debugger-3.png" height="213" width="238" /><br />
+   </div>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Select the <span class="ph uicontrol">Aggregate Per Function</span> option, to group all the samples collected for different addresses in a single function together. When the option is disabled, the samples collected are shown as per the address.</span>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Select the <span class="ph uicontrol">Enable stack tracing</span> option, to show the stack trace for each address in the sample data. To view the stack trace for an address, click on that address entry in the profiler view.</span>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Specify the <span class="ph uicontrol">Max stack frames count</span> for the maximum number of frames that are shown in the stack trace view.</span>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Specify the <span class="ph uicontrol">View update interval</span> for the time interval (in milliseconds) the TCF profiler view is updated with the new results. Please note that this is different from the interval at which the profile samples are collected.</span>
+      </li>
+<li class="li step stepexpand"><span class="ph cmd">Resume your application. The profiler view will be updated with the data as shown the figure below <br /><img class="image" src="../images/sdk_t_tcf_profiling_with_tcf_debugger-4.png" height="405" width="763" /><br /></span></li>
+</ol>
+
+
+</div>
+<nav role="navigation" class="related-links">
+<div class="linklist linklist relinfo relconcepts"><strong>Related concepts</strong><br />
+
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/non-intrusive-profiling.html" title="Non-Intrusive Profiling for MicroBlaze Processors">Non-Intrusive Profiling for MicroBlaze Processors</a></div></div>
+
+<div class="linklist linklist relinfo reltasks"><strong>Related tasks</strong><br />
+
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/task_profilingtheapplication.html" title="gprof Profiling">gprof Profiling</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_profiling_linux_apps_with_sysdbg.html" title="Profiling Linux Applications with System Debugger">Profiling Linux Applications with System Debugger</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_freertos_analysis.html" title="FreeRTOS Analysis using STM">FreeRTOS Analysis using STM</a></div></div>
+</nav></article></main><footer role="contentinfo"><div class="navfooter"><!----></div></footer></body>
+</html>

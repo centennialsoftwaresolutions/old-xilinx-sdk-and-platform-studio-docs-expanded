@@ -1,0 +1,108 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="description" content="Configure options for SVF file. Syntax svf config [options] Configure and generate SVF file. Supported only for Cortex#A53. Options Option                       Description -scan-chain &lt;list of ..." /><meta name="copyright" content="(C) Copyright 2017" /><meta name="DC.rights.owner" content="(C) Copyright 2017" /><meta name="DC.Type" content="reference" /><meta name="DC.Title" content="svf config" /><meta name="DC.Relation" scheme="URI" content="../../xsct/svf/reference_svf_svf_generate.html" /><meta name="DC.Relation" scheme="URI" content="../../xsct/svf/reference_svf_svf_mwr.html" /><meta name="DC.Relation" scheme="URI" content="../../xsct/svf/reference_svf_svf_dow.html" /><meta name="DC.Relation" scheme="URI" content="../../xsct/svf/reference_svf_svf_stop.html" /><meta name="DC.Relation" scheme="URI" content="../../xsct/svf/reference_svf_svf_con.html" /><meta name="DC.Relation" scheme="URI" content="../../xsct/svf/reference_svf_svf_delay.html" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.tutorial" /><meta name="dictionary_reference" content="com.ibm.eou.tmtool.domainDictionary.core" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.cshelp" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.messaging" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.taxonomyContributions" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.troubleshooting" /><meta name="vis_node" content="com.ibm.ut.ditamap.domainDictionary.dita.concept" /><meta name="vis_labels" content="com.ibm.eou.tmtool.domainAttribute.core.name" /><meta name="vis_zoom" content="2" /><meta name="vis_view" content="com.ibm.eou.tmtool.representation.outline" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="xsct_svf_svf_config" /><meta name="DC.Language" content="en" /><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>svf config</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/skins/skin.css" /><script type="text/javascript"><!--
+            
+            var prefix = "../../index.html";
+            
+            --></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="xsct_svf_svf_config">
+<header role="banner"><table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td style="width:75%;"><span class="topic_breadcrumb_links"></span></td><td><span id="topic_navigation_links" class="navheader"></span></td></tr></tbody></table></header><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+	<h1 class="title topictitle1" id="ariaid-title1">svf config</h1>
+
+	<div class="body refbody">
+<section class="section"> <p class="p">Configure options for SVF file.</p>
+ </section>
+
+<section class="section command"><h2 class="title sectiontitle">Syntax</h2> 
+			<p class="p"><span class="ph synph"><span class="keyword option">svf config</span> <span class="keyword kwd">[options]</span></span></p>
+
+			<p class="p">Configure and generate SVF file. Supported only for Cortex#A53. </p>
+
+		</section>
+
+<section class="section command"><h2 class="title sectiontitle">Options</h2>  
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><colgroup><col /><col /></colgroup><thead class="thead" style="text-align:left;">
+					<tr>
+						<th class="entry cellrowborder" id="d91977e61">Option                      </th>
+
+						<th class="entry cellrowborder" id="d91977e64">Description</th>
+
+					</tr>
+
+				</thead>
+<tbody class="tbody">
+					<tr>
+						<td class="entry cellrowborder" headers="d91977e61 "><span class="keyword cmdname">-scan-chain &lt;list of idcode-irlength pairs&gt;</span></td>
+
+						<td class="entry cellrowborder" headers="d91977e64 ">List of idcode-irlength pairs. This can be obtained from xsdb command - jtag ta. </td>
+
+					</tr>
+
+					<tr>
+						<td class="entry cellrowborder" headers="d91977e61 "><span class="keyword cmdname">-device-index &lt;dap index&gt;</span></td>
+
+						<td class="entry cellrowborder" headers="d91977e64 ">This is used to select device in the jtag scan chain. Select DAP. </td>
+
+					</tr>
+
+					<tr>
+						<td class="entry cellrowborder" headers="d91977e61 "><span class="keyword cmdname">-cpu-index &lt;processor core&gt;</span></td>
+
+						<td class="entry cellrowborder" headers="d91977e64 ">This is used to select A53 core Select 0 for A53#0, 1 for A53#1, 2 for A53#2, 3 for
+								A53#3. </td>
+
+					</tr>
+
+					<tr>
+						<td class="entry cellrowborder" headers="d91977e61 "><span class="keyword cmdname">-out &lt;filename&gt;</span></td>
+
+						<td class="entry cellrowborder" headers="d91977e64 ">Output SVF file. </td>
+
+					</tr>
+
+					<tr>
+						<td class="entry cellrowborder" headers="d91977e61 "><span class="keyword cmdname">-delay &lt;tcks&gt;</span></td>
+
+						<td class="entry cellrowborder" headers="d91977e64 ">Delay in ticks between AP writes. </td>
+
+					</tr>
+
+					<tr>
+						<td class="entry cellrowborder" headers="d91977e61 "><span class="keyword cmdname">-linkdap</span></td>
+
+						<td class="entry cellrowborder" headers="d91977e64 ">Generate SVF for linking DAP to the jtag chain for Silicon versions 2.0  and above. </td>
+
+					</tr>
+
+				</tbody>
+</table>
+</div>
+ </section>
+
+<section class="section command"><h2 class="title sectiontitle">Returns</h2> 
+			<p class="p">Nothing. </p>
+
+		</section>
+
+<section class="section command"><h2 class="title sectiontitle">Example(s)</h2> 
+
+			<pre class="pre codeblock"><code>svf config -scan-chain {0x14738093 12 0x5ba00477 4} -device-index 1  -cpu-index 0 -out "test.svf"</code></pre>
+			<p class="p">This creates a SVF file with name test.svf for core A53#0. </p>
+
+		</section>
+
+	</div>
+
+<nav role="navigation" class="related-links">
+<div class="linklist linklist relinfo relref"><strong>Related reference</strong><br />
+
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/svf/reference_svf_svf_generate.html" title="svf generate">svf generate</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/svf/reference_svf_svf_mwr.html" title="svf mwr">svf mwr</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/svf/reference_svf_svf_dow.html" title="svf dow">svf dow</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/svf/reference_svf_svf_stop.html" title="svf stop">svf stop</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/svf/reference_svf_svf_con.html" title="svf con">svf con</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/svf/reference_svf_svf_delay.html" title="svf delay">svf delay</a></div></div>
+</nav></article></main><footer role="contentinfo"><div class="navfooter"><!----></div></footer></body>
+</html>

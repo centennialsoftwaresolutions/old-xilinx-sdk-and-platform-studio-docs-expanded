@@ -1,0 +1,53 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><meta name="robots" content="noindex, nofollow" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />        
+      <meta name="copyright" content="(C) Copyright 2017" /><meta name="DC.rights.owner" content="(C) Copyright 2017" /><meta name="DC.Type" content="concept" /><meta name="DC.Title" content="Cross-Triggering" /><meta name="abstract" content="" /><meta name="description" content="Cross Triggering is supported by the ECT module supplied by ARM®. ECT provides a mechanism for multiple subsystems in a SoC to interact with each other by exchanging debug triggers. ECT consists of ..." /><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_m_tools.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_xilinx_pref.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_sdk_terminal.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_hier_ip_support.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_enable_cross_triggering.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_references/reference_cross-trigerring-zynq.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_references/reference_cross-trigerring-zynqmp.html" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.tutorial" /><meta name="dictionary_reference" content="com.ibm.eou.tmtool.domainDictionary.core" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.cshelp" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.messaging" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.taxonomyContributions" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.troubleshooting" /><meta name="vis_node" content="com.ibm.ut.ditamap.domainDictionary.dita.concept" /><meta name="vis_labels" content="com.ibm.eou.tmtool.domainAttribute.core.name" /><meta name="vis_zoom" content="2" /><meta name="vis_view" content="com.ibm.eou.tmtool.representation.outline" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="concept_dcf_jpd_ht" /><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Cross-Triggering</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css" /><script type="text/javascript"><!--
+            
+            var prefix = "../index.html";
+            
+            --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="concept_dcf_jpd_ht">
+<header role="banner"><table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td style="width:75%;"><span class="topic_breadcrumb_links"></span></td><td><span id="topic_navigation_links" class="navheader"></span></td></tr></tbody></table></header><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+ <h1 class="title topictitle1" id="ariaid-title1">Cross-Triggering</h1>
+
+ 
+ <div class="body conbody"><p class="shortdesc"></p>
+
+  <p class="p" id="concept_dcf_jpd_ht__p_z1v_kpd_ht">Cross Triggering is supported by the ECT module supplied by ARM®. ECT provides a mechanism for multiple subsystems in a SoC to interact with each other by exchanging debug triggers. ECT consists of two modules:</p>
+
+  <ul class="ul">
+   <li class="li">Cross Trigger Interface (CTI) - CTI combines and maps the trigger requests, and broadcasts them to all other interfaces on the ECT as channel events. When the CTI receives a channel event, it maps this onto a trigger output. This enables subsystems to cross trigger with each other.</li>
+
+   <li class="li">Cross Trigger Matrix (CTM) - CTM controls the distribution of channel events. It provides Channel Interfaces for connection to either a CTI or CTM. This enables multiple ECTs to be connected to each other.</li>
+
+  </ul>
+
+  <p class="p" id="concept_dcf_jpd_ht__p_htp_rpd_ht">The figure below shows how CTIs and CTM are used in a generic setup.</p>
+
+  <br /><img class="image" id="concept_dcf_jpd_ht__image_rq4_5pd_ht" src="../images/cross_triggering.png" height="463" width="490" /><br />
+  <p class="p" id="concept_dcf_jpd_ht__p_m1h_ypd_ht">CTM forms an event broadcasting network with multiple channels. A CTI listens to one or more channels for an event, maps a received event into a trigger, and sends the trigger to one or more CoreSight components connected to the CTI. A CTI also combines and maps the triggers from the connected CoreSight components and broadcasts them as events on one or more channels. Through its register interface, each CTI can be configured to listen to specific channels for events or broadcast triggers as events to specific channels.</p>
+
+  <p class="p" id="concept_dcf_jpd_ht__p_n1h_ypd_ht">In the above example, there are four channels. The CTI at the top is configured to propagate the trigger event on Trigger Input 0 to Channel 0. Other CTIs can be configured to listen to this channel for events and broadcast the events through trigger outputs, to the debug components connected to these CTIs. CTIs also support channel gating such that selected channels can be turned off, without having to disable the channel to trigger I/O mapping.</p>
+
+ </div>
+
+<nav role="navigation" class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../SDK_tasks/task_enable_cross_triggering.html">Enable Cross-Triggering</a></strong><br />
+</li>
+<li class="link ulchildlink"><strong><a href="../SDK_references/reference_cross-trigerring-zynq.html">Cross-Triggering in Zynq</a></strong><br />
+</li>
+<li class="link ulchildlink"><strong><a href="../SDK_references/reference_cross-trigerring-zynqmp.html">Cross-Triggering in Zynq UltraScale+ MPSoC</a></strong><br />
+</li>
+</ul>
+
+<div class="linklist linklist relinfo relconcepts"><strong>Related concepts</strong><br />
+
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/sdk_u_m_tools.html" title="Xilinx Tools Menu">Xilinx Tools Menu</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/sdk_u_xilinx_pref.html" title="Xilinx SDK Preferences">Xilinx SDK Preferences</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_sdk_terminal.html" title="SDK Terminal">SDK Terminal</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_hier_ip_support.html" title="Hierarchical-IP, Referenced-BD and Packaged-BD Support">Hierarchical-IP, Referenced-BD and Packaged-BD Support</a></div></div>
+</nav></article></main><footer role="contentinfo"><div class="navfooter"><!----></div></footer></body>
+</html>

@@ -1,0 +1,183 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><meta name="robots" content="noindex, nofollow" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />        
+      <meta name="copyright" content="(C) Copyright 2017" /><meta name="DC.rights.owner" content="(C) Copyright 2017" /><meta name="DC.Type" content="reference" /><meta name="DC.Title" content="Debugging Applications on Zynq UltraScale+ MPSoC" /><meta name="abstract" content="" /><meta name="description" content="Note: For simplicity, this help page assumes that Zynq® UltraScale+™ MPSoC boots up in JTAG bootmode. The flow described here can be applied to other bootmodes too, with minor changes. When Zynq® ..." /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.tutorial" /><meta name="dictionary_reference" content="com.ibm.eou.tmtool.domainDictionary.core" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.cshelp" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.messaging" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.taxonomyContributions" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.troubleshooting" /><meta name="vis_node" content="com.ibm.ut.ditamap.domainDictionary.dita.concept" /><meta name="vis_labels" content="com.ibm.eou.tmtool.domainAttribute.core.name" /><meta name="vis_zoom" content="2" /><meta name="vis_view" content="com.ibm.eou.tmtool.representation.outline" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="reference_mrt_252_hv" /><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Debugging Applications on Zynq UltraScale+ MPSoC</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/skins/skin.css" /><script type="text/javascript"><!--
+            
+            var prefix = "../../index.html";
+            
+            --></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_mrt_252_hv">
+<header role="banner"><table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td style="width:75%;"><span class="topic_breadcrumb_links"></span></td><td><span id="topic_navigation_links" class="navheader"></span></td></tr></tbody></table></header><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1 breakbefore" id="ariaid-title1">Debugging Applications on Zynq UltraScale+ MPSoC</h1>
+
+    
+    <div class="body refbody"><p class="shortdesc"></p>
+
+        <section class="section"> <div class="note note"><span class="notetitle">Note:</span> For simplicity, this help page assumes that Zynq® UltraScale+™ MPSoC boots up in JTAG bootmode. The flow described here can be applied to other bootmodes too, with minor changes.</div>
+ <p class="p">When Zynq®
+        UltraScale+™ MPSoC boots up JTAG bootmode, all the A53 and R5 cores are
+        held in reset. You must clear resets on each core, before debugging on these cores. 'rst'
+        command in XSCT can be used to clear the resets. 'rst -processor' clears reset on an
+        individual processor core. 'rst -cores' clears resets on all the processor cores in the
+        group (APU or RPU), of which the current target is a child. For example, when A53 #0 is the
+        current target, rst -cores clears resets on all the A53 cores in APU.</p>
+ <p class="p">Below is an example XSCT session that demonstrates standalone application debug on <span class="keyword cmdname">A53
+          #0</span> core on Zynq UltraScale+ MPSoC. </p>
+ <div class="note note"><span class="notetitle">Note:</span> Similar steps can be used for debugging applications on R5 cores and also on A53
+            cores in 32 bit mode. However, the A53 cores must be put in 32 bit mode, before debugging the applications. This should be done after POR and before the A53 resets are cleared.</div>
+
+            <pre class="pre codeblock"><code>#connect to remote hw_server by specifying its url. 
+If the hardware is connected to a local machine,-url option and the &lt;url&gt; 
+are not needed. connect command returns the channel ID of the connection
+
+xsdb% connect -url TCP:xhdbfarmc7:3121
+tcfchan#0
+
+# List available targets and select a target through its id. 
+The targets are assigned IDs as they are discovered on the Jtag chain, 
+so the IDs can change from session to session. 
+For non-interactive usage, -filter option can be used to select a target, 
+instead of selecting the target through its ID
+
+xsdb% targets
+  1  PS TAP
+     2  PMU
+        3  MicroBlaze PMU (Sleeping. No clock)
+     4  PL
+  5  PSU
+     6  RPU (Reset)
+        7  Cortex-R5 #0 (RPU Reset)
+        8  Cortex-R5 #1 (RPU Reset)
+     9  APU (L2 Cache Reset)
+       10  Cortex-A53 #0 (APU Reset)
+       11  Cortex-A53 #1 (APU Reset)
+       12  Cortex-A53 #2 (APU Reset)
+       13  Cortex-A53 #3 (APU Reset)
+xsdb% targets 5
+
+# Configure the FPGA. When the active target is not a FPGA device, 
+the first FPGA device is configured
+
+xsdb% fpga ZCU102_HwPlatform/design_1_wrapper.bit
+100%    36MB   1.8MB/s  00:24
+
+# Source the psu_init.tcl script and run psu_init command to initialize PS
+xsdb% source ZCU102_HwPlatform/psu_init.tcl
+xsdb% psu_init
+
+# PS-PL power isolation must be removed and PL reset must be toggled, 
+before the PL address space can be accessed
+
+# Some delay is needed between these steps
+
+xsdb% after 1000
+xsdb% psu_ps_pl_isolation_removal
+xsdb% after 1000
+xsdb% psu_ps_pl_reset_config
+
+# Select A53 #0 and clear its reset
+
+# To debug 32 bit applications on A53, A53 core must be configured 
+to boot in 32 bit mode, before the resets are cleared
+
+# 32 bit mode can be enabled through CONFIG_0 register in APU module. 
+See ZynqMP TRM for details about this register
+
+xsdb% targets 10
+xsdb% rst -processor
+
+# Download the application program
+
+xsdb% dow dhrystone/Debug/dhrystone.elf
+Downloading Program -- dhrystone/Debug/dhrystone.elf
+                section, .text: 0xfffc0000 - 0xfffd52c3
+                section, .init: 0xfffd5300 - 0xfffd5333
+                section, .fini: 0xfffd5340 - 0xfffd5373
+                section, .note.gnu.build-id: 0xfffd5374 - 0xfffd5397
+                section, .rodata: 0xfffd5398 - 0xfffd6007
+                section, .rodata1: 0xfffd6008 - 0xfffd603f
+                section, .data: 0xfffd6040 - 0xfffd71ff
+                section, .eh_frame: 0xfffd7200 - 0xfffd7203
+                section, .mmu_tbl0: 0xfffd8000 - 0xfffd800f
+                section, .mmu_tbl1: 0xfffd9000 - 0xfffdafff
+                section, .mmu_tbl2: 0xfffdb000 - 0xfffdefff
+                section, .init_array: 0xfffdf000 - 0xfffdf007
+                section, .fini_array: 0xfffdf008 - 0xfffdf047
+                section, .sdata: 0xfffdf048 - 0xfffdf07f
+                section, .bss: 0xfffdf080 - 0xfffe197f
+                section, .heap: 0xfffe1980 - 0xfffe397f
+                section, .stack: 0xfffe3980 - 0xfffe697f
+100%    0MB   0.4MB/s  00:00   
+Setting PC to Program Start Address 0xfffc0000
+Successfully downloaded dhrystone/Debug/dhrystone.elf
+
+# Set a breakpoint at main()
+xsdb% bpadd -addr &amp;main
+0
+
+# Resume the processor core
+xsdb% con
+
+# Info message is displayed when the core hits the breakpoint
+Info: Cortex-A53 #0 (target 10) Running
+xsdb% Info: Cortex-A53 #0 (target 10) Stopped at 0xfffc0d5c (Breakpoint)
+
+# Registers can be viewed when the core is stopped
+xsdb% rrd
+  r0: 0000000000000000    r1: 0000000000000000    r2: 0000000000000000
+  r3: 0000000000000004    r4: 000000000000000f    r5: 00000000ffffffff
+  r6: 000000000000001c    r7: 0000000000000002    r8: 00000000ffffffff
+  r9: 0000000000000000   r10: 0000000000000000   r11: 0000000000000000
+ r12: 0000000000000000   r13: 0000000000000000   r14: 0000000000000000
+ r15: 0000000000000000   r16: 0000000000000000   r17: 0000000000000000
+ r18: 0000000000000000   r19: 0000000000000000   r20: 0000000000000000
+ r21: 0000000000000000   r22: 0000000000000000   r23: 0000000000000000
+ r24: 0000000000000000   r25: 0000000000000000   r26: 0000000000000000
+ r27: 0000000000000000   r28: 0000000000000000   r29: 0000000000000000
+ r30: 00000000fffc1f4c    sp: 00000000fffe5980    pc: 00000000fffc0d5c
+cpsr:         600002cd   vfp                     sys                  
+
+# Local variables can be viewed
+xsdb% locals
+Int_1_Loc       : 1113232
+Int_2_Loc       : 30
+Int_3_Loc       : 0
+Ch_Index        : 0
+Enum_Loc        : 0
+Str_1_Loc       : char[31]
+Str_2_Loc       : char[31]
+Run_Index       : 1061232
+Number_Of_Runs  : 2
+
+# Local variable value can be modified
+xsdb% locals Number_Of_Runs 100
+xsdb% locals Number_Of_Runs
+Number_Of_Runs  : 100
+
+# Global variables and be displayed, and its value can be modified
+xsdb% print Int_Glob
+Int_Glob  : 0
+xsdb% print -set Int_Glob 23
+xsdb% print Int_Glob
+Int_Glob  : 23
+
+# Expressions can be evaluated and its value can be displayed
+xsdb% print Int_Glob + 1 * 2
+Int_Glob + 1 * 2  : 25
+
+# Step over a line of source code
+xsdb% nxt
+Info: Cortex-A53 #0 (target 10) Stopped at 0xfffc0d64 (Step)
+
+# View stack trace
+xsdb% bt
+    0  0xfffc0d64 main()+8: ../src/dhry_1.c, line 79
+    1  0xfffc1f4c _startup()+84: xil-crt0.S, line 110</code></pre>
+        </section>
+
+    </div>
+
+</article></main><footer role="contentinfo"><div class="navfooter"><!----></div></footer></body>
+</html>

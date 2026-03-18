@@ -1,0 +1,84 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><meta name="robots" content="noindex, nofollow" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />        
+      <meta name="copyright" content="(C) Copyright 2017" /><meta name="DC.rights.owner" content="(C) Copyright 2017" /><meta name="DC.Type" content="task" /><meta name="DC.Title" content="Debugging Dom-0/Dom-U Kernel" /><meta name="abstract" content="" /><meta name="description" content="Boot Xen and Dom-0. For details on how to boot Xen and Dom-0, refer UG1144 - PetaLinux Tools Documentation: Reference Guide . Enable Xen awareness by enabling OS aware debug for Xen symbol file. ..." /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.tutorial" /><meta name="dictionary_reference" content="com.ibm.eou.tmtool.domainDictionary.core" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.cshelp" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.messaging" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.taxonomyContributions" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.troubleshooting" /><meta name="vis_node" content="com.ibm.ut.ditamap.domainDictionary.dita.concept" /><meta name="vis_labels" content="com.ibm.eou.tmtool.domainAttribute.core.name" /><meta name="vis_zoom" content="2" /><meta name="vis_view" content="com.ibm.eou.tmtool.representation.outline" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="task_ymx_m5j_2z" /><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Debugging Dom-0/Dom-U Kernel</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css" /><script type="text/javascript"><!--
+            
+            var prefix = "../index.html";
+            
+            --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="task_ymx_m5j_2z">
+<header role="banner"><table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td style="width:75%;"><span class="topic_breadcrumb_links"></span></td><td><span id="topic_navigation_links" class="navheader"></span></td></tr></tbody></table></header><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Debugging Dom-0/Dom-U Kernel</h1>
+
+    
+    <div class="body taskbody"><p class="shortdesc"></p>
+
+        <section class="section context"></section>
+
+        <ol class="ol steps" id="task_ymx_m5j_2z__steps_o1f_q5j_2z"><li class="li step stepexpand">
+                <span class="ph cmd">Boot Xen and Dom-0.</span>
+                <div class="itemgroup info">For details on how to boot Xen and Dom-0, refer <a class="xref" href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1144-petalinux-tools-reference-guide.pdf" target="_blank">UG1144 - PetaLinux Tools Documentation:
+                        Reference Guide</a>.</div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Enable Xen awareness by enabling OS aware debug for Xen symbol file. Symbol
+                    files are added to a process context to enable source level debugging. </span>
+                <div class="itemgroup info">For details on how to enable Xen awareness, refer <a class="xref" href="sdk_enable_xen_aware_debug.html">Enabling Xen Awareness</a>.</div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Debug Dom-0 kernel.</span>
+                <ol type="a" class="ol substeps" id="task_ymx_m5j_2z__substeps_pw1_z5j_2z">
+                    <li class="li substep substepexpand">
+                        <span class="ph cmd">Enable OS awareness on the Linux symbol file in the
+                                <span class="ph uicontrol">Debug</span> view for <span class="ph uicontrol">Dom-0
+                                VCPU</span> context. For details on OS aware debug, refer <a class="xref" href="../SDK_concepts/concept_osawaredebug.html">OS Aware Debugging</a>.</span>
+                        <div class="itemgroup info">
+                            <br /><img class="image" id="task_ymx_m5j_2z__image_j1x_4vj_2z" src="../images/debug_dom0_kernel.png" height="220" width="646" /><br />
+                        </div>
+                    </li>
+
+                    <li class="li substep substepexpand">
+                        <span class="ph cmd">Suspend the <span class="ph uicontrol">Dom-0 VCPU#0</span> core. You can now insert breakpoints, step in, step out, watch variables,
+                            stack trace or perform other source level debugging tasks.</span>
+                        <div class="itemgroup info">
+                            <br /><img class="image" id="task_ymx_m5j_2z__image_hmh_tvj_2z" src="../images/suspend_dom0_core.png" height="504" width="720" /><br />
+                        </div>
+                    </li>
+
+                </ol>
+
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Debug Dom-U Kernel.</span>
+                <ol type="a" class="ol substeps" id="task_ymx_m5j_2z__substeps_odb_wvj_2z">
+                    <li class="li substep">
+                        <span class="ph cmd">Copy the guest Linux images to Dom-0 file system.</span>
+                    </li>
+
+                    <li class="li substep">
+                        <span class="ph cmd">Create a Dom-U guest.</span>
+                    </li>
+
+                    <li class="li substep">
+                        <span class="ph cmd">Enable OS awareness on the Linux symbol file in the
+                                <span class="ph uicontrol">Debug</span> view for <span class="ph uicontrol">Dom-U
+                                VCPU</span> context. For details on OS aware debug, refer <a class="xref" href="../SDK_concepts/concept_osawaredebug.html">OS Aware Debugging</a>.</span>
+                    </li>
+
+                    <li class="li substep">
+                        <span class="ph cmd"> Suspend the <span class="ph uicontrol">Dom-U VCPU#0</span> core. You can now
+                            insert breakpoints, step in, step out, watch variables, stack trace or
+                            perform other source level debugging tasks.</span>
+                    </li>
+
+                </ol>
+
+            </li>
+</ol>
+
+    </div>
+
+</article></main><footer role="contentinfo"><div class="navfooter"><!----></div></footer></body>
+</html>

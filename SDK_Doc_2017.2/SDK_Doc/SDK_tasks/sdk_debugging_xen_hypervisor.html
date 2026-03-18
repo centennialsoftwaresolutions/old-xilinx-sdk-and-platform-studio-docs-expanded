@@ -1,0 +1,61 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><meta name="robots" content="noindex, nofollow" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />        
+      <meta name="copyright" content="(C) Copyright 2017" /><meta name="DC.rights.owner" content="(C) Copyright 2017" /><meta name="DC.Type" content="task" /><meta name="DC.Title" content="Debugging Hypervisor" /><meta name="abstract" content="" /><meta name="description" content="Boot Xen and Dom-0. For details on how to boot Xen and Dom-0, refer UG1144 - PetaLinux Tools Documentation: Reference Guide . Enable Xen awareness by enabling OS aware debug for Xen symbol file. ..." /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.tutorial" /><meta name="dictionary_reference" content="com.ibm.eou.tmtool.domainDictionary.core" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.cshelp" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.messaging" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.taxonomyContributions" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.troubleshooting" /><meta name="vis_node" content="com.ibm.ut.ditamap.domainDictionary.dita.concept" /><meta name="vis_labels" content="com.ibm.eou.tmtool.domainAttribute.core.name" /><meta name="vis_zoom" content="2" /><meta name="vis_view" content="com.ibm.eou.tmtool.representation.outline" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="task_skp_1lj_2z" /><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Debugging Hypervisor</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css" /><script type="text/javascript"><!--
+            
+            var prefix = "../index.html";
+            
+            --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="task_skp_1lj_2z">
+<header role="banner"><table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td style="width:75%;"><span class="topic_breadcrumb_links"></span></td><td><span id="topic_navigation_links" class="navheader"></span></td></tr></tbody></table></header><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Debugging Hypervisor</h1>
+
+    
+    <div class="body taskbody"><p class="shortdesc"></p>
+
+        <section class="section context"></section>
+
+        <ol class="ol steps" id="task_skp_1lj_2z__steps_khx_blj_2z"><li class="li step stepexpand">
+                <span class="ph cmd">Boot Xen and Dom-0.</span>
+                <div class="itemgroup info">For details on how to boot Xen and Dom-0, refer <a class="xref" href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1144-petalinux-tools-reference-guide.pdf" target="_blank">UG1144 - PetaLinux Tools Documentation:
+                        Reference Guide</a>.</div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Enable Xen awareness by enabling OS aware debug for Xen symbol file. Symbol
+                    files are added to a process context to enable source level debugging. </span>
+                <div class="itemgroup info">For details on how to enable Xen awareness, refer <a class="xref" href="sdk_enable_xen_aware_debug.html">Enabling Xen Awareness</a>.</div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">The <span class="ph uicontrol">Debug</span> view will be updated with the list of
+                    processes running on the Linux kernel, once the OS aware debugging is enabled.
+                    The processes list will be updated for the first time once the processor core is
+                    halted and dynamically there after (new processes will be added to the list and
+                    terminated processes will be removed).</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click <span class="ph uicontrol">Edit Source Lookup Path</span>  to set the path mappings
+                    for the selected debug configuration. Debugger uses path map to search and load
+                    symbols files for all executable files and shared libraries in the system.</span>
+                <div class="itemgroup info">
+                    <br /><img class="image" id="task_skp_1lj_2z__image_afm_gnj_2z" src="../images/debug_xen_hypervisor.png" height="518" width="616" /><br />
+                    <div class="note note"><span class="notetitle">Note:</span> <span class="ph uicontrol">Path Map</span> is used for both symbols and source
+                        lookups.</div>
+
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Add a breakpoint or suspend the core. As soon as the breakpoint is hit, the debug view is updated with all the
+                    information.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">You can now insert breakpoints, step in, step out, watch variables, stack trace
+                    or perform other source level debugging tasks.</span>
+            </li>
+</ol>
+
+    </div>
+
+</article></main><footer role="contentinfo"><div class="navfooter"><!----></div></footer></body>
+</html>

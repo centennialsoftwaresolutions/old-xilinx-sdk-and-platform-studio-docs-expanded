@@ -1,0 +1,70 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><meta name="robots" content="noindex, nofollow" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />        
+      <meta name="copyright" content="(C) Copyright 2017" /><meta name="DC.rights.owner" content="(C) Copyright 2017" /><meta name="DC.Type" content="task" /><meta name="DC.Title" content="Enabling Xen Awareness" /><meta name="abstract" content="" /><meta name="description" content="This section describes setting up the Xen aware debug for Zynq® UltraScale+™ MPSoC devices running Linux from SD card, using the SDK IDE. It is assumed that the following preqequisites have been ..." /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.tutorial" /><meta name="dictionary_reference" content="com.ibm.eou.tmtool.domainDictionary.core" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.cshelp" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.messaging" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.taxonomyContributions" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.troubleshooting" /><meta name="vis_node" content="com.ibm.ut.ditamap.domainDictionary.dita.concept" /><meta name="vis_labels" content="com.ibm.eou.tmtool.domainAttribute.core.name" /><meta name="vis_zoom" content="2" /><meta name="vis_view" content="com.ibm.eou.tmtool.representation.outline" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="task_qsv_25d_2z" /><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Enabling Xen Awareness</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css" /><script type="text/javascript"><!--
+            
+            var prefix = "../index.html";
+            
+            --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="task_qsv_25d_2z">
+<header role="banner"><table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td style="width:75%;"><span class="topic_breadcrumb_links"></span></td><td><span id="topic_navigation_links" class="navheader"></span></td></tr></tbody></table></header><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Enabling Xen Awareness</h1>
+
+    
+    <div class="body taskbody"><p class="shortdesc"></p>
+
+        <section class="section context">
+            <p class="p">This section describes setting up the Xen aware debug for Zynq®
+                UltraScale+™ MPSoC devices running Linux from SD card, using the
+                SDK IDE. It is assumed that the following preqequisites have been satisfied:</p>
+
+            <div class="p"><ul class="ul" id="task_qsv_25d_2z__ul_q5x_2wd_2z">
+                    <li class="li">You have PetaLinux Tools software platform ready for building a Linux system
+                        customized to your hardware platform.</li>
+
+                    <li class="li">You have created a PetaLinux project from the ZCU102 reference BSP. The Xen
+                        related prebuilts are made available in
+                            <span class="ph filepath">&lt;petalinux-install&gt;/pre-built/linux/images</span>
+                        directory.</li>
+
+                </ul>
+For details on how to boot Xen and Dom-0, refer <a class="xref" href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1144-petalinux-tools-reference-guide.pdf" target="_blank">UG1144 - PetaLinux Tools Documentation: Reference
+                    Guide</a>.</div>
+
+        </section>
+
+        <ol class="ol steps"><li class="li step stepexpand">
+                <span class="ph cmd">Launch the Xilinx SDK IDE.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select <span class="ph menucascade"><span class="ph uicontrol">Window</span> &gt; <span class="ph uicontrol">Open Perspective</span> &gt; <span class="ph uicontrol">Debug</span></span>.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select <span class="ph menucascade"><span class="ph uicontrol">Run</span> &gt; <span class="ph uicontrol">Debug Configurations</span></span>.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">In the <span class="ph uicontrol">Debug Configurations</span> dialog box, select
+                        <span class="ph uicontrol">Xilinx C/C++ application</span> and click the
+                    <span class="ph uicontrol">New</span> button (<img class="image" id="task_qsv_25d_2z__image_uqk_ynz_1t" src="../images/new_icon.png" />).</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click <span class="ph uicontrol">Debug</span>. Debugging begins with the processors in the
+                    running state.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select the <span class="ph uicontrol">Enable Linux OS Awareness</span> option from the
+                        <span class="ph uicontrol">Debug</span> view in the processor context.</span>
+                <div class="itemgroup info">
+                    <br /><img class="image" id="task_qsv_25d_2z__image_wqk_ynz_1t11" src="../images/enable_linux_os_awareness_xen.png" height="296" width="789" /><br />
+                    <p class="p">Xen can be seen as a separate target in the debug view. Domain#0 is the host OS (Dom-0) running on one VCPU (VCPU#0) and Domain#1 is the guest domain (Dom-U) running on one VCPU.</p>
+
+                </div>
+            </li>
+</ol>
+
+    </div>
+
+</article></main><footer role="contentinfo"><div class="navfooter"><!----></div></footer></body>
+</html>
