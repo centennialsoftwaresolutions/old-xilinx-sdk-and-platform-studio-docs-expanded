@@ -1,0 +1,93 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="description" content="Xilinx System Debugger Command-line Interface (XSDB) is created to give a user-friendly, interactive, and scriptable command line interface to Xilinx hw_server and other incarnations of TCF servers ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="concept"></meta><meta name="DC.Title" content="Xilinx System Debugger Command-line Interface (XSDB)"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_xsd_xsdb_connections.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_xsd_xsdb_registers.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_xsd_xsdb_running.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_xsd_xsdb_memory.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_xsd_xsdb_download.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_xsd_xsdb_reset.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_xsd_xsdb_breakpoints.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_xsd_xsdb_streams.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_xsd_xsdb_misc.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_xsd_xsdb_jtag.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/sdk_c_xsd_xmd_xsdb.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_working_with_xsdb.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="sdk_c_xsd_xsdb_commands"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Xilinx System Debugger Command-line Interface (XSDB)</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script><meta name="robots" content="noindex, nofollow" /></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="sdk_c_xsd_xsdb_commands">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+
+<h1 class="title topictitle1">Xilinx System Debugger Command-line Interface (XSDB)</h1>
+
+<div class="body conbody">
+  <p class="p" id="sdk_c_xsd_xsdb_commands__p_dly_s13_zs">Xilinx System Debugger Command-line Interface (XSDB) is created to give a user-friendly, interactive, and scriptable command line interface to Xilinx hw_server and other incarnations of TCF servers used by Xilinx. You can take full advantage of the features supported by the TCF servers as XSDB interacts with the TCF servers. A major source of inspiration for the commands in XSDB comes from Xilinx Microprocessor Debugger (XMD). As with XMD, the XSDB scripting language is based on the Tools Command Language (Tcl).</p>
+
+    <div class="note note"><span class="notetitle">Note:</span> XMD has been deprecated and will be removed in future versions of the Xilinx Software Development Kit (SDK). XSDB replaces XMD and provides additional functionality. We recommend you switch to XSDB for command-line debugging.</div>
+    
+  <p class="p" id="sdk_c_xsd_xsdb_commands__p_ely_s13_zs">XSDB is designed to do the following:</p>
+
+  <ul class="ul" id="sdk_c_xsd_xsdb_commands__ul_fly_s13_zs">
+   <li class="li">Allow interaction with the whole system</li>
+
+   <li class="li">Support a software engineer's view of both hardened and programmable logic</li>
+
+   <li class="li">Provide performance measurement</li>
+
+   <li class="li">Integrate with hw_server and other incarnations of TCF servers</li>
+
+  </ul>
+
+  <p class="p" id="sdk_c_xsd_xsdb_commands__p_gly_s13_zs">The figure below illustrates how XSDB can communicate with different types of TCF servers.</p>
+
+  <br xmlns="http://www.w3.org/1999/xhtml" /><img class="image" id="sdk_c_xsd_xsdb_commands__sdk_c_xsd_over_1" src="../images/sdk_c_xsd_over_1.png" height="217" width="409" alt="XSDB comunication with different types of TCF servers"></img><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="p">The features supported by XSDB are broadly classified into command categories. Each category is described in the following topics:<ul class="ul" id="sdk_c_xsd_xsdb_commands__ul_orv_nzy_fr">
+    <li class="li"><a class="xref" href="../SDK_references/sdk_u_xsd_xsdb_connections.html">connections - Target Connection Management</a></li>
+
+    <li class="li"><a class="xref" href="../SDK_references/sdk_u_xsd_xsdb_registers.html">registers - Target Registers</a></li>
+
+    <li class="li"><a class="xref" href="../SDK_references/sdk_u_xsd_xsdb_running.html">running - Program Execution</a></li>
+
+    <li class="li"><a class="xref" href="../SDK_references/sdk_u_xsd_xsdb_memory.html">memory - Target Memory</a></li>
+
+    <li class="li"><a class="xref" href="../SDK_references/sdk_u_xsd_xsdb_download.html">download - Target Download FPGA/BINARY</a></li>
+
+    <li class="li"><a class="xref" href="../SDK_references/sdk_u_xsd_xsdb_reset.html">reset - Target Reset</a></li>
+
+    <li class="li"><a class="xref" href="../SDK_references/sdk_u_xsd_xsdb_breakpoints.html">breakpoints - Target Breakpoints/Watchpoints</a></li>
+
+    <li class="li"><a class="xref" href="../SDK_references/sdk_u_xsd_xsdb_streams.html">streams - Jtag UART</a></li>
+
+                <li class="li"><a class="xref" href="../SDK_references/sdk_u_xsd_xsdb_misc.html">miscellaneous</a></li>
+
+    <li class="li"><a class="xref" href="../SDK_references/sdk_u_xsd_xsdb_jtag.html">jtag - JTAG Access</a></li>
+
+   </ul>
+</div>
+
+</div>
+
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../SDK_references/sdk_u_xsd_xsdb_connections.html">connections - Target Connection Management</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../SDK_references/sdk_u_xsd_xsdb_registers.html">registers - Target Registers</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../SDK_references/sdk_u_xsd_xsdb_running.html">running - Program Execution</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../SDK_references/sdk_u_xsd_xsdb_memory.html">memory - Target Memory</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../SDK_references/sdk_u_xsd_xsdb_download.html">download - Target Download FPGA/BINARY</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../SDK_references/sdk_u_xsd_xsdb_reset.html">reset - Target Reset</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../SDK_references/sdk_u_xsd_xsdb_breakpoints.html">breakpoints - Target Breakpoints/Watchpoints</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../SDK_references/sdk_u_xsd_xsdb_streams.html">streams - Jtag UART</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../SDK_references/sdk_u_xsd_xsdb_misc.html">miscellaneous</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../SDK_references/sdk_u_xsd_xsdb_jtag.html">jtag - JTAG Access</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../SDK_concepts/sdk_c_xsd_xmd_xsdb.html">XMD vs XSDB</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../SDK_concepts/concept_working_with_xsdb.html">Working with XSDB</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+</ul>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

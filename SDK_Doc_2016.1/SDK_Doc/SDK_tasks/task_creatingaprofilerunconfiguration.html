@@ -1,0 +1,54 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="description" content="To profile an application, you must create a configuration that captures the settings for profiling the application. Once the configuration has been created, it can be used to again debug the ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Creating a Profile Run Configuration"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_run_profiler.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_settinguphwforprofiling.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_settingupswforprofiling.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_settinguptheboardsupportpackage.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_settingupthesoftwareapplication.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_launchingprofilingview.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="creatingaprofilerunconfiguration"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Creating a Profile Run Configuration</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script><meta name="robots" content="noindex, nofollow" /></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="creatingaprofilerunconfiguration">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+
+<h1 class="title topictitle1">Creating a Profile Run Configuration</h1>
+
+<div class="body taskbody"><div class="section context">
+<p class="p">To profile an application, you must create a configuration that captures
+the settings for profiling the application. Once the configuration has
+been created, it can be used to again debug the application.</p>
+
+</div>
+
+    <ol class="ol steps"><li class="li step"><span class="ph cmd">In the C/C++ Projects View, select the application to debug.</span></li>
+<li class="li step"><span class="ph cmd">Select <strong class="ph b">Run &gt; Run.</strong></span></li>
+<li class="li step"><span class="ph cmd">In the Run Configurations dialog box, expand <strong class="ph b">Xilinx C/C++ ELF.</strong></span></li>
+<li class="li step"><span class="ph cmd">Click <strong class="ph b">New. </strong>The name of the new project is displayed in the
+Configurations box. The default name is the name of the project.</span></li>
+<li class="li step"><span class="ph cmd">Make sure the ELF file generated using profile configuration is selected
+in the C/C++ Application field.</span></li>
+<li class="li step"><span class="ph cmd">In the Profiler tab, do the following:</span></li>
+<li class="li step"><span class="ph cmd">Click to select the <strong class="ph b">Enable Profiling</strong> check box.</span></li>
+<li class="li step"><span class="ph cmd">Specify the <strong class="ph b">Scratch Memory Address to Collect Profile Data</strong>
+to use for profiling in hex. This is a valid system memory address that
+is not used by the software application.</span></li>
+<li class="li step"><span class="ph cmd">Use the defaults for the <strong class="ph b">Sampling Frequency</strong> and <strong class="ph b">Histogram
+Bin Size</strong> values.</span></li>
+<li class="li step"><span class="ph cmd">Use the default settings for the other tabs and click <strong class="ph b">Run.</strong></span></li>
+</ol>
+
+</div>
+<div class="related-links"><div class="relinfo relconcepts"><strong>Related concepts</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_settinguphwforprofiling.html" title="Setting Up the Hardware for Profiling">Setting Up the Hardware for Profiling</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_settingupswforprofiling.html" title="Setting Up the Software for Profiling">Setting Up the Software for Profiling</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_launchingprofilingview.html" title="Viewing the Profiling Results">Viewing the Profiling Results</a></div>
+</div>
+<div class="relinfo reltasks"><strong>Related tasks</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_run_profiler.html" title="Specifying Profiler Configuration">Specifying Profiler Configuration</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/task_settinguptheboardsupportpackage.html" title="Setting up the Board Support Package">Setting up the Board Support Package</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/task_settingupthesoftwareapplication.html" title="Setting Up the Software Application">Setting Up the Software Application</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

@@ -1,0 +1,801 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="In Zynq ® UltraScale+™ MPSoC, ECT is configured with four broadcast channels, nine CTIs, and a CTM. The table below shows the trigger input and trigger output connections of each CTI. These are ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="Cross-Triggering in Zynq UltraScale+ MPSoC"></meta><meta name="abstract" content=""></meta><meta name="description" content=""></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/reference_cross-trigerring-zynq.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_ktx_lnr_gv"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Cross-Triggering in Zynq UltraScale+ MPSoC</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script><meta name="robots" content="noindex, nofollow" /></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_ktx_lnr_gv">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Cross-Triggering in Zynq UltraScale+ MPSoC</h1>
+
+  
+  <div class="body refbody"><p class="shortdesc"></p>
+
+    <div class="section">
+      <p class="p">In Zynq<sup>®</sup> UltraScale+™ MPSoC, ECT is configured with four broadcast channels, nine CTIs, and a CTM. The table below shows the trigger input and trigger output connections of each CTI. These are hard-wired connections. For more details, refer to <a class="xref" href="http://www.xilinx.com/cgi-bin/docs/ndoc?t=user_guides;d=ug1085-zynq-ultrascale-trm.pdf" target="_blank">Zynq UltraScale+ MPSoC Technical Reference Manual</a>.</p>
+
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="reference_ktx_lnr_gv__table_j1g_brd_htmps" class="table" frame="border" border="1" rules="all">
+        
+        
+        <thead class="thead" align="left">
+          <tr class="row">
+            <th class="entry" valign="top" id="d21494e39"><strong class="ph b">CTI Trigger Port</strong></th>
+
+            <th class="entry" valign="top" id="d21494e43"><strong class="ph b">Signal</strong></th>
+
+          </tr>
+
+        </thead>
+
+        <tbody class="tbody">
+                <tr class="row">
+                    <td class="entry" colspan="2" valign="top" headers="d21494e39 d21494e43 "><p class="p"><strong class="ph b">CTI 0</strong>(soc_debug_fpd)</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 0</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">ETF 1 FULL</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 1</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">ETF 1 ACQCOMP</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 2</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">ETF 2 FULL</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 3</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">ETF 2 ACQCOMP</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 4</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">ETR FULL</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 5</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">ETR ACQCOMP</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 6</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 7</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 0</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">ETF 1 FLUSHIN</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 1</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">ETF 1 TRIGIN</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 2</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">ETF 2 FLUSHIN</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 3</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">ETF 2 TRIGIN</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 4</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">ETR FLUSHIN</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 5</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">ETR TRIGIN</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 6</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">TPIU FLUSHIN</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 7</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">TPIU TRIGIN</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" colspan="2" valign="top" headers="d21494e39 d21494e43 "><p class="p"><strong class="ph b">CTI 1</strong>(soc_debug_fpd)</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 0</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">FTM</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 1</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">FTM</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 2</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">FTM</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 3</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">FTM</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 4</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">STM TRIGOUTSPTE</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 5</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">STM TRIGOUTSW</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 6</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">STM TRIGOUTHETE</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 7</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">STM ASYNCOUT</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 0</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">FTM</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 1</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">FTM</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 2</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">FTM</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 3</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">FTM</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 4</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">STM HWEVENTS</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 5</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">STM HWEVENTS</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 6</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 7</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">HALT SYSTEM TIMER</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" colspan="2" valign="top" headers="d21494e39 d21494e43 "><p class="p"><strong class="ph b">CTI 2</strong>(soc_debug_fpd)</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 0</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">ATM 0</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 1</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">ATM 1</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 2</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 3</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 4</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 5</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 6</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 7</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 0</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">ATM 0</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 1</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">ATM 1</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 2</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 3</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 4</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 5</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 6</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 7</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">picture debug start</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" colspan="2" valign="top" headers="d21494e39 d21494e43 "><p class="p"><strong class="ph b">CTI 0,1</strong> (RPU)</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 0</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">DBGTRIGGER</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 1</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">PMUIRQ</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 2</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">ETMEXTOUT[0]</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 3</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">ETMEXTOUT[1]</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 4</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">COMMRX</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 5</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">COMMTX</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 6</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">ETM TRIGGER</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 7</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 0</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">EDBGRQ</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 1</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">ETMEXTIN[0]</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 2</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">ETMEXTIN[1]</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 3</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">-(CTIIRQ, not connected)</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 4</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 5</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 6</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 7</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">DBGRESTART</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" colspan="2" valign="top" headers="d21494e39 d21494e43 "><p class="p"><strong class="ph b">CTI 0,1,2,3</strong> (APU)</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 0</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">DBGTRIGGER</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 1</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">PMUIRQ</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 2</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 3</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 4</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">ETMEXTOUT[0]</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 5</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">ETMEXTOUT[1]</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 6</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">ETMEXTOUT[2]</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">IN 7</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">ETMEXTOUT[3]</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 0</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">EDBGRQ</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 1</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">DBGRESTART</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 2</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">CTIIRQ</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 3</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 4</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">ETMEXTIN[0]</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 5</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">ETMEXTIN[1]</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 6</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">ETMEXTIN[2]</p>
+</td>
+
+                </tr>
+
+                <tr class="row">
+                    <td class="entry" valign="top" headers="d21494e39 "><p class="p">OUT 7</p>
+</td>
+
+                    <td class="entry" valign="top" headers="d21494e43 "><p class="p">ETMEXTIN[3]</p>
+</td>
+
+                </tr>
+       
+        </tbody>
+
+      </table>
+</div>
+          
+    </div>
+
+  </div>
+
+<div class="related-links"><div class="relinfo relconcepts"><strong>Related concepts</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/reference_cross-trigerring-zynq.html" title="Cross-Triggering in Zynq">Cross-Triggering in Zynq</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="description" content="SDK allows creation of projects that contain an ELF file. With a few manual steps, this allows debugging of the ELF file without having to do other steps, such as specifying the hardware platform, ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="concept"></meta><meta name="DC.Title" content="I want to debug an ELF file using SDK without creating a C/C++ Project. How do I do that?"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="ck332372"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>I want to debug an ELF file using SDK without creating a C/C++ Project. How do I do that?</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script><meta name="robots" content="noindex, nofollow" /></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="ck332372">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+
+<h1 class="title topictitle1">I want to debug an ELF file using SDK without creating
+a C/C++ Project. How do I do that?</h1>
+
+<div class="body conbody">
+<p class="p">SDK allows creation of projects that contain an ELF file. With a few
+manual steps, this allows debugging of the ELF file without having to
+do other steps, such as specifying the hardware platform, creating a
+BSP, and creating an C/C++ project. The steps to follow are:</p>
+
+<ol class="ol">
+<li class="li">Select <strong class="ph b">File &gt; Import &gt; C/C++ &gt; C/C++ Executable.</strong></li>
+
+
+<li class="li">Navigate to the ELF file that you want to debug.</li>
+
+<li class="li">Choose the appropriate binary parser (such as MicroBlaze™ or ARM).
+Then allow the wizard to create a new project with this ELF file.</li>
+
+<li class="li">Do not select the option to create a debug configuration (this will
+create a C/C++ debug configuration, whereas we need a Xilinx C/C++ configuration).</li>
+
+<li class="li">Create a Xilinx C/C++ Debug configuration. For this project, the only
+tab that is valid is the Remote Debug options tab. Specify the gdbserver
+port and hostname. See the previous question for more information about
+Remote Debug.</li>
+
+<li class="li">Click <strong class="ph b">debug</strong> to start debugging the ELF file.</li>
+
+</ol>
+
+</div>
+
+<div class="navfooter"><!----></div>
+</body>
+</html>

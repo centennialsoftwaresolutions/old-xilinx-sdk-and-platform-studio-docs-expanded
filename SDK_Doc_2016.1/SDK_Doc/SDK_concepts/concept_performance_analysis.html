@@ -1,0 +1,118 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Performance analysis in SDK provides functionality for viewing and analyzing different types of performance data. Its goal is to provide views, graphs, metrics, etc. to help extract useful information ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="concept"></meta><meta name="DC.Title" content="Performance Analysis"></meta><meta name="abstract" content=""></meta><meta name="description" content=""></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_working_with_performance_analysis_perspective.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/sdk_c_spm_over_spm.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="concept_ill_q1j_ht"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Performance Analysis</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script><meta name="robots" content="noindex, nofollow" /></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="concept_ill_q1j_ht">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+ <h1 class="title topictitle1">Performance Analysis</h1>
+
+ 
+ <div class="body conbody"><p class="shortdesc"></p>
+
+  <p class="p" id="concept_ill_q1j_ht__p_v4l_zkg_ht">Performance analysis in SDK provides functionality for viewing and analyzing different types of performance data. Its goal is to provide views, graphs, metrics, etc. to help extract useful information from the data, in a way that is more user-friendly and informative than huge text dumps.</p>
+
+  <p class="p" id="concept_ill_q1j_ht__p_cdz_1kg_ht">Performance analysis provides the following features:</p>
+
+  <ul class="ul" id="concept_ill_q1j_ht__ul_qlt_2kg_ht">
+   <li class="li">Support for viewing ARM data.</li>
+
+   <li class="li">Support for viewing APM data with PS and MDM as master.</li>
+
+   <li class="li">Support for viewing MicroBlaze data.</li>
+
+   <li class="li">Support for viewing and analyzing live data.</li>
+
+   <li class="li">Support for offline viewing of data.</li>
+
+   <li class="li">Support for zooming out/in of the data.</li>
+
+   <li class="li">Event filtering and searching.</li>
+
+   <li class="li">Import and export of trace packages.</li>
+
+  </ul>
+
+  <p class="p">The Performance analysis feature in SDK supports data collection from AXI Performance Monitor (APM) Event Counters, ARM Performance Monitor Unit (PMU) from a Zynq®-7000 AP SoC Processing System, and MicroBlaze Performance Monitoring counters. For an example usage of performance monitoring on Zynq, refer <a class="xref" href="sdk_c_spm_over_spm.html">System Performance Modeling</a>. For a MicroBlaze design, APM can be used in a similar way as SPM.</p>
+
+  <div class="p" id="concept_ill_q1j_ht__p_pcd_zdm_dt">To collect MicroBlaze performance data, the performance monitoring counters must be enabled in the Vivado Hardware design. For more information, refer <a class="xref" href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug984-vivado-microblaze-ref.pdf" target="_blank">MicroBlaze Processor Reference Guide (UG984)</a>. SDK monitors the following events for MicroBlaze.<ul class="ul" id="concept_ill_q1j_ht__ul_scw_32m_dt">
+   <li class="li"> Number of clock cycles </li>
+
+   <li class="li"> Any valid instruction executed </li>
+
+   <li class="li">Read or write data request from/to data cache</li>
+
+   <li class="li">Read or write data cache hit </li>
+
+   <li class="li">Pipeline stalled </li>
+
+   <li class="li">Instruction cache latency for memory read </li>
+
+  </ul>
+</div>
+
+  <p class="p">The data is collected in SDK in real-time. The values from these counters
+   are sampled every 10 milliseconds. These values are used to calculate
+   metrics shown in the <strong class="ph b">Performance Counters</strong> view.</p>
+
+  <p class="p">SDK monitors the following PMU events for each Cortex-A9 CPU:</p>
+
+  <ul class="ul">
+   <li class="li">Data cache refill</li>
+
+   <li class="li">Data cache access</li>
+
+   <li class="li">Data stall</li>
+
+   <li class="li">Write stall</li>
+
+   <li class="li">Instruction  rename</li>
+
+   <li class="li">Branch miss</li>
+
+  </ul>
+
+  <p class="p">The following two Level-2 cache controller (L2C-PL330) counters are monitored:</p>
+
+  <ul class="ul">
+   <li class="li">Number of cache hits</li>
+
+   <li class="li">Number of cache accesses</li>
+
+  </ul>
+
+  <p class="p">The following APM counters for each HP and ACP port are monitored:</p>
+
+  <ul class="ul">
+   <li class="li">Write Byte Count</li>
+
+   <li class="li">Read Byte Count</li>
+
+   <li class="li">Write Transaction Count</li>
+
+   <li class="li">Total Write Latency</li>
+
+   <li class="li">Read Transaction Count</li>
+
+   <li class="li">Total Read Latency</li>
+
+  </ul>
+
+ </div>
+
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../SDK_concepts/concept_working_with_performance_analysis_perspective.html">Working with Performance Analysis Perspective</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../SDK_concepts/sdk_c_spm_over_spm.html">System Performance Modeling</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+</ul>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

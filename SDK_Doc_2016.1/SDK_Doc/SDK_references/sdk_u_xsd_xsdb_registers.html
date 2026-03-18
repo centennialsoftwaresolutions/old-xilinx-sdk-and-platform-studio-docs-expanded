@@ -1,0 +1,62 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="description" content="The Xilinx System Debugger CLI (XSDB) Registers commands can be used to Read and Write to the target registers. The following commands are available: rrd rwr These commands can access General Purpose ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="registers - Target Registers"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_xsd_xsdb_connections.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_xsd_xsdb_running.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_xsd_xsdb_memory.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_xsd_xsdb_download.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_xsd_xsdb_reset.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_xsd_xsdb_breakpoints.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_xsd_xsdb_streams.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_xsd_xsdb_misc.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_xsd_xsdb_jtag.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/sdk_c_xsd_xmd_xsdb.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_working_with_xsdb.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/reference_rrd.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/reference_rwr.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="sdk_u_xsd_xsdb_registers"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>registers - Target Registers</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script><meta name="robots" content="noindex, nofollow" /></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="sdk_u_xsd_xsdb_registers">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+
+<h1 class="title topictitle1">registers - Target Registers</h1>
+
+<div class="body">
+<p class="p">The Xilinx System Debugger CLI (XSDB) Registers commands can be used
+to Read and Write to the target registers.</p>
+
+<p class="p">The following commands are available:</p>
+
+<ul class="ul">
+<li class="li"><a class="xref" href="reference_rrd.html#sdk_u_xsd_xsdb_registers">rrd</a></li>
+
+<li class="li"><a class="xref" href="reference_rwr.html#sdk_u_xsd_xsdb_registers">rwr</a></li>
+
+</ul>
+
+<p class="p">These commands can access General Purpose registers, System registers
+like ARM Coprocessor registers. IOU registers in Zynq-7000 AP SoC devices
+can be accessed by running these commands on 'APU target'.</p>
+
+<p class="p">'rrd' can also read register definitions, instead of their values.</p>
+
+</div>
+
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../SDK_references/reference_rrd.html">rrd</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../SDK_references/reference_rwr.html">rwr</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+</ul>
+<div class="relinfo relconcepts"><strong>Related concepts</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/sdk_c_xsd_xmd_xsdb.html" title="XMD vs XSDB">XMD vs XSDB</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_working_with_xsdb.html" title="Working with XSDB">Working with XSDB</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/sdk_u_xsd_xsdb_connections.html" title="connections - Target Connection Management">connections - Target Connection Management</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/sdk_u_xsd_xsdb_running.html" title="running - Program Execution">running - Program Execution</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/sdk_u_xsd_xsdb_memory.html" title="memory - Target Memory">memory - Target Memory</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/sdk_u_xsd_xsdb_download.html" title="download - Target Download FPGA/BINARY">download - Target Download FPGA/BINARY</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/sdk_u_xsd_xsdb_reset.html" title="reset - Target Reset">reset - Target Reset</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/sdk_u_xsd_xsdb_breakpoints.html" title="breakpoints - Target Breakpoints/Watchpoints">breakpoints - Target Breakpoints/Watchpoints</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/sdk_u_xsd_xsdb_streams.html" title="streams - Jtag UART">streams - Jtag UART</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/sdk_u_xsd_xsdb_misc.html" title="miscellaneous">miscellaneous</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/sdk_u_xsd_xsdb_jtag.html" title="jtag - JTAG Access">jtag - JTAG Access</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

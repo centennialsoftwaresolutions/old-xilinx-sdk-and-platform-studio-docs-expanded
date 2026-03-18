@@ -1,0 +1,122 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="description" content="Description Configure and run the GNU profiler. Usage profile &lt;options&gt; Configure and run the GNU profiler. The profiling needs to enabled while building bsp and application to be profiled. Options ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="profile"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/reference_backtrace.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/reference_con.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/reference_stop.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/reference_state.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/reference_stp.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/reference_stpi.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/reference_nxt.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/reference_nxti.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/reference_stpout.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/reference_dis.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/reference_print.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/reference_locals.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="sdk_u_xsd_xsdb_profile"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>profile</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script><meta name="robots" content="noindex, nofollow" /></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="sdk_u_xsd_xsdb_profile">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+<h1 class="title topictitle1">profile</h1>
+
+<div class="body">
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="sdk_u_xsd_xsdb_profile__dj96842281" class="table" frame="border" border="1" rules="all">
+
+
+
+<tbody class="tbody">
+<tr class="row">
+<td class="entry" valign="top" width="79pt"><p class="p"><strong class="ph b">Description</strong></p>
+</td>
+
+<td class="entry" colspan="2" valign="top"><p class="p">Configure and run the GNU profiler.</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="79pt">
+                            <p class="p"><strong class="ph b">Usage</strong></p>
+
+                        </td>
+
+<td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b"> profile &lt;options&gt;</strong></samp></td>
+
+<td class="entry" valign="top" width="282pt">Configure and run the GNU profiler. The profiling needs to enabled while building bsp and application to be profiled.</td>
+
+</tr>
+
+                    
+                    <tr class="row">
+                        <td class="entry" rowspan="3" valign="top" width="79pt">
+                            <p class="p" id="sdk_u_xsd_xsdb_profile__p_qts_vhc_ht81"><strong class="ph b">Options</strong></p>
+
+                        </td>
+
+                        <td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b"> -freq</strong></samp></td>
+
+                        <td class="entry" valign="top" width="282pt">Sampling frequency.</td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b"> -scratchaddr </strong></samp></td>
+
+                        <td class="entry" valign="top" width="282pt">
+                            <p class="p" id="sdk_u_xsd_xsdb_profile__p_llb_13c_ht81">Scratch memory for storing the profiling related data. It needs to be assigned carefully, as it should not overlap with the program data.</p>
+
+                        </td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" width="141pt"><samp class="ph codeph"><strong class="ph b"> -out</strong></samp></td>
+
+                        <td class="entry" valign="top" width="282pt">Name of the output file for writing the profiling data. This option also runs the profiler and collects the data.<p class="p" id="sdk_u_xsd_xsdb_profile__p_al4_mfx_gv81">Default <span class="keyword cmdname">gmon.out</span> is written, if not specified.</p>
+</td>
+
+                    </tr>
+
+                    
+<tr class="row">
+<td class="entry" rowspan="2" valign="top" width="79pt">
+                            <p class="p"><strong class="ph b">Examples</strong></p>
+
+                        </td>
+
+    <td class="entry" valign="top" width="141pt"><samp class="ph codeph">profile -freq 10000 -scratchaddr 0</samp></td>
+
+    <td class="entry" valign="top" width="282pt">Configure the profiler with a sampling frequency of 10000 and scratch memory at 0x0 </td>
+
+</tr>
+
+<tr class="row">
+    <td class="entry" valign="top" width="141pt"><p class="p"><samp class="ph codeph">profile -out testgmon.out</samp></p>
+</td>
+
+    <td class="entry" valign="top" width="282pt"><p class="p">Output the profile data in <span class="keyword cmdname">testgmon.out</span>.</p>
+</td>
+
+</tr>
+
+
+
+</tbody>
+
+</table>
+</div>
+
+</div>
+
+<div class="related-links"><div class="relinfo"><strong>Related information</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/reference_backtrace.html" title="backtrace">backtrace</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/reference_con.html" title="con">con</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/reference_stop.html" title="stop">stop</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/reference_state.html" title="state">state</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/reference_stp.html" title="stp">stp</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/reference_stpi.html" title="stpi">stpi</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/reference_nxt.html" title="nxt">nxt</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/reference_nxti.html" title="nxti">nxti</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/reference_stpout.html" title="stpout">stpout</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/reference_dis.html" title="dis">dis</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/reference_print.html" title="print">print</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/reference_locals.html" title="locals">locals</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

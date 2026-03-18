@@ -1,0 +1,61 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="description" content="The final step in creating an executable from object files and libraries is linking. This is performed by a linker that accepts linker command language files called linker scripts. The primary purpose ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="concept"></meta><meta name="DC.Title" content="Linker Scripts"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_sdk_build_configurations.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_sdkhelp_makefiles.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_generatingalinkerscriptforanapplication.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_manuallyaddingthelinkerscript.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_linker_script_mod.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="sdk_linkerscripts"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Linker Scripts</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script><meta name="robots" content="noindex, nofollow" /></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="sdk_linkerscripts">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+
+<h1 class="title topictitle1">Linker Scripts</h1>
+
+<div class="body conbody">
+<p class="p">The final step in creating an executable from object files and libraries
+is linking. This is performed by a linker that accepts linker command
+language files called linker scripts. The primary purpose of a linker
+script is to describe the memory layout of the target machine, and specify
+where each section of the program should be placed in memory.</p>
+
+<p class="p">SDK provides a linker script generator to simplify the task of creating
+a linker script. The linker script generator GUI examines the target
+hardware platform and determines the available memory sections. The only
+action required by you is to assign the different code and data sections
+in the ELF file to different memory regions.</p>
+
+<div class="note note"><span class="notetitle">Note:</span>    
+<ul class="ul">
+<li class="li">For multi-processor systems, each processor runs a different ELF file,
+and each ELF file requires its own linker script. Ensure that the two
+ELF files do not overlap in memory.</li>
+
+<li class="li">The default linker always points to the DDR address available in
+memory. If you are creating an app under a given hardware/BSP project,
+the memory will overlap for the applications.</li>
+
+</ul>
+
+</div>
+ 
+</div>
+
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../SDK_tasks/task_generatingalinkerscriptforanapplication.html">Generating a Linker Script for an Application</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../SDK_tasks/task_manuallyaddingthelinkerscript.html">Manually Adding the Linker Script</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../SDK_references/sdk_u_linker_script_mod.html">Modifying a Linker Script</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+</ul>
+<div class="relinfo relconcepts"><strong>Related concepts</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_sdk_build_configurations.html" title="Build Configurations">Build Configurations</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_sdkhelp_makefiles.html" title="Makefiles">Makefiles</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

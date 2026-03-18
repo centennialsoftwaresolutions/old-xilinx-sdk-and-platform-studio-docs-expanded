@@ -1,0 +1,87 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Returns the address ranges of different IPs connected to the processor in a tabular format, along with details like size and flags of different IPs. Synopsis getaddrmap &lt; hw proj | hw spec file &gt; &lt; ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="getaddrmap"></meta><meta name="abstract" content=""></meta><meta name="description" content=""></meta><meta name="DC.Relation" scheme="URI" content="../xsct/xsct_openhw.html"></meta><meta name="DC.Relation" scheme="URI" content="../xsct/xsct_closehw.html"></meta><meta name="DC.Relation" scheme="URI" content="../xsct/xsct_openbsp.html"></meta><meta name="DC.Relation" scheme="URI" content="../xsct/xsct_closebsp.html"></meta><meta name="DC.Relation" scheme="URI" content="../xsct/xsct_updatemss.html"></meta><meta name="DC.Relation" scheme="URI" content="../xsct/xsct_getperipherals.html"></meta><meta name="DC.Relation" scheme="URI" content="../xsct/xsct_configbsp.html"></meta><meta name="DC.Relation" scheme="URI" content="../xsct/xsct_repo.html"></meta><meta name="DC.Relation" scheme="URI" content="../xsct/xsct_setlib.html"></meta><meta name="DC.Relation" scheme="URI" content="../xsct/xsct_getlibs.html"></meta><meta name="DC.Relation" scheme="URI" content="../xsct/xsct_removellib.html"></meta><meta name="DC.Relation" scheme="URI" content="../xsct/xsct_setdriver.html"></meta><meta name="DC.Relation" scheme="URI" content="../xsct/xsct_getdrivers.html"></meta><meta name="DC.Relation" scheme="URI" content="../xsct/xsct_setosversion.html"></meta><meta name="DC.Relation" scheme="URI" content="../xsct/xsct_getos.html"></meta><meta name="DC.Relation" scheme="URI" content="../xsct/xsct_regenbsp.html"></meta><meta name="DC.Relation" scheme="URI" content="../xsct/xsct_projects.html"></meta><meta name="DC.Relation" scheme="URI" content="../xsct/xsct_setws.html"></meta><meta name="DC.Relation" scheme="URI" content="../xsct/xsct_getws.html"></meta><meta name="DC.Relation" scheme="URI" content="../xsct/xsct_createhw.html"></meta><meta name="DC.Relation" scheme="URI" content="../xsct/xsct_createbsp.html"></meta><meta name="DC.Relation" scheme="URI" content="../xsct/xsct_createapp.html"></meta><meta name="DC.Relation" scheme="URI" content="../xsct/xsct_importprojects.html"></meta><meta name="DC.Relation" scheme="URI" content="../xsct/xsct_importsources.html"></meta><meta name="DC.Relation" scheme="URI" content="../xsct/xsct_getprojects.html"></meta><meta name="DC.Relation" scheme="URI" content="../xsct/xsct_deleteprojects.html"></meta><meta name="DC.Relation" scheme="URI" content="../xsct/xsct_configapp.html"></meta><meta name="DC.Relation" scheme="URI" content="../xsct/xsct_toolchain.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_hxy_lqx_gv"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>getaddrmap</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_hxy_lqx_gv">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">getaddrmap</h1>
+
+  
+  <div class="body refbody"><p class="shortdesc"></p>
+
+    <div class="section">
+      <p class="p">Returns the address ranges of different IPs connected to the processor in a tabular
+        format, along with details like size and flags of different IPs.
+      </p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Synopsis</h2>
+      <p class="p"><span class="ph synph"><span class="keyword option">getaddrmap </span> &lt;<span class="keyword kwd">hw proj</span> |<span class="keyword kwd">hw spec file</span>&gt; &lt;<span class="keyword kwd">processor-instance</span>&gt;</span></p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Options</h2>
+      
+      <p class="p">None</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Returns</h2>
+      <p class="p">If successful, this command returns nothing. Otherwise, returns an error.</p>
+</div>
+
+    <div class="section"><h2 class="title sectiontitle">Example</h2>
+      <p class="p">Returns the address map of peripheral connected to ps7_cortexa9_0.
+        'hw1' is the hw project, which can be created using command 'createhw'.</p>
+
+      <pre class="pre codeblock">getaddrmap hw1 ps7_cortexa9_0</pre>
+
+      <p class="p">Returns the address map of peripheral connected to 'ps7_cortexa9_0'
+        system.hdf is the hw spec file exported from Vivado. </p>
+
+      <pre class="pre codeblock">getaddrmap system.hdf ps7_cortexa9_0</pre>
+</div>
+
+  </div>
+
+<div class="related-links"><div class="relinfo relref"><strong>Related reference</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../xsct/xsct_openhw.html" title="openhw">openhw</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../xsct/xsct_closehw.html" title="closehw">closehw</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../xsct/xsct_openbsp.html" title="openbsp">openbsp</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../xsct/xsct_closebsp.html" title="closebsp">closebsp</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../xsct/xsct_updatemss.html" title="updatemss">updatemss</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../xsct/xsct_getperipherals.html" title="getperipherals">getperipherals</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../xsct/xsct_configbsp.html" title="configbsp">configbsp</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../xsct/xsct_repo.html" title="repo">repo</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../xsct/xsct_setlib.html" title="setlib">setlib</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../xsct/xsct_getlibs.html" title="getlibs">getlibs</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../xsct/xsct_removellib.html" title="removelib">removelib</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../xsct/xsct_setdriver.html" title="setdriver">setdriver</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../xsct/xsct_getdrivers.html" title="getdrivers">getdrivers</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../xsct/xsct_setosversion.html" title="setosversion">setosversion</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../xsct/xsct_getos.html" title="getos">getos</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../xsct/xsct_regenbsp.html" title="regenbsp">regenbsp</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../xsct/xsct_projects.html" title="projects">projects</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../xsct/xsct_setws.html" title="setws">setws</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../xsct/xsct_getws.html" title="getws">getws</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../xsct/xsct_createhw.html" title="createhw">createhw</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../xsct/xsct_createbsp.html" title="createbsp">createbsp</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../xsct/xsct_createapp.html" title="createapp">createapp</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../xsct/xsct_importprojects.html" title="importprojects">importprojects</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../xsct/xsct_importsources.html" title="importsources">importsources</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../xsct/xsct_getprojects.html" title="getprojects">getprojects</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../xsct/xsct_deleteprojects.html" title="deleteprojects">deleteprojects</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../xsct/xsct_configapp.html" title="configapp">configapp</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../xsct/xsct_toolchain.html" title="toolchain">toolchain</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>
