@@ -1,0 +1,59 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="description" content="The final step in creating an executable from object files and libraries is linking. This is performed by a linker that accepts linker command language files called linker scripts. The primary purpose ..." /><meta name="copyright" content="(C) Copyright 2017" /><meta name="DC.rights.owner" content="(C) Copyright 2017" /><meta name="DC.Type" content="concept" /><meta name="DC.Title" content="Linker Scripts" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_sdk_build_configurations.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_sdkhelp_makefiles.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_generatingalinkerscriptforanapplication.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_manuallyaddingthelinkerscript.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_linker_script_mod.html" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.tutorial" /><meta name="dictionary_reference" content="com.ibm.eou.tmtool.domainDictionary.core" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.cshelp" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.messaging" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.taxonomyContributions" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.troubleshooting" /><meta name="vis_node" content="com.ibm.ut.ditamap.domainDictionary.dita.concept" /><meta name="vis_labels" content="com.ibm.eou.tmtool.domainAttribute.core.name" /><meta name="vis_zoom" content="2" /><meta name="vis_view" content="com.ibm.eou.tmtool.representation.outline" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="sdk_linkerscripts" /><meta name="DC.Language" content="en" /><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Linker Scripts</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css" /><script type="text/javascript"><!--
+            
+            var prefix = "../index.html";
+            
+            --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="sdk_linkerscripts">
+<header role="banner"><table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td style="width:75%;"><span class="topic_breadcrumb_links"></span></td><td><span id="topic_navigation_links" class="navheader"></span></td></tr></tbody></table></header><main role="main"><article role="article" aria-labelledby="sdk_linkerscripts__bh332053">
+
+<h1 class="title topictitle1" id="sdk_linkerscripts__bh332053">Linker Scripts</h1>
+
+<div class="body conbody">
+<p class="p">The final step in creating an executable from object files and libraries
+is linking. This is performed by a linker that accepts linker command
+language files called linker scripts. The primary purpose of a linker
+script is to describe the memory layout of the target machine, and specify
+where each section of the program should be placed in memory.</p>
+
+<p class="p">SDK provides a linker script generator to simplify the task of creating
+a linker script. The linker script generator GUI examines the target
+hardware platform and determines the available memory sections. The only
+action required by you is to assign the different code and data sections
+in the ELF file to different memory regions.</p>
+
+<div class="note note"><span class="notetitle">Note:</span>    
+<ul class="ul">
+<li class="li">For multi-processor systems, each processor runs a different ELF file,
+and each ELF file requires its own linker script. Ensure that the two
+ELF files do not overlap in memory.</li>
+
+<li class="li">The default linker always points to the DDR address available in
+memory. If you are creating an app under a given hardware/BSP project,
+the memory will overlap for the applications.</li>
+
+</ul>
+
+</div>
+ 
+</div>
+
+<nav role="navigation" class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../SDK_tasks/task_generatingalinkerscriptforanapplication.html">Generating a Linker Script for an Application</a></strong><br />
+</li>
+<li class="link ulchildlink"><strong><a href="../SDK_tasks/task_manuallyaddingthelinkerscript.html">Manually Adding the Linker Script</a></strong><br />
+</li>
+<li class="link ulchildlink"><strong><a href="../SDK_references/sdk_u_linker_script_mod.html">Modifying a Linker Script</a></strong><br />
+</li>
+</ul>
+
+<div class="linklist linklist relinfo relconcepts"><strong>Related concepts</strong><br />
+
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_sdk_build_configurations.html" title="Build Configurations">Build Configurations</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_sdkhelp_makefiles.html" title="Makefiles">Makefiles</a></div></div>
+</nav></article></main><footer role="contentinfo"><div class="navfooter"><!----></div></footer></body>
+</html>

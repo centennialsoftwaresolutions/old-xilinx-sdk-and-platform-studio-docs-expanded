@@ -1,0 +1,141 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="description" content="List targets or switch between targets. Syntax targets [options] List available targets. targets &lt;target id&gt; Select &lt;target id&gt; as active target. Options Option                       Description -set ..." /><meta name="copyright" content="(C) Copyright 2017" /><meta name="DC.rights.owner" content="(C) Copyright 2017" /><meta name="DC.Type" content="reference" /><meta name="DC.Title" content="targets" /><meta name="DC.Relation" scheme="URI" content="../../xsct/connections/reference_connections_connect.html" /><meta name="DC.Relation" scheme="URI" content="../../xsct/connections/reference_connections_disconnect.html" /><meta name="DC.Relation" scheme="URI" content="../../xsct/connections/reference_connections_gdbremote_connect.html" /><meta name="DC.Relation" scheme="URI" content="../../xsct/connections/reference_connections_gdbremote_disconnect.html" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.tutorial" /><meta name="dictionary_reference" content="com.ibm.eou.tmtool.domainDictionary.core" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.cshelp" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.messaging" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.taxonomyContributions" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.troubleshooting" /><meta name="vis_node" content="com.ibm.ut.ditamap.domainDictionary.dita.concept" /><meta name="vis_labels" content="com.ibm.eou.tmtool.domainAttribute.core.name" /><meta name="vis_zoom" content="2" /><meta name="vis_view" content="com.ibm.eou.tmtool.representation.outline" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="xsct_connections_targets" /><meta name="DC.Language" content="en" /><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>targets</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/skins/skin.css" /><script type="text/javascript"><!--
+            
+            var prefix = "../../index.html";
+            
+            --></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="xsct_connections_targets">
+<header role="banner"><table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td style="width:75%;"><span class="topic_breadcrumb_links"></span></td><td><span id="topic_navigation_links" class="navheader"></span></td></tr></tbody></table></header><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+	<h1 class="title topictitle1" id="ariaid-title1">targets</h1>
+
+	<div class="body refbody">
+<section class="section"> <p class="p">List targets or switch between targets.</p>
+ </section>
+
+<section class="section command"><h2 class="title sectiontitle">Syntax</h2> 
+			<p class="p"><span class="ph synph"><span class="keyword option">targets</span> <span class="keyword kwd">[options]</span></span></p>
+
+			<p class="p">List available targets. </p>
+
+			<p class="p"><span class="ph synph"><span class="keyword option">targets</span> <span class="keyword kwd">&lt;target id&gt;</span></span></p>
+
+			<p class="p">Select <code class="ph codeph">&lt;target id&gt;</code> as active target. </p>
+
+		</section>
+
+<section class="section command"><h2 class="title sectiontitle">Options</h2>  
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><colgroup><col /><col /></colgroup><thead class="thead" style="text-align:left;">
+					<tr>
+						<th class="entry cellrowborder" id="d54495e75">Option                      </th>
+
+						<th class="entry cellrowborder" id="d54495e78">Description</th>
+
+					</tr>
+
+				</thead>
+<tbody class="tbody">
+					<tr>
+						<td class="entry cellrowborder" headers="d54495e75 "><span class="keyword cmdname">-set</span></td>
+
+						<td class="entry cellrowborder" headers="d54495e78 ">Set current target to entry single entry in list.  This is useful in comibination with -filter option.  An error will be generate if list is empty or contains more than one entry. </td>
+
+					</tr>
+
+					<tr>
+						<td class="entry cellrowborder" headers="d54495e75 "><span class="keyword cmdname">-regexp</span></td>
+
+						<td class="entry cellrowborder" headers="d54495e78 ">Use regexp for filter matching </td>
+
+					</tr>
+
+					<tr>
+						<td class="entry cellrowborder" headers="d54495e75 "><span class="keyword cmdname">-nocase</span></td>
+
+						<td class="entry cellrowborder" headers="d54495e78 ">Use case insensitive filter matching </td>
+
+					</tr>
+
+					<tr>
+						<td class="entry cellrowborder" headers="d54495e75 "><span class="keyword cmdname">-filter &lt;filter-expression&gt;</span></td>
+
+						<td class="entry cellrowborder" headers="d54495e78 ">Specify filter expression to control which targets are included in list based on its properties.  Filter expressions are similar to Tcl expr syntax.  Target properties are references by name, while Tcl variables are accessed using the $ syntax, string must be quoted.  Operators ==, !=, <code class="ph codeph">&lt;=, &gt;</code>=, <code class="ph codeph">&lt;, &gt;</code>, &amp;&amp; and || are supported as well as ().  There operators behave like Tcl expr operators.  String matching operator =~ and !~ match lhs string with rhs pattern using either regexp or string match. </td>
+
+					</tr>
+
+					<tr>
+						<td class="entry cellrowborder" headers="d54495e75 "><span class="keyword cmdname">-target-properties</span></td>
+
+						<td class="entry cellrowborder" headers="d54495e78 ">Returns a Tcl list of dict's containing target properties. </td>
+
+					</tr>
+
+					<tr>
+						<td class="entry cellrowborder" headers="d54495e75 "><span class="keyword cmdname">-index &lt;index&gt;</span></td>
+
+						<td class="entry cellrowborder" headers="d54495e78 ">Include targets based on jtag scan chain position.  This is identical to specifying -filter {jtag_device_index==<code class="ph codeph">&lt;index&gt;</code>}. </td>
+
+					</tr>
+
+					<tr>
+						<td class="entry cellrowborder" headers="d54495e75 "><span class="keyword cmdname">-timeout &lt;sec&gt;</span></td>
+
+						<td class="entry cellrowborder" headers="d54495e78 ">Poll until the targets specified by filter option are found on the scan chain, or until timeout. This option is valid only with filter option. The timeout value is in seconds. Default timeout is 3 seconds </td>
+
+					</tr>
+
+				</tbody>
+</table>
+</div>
+ </section>
+
+<section class="section command"><h2 class="title sectiontitle">Returns</h2> 
+			<p class="p">The return value depends on the options used. </p>
+
+			<p class="p"><code class="ph codeph">&lt;none&gt;</code>: Targets list when no options are used. </p>
+
+			<p class="p"><code class="ph codeph">-filter</code>: Filtered targets list. </p>
+
+			<p class="p"><code class="ph codeph">-target-properties</code>: Tcl list consisting of target properties. </p>
+
+			<p class="p">An error is returned when target selection fails. </p>
+
+		</section>
+
+<section class="section command"><h2 class="title sectiontitle">Example(s)</h2> 
+
+			<pre class="pre codeblock"><code>targets</code></pre>
+			<p class="p">List all targets. </p>
+
+
+			<pre class="pre codeblock"><code>targets -filter {name =~ "ARM*#1"}</code></pre>
+			<p class="p">List targets with name starting with "ARM" and ending with "#1". </p>
+
+
+			<pre class="pre codeblock"><code>targets 2</code></pre>
+			<p class="p">Set target with id 2 as the current target. </p>
+
+
+			<pre class="pre codeblock"><code>targets -set -filter {name =~ "ARM*#1"}</code></pre>
+			<p class="p">Set current target to target with name starting with "ARM" and ending with "#1". </p>
+
+
+			<pre class="pre codeblock"><code>targets -set -filter {name =~ "MicroBlaze*"} -index 0</code></pre>
+			<p class="p">Set current target to target with name starting with "MicroBlaze" and which is on 1st JTAG
+				device. </p>
+
+		</section>
+
+	</div>
+
+<nav role="navigation" class="related-links">
+<div class="linklist linklist relinfo relref"><strong>Related reference</strong><br />
+
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/connections/reference_connections_connect.html" title="connect">connect</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/connections/reference_connections_disconnect.html" title="disconnect">disconnect</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/connections/reference_connections_gdbremote_connect.html" title="gdbremote connect">gdbremote connect</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/connections/reference_connections_gdbremote_disconnect.html" title="gdbremote disconnect">gdbremote disconnect</a></div></div>
+</nav></article></main><footer role="contentinfo"><div class="navfooter"><!----></div></footer></body>
+</html>

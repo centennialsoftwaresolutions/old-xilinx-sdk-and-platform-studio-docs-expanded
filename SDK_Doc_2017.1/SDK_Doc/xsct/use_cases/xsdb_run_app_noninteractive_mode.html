@@ -1,0 +1,49 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><meta name="robots" content="noindex, nofollow" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />        
+      <meta name="copyright" content="(C) Copyright 2017" /><meta name="DC.rights.owner" content="(C) Copyright 2017" /><meta name="DC.Type" content="reference" /><meta name="DC.Title" content="Running an Application in Non-Interactive Mode" /><meta name="abstract" content="" /><meta name="description" content="Xilinx® System Debugger Command-line Interface (XSDB) provides a scriptable interface to run applications in non-interactive mode. To run the program in previous example using a script, create a tcl ..." /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.tutorial" /><meta name="dictionary_reference" content="com.ibm.eou.tmtool.domainDictionary.core" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.cshelp" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.messaging" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.taxonomyContributions" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.troubleshooting" /><meta name="vis_node" content="com.ibm.ut.ditamap.domainDictionary.dita.concept" /><meta name="vis_labels" content="com.ibm.eou.tmtool.domainAttribute.core.name" /><meta name="vis_zoom" content="2" /><meta name="vis_view" content="com.ibm.eou.tmtool.representation.outline" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="reference_gbw_tq2_hv" /><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Running an Application in Non-Interactive Mode</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/skins/skin.css" /><script type="text/javascript"><!--
+            
+            var prefix = "../../index.html";
+            
+            --></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_gbw_tq2_hv">
+<header role="banner"><table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td style="width:75%;"><span class="topic_breadcrumb_links"></span></td><td><span id="topic_navigation_links" class="navheader"></span></td></tr></tbody></table></header><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Running an Application in Non-Interactive Mode</h1>
+
+    
+    <div class="body refbody"><p class="shortdesc"></p>
+
+        <section class="section"> <p class="p">Xilinx® System Debugger Command-line Interface (XSDB) provides a scriptable
+                interface to run applications in non-interactive mode. To run the program in
+                previous example using a script, create a tcl script (and name it as, for example,
+                    <span class="ph filepath">test.tcl</span>) with the following commands. The script can be
+                run by passing it as a launch argument to xsdb.</p>
+ <pre class="pre codeblock"><code>connect -url TCP:xhdbfarmc7:3121
+
+# Select the target whose name starts with ARM and ends with #0. 
+# On Zynq, this selects “ARM Cortex-A9 MPCore #0”
+
+targets -set -filter {name =~ "ARM* #0"}
+rst
+fpga ZC702_HwPlatform/design_1_wrapper.bit
+loadhw ZC702_HwPlatform/system.hdf
+source ZC702_HwPlatform/ps7_init.tcl
+ps7_init
+ps7_post_config
+dow dhrystone/Debug/dhrystone.elf
+
+# Set a breakpoint at exit
+
+bpadd -addr &amp;exit
+
+# Resume execution and block until the core stops (due to breakpoint) 
+# or a timeout of 5 sec is reached
+
+con -block -timeout 5</code></pre> </section>
+
+    </div>
+
+</article></main><footer role="contentinfo"><div class="navfooter"><!----></div></footer></body>
+</html>

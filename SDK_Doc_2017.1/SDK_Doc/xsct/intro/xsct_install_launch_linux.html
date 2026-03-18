@@ -1,0 +1,83 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><meta name="robots" content="noindex, nofollow" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />        
+      <meta name="copyright" content="(C) Copyright 2017" /><meta name="DC.rights.owner" content="(C) Copyright 2017" /><meta name="DC.Type" content="task" /><meta name="DC.Title" content="Installing and Launching XSCT on Linux" /><meta name="abstract" content="" /><meta name="description" content="Xilinx Software Command-line Tool (XSCT) can be installed using the small self-extracting web install executable binary distribution file. The installer file bears the name ..." /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.tutorial" /><meta name="dictionary_reference" content="com.ibm.eou.tmtool.domainDictionary.core" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.cshelp" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.messaging" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.taxonomyContributions" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.troubleshooting" /><meta name="vis_node" content="com.ibm.ut.ditamap.domainDictionary.dita.concept" /><meta name="vis_labels" content="com.ibm.eou.tmtool.domainAttribute.core.name" /><meta name="vis_zoom" content="2" /><meta name="vis_view" content="com.ibm.eou.tmtool.representation.outline" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="task_install_launch_xsct_linux" /><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Installing and Launching XSCT on Linux</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/skins/skin.css" /><script type="text/javascript"><!--
+            
+            var prefix = "../../index.html";
+            
+            --></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="task_install_launch_xsct_linux">
+<header role="banner"><table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td style="width:75%;"><span class="topic_breadcrumb_links"></span></td><td><span id="topic_navigation_links" class="navheader"></span></td></tr></tbody></table></header><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Installing and Launching XSCT on Linux</h1>
+
+    
+    <div class="body taskbody"><p class="shortdesc"></p>
+
+        <section class="section context"> <p class="p" id="task_install_launch_xsct_linux__p_uhl_v2p_zv">Xilinx Software Command-line Tool (XSCT) can be installed using the small self-extracting web install executable binary distribution file. The installer file bears the name <span class="ph filepath">Xilinx_SDK_&lt;version&gt;_Lin64.BIN</span>, where <span class="ph filepath">&lt;version&gt;</span> indicates the Xilinx Software Development Kit (Xilinx SDK) version number.</p>
+ <div class="p"> <div class="note note"><span class="notetitle">Note:</span> The procedure for installing XSCT on Linux depends on which Linux distribution you are using. Ensure that the installation folder has the appropriate permissions. In addition, your project workspace needs to be set up in any folder that you can fully access. </div>
+ </div>
+ </section>
+
+        <ol class="ol steps"><li class="li step stepexpand">
+                <span class="ph cmd">To install XSCT, launch the terminal and change the permission of the self-extracting binary executable. </span>
+                <div class="itemgroup info"> <pre class="pre codeblock"><code>$ chmod +x Xilinx_SDK_&lt;version&gt;_Lin64.BIN</code></pre> </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Start the installation process or run the <span class="ph filepath">.BIN</span> file.</span>
+                <div class="itemgroup info"> <pre class="pre codeblock"><code>./Xilinx_SDK_&lt;version&gt;_Lin64.BIN</code></pre> </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">The installer accepts your login credentials and allows you to select specific
+                    tool components. The client then automatically downloads only what you have
+                    selected and installs it on your local machine.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">In the <span class="ph uicontrol">Select Edition to Install</span> window, select the <span class="ph uicontrol">Xilinx Software Command-Line Tool (XSCT)</span> option to install XSCT as a seperate command-line tool only. Alternatively, you can also select the <span class="ph uicontrol">Xilinx Software Development Kit (XSDK)</span> option to install XSCT as a part of the Xilinx SDK, an Eclipse-based integrated development environment.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Unless you choose otherwise, XSCT is installed in the <span class="ph filepath">/opt/Xilinx</span> directory.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">To launch XSCT on Linux, select <span class="ph menucascade"><span class="ph uicontrol">Applications </span> &gt; <span class="ph uicontrol">Other</span></span> and then select <span class="ph uicontrol">Xilinx Software Command Line Tool &lt;version&gt;</span>. Where <span class="ph uicontrol">&lt;version&gt;</span> is the version number of the XSCT.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">You can also launch XSCT from the command line. </span>
+                <div class="itemgroup info"> <pre class="pre codeblock"><code>cd /opt/Xilinx/SDK/&lt;version&gt;/bin
+./xsct</code></pre> </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">To view the available command-line options, issue the <code class="ph codeph">help</code> command at the XSCT command prompt.</span>
+                <div class="itemgroup info"> <pre class="pre codeblock"><code>****** Xilinx Software Commandline Tool (XSCT) 
+
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+xsct% help
+Available Help Categories
+
+connections   - Target Connection Management
+registers     - Target Registers
+running       - Program Execution
+memory        - Target Memory
+download      - Target Download FPGA/BINARY
+reset         - Target Reset
+breakpoints   - Target Breakpoints/Watchpoints
+streams       - Jtag UART
+miscellaneous - Miscellaneous
+jtag          - JTAG Access
+sdk           - SDK Projects
+petalinux     - Petalinux commands
+hsi           - HSI commands
+
+Type "help" followed by above "category" for more details or
+help" followed by the keyword "commands" to list all the commands
+
+xsct%</code></pre> </div>
+            </li>
+</ol>
+
+    </div>
+
+</article></main><footer role="contentinfo"><div class="navfooter"><!----></div></footer></body>
+</html>
