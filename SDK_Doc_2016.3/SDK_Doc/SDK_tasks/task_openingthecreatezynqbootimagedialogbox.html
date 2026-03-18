@@ -1,0 +1,70 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Ensure that the FSBL project and C application project are created in the SDK workspace and built so that corresponding ELF files are available. Note : For more information, refer to Creating a New ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Opening the Create Boot Image Dialog Box"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_workingwithbootimagefiles.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_creatingabootimage.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_creatinganewzynqfsblapplicationproject.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="openingthecreatezynqbootimagedialogbox"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Opening the Create Boot Image Dialog Box</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="openingthecreatezynqbootimagedialogbox"><a name="openingthecreatezynqbootimagedialogbox"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+
+<h1 class="title topictitle1">Opening the Create Boot Image Dialog Box</h1>
+
+<div class="body taskbody"><div class="section context">
+</div>
+<ol class="ol steps"><li class="li step stepexpand">
+    <span class="ph cmd">Ensure that the FSBL project and C application project are created in the SDK workspace and built so that corresponding ELF files are available. <strong class="ph b">Note</strong>: For more information, refer to <a class="xref" href="task_creatinganewzynqfsblapplicationproject.html">Creating a New Zynq FSBL Application Project</a> and <a class="xref" href="sdk_t_create_new_appln.html#sdk_t_create_new_appln">Creating a Standalone Application Project</a>.</span>
+   </li>
+<li class="li step stepexpand"><span class="ph cmd">Select the application project in the <strong class="ph b">Project Navigator</strong> or <strong class="ph b">C/C++
+Projects</strong> view and right-click <strong class="ph b">Create Boot Image. </strong>Alternately,
+click <strong class="ph b">Xilinx Tools &gt; Create Boot Image. </strong>The Create Zynq-7000
+AP SoC Boot Image dialog box appears with default values preselected
+from the context of the selected C project. Note the following:</span>
+<div class="itemgroup info"> <ul class="ul">
+<li class="li">When you run Create Boot Image the first time for an application,
+the dialog box is pre-populated with paths to the selected project ELF
+file, the FSBL ELF file, and the bitstream for the selected hardware
+(if it exists in hardware project).</li>
+
+<li class="li">If a boot image has previously run for the application, the dialog
+box is pre-populated with previously used values as per the configuration
+file present in the project that is in the bif folder.</li>
+
+                        <li class="li">You can now create boot image for Zynq<sup>®</sup> and Zynq<sup>®</sup> UltraScale+™ MPSoC architectures.</li>
+
+<li class="li">You can add new partitions to the boot image by clicking Add and specifying
+the location of the required data files, if any.</li>
+
+    <li class="li">You can now add some information, like version/other info to the boot image. This data will be a part of the Boot header.<a name="openingthecreatezynqbootimagedialogbox__ul_lth_qjr_gv"><!-- --></a><ul class="ul" id="openingthecreatezynqbootimagedialogbox__ul_lth_qjr_gv">
+                                <li class="li">The specified data should be a maximum of 76 bytes (for Zynq) and 40 bytes (Zynq UltraScale+ MPSoC).</li>
+
+                                <li class="li">The specified data will take an offset of 0x4c (for Zynq) and 0x70 (for Zynq UltraScale+ MPSoC) in the bootimage. </li>
+
+                            </ul>
+</li>
+
+<li class="li">Specify offset, alignment, and allocation values for partitions in
+the boot image, if applicable.</li>
+
+<li class="li">The output file path is set to the bif folder under the selected application
+project by default.
+ <br xmlns="http://www.w3.org/1999/xhtml" /><img class="image" src="../images/sdk_t_create_zynq_boot_image-1.png" height="481" width="612"></img><br xmlns="http://www.w3.org/1999/xhtml" /></li>
+</ul>
+</div>
+</li>
+</ol>
+
+
+</div>
+<div class="related-links"><div class="relinfo reltasks"><strong>Related tasks</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/task_workingwithbootimagefiles.html" title="Working with Boot Image Format Files">Working with Boot Image Format Files</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/task_creatingabootimage.html" title="Creating a Boot Image">Creating a Boot Image</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/task_creatinganewzynqfsblapplicationproject.html" title="Creating a New Zynq FSBL Application Project">Creating a New Zynq FSBL Application Project</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

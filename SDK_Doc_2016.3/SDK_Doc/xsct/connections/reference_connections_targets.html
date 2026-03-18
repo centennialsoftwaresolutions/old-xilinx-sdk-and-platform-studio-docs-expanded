@@ -1,0 +1,152 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="List targets or switch between targets Syntax targets [options] List available targets targets &lt;target id&gt; Select &lt;target id&gt; as active target Options Option Description -set Set current target to ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="targets"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/connections/reference_connections_connect.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/connections/reference_connections_disconnect.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/connections/reference_connections_gdbremote_connect.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/connections/reference_connections_gdbremote_disconnect.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="xsct_connections_targets"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>targets</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../../index.html";
+          
+          --></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="xsct_connections_targets"><a name="xsct_connections_targets"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+	<h1 class="title topictitle1">targets</h1>
+
+	<div class="body refbody">
+<div class="section"> <p class="p">List targets or switch between targets</p>
+ </div>
+
+<div class="section command"><h2 class="title sectiontitle">Syntax</h2> 
+			<p class="p"><span class="ph synph"><span class="keyword option">targets</span> <span class="keyword kwd">[options]</span></span></p>
+
+			<p class="p">List available targets </p>
+
+			<p class="p"><span class="ph synph"><span class="keyword option">targets</span> <span class="keyword kwd">&lt;target id&gt;</span></span></p>
+
+			<p class="p">Select <samp class="ph codeph">&lt;target id&gt;</samp> as active target </p>
+
+		</div>
+
+<div class="section command"><h2 class="title sectiontitle">Options</h2>  
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+				
+				
+				<thead class="thead" align="left">
+					<tr class="row">
+						<th class="entry" valign="top" id="d58001e66">Option</th>
+
+						<th class="entry" valign="top" id="d58001e69">Description</th>
+
+					</tr>
+
+				</thead>
+
+				<tbody class="tbody">
+					<tr class="row">
+						<td class="entry" valign="top" headers="d58001e66 "><span class="keyword cmdname">-set</span></td>
+
+						<td class="entry" valign="top" headers="d58001e69 ">Set current target to entry single entry in list.  This is useful in comibination with -filter option.  An error will be generate if list is empty or contains more than one entry. </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d58001e66 "><span class="keyword cmdname">-regexp</span></td>
+
+						<td class="entry" valign="top" headers="d58001e69 ">Use regexp for filter matching </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d58001e66 "><span class="keyword cmdname">-nocase</span></td>
+
+						<td class="entry" valign="top" headers="d58001e69 ">Use case insensitive filter matching </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d58001e66 "><span class="keyword cmdname">-filter &lt;filter-expression&gt;</span></td>
+
+						<td class="entry" valign="top" headers="d58001e69 ">Specify filter expression to control which targets are included in list based on its properties.  Filter expressions are similar to Tcl expr syntax.  Target properties are references by name, while Tcl variables are accessed using the $ syntax, string must be quoted.  Operators ==, !=, <samp class="ph codeph">&lt;=, &gt;</samp>=, <samp class="ph codeph">&lt;, &gt;</samp>, &amp;&amp; and || are supported as well as ().  There operators behave like Tcl expr operators.  String matching operator =~ and !~ match lhs string with rhs pattern using either regexp or string match. </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d58001e66 "><span class="keyword cmdname">-target-properties</span></td>
+
+						<td class="entry" valign="top" headers="d58001e69 ">Returns a Tcl list of dict's containing target properties. </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d58001e66 "><span class="keyword cmdname">-index &lt;index&gt;</span></td>
+
+						<td class="entry" valign="top" headers="d58001e69 ">Include targets based on jtag scan chain position.  This is identical to specifying -filter {jtag_device_index==<samp class="ph codeph">&lt;index&gt;</samp>}. </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d58001e66 "><span class="keyword cmdname">-timeout &lt;sec&gt;</span></td>
+
+						<td class="entry" valign="top" headers="d58001e69 ">Poll until the targets specified by filter option are found on the scan chain, or until timeout. This option is valid only with filter option. The timeout value is in seconds. Default timeout is 3 seconds </td>
+
+					</tr>
+
+				</tbody>
+
+			</table>
+</div>
+ </div>
+
+<div class="section command"><h2 class="title sectiontitle">Returns</h2> 
+			<p class="p">The return value depends on the options used. </p>
+
+			<p class="p"><samp class="ph codeph">&lt;none&gt;</samp>: Targets list when no options are used </p>
+
+			<p class="p"><samp class="ph codeph">-filter</samp>: Filtered targets list </p>
+
+			<p class="p"><samp class="ph codeph">-target-properties</samp>: Tcl list consisting of target properties </p>
+
+			<p class="p">An error is returned when target selection fails. </p>
+
+		</div>
+
+<div class="section command"><h2 class="title sectiontitle">Example(s)</h2> 
+
+			<pre class="pre codeblock">targets</pre>
+
+			<p class="p">List all targets </p>
+
+
+			<pre class="pre codeblock">targets -filter {name =~ "ARM*#1"}</pre>
+
+			<p class="p">List targets with name starting with "ARM" and ending with "#1" </p>
+
+
+			<pre class="pre codeblock">targets 2</pre>
+
+			<p class="p">Set target with id 2 as the current target </p>
+
+
+			<pre class="pre codeblock">targets -set -filter {name =~ "ARM*#1"}</pre>
+
+			<p class="p">Set current target to target with name starting with "ARM" and ending with "#1" </p>
+
+
+			<pre class="pre codeblock">targets -set -filter {name =~ "MicroBlaze*"} -index 0</pre>
+
+			<p class="p">Set current target to target with name starting with "MicroBlaze" and which is on 1st Jtag Device </p>
+
+		</div>
+
+	</div>
+
+<div class="related-links"><div class="relinfo relref"><strong>Related reference</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/connections/reference_connections_connect.html" title="connect">connect</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/connections/reference_connections_disconnect.html" title="disconnect">disconnect</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/connections/reference_connections_gdbremote_connect.html" title="gdbremote connect">gdbremote connect</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/connections/reference_connections_gdbremote_disconnect.html" title="gdbremote disconnect">gdbremote disconnect</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

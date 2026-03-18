@@ -1,0 +1,162 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Xilinx System Command-line Tool (XSCT) can be used to debug standalone applications on one or more processor cores simultaneously. The first step involved in debugging is to connect to hw_server and ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="Performing Standalone Application Debug"></meta><meta name="abstract" content=""></meta><meta name="description" content=""></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_r5g_dp2_hv"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Performing Standalone Application Debug</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../../index.html";
+          
+          --></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_r5g_dp2_hv"><a name="reference_r5g_dp2_hv"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+    <h1 class="title topictitle1">Performing Standalone Application Debug</h1>
+
+    
+    <div class="body refbody"><p class="shortdesc"></p>
+
+        <div class="section"> <p class="p">Xilinx System Command-line Tool (XSCT) can be used to debug standalone applications on one or more processor cores simultaneously. The first step involved in debugging is to connect to hw_server and select a debug target. You can now reset the system/processor core, initialize the PS if needed, program the FPGA, download an elf, set breakpoints, run the program, examine the stack trace, view local/global variables.</p>
+ <p class="p">Below is an example XSCT session that demonstrates standalone application debug on Zynq<sup>®</sup> - 7000 AP SoC. Comments begin with <samp class="ph codeph">#</samp>.</p>
+
+            <pre class="pre codeblock">#connect to remote hw_server by specifying its url. 
+#If the hardware is connected to a local machine,-url option and the &lt;url&gt; 
+#are not needed. connect command returns the channel ID of the connection
+
+xsct% connect -url TCP:xhdbfarmc7:3121 tcfchan#0
+
+# List available targets and select a target through its id. 
+#The targets are assigned IDs as they are discovered on the Jtag chain, 
+#so the IDs can change from session to session. 
+#For non-interactive usage, -filter option can be used to select a target, 
+#instead of selecting the target through its ID
+
+xsct% targets
+  1  APU
+     2  ARM Cortex-A9 MPCore #0 (Running)
+     3  ARM Cortex-A9 MPCore #1 (Running)
+  4  xc7z020
+xsct% targets 2
+# Reset the system before initializing the PS and configuring the FPGA
+
+xsct% rst
+# Info messages are displayed when the status of a core changes
+Info: ARM Cortex-A9 MPCore #0 (target 2) Stopped at 0xfffffe1c (Suspended)
+Info: ARM Cortex-A9 MPCore #1 (target 3) Stopped at 0xfffffe18 (Suspended)
+
+# Configure the FPGA. When the active target is not a FPGA device, 
+#the first FPGA device is configured
+
+xsct% fpga ZC702_HwPlatform/design_1_wrapper.bit
+100%    3MB   1.8MB/s  00:02
+
+# Run loadhw command to make the debugger aware of the processor cores’ memory map   
+xsct% loadhw ZC702_HwPlatform/system.hdf
+design_1_wrapper
+
+# Source the ps7_init.tcl script and run ps7_init and ps7_post_config commands
+xsct% source ZC702_HwPlatform/ps7_init.tcl
+xsct% ps7_init
+xsct% ps7_post_config
+
+# Download the application program
+xsct% dow dhrystone/Debug/dhrystone.elf
+Downloading Program -- dhrystone/Debug/dhrystone.elf
+     section, .text: 0x00100000 - 0x001037f3
+     section, .init: 0x001037f4 - 0x0010380b
+     section, .fini: 0x0010380c - 0x00103823
+     section, .rodata: 0x00103824 - 0x00103e67
+     section, .data: 0x00103e68 - 0x001042db
+     section, .eh_frame: 0x001042dc - 0x0010434f
+     section, .mmu_tbl: 0x00108000 - 0x0010bfff
+     section, .init_array: 0x0010c000 - 0x0010c007
+     section, .fini_array: 0x0010c008 - 0x0010c00b
+     section, .bss: 0x0010c00c - 0x0010e897
+     section, .heap: 0x0010e898 - 0x0010ec9f
+     section, .stack: 0x0010eca0 - 0x0011149f
+100%    0MB   0.3MB/s  00:00   
+
+Setting PC to Program Start Address 0x00100000
+
+Successfully downloaded dhrystone/Debug/dhrystone.elf
+
+# Set a breakpoint at main()
+xsct% bpadd -addr &amp;main
+0
+
+# Resume the processor core
+xsct% con
+
+# Info message is displayed when the core hits the breakpoint
+xsct% Info: ARM Cortex-A9 MPCore #0 (target 2) Stopped at 0x1005a4 (Breakpoint)
+
+# Registers can be viewed when the core is stopped
+xsct% rrd
+     r0: 00000000       r1: 00000000       r2: 0010e898       r3: 001042dc
+     r4: 00000003       r5: 0000001e       r6: 0000ffff       r7: f8f00000
+     r8: 00000000       r9: ffffffff      r10: 00000000      r11: 00000000
+    r12: 0010fc90       sp: 0010fca0       lr: 001022d8       pc: 001005a4
+   cpsr: 600000df      usr                fiq                irq         
+    abt                und                svc                mon         
+    vfp               cp15            Jazelle
+
+# Memory contents can be displayed
+xsct% mrd 0xe000d000
+E000D000:   800A0000
+
+# Local variables can be viewed
+xsct% locals
+Int_1_Loc       : 1113232
+Int_2_Loc       : 30
+Int_3_Loc       : 0
+Ch_Index        : 0
+Enum_Loc        : 0
+Str_1_Loc       : char[31]
+Str_2_Loc       : char[31]
+Run_Index       : 1061232
+Number_Of_Runs  : 2
+
+# Local variable value can be modified
+xsct% locals Number_Of_Runs 100
+xsct% locals Number_Of_Runs
+Number_Of_Runs  : 100
+
+# Global variables and be displayed, and its value can be modified
+xsct% print Int_Glob
+Int_Glob  : 0
+xsct% print -set Int_Glob 23
+xsct% print Int_Glob
+Int_Glob  : 23
+
+# Expressions can be evaluated and its value can be displayed
+xsct% print Int_Glob + 1 * 2
+Int_Glob + 1 * 2  : 25
+
+# Step over a line of source code
+xsct% nxt
+Info: ARM Cortex-A9 MPCore #0 (target 2) Stopped at 0x1005b0 (Step)
+
+# View stack trace
+xsct% bt
+    0  0x1005b0 main()+12: ../src/dhry_1.c, line 91
+    1  0x1022d8 _start()+88
+    2  unknown-pc
+
+# Set a breakpoint at exit and resume execution
+xsct% bpadd -addr &amp;exit
+1
+xsct% con
+Info: ARM Cortex-A9 MPCore #0 (target 2) Running
+xsct% Info: ARM Cortex-A9 MPCore #0 (target 2) Stopped at 0x103094 (Breakpoint)
+xsct% bt
+    0  0x103094 exit()
+    1  0x1022e0 _start()+96
+    2  unknown-pc</pre>
+
+            <p class="p">While a program is running on <samp class="ph codeph">A9 #0</samp>, users can download another elf onto <samp class="ph codeph">A9 #1</samp> and debug it, using similar steps. Note that, it’s not necessary to re-connect to the hw_server, initialize the PS or configure the FPGA in such cases. Users can just select <samp class="ph codeph">A9 #1</samp> target and download the elf and continue with further debug.</p>
+ </div>
+
+    </div>
+
+<div class="navfooter"><!----></div>
+</body>
+</html>

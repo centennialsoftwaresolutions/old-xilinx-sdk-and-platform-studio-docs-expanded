@@ -1,0 +1,67 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="To generate a linker script for an application, do the following: Select the application project in the Project Navigator view. Right-click Generate Linker Script. Alternately, you can click Xilinx ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Generating a Linker Script for an Application"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_manuallyaddingthelinkerscript.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_linker_script_mod.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_generatinglinkerscriptforapp_basictab.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_generatinglinkerscriptforapp_advancedtab.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="generatingalinkerscriptforanapplication"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Generating a Linker Script for an Application</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="generatingalinkerscriptforanapplication"><a name="generatingalinkerscriptforanapplication"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+
+<h1 class="title topictitle1">Generating a Linker Script for an Application</h1>
+
+<div class="body taskbody"><div class="section context">
+<p class="p">To generate a linker script for an application, do the following:</p>
+
+</div>
+<ol><li class="li step stepexpand">
+                <span class="ph cmd">Select the application project in the <strong class="ph b">Project Navigator</strong> view.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Right-click <strong class="ph b">Generate Linker Script. </strong>Alternately, you can click <strong class="ph b">Xilinx
+                        Tools &gt; Generate Linker Script. </strong>The left side of the dialog box is
+                    read-only, except for Output Script name and project build settings in the
+                        <strong class="ph b">Modify project build settings as follows</strong> field. This region shows all
+                    the available memory areas for the design.  </span>
+            </li>
+</ol><p class="li stepsection">You have two choices of how to allocate memory: using the <strong class="ph b">Basic</strong> tab or the
+                    <strong class="ph b">Advanced</strong> tab. Both perform the same tasks; however, the <strong class="ph b">Basic</strong> tab
+                is less granular and treats all types of data as “data” and all types of
+                instructions as “code.”. This is often sufficient to accomplish most tasks. Use the
+                    <strong class="ph b">Advanced</strong> tab for precise allocation of software blocks into various types
+                of memory. </p><ol start="3"><li class="li step stepexpand"><span class="ph cmd">Click <strong class="ph b">OK. </strong></span>
+<div class="itemgroup info"><p class="p">If there are errors, they must
+be corrected before you can build your application with the new linker
+script. </p>
+
+    
+<div class="note note"><span class="notetitle">Note:</span> If the linker script already exists, a message
+window appears, asking if you want to overwrite the file. Click <strong class="ph b">OK</strong>
+    to overwrite the file or <strong class="ph b">Cancel</strong> to cancel the overwrite. </div>
+
+   <p class="p">SDK automatically adds the linker script to the linker settings for a managed make project
+                        based on the options selected in <strong class="ph b">Modify project build settings as
+                            follows.</strong></p>
+</div></li>
+</ol>
+</div>
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../SDK_tasks/task_generatinglinkerscriptforapp_basictab.html">Basic Tab</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../SDK_tasks/task_generatinglinkerscriptforapp_advancedtab.html">Advanced Tab</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+</ul>
+<div class="relinfo reltasks"><strong>Related tasks</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/task_manuallyaddingthelinkerscript.html" title="Manually Adding the Linker Script">Manually Adding the Linker Script</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/sdk_u_linker_script_mod.html" title="Modifying a Linker Script">Modifying a Linker Script</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

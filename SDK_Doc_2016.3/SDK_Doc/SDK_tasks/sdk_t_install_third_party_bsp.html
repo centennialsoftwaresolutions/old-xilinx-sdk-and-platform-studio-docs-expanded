@@ -1,0 +1,48 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Third-party software components and board support packages (BSPs) typically need to be installed (copied) into a software repository of your choice. For example, assume that you want to install a ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Importing Third-Party Software Components"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_import_exist_proj.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_import_file.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_import_archive.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_importing_projects_from_git.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="sdk_t_install_third_party_bsp"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Importing Third-Party Software Components</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="sdk_t_install_third_party_bsp"><a name="sdk_t_install_third_party_bsp"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+
+<h1 class="title topictitle1">Importing Third-Party Software Components</h1>
+
+<div class="body taskbody"><div class="section context">
+<p class="p">Third-party software components and board support packages (BSPs) typically
+need to be installed (copied) into a software repository of your choice.</p>
+
+<p class="p">For example, assume that you want to install a custom board support
+package called my_sw_platform_v1_00_a, and that your software repository
+is located in <samp class="ph codeph">/home/sdk/sw_repos/dvi_demo_repository.</samp></p>
+
+<p class="p">In this case, you create a library directory under your repository
+directory, such as <samp class="ph codeph">/home/sdk/sw_repos/dvi_demo_repository/demo_library.</samp></p>
+
+<p class="p">You then paste your custom board support package files into <samp class="ph codeph">/home/sdk/sw_repos/dvi_demo_repository/demo_library/bsp /my_sw_platform_v1_00_a.</samp> For information on how software repositories must be structured, refer to <a class="xref" href="../SDK_concepts/sdk_c_repos.html">Repositories</a>.</p>
+
+<p class="p">Finally, you must configure your SDK workspace to recognize the new
+repository. To do this, add the path to the library <samp class="ph codeph">/home/sdk/sw_repos/dvi_demo_repository/demo_library</samp>
+to the Software Repositories list maintained by SDK for your workspace.</p>
+
+<p class="p">For information about adding repositories to your workspace, refer
+to Setting up software repositories.</p>
+
+</div>
+
+</div>
+<div class="related-links"><div class="relinfo reltasks"><strong>Related tasks</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_import_exist_proj.html" title="Importing an Existing Software Project">Importing an Existing Software Project</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_import_file.html" title="Importing Resources from the File System">Importing Resources from the File System</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_import_archive.html" title="Importing Resources from an Archive File">Importing Resources from an Archive File</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_importing_projects_from_git.html" title="Importing Projects from Git">Importing Projects from Git</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

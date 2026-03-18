@@ -1,0 +1,242 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Select the Use Authentication check box to authenticate the boot image or any of the partitions of the boot image. When using authentication, you must specify the authentication keys. The table below ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Using Authentication"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_usingencryption.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/refernce_bootimagepartitions.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="fo365643"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Using Authentication</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="fo365643"><a name="fo365643"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+
+<h1 class="title topictitle1">Using Authentication</h1>
+
+<div class="body taskbody"><div class="section context">
+<p class="p">Select the <span class="ph uicontrol">Use Authentication</span> check box to authenticate the boot image or any of the partitions of the boot image.</p>
+<p class="p">When using authentication, you must specify the authentication keys. The table below lists the authentication keys available for both Zynq<sup>®</sup> and Zynq<sup>®</sup> UltraScale+™ MPSoC architectures :</p>
+
+
+<div class="tablenoborder"><a name="fo365643__fo366380"><!-- --></a><table cellpadding="4" cellspacing="0" summary="" id="fo365643__fo366380" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1. Authentication Keys</span></caption>
+
+
+
+
+<thead class="thead" align="left">
+<tr class="row">
+<th class="entry" valign="top" width="56pt" id="d51891e46"><p class="p">Key</p>
+</th>
+
+<th class="entry" valign="top" width="71pt" id="d51891e50"><p class="p">Name</p>
+</th>
+
+<th class="entry" valign="top" width="NaN%" id="d51891e54"><p class="p">Description</p>
+</th>
+
+<th class="entry" valign="top" width="NaN%" id="d51891e58"><p class="p">Supported File Formats</p>
+</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr class="row">
+<td class="entry" colspan="4" valign="top" headers="d51891e46 d51891e50 d51891e54 d51891e58 ">
+<p class="p">For Zynq Architecture</p>
+
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="56pt" headers="d51891e46 ">PPK</td>
+
+<td class="entry" valign="top" width="71pt" headers="d51891e50 ">
+<p class="p" id="fo365643__p_e2w_zbr_gv">Primary Public Key</p>
+
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d51891e54 ">
+<p class="p" id="fo365643__p_idb_1cr_gv">This key is used to authenticate a partition. </p>
+
+<p class="p" id="fo365643__p_jdb_1cr_gv">It should always be specified when authenticating a partition.</p>
+
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d51891e58 ">
+<p class="p" id="fo365643__p_vsg_1cr_gv">*.txt</p>
+
+<p class="p" id="fo365643__p_wsg_1cr_gv">*.pem</p>
+
+<p class="p" id="fo365643__p_xsg_1cr_gv">*.pub</p>
+
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="56pt" headers="d51891e46 "><p class="p">SPK</p>
+</td>
+
+<td class="entry" valign="top" width="71pt" headers="d51891e50 "><p class="p">Secondary Public Key</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d51891e54 "><p class="p">This key is used to authenticate a partition.
+</p>
+<p class="p">It should always be specified when authenticating a partition.</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d51891e58 "><p class="p">*.txt</p>
+<p class="p">*.pem</p>
+<p class="p">*.pub</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="56pt" headers="d51891e46 "><p class="p">PSK</p>
+</td>
+
+<td class="entry" valign="top" width="71pt" headers="d51891e50 "><p class="p">Primary Secret Key</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d51891e54 "><p class="p">This key is used to sign a partition. </p>
+<p class="p">It
+is not mandatory.</p>
+<p class="p">There are two options:</p>
+<ul class="ul">
+<li class="li">PSK specified: If you specify the PSK, the tool calculates the SPK signature
+with PSK and puts it in the boot image.</li>
+<li class="li">PSK not specified: If
+you no not want to specify or reveal the secret key PSK, you can give
+the SPK signature directly. See SPK Signature in this table.</li>
+</ul>
+
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d51891e58 "><p class="p">*.txt</p>
+<p class="p">*.pem</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="56pt" headers="d51891e46 "><p class="p">SSK</p>
+</td>
+
+<td class="entry" valign="top" width="71pt" headers="d51891e50 "><p class="p">Secondary Secret Key</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d51891e54 "><p class="p">This key is used to sign a partition. </p>
+<p class="p">It
+is not mandatory.</p>
+<p class="p">There are two options:</p>
+<ul class="ul">
+<li class="li">SSK specified: If you specify the SSK, the tool calculates the partition
+signatures with SSK and puts it in the boot image.</li>
+<li class="li">SSK not specified:
+If you no not want to specify or reveal the secret key SSK, you should
+presign the partition given directly to the tool. See SPK Signature in
+this table.</li>
+</ul>
+
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d51891e58 "><p class="p">*.txt</p>
+<p class="p">*.sig</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="56pt" headers="d51891e46 "><p class="p">SPK Signature</p>
+</td>
+
+<td class="entry" valign="top" width="71pt" headers="d51891e50 "><p class="p">Secondary Public Key Signature</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d51891e54 "><p class="p">The SPK Signature can be directly specified
+in cases where you do not want to share the secret key.</p>
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d51891e58 "><p class="p">*.txt</p>
+<p class="p">*.sig</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" colspan="4" valign="top" headers="d51891e46 d51891e50 d51891e54 d51891e58 ">For Zynq UltraScale+ MPSoC Architecture</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="56pt" headers="d51891e46 ">Hashing Select</td>
+
+<td class="entry" valign="top" width="71pt" headers="d51891e50 "> </td>
+
+<td class="entry" valign="top" width="NaN%" headers="d51891e54 ">
+<p class="p" id="fo365643__p_twd_rcr_gv">SHA3: SHA3 Hashing algorithm is used while doing RSA authentication.</p>
+
+<p class="p" id="fo365643__p_zsr_rcr_gv">SHA2: SHA2 Hashing algorithm is used while doing RSA authentication. </p>
+
+</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d51891e58 "> </td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="56pt" headers="d51891e46 ">PPK Select</td>
+
+<td class="entry" valign="top" width="71pt" headers="d51891e50 ">Primary Public Key Select</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d51891e54 ">There are two locations in efuse to store the hash of PPK (PPK0 &amp; PPK1). Select the location in which PPK hash will be stored.</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d51891e58 "> </td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="56pt" headers="d51891e46 ">SPK ID</td>
+
+<td class="entry" valign="top" width="71pt" headers="d51891e50 ">Secondary Public Key Identifier</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d51891e54 ">This is a optional user defined value that is also written to efuse. This value is ignored in case of the <span class="ph uicontrol">Use BH Auth</span> checkbox is selected Boot Header Authentication (Use BH Auth) </td>
+
+<td class="entry" valign="top" width="NaN%" headers="d51891e58 "> </td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="56pt" headers="d51891e46 ">Use BH Auth</td>
+
+<td class="entry" valign="top" width="71pt" headers="d51891e50 ">Boot Header Authentication</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d51891e54 ">Using BH authentication, bypasses the PPK validation. This option can be used during development cycle, without burning the efuse .</td>
+
+<td class="entry" valign="top" width="NaN%" headers="d51891e58 "> </td>
+
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+
+</div>
+
+</div>
+<div class="related-links"><div class="relinfo reltasks"><strong>Related tasks</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/task_usingencryption.html" title="Using Encryption">Using Encryption</a></div>
+</div>
+<div class="relinfo relref"><strong>Related reference</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/refernce_bootimagepartitions.html" title="Boot Image Partitions">Boot Image Partitions</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

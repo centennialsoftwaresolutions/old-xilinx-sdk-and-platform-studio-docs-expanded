@@ -1,0 +1,266 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="In Zynq ® , ECT is configured with four broadcast channels, four CTIs, and a CTM. One CTI is connected to ETB/TPIU, one to FTM and one to each Cortex ® -A9 core. The table below shows the trigger ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="Cross-Triggering in Zynq"></meta><meta name="abstract" content=""></meta><meta name="description" content=""></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_enable_cross_triggering.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/reference_cross-trigerring-zynqmp.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_jwj_nmr_gvzz"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Cross-Triggering in Zynq</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_jwj_nmr_gvzz"><a name="reference_jwj_nmr_gvzz"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Cross-Triggering in Zynq</h1>
+
+  
+  <div class="body refbody"><p class="shortdesc"></p>
+
+    <div class="section">
+      <p class="p">In Zynq<sup>®</sup>, ECT is configured with four broadcast channels, four CTIs, and a CTM. One CTI is connected to ETB/TPIU, one to FTM and one to each Cortex<sup>®</sup>-A9 core. The table below shows the trigger input and trigger output connections of each CTI. </p>
+
+      <div class="note note"><span class="notetitle">Note:</span> The connections specified in the table below are hard-wired connections.</div>
+
+      
+<div class="tablenoborder"><a name="reference_jwj_nmr_gvzz__table_j1g_brd_ht"><!-- --></a><table cellpadding="4" cellspacing="0" summary="" id="reference_jwj_nmr_gvzz__table_j1g_brd_ht" class="table" frame="border" border="1" rules="all">
+          
+          
+          <thead class="thead" align="left">
+            <tr class="row">
+              <th class="entry" valign="top" id="d15312e40">CTI Trigger Port</th>
+
+              <th class="entry" valign="top" id="d15312e43">Signal</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody class="tbody">
+
+            <tr class="row">
+              <td class="entry" colspan="2" valign="top" headers="d15312e40 d15312e43 ">CTI connected to ETB, TPIU</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" valign="top" headers="d15312e40 ">Trigger Input 2</td>
+
+              <td class="entry" valign="top" headers="d15312e43 ">ETB full</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" valign="top" headers="d15312e40 ">Trigger Input 3</td>
+
+              <td class="entry" valign="top" headers="d15312e43 ">ETB acquisition complete</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" valign="top" headers="d15312e40 ">Trigger Input 4</td>
+
+              <td class="entry" valign="top" headers="d15312e43 ">ITM trigger</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" valign="top" headers="d15312e40 ">Trigger Output 0</td>
+
+              <td class="entry" valign="top" headers="d15312e43 ">ETB flush</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" valign="top" headers="d15312e40 ">Trigger Output 1</td>
+
+              <td class="entry" valign="top" headers="d15312e43 ">ETB trigger</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" valign="top" headers="d15312e40 ">Trigger Output 2</td>
+
+              <td class="entry" valign="top" headers="d15312e43 ">TPIU flush</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" valign="top" headers="d15312e40 ">Trigger Output 3</td>
+
+              <td class="entry" valign="top" headers="d15312e43 ">TPIU trigger</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" colspan="2" valign="top" headers="d15312e40 d15312e43 ">FTM CTI</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" valign="top" headers="d15312e40 ">Trigger Input 0</td>
+
+              <td class="entry" valign="top" headers="d15312e43 ">FTM trigger</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" valign="top" headers="d15312e40 ">Trigger Input 1</td>
+
+              <td class="entry" valign="top" headers="d15312e43 ">FTM trigger</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" valign="top" headers="d15312e40 ">Trigger Input 2</td>
+
+              <td class="entry" valign="top" headers="d15312e43 ">FTM trigger</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" valign="top" headers="d15312e40 ">Trigger Input 3</td>
+
+              <td class="entry" valign="top" headers="d15312e43 ">FTM trigger</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" valign="top" headers="d15312e40 ">Trigger Output 0</td>
+
+              <td class="entry" valign="top" headers="d15312e43 ">FTM trigger</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" valign="top" headers="d15312e40 ">Trigger Output 1</td>
+
+              <td class="entry" valign="top" headers="d15312e43 ">FTM trigger</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" valign="top" headers="d15312e40 ">Trigger Output 2</td>
+
+              <td class="entry" valign="top" headers="d15312e43 ">FTM trigger</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" valign="top" headers="d15312e40 ">Trigger Output 3</td>
+
+              <td class="entry" valign="top" headers="d15312e43 ">FTM trigger</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" colspan="2" valign="top" headers="d15312e40 d15312e43 ">CPU0/1 CTIs</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" valign="top" headers="d15312e40 ">Trigger Input 0</td>
+
+              <td class="entry" valign="top" headers="d15312e43 ">CPU DBGACK</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" valign="top" headers="d15312e40 ">Trigger Input 1</td>
+
+              <td class="entry" valign="top" headers="d15312e43 ">CPU PMU IRQ</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" valign="top" headers="d15312e40 ">Trigger Input 2</td>
+
+              <td class="entry" valign="top" headers="d15312e43 ">PTM EXT</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" valign="top" headers="d15312e40 ">Trigger Input 3</td>
+
+              <td class="entry" valign="top" headers="d15312e43 ">PTM EXT</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" valign="top" headers="d15312e40 ">Trigger Input 4</td>
+
+              <td class="entry" valign="top" headers="d15312e43 ">CPU COMMTX</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" valign="top" headers="d15312e40 ">Trigger Input 5</td>
+
+              <td class="entry" valign="top" headers="d15312e43 ">CPU COMMTX</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" valign="top" headers="d15312e40 ">Trigger Input 6</td>
+
+              <td class="entry" valign="top" headers="d15312e43 ">PTM TRIGGER</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" valign="top" headers="d15312e40 ">Trigger Output 0</td>
+
+              <td class="entry" valign="top" headers="d15312e43 ">CPU debug request</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" valign="top" headers="d15312e40 ">Trigger Output 1</td>
+
+              <td class="entry" valign="top" headers="d15312e43 ">PTM EXT</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" valign="top" headers="d15312e40 ">Trigger Output 2</td>
+
+              <td class="entry" valign="top" headers="d15312e43 ">PTM EXT</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" valign="top" headers="d15312e40 ">Trigger Output 3</td>
+
+              <td class="entry" valign="top" headers="d15312e43 ">PTM EXT</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" valign="top" headers="d15312e40 ">Trigger Output 4</td>
+
+              <td class="entry" valign="top" headers="d15312e43 ">PTM EXT</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" valign="top" headers="d15312e40 ">Trigger Output 7</td>
+
+              <td class="entry" valign="top" headers="d15312e43 ">CPU restart request</td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+</div>
+
+    </div>
+
+  </div>
+
+<div class="related-links"><div class="relinfo relconcepts"><strong>Related concepts</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/task_enable_cross_triggering.html" title="Enable Cross-Triggering">Enable Cross-Triggering</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/reference_cross-trigerring-zynqmp.html" title="Cross-Triggering in Zynq UltraScale+ MPSoC">Cross-Triggering in Zynq UltraScale+ MPSoC</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

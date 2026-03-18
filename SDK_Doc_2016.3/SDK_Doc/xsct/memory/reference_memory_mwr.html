@@ -1,0 +1,169 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Memory Write Syntax mwr [options] &lt;address&gt; &lt;values&gt; [num] Write &lt;num&gt; words from list of &lt;values&gt; to active target memory address specified by &lt;address&gt; . If &lt;num&gt; words is not specified, all the ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="mwr"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/memory/reference_memory_mrd.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/memory/reference_memory_osa.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/memory/reference_memory_memmap.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="xsct_memory_mwr"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>mwr</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../../index.html";
+          
+          --></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="xsct_memory_mwr"><a name="xsct_memory_mwr"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+	<h1 class="title topictitle1">mwr</h1>
+
+	<div class="body refbody">
+<div class="section"> <p class="p">Memory Write</p>
+ </div>
+
+<div class="section command"><h2 class="title sectiontitle">Syntax</h2> 
+			<p class="p"><span class="ph synph"><span class="keyword option">mwr</span> <span class="keyword kwd">[options] &lt;address&gt; &lt;values&gt; [num]</span></span></p>
+
+			<p class="p">Write <samp class="ph codeph">&lt;num&gt;</samp> words from list of <samp class="ph codeph">&lt;values&gt;</samp> to active target memory address specified by <samp class="ph codeph">&lt;address&gt;</samp>. If <samp class="ph codeph">&lt;num&gt;</samp> words is not specified, all the <samp class="ph codeph">&lt;values&gt;</samp> from the list are written sequentially from the address specifed by <samp class="ph codeph">&lt;address&gt;</samp> If <samp class="ph codeph">&lt;num&gt;</samp> is greater than the size of the <samp class="ph codeph">&lt;values&gt;</samp> list, the last word in the list is filled at the remaining address locations </p>
+
+			<p class="p"><span class="ph synph"><span class="keyword option">mwr</span> <span class="keyword kwd">[options] -bin -file &lt;file-name&gt; &lt;address&gt; [num]</span></span></p>
+
+			<p class="p">Read <samp class="ph codeph">&lt;num&gt;</samp> values from a binary file and write to active target memory address specified by <samp class="ph codeph">&lt;address&gt;</samp>. If <samp class="ph codeph">&lt;num&gt;</samp> words is not specified, all the data from the file is written sequentially from the address specifed by <samp class="ph codeph">&lt;address&gt;</samp> </p>
+
+		</div>
+
+<div class="section command"><h2 class="title sectiontitle">Options</h2>  
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+				
+				
+				<thead class="thead" align="left">
+					<tr class="row">
+						<th class="entry" valign="top" id="d66785e100">Option</th>
+
+						<th class="entry" valign="top" id="d66785e103">Description</th>
+
+					</tr>
+
+				</thead>
+
+				<tbody class="tbody">
+					<tr class="row">
+						<td class="entry" valign="top" headers="d66785e100 "><span class="keyword cmdname">-force</span></td>
+
+						<td class="entry" valign="top" headers="d66785e103 ">Overwrite access protection. By default accesses to reserved and invalid address ranges are blocked </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d66785e100 "><span class="keyword cmdname">-size &lt;access-size&gt;</span></td>
+
+						<td class="entry" valign="top" headers="d66785e103 "><samp class="ph codeph">&lt;access-size&gt;</samp> can be one of the values below: b = Bytes accesses h = Half-word accesses w = Word accesses Default access size is w Address will be aligned to access-size before writing to memory </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d66785e100 "><span class="keyword cmdname">-bin</span></td>
+
+						<td class="entry" valign="top" headers="d66785e103 ">Read binary data from a file and write it to target address space </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d66785e100 "><span class="keyword cmdname">-file &lt;file-name&gt;</span></td>
+
+						<td class="entry" valign="top" headers="d66785e103 ">File from which binary data is read to write to target address space </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d66785e100 "><span class="keyword cmdname">-address-space &lt;name&gt;</span></td>
+
+						<td class="entry" valign="top" headers="d66785e103 ">Access specified memory space instead default memory space of current target. For ARM DAP targets, address spaces DPR, APR and AP<samp class="ph codeph">&lt;n&gt;</samp> can be used to access DP Registers, AP Registers and MEM-AP addresses, respectively.  For backwards compatibility -arm-dap and -arm-ap options can be used as shorthand for "-address-space APR" and "-address-space AP<samp class="ph codeph">&lt;n&gt;</samp>", respectively. The APR address range is 0x0 - 0xfffc, where the higher 8 bits select an AP and lower 8 bits are the register address for that AP </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d66785e100 "><span class="keyword cmdname">-unaligned-accesses</span></td>
+
+						<td class="entry" valign="top" headers="d66785e103 ">Memory address is not aligned to access size, before performing a write operation. Support for unaligned accesses is target architecture dependent. If this option is not specified, addresses are automatically aligned to access size </td>
+
+					</tr>
+
+				</tbody>
+
+			</table>
+</div>
+ </div>
+
+<div class="section command"><h2 class="title sectiontitle">Note(s)</h2> 
+			<ul class="ul">
+			<li class="li">Select a APU target to access ARM DAP and MEM-AP address space </li>
+
+			</ul>
+
+		</div>
+
+<div class="section command"><h2 class="title sectiontitle">Returns</h2> 
+			<p class="p">Nothing, if successful. Error string, if the target memory can't be written. </p>
+
+		</div>
+
+<div class="section command"><h2 class="title sectiontitle">Example(s)</h2> 
+
+			<pre class="pre codeblock">mwr 0x0 0x1234</pre>
+
+			<p class="p">Write 0x1234 to address 0x0 </p>
+
+
+			<pre class="pre codeblock">mwr 0x0 {0x12 0x23 0x34 0x45}</pre>
+
+			<p class="p">Write 4 words from the list of values to address 0x0 </p>
+
+
+			<pre class="pre codeblock">mwr 0x0 {0x12 0x23 0x34 0x45} 10</pre>
+
+			<p class="p">Write 4 words from the list of values to address 0x0 and fill the last word from the list at remaining 6 address locations </p>
+
+
+			<pre class="pre codeblock">mwr -size b 0x1 {0x1 0x2 0x3} 3</pre>
+
+			<p class="p">write 3 bytes from the list at address 0x1 </p>
+
+
+			<pre class="pre codeblock">mwr -size h 0x2 {0x1234 0x5678} 2</pre>
+
+			<p class="p">write 2 half-words from the list at address 0x2 </p>
+
+
+			<pre class="pre codeblock">mwr -bin -file mem.bin 0 100</pre>
+
+			<p class="p">Read 100 words from binary file mem.bin and write the data at target address 0x0 </p>
+
+
+			<pre class="pre codeblock">mwr -arm-dap 0x100 0x80000042</pre>
+
+			<p class="p">Write 0x80000042 to APB-AP CSW on Zynq The higher 8 bits (0x1) select the APB-AP and lower 8 bits (0x0) is the address of CSW </p>
+
+
+			<pre class="pre codeblock">mwr -arm-dap 0x04 0xf8000120</pre>
+
+			<p class="p">Write 0xf8000120 to AHB-AP TAR on Zynq The higher 8 bits (0x0) select the AHB-AP and lower 8 bits (0x4) is the address of TAR </p>
+
+
+			<pre class="pre codeblock">mwr -arm-ap 1 0x80090088 0x03186003</pre>
+
+			<p class="p">Write 0x03186003 to address 0x80090088 on DAP APB-AP 0x80090088 corresponds to DBGDSCR register of Cortex-A9#0, on Zynq AP 1 selects the APB-AP </p>
+
+
+			<pre class="pre codeblock">mwr -arm-ap 0 0xe000d000 0x80020001</pre>
+
+			<p class="p">Write 0x80020001 to address 0xe000d000 on DAP AHB-AP 0xe000d000 corresponds to QSPI device on Zynq AP 0 selects the AHB-AP </p>
+
+		</div>
+
+	</div>
+
+<div class="related-links"><div class="relinfo relref"><strong>Related reference</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/memory/reference_memory_mrd.html" title="mrd">mrd</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/memory/reference_memory_osa.html" title="osa">osa</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/memory/reference_memory_memmap.html" title="memmap">memmap</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

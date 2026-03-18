@@ -1,0 +1,138 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="System debugger supports source level debugging of self-relocating programs, like u-boot. A self-relocating program is a program which relocates its own code and data sections, during run time. The ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Debugging Self-relocating Programs"></meta><meta name="abstract" content=""></meta><meta name="description" content=""></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_recommend_debug_use.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/sdk_c_debug_run_configuration.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_target_connections.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_tcf_supported_design_flows.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_tcf_multiproc_debugging.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_tcf_remote_debug.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_viewing_mem_contents.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_viewing_IP_register_details.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_osawaredebug.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_references/reference_multicable_multidevice.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="task_vsm_jvr_gv"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Debugging Self-relocating Programs</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="task_vsm_jvr_gv"><a name="task_vsm_jvr_gv"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+    <h1 class="title topictitle1">Debugging Self-relocating Programs</h1>
+
+    
+    <div class="body taskbody"><p class="shortdesc"></p>
+
+        <div class="section context">
+            <p class="p">System debugger supports source level debugging of self-relocating programs, like u-boot. A self-relocating program is a program which relocates its own code and data sections, during run time. The debug information available in such files doesn't provide details about where the program sections would be relocated to. Due to this reason, you must provide additional information to the debugger, about the address to which program sections will be relocated to. This can be done in two ways.</p>
+
+        </div>
+
+        <ol class="ol steps"><li class="li step stepexpand">
+                <span class="ph cmd">Update the system debugger launch configuration to provide the address to which program sections are relocated.</span>
+                <a name="task_vsm_jvr_gv__substeps_llw_qvr_gv"><!-- --></a><ol type="a" class="ol substeps" id="task_vsm_jvr_gv__substeps_llw_qvr_gv">
+                    <li class="li substep substepexpand">
+                        <span class="ph cmd">Select <span class="ph menucascade"><span class="ph uicontrol">Run</span> &gt; <span class="ph uicontrol">Debug Configurations</span></span> to launch the system debugger launch configuration.</span>
+                    </li>
+
+                    <li class="li substep substepexpand">
+                        <span class="ph cmd">Click the <span class="ph uicontrol">Application</span> tab and select the application you wish to download.</span>
+                    </li>
+
+                    <li class="li substep substepexpand">
+                        <span class="ph cmd">Select the <span class="ph uicontrol">This is a self-relocating application</span> checkbox. </span>
+                    </li>
+
+                    <li class="li substep substepexpand">
+                        <span class="ph cmd">Enter the address to which all the program sections will be relocated in the <span class="ph uicontrol">Relative address to which the program sections are relocated</span> textbox. </span>
+                        <div class="itemgroup info">
+                            <br xmlns="http://www.w3.org/1999/xhtml" /><a name="task_vsm_jvr_gv__image_uhr_swr_gv"><!-- --></a><img class="image" id="task_vsm_jvr_gv__image_uhr_swr_gv" src="../images/debug_self_relocate_program_launchconf.png" height="544" width="1007"></img><br xmlns="http://www.w3.org/1999/xhtml" />
+                        </div>
+                    </li>
+
+                    <li class="li substep substepexpand">
+                        <span class="ph cmd">Launch the debug configuration. When the program sections are relocated during runtime, the debugger will have enough information to support source level debugging of the relocated sections.</span>
+                        <div class="itemgroup info">
+                            <br xmlns="http://www.w3.org/1999/xhtml" /><a name="task_vsm_jvr_gv__image_uhr_swr_rs"><!-- --></a><img class="image" id="task_vsm_jvr_gv__image_uhr_swr_rs" src="../images/debug_self_relocating_prog_debugview.png" height="523" width="671"></img><br xmlns="http://www.w3.org/1999/xhtml" />
+                        </div>
+                    </li>
+
+                </ol>
+
+                <div class="itemgroup info"><div class="note note"><span class="notetitle">Note:</span> This method is supported only when the 'Debug Type' is set to 'Standalone' in the 'Target Setup' tab of the debug configuration.</div>
+</div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Alternatively, you can also use the <span class="keyword cmdname">memmap</span> command in XSDB to provide the address to which the program sections are relocated. <span class="keyword cmdname">memmap</span> command in XSDB can be used to add symbol files to the debugger. This is useful for debuggin the applications which are already running on the target. For example, boot from flash. In case of relocatable <span class="ph filepath">.ELF</span> files, you can use the <span class="keyword cmdname">-relocate-section-map</span> option, to provide the relocate address.</span>
+                <div class="itemgroup info">
+                    <pre class="pre codeblock">xsdb% targets 2
+ 1 APU
+   2 ARM Cortex-A9 MPCore #0 (Suspended)
+   3 ARM Cortex-A9 MPCore #1 (Suspended)
+ 4 xc7z020
+xsdb% targets 2
+xsdb% memmap -reloc 0x3bf37000 -file u-boot
+
+xsdb% stop
+Info: ARM Cortex-A9 MPCore #0 (target 2) Stopped at 0x3ff7b478 (Suspended)
+xsdb% bt
+ 0 0x3ff7b478 __udelay()+1005809800: lib/time.c, line 91
+ 1 0x3ff7b4ac udelay()+1005809696: lib/time.c, line 104
+ 2 0x3ff5d878 genphy_update_link()+1005809860: drivers/net/phy/phy.c, line 250
+ 3 0x3ff5df84 m88e1118_startup()+1005809712: drivers/net/phy/marvell.c, line 356
+ 4 0x3ff5d154 zynq_gem_init()+1005810192: drivers/net/zynq_gem.c, line 402
+ 5 0x3ff7dc58 eth_init()+1005809720: net/eth.c, line 886
+ 6 0x3ff7e0e4 net_loop()+1005809728: net/net.c, line 407
+ 7 0x3ff46330 netboot_common()+1005809972: common/cmd_net.c, line 230
+ 8 0x3ff46520 do_tftpb()+1005809708: common/cmd_net.c, line 33
+ 9 0x3ff5295c cmd_process()+1005809824: common/command.c, line 493
+ 10 0x3ff5295c cmd_process()+1005809824: common/command.c, line 493
+ 11 0x3ff3b710 run_list_real()+1005811444: common/cli_hush.c, line 1656
+ 12 0x3ff3b710 run_list_real()+1005811444: common/cli_hush.c, line 1656
+ 13 0x3ff3be3c parse_stream_outer()+1005811244: common/cli_hush.c, line 2003
+ 14 0x3ff3be3c parse_stream_outer()+1005811244: common/cli_hush.c, line 2003
+ 15 0x3ff3b008 parse_string_outer()+1005809872: common/cli_hush.c, line 3254
+ 16 0x3ff3b6b8 run_list_real()+1005811356: common/cli_hush.c, line 1617
+ 17 0x3ff3b6b8 run_list_real()+1005811356: common/cli_hush.c, line 1617
+ 18 0x3ff3be3c parse_stream_outer()+1005811244: common/cli_hush.c, line 2003
+ 19 0x3ff3be3c parse_stream_outer()+1005811244: common/cli_hush.c, line 2003
+ 20 0x3ff3afd0 parse_string_outer()+1005809816: common/cli_hush.c, line 3248
+ 21 0x3ff5140c do_run()+1005809740: common/cli.c, line 131
+ 22 0x3ff5295c cmd_process()+1005809824: common/command.c, line 493
+ 23 0x3ff5295c cmd_process()+1005809824: common/command.c, line 493
+ 24 0x3ff3b710 run_list_real()+1005811444: common/cli_hush.c, line 1656
+ 25 0x3ff3b710 run_list_real()+1005811444: common/cli_hush.c, line 1656
+ 26 0x3ff3be3c parse_stream_outer()+1005811244: common/cli_hush.c, line 2003
+ 27 0x3ff3be3c parse_stream_outer()+1005811244: common/cli_hush.c, line 2003
+ 28 0x3ff3b008 parse_string_outer()+1005809872: common/cli_hush.c, line 3254
+ 29 0x3ff3b6b8 run_list_real()+1005811356: common/cli_hush.c, line 1617
+ 30 0x3ff3b6b8 run_list_real()+1005811356: common/cli_hush.c, line 1617
+ 31 0x3ff3be3c parse_stream_outer()+1005811244: common/cli_hush.c, line 2003
+ 32 0x3ff3be3c parse_stream_outer()+1005811244: common/cli_hush.c, line 2003
+ 33 0x3ff3afd0 parse_string_outer()+1005809816: common/cli_hush.c, line 3248
+ 34 0x3ff39ab4 main_loop()+1005809724: common/main.c, line 85
+ 35 0x3ff3c4f4 run_main_loop()+1005809672: common/board_r.c, line 675
+ 36 0x3ff73b54 initcall_run_list()+1005809716: lib/initcall.c, line 27
+ 37 0x3ff3c66c board_init_r()+1005809676: common/board_r.c, line 908
+ 38 0x3ff3837c clbss_l()+1005809688: arch/arm/lib/crt0.S, line 174
+ 39 unknown-pc
+</pre>
+
+                </div>
+            </li>
+</ol>
+
+    </div>
+
+<div class="related-links"><div class="relinfo relconcepts"><strong>Related concepts</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/sdk_c_debug_run_configuration.html" title="Launch Configurations">Launch Configurations</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_viewing_mem_contents.html" title="Viewing Memory Contents">Viewing Memory Contents</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_viewing_IP_register_details.html" title="Viewing IP Register Details">Viewing IP Register Details</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_osawaredebug.html" title="OS Aware Debugging">OS Aware Debugging</a></div>
+</div>
+<div class="relinfo reltasks"><strong>Related tasks</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_recommend_debug_use.html" title="Recommended Debugger Usage">Recommended Debugger Usage</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_target_connections.html" title="Target Connections">Target Connections</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_tcf_supported_design_flows.html" title="System Debugger Supported Design Flows">System Debugger Supported Design Flows</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_tcf_multiproc_debugging.html" title="Multi-Processor Debugging with System Debugger">Multi-Processor Debugging with System Debugger</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_tcf_remote_debug.html" title="Using a Remote Host with System Debugger">Using a Remote Host with System Debugger</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_references/reference_multicable_multidevice.html" title="Multi-Cable and Multi-Device Support">Multi-Cable and Multi-Device Support</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

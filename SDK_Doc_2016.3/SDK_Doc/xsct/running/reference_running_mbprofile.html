@@ -1,0 +1,153 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Configure and run the MB profiler Syntax mbprofile [options] Configure and run the MB profiler, a non-intrusive profiler for profiling the application running on MB. The output file is generated in ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="mbprofile"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_state.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_stop.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_con.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_stp.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_nxt.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_stpi.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_nxti.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_stpout.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_dis.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_print.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_locals.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_backtrace.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_profile.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="xsct_running_mbprofile"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>mbprofile</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../../index.html";
+          
+          --></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="xsct_running_mbprofile"><a name="xsct_running_mbprofile"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+	<h1 class="title topictitle1">mbprofile</h1>
+
+	<div class="body refbody">
+<div class="section"> <p class="p">Configure and run the MB profiler</p>
+ </div>
+
+<div class="section command"><h2 class="title sectiontitle">Syntax</h2> 
+			<p class="p"><span class="ph synph"><span class="keyword option">mbprofile</span> <span class="keyword kwd">[options]</span></span></p>
+
+			<p class="p">Configure and run the MB profiler, a non-intrusive profiler for profiling the application running on MB. The output file is generated in gmon.out format. The results can be viewed using gprof editor. In case of cycle count, an annotated disassembly file is also generated clearly marking time taken for execution of instructions. </p>
+
+		</div>
+
+<div class="section command"><h2 class="title sectiontitle">Options</h2>  
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+				
+				
+				<thead class="thead" align="left">
+					<tr class="row">
+						<th class="entry" valign="top" id="d74255e52">Option</th>
+
+						<th class="entry" valign="top" id="d74255e55">Description</th>
+
+					</tr>
+
+				</thead>
+
+				<tbody class="tbody">
+					<tr class="row">
+						<td class="entry" valign="top" headers="d74255e52 "><span class="keyword cmdname">-low &lt;addr&gt;</span></td>
+
+						<td class="entry" valign="top" headers="d74255e55 ">Low address of the profiling address range. </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d74255e52 "><span class="keyword cmdname">-high &lt;addr&gt;</span></td>
+
+						<td class="entry" valign="top" headers="d74255e55 ">High address of the profiling address range. </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d74255e52 "><span class="keyword cmdname">-freq &lt;value&gt;</span></td>
+
+						<td class="entry" valign="top" headers="d74255e55 ">Microblaze clock frequency. Default is 100MHz. </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d74255e52 "><span class="keyword cmdname">-count-instr</span></td>
+
+						<td class="entry" valign="top" headers="d74255e55 ">Count no. of executed instructions. By default no. of clock cycles of executed instructions are counted. </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d74255e52 "><span class="keyword cmdname">-cumulate</span></td>
+
+						<td class="entry" valign="top" headers="d74255e55 ">Cumulative profiling. Profiling without clearing the profiling buffers. </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d74255e52 "><span class="keyword cmdname">-start</span></td>
+
+						<td class="entry" valign="top" headers="d74255e55 ">Enable and start profiling. </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d74255e52 "><span class="keyword cmdname">-stop</span></td>
+
+						<td class="entry" valign="top" headers="d74255e55 ">Disable/stop profiling </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d74255e52 "><span class="keyword cmdname">-out &lt;filename&gt;</span></td>
+
+						<td class="entry" valign="top" headers="d74255e55 ">Output profiling data to file. <samp class="ph codeph">&lt;filename&gt;</samp> Name of the output file for writing the profiling data. If file name is not specified, profiling data is written to gmon.out </td>
+
+					</tr>
+
+				</tbody>
+
+			</table>
+</div>
+ </div>
+
+<div class="section command"><h2 class="title sectiontitle">Returns</h2> 
+			<p class="p">Depends on options used. -low, -high, -freq, -count-instr, -start, -cumulate Returns nothing on successful configuration. Error string, in case of error. </p>
+
+			<p class="p"><samp class="ph codeph">-stop</samp>: Returns nothing, and generates a file. Error string, in case of error. </p>
+
+		</div>
+
+<div class="section command"><h2 class="title sectiontitle">Example(s)</h2> 
+
+			<pre class="pre codeblock">mbprofile -low 0x0 -high 0x3FFF</pre>
+
+			<p class="p">Configure the mb-profiler with address range 0x0 to 0x3FFF for profiling to count the clock cycles of executed instructions. </p>
+
+
+			<pre class="pre codeblock">mbprofile -start</pre>
+
+			<p class="p">Enable and start profiling. </p>
+
+
+			<pre class="pre codeblock">mbprofile -stop -out testgmon.out</pre>
+
+			<p class="p">Output the profile data in testgmon.out </p>
+
+
+			<pre class="pre codeblock">mbprofile -count-instr</pre>
+
+			<p class="p">Configure the mb-profiler to profile for entire program address range to count no. of instructions executed. </p>
+
+		</div>
+
+	</div>
+
+<div class="related-links"><div class="relinfo relref"><strong>Related reference</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_state.html" title="state">state</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_stop.html" title="stop">stop</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_con.html" title="con">con</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_stp.html" title="stp">stp</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_nxt.html" title="nxt">nxt</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_stpi.html" title="stpi">stpi</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_nxti.html" title="nxti">nxti</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_stpout.html" title="stpout">stpout</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_dis.html" title="dis">dis</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_print.html" title="print">print</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_locals.html" title="locals">locals</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_backtrace.html" title="backtrace">backtrace</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_profile.html" title="profile">profile</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

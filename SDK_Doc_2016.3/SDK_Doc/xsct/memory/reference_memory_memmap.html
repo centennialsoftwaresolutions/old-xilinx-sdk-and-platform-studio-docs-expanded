@@ -1,0 +1,132 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Modify Memory Map Syntax memmap &lt;options&gt; Add/remove a memory map entry for the active target Options Option Description -addr &lt;memory-address&gt; Address of the memory region that should be ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="memmap"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/memory/reference_memory_mrd.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/memory/reference_memory_mwr.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/memory/reference_memory_osa.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="xsct_memory_memmap"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>memmap</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../../index.html";
+          
+          --></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="xsct_memory_memmap"><a name="xsct_memory_memmap"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+	<h1 class="title topictitle1">memmap</h1>
+
+	<div class="body refbody">
+<div class="section"> <p class="p">Modify Memory Map</p>
+ </div>
+
+<div class="section command"><h2 class="title sectiontitle">Syntax</h2> 
+			<p class="p"><span class="ph synph"><span class="keyword option">memmap</span> <span class="keyword kwd">&lt;options&gt;</span></span></p>
+
+			<p class="p">Add/remove a memory map entry for the active target </p>
+
+		</div>
+
+<div class="section command"><h2 class="title sectiontitle">Options</h2>  
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+				
+				
+				<thead class="thead" align="left">
+					<tr class="row">
+						<th class="entry" valign="top" id="d65763e52">Option</th>
+
+						<th class="entry" valign="top" id="d65763e55">Description</th>
+
+					</tr>
+
+				</thead>
+
+				<tbody class="tbody">
+					<tr class="row">
+						<td class="entry" valign="top" headers="d65763e52 "><span class="keyword cmdname">-addr &lt;memory-address&gt;</span></td>
+
+						<td class="entry" valign="top" headers="d65763e55 ">Address of the memory region that should be added/removed from the target's memory map </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d65763e52 "><span class="keyword cmdname">-size &lt;memory-size&gt;</span></td>
+
+						<td class="entry" valign="top" headers="d65763e55 ">Size of the memory region </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d65763e52 "><span class="keyword cmdname">-flags &lt;protection-flags&gt;</span></td>
+
+						<td class="entry" valign="top" headers="d65763e55 ">Protection flags for the memory region. <samp class="ph codeph">&lt;protection-flags&gt;</samp> can be a bitwise OR of the values below: 0x1  = Read access is allowed 0x2  = Write access is allowed 0x4  = Instruction fetch access is allowed Default value of <samp class="ph codeph">&lt;protection-flags&gt;</samp> is 0x3 (Read/Write Access) </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d65763e52 "><span class="keyword cmdname">-list</span></td>
+
+						<td class="entry" valign="top" headers="d65763e55 ">List the memory regions added to the active target's memory map </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d65763e52 "><span class="keyword cmdname">-clear</span></td>
+
+						<td class="entry" valign="top" headers="d65763e55 ">Specify whether the memory region should be removed from the target's memory map </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d65763e52 "><span class="keyword cmdname">-relocate-section-map &lt;addr&gt;</span></td>
+
+						<td class="entry" valign="top" headers="d65763e55 ">Relocate the address map of the program sections to <samp class="ph codeph">&lt;addr&gt;</samp>. This option should be used when the code is self-relocating, so that the debugger can find the debug symbol info for the code. <samp class="ph codeph">&lt;addr&gt;</samp> is the relative address, to which all the program sections are relocated </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d65763e52 "><span class="keyword cmdname">-osa</span></td>
+
+						<td class="entry" valign="top" headers="d65763e55 ">Enable OS awareness for the symbol file. Fast process start and fast stepping options are turned off by default. These options can be enabled using the osa command. See "help osa" for more details. </td>
+
+					</tr>
+
+				</tbody>
+
+			</table>
+</div>
+ </div>
+
+<div class="section command"><h2 class="title sectiontitle">Note(s)</h2> 
+			<ul class="ul">
+			<li class="li">Only the memory regions previously added through memmap command can be removed </li>
+
+			</ul>
+
+		</div>
+
+<div class="section command"><h2 class="title sectiontitle">Returns</h2> 
+			<p class="p">Nothing, while setting the memory map, or list of memory maps when -list option is used. </p>
+
+		</div>
+
+<div class="section command"><h2 class="title sectiontitle">Example(s)</h2> 
+
+			<pre class="pre codeblock">memmap -addr 0xfc000000 -size 0x1000 -flags 3</pre>
+
+			<p class="p">Add the memory region 0xfc000000 - 0xfc000fff to target's memory map Read/Write accesses are allowed to this region </p>
+
+
+			<pre class="pre codeblock">memmap -addr 0xfc000000 -clear</pre>
+
+			<p class="p">Remove the previously added memory region at 0xfc000000 from target's memory map </p>
+
+		</div>
+
+	</div>
+
+<div class="related-links"><div class="relinfo relref"><strong>Related reference</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/memory/reference_memory_mrd.html" title="mrd">mrd</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/memory/reference_memory_mwr.html" title="mwr">mwr</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/memory/reference_memory_osa.html" title="osa">osa</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

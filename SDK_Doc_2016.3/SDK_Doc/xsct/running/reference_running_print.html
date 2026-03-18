@@ -1,0 +1,168 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Get or set the value of an expression Syntax print [options] [expression] Get or set the value of an expression specified by &lt;expression&gt; . The &lt;expression&gt; can include constants, local/global ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="print"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_state.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_stop.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_con.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_stp.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_nxt.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_stpi.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_nxti.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_stpout.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_dis.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_locals.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_backtrace.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_profile.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_running_mbprofile.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="xsct_running_print"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>print</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../../index.html";
+          
+          --></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="xsct_running_print"><a name="xsct_running_print"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+	<h1 class="title topictitle1">print</h1>
+
+	<div class="body refbody">
+<div class="section"> <p class="p">Get or set the value of an expression</p>
+ </div>
+
+<div class="section command"><h2 class="title sectiontitle">Syntax</h2> 
+			<p class="p"><span class="ph synph"><span class="keyword option">print</span> <span class="keyword kwd">[options] [expression]</span></span></p>
+
+			<p class="p">Get or set the value of an expression specified by <samp class="ph codeph">&lt;expression&gt;</samp>. The <samp class="ph codeph">&lt;expression&gt;</samp> can include constants, local/global variables, CPU registers, or any operator, but pre-processor macros defined through #define are not supported. CPU registers can be specified in the format {$r1}, where r1 is the register name. Elements of a complex data types like a structure can be accessed through '.' operator. For example, var1.int_type refers to int_type element in var1 struct. Array elements can be accessed through their indices. For example, array1[0] refers to the element at index 0 in array1. </p>
+
+		</div>
+
+<div class="section command"><h2 class="title sectiontitle">Options</h2>  
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+				
+				
+				<thead class="thead" align="left">
+					<tr class="row">
+						<th class="entry" valign="top" id="d75361e58">Option</th>
+
+						<th class="entry" valign="top" id="d75361e61">Description</th>
+
+					</tr>
+
+				</thead>
+
+				<tbody class="tbody">
+					<tr class="row">
+						<td class="entry" valign="top" headers="d75361e58 "><span class="keyword cmdname">-add &lt;expression&gt;</span></td>
+
+						<td class="entry" valign="top" headers="d75361e61 ">Add the <samp class="ph codeph">&lt;expression&gt;</samp> to auto expression list. The values or definitions of the expressions in auto expression list are displayed when expression name is not specified. Frequently used expressions should be added to the auto expression list </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d75361e58 "><span class="keyword cmdname">-defs [expression]</span></td>
+
+						<td class="entry" valign="top" headers="d75361e61 ">Return the expression definitions like address, type, size and RW flags. Not all definitions are available for all the expressions. For example, address is available only for variables and not when the expression includes an operator </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d75361e58 "><span class="keyword cmdname">-dict [expression]</span></td>
+
+						<td class="entry" valign="top" headers="d75361e61 ">Return the result in Tcl dict format, with variable names as dict keys and variable values as dict values. For complex data like structures, names are in the form of parent.child </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d75361e58 "><span class="keyword cmdname">-remove [expression]</span></td>
+
+						<td class="entry" valign="top" headers="d75361e61 ">Remove the expression from auto expression list. Only expressions previously added to the list through -add option can be removed. When the expression name is not specified, all the expressions in the auto expression list are removed </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d75361e58 "><span class="keyword cmdname">-set &lt;expression&gt;</span></td>
+
+						<td class="entry" valign="top" headers="d75361e61 ">Set the value of a variable. It is not possible to set the value of an expression which includes constants or operators </td>
+
+					</tr>
+
+				</tbody>
+
+			</table>
+</div>
+ </div>
+
+<div class="section command"><h2 class="title sectiontitle">Returns</h2> 
+			<p class="p">The return value depends on the options used. </p>
+
+			<p class="p"><samp class="ph codeph">&lt;none&gt;</samp> or -add: Expression value(s) </p>
+
+			<p class="p"><samp class="ph codeph">-defs</samp>: Expression definition(s) </p>
+
+			<p class="p"><samp class="ph codeph">-remove or -set</samp>: Nothing </p>
+
+			<p class="p">Error string, if expression value  can't be read or set. </p>
+
+		</div>
+
+<div class="section command"><h2 class="title sectiontitle">Example(s)</h2> 
+
+			<pre class="pre codeblock">print Int_Glob</pre>
+
+			<p class="p">Return the value of variable Int_Glob </p>
+
+
+			<pre class="pre codeblock">print -a Microseconds</pre>
+
+			<p class="p">Add the variable Microseconds to auto expression list and return its value </p>
+
+
+			<pre class="pre codeblock">print -a Int_Glob*2 + 1</pre>
+
+			<p class="p">Add the expression (Int_Glob*2 + 1) to auto expression list and return its value </p>
+
+
+			<pre class="pre codeblock">print tmp_var.var1.int_type</pre>
+
+			<p class="p">Return the value of int_type element in var1 struct, where var1 is a member of tmp_var struct </p>
+
+
+			<pre class="pre codeblock">print tmp_var.var1.array1[0]</pre>
+
+			<p class="p">Return the value of the element at index 0 in array array1. array1 is a member of var1 struct, which is in turn a member of tmp_var struct </p>
+
+
+			<pre class="pre codeblock">print</pre>
+
+			<p class="p">Return the values of all the expressions in auto expression list </p>
+
+
+			<pre class="pre codeblock">print -defs</pre>
+
+			<p class="p">Return the definitions of all the expressions in auto expression list </p>
+
+
+			<pre class="pre codeblock">print -set Int_Glob 23</pre>
+
+			<p class="p">Set the value of the variable Int_Glob to 23 </p>
+
+
+			<pre class="pre codeblock">print -remove Microseconds</pre>
+
+			<p class="p">Remove the expression Microseconds from auto expression list </p>
+
+
+			<pre class="pre codeblock">print {r1}</pre>
+
+			<p class="p">Return the value of CPU register r1 </p>
+
+		</div>
+
+	</div>
+
+<div class="related-links"><div class="relinfo relref"><strong>Related reference</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_state.html" title="state">state</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_stop.html" title="stop">stop</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_con.html" title="con">con</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_stp.html" title="stp">stp</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_nxt.html" title="nxt">nxt</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_stpi.html" title="stpi">stpi</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_nxti.html" title="nxti">nxti</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_stpout.html" title="stpout">stpout</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_dis.html" title="dis">dis</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_locals.html" title="locals">locals</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_backtrace.html" title="backtrace">backtrace</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_profile.html" title="profile">profile</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_running_mbprofile.html" title="mbprofile">mbprofile</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

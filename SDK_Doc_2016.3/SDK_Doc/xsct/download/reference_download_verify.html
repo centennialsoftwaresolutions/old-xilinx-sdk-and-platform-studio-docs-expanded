@@ -1,0 +1,80 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Verify if ELF/binary file is downloaded correctly to target Syntax verify [options] &lt;file&gt; Verify if the ELF file &lt;file&gt; is downloaded correctly to active target verify -data &lt;file&gt; &lt;addr&gt; Verify if ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="verify"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/download/reference_download_dow.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/download/reference_download_fpga.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="xsct_download_verify"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>verify</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../../index.html";
+          
+          --></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="xsct_download_verify"><a name="xsct_download_verify"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+	<h1 class="title topictitle1">verify</h1>
+
+	<div class="body refbody">
+<div class="section"> <p class="p">Verify if ELF/binary file is downloaded correctly to target</p>
+ </div>
+
+<div class="section command"><h2 class="title sectiontitle">Syntax</h2> 
+			<p class="p"><span class="ph synph"><span class="keyword option">verify</span> <span class="keyword kwd">[options] &lt;file&gt;</span></span></p>
+
+			<p class="p">Verify if the ELF file <samp class="ph codeph">&lt;file&gt;</samp> is downloaded correctly to active target </p>
+
+			<p class="p"><span class="ph synph"><span class="keyword option">verify</span> <span class="keyword kwd">-data &lt;file&gt; &lt;addr&gt;</span></span></p>
+
+			<p class="p">Verify if the binary file <samp class="ph codeph">&lt;file&gt;</samp> is downloaded correctly to active target address specified by <samp class="ph codeph">&lt;addr&gt;</samp> </p>
+
+		</div>
+
+<div class="section command"><h2 class="title sectiontitle">Options</h2>  
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+				
+				
+				<thead class="thead" align="left">
+					<tr class="row">
+						<th class="entry" valign="top" id="d59759e72">Option</th>
+
+						<th class="entry" valign="top" id="d59759e75">Description</th>
+
+					</tr>
+
+				</thead>
+
+				<tbody class="tbody">
+					<tr class="row">
+						<td class="entry" valign="top" headers="d59759e72 "><span class="keyword cmdname">-force</span></td>
+
+						<td class="entry" valign="top" headers="d59759e75 ">Overwrite access protection. By default accesses to reserved and invalid address ranges are blocked </td>
+
+					</tr>
+
+				</tbody>
+
+			</table>
+</div>
+ </div>
+
+<div class="section command"><h2 class="title sectiontitle">Note(s)</h2> 
+			<ul class="ul">
+			<li class="li">When verify fails, the error string returns a 4K aligned block address, instead of the exact address at which the mismatch occurred. </li>
+
+			</ul>
+
+		</div>
+
+<div class="section command"><h2 class="title sectiontitle">Returns</h2> 
+			<p class="p">Nothing, if successful. Error string, if the memory address can't be accessed or if there is a mismatch </p>
+
+		</div>
+
+	</div>
+
+<div class="related-links"><div class="relinfo relref"><strong>Related reference</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/download/reference_download_dow.html" title="dow">dow</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/download/reference_download_fpga.html" title="fpga">fpga</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

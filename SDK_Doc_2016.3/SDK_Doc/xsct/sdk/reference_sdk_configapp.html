@@ -1,0 +1,171 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Configure settings for application projects Syntax configapp List name and description for available configuration parameters for the application projects. Following configuration parameters can be ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="configapp"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk/reference_sdk_openhw.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk/reference_sdk_closehw.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk/reference_sdk_openbsp.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk/reference_sdk_closebsp.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk/reference_sdk_updatemss.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk/reference_sdk_getaddrmap.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk/reference_sdk_getperipherals.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk/reference_sdk_repo.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk/reference_sdk_configbsp.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk/reference_sdk_setlib.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk/reference_sdk_removelib.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk/reference_sdk_getlibs.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk/reference_sdk_setdriver.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk/reference_sdk_getdrivers.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk/reference_sdk_setosversion.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk/reference_sdk_getos.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk/reference_sdk_regenbsp.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk/reference_sdk_setws.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk/reference_sdk_getws.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk/reference_sdk_createhw.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk/reference_sdk_createbsp.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk/reference_sdk_createapp.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk/reference_sdk_createlib.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk/reference_sdk_projects.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk/reference_sdk_importprojects.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk/reference_sdk_importsources.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk/reference_sdk_getprojects.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk/reference_sdk_deleteprojects.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk/reference_sdk_toolchain.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="xsct_sdk_configapp"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>configapp</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../../index.html";
+          
+          --></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="xsct_sdk_configapp"><a name="xsct_sdk_configapp"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+	<h1 class="title topictitle1">configapp</h1>
+
+	<div class="body refbody">
+<div class="section"> <p class="p">Configure settings for application projects</p>
+ </div>
+
+<div class="section command"><h2 class="title sectiontitle">Syntax</h2> 
+			<p class="p"><span class="ph synph"><span class="keyword option">configapp</span> <span class="keyword kwd"></span></span></p>
+
+			<p class="p">List name and description for available configuration parameters for the application projects. Following configuration parameters can be configured for applications: assembler-flags         : Miscellaneous flags for assembler  build-config            : Get/set build configuration compiler-misc           : Compiler miscellaneous flags compiler-optimization   : Optimization level define-compiler-symbols : Define symbols. Ex. MYSYMBOL include-path            : Include path for header files libraries               : Libraries to be added while linking library-search-path     : Search path for the libraries added linker-misc             : Linker miscellaneous flags linker-script           : Linker script for linking undef-compiler-symbols  : Undefine symbols. Ex. MYSYMBOL </p>
+
+			<p class="p"><span class="ph synph"><span class="keyword option">configapp</span> <span class="keyword kwd">[OPTIONS] -app &lt;app-name&gt; &lt;param-name&gt;</span></span></p>
+
+			<p class="p">Get the value of configuration parameter <samp class="ph codeph">&lt;param-name&gt;</samp> for the application specified by <samp class="ph codeph">&lt;app-name&gt;</samp>. </p>
+
+			<p class="p"><span class="ph synph"><span class="keyword option">configapp</span> <span class="keyword kwd">[OPTIONS] -app &lt;app-name&gt;</span></span></p>
+
+			<p class="p"><samp class="ph codeph">&lt;param-name&gt;</samp> <samp class="ph codeph">&lt;value&gt;</samp> Set/modify/remove the value of configuration parameter <samp class="ph codeph">&lt;param-name&gt;</samp> for the application specified by <samp class="ph codeph">&lt;app-name&gt;</samp>. </p>
+
+		</div>
+
+<div class="section command"><h2 class="title sectiontitle">Options</h2>  
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+				
+				
+				<thead class="thead" align="left">
+					<tr class="row">
+						<th class="entry" valign="top" id="d78935e91">Option</th>
+
+						<th class="entry" valign="top" id="d78935e94">Description</th>
+
+					</tr>
+
+				</thead>
+
+				<tbody class="tbody">
+					<tr class="row">
+						<td class="entry" valign="top" headers="d78935e91 "><span class="keyword cmdname">-set</span></td>
+
+						<td class="entry" valign="top" headers="d78935e94 ">Set the configuration paramter value to new <samp class="ph codeph">&lt;value&gt;</samp> </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d78935e91 "><span class="keyword cmdname">-add</span></td>
+
+						<td class="entry" valign="top" headers="d78935e94 ">Append the new <samp class="ph codeph">&lt;value&gt;</samp> to configuration parameter value </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d78935e91 "><span class="keyword cmdname">-remove</span></td>
+
+						<td class="entry" valign="top" headers="d78935e94 ">Remove <samp class="ph codeph">&lt;value&gt;</samp> from the configuration parameter value </td>
+
+					</tr>
+
+					<tr class="row">
+						<td class="entry" valign="top" headers="d78935e91 "><span class="keyword cmdname">-info</span></td>
+
+						<td class="entry" valign="top" headers="d78935e94 ">Displays more information like possible values and possible operations about the configuration parameter. A parameter name must be specified when this option is used </td>
+
+					</tr>
+
+				</tbody>
+
+			</table>
+</div>
+ </div>
+
+<div class="section command"><h2 class="title sectiontitle">Returns</h2> 
+			<p class="p">Depends on the arguments specified. <samp class="ph codeph">&lt;none&gt;</samp> List of paramters and description of each parameter </p>
+
+			<p class="p"><samp class="ph codeph">&lt;parameter name&gt;</samp>: Parameter value or error, if unsupported paramter is specified </p>
+
+			<p class="p"><samp class="ph codeph">&lt;parameter name&gt;</samp> <samp class="ph codeph">&lt;paramater value&gt;</samp>: Nothing if the value is set, or error, if unsupported paramter is specified </p>
+
+		</div>
+
+<div class="section command"><h2 class="title sectiontitle">Example(s)</h2> 
+
+			<pre class="pre codeblock">configapp</pre>
+
+			<p class="p">Return the list of all the configurable options for the application. </p>
+
+
+			<pre class="pre codeblock">configapp -app test build-config</pre>
+
+			<p class="p">Return the current build configuration. </p>
+
+
+			<pre class="pre codeblock">configapp -app test build-config release</pre>
+
+			<p class="p">Set the current build configuration to release. </p>
+
+
+			<pre class="pre codeblock">configapp -app test define-compiler-symbols FSBL_DEBUG_INFO</pre>
+
+			<p class="p">Add the define symbol FSBL_DEBUG_INFO to be passed to the compiler. </p>
+
+
+			<pre class="pre codeblock">configapp -app test -remove define-compiler-symbols FSBL_DEBUG_INFO</pre>
+
+			<p class="p">Remove the define symbol FSBL_DEBUG_INFO to be passed to the compiler. </p>
+
+
+			<pre class="pre codeblock">configapp -app test compiler-misc {-pg}</pre>
+
+			<p class="p">Append the -pg flag to compiler misc flags. </p>
+
+
+			<pre class="pre codeblock">configapp -app test -set compiler-misc {-c -fmessage-length=0 -MT"$@"}</pre>
+
+			<p class="p">Set flags specified to compiler misc </p>
+
+
+			<pre class="pre codeblock">configapp -app test -info compiler-optimization</pre>
+
+			<p class="p">Display more information about possible values/operation and default operation for compiler-optimization. </p>
+
+		</div>
+
+	</div>
+
+<div class="related-links"><div class="relinfo relref"><strong>Related reference</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk/reference_sdk_openhw.html" title="openhw">openhw</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk/reference_sdk_closehw.html" title="closehw">closehw</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk/reference_sdk_openbsp.html" title="openbsp">openbsp</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk/reference_sdk_closebsp.html" title="closebsp">closebsp</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk/reference_sdk_updatemss.html" title="updatemss">updatemss</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk/reference_sdk_getaddrmap.html" title="getaddrmap">getaddrmap</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk/reference_sdk_getperipherals.html" title="getperipherals">getperipherals</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk/reference_sdk_repo.html" title="repo">repo</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk/reference_sdk_configbsp.html" title="configbsp">configbsp</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk/reference_sdk_setlib.html" title="setlib">setlib</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk/reference_sdk_removelib.html" title="removelib">removelib</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk/reference_sdk_getlibs.html" title="getlibs">getlibs</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk/reference_sdk_setdriver.html" title="setdriver">setdriver</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk/reference_sdk_getdrivers.html" title="getdrivers">getdrivers</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk/reference_sdk_setosversion.html" title="setosversion">setosversion</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk/reference_sdk_getos.html" title="getos">getos</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk/reference_sdk_regenbsp.html" title="regenbsp">regenbsp</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk/reference_sdk_setws.html" title="setws">setws</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk/reference_sdk_getws.html" title="getws">getws</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk/reference_sdk_createhw.html" title="createhw">createhw</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk/reference_sdk_createbsp.html" title="createbsp">createbsp</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk/reference_sdk_createapp.html" title="createapp">createapp</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk/reference_sdk_createlib.html" title="createlib">createlib</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk/reference_sdk_projects.html" title="projects">projects</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk/reference_sdk_importprojects.html" title="importprojects">importprojects</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk/reference_sdk_importsources.html" title="importsources">importsources</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk/reference_sdk_getprojects.html" title="getprojects">getprojects</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk/reference_sdk_deleteprojects.html" title="deleteprojects">deleteprojects</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk/reference_sdk_toolchain.html" title="toolchain">toolchain</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

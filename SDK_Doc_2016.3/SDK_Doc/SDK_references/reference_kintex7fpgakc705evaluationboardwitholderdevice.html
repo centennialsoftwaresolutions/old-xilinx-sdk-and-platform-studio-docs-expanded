@@ -1,0 +1,50 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Issue Kintex®-7 FPGA KC705 evaluation board with older device revisions require a workaround during debugging to compensate for the memory controller calibration time, else the debugger freezes. ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="After any reset, the debugger hangs when accessing DDR3 memory"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="kintex7fpgakc705"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>After any reset, the debugger hangs when accessing DDR3 memory</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="kintex7fpgakc705"><a name="kintex7fpgakc705"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+<h1 class="title topictitle1">After any reset, the debugger hangs when accessing
+DDR3 memory</h1>
+
+<div class="body refbody">
+<div class="section"><h2 class="title sectiontitle">Issue</h2>
+
+<p class="p">Kintex®-7 FPGA KC705 evaluation board with older
+device revisions require a workaround during debugging to compensate
+for the memory controller calibration time, else the debugger freezes.</p>
+
+</div>
+
+<div class="section"><h2 class="title sectiontitle">Solution</h2>
+<div class="p">For older device revisions, the memory controller
+requires one to two minutes to calibrate before you can access DDR3 memory.
+To work around this issue, allow sufficient time for calibration to complete
+after a reset and disable automatic resets using one of the following
+methods:<ul class="ul">
+<li class="li">When using XMD, after connecting to the target, disable resets running the commands debugconfig -reset_on_run disable and debugconfig -reset_on_data_dow disable. <div class="note note"><span class="notetitle">Note:</span> XMD has been deprecated and will be removed in future versions of the Xilinx Software Development Kit (SDK). XSDB replaces XMD and provides additional functionality. We recommend you switch to XSDB for command-line debugging.</div>
+</li>
+
+<li class="li">When using SDK, in the debug configuration Device Initialization tab
+specify the Reset Type value No Reset. Use XMD to perform the reset and
+wait for the calibration to complete.</li>
+
+</ul>
+</div>
+
+<p class="p">See <a class="xref" href="http://www.xilinx.com/cgi-bin/SW_Docs_Redirect/sw_docs_redirect?locale=en&amp;topic=answer+record&amp;sub=43967" target="_blank"><strong class="ph b">Answer Record 43967</strong></a> for
+additional information.</p>
+
+</div>
+
+</div>
+
+<div class="navfooter"><!----></div>
+</body>
+</html>

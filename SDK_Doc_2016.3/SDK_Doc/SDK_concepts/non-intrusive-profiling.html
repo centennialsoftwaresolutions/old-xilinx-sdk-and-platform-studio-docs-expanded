@@ -1,0 +1,57 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="When extended debug is enabled in the hardware design, MicroBlaze™ supports non-intrusive profiling of the program instructions. You can configure whether the instruction count or the cycle count ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="concept"></meta><meta name="DC.Title" content="Non-Intrusive Profiling for MicroBlaze Processors"></meta><meta name="abstract" content=""></meta><meta name="description" content=""></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_tcf_profiling_with_tcf_debugger.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_profilingtheapplication.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_profiling_linux_apps_with_sysdbg.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_freertos_analysis.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_run_nonintrusive-profiler.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_view_nonintrusive_profile.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="concept_jyt_zb5_fx"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Non-Intrusive Profiling for MicroBlaze Processors</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="concept_jyt_zb5_fx"><a name="concept_jyt_zb5_fx"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+ <h1 class="title topictitle1">Non-Intrusive Profiling for MicroBlaze Processors</h1>
+
+ 
+ <div class="body conbody"><p class="shortdesc"></p>
+
+    <p class="p">When extended debug is enabled in the hardware design, MicroBlaze™ supports non-intrusive
+      profiling of the program instructions. You can configure whether the instruction count or the
+      cycle count should be profiled. The profiling results are stored in a profiling buffer in the
+      debug memory, which can be accessed by the debugger thru MDM debug registers. The size of the
+      buffer can be configured from 4K to 128K, using the <samp class="ph codeph">C_DEBUG_PROFILE_SIZE</samp> (a
+      size of 0 indicates profiling is disabled) parameter .</p>
+
+    <p class="p">The profile buffer is divided into number of partions known as bins. Each bin is 36 bit wide
+      and can count the instructions or cycles of a program address range. The address range that is
+      profiled by each bin is dependant on the total size of the program that is profiled. Bin size
+      is calculated using the formula:</p>
+
+    <pre class="pre codeblock">B = log2((H - L + S * 4) / S * 4)</pre>
+
+    <p class="p">Where B is the bin size, H, L are high and low address of the program address range being
+      profiled, and S is the size of the profile buffer.</p>
+
+    <p class="p">When profiling is enabled and program starts running, profile statistics for an address range
+      are stored in its corresponding bin. Xilinx® system debugger can read these results, when
+      needed.</p>
+
+ </div>
+
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../SDK_tasks/sdk_t_run_nonintrusive-profiler.html">Specifying Non-Intrusive Profiler Configuration</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../SDK_concepts/concept_view_nonintrusive_profile.html">Viewing the Non-Intrusive Profiling Results</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+</ul>
+<div class="relinfo reltasks"><strong>Related tasks</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_tcf_profiling_with_tcf_debugger.html" title="TCF Profiling">TCF Profiling</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/task_profilingtheapplication.html" title="gprof Profiling">gprof Profiling</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_profiling_linux_apps_with_sysdbg.html" title="Profiling Linux Applications with System Debugger">Profiling Linux Applications with System Debugger</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_freertos_analysis.html" title="FreeRTOS Analysis using STM">FreeRTOS Analysis using STM</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

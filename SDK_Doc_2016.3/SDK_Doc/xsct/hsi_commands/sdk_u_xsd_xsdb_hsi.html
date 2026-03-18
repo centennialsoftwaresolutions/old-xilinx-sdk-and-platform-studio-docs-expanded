@@ -1,0 +1,102 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="XSCT provides higher level abstraction commands for Hardware Software Interface (HSI) commands and you normally do not have to run the HSI commands in XSCT. However, if there is a need, you can run ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="concept"></meta><meta name="DC.Title" content="HSI Commands"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/connections/reference_xsct_connections.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/registers/reference_xsct_registers.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/running/reference_xsct_running.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/memory/reference_xsct_memory.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/download/reference_xsct_download.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/reset/reference_xsct_reset.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/breakpoints/reference_xsct_breakpoints.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/streams/reference_xsct_streams.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/miscellaneous/reference_xsct_miscellaneous.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/jtag/reference_xsct_jtag.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk/reference_xsct_sdk.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="concept_vsy_z5f_1w"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>HSI Commands</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../../index.html";
+          
+          --></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="concept_vsy_z5f_1w"><a name="concept_vsy_z5f_1w"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+    <h1 class="title topictitle1">HSI Commands</h1>
+
+    <div class="body conbody">
+        <p class="p">XSCT provides higher level abstraction commands for Hardware Software Interface (HSI) commands and you normally do not have to run the HSI commands in XSCT. However, if there is a need, you can run HSI commands by prefixing <samp class="ph codeph">hsi</samp> to each HSI command. For example, <samp class="ph codeph">hsi open_hw_design</samp>.</p>
+
+        <div class="note note"><span class="notetitle">Note:</span> You can use only one set of the commands at a time on any design. Interleaving both sets of commands will lead to internal errors. For example, a design opened with <samp class="ph codeph">hsi open_hw_design</samp> cannot be closed using <samp class="ph codeph">closehw</samp>.</div>
+
+        <a name="concept_vsy_z5f_1w__p_z5y_cck_xv"><!-- --></a><ul class="ul" id="concept_vsy_z5f_1w__p_z5y_cck_xv">
+            <li class="li">XSCT keeps track of the open designs (both software and hardware). The table below lists the HSI commands and their corresponding XCST commands.
+<div class="tablenoborder"><a name="concept_vsy_z5f_1w__table_tvh_pck_xv"><!-- --></a><table cellpadding="4" cellspacing="0" summary="" id="concept_vsy_z5f_1w__table_tvh_pck_xv" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="300px" id="d60239e46">HSI Command</th>
+
+                            <th class="entry" valign="top" width="NaN%" id="d60239e49">Corresponding XSCT Command</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="300px" headers="d60239e46 "> <p class="p" id="concept_vsy_z5f_1w__p_xlr_zck_xv"><samp class="ph codeph">hsi open_hw_design</samp></p>
+ </td>
+
+                            <td class="entry" valign="top" width="NaN%" headers="d60239e49 "> <p class="p" id="concept_vsy_z5f_1w__p_mjd_bdk_xv"><samp class="ph codeph">openhw</samp></p>
+ </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="300px" headers="d60239e46 "> <p class="p" id="concept_vsy_z5f_1w__p_ifs_bdk_xv"><samp class="ph codeph">hsi close_hw_design</samp></p>
+ </td>
+
+                            <td class="entry" valign="top" width="NaN%" headers="d60239e49 "> <p class="p" id="concept_vsy_z5f_1w__p_j3n_cdk_xv"><samp class="ph codeph">closehw</samp></p>
+ </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="300px" headers="d60239e46 "> <p class="p" id="concept_vsy_z5f_1w__p_a3b_ddk_xv"><samp class="ph codeph">hsi open_sw_design</samp></p>
+ </td>
+
+                            <td class="entry" valign="top" width="NaN%" headers="d60239e49 "> <p class="p" id="concept_vsy_z5f_1w__p_t5d_2dk_xv"><samp class="ph codeph">openbsp</samp></p>
+ </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="300px" headers="d60239e46 "> <p class="p" id="concept_vsy_z5f_1w__p_msb_fdk_xv"><samp class="ph codeph">hsi close_sw_design</samp></p>
+ </td>
+
+                            <td class="entry" valign="top" width="NaN%" headers="d60239e49 "> <p class="p" id="concept_vsy_z5f_1w__p_udt_fdk_xv"><samp class="ph codeph">closebsp</samp></p>
+ </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+</li>
+
+            <li class="li">Any modifications done to the software design or the BSP, using HSI commands, are stored in memory. Before using any other XSCT commands, you should run the <samp class="ph codeph">updatemss</samp> XSCT command, to ensure that these modifications are stored in the <samp class="ph codeph">.mss</samp> file of the BSP.</li>
+
+        </ul>
+
+        <p class="p">For more details on the HSI commands and their usage, refer to the <strong class="ph b">Generating Basic Software Platforms Reference Guide </strong>(<a class="xref" href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=replace;d=ug1138-generating-basic-software-platforms.pdf" target="_blank"><strong class="ph b">UG1138</strong></a>).</p>
+
+    </div>
+
+<div class="related-links"><div class="relinfo relref"><strong>Related reference</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/connections/reference_xsct_connections.html" title="Target Connection Management">Target Connection Management</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/registers/reference_xsct_registers.html" title="Target Registers">Target Registers</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/running/reference_xsct_running.html" title="Program Execution">Program Execution</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/memory/reference_xsct_memory.html" title="Target Memory">Target Memory</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/download/reference_xsct_download.html" title="Target Download FPGA/BINARY">Target Download FPGA/BINARY</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/reset/reference_xsct_reset.html" title="Target Reset">Target Reset</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/breakpoints/reference_xsct_breakpoints.html" title="Target Breakpoints/Watchpoints">Target Breakpoints/Watchpoints</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/streams/reference_xsct_streams.html" title="Jtag UART">Jtag UART</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/miscellaneous/reference_xsct_miscellaneous.html" title="Miscellaneous">Miscellaneous</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/jtag/reference_xsct_jtag.html" title="JTAG Access">JTAG Access</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk/reference_xsct_sdk.html" title="SDK Projects">SDK Projects</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>
