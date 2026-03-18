@@ -1,0 +1,93 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="description" content="To run an OpenCV application on a target: Copy the ZC702 Petalinux image in to the SD card and boot from the SD card. After a successful boot, obtain the board IP address. Select Linux TCF Agent from ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Debugging an OpenCV Application"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_creatingopencvtemplateapp.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="runninganopencvapplicationonatarget"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Debugging an OpenCV Application</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script><meta name="robots" content="noindex, nofollow" /></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="runninganopencvapplicationonatarget"><a name="runninganopencvapplicationonatarget"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+
+<h1 class="title topictitle1">Debugging an OpenCV Application</h1>
+
+<div class="body taskbody"><div class="section context">
+<p class="p">To run an OpenCV application on a target:</p>
+
+</div>
+<ol class="ol steps"><li class="li step stepexpand">
+                <span class="ph cmd">Copy the ZC702 Petalinux image in to the SD card and boot from the SD card.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">After a successful boot, obtain the board IP address.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select <span class="ph uicontrol">Linux TCF Agent</span> from the <span class="ph uicontrol">Target Connections</span> view. </span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Double-click <span class="ph uicontrol">Linux Agent</span>. </span>
+                <div class="itemgroup stepresult">The Target Connection Details dialog box appears.</div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Specify the board IP address, obtained during the boot, in the <span class="ph uicontrol">Target Connection Details</span> dialog box.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Create a new folder <span class="ph filepath">/tmp/opencv_lib</span> in the Linux file system.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Copy the Opencv libraries to the newly created <span class="ph filepath">/tmp/opencv_lib</span> folder in remote file system.</span>
+                <div class="itemgroup info">
+                    <div class="note note"><span class="notetitle">Note:</span> The OpenCV libraries are located in the <span class="ph filepath">\&lt;install_location&gt;\SDK\&lt;version&gt;\data\embeddedsw\ThirdParty\opencv </span>folder of your SDK installation. Where <span class="ph filepath">&lt;install-location&gt;</span> is the SDK installation file path and <span class="ph filepath">&lt;version&gt;</span> is the current version of the SDK.</div>
+
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd"> Create a Linux OpenCV application. For more details, refer <a class="xref" href="task_creatingopencvtemplateapp.html">Creating an OpenCV Template Application</a>.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Build the application.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select <span class="ph menucascade"><span class="ph uicontrol">Run</span> &gt; <span class="ph uicontrol">Debug Configurations</span></span>.</span>
+                <div class="itemgroup stepresult">The <span class="ph uicontrol">Debug Configurations</span> dialog box appears.</div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click on <span class="ph uicontrol">Xilinx C/C++ application (System debugger)</span> to create a new debug configuration.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">On the <span class="ph uicontrol">Target Setup</span> tab page, select <span class="ph uicontrol">Linux Application Debug</span> from the <span class="ph uicontrol">Debug Type</span> list.<br xmlns="http://www.w3.org/1999/xhtml" /><a name="runninganopencvapplicationonatarget__image_isy_qvv_st"><!-- --></a><img class="image" id="runninganopencvapplicationonatarget__image_isy_qvv_st" src="../images/debugging_openCV_app.png"></img><br xmlns="http://www.w3.org/1999/xhtml" /></span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">On the <span class="ph uicontrol">Application</span> tab page, specify the local <span class="ph filepath">.elf</span> file path and the remote <span class="ph filepath">.elf</span> file path. </span>
+                <div class="itemgroup info"><div class="note note"><span class="notetitle">Note:</span> The remote <span class="ph filepath">.elf</span> file path is <span class="ph filepath">/tmp/opencv.elf</span>.</div>
+<br xmlns="http://www.w3.org/1999/xhtml" /><a name="runninganopencvapplicationonatarget__image_tpf_3xv_st"><!-- --></a><img class="image" id="runninganopencvapplicationonatarget__image_tpf_3xv_st" src="../images/debug_openCV_apptab.png"></img><br xmlns="http://www.w3.org/1999/xhtml" /></div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">On the <span class="ph uicontrol">Environment</span> tab page, click on the <span class="ph uicontrol">New</span> button.</span>
+                <div class="itemgroup stepresult">The <span class="ph uicontrol">New Environment Variable</span> dialog box appears.</div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Set <span class="ph filepath">/tmp/opencv_lib </span>file path to the OpenCV libraries in the <span class="keyword apiname">LD_LIBRARY_PATH</span> environment variable .</span>
+                <div class="itemgroup info">
+                    <br xmlns="http://www.w3.org/1999/xhtml" /><a name="runninganopencvapplicationonatarget__image_tg2_pxv_st"><!-- --></a><img class="image" id="runninganopencvapplicationonatarget__image_tg2_pxv_st" src="../images/Debug_openCV_envtab.png"></img><br xmlns="http://www.w3.org/1999/xhtml" />
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click <span class="ph uicontrol">OK</span> to create the environment variable and close the <span class="ph uicontrol">New Environment Variable</span> dialog box.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click <span class="ph uicontrol">Debug</span>.</span>
+                <div class="itemgroup stepresult">You will be able to debug the OpenCV application using the system debugger.</div>
+            </li>
+</ol>
+
+</div>
+<div class="related-links"><div class="relinfo reltasks"><strong>Related tasks</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/task_creatingopencvtemplateapp.html" title="Creating an OpenCV Template Application">Creating an OpenCV Template Application</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

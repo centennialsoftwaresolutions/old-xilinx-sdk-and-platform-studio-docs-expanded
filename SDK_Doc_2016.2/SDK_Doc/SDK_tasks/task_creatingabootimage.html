@@ -1,0 +1,133 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="description" content="You can create a boot image for for both Zynq ® or Zynq ® UltraScale+ ™ MPSoC architectures by performing the following instructions: Make sure that the FSBL project and any C application project are ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Creating a Boot Image"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_openingthecreatezynqbootimagedialogbox.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_workingwithbootimagefiles.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_creatinganewzynqfsblapplicationproject.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_assumptions.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_limitations.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="creatingabootimage"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Creating a Boot Image</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script><meta name="robots" content="noindex, nofollow" /></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="creatingabootimage"><a name="creatingabootimage"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+
+    <h1 class="title topictitle1">Creating a Boot Image</h1>
+
+    <div class="body taskbody">
+        <div class="section context">
+            <p class="p">You can create a boot image for for both Zynq<sup>®</sup> or Zynq<sup>®</sup> UltraScale+ ™ MPSoC architectures by performing the following instructions:</p>
+
+        </div>
+
+        <ol class="ol steps"><li class="li step stepexpand">
+                <span class="ph cmd">Make sure that the FSBL project and any C application project are created in
+                    the SDK workspace and built so that corresponding ELF files are available.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select an architecture for which you plan to create a boot image from the <span class="ph uicontrol">Architecture</span> drop down menu.  Currently, boot image creation for Zynq and Zynq UltraScale+ MPSoC architectures is supported.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select <span class="ph uicontrol">Create a new BIF file</span>.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Specify the path for creating a BIF file in <span class="ph uicontrol">Output BIF file path</span> . The <span class="ph uicontrol">Output path</span>  is automatically populated with same path as that of BIF file path.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click the <span class="ph uicontrol">Security</span> tab if you need secure images. For more details on the settings available on the </span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select <span class="ph uicontrol">Use Authentication</span> to enable authentication and select PPK, SPK PSK and SSK values.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click the <span class="ph uicontrol">Encryption</span> tab.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select <span class="ph uicontrol">Use Encryption</span> to enable encryption and select the key file and key source. </span>
+                <div class="itemgroup info">
+                    <div class="note note"><span class="notetitle">Note:</span>  SPK signature is not required here, as you will provide the secret key PSK.</div>
+
+                    <br xmlns="http://www.w3.org/1999/xhtml" /><img class="image" src="../images/sdk_t_create_zynq_boot_image-7.png" height="479" width="612"></img><br xmlns="http://www.w3.org/1999/xhtml" />
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Add the partitions one at a time, starting from the bootloader. For details on settings available on the <span class="ph uicontrol">Add partition</span> page, refer <a class="xref" href="../SDK_references/refernce_bootimagepartitions.html#reference_rfd_q2r_gv__adding_boot_partition">Adding a Partition</a></span>
+                <ol type="a" class="ol substeps">
+                    <li class="li substep">
+                        <span class="ph cmd">Select the Partition type as “bootloader”.</span>
+                    </li>
+
+                    <li class="li substep">
+                        <span class="ph cmd">Select the FSBL “zynq_fsbl.elf” path.</span>
+                    </li>
+
+                    <li class="li substep">
+                        <span class="ph cmd">Select the authentication as rsa and encryption as aes.</span>
+                    </li>
+
+                </ol>
+
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click <span class="ph uicontrol">OK</span>. </span>
+                <div class="itemgroup info">
+                    <div class="note note"><span class="notetitle">Note:</span> Presign is not required when the secret key SSK is specified.</div>
+
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">OK. </strong></span>
+                <div class="itemgroup info">
+                    <p class="p">Notice that the list in Boot Image Partitions is populated.</p>
+
+                    <br xmlns="http://www.w3.org/1999/xhtml" /><img class="image" src="../images/boot_image_partitions_list_populated.png" height="154" width="495"></img><br xmlns="http://www.w3.org/1999/xhtml" /></div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Add the second partition. For this example, you will add a C application. </span>
+                <ol type="a" class="ol substeps">
+                    <li class="li substep">
+                        <span class="ph cmd">Select the Partition type as <strong class="ph b">datafile.</strong></span>
+                    </li>
+
+                    <li class="li substep">
+                        <span class="ph cmd">Select the application <strong class="ph b">zynq_hello.elf</strong> path.</span>
+                    </li>
+
+                    <li class="li substep">
+                        <span class="ph cmd">Select the authentication as <strong class="ph b">rsa</strong> and encryption as
+                            <strong class="ph b">aes.</strong></span>
+                    </li>
+
+                </ol>
+
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">OK. </strong></span>
+                   <div class="itemgroup info"> <p class="p">Notice that the list in Boot Image Partitions is updated
+                        with the second partition.</p>
+
+                    <br xmlns="http://www.w3.org/1999/xhtml" /><img class="image" src="../images/boot_image_partitions2.png" height="153" width="497"></img><br xmlns="http://www.w3.org/1999/xhtml" /></div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">Create Image</strong> to create the final boot image <span class="ph filepath">output.bin</span>.</span>
+            </li>
+</ol>
+
+
+    </div>
+
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../SDK_tasks/task_assumptions.html">Assumptions</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../SDK_tasks/task_limitations.html">Limitations</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+</ul>
+<div class="relinfo reltasks"><strong>Related tasks</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/task_openingthecreatezynqbootimagedialogbox.html" title="Opening the Create Boot Image Dialog Box">Opening the Create Boot Image Dialog Box</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/task_workingwithbootimagefiles.html" title="Working with Boot Image Format Files">Working with Boot Image Format Files</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/task_creatinganewzynqfsblapplicationproject.html" title="Creating a New Zynq FSBL Application Project">Creating a New Zynq FSBL Application Project</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

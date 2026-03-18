@@ -1,0 +1,121 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Configure OS awareness for the symbol file specified. If no symbol file is specified and only one symbol file exists in target's memory map, then that symbol file is used. If no symbol file is ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="memmap"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_mrd.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_mwr.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_osa.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_osa"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>memmap</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../../index.html";
+          
+          --></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_osa"><a name="reference_osa"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+    <h1 class="title topictitle1">memmap</h1>
+
+    <div class="body refbody">
+        <div class="section"> <div class="p">Configure OS awareness for the symbol file specified. If no symbol file is specified and only one symbol file exists in target's memory map, then that symbol file is used. If no symbol file is specified and multiple symbol files exist in target's memory map, then an error is thrown.<div class="note note"><span class="notetitle">Note:</span>  Only the memory regions previously added through <samp class="ph codeph">memmap</samp> command can be removed.</div>
+</div>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Synopsis</h2>  <p class="p"><span class="ph synph"><span class="keyword option">memmap</span> <span class="keyword kwd">&lt;Options&gt;</span></span></p>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Options</h2>  
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+                
+                
+                <thead class="thead" align="left">
+                    <tr class="row">
+                        <th class="entry" valign="top" id="d95736e54">Option</th>
+
+                        <th class="entry" valign="top" id="d95736e57">Description</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d95736e54 "><span class="keyword cmdname">-addr &lt;memory-address&gt;</span></td>
+
+                        <td class="entry" valign="top" headers="d95736e57 ">Address of the memory region that should be added/removed from the target's memory map. </td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d95736e54 "><span class="keyword cmdname">-size &lt;memory-size&gt; </span></td>
+
+                        <td class="entry" valign="top" headers="d95736e57 ">Size of the memory region. </td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d95736e54 "><span class="keyword cmdname">-flags &lt;protection-flags&gt;</span></td>
+
+                        <td class="entry" valign="top" headers="d95736e57 ">Protection flags for the memory region.<samp class="ph codeph"> &lt;protection-flags&gt;</samp> can be a bitwise OR of the values below: <a name="reference_osa__ul_bcc_4"><!-- --></a><ul class="ul" id="reference_osa__ul_bcc_4">
+                            <li class="li"><samp class="ph codeph">0x1</samp> = Read access is allowed</li>
+
+                            <li class="li"><samp class="ph codeph">0x2</samp> = Write access is allowed</li>
+
+                            <li class="li"><samp class="ph codeph">0x4</samp> = Instruction fetch access is allowed</li>
+
+                            </ul>
+Default value of <samp class="ph codeph">&lt;protection-flags&gt;</samp> is <samp class="ph codeph">0x3</samp> (Read/Write Access) </td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d95736e54 "><span class="keyword cmdname">-list</span></td>
+
+                        <td class="entry" valign="top" headers="d95736e57 ">List the memory regions added to the active target's memory map. </td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d95736e54 "><span class="keyword cmdname">-clear </span></td>
+
+                        <td class="entry" valign="top" headers="d95736e57 ">Specify whether the memory region should be removed from the target's memory map. <div class="note note"><span class="notetitle">Note:</span> Only the memory regions previously added through memmap command can be removed.</div>
+ </td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d95736e54 "> <span class="keyword cmdname">-relocate-section-map &lt;addr&gt;</span> </td>
+
+                        <td class="entry" valign="top" headers="d95736e57 ">Relocate the address map of the program sections to &lt;addr&gt;. This option should be used when the code is self-relocating, so that the debugger can find the debug symbol info for the code. &lt;addr&gt; is the relative address,to which all the program sections are relocated.</td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d95736e54 "><span class="keyword cmdname">-osa</span></td>
+
+                        <td class="entry" valign="top" headers="d95736e57 ">Enable OS awareness for the symbol file. Fast process start and fast stepping options are turned off by default. These options can be enabled using the osa command. See <span class="keyword cmdname">help osa</span> for more details. </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+</div>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Returns</h2>  <p class="p">Nothing, while setting the memory map, or list of memory maps when <samp class="ph codeph">-list</samp> option is used.</p>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Example</h2>  <p class="p">Add the memory region <samp class="ph codeph">0xfc000000 - 0xfc000fff</samp> to target's memory map. Read/Write accesses are allowed to this region.</p>
+ <pre class="pre codeblock">memmap -addr 0xfc000000 -size 0x1000 -flags 3</pre>
+ <p class="p">Remove the previously added memory region at <samp class="ph codeph">0xfc000000</samp> from the target's memory map.</p>
+ <pre class="pre codeblock">memmap -addr 0xfc000000 -clear</pre>
+ </div>
+
+    </div>
+
+<div class="related-links"><div class="relinfo relref"><strong>Related reference</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_mrd.html" title="mrd">mrd</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_mwr.html" title="mwr">mwr</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_osa.html" title="osa">osa</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

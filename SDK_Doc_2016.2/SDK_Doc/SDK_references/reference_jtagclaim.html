@@ -1,0 +1,37 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="description" content="Claim JTAG device. Synopsis jtag claim mask This command will attempt to set the claim mask for the current JTAG device. If any set bits in &lt;mask&gt; are already set in the claim mask then this command ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="jtag claim"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="command_dvk_jtf_1w"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>jtag claim</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script><meta name="robots" content="noindex, nofollow" /></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="command_dvk_jtf_1w"><a name="command_dvk_jtf_1w"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+    <h1 class="title topictitle1">jtag claim</h1>
+
+    <div class="body refbody">
+        <div class="section"> <p class="p">Claim JTAG device.</p>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Synopsis</h2>  <p class="p"><span class="ph synph"><span class="keyword option">jtag claim</span> <span class="keyword kwd">mask</span></span></p>
+ <div class="p" id="command_dvk_jtf_1w__p_sn3_ltf_1w">This command will attempt to set the claim mask for the current JTAG device. If any set bits in <samp class="ph codeph">&lt;mask&gt;</samp> are already set in the claim mask then this command will return error "already claimed". The claim mask allows clients to negotiate control over JTAG devices. This is different from jtag lock in that <a name="command_dvk_jtf_1w__ol_rjc_4tf_1w"><!-- --></a><ol class="ol" id="command_dvk_jtf_1w__ol_rjc_4tf_1w">
+            <li class="li">it is specific to a device in the scan chain, and</li>
+
+            <li class="li">any clients can perform JTAG operations while the claim is in effect.</li>
+
+            </ol>
+</div>
+ <div class="note note"><span class="notetitle">Note:</span> Currently claim is used to disable the hw_server debugger from controlling microprocessors on ARM DAP devices and FPGA devices containing Microblaze processors.</div>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Returns</h2>  <p class="p">Nothing.</p>
+ </div>
+
+    </div>
+
+<div class="navfooter"><!----></div>
+</body>
+</html>

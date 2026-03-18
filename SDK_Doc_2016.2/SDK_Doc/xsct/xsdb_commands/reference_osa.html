@@ -1,0 +1,89 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Configure OS awareness for the symbol file specified. If no symbol file is specified and only one symbol file exists in target's memory map, then that symbol file is used. If no symbol file is ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="osa"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_mrd.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_mwr.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_memmap.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_osa"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>osa</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../../index.html";
+          
+          --></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_osa"><a name="reference_osa"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+    <h1 class="title topictitle1">osa</h1>
+
+    <div class="body refbody">
+        <div class="section"> <p class="p">Configure OS awareness for the symbol file specified. If no symbol file is specified and only one symbol file exists in target's memory map, then that symbol file is used. If no symbol file is specified and multiple symbol files exist in target's memory map, then an error is thrown.</p>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Synopsis</h2>  <p class="p"><span class="ph synph"><span class="keyword option">osa</span> <span class="keyword kwd">[Options]</span></span></p>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Options</h2>  
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+                
+                
+                <thead class="thead" align="left">
+                    <tr class="row">
+                        <th class="entry" valign="top" id="d98172e49">Option</th>
+
+                        <th class="entry" valign="top" id="d98172e52">Description</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d98172e49 "><span class="keyword cmdname">-disable</span></td>
+
+                        <td class="entry" valign="top" headers="d98172e52 ">Disable OS awareness for a symbol file. If this option is not specified, OS awareness is enabled. <div class="note note"><span class="notetitle">Note:</span> <samp class="ph codeph">-fast-exec</samp> and <samp class="ph codeph">-fast-step</samp> options are not valid with <samp class="ph codeph">-disable</samp> option.</div>
+</td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d98172e49 "><span class="keyword cmdname">-fast-exec </span></td>
+
+                        <td class="entry" valign="top" headers="d98172e52 ">Enable fast process start. New processes will not be tracked for debug and are not visible in the debug targets view. </td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d98172e49 "><span class="keyword cmdname">-fast-step</span></td>
+
+                        <td class="entry" valign="top" headers="d98172e52 ">Enable fast stepping. Only the current process will be re-synced after stepping.All other processes will not be re-synced when this flag is turned on.</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+</div>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Returns</h2>  <a name="reference_osa__ul_a2n_znx_zv"><!-- --></a><ul class="ul" id="reference_osa__ul_a2n_znx_zv">
+            <li class="li"> Nothing, if OSA is configured successfully.</li>
+
+            <li class="li">Error, if ambiguous options are specified.</li>
+
+            </ul>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Example</h2>  <p class="p">Enable OSA for &lt;symbole-file&gt; and turn on fast-exec and fast-step modes.</p>
+ <pre class="pre codeblock">osa -file &lt;symbol-file&gt; -fast-step -fast-exec</pre>
+ <p class="p">Disable OSA for &lt;symbol-file&gt;.</p>
+ <pre class="pre codeblock">osa -disable -file &lt;symbol-file&gt;</pre>
+ </div>
+
+    </div>
+
+<div class="related-links"><div class="relinfo relref"><strong>Related reference</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_mrd.html" title="mrd">mrd</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_mwr.html" title="mwr">mwr</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_memmap.html" title="memmap">memmap</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

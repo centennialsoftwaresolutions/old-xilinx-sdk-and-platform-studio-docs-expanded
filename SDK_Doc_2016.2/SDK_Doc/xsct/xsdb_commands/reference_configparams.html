@@ -1,0 +1,97 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="List, get or set configuration parameters. Synopsis configparams &lt;options&gt; List name and description for available configuration parameters. Configuration parameters can be global or connection ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="configparams"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_loadhw.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_unloadhw.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_mdm_drwr.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_mb_drwr.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_mdm_drrd.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_mb_drrd.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_version.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_xsdbserver.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_xsdbserver_stop.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_xsdbserver_disconnect.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_xsdbserver_version.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="command_xwf_vgf_1w"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>configparams</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../../index.html";
+          
+          --></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="command_xwf_vgf_1w"><a name="command_xwf_vgf_1w"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+    <h1 class="title topictitle1">configparams</h1>
+
+    <div class="body refbody">
+        <div class="section"> <p class="p">List, get or set configuration parameters.</p>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Synopsis</h2>  <p class="p"><span class="ph synph"><span class="keyword option">configparams</span> <span class="keyword kwd">&lt;options&gt;</span></span></p>
+ <p class="p" id="command_xwf_vgf_1w__p_ppc_13f_1w">List name and description for available configuration parameters. Configuration parameters can be global or connection specific, therefore the list of available configuration parameters and their value might change depending on current connection.</p>
+ <p class="p" id="command_xwf_vgf_1w__p_hlf_b3f_1w"><span class="ph synph"><span class="keyword option">configparams</span> <span class="keyword kwd">&lt;options&gt;</span> <span class="keyword kwd">&lt;name&gt;</span></span></p>
+ <p class="p" id="command_xwf_vgf_1w__p_hpt_f3f_1w">Get configuration parameter value(s).</p>
+ <p class="p" id="command_xwf_vgf_1w__p_smg_g3f_1w"><span class="ph synph"><span class="keyword option">configparams </span><span class="keyword kwd">&lt;options&gt;</span> <span class="keyword kwd">&lt;name&gt;</span> <span class="keyword kwd">&lt;value&gt;</span></span></p>
+ <p class="p" id="command_xwf_vgf_1w__p_kpl_k3f_1w">Set configuration parameter value.</p>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Options</h2>  
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+                
+                
+                <thead class="thead" align="left">
+                    <tr class="row">
+                        <th class="entry" valign="top" id="d87228e83">Option</th>
+
+                        <th class="entry" valign="top" id="d87228e86">Description</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d87228e83 "><span class="keyword cmdname">-all</span></td>
+
+                        <td class="entry" valign="top" headers="d87228e86 ">Include values for all contexts in result.</td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d87228e83 "><span class="keyword cmdname">-context [context]</span></td>
+
+                        <td class="entry" valign="top" headers="d87228e86 ">Specify context of value to get or set. The default context is "", which represents the global default. Not all options support context specific values.</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+</div>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Returns</h2>  <div class="p">Depends on the options specified.<a name="command_xwf_vgf_1w__ul_xr1_43f_1w"><!-- --></a><ul class="ul" id="command_xwf_vgf_1w__ul_xr1_43f_1w">
+            <li class="li">&lt;none&gt; - List of paramters and description of each parameter.</li>
+
+            <li class="li">&lt;parameter name&gt; - Parameter value or error, if unsupported paramter is specified.</li>
+
+            <li class="li">&lt;parameter name&gt; &lt;parameter value&gt; - Nothing if the value is set, or error, if unsupported parameter is specified.</li>
+
+            </ul>
+</div>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Example</h2>  <p class="p">Disable access protection for dow, mrd, and mwr commands.</p>
+ <pre class="pre codeblock">configparams force-mem-accesses 1</pre>
+ <p class="p" id="command_xwf_vgf_1w__p_wdb_53f_1w">Change the SDK launch timeout to 100 second, used for running SDK batch mode commands.</p>
+ <pre class="pre codeblock">configparams sdk-launch-timeout 100</pre>
+ </div>
+
+    </div>
+
+<div class="related-links"><div class="relinfo relref"><strong>Related reference</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_loadhw.html" title="loadhw">loadhw</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_unloadhw.html" title="unloadhw">unloadhw</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_mdm_drwr.html" title="mdm_drwr">mdm_drwr</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_mb_drwr.html" title="mb_drwr">mb_drwr</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_mdm_drrd.html" title="mdm_drrd">mdm_drrd</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_mb_drrd.html" title="mb_drrd">mb_drrd</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_version.html" title="version">version</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_xsdbserver.html" title="xsdbserver start">xsdbserver start</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_xsdbserver_stop.html" title="xsdbserver stop">xsdbserver stop</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_xsdbserver_disconnect.html" title="xsdbserver disconnect">xsdbserver disconnect</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_xsdbserver_version.html" title="xsdbserver version">xsdbserver version</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

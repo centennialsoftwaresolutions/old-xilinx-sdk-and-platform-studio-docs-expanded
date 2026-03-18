@@ -1,0 +1,42 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Issue After installing the SDK on Ubuntu machines, tool chain paths are not be accessible. You may get the following error while building the applications: arm-xilinx-eabi-gcc: No such file or ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="After installing SDK on Ubuntu machines, toolchain paths are not accessible from SDK"></meta><meta name="abstract" content=""></meta><meta name="description" content=""></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_sj3_nhq_jv"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>After installing SDK on Ubuntu machines, toolchain paths are not accessible from SDK</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script><meta name="robots" content="noindex, nofollow" /></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_sj3_nhq_jv"><a name="reference_sj3_nhq_jv"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">After installing SDK on Ubuntu machines, toolchain paths are not accessible from SDK</h1>
+
+  
+  <div class="body refbody"><p class="shortdesc"></p>
+
+    <div class="section"><h2 class="title sectiontitle">Issue</h2>
+      
+      <p class="p">After installing the SDK on Ubuntu machines, tool chain paths are not be accessible. You may get the following error while building the applications:
+      </p>
+
+      <pre class="pre codeblock"> arm-xilinx-eabi-gcc: No such file or directory</pre>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Solution</h2>
+      
+      <p class="p">Need to instal necessary packages to access toolchian paths from SDK. To install the required packages, use the following command.
+      </p>
+
+      <pre class="pre codeblock">sudo apt-get install lib32z1 lib32ncurses5 lib32bz2-1.0 lib32stdc++6</pre>
+
+      <p class="p">See <a class="xref" href="http://www.xilinx.com/support/answers/63561.html" target="_blank"><strong class="ph b">Answer Record 63561</strong></a> for additional information.</p>
+
+    </div>
+    
+  </div>
+
+<div class="navfooter"><!----></div>
+</body>
+</html>

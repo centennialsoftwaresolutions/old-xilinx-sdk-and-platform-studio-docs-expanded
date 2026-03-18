@@ -1,0 +1,35 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The Debug view will be updated with the list of processes running on the Linux kernel, once the OS aware debugging is enabled. For details on how to enable OS aware debugging, refer Enabling OS Aware ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="concept"></meta><meta name="DC.Title" content="Process/Thread Level Debugging"></meta><meta name="abstract" content=""></meta><meta name="description" content=""></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="concept_pdl_nqz_ft"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Process/Thread Level Debugging</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script><meta name="robots" content="noindex, nofollow" /></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="concept_pdl_nqz_ft"><a name="concept_pdl_nqz_ft"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+ <h1 class="title topictitle1">Process/Thread Level Debugging</h1>
+
+ 
+ <div class="body conbody"><p class="shortdesc"></p>
+
+  <p class="p">The Debug view will be updated with the list of processes running on the Linux kernel, once the OS aware debugging is enabled. For details on how to enable OS aware debugging, refer <a class="xref" href="../SDK_tasks/task_ebabling_osaware_debug.html">Enabling OS Aware Debug</a>. The processes list will be updated for the first time once the processor core is halted and dynamically there after (new processes will be added to the list and terminated processes will be removed).</p>
+
+  <br xmlns="http://www.w3.org/1999/xhtml" /><a name="concept_pdl_nqz_ft__image_s3f_xwz_ft"><!-- --></a><img class="image" id="concept_pdl_nqz_ft__image_s3f_xwz_ft" src="../images/process_thread_level_debug_01.png" height="338" width="268"></img><br xmlns="http://www.w3.org/1999/xhtml" />
+  <p class="p">A process context can be expanded to see the threads that are part of the process.</p>
+
+  <br xmlns="http://www.w3.org/1999/xhtml" /><a name="concept_pdl_nqz_ft__image_s3f_xwz_fq"><!-- --></a><img class="image" id="concept_pdl_nqz_ft__image_s3f_xwz_fq" src="../images/process_thread_level_debug_02.png" height="504" width="208"></img><br xmlns="http://www.w3.org/1999/xhtml" />  
+  <p class="p" id="concept_pdl_nqz_ft__p_b4f_qgw_gv">Symbol files can be added for a process context to enable source level debugging and see stack trace, variables. Source level breakpoints can also be set. Alternatively, the source level debugging can be enabled by setting the <span class="ph uicontrol">Path Map</span>. The debugger uses <span class="ph uicontrol">Path Map</span> setting to search and load symbols files for all executable files and shared libraries in the system. </p>
+
+  <div class="p" id="concept_pdl_nqz_ft__p_c4f_qgw_gv">
+   <div class="note note"><span class="notetitle">Note:</span> <span class="ph uicontrol">Path Map</span> is used for both symbols and source lookups.</div>
+
+  </div>
+ 
+ </div>
+
+<div class="navfooter"><!----></div>
+</body>
+</html>

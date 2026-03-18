@@ -1,0 +1,124 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="description" content="List JTAG targets or switch between JTAG targets. Synopsis jtag targets List available JTAG targets jtag targets &lt;target id&gt; Select &lt;target id&gt; as active JTAG target. Options Option Description -set ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="jtag targets"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="command_sgq_44f_1w"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>jtag targets</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script><meta name="robots" content="noindex, nofollow" /></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="command_sgq_44f_1w"><a name="command_sgq_44f_1w"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+    <h1 class="title topictitle1">jtag targets</h1>
+
+    <div class="body refbody">
+        <div class="section"> <p class="p">List JTAG targets or switch between JTAG targets.</p>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Synopsis</h2>  <p class="p"><span class="ph synph"><span class="keyword option">jtag targets</span> <span class="keyword kwd"></span></span></p>
+ <p class="p">List available JTAG targets</p>
+ <p class="p"><span class="ph synph"><span class="keyword option">jtag targets</span> <span class="keyword kwd">&lt;target id&gt;</span></span></p>
+ <p class="p">Select &lt;target id&gt; as active JTAG target.</p>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Options</h2>  
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+                
+                
+                <thead class="thead" align="left">
+                    <tr class="row">
+                        <th class="entry" valign="top" id="d25249e62">Option</th>
+
+                        <th class="entry" valign="top" id="d25249e65">Description</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d25249e62 "><span class="keyword cmdname">-set</span></td>
+
+                        <td class="entry" valign="top" headers="d25249e65 ">Set current target to entry single entry in list. This is useful in combination with -filter option. An error will be generate if list is empty or contains more than one entry.</td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d25249e62 "><span class="keyword cmdname">-regexp</span></td>
+
+                        <td class="entry" valign="top" headers="d25249e65 ">Use regexp for filter matching.</td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d25249e62 "><span class="keyword cmdname">-nocase</span></td>
+
+                        <td class="entry" valign="top" headers="d25249e65 ">Use case insensitive filter matching.</td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d25249e62 "><span class="keyword cmdname">-filter &lt;filter-expression&gt;</span></td>
+
+                        <td class="entry" valign="top" headers="d25249e65 ">Specify filter expression to control which targets are included in list based on its properties. Filter expressions are similar to Tcl expr syntax. Target properties are references by name, while Tcl variables are accessed using the $ syntax, string must be quoted. Operators ==, !=, &lt;=, &gt;=, &lt;, &gt;, &amp;&amp; and || are supported as well as (). There operators behave like Tcl expr operators. String matching operator =~ and !~ match lhs string with rhs pattern using either regexp or string match.</td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d25249e62 "><span class="keyword cmdname">-target-properrties</span></td>
+
+                        <td class="entry" valign="top" headers="d25249e65 ">Returns a Tcl list of dict's containing target properties.</td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d25249e62 "><span class="keyword cmdname">-open</span></td>
+
+                        <td class="entry" valign="top" headers="d25249e65 ">Open all targets in list. List can be shorted by specifying target-ids and using filters.</td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d25249e62 "><span class="keyword cmdname">-close</span></td>
+
+                        <td class="entry" valign="top" headers="d25249e65 ">Close all targets in list. List can be shorted by specifying target-ids and using filters.</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+</div>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Returns</h2>  <div class="p">The return value depends on the options used.<a name="command_sgq_44f_1w__ul_f5l_dpf_1w"><!-- --></a><ul class="ul" id="command_sgq_44f_1w__ul_f5l_dpf_1w">
+            <li class="li">&lt;none&gt; - Jtag targets list when no options are used.</li>
+
+            <li class="li">-filter - Filtered jtag targets list.</li>
+
+            <li class="li">-target-properties - Tcl list consisting of jtag target properties.</li>
+
+            <li class="li">An error is returned when jtag target selection fails.</li>
+
+            </ul>
+</div>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Example</h2>  <p class="p">List all targets.</p>
+ <pre class="pre codeblock">jtag targets</pre>
+ <p class="p" id="command_sgq_44f_1w__p_smy_gpf_1w">List targets with name "arm_dap".</p>
+ <pre class="pre codeblock">jtag targets -filter {name == "arm_dap"}</pre>
+ <p class="p" id="command_sgq_44f_1w__p_cfh_hpf_1w">Set target with id 2 as the current target</p>
+ <pre class="pre codeblock">jtag targets 2</pre>
+ <p class="p" id="command_sgq_44f_1w__p_o4j_hpf_1w">Set current target to target with name starting with "arm"</p>
+ <pre class="pre codeblock">jtag targets -set -filter {name =~ "arm*"}</pre>
+ <p class="p" id="command_sgq_44f_1w__p_jzk_hpf_1w">List Jtag cables.</p>
+ <pre class="pre codeblock">jtag targets -set -filter {level == 0}</pre>
+ </div>
+
+    </div>
+
+<div class="navfooter"><!----></div>
+</body>
+</html>

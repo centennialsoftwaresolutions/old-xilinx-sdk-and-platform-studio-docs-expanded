@@ -1,0 +1,146 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Read memory address of the active target. Note: Select an APU target to access ARM DAP and MEM-AP address space. Synopsis mrd [Options] &lt;address&gt; &lt;num&gt; Read &lt;num&gt; words from the active target's memory ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="mrd"></meta><meta name="abstract" content=""></meta><meta name="description" content=""></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_xmb_zvd_1w"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>mrd</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script><meta name="robots" content="noindex, nofollow" /></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_xmb_zvd_1w"><a name="reference_xmb_zvd_1w"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+    <h1 class="title topictitle1">mrd</h1>
+
+    
+    <div class="body refbody"><p class="shortdesc"></p>
+
+        <div class="section"> <p class="p">Read memory address of the active target.</p>
+ <div class="note note"><span class="notetitle">Note:</span> Select an APU target to access ARM DAP and MEM-AP address space.</div>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Synopsis</h2><span class="ph synph"><span class="keyword option">mrd</span> <span class="keyword kwd">[Options]</span> <span class="keyword kwd">&lt;address&gt;</span> <span class="keyword kwd">&lt;num&gt;</span></span> <p class="p"> Read <samp class="ph codeph">&lt;num&gt;</samp> words from the active target's memory address specified by <samp class="ph codeph">&lt;address&gt;</samp>.</p>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Options</h2>  
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+                
+                
+                <thead class="thead" align="left">
+                    <tr class="row">
+                        <th class="entry" valign="top" id="d28289e66">Option</th>
+
+                        <th class="entry" valign="top" id="d28289e69">Description</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d28289e66 "><span class="keyword cmdname">-force</span></td>
+
+                        <td class="entry" valign="top" headers="d28289e69 "> <p class="p" id="reference_xmb_zvd_1w__p_rd4_vkx_gt">Overwrite access protection. By default accesses to reserved and invalid address ranges are blocked.</p>
+ </td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d28289e66 "><span class="keyword cmdname">-size &lt;access-size&gt;</span></td>
+
+                        <td class="entry" valign="top" headers="d28289e69 "> <p class="p" id="reference_xmb_zvd_1w__p_t4m_xkx_gt">Access size can be one of the values below:</p>
+ <a name="reference_xmb_zvd_1w__ul_i11_ykx_gt"><!-- --></a><ul class="ul" id="reference_xmb_zvd_1w__ul_i11_ykx_gt">
+                            <li class="li"> b = Bytes accesses</li>
+
+                            <li class="li"> h = Half-word accesses</li>
+
+                            <li class="li">w = Word accesses</li>
+
+                            </ul>
+ <p class="p" id="reference_xmb_zvd_1w__p_r3c_1lx_gt">Default access size is w. Address will be aligned to access-size before reading memory.</p>
+ </td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d28289e66 "><span class="keyword cmdname">-value</span></td>
+
+                        <td class="entry" valign="top" headers="d28289e69 "> <p class="p" id="reference_xmb_zvd_1w__p_jxq_blx_gt">Return a Tcl list of values, instead of displaying the result on console.</p>
+ </td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d28289e66 "><span class="keyword cmdname">-bin</span></td>
+
+                        <td class="entry" valign="top" headers="d28289e69 "> <p class="p" id="reference_xmb_zvd_1w__p_of4_clx_gt">Return data read from the target in binary format.</p>
+ </td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d28289e66 "><span class="keyword cmdname">-file &lt;file-name&gt;</span></td>
+
+                        <td class="entry" valign="top" headers="d28289e69 "> <p class="p" id="reference_xmb_zvd_1w__p_oqp_dlx_gt">Write binary data read from the target to <samp class="ph codeph">&lt;file-name&gt;</samp>.</p>
+ </td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d28289e66 "><span class="keyword cmdname">-address-space &lt;name&gt;</span></td>
+
+                        <td class="entry" valign="top" headers="d28289e69 "> <p class="p" id="reference_xmb_zvd_1w__p_q1k_flx_gt">Access specified memory space instead default memory space of current target.</p>
+ <p class="p" id="reference_xmb_zvd_1w__p_qw2_glx_gt">For ARM DAP targets, address spaces DPR, APR and AP&lt;n&gt; can be used to access DP Registers, AP Registers and MEM-AP addresses, respectively. For backwards compatibility -arm-dap and -arm-ap options can be used as shorthand for <span class="keyword apiname">-address-space APR</span> and <span class="keyword apiname">-address-space AP&lt;n&gt;</span>, respectively. The APR address range is 0x0 - 0xfffc, where the higher 8 bits select an AP and lower 8 bits are the register address for that AP.</p>
+ </td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d28289e66 "><span class="keyword cmdname">-unaligned-access</span></td>
+
+                        <td class="entry" valign="top" headers="d28289e69 ">Memory address is not aligned to access size, before performing a read operation. Support for unaligned accesses is target architecture dependent. If this option is not specified, addresses are automatically aligned to access size</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+</div>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Returns</h2>  <ul class="ul">
+            <li class="li">Memory addresses and data in requested format, if successful.</li>
+
+            <li class="li">Error string, if the target memory can't be read.</li>
+
+            </ul>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Example</h2>  <p class="p">Read a word at <samp class="ph codeph">0x0</samp></p>
+ <pre class="pre codeblock">mrd 0x0</pre>
+ <p class="p">Read 10 words at <samp class="ph codeph">0x0</samp></p>
+ <pre class="pre codeblock">mrd 0x0 10</pre>
+ <p class="p">Read 10 words at <samp class="ph codeph">0x0</samp>and return a Tcl list of values.</p>
+ <pre class="pre codeblock">mrd -value 0x0 10</pre>
+ <p class="p" id="reference_xmb_zvd_1w__p_yfd_qlx_gt">Read 3 bytes at address <samp class="ph codeph">0x1</samp></p>
+ <pre class="pre codeblock">mrd -size b 0x1 3</pre>
+ <p class="p" id="reference_xmb_zvd_1w__p_ggk_qlx_gt">Read 2 half-words at address <samp class="ph codeph">0x2</samp></p>
+ <pre class="pre codeblock">mrd -size h 0x2 2</pre>
+ <p class="p" id="reference_xmb_zvd_1w__p_q5l_qlx_gt">Read 100 words at address <samp class="ph codeph">0x0</samp> and write the binary data to mem.bin.</p>
+ <pre class="pre codeblock"> mrd -bin -file mem.bin 0 100</pre>
+ <p class="p" id="reference_xmb_zvd_1w__p_gyr_qlx_gt">Read APB-AP CSW on Zynq. The higher 8 bits (<samp class="ph codeph">0x1</samp>) select the APB-AP and lower 8 bits (<samp class="ph codeph">0x0</samp>) is the address of CSW.</p>
+
+            <pre class="pre codeblock"> mrd -address-space APR 0x100</pre>
+ <p class="p" id="reference_xmb_zvd_1w__p_ow5_qlx_gt">Read AHB-AP TAR on Zynq. The higher 8 bits (<samp class="ph codeph">0x0</samp>) select the AHB-AP and lower 8 bits (<samp class="ph codeph">0x4</samp>) is the address of TAR.</p>
+ <pre class="pre codeblock">mrd -address-space APR 0x04</pre>
+ <p class="p" id="reference_xmb_zvd_1w__p_qsw_qlx_gt">Read address <samp class="ph codeph">0x80090088</samp> on DAP APB-AP. <samp class="ph codeph">0x80090088</samp> corresponds to DBGDSCR register of Cortex-A9#0, on Zynq. AP 1 selects the APB-AP.</p>
+ <pre class="pre codeblock"> mrd -address-space AP1 0x80090088</pre>
+ <p class="p" id="reference_xmb_zvd_1w__p_r3y_qlx_gt">Read address <samp class="ph codeph">0xe000d000</samp> on DAP AHB-AP. <samp class="ph codeph">0xe000d000</samp> corresponds to QSPI device on Zynq. AP 0 selects the AHB-AP.</p>
+ <pre class="pre codeblock"> mrd -address-space AP0 0xe000d000</pre>
+ </div>
+
+    </div>
+
+<div class="navfooter"><!----></div>
+</body>
+</html>

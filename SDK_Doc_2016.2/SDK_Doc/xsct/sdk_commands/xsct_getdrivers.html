@@ -1,0 +1,100 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Return the list of drivers from the BSP in tabular form. Synopsis getdrivers [ options ] Options Option Description -hw &lt;hw-proj | hdf/xml file&gt; Hardware project or hardware specification file. -bsp ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="getdrivers"></meta><meta name="abstract" content=""></meta><meta name="description" content=""></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_openhw.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_closehw.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_openbsp.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_closebsp.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_updatemss.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_getaddrmap.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_getperipherals.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_configbsp.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_repo.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_setlib.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_getlibs.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_removellib.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_setdriver.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_setosversion.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_getos.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_regenbsp.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_projects.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_setws.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_getws.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_createhw.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_createbsp.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_createapp.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_importprojects.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_importsources.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_getprojects.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_deleteprojects.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_configapp.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_toolchain.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_zwg_xqd_hv"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>getdrivers</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../../index.html";
+          
+          --></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_zwg_xqd_hv"><a name="reference_zwg_xqd_hv"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+    <h1 class="title topictitle1">getdrivers</h1>
+
+    
+    <div class="body refbody"><p class="shortdesc"></p>
+
+        <div class="section"> <p class="p">Return the list of drivers from the BSP in tabular form.</p>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Synopsis</h2> <span class="ph synph"><span class="keyword option">getdrivers</span> [<span class="keyword kwd">options</span>]</span> </div>
+
+        <div class="section"><h2 class="title sectiontitle">Options</h2>  
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+                
+                
+                <thead class="thead" align="left">
+                    <tr class="row">
+                        <th class="entry" valign="top" width="44.44444444444445%" id="d71017e50"><strong class="ph b">Option</strong></th>
+
+                        <th class="entry" valign="top" width="1" id="d71017e54"><strong class="ph b">Description</strong></th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry" valign="top" width="44.44444444444445%" headers="d71017e50 "><span class="keyword cmdname">-hw &lt;hw-proj | hdf/xml file&gt;</span></td>
+
+                        <td class="entry" valign="top" width="1" headers="d71017e54 ">Hardware project or hardware specification file.</td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" width="44.44444444444445%" headers="d71017e50 "><span class="keyword cmdname">-bsp &lt;bsp_prj | mss file&gt;</span></td>
+
+                        <td class="entry" valign="top" width="1" headers="d71017e54 ">BSP project or mss file.</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+</div>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Returns</h2>  <p class="p">If successful, this command returns nothing. Otherwise, returns an error.</p>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Example</h2>  <p class="p">Return the list of drivers assigned to the IPs in the BSP.</p>
+ <pre class="pre codeblock">getdrivers -hw zc702_hw_platform -bsp hello_bsp</pre>
+ </div>
+
+    </div>
+
+<div class="related-links"><div class="relinfo relref"><strong>Related reference</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk_commands/xsct_openhw.html" title="openhw">openhw</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk_commands/xsct_closehw.html" title="closehw">closehw</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk_commands/xsct_openbsp.html" title="openbsp">openbsp</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk_commands/xsct_closebsp.html" title="closebsp">closebsp</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk_commands/xsct_updatemss.html" title="updatemss">updatemss</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk_commands/xsct_getaddrmap.html" title="getaddrmap">getaddrmap</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk_commands/xsct_getperipherals.html" title="getperipherals">getperipherals</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk_commands/xsct_configbsp.html" title="configbsp">configbsp</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk_commands/xsct_repo.html" title="repo">repo</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk_commands/xsct_setlib.html" title="setlib">setlib</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk_commands/xsct_getlibs.html" title="getlibs">getlibs</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk_commands/xsct_removellib.html" title="removelib">removelib</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk_commands/xsct_setdriver.html" title="setdriver">setdriver</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk_commands/xsct_setosversion.html" title="setosversion">setosversion</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk_commands/xsct_getos.html" title="getos">getos</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk_commands/xsct_regenbsp.html" title="regenbsp">regenbsp</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk_commands/xsct_projects.html" title="projects">projects</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk_commands/xsct_setws.html" title="setws">setws</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk_commands/xsct_getws.html" title="getws">getws</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk_commands/xsct_createhw.html" title="createhw">createhw</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk_commands/xsct_createbsp.html" title="createbsp">createbsp</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk_commands/xsct_createapp.html" title="createapp">createapp</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk_commands/xsct_importprojects.html" title="importprojects">importprojects</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk_commands/xsct_importsources.html" title="importsources">importsources</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk_commands/xsct_getprojects.html" title="getprojects">getprojects</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk_commands/xsct_deleteprojects.html" title="deleteprojects">deleteprojects</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk_commands/xsct_configapp.html" title="configapp">configapp</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/sdk_commands/xsct_toolchain.html" title="toolchain">toolchain</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

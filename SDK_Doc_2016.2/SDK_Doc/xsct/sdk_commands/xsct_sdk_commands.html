@@ -1,0 +1,163 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="SDK commands support creation of hardware, BSP and application projects. You can also use the commands to manage repositories, set toolchain preferences, and configure, build and run applications. The ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="SDK Projects"></meta><meta name="abstract" content=""></meta><meta name="description" content=""></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/sdk_u_xsd_xsdb_connections.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/sdk_u_xsd_xsdb_registers.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/sdk_u_xsd_xsdb_running.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/sdk_u_xsd_xsdb_memory.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/sdk_u_xsd_xsdb_download.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/sdk_u_xsd_xsdb_reset.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/sdk_u_xsd_xsdb_breakpoints.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/sdk_u_xsd_xsdb_streams.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/sdk_u_xsd_xsdb_misc.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/sdk_u_xsd_xsdb_jtag.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/hsi_commands/sdk_u_xsd_xsdb_hsi.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_openhw.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_closehw.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_openbsp.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_closebsp.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_updatemss.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_getaddrmap.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_getperipherals.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_configbsp.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_repo.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_setlib.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_getlibs.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_removellib.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_setdriver.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_getdrivers.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_setosversion.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_getos.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_regenbsp.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_projects.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_setws.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_getws.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_createhw.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_createbsp.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_createapp.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_importprojects.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_importsources.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_getprojects.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_deleteprojects.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_configapp.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/sdk_commands/xsct_toolchain.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_akv_4yp_zv"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>SDK Projects</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../../index.html";
+          
+          --></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_akv_4yp_zv"><a name="reference_akv_4yp_zv"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+    <h1 class="title topictitle1">SDK Projects</h1>
+
+    
+    <div class="body refbody"><p class="shortdesc"></p>
+
+        <div class="section"> <p class="p">SDK commands support creation of hardware, BSP and application projects. You can also use the commands to manage repositories, set toolchain preferences, and configure, build and run applications.</p>
+ <p class="p">The following is a list of SDK project commands:</p>
+ <ul class="ul">
+            <li class="li"><a class="xref" href="xsct_openhw.html">openhw</a></li>
+
+            <li class="li"><a class="xref" href="xsct_closehw.html">closehw</a></li>
+
+            <li class="li"><a class="xref" href="xsct_openbsp.html">openbsp</a></li>
+
+            <li class="li"><a class="xref" href="xsct_closebsp.html">closebsp</a></li>
+
+            <li class="li"><a class="xref" href="xsct_updatemss.html">updatemss</a></li>
+
+            <li class="li"><a class="xref" href="xsct_getaddrmap.html">getaddrmap</a></li>
+
+            <li class="li"><a class="xref" href="xsct_getperipherals.html">getperipherals</a></li>
+
+            <li class="li"><a class="xref" href="xsct_configbsp.html">configbsp</a></li>
+
+            <li class="li"><a class="xref" href="xsct_repo.html">repo</a></li>
+
+            <li class="li"><a class="xref" href="xsct_setlib.html">setlib</a></li>
+
+            <li class="li"><a class="xref" href="xsct_getlibs.html">getlibs</a></li>
+
+            <li class="li"><a class="xref" href="xsct_removellib.html">removelib</a></li>
+
+            <li class="li"><a class="xref" href="xsct_setdriver.html">setdriver</a></li>
+
+            <li class="li"><a class="xref" href="xsct_getdrivers.html">getdrivers</a></li>
+
+            <li class="li"><a class="xref" href="xsct_setosversion.html">setosversion</a></li>
+
+            <li class="li"><a class="xref" href="xsct_getos.html">getos</a></li>
+
+            <li class="li"><a class="xref" href="xsct_regenbsp.html">regenbsp</a></li>
+
+            <li class="li"><a class="xref" href="xsct_projects.html">projects</a></li>
+
+            <li class="li"><a class="xref" href="xsct_setws.html">setws</a></li>
+
+            <li class="li"><a class="xref" href="xsct_getws.html">getws</a></li>
+
+            <li class="li"><a class="xref" href="xsct_createhw.html">createhw</a></li>
+
+            <li class="li"><a class="xref" href="xsct_createbsp.html">createbsp</a></li>
+
+            <li class="li"><a class="xref" href="xsct_createapp.html">createapp</a></li>
+
+            <li class="li"><a class="xref" href="xsct_importprojects.html">importprojects</a></li>
+
+            <li class="li"><a class="xref" href="xsct_importsources.html">importsources</a></li>
+
+            <li class="li"><a class="xref" href="xsct_getprojects.html">getprojects</a></li>
+
+            <li class="li"><a class="xref" href="xsct_deleteprojects.html">deleteprojects</a></li>
+
+            <li class="li"><a class="xref" href="xsct_configapp.html">configapp</a></li>
+
+            <li class="li"><a class="xref" href="xsct_toolchain.html">toolchain</a></li>
+
+            </ul>
+ </div>
+
+    </div>
+
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../../xsct/sdk_commands/xsct_openhw.html">openhw</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../../xsct/sdk_commands/xsct_closehw.html">closehw</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../../xsct/sdk_commands/xsct_openbsp.html">openbsp</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../../xsct/sdk_commands/xsct_closebsp.html">closebsp</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../../xsct/sdk_commands/xsct_updatemss.html">updatemss</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../../xsct/sdk_commands/xsct_getaddrmap.html">getaddrmap</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../../xsct/sdk_commands/xsct_getperipherals.html">getperipherals</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../../xsct/sdk_commands/xsct_configbsp.html">configbsp</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../../xsct/sdk_commands/xsct_repo.html">repo</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../../xsct/sdk_commands/xsct_setlib.html">setlib</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../../xsct/sdk_commands/xsct_getlibs.html">getlibs</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../../xsct/sdk_commands/xsct_removellib.html">removelib</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../../xsct/sdk_commands/xsct_setdriver.html">setdriver</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../../xsct/sdk_commands/xsct_getdrivers.html">getdrivers</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../../xsct/sdk_commands/xsct_setosversion.html">setosversion</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../../xsct/sdk_commands/xsct_getos.html">getos</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../../xsct/sdk_commands/xsct_regenbsp.html">regenbsp</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../../xsct/sdk_commands/xsct_projects.html">projects</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../../xsct/sdk_commands/xsct_setws.html">setws</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../../xsct/sdk_commands/xsct_getws.html">getws</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../../xsct/sdk_commands/xsct_createhw.html">createhw</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../../xsct/sdk_commands/xsct_createbsp.html">createbsp</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../../xsct/sdk_commands/xsct_createapp.html">createapp</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../../xsct/sdk_commands/xsct_importprojects.html">importprojects</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../../xsct/sdk_commands/xsct_importsources.html">importsources</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../../xsct/sdk_commands/xsct_getprojects.html">getprojects</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../../xsct/sdk_commands/xsct_deleteprojects.html">deleteprojects</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../../xsct/sdk_commands/xsct_configapp.html">configapp</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../../xsct/sdk_commands/xsct_toolchain.html">toolchain</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+</ul>
+<div class="relinfo relconcepts"><strong>Related concepts</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/hsi_commands/sdk_u_xsd_xsdb_hsi.html" title="HSI Commands">HSI Commands</a></div>
+</div>
+<div class="relinfo relref"><strong>Related reference</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/sdk_u_xsd_xsdb_connections.html" title="Target Connection Management">Target Connection Management</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/sdk_u_xsd_xsdb_registers.html" title="Target Registers">Target Registers</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/sdk_u_xsd_xsdb_running.html" title="Program Execution">Program Execution</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/sdk_u_xsd_xsdb_memory.html" title="Target Memory">Target Memory</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/sdk_u_xsd_xsdb_download.html" title="Target Download FPGA/BINARY">Target Download FPGA/BINARY</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/sdk_u_xsd_xsdb_reset.html" title="Target Reset">Target Reset</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/sdk_u_xsd_xsdb_breakpoints.html" title="Target Breakpoints/Watchpoints">Target Breakpoints/Watchpoints</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/sdk_u_xsd_xsdb_streams.html" title="JTAG UART">JTAG UART</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/sdk_u_xsd_xsdb_misc.html" title="Miscellaneous">Miscellaneous</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/sdk_u_xsd_xsdb_jtag.html" title="JTAG Access">JTAG Access</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

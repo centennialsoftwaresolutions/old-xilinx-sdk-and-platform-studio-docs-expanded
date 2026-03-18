@@ -1,0 +1,76 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Read from MDM debug register. Synopsis mdm_drrd {options] &lt;cmd&gt; &lt;bitlen&gt; Read a MDM debug register. &lt;cmd&gt; is 8-bit MDM command to access a Debug register. &lt;bitlen&gt; is the register width. Options ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="mdm_drrd"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_loadhw.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_unloadhw.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_mdm_drwr.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_mb_drwr.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_mb_drrd.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_configparams.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_version.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_xsdbserver.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_xsdbserver_stop.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_xsdbserver_disconnect.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_xsdbserver_version.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="command_hkj_klf_1w"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>mdm_drrd</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../../index.html";
+          
+          --></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="command_hkj_klf_1w"><a name="command_hkj_klf_1w"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+    <h1 class="title topictitle1">mdm_drrd</h1>
+
+    <div class="body refbody">
+        <div class="section"> <p class="p">Read from MDM debug register.</p>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Synopsis</h2>  <p class="p"><span class="ph synph"><span class="keyword option">mdm_drrd</span> <span class="keyword kwd">{options]</span> <span class="keyword kwd">&lt;cmd&gt;</span><span class="keyword kwd">&lt;bitlen&gt;</span></span></p>
+ <p class="p" id="command_hkj_klf_1w__p_inw_glf_1w">Read a MDM debug register. <samp class="ph codeph">&lt;cmd&gt;</samp> is 8-bit MDM command to access a Debug register. <samp class="ph codeph">&lt;bitlen&gt;</samp> is the register width.</p>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Options</h2>  
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+                
+                
+                <thead class="thead" align="left">
+                    <tr class="row">
+                        <th class="entry" valign="top" id="d95077e63">Option</th>
+
+                        <th class="entry" valign="top" id="d95077e66">Description</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d95077e63 "><span class="keyword cmdname">-user &lt;bscan number&gt;</span></td>
+
+                        <td class="entry" valign="top" headers="d95077e66 ">Specify user bscan port number. Default is 2.</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+</div>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Returns</h2>  <p class="p"> Register value, if successful. Error string, if BSCAN port is invalid</p>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Example</h2>  <p class="p">Read <samp class="ph codeph">XMDC ID</samp> register.</p>
+ <pre class="pre codeblock">mdm_drrd 0 32</pre>
+ </div>
+
+    </div>
+
+<div class="related-links"><div class="relinfo relref"><strong>Related reference</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_loadhw.html" title="loadhw">loadhw</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_unloadhw.html" title="unloadhw">unloadhw</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_mdm_drwr.html" title="mdm_drwr">mdm_drwr</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_mb_drwr.html" title="mb_drwr">mb_drwr</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_mb_drrd.html" title="mb_drrd">mb_drrd</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_configparams.html" title="configparams">configparams</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_version.html" title="version">version</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_xsdbserver.html" title="xsdbserver start">xsdbserver start</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_xsdbserver_stop.html" title="xsdbserver stop">xsdbserver stop</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_xsdbserver_disconnect.html" title="xsdbserver disconnect">xsdbserver disconnect</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_xsdbserver_version.html" title="xsdbserver version">xsdbserver version</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

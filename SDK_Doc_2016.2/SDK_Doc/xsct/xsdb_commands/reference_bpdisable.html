@@ -1,0 +1,82 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Disable Breakpoints/Watchpoints. Synopsis bpdisable &lt;id-list&gt; | -all Options Option Description &lt;id-list&gt; Disable the Breakpoints/Watchpoints specified by &lt;id-list&gt; . &lt;id-list&gt; is a list of breakpoint ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="bpdisable"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_bpadd.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_bpremove.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_bpenable.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_bplist.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_bpstatus.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="command_up8_fx2_8y"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>bpdisable</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../../index.html";
+          
+          --></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="command_up8_fx2_8y"><a name="command_up8_fx2_8y"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+    <h1 class="title topictitle1">bpdisable</h1>
+
+    <div class="body refbody">
+        <div class="section"> <p class="p">Disable Breakpoints/Watchpoints.</p>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Synopsis</h2>  <p class="p"><span class="ph synph"><span class="keyword option">bpdisable</span> <span class="keyword kwd">&lt;id-list&gt;</span><span class="keyword kwd">| -all</span></span></p>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Options</h2>  
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+                
+                
+                <thead class="thead" align="left">
+                    <tr class="row">
+                        <th class="entry" valign="top" id="d85500e51">Option</th>
+
+                        <th class="entry" valign="top" id="d85500e54">Description</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d85500e51 "><span class="keyword cmdname">&lt;id-list&gt;</span></td>
+
+                        <td class="entry" valign="top" headers="d85500e54 "> <p class="p">Disable the Breakpoints/Watchpoints specified by <samp class="ph codeph">&lt;id-list&gt;</samp>.</p>
+ <p class="p"><samp class="ph codeph">&lt;id-list&gt;</samp> is a list of breakpoint IDs, which are returned by the <samp class="ph codeph">bpadd</samp> command. Breakpoint IDs can also be obtained through the bplist command.</p>
+ </td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d85500e51 "><span class="keyword cmdname">-all</span></td>
+
+                        <td class="entry" valign="top" headers="d85500e54 ">Disable all breakpoints.</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+</div>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Returns</h2>  <p class="p">Nothing, if the breakpoint is disabled successfully. Error string, if the breakpoint specified by <samp class="ph codeph">&lt;id-list&gt;</samp> is not set.</p>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Example</h2>  <p class="p">Enable breakpoint <samp class="ph codeph">0</samp>.</p>
+ <pre class="pre codeblock">bpenable 0</pre>
+ <p class="p">Enable breakpoints <samp class="ph codeph">1</samp> and <samp class="ph codeph">2</samp>.</p>
+ <pre class="pre codeblock">bpenable 1 2</pre>
+ <p class="p">Enable all breakpoints.</p>
+ <pre class="pre codeblock">bpenable -all</pre>
+ </div>
+
+    </div>
+
+<div class="related-links"><div class="relinfo relref"><strong>Related reference</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_bpadd.html" title="bpadd">bpadd</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_bpremove.html" title="bpremove">bpremove</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_bpenable.html" title="bpenable">bpenable</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_bplist.html" title="bplist">bplist</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_bpstatus.html" title="bpstatus">bpstatus</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Disassemble &lt;num&gt; instructions at address specified by &lt;address&gt; . The keyword pc can be used to disassemble instructions at current PC. Default value for &lt;num&gt; is 1. Synopsis dis &lt;address&gt; &lt;num&gt; ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="dis"></meta><meta name="abstract" content=""></meta><meta name="description" content=""></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_state.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_stop.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_con.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_stp.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_nxt.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_stpi.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_nxti.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_stpout.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_print.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_locals.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_backtrace.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_profile.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_dis"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>dis</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../../index.html";
+          
+          --></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_dis"><a name="reference_dis"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+    <h1 class="title topictitle1">dis</h1>
+
+    
+    <div class="body refbody"><p class="shortdesc"></p>
+
+        <div class="section"> <p class="p">Disassemble <samp class="ph codeph">&lt;num&gt;</samp> instructions at address specified by <samp class="ph codeph">&lt;address&gt;</samp>. The keyword <samp class="ph codeph">pc</samp> can be used to disassemble instructions at current PC. Default value for <samp class="ph codeph">&lt;num&gt;</samp> is 1. </p>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Synopsis</h2><span class="ph synph"><span class="keyword option">dis</span> <span class="keyword kwd">&lt;address&gt;</span> <span class="keyword kwd">&lt;num&gt;</span></span> </div>
+
+        <div class="section"><h2 class="title sectiontitle">Returns</h2>Disassembled instructions if successful. </div>
+
+        <div class="section">Error string, if the target instructions can't be read</div>
+
+        <div class="section"><h2 class="title sectiontitle">Example</h2>  <p class="p">Disassemble an instruction at the current PC value.</p>
+ <pre class="pre codeblock">dis</pre>
+ <p class="p">Disassemble two instructions at the current PC value.</p>
+ <pre class="pre codeblock">dis pc 2</pre>
+ <p class="p" id="reference_dis__p_dtw_g3y_zv">Disassemble two instructions at address <samp class="ph codeph">0x0</samp>.</p>
+ <pre class="pre codeblock">dis 0x0 2</pre>
+ </div>
+
+    </div>
+
+<div class="related-links"><div class="relinfo relref"><strong>Related reference</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_state.html" title="state">state</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_stop.html" title="stop">stop</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_con.html" title="con">con</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_stp.html" title="stp">stp</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_nxt.html" title="nxt">nxt</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_stpi.html" title="stpi">stpi</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_nxti.html" title="nxti">nxti</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_stpout.html" title="stpout">stpout</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_print.html" title="print">print</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_locals.html" title="locals">locals</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_backtrace.html" title="backtrace">backtrace</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_profile.html" title="profile">profile</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

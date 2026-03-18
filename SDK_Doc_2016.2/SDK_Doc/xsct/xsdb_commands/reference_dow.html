@@ -1,0 +1,86 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="robots" content="noindex, nofollow" /><meta name="description" content="Download elf and binary files to the target. Synopsis dow [Options] &lt;file&gt; Download ELF file &lt;file&gt; to active target. dow -data &lt;file&gt; &lt;addr&gt; Download binary file &lt;file&gt; to active target address ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="dow"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_elfverify.html"></meta><meta name="DC.Relation" scheme="URI" content="../../xsct/xsdb_commands/reference_fpga.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_dow"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>dow</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../../index.html";
+          
+          --></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_dow"><a name="reference_dow"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+    <h1 class="title topictitle1">dow</h1>
+
+    <div class="body refbody">
+        <div class="section"> <p class="p">Download elf and binary files to the target.</p>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Synopsis</h2>  <p class="p"><span class="ph synph"><span class="keyword option">dow</span> <span class="keyword kwd">[Options]</span> <span class="keyword kwd">&lt;file&gt;</span></span></p>
+ <p class="p">Download ELF file <samp class="ph codeph">&lt;file&gt;</samp> to active target.</p>
+ <p class="p"><span class="ph synph"><span class="keyword option">dow</span> <span class="keyword kwd">-data</span> <span class="keyword kwd">&lt;file&gt;</span> <span class="keyword kwd">&lt;addr&gt;</span></span></p>
+ <p class="p">Download binary file <samp class="ph codeph">&lt;file&gt;</samp> to active target address specified by <samp class="ph codeph">&lt;addr&gt;</samp>.</p>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Options</h2>  
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+                
+                
+                <thead class="thead" align="left">
+                    <tr class="row">
+                        <th class="entry" valign="top" id="d88665e81">Option</th>
+
+                        <th class="entry" valign="top" id="d88665e84">Description</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d88665e81 "><span class="keyword cmdname">-clear</span></td>
+
+                        <td class="entry" valign="top" headers="d88665e84 ">Clear uninitialized data (.bss)</td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d88665e81 "><span class="keyword cmdname">-keepsym</span></td>
+
+                        <td class="entry" valign="top" headers="d88665e84 ">Keep previously downloaded elfs in the list of symbol files. Default behavior is to clear the old symbol files while downloading an elf.</td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d88665e81 "><span class="keyword cmdname">-force</span></td>
+
+                        <td class="entry" valign="top" headers="d88665e84 ">Overwrite access protection. By default accesses to reserved and invalid address ranges are blocked.</td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" valign="top" headers="d88665e81 "><span class="keyword cmdname">-relocate-section-map &lt;addr&gt;</span></td>
+
+                        <td class="entry" valign="top" headers="d88665e84 ">Relocate the address map of the program sections to <samp class="ph codeph">&lt;addr&gt;</samp>. This option should be used when the code is self-relocating, so that the debugger can find the debug symbol info for the code. <samp class="ph codeph">&lt;addr&gt;</samp> is the relative address, to which all the program sections are relocated.</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+</div>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">Returns</h2>  <p class="p">Nothing.</p>
+ </div>
+
+    </div>
+
+<div class="related-links"><div class="relinfo relref"><strong>Related reference</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_elfverify.html" title="elfverify">elfverify</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../../xsct/xsdb_commands/reference_fpga.html" title="fpga">fpga</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

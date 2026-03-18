@@ -1,0 +1,108 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="description" content="Software developers typically build different versions of executables, with different settings used to build those executables. For example, an application that is built for debugging uses a certain ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="concept"></meta><meta name="DC.Title" content="Build Configurations"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_sdkhelp_makefiles.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_sdk_linkerscripts.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_sdk_changing_build_settings.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_proj_libraries.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_proj_linker_options.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_specifyingdebugandoptimizationcompilerflags.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_specifyingmiscellaneouscompilerflags.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_sdk_restoring_build_settings.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="sdk_build_configurations"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Build Configurations</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script><meta name="robots" content="noindex, nofollow" /></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="sdk_build_configurations"><a name="sdk_build_configurations"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+
+<h1 class="title topictitle1">Build Configurations</h1>
+
+<div class="body conbody">
+<p class="p">Software developers typically build different versions of executables,
+with different settings used to build those executables. For example,
+an application that is built for debugging uses a certain set of options
+(such as compiler flags and macro definitions), while the same application
+is built with a different set of options for eventual release to customers.
+SDK makes it easier to maintain these different profiles using the concept
+of build configurations.</p>
+
+        <p class="p" id="sdk_build_configurations__p_cbv_ybj_zs">A build configuration is a named collection of build tools options. The set of options in a given build configuration causes the build tools to generate a final binary with specific characteristics. When the wizard completes its process, it generates launch configurations with names that follow the pattern <span class="ph filepath">&lt;projectname&gt;</span>, where <span class="ph filepath">&lt;projectname&gt;</span> represents the name of the project. </p>
+
+<p class="p">Each build configuration could customize:</p>
+
+<ul class="ul">
+<li class="li">Compiler Settings: Debug and Optimization levels</li>
+
+<li class="li">Macros passed for compilation</li>
+
+<li class="li">Linker Settings </li>
+
+</ul>
+
+<p class="p">By default, the SDK provides three build configurations, as listed in the table below:</p>
+
+        <div class="p" id="sdk_build_configurations__p_bj2_sxs_yq">
+            
+<div class="tablenoborder"><a name="sdk_build_configurations__table_m12_5xs_yq"><!-- --></a><table cellpadding="4" cellspacing="0" summary="" id="sdk_build_configurations__table_m12_5xs_yq" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1. Build Configurations</span></caption>
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="50%" id="d8044e60">Configuration Type</th>
+
+                            <th class="entry" valign="top" width="50%" id="d8044e63">Compiler Flags</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d8044e60 ">Debug</td>
+
+                            <td class="entry" valign="top" width="50%" headers="d8044e63 "><samp class="ph codeph">-O0 -g</samp></td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d8044e60 ">Release</td>
+
+                            <td class="entry" valign="top" width="50%" headers="d8044e63 "><samp class="ph codeph">-O2</samp></td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d8044e60 ">Profile</td>
+
+                            <td class="entry" valign="top" width="50%" headers="d8044e63 "><samp class="ph codeph">-O2 -g -pg</samp></td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+</div>
+
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../SDK_tasks/task_sdk_changing_build_settings.html">Changing Build Configuration</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../SDK_tasks/sdk_t_proj_libraries.html">Adding Libraries and Library Paths</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../SDK_tasks/sdk_t_proj_linker_options.html">Specifying the Linker Options</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../SDK_tasks/task_specifyingdebugandoptimizationcompilerflags.html">Specifying Debug and Optimization Compiler Flags</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../SDK_tasks/task_specifyingmiscellaneouscompilerflags.html">Specifying Miscellaneous Compiler Flags</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../SDK_tasks/task_sdk_restoring_build_settings.html">Restoring Build Configuration</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+</ul>
+<div class="relinfo relconcepts"><strong>Related concepts</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_sdkhelp_makefiles.html" title="Makefiles">Makefiles</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_sdk_linkerscripts.html" title="Linker Scripts">Linker Scripts</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en" lang="en">
+<head><meta name="description" content="To configure options for the Profiler, do the following: In the Project Explorer or C/C++ Projects view, select a project. Select Run &gt; Run Configuration . In the Run Configurations dialog box, expand ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Specifying Profiler Configuration"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_settinguphwforprofiling.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_settingupswforprofiling.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_settinguptheboardsupportpackage.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_settingupthesoftwareapplication.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_creatingaprofilerunconfiguration.html"></meta><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_launchingprofilingview.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="sdk_t_run_profiler"></meta><meta name="DC.Language" content="en"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Specifying Profiler Configuration</title><!--  Generated with Oxygen version 17.0, build number 2015051321.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script><meta name="robots" content="noindex, nofollow" /></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="sdk_t_run_profiler"><a name="sdk_t_run_profiler"><!-- --></a>
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+
+<h1 class="title topictitle1">Specifying Profiler Configuration</h1>
+
+<div class="body taskbody"><div class="section context">
+<p class="p">To configure options for the Profiler, do the following:</p>
+
+</div>
+<ol class="ol steps"><li class="li step stepexpand"><span class="ph cmd">In the Project Explorer or C/C++ Projects view, select a project.</span></li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select <span class="ph menucascade"><span class="ph uicontrol">Run</span> &gt; <span class="ph uicontrol">Run Configuration</span></span><strong class="ph b">.</strong></span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">In the <span class="ph uicontrol">Run Configurations</span> dialog box, expand <span class="ph uicontrol">Xilinx C/C++ Application (System Debugger)</span>.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Create a run configuration.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click the <span class="ph uicontrol">Application</span> tab.</span>
+                <div class="itemgroup info">
+                    <br xmlns="http://www.w3.org/1999/xhtml" /><img class="image" src="../images/sdk_profile_config.png" height="560" width="1008"></img><br xmlns="http://www.w3.org/1999/xhtml" />
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">In the <span class="ph uicontrol">Profile Options</span> area, select the <span class="ph uicontrol">Enable Profiling (gprof)</span> check box.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd"> Specify the sampling frequency and the scratch memory to use for profiling, where:</span>
+                <a name="sdk_t_run_profiler__substeps_jsn_xhv_gv"><!-- --></a><ol type="a" class="ol substeps" id="sdk_t_run_profiler__substeps_jsn_xhv_gv">
+                    <li class="li substep">
+                        <span class="ph cmd">The sampling frequency is the interrupt interval that the profiling routine uses to periodically check which function is currently being executed. The routine performs the sampling by examining the program counter at each interrupt.</span>
+                    </li>
+
+                    <li class="li substep">
+                        <span class="ph cmd">The scratch memory address is the location in DDR3 memory that the BSP profiling services use for data collection. The application program should never touch this space.</span>
+                    </li>
+
+                </ol>
+
+            </li>
+<li class="li step stepexpand"><span class="ph cmd">Click <strong class="ph b">Run</strong> to profile the application</span></li>
+</ol>
+
+</div>
+<div class="related-links"><div class="relinfo relconcepts"><strong>Related concepts</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_settinguphwforprofiling.html" title="Setting Up the Hardware for Profiling">Setting Up the Hardware for Profiling</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_settingupswforprofiling.html" title="Setting Up the Software for Profiling">Setting Up the Software for Profiling</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_launchingprofilingview.html" title="Viewing the Profiling Results">Viewing the Profiling Results</a></div>
+</div>
+<div class="relinfo reltasks"><strong>Related tasks</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/task_settinguptheboardsupportpackage.html" title="Setting up the Board Support Package">Setting up the Board Support Package</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/task_settingupthesoftwareapplication.html" title="Setting Up the Software Application">Setting Up the Software Application</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/task_creatingaprofilerunconfiguration.html" title="Creating a Profile Run Configuration">Creating a Profile Run Configuration</a></div>
+</div>
+</div>
+<div class="navfooter"><!----></div>
+</body>
+</html>
