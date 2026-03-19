@@ -1,0 +1,903 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" xml:lang="en-us" lang="en-us">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />        
+      <meta name="copyright" content="(C) Copyright 2019" /><meta name="DC.rights.owner" content="(C) Copyright 2019" /><meta name="DC.Type" content="reference" /><meta name="DC.Title" content="Cross-Triggering in Zynq UltraScale+ MPSoC" /><meta name="abstract" content="" /><meta name="description" content="In Zynq® UltraScale+™ MPSoC, ECT is configured with four broadcast channels, nine CTIs, and a CTM. The table below shows the trigger input and trigger output connections of each CTI. These are ..." /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_cross_triggering.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_enable_cross_triggering.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_references/reference_cross-trigerring-zynq.html" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.tutorial" /><meta name="dictionary_reference" content="com.ibm.eou.tmtool.domainDictionary.core" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.cshelp" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.messaging" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.taxonomyContributions" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.troubleshooting" /><meta name="vis_node" content="com.ibm.ut.ditamap.domainDictionary.dita.concept" /><meta name="vis_labels" content="com.ibm.eou.tmtool.domainAttribute.core.name" /><meta name="vis_zoom" content="2" /><meta name="vis_view" content="com.ibm.eou.tmtool.representation.outline" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="reference_ktx_lnr_gvy" /><title>Cross-Triggering in Zynq UltraScale+ MPSoC</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style type="text/css">
+		<!--
+		BODY { 
+		  margin: 0px; 
+		}
+		-->
+		<!--
+		img.banner{ 
+		width: 550px;
+		height: 106px;
+		background-image: url('./oxygen-webhelp/template/resources/images/sdsoc_header.png');
+		background-repeat:no-repeat;
+		text-align: left;
+		}
+		@media (max-width: 100em) {
+		img.banner {
+		visibility:hidden;
+		}
+		} -->
+		</style>			
+      <script>
+          function debug(msg, object){
+              console.log(msg, object);
+          }
+          function executeQuery(){
+              $('#searchForm').submit();
+              return true;
+          }
+      </script>
+      
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css" />
+          
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_responsive_topic.css" />
+          
+        <!-- Latest compiled and minified Bootstrap CSS -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/bootstrap/css/bootstrap.min.css" />
+
+        <!-- Bootstrap Optional theme -->
+        <link rel="stylesheet" href="../oxygen-webhelp/resources/bootstrap/css/bootstrap-theme.min.css" />
+
+        <!-- Changes and comments, as side-notes  -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/p-side-notes.css" />
+
+
+        <!-- Template default styles  -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/resources/css/wt_default.css" />
+        
+        <!-- Expand-collapse support styles  -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/resources/css/wt_expand.css" />
+        
+
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/localization/strings.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/localization.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/parseuri.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script>
+        <!-- Skin resources -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/variants/tree/SDK/skin.css" />
+        <!-- EXM-36950 - Expand the args.hdf parameter here -->
+        
+        
+    </head>
+
+    <body onload="highlightSearchTerm()" class="wh_topic_page frmBody" id="reference_ktx_lnr_gvy">
+        <!-- EXM-36950 - Expand the args.hdr parameter here -->
+        
+        
+        <!-- &header; -->
+		<div class="top_header">
+		<div class=" wh_publication_title "><a href="../index.html"><span class="title">Using Xilinx SDK</span></a></div></div> 		
+        <hr />			
+        <div class=" wh_search_input "><form id="searchForm" method="get" action="../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" /><button type="submit" class="wh_search_button"><span>Search</span></button></div></form></div>
+      
+        <div class="container">
+            <div class="row">
+
+                <nav class="wh_tools hidden-print">
+                    <div class=" wh_breadcrumb "><ol class="hidden-print"><li><span class="home"><a href="../index.html"><span>Home</span></a></span></li><li><span class="topicref"><a href="../sdk_getting_started/sdk_getting_started.html#sdk_getting_started">Getting Started with Xilinx SDK</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_xilinx_sdk_ide_extn.html">Xilinx SDK IDE Extensions</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_cross_triggering.html">Cross-Triggering</a></span></li><li class="active"><span class="topicref">Cross-Triggering in Zynq UltraScale+ MPSoC</span></li></ol></div>
+
+                    <div class="wh_right_tools hidden-sm hidden-xs">
+                        <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  </span></div>
+						<!--<a href="javascript:var url = window.location.toString();window.location = url.replace(/www.xilinx.com/, 'japan.xilinx.com');" title="View page in Japanese" class="glyphicon glyphicon-globe"></a>-->
+                        <div class=" wh_print_link print "><a href="javascript:window.print();" title="Print this page"></a></div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="wh_content_area">
+					<div class="row">
+                    <nav role="navigation" class="col-lg-4 col-md-4 col-sm-4 col-xs-12 navbar" id="wh_side_toc">
+                        <div class=" wh_side_toc "><ul class="hidden-print"><li><span class="topicref"><a href="../sdk_getting_started/sdk_getting_started.html#sdk_getting_started">Getting Started with Xilinx SDK</a></span><ul class="nav nav-list"><li><span class="topicref"><a href="../xsct/intro/xsct_system_requirements.html">System Requirements</a></span></li><li><span class="topicref"><a href="../sdk_getting_started/concept_sdkdevelopmentflowoverview.html">Xilinx SDK Development Flow Overview</a></span></li><li><span class="topicref"><a href="../sdk_getting_started/sdk_key_concepts.html">Key Concepts for Using the Xilinx SDK</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_xilinx_sdk_ide_extn.html">Xilinx SDK IDE Extensions</a></span><ul class="nav nav-list"><li><span class="topicref"><a href="../SDK_references/sdk_u_m_tools.html">Xilinx Tools Menu</a></span></li><li><span class="topicref"><a href="../SDK_references/sdk_u_xilinx_pref.html">Xilinx SDK Preferences</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_sdk_terminal.html">SDK Terminal</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_hier_ip_support.html">Hierarchical-IP, Referenced-BD and Packaged-BD Support</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_cross_triggering.html">Cross-Triggering</a></span><ul class="nav nav-list"><li><span class="topicref"><a href="../SDK_tasks/task_enable_cross_triggering.html">Enable Cross-Triggering</a></span></li><li><span class="topicref"><a href="../SDK_references/reference_cross-trigerring-zynq.html">Cross-Triggering in Zynq</a></span></li><li class="active"><span class="topicref">Cross-Triggering in Zynq UltraScale+ MPSoC</span></li><li><span class="topicref"><a href="../SDK_concepts/concept_cross_trigerring_zynq_fpgatocputriggering.html">Use Cases</a></span></li></ul></li></ul></li></ul></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_hwcomponents.html">Embedded Hardware Components</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_hwspec.html">Hardware Platform Specification</a></span></li><li><span class="topicref"><a href="../SDK_tasks/sdk_o_project_creation.html">Working with Projects</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_bsp_internal.html">Board Support Packages (SDK)</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_Xilinxsystemdebugger.html">Working with XSDB</a></span></li><li><span class="topicref"><a href="../xsct/intro/xsct_introduction.html">Working with XSCT</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_over_profile.html">Software Profiling</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_performance_analysis.html">Performance Analysis</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_whatsnew.html">What’s New in Xilinx SDK v2019.1</a></span></li><li><span class="topicref"><a href="../SDK_references/reference_limitations_faqs.html">Limitations, Known Issues and FAQs</a></span></li><li><span class="topicref"><a href="../design_hub/reference_sdk_user_guides_pdf.html">Learn More About SDK</a></span></li><li><span class="topicref"><a href="../book/SDK_book_legal.html">Please Read: Important Legal Notices</a></span></li></ul></div>
+                    </nav> 					
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Cross-Triggering in Zynq UltraScale+ MPSoC</h1>
+
+  
+  <div class="body refbody"><p class="shortdesc"></p>
+
+    <section class="section">
+      <p class="p">In Zynq® UltraScale+™ MPSoC, ECT is configured with four broadcast channels, nine CTIs, and a CTM. The table below shows the trigger input and trigger output connections of each CTI. These are hard-wired connections. For more details, refer to <a class="xref" href="http://www.xilinx.com/cgi-bin/docs/ndoc?t=user_guides;d=ug1085-zynq-ultrascale-trm.pdf" target="_blank">Zynq UltraScale+ MPSoC Technical Reference Manual</a>.</p>
+
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><colgroup><col /><col /></colgroup><thead class="thead" style="text-align:left;">
+          <tr>
+            <th class="entry cellrowborder" id="d25068e56"><strong class="ph b">CTI Trigger Port</strong></th>
+
+            <th class="entry cellrowborder" id="d25068e60"><strong class="ph b">Signal</strong></th>
+
+          </tr>
+
+        </thead>
+<tbody class="tbody">
+                <tr>
+                    <td class="entry cellrowborder" colspan="2" headers="d25068e56 d25068e60 "><p class="p"><strong class="ph b">CTI 0</strong>(soc_debug_fpd)</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 0</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">ETF 1 FULL</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 1</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">ETF 1 ACQCOMP</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 2</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">ETF 2 FULL</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 3</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">ETF 2 ACQCOMP</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 4</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">ETR FULL</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 5</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">ETR ACQCOMP</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 6</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 7</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 0</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">ETF 1 FLUSHIN</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 1</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">ETF 1 TRIGIN</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 2</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">ETF 2 FLUSHIN</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 3</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">ETF 2 TRIGIN</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 4</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">ETR FLUSHIN</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 5</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">ETR TRIGIN</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 6</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">TPIU FLUSHIN</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 7</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">TPIU TRIGIN</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" colspan="2" headers="d25068e56 d25068e60 "><p class="p"><strong class="ph b">CTI 1</strong>(soc_debug_fpd)</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 0</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">FTM</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 1</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">FTM</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 2</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">FTM</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 3</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">FTM</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 4</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">STM TRIGOUTSPTE</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 5</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">STM TRIGOUTSW</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 6</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">STM TRIGOUTHETE</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 7</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">STM ASYNCOUT</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 0</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">FTM</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 1</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">FTM</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 2</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">FTM</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 3</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">FTM</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 4</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">STM HWEVENTS</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 5</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">STM HWEVENTS</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 6</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 7</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">HALT SYSTEM TIMER</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" colspan="2" headers="d25068e56 d25068e60 "><p class="p"><strong class="ph b">CTI 2</strong>(soc_debug_fpd)</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 0</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">ATM 0</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 1</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">ATM 1</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 2</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 3</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 4</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 5</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 6</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 7</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 0</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">ATM 0</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 1</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">ATM 1</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 2</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 3</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 4</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 5</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 6</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 7</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">picture debug start</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" colspan="2" headers="d25068e56 d25068e60 "><p class="p"><strong class="ph b">CTI 0,1</strong> (RPU)</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 0</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">DBGTRIGGER</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 1</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">PMUIRQ</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 2</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">ETMEXTOUT[0]</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 3</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">ETMEXTOUT[1]</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 4</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">COMMRX</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 5</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">COMMTX</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 6</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">ETM TRIGGER</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 7</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 0</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">EDBGRQ</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 1</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">ETMEXTIN[0]</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 2</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">ETMEXTIN[1]</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 3</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">-(CTIIRQ, not connected)</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 4</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 5</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 6</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 7</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">DBGRESTART</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" colspan="2" headers="d25068e56 d25068e60 "><p class="p"><strong class="ph b">CTI 0,1,2,3</strong> (APU)</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 0</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">DBGTRIGGER</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 1</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">PMUIRQ</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 2</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 3</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 4</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">ETMEXTOUT[0]</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 5</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">ETMEXTOUT[1]</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 6</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">ETMEXTOUT[2]</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">IN 7</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">ETMEXTOUT[3]</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 0</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">EDBGRQ</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 1</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">DBGRESTART</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 2</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">CTIIRQ</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 3</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">-</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 4</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">ETMEXTIN[0]</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 5</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">ETMEXTIN[1]</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 6</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">ETMEXTIN[2]</p>
+</td>
+
+                </tr>
+
+                <tr>
+                    <td class="entry cellrowborder" headers="d25068e56 "><p class="p">OUT 7</p>
+</td>
+
+                    <td class="entry cellrowborder" headers="d25068e60 "><p class="p">ETMEXTIN[3]</p>
+</td>
+
+                </tr>
+       
+        </tbody>
+</table>
+</div>
+          
+    </section>
+
+  </div>
+
+</article></main></div>
+                        
+                        <div class=" wh_related_links "><nav role="navigation" class="related-links"><div class="linklist linklist relinfo relconcepts"><strong>Related concepts</strong><br /><div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/task_enable_cross_triggering.html" title="Enable Cross-Triggering">Enable Cross-Triggering</a></div><div class="related_link"><a class="navheader_parent_path" href="../SDK_references/reference_cross-trigerring-zynq.html" title="Cross-Triggering in Zynq">Cross-Triggering in Zynq</a></div></div></nav></div>
+                        
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div> <nav class="navbar navbar-default wh_footer">
+  <div class=" footer-container text-center ">
+    &copy; Copyright 2019 Xilinx Inc.
+  </div>
+</nav>
+ <!-- Latest compiled and minified JavaScript -->
+        <script src="../oxygen-webhelp/resources/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="../oxygen-webhelp/template/resources/js/wt_default.js" type="text/javascript"></script>
+        <!-- Expand/collapse support -->
+        <script src="../oxygen-webhelp/template/resources/js/wt_expand.js" type="text/javascript"></script>
+        
+    </body>
+</html>

@@ -1,0 +1,396 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" xml:lang="en" lang="en">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="description" content="You can create a managed make library project by using the New Library Project wizard. To create a library project: Click File &gt; New &gt; Other . The New Project dialog box appears. Expand Xilinx and ..." /><meta name="copyright" content="(C) Copyright 2019" /><meta name="DC.rights.owner" content="(C) Copyright 2019" /><meta name="DC.Type" content="task" /><meta name="DC.Title" content="Creating a Library Project" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_o_project_creation.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/sdk_c_projects.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/Using_custom_libraries.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_create_zynq_boot_image.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_autosyncofswprojects.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_retarget_another_project.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/sdk_c_project_filtering.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/sdk_c_build.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/sdk_c_over_dbg.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/sdk_c_over_run.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/sdk_o_share.html" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.tutorial" /><meta name="dictionary_reference" content="com.ibm.eou.tmtool.domainDictionary.core" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.cshelp" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.messaging" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.taxonomyContributions" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.troubleshooting" /><meta name="vis_node" content="com.ibm.ut.ditamap.domainDictionary.dita.concept" /><meta name="vis_labels" content="com.ibm.eou.tmtool.domainAttribute.core.name" /><meta name="vis_zoom" content="2" /><meta name="vis_view" content="com.ibm.eou.tmtool.representation.outline" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="sdk_t_create_new_appln" /><meta name="DC.Language" content="en" /><title>Creating a Library Project</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style type="text/css">
+		<!--
+		BODY { 
+		  margin: 0px; 
+		}
+		-->
+		<!--
+		img.banner{ 
+		width: 550px;
+		height: 106px;
+		background-image: url('./oxygen-webhelp/template/resources/images/sdsoc_header.png');
+		background-repeat:no-repeat;
+		text-align: left;
+		}
+		@media (max-width: 100em) {
+		img.banner {
+		visibility:hidden;
+		}
+		} -->
+		</style>			
+      <script>
+          function debug(msg, object){
+              console.log(msg, object);
+          }
+          function executeQuery(){
+              $('#searchForm').submit();
+              return true;
+          }
+      </script>
+      
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css" />
+          
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_responsive_topic.css" />
+          
+        <!-- Latest compiled and minified Bootstrap CSS -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/bootstrap/css/bootstrap.min.css" />
+
+        <!-- Bootstrap Optional theme -->
+        <link rel="stylesheet" href="../oxygen-webhelp/resources/bootstrap/css/bootstrap-theme.min.css" />
+
+        <!-- Changes and comments, as side-notes  -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/p-side-notes.css" />
+
+
+        <!-- Template default styles  -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/resources/css/wt_default.css" />
+        
+        <!-- Expand-collapse support styles  -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/resources/css/wt_expand.css" />
+        
+
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/localization/strings.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/localization.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/parseuri.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script>
+        <!-- Skin resources -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/variants/tree/SDK/skin.css" />
+        <!-- EXM-36950 - Expand the args.hdf parameter here -->
+        
+        
+    </head>
+
+    <body onload="highlightSearchTerm()" class="wh_topic_page frmBody" id="sdk_t_create_new_appln">
+        <!-- EXM-36950 - Expand the args.hdr parameter here -->
+        
+        
+        <!-- &header; -->
+		<div class="top_header">
+		<div class=" wh_publication_title "><a href="../index.html"><span class="title">Using Xilinx SDK</span></a></div></div> 		
+        <hr />			
+        <div class=" wh_search_input "><form id="searchForm" method="get" action="../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" /><button type="submit" class="wh_search_button"><span>Search</span></button></div></form></div>
+      
+        <div class="container">
+            <div class="row">
+
+                <nav class="wh_tools hidden-print">
+                    <div class=" wh_breadcrumb "><ol class="hidden-print"><li><span class="home"><a href="../index.html"><span>Home</span></a></span></li><li><span class="topicref"><a href="../SDK_tasks/sdk_o_project_creation.html">Working with Projects</a></span></li><li class="active"><span class="topicref">Creating a Library Project</span></li></ol></div>
+
+                    <div class="wh_right_tools hidden-sm hidden-xs">
+                        <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  </span></div>
+						<!--<a href="javascript:var url = window.location.toString();window.location = url.replace(/www.xilinx.com/, 'japan.xilinx.com');" title="View page in Japanese" class="glyphicon glyphicon-globe"></a>-->
+                        <div class=" wh_print_link print "><a href="javascript:window.print();" title="Print this page"></a></div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="wh_content_area">
+					<div class="row">
+                    <nav role="navigation" class="col-lg-4 col-md-4 col-sm-4 col-xs-12 navbar" id="wh_side_toc">
+                        <div class=" wh_side_toc "><ul class="hidden-print"><li><span class="topicref"><a href="../sdk_getting_started/sdk_getting_started.html#sdk_getting_started">Getting Started with Xilinx SDK</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_hwcomponents.html">Embedded Hardware Components</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_hwspec.html">Hardware Platform Specification</a></span></li><li><span class="topicref"><a href="../SDK_tasks/sdk_o_project_creation.html">Working with Projects</a></span><ul class="nav nav-list"><li><span class="topicref"><a href="../SDK_concepts/sdk_c_projects.html">SDK Application Projects</a></span></li><li class="active"><span class="topicref">Creating a Library Project</span></li><li><span class="topicref"><a href="../SDK_tasks/Using_custom_libraries.html">Using Custom Libraries in Application Projects</a></span></li><li><span class="topicref"><a href="../SDK_tasks/sdk_t_create_zynq_boot_image.html">Creating a Zynq Boot Image for an Application</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_autosyncofswprojects.html">Auto-Synchronizing Software Projects</a></span></li><li><span class="topicref"><a href="../SDK_tasks/sdk_t_retarget_another_project.html">Re-Targeting a Software Project</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_project_filtering.html">Filtering Projects</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_build.html">Building Projects</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_over_dbg.html">Debugging Projects</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_over_run.html">Running Projects</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_o_share.html">Sharing and Archiving Software Projects</a></span></li></ul></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_bsp_internal.html">Board Support Packages (SDK)</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_Xilinxsystemdebugger.html">Working with XSDB</a></span></li><li><span class="topicref"><a href="../xsct/intro/xsct_introduction.html">Working with XSCT</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_over_profile.html">Software Profiling</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_performance_analysis.html">Performance Analysis</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_whatsnew.html">What’s New in Xilinx SDK v2019.1</a></span></li><li><span class="topicref"><a href="../SDK_references/reference_limitations_faqs.html">Limitations, Known Issues and FAQs</a></span></li><li><span class="topicref"><a href="../design_hub/reference_sdk_user_guides_pdf.html">Learn More About SDK</a></span></li><li><span class="topicref"><a href="../book/SDK_book_legal.html">Please Read: Important Legal Notices</a></span></li></ul></div>
+                    </nav> 					
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="sdk_t_create_new_appln__bd294539">
+
+<h1 class="title topictitle1" id="sdk_t_create_new_appln__bd294539">Creating a Library Project</h1>
+
+<div class="body taskbody"><section class="section context">
+<p class="p">You can create a managed make library project by using the <span class="ph uicontrol">New Library
+          Project</span> wizard.</p>
+
+<p class="p">To create a library project:</p>
+
+</section>
+<ol class="ol steps"><li class="li step stepexpand">
+        <span class="ph cmd">Click <strong class="ph b">File &gt; New &gt; Other</strong>. The <span class="ph uicontrol">New Project</span> dialog
+          box appears.</span>
+        <div class="itemgroup info">
+          <br /><img class="image" src="../images/newproject_library.png" /><br />
+        </div>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Expand <span class="ph uicontrol">Xilinx</span> and select <span class="ph uicontrol">Library Project</span>.
+        </span>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Click <span class="ph uicontrol">Next</span>. The <span class="ph uicontrol">New Library Project</span>
+          wizard appears.</span>
+      </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Type a project name into the <strong class="ph b">Project Name</strong> field.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select the location for the project. You can use the default location as
+                    displayed in the <strong class="ph b">Location</strong> field by leaving the <strong class="ph b">Use default
+                        location</strong> check box selected. Otherwise, click the check box and type or
+                    browse to the directory location.</span>
+            </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">The <span class="ph uicontrol">Library Type</span> drop-down allows you to select the supported
+          library types. You can choose to create a <span class="ph uicontrol">Shared Library</span> or a
+            <span class="ph uicontrol">Static Library</span> project. The table below lists the flags set by
+          the tool during the library project creation.</span>
+<div class="itemgroup info">
+          
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="sdk_t_create_new_appln__table_xtg_kft_fx" class="table" frame="border" border="1" rules="all"><colgroup><col style="width:11.11111111111111%" /><col style="width:11.11111111111111%" /><col style="width:11.11111111111111%" /><col style="width:11.11111111111111%" /><col style="width:11.11111111111111%" /><col style="width:11.11111111111111%" /><col style="width:11.11111111111111%" /><col style="width:11.11111111111111%" /><col style="width:11.11111111111111%" /></colgroup><thead class="thead" style="text-align:left;">
+                <tr>
+                  <th class="entry nocellnorowborder" rowspan="2" colspan="2" id="d46267e145"> </th>
+
+                  <th class="entry nocellnorowborder" colspan="3" id="d46267e147">Standalone</th>
+
+                  <th class="entry cell-norowborder" colspan="4" id="d46267e150">Linux</th>
+
+                </tr>
+
+                <tr>
+                  <th class="entry nocellnorowborder" colspan="3" id="d46267e156">Static Library</th>
+
+                  <th class="entry nocellnorowborder" colspan="2" id="d46267e159">Static Library</th>
+
+                  <th class="entry cell-norowborder" colspan="2" id="d46267e162">Shared Library</th>
+
+                </tr>
+
+              
+                <tr>
+                  <th class="entry nocellnorowborder" id="d46267e168">Processor</th>
+
+                  <th class="entry nocellnorowborder" id="d46267e171">Toolchain</th>
+
+                  <th class="entry nocellnorowborder" id="d46267e174">Extra Compiler Flags</th>
+
+                  <th class="entry nocellnorowborder" id="d46267e177">Archiver Flags</th>
+
+                  <th class="entry nocellnorowborder" id="d46267e180">Extra Linker Flags</th>
+
+                  <th class="entry nocellnorowborder" id="d46267e184">Extra Compiler Flags</th>
+
+                  <th class="entry nocellnorowborder" id="d46267e187">Archiver Flags</th>
+
+                  <th class="entry nocellnorowborder" id="d46267e190">Extra Compiler Flags</th>
+
+                  <th class="entry cell-norowborder" id="d46267e193">Extra Linker Flags</th>
+
+                </tr>
+
+              </thead>
+<tbody class="tbody">                
+                <tr>
+                  <td class="entry nocellnorowborder" headers="d46267e145 d46267e168 ">A9</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e145 d46267e171 ">Linaro</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e147 d46267e156 d46267e174 ">"-mcpu=cortex-A9 -mfpu=vfpv3 -mfloat-abi=hard"</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e147 d46267e156 d46267e177 ">None</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e147 d46267e156 d46267e180 ">None</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e150 d46267e159 d46267e184 ">"--static"</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e150 d46267e159 d46267e187 ">None</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e150 d46267e162 d46267e190 ">"-fPIC"</td>
+
+                  <td class="entry cell-norowborder" headers="d46267e150 d46267e162 d46267e193 ">"-shared"</td>
+
+                </tr>
+
+                <tr>
+                  <td class="entry nocellnorowborder" headers="d46267e145 d46267e168 ">A9</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e145 d46267e171 ">Code Sourcery</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e147 d46267e156 d46267e174 ">None</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e147 d46267e156 d46267e177 ">None</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e147 d46267e156 d46267e180 ">None</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e150 d46267e159 d46267e184 ">"--static"</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e150 d46267e159 d46267e187 ">None</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e150 d46267e162 d46267e190 ">"-fPIC"</td>
+
+                  <td class="entry cell-norowborder" headers="d46267e150 d46267e162 d46267e193 ">"-shared"</td>
+
+                </tr>
+
+                <tr>
+                  <td class="entry nocellnorowborder" headers="d46267e145 d46267e168 ">A53</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e145 d46267e171 ">Linaro</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e147 d46267e156 d46267e174 ">None</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e147 d46267e156 d46267e177 ">None</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e147 d46267e156 d46267e180 ">None</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e150 d46267e159 d46267e184 ">"--static"</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e150 d46267e159 d46267e187 ">None</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e150 d46267e162 d46267e190 ">"-fPIC"</td>
+
+                  <td class="entry cell-norowborder" headers="d46267e150 d46267e162 d46267e193 ">"-shared"</td>
+
+                </tr>
+
+                <tr>
+                  <td class="entry nocellnorowborder" headers="d46267e145 d46267e168 ">A53-32 Bit</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e145 d46267e171 ">Linaro</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e147 d46267e156 d46267e174 ">"-march=armv7-a"</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e147 d46267e156 d46267e177 ">None</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e147 d46267e156 d46267e180 ">None</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e150 d46267e159 d46267e184 ">"--static"</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e150 d46267e159 d46267e187 ">None</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e150 d46267e162 d46267e190 ">"-fPIC"</td>
+
+                  <td class="entry cell-norowborder" headers="d46267e150 d46267e162 d46267e193 ">"-shared"</td>
+
+                </tr>
+
+                <tr>
+                  <td class="entry nocellnorowborder" headers="d46267e145 d46267e168 ">R5</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e145 d46267e171 ">Linaro</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e147 d46267e156 d46267e174 ">"-mcpu=cortex-r5"</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e147 d46267e156 d46267e177 ">None</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e147 d46267e156 d46267e180 ">None</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e150 d46267e159 d46267e184 ">NA</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e150 d46267e159 d46267e187 ">NA</td>
+
+                  <td class="entry nocellnorowborder" headers="d46267e150 d46267e162 d46267e190 ">NA</td>
+
+                  <td class="entry cell-norowborder" headers="d46267e150 d46267e162 d46267e193 ">NA</td>
+
+                </tr>
+
+                <tr>
+                  <td class="entry row-nocellborder" headers="d46267e145 d46267e168 ">MicroBlaze™</td>
+
+                  <td class="entry row-nocellborder" headers="d46267e145 d46267e171 ">Xilinx®</td>
+
+                  <td class="entry row-nocellborder" headers="d46267e147 d46267e156 d46267e174 ">"-mcpu=v9.5 -mlittle-endian -mno-xl-soft-mul -mxl-barrel-shift
+                    -mxl-pattern-compare"</td>
+
+                  <td class="entry row-nocellborder" headers="d46267e147 d46267e156 d46267e177 ">"-mlittle-endian"</td>
+
+                  <td class="entry row-nocellborder" headers="d46267e147 d46267e156 d46267e180 ">None</td>
+
+                  <td class="entry row-nocellborder" headers="d46267e150 d46267e159 d46267e184 ">"--static"</td>
+
+                  <td class="entry row-nocellborder" headers="d46267e150 d46267e159 d46267e187 ">None</td>
+
+                  <td class="entry row-nocellborder" headers="d46267e150 d46267e162 d46267e190 ">"-fPIC"</td>
+
+                  <td class="entry cellrowborder" headers="d46267e150 d46267e162 d46267e193 ">"-shared"</td>
+
+                </tr>
+
+              </tbody>
+</table>
+</div>
+
+        </div>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">The <strong class="ph b">OS Platform</strong> allows you to select which operating system you will be writing
+          code for. The supported OS platforms are listed in the table below:</span>
+        
+<table border="1" frame="hsides" rules="rows" cellpadding="4" cellspacing="0" summary="" class="simpletable choicetable choicetableborder" id="sdk_t_create_new_appln__choicetable_bxk_k2t_fx">
+<col style="width:17.98561151079137%" /><col style="width:82.01438848920863%" /><thead><tr class="sthead chhead"><th class="stentry choptionhd" style="vertical-align:bottom;text-align:left;" id="d46267e400-option">Option</th>
+<th class="stentry chdeschd" style="vertical-align:bottom;text-align:left;" id="d46267e400-desc">Description</th></tr></thead>
+<tbody><tr class="strow chrow">
+            <th style="vertical-align:top;" headers="d46267e400-option" id="d46267e404" class="stentry choption">Linux</th>
+
+            <td style="vertical-align:top;" headers="d46267e400-desc d46267e404" class="stentry chdesc">Shared libraries can be created only on the Linux OS platform. </td>
+
+          </tr>
+<tr class="strow chrow">
+            <th style="vertical-align:top;" headers="d46267e400-option" id="d46267e413" class="stentry choption">Standalone</th>
+
+            <td style="vertical-align:top;" headers="d46267e400-desc d46267e413" class="stentry chdesc">Select this option if you plan to create a library for FreeRtos.</td>
+
+          </tr>
+</tbody></table>
+
+      </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">From the <strong class="ph b">Processor</strong> drop-down list, select the processor for which you
+                    want to build the application. This is an important step when there are multiple
+                    processors in your design such as any Zynq® PS.</span>
+            </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Compiler type is 32-bit for all the processors except the
+            <span class="ph uicontrol">psu_cortexa53</span> processor. You can also specify extra compiler
+          settings under <span class="ph menucascade"><span class="ph uicontrol">Advanced</span> &gt; <span class="ph uicontrol">Extra Compiler Flags</span></span> on the wizard page.</span>
+      </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select your preferred language: <strong class="ph b">C</strong>or <strong class="ph b">C++</strong>.</span>
+            </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Click <strong class="ph b">Finish</strong> to create your library project .</span>
+        <div class="itemgroup info">
+          <div class="note note"><span class="notetitle">Note:</span> For MicroBlaze™ processor based projects, Xilinx SDK does not support any option to
+            specify a hardware. You should specify the compiler options in the <span class="ph uicontrol">Extra
+              Compiler Flags</span> based on you hardware.</div>
+
+        </div>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">You can now add your source files, write exposed APIs in the header files, update
+          compiler settings and build the project to generate a library. Depending on the library
+          type selected in during the creation of the library project, a shared library
+            (<span class="ph filepath">&lt;library_name&gt;.so</span>)  or a static library
+            (<span class="ph filepath">&lt;library_name&gt;.a</span>) is generated. </span>
+      </li>
+</ol>
+
+</div>
+</article></main></div>
+                        
+                        <div class=" wh_related_links "><nav role="navigation" class="related-links"><div class="linklist linklist relinfo relconcepts"><strong>Related concepts</strong><br /><div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/sdk_c_projects.html" title="SDK Application Projects">SDK Application Projects</a></div><div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_autosyncofswprojects.html" title="Auto-Synchronizing Software Projects">Auto-Synchronizing Software Projects</a></div><div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/sdk_c_project_filtering.html" title="Filtering Projects">Filtering Projects</a></div><div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/sdk_c_build.html" title="Building Projects">Building Projects</a></div><div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/sdk_c_over_dbg.html" title="Debugging Projects">Debugging Projects</a></div><div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/sdk_c_over_run.html" title="Running Projects">Running Projects</a></div><div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/sdk_o_share.html" title="Sharing and Archiving Software Projects">Sharing and Archiving Software Projects</a></div></div><div class="linklist linklist relinfo reltasks"><strong>Related tasks</strong><br /><div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/Using_custom_libraries.html" title="Using Custom Libraries in Application Projects">Using Custom Libraries in Application Projects</a></div><div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_create_zynq_boot_image.html" title="Creating a Zynq Boot Image for an Application">Creating a Zynq Boot Image for an Application</a></div><div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_retarget_another_project.html" title="Re-Targeting a Software Project">Re-Targeting a Software Project</a></div></div></nav></div>
+                        
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div> <nav class="navbar navbar-default wh_footer">
+  <div class=" footer-container text-center ">
+    &copy; Copyright 2019 Xilinx Inc.
+  </div>
+</nav>
+ <!-- Latest compiled and minified JavaScript -->
+        <script src="../oxygen-webhelp/resources/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="../oxygen-webhelp/template/resources/js/wt_default.js" type="text/javascript"></script>
+        <!-- Expand/collapse support -->
+        <script src="../oxygen-webhelp/template/resources/js/wt_expand.js" type="text/javascript"></script>
+        
+    </body>
+</html>

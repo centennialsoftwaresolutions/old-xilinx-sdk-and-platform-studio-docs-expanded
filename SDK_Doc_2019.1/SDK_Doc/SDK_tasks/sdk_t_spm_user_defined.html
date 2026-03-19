@@ -1,0 +1,240 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" xml:lang="en" lang="en">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="description" content="SDK provides the capability to monitor a running target regardless of the target operating system. Note: If no ATG is configured in the Hardware, the ATG Configuration window will be empty. Make sure ..." /><meta name="copyright" content="(C) Copyright 2019" /><meta name="DC.rights.owner" content="(C) Copyright 2019" /><meta name="DC.Type" content="task" /><meta name="DC.Title" content="System Performance Modeling Using a User-Defined Flow" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_userdefinedflow.html" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.tutorial" /><meta name="dictionary_reference" content="com.ibm.eou.tmtool.domainDictionary.core" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.cshelp" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.messaging" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.taxonomyContributions" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.troubleshooting" /><meta name="vis_node" content="com.ibm.ut.ditamap.domainDictionary.dita.concept" /><meta name="vis_labels" content="com.ibm.eou.tmtool.domainAttribute.core.name" /><meta name="vis_zoom" content="2" /><meta name="vis_view" content="com.ibm.eou.tmtool.representation.outline" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="sdk_t_spm_user_defined" /><meta name="DC.Language" content="en" /><title>System Performance Modeling Using a User-Defined Flow</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style type="text/css">
+		<!--
+		BODY { 
+		  margin: 0px; 
+		}
+		-->
+		<!--
+		img.banner{ 
+		width: 550px;
+		height: 106px;
+		background-image: url('./oxygen-webhelp/template/resources/images/sdsoc_header.png');
+		background-repeat:no-repeat;
+		text-align: left;
+		}
+		@media (max-width: 100em) {
+		img.banner {
+		visibility:hidden;
+		}
+		} -->
+		</style>			
+      <script>
+          function debug(msg, object){
+              console.log(msg, object);
+          }
+          function executeQuery(){
+              $('#searchForm').submit();
+              return true;
+          }
+      </script>
+      
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css" />
+          
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_responsive_topic.css" />
+          
+        <!-- Latest compiled and minified Bootstrap CSS -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/bootstrap/css/bootstrap.min.css" />
+
+        <!-- Bootstrap Optional theme -->
+        <link rel="stylesheet" href="../oxygen-webhelp/resources/bootstrap/css/bootstrap-theme.min.css" />
+
+        <!-- Changes and comments, as side-notes  -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/p-side-notes.css" />
+
+
+        <!-- Template default styles  -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/resources/css/wt_default.css" />
+        
+        <!-- Expand-collapse support styles  -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/resources/css/wt_expand.css" />
+        
+
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/localization/strings.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/localization.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/parseuri.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script>
+        <!-- Skin resources -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/variants/tree/SDK/skin.css" />
+        <!-- EXM-36950 - Expand the args.hdf parameter here -->
+        
+        
+    </head>
+
+    <body onload="highlightSearchTerm()" class="wh_topic_page frmBody" id="sdk_t_spm_user_defined">
+        <!-- EXM-36950 - Expand the args.hdr parameter here -->
+        
+        
+        <!-- &header; -->
+		<div class="top_header">
+		<div class=" wh_publication_title "><a href="../index.html"><span class="title">Using Xilinx SDK</span></a></div></div> 		
+        <hr />			
+        <div class=" wh_search_input "><form id="searchForm" method="get" action="../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" /><button type="submit" class="wh_search_button"><span>Search</span></button></div></form></div>
+      
+        <div class="container">
+            <div class="row">
+
+                <nav class="wh_tools hidden-print">
+                    <div class=" wh_breadcrumb "><ol class="hidden-print"><li><span class="home"><a href="../index.html"><span>Home</span></a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_performance_analysis.html">Performance Analysis</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_spm_over_spm.html">System Performance Modeling</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_userdefinedflow.html">User Defined Flow</a></span></li><li class="active"><span class="topicref">System Performance Modeling Using a User-Defined Flow</span></li></ol></div>
+
+                    <div class="wh_right_tools hidden-sm hidden-xs">
+                        <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  </span></div>
+						<!--<a href="javascript:var url = window.location.toString();window.location = url.replace(/www.xilinx.com/, 'japan.xilinx.com');" title="View page in Japanese" class="glyphicon glyphicon-globe"></a>-->
+                        <div class=" wh_print_link print "><a href="javascript:window.print();" title="Print this page"></a></div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="wh_content_area">
+					<div class="row">
+                    <nav role="navigation" class="col-lg-4 col-md-4 col-sm-4 col-xs-12 navbar" id="wh_side_toc">
+                        <div class=" wh_side_toc "><ul class="hidden-print"><li><span class="topicref"><a href="../sdk_getting_started/sdk_getting_started.html#sdk_getting_started">Getting Started with Xilinx SDK</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_hwcomponents.html">Embedded Hardware Components</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_hwspec.html">Hardware Platform Specification</a></span></li><li><span class="topicref"><a href="../SDK_tasks/sdk_o_project_creation.html">Working with Projects</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_bsp_internal.html">Board Support Packages (SDK)</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_Xilinxsystemdebugger.html">Working with XSDB</a></span></li><li><span class="topicref"><a href="../xsct/intro/xsct_introduction.html">Working with XSCT</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_over_profile.html">Software Profiling</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_performance_analysis.html">Performance Analysis</a></span><ul class="nav nav-list"><li><span class="topicref"><a href="../SDK_concepts/concept_working_with_performance_analysis_perspective.html">Working with Performance Analysis Perspective</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_spm_over_spm.html">System Performance Modeling</a></span><ul class="nav nav-list"><li><span class="topicref"><a href="../SDK_concepts/concept_sdkpredefineddesignflow.html">Xilinx SDK Predefined Design Flow</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_userdefinedflow.html">User Defined Flow</a></span><ul class="nav nav-list"><li class="active"><span class="topicref">System Performance Modeling Using a User-Defined Flow</span></li></ul></li><li><span class="topicref"><a href="../SDK_concepts/concept_spmlimitations.html">Limitations</a></span></li></ul></li></ul></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_whatsnew.html">What’s New in Xilinx SDK v2019.1</a></span></li><li><span class="topicref"><a href="../SDK_references/reference_limitations_faqs.html">Limitations, Known Issues and FAQs</a></span></li><li><span class="topicref"><a href="../design_hub/reference_sdk_user_guides_pdf.html">Learn More About SDK</a></span></li><li><span class="topicref"><a href="../book/SDK_book_legal.html">Please Read: Important Legal Notices</a></span></li></ul></div>
+                    </nav> 					
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="sdk_t_spm_user_defined__cx433578">
+
+<h1 class="title topictitle1" id="sdk_t_spm_user_defined__cx433578">System Performance Modeling Using a User-Defined
+Flow</h1>
+
+<div class="body taskbody"><section class="section context">
+<p class="p">SDK provides the capability to monitor a running target regardless of the target operating system. </p>
+
+<div class="note note"><span class="notetitle">Note:</span> If no ATG is configured in the Hardware, the ATG Configuration window
+    will be empty. Make sure to remove the Breakpoints by selecting <span class="ph menucascade"><span class="ph uicontrol">Window</span> &gt; <span class="ph uicontrol">Show View</span> &gt; <span class="ph uicontrol">Breakpoints</span></span>.</div>
+
+</section>
+
+    <ol class="ol steps"><li class="li step">
+            <span class="ph cmd">If your design is defined in Vivado® Design Suite, then it is recommended to create a platform specification based on the design. To do performance analysis based on the specification:</span>
+            <ol type="a" class="ol substeps">
+                <li class="li substep">
+                    <span class="ph cmd">Build and export your bitstream using <span class="ph menucascade"><span class="ph uicontrol">File</span> &gt; <span class="ph uicontrol">Export</span> &gt; <span class="ph uicontrol">Export Hardware</span></span> in Vivado Design Suite.</span>
+                </li>
+
+                <li class="li substep">
+                    <span class="ph cmd">Expand <span class="ph uicontrol">Xilinx</span> and select <span class="ph uicontrol">Hardware Platform Specification</span> and import the generated file <span class="ph filepath">&lt;your design&gt;.hdf</span> into SDK.</span>
+                </li>
+
+                <li class="li substep">
+                        <span class="ph cmd">Select <span class="ph menucascade"><span class="ph uicontrol">Run</span> &gt; <span class="ph uicontrol">Run Configurations</span></span>.</span>
+                    </li>
+
+                <li class="li substep">
+                    <span class="ph cmd">Select <span class="ph uicontrol">Performance Analysis</span> and click the <span class="ph uicontrol">New</span> button to create a performance analysis configuration.</span>
+                </li>
+
+                <li class="li substep">
+                    <span class="ph cmd">Select <span class="ph uicontrol">Standalone Application Debug</span> from the <span class="ph uicontrol">Debug Type</span> dropdown list.</span>
+                </li>
+ 
+            <li class="li substep">
+                <span class="ph cmd">Select the imported hardware platform specification from the <span class="ph uicontrol">Hardware platform</span> dropdown list.</span>
+            </li>
+
+                    <li class="li substep">
+                        <span class="ph cmd">Select the <span class="ph uicontrol">Reset entire system</span> and <span class="ph uicontrol">Program FPGA</span> check boxes.</span>
+                    </li>
+
+                <li class="li substep">
+                        <span class="ph cmd">Click on <span class="ph uicontrol">Run</span> to launch the <span class="ph uicontrol">Performance Analysis</span> perspective.</span>
+                    </li>
+
+                
+            </ol>
+
+        </li>
+<li class="li step">
+            <span class="ph cmd">For any reason, if you cannot create a hardware platform specification, or do not have one, you can still do performance analysis in SDK. To do performance analysis in absence of the specification:</span>
+            <ol type="a" class="ol substeps">
+                <li class="li substep">
+                        <span class="ph cmd">Select <span class="ph menucascade"><span class="ph uicontrol">Run</span> &gt; <span class="ph uicontrol">Run Configurations</span></span>.</span>
+                    </li>
+
+                <li class="li substep">
+                    <span class="ph cmd">Select <span class="ph uicontrol">Performance Analysis</span> and click the <span class="ph uicontrol">New</span> button to create a performance analysis configuration.</span>
+                </li>
+
+                <li class="li substep">
+                    <span class="ph cmd">Select <span class="ph uicontrol">Attach to running target</span> from the <span class="ph uicontrol">Debug Type</span> dropdown list.</span>
+                </li>
+ 
+                <li class="li substep">
+                    <span class="ph cmd">Specify the PS clock frequency in the <span class="ph uicontrol">PS Processor Frequency(MHz)</span> textbox. </span>
+                </li>
+
+                <li class="li substep">
+                    <span class="ph cmd">If you have an APM in your design, select <span class="ph uicontrol">Enable APM Counters</span>.</span>
+                </li>
+
+                <li class="li substep">
+                        <span class="ph cmd">Click <span class="ph uicontrol">Edit</span> to specify the hardware information of the APM, to be used for performance analysis, in the <span class="ph uicontrol">APM Hardware Information</span> dialog box.</span>
+                        
+                            <ol class="ol" type="i">
+                                <li class="li">Click the <span class="ph uicontrol">New</span> icon to add a new row.</li>
+
+                                <li class="li">Specify a unnique identifier in the <span class="ph uicontrol">APM Id</span> column.</li>
+
+                                <li class="li">Specify the base address of the APM in the <span class="ph uicontrol">Base Address</span> column.</li>
+
+                                <li class="li">Specify the frequency of the clock connected to <span class="keyword apiname">s_axi_aclk</span> in the <span class="ph uicontrol">Frequency(Hz)</span> column.</li>
+
+                                <li class="li">Specify the number of slots in the <span class="ph uicontrol">Slots Count</span> column.</li>
+
+                                <li class="li">Click <span class="ph uicontrol">OK</span> to save the details and close the <span class="ph uicontrol">APM Hardware Information</span> dialog box. </li>
+
+                            </ol>
+
+                        
+                    </li>
+
+                
+                
+                <li class="li substep">
+                        <span class="ph cmd">Click <span class="ph uicontrol">Edit</span> to select the APM ports or slots that should be enabled for performance analysis, in the <span class="ph uicontrol">Configure APM</span> dialog box.</span>
+                    </li>
+
+                    <li class="li substep">
+                        <span class="ph cmd">Click <span class="ph uicontrol">OK</span> to save the details and close the <span class="ph uicontrol">Configure APM</span> dialog box. </span>
+                    </li>
+               
+                <li class="li substep">
+                        <span class="ph cmd">Click <span class="ph uicontrol">Run </span> to open the <span class="ph uicontrol">Performance Analysis</span> perspective. </span>
+                    </li>
+
+            </ol>
+
+        </li>
+</ol>
+
+</div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div> <nav class="navbar navbar-default wh_footer">
+  <div class=" footer-container text-center ">
+    &copy; Copyright 2019 Xilinx Inc.
+  </div>
+</nav>
+ <!-- Latest compiled and minified JavaScript -->
+        <script src="../oxygen-webhelp/resources/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="../oxygen-webhelp/template/resources/js/wt_default.js" type="text/javascript"></script>
+        <!-- Expand/collapse support -->
+        <script src="../oxygen-webhelp/template/resources/js/wt_expand.js" type="text/javascript"></script>
+        
+    </body>
+</html>
