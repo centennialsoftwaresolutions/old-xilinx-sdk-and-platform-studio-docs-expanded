@@ -1,0 +1,180 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" xml:lang="en" lang="en">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="description" content="A Board Support Package (BSP) is a collection of drivers customized to the provided hardware description. Every application must be associated with a BSP. Multiple BSPs may exist in a workspace and ..." /><meta name="copyright" content="(C) Copyright 2018" /><meta name="DC.rights.owner" content="(C) Copyright 2018" /><meta name="DC.Type" content="task" /><meta name="DC.Title" content="Creating a Board Support Package (SDK)" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/sdk_c_bsp_internal.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_config_bsp_internal.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_build_bsp_internal.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_otherlibraries.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/sdk_c_bsp_external.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_view_bsp.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_retarget.html" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.tutorial" /><meta name="dictionary_reference" content="com.ibm.eou.tmtool.domainDictionary.core" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.cshelp" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.messaging" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.taxonomyContributions" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.troubleshooting" /><meta name="vis_node" content="com.ibm.ut.ditamap.domainDictionary.dita.concept" /><meta name="vis_labels" content="com.ibm.eou.tmtool.domainAttribute.core.name" /><meta name="vis_zoom" content="2" /><meta name="vis_view" content="com.ibm.eou.tmtool.representation.outline" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="sdk_t_create_bsp_internal" /><meta name="DC.Language" content="en" /><title>Creating a Board Support Package (SDK)</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style type="text/css">
+		<!--
+		BODY { 
+		  margin: 0px; 
+		}
+		-->
+		<!--
+		img.banner{ 
+		width: 550px;
+		height: 106px;
+		background-image: url('./oxygen-webhelp/template/resources/images/sdsoc_header.png');
+		background-repeat:no-repeat;
+		text-align: left;
+		}
+		@media (max-width: 100em) {
+		img.banner {
+		visibility:hidden;
+		}
+		} -->
+		</style>			
+      <script>
+          function debug(msg, object){
+              console.log(msg, object);
+          }
+          function executeQuery(){
+              $('#searchForm').submit();
+              return true;
+          }
+      </script>
+      
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css" />
+          
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_responsive_topic.css" />
+          
+        <!-- Latest compiled and minified Bootstrap CSS -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/bootstrap/css/bootstrap.min.css" />
+
+        <!-- Bootstrap Optional theme -->
+        <link rel="stylesheet" href="../oxygen-webhelp/resources/bootstrap/css/bootstrap-theme.min.css" />
+
+        <!-- Changes and comments, as side-notes  -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/p-side-notes.css" />
+
+
+        <!-- Template default styles  -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/resources/css/wt_default.css" />
+        
+        <!-- Expand-collapse support styles  -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/resources/css/wt_expand.css" />
+        
+
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/localization/strings.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/localization.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/parseuri.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script>
+        <!-- Skin resources -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/variants/tree/SDK/skin.css" />
+        <!-- EXM-36950 - Expand the args.hdf parameter here -->
+        
+        
+    </head>
+
+    <body onload="highlightSearchTerm()" class="wh_topic_page frmBody" id="sdk_t_create_bsp_internal">
+        <!-- EXM-36950 - Expand the args.hdr parameter here -->
+        
+        
+        <!-- &header; -->
+		<div class="top_header">
+		<div class=" wh_publication_title "><a href="../index.html"><span class="title">Using Xilinx SDK</span></a></div></div> 		
+        <hr />			
+        <div class=" wh_search_input "><form id="searchForm" method="get" action="../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" /><button type="submit" class="wh_search_button"><span>Search</span></button></div></form></div>
+      
+        <div class="container">
+            <div class="row">
+
+                <nav class="wh_tools hidden-print">
+                    <div class=" wh_breadcrumb "><ol class="hidden-print"><li><span class="home"><a href="../index.html"><span>Home</span></a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_bsp_internal.html">Board Support Packages (SDK)</a></span></li><li class="active"><span class="topicref">Creating a Board Support Package (SDK)</span></li></ol></div>
+
+                    <div class="wh_right_tools hidden-sm hidden-xs">
+                        <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  </span></div>
+						<!--<a href="javascript:var url = window.location.toString();window.location = url.replace(/www.xilinx.com/, 'japan.xilinx.com');" title="View page in Japanese" class="glyphicon glyphicon-globe"></a>-->
+                        <div class=" wh_print_link print "><a href="javascript:window.print();" title="Print this page"></a></div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="wh_content_area">
+					<div class="row">
+                    <nav role="navigation" class="col-lg-4 col-md-4 col-sm-4 col-xs-12 navbar" id="wh_side_toc">
+                        <div class=" wh_side_toc "><ul class="hidden-print"><li><span class="topicref"><a href="../sdk_getting_started/sdk_getting_started.html#sdk_getting_started">Getting Started with Xilinx SDK</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_hwcomponents.html">Embedded Hardware Components</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_hwspec.html">Hardware Platform Specification</a></span></li><li><span class="topicref"><a href="../SDK_tasks/sdk_o_project_creation.html">Working with Projects</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_bsp_internal.html">Board Support Packages (SDK)</a></span><ul class="nav nav-list"><li class="active"><span class="topicref">Creating a Board Support Package (SDK)</span></li><li><span class="topicref"><a href="../SDK_tasks/sdk_t_config_bsp_internal.html">Configuring a Board Support Package (SDK)</a></span></li><li><span class="topicref"><a href="../SDK_tasks/sdk_t_build_bsp_internal.html">Building a Board Support Package for SDK</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_otherlibraries.html">Supported Libraries</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_bsp_external.html">Board Support Packages (External Tools)</a></span></li><li><span class="topicref"><a href="../SDK_tasks/sdk_t_view_bsp.html">Viewing a Board Support Package</a></span></li><li><span class="topicref"><a href="../SDK_tasks/sdk_t_retarget.html">Re-Targeting A BSP for a New Hardware Platform</a></span></li></ul></li><li><span class="topicref"><a href="../SDK_concepts/concept_Xilinxsystemdebugger.html">Working with XSDB</a></span></li><li><span class="topicref"><a href="../xsct/intro/xsct_introduction.html">Working with XSCT</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_over_profile.html">Software Profiling</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_performance_analysis.html">Performance Analysis</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_whatsnew.html">What’s New in Xilinx SDK v2018.2</a></span></li><li><span class="topicref"><a href="../SDK_references/reference_limitations_faqs.html">Limitations, Known Issues and FAQs</a></span></li><li><span class="topicref"><a href="../book/SDK_book_legal.html">Please Read: Important Legal Notices</a></span></li></ul></div>
+                    </nav> 					
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="sdk_t_create_bsp_internal__at294539">
+
+<h1 class="title topictitle1" id="sdk_t_create_bsp_internal__at294539">Creating a Board Support Package (SDK)</h1>
+
+<div class="body taskbody"><section class="section context">
+            <p class="p" id="sdk_t_create_bsp_internal__p_wqt_41y_cr">A Board Support Package (BSP) is a collection of drivers customized
+                to the provided hardware description. Every application must be associated with a
+                BSP. Multiple BSPs may exist in a workspace and support a single hardware
+                description.</p>
+
+            <p class="p" id="sdk_t_create_bsp_internal__p_nx1_t1y_cr">Often BSPs are created when an Application is created. Sometimes,
+                however, a BSP with different settings targeting the same hardware platform may be
+                needed.</p>
+
+<p class="p">To create a new board support package for application development in
+SDK, do the following:</p>
+
+</section>
+<ol class="ol steps"><li class="li step stepexpand"><span class="ph cmd">Click <strong class="ph b">File &gt; New &gt; Board Support Package. </strong>If no hardware
+platform exists in your workspace, the following message opens.</span>
+<div class="itemgroup info"><br /><img class="image" src="../images/sdk_t_create_bsp_internal-1.png" height="175" width="545" /><br /></div>
+</li>
+<li class="li step stepexpand"><span class="ph cmd">Click <strong class="ph b">Specify</strong> to create a new Hardware Platform Specification. For details about
+                    creating a new Hardware Platform Specification , see <a class="xref" href="sdk_u_new_hardware_platform_spec.html">Creating a New Hardware Platform Specification</a>. </span></li>
+<li class="li step stepexpand"><span class="ph cmd">If there is already a hardware project in your workspace, the New Board Support Project dialog
+                    box appears.</span>
+<div class="itemgroup info"><img class="image" src="../images/sdk_t_create_bsp_internal-2.png" /></div>
+</li>
+<li class="li step stepexpand"><span class="ph cmd">Provide a new name for the BSP in the <strong class="ph b">Project name</strong> field if you wish to override the
+                    default value.</span></li>
+<li class="li step stepexpand"><span class="ph cmd">Select the location for the board support project files. To use the
+default location, as displayed in the <strong class="ph b">Location</strong> field, leave
+the <strong class="ph b">Use default location</strong> check box selected. Otherwise, click
+to unselect the check box, then type or browse to the directory location.</span></li>
+<li class="li step stepexpand"><span class="ph cmd">From the <strong class="ph b">Hardware Platform</strong> drop-down choose the appropriate platform for your
+                    application or click the <strong class="ph b">New</strong> button to browse to an existing Hardware
+                    Platform.</span></li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select the target CPU from the drop-downlist.</span>
+            </li>
+<li class="li step stepexpand"><span class="ph cmd">From the <strong class="ph b">Board Support Package OS</strong> list box, select the type
+of board support package to create. A description of the platform types
+displays in the box below the drop-down list.</span></li>
+<li class="li step stepexpand"><span class="ph cmd">Click <strong class="ph b">Finish.</strong> The wizard creates a new software platform
+and displays it in the SDK Navigator pane.</span></li>
+<li class="li step stepexpand"><span class="ph cmd">Select <strong class="ph b">Project</strong> &gt;<strong class="ph b">Build Automatically</strong> to automatically build the board support
+                    package.</span></li>
+<li class="li step stepexpand">
+                <span class="ph cmd">The Board Support Package Settings dialog box opens. Here you can customize the
+                    settings for the BSP. For details, see <a class="xref" href="task_usingtheboardsupportpackagesettingspage.html">Using the Board Support Package Settings Page</a>.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">OK</strong> to accept the settings, build the BSP, and close the dialog
+                    box.</span>
+            </li>
+</ol>
+
+</div>
+</article></main></div>
+                        
+                        <div class=" wh_related_links "><nav role="navigation" class="related-links"><div class="linklist linklist relinfo relconcepts"><strong>Related concepts</strong><br /><div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_otherlibraries.html" title="Supported Libraries">Supported Libraries</a></div><div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/sdk_c_bsp_external.html" title="Board Support Packages (External Tools)">Board Support Packages (External Tools)</a></div></div><div class="linklist linklist relinfo reltasks"><strong>Related tasks</strong><br /><div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_config_bsp_internal.html" title="Configuring a Board Support Package (SDK)">Configuring a Board Support Package (SDK)</a></div><div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_build_bsp_internal.html" title="Building a Board Support Package for SDK">Building a Board Support Package for SDK</a></div><div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_view_bsp.html" title="Viewing a Board Support Package">Viewing a Board Support Package</a></div><div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_retarget.html" title="Re-Targeting A BSP for a New Hardware Platform">Re-Targeting A BSP for a New Hardware Platform</a></div></div></nav></div>
+                        
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div> <nav class="navbar navbar-default wh_footer">
+  <div class=" footer-container text-center ">Copyright &copy; 2010-2018 Xilinx Inc.<br/>UG782 (v2018.2) 6 June 2018</div>
+</nav>
+ <!-- Latest compiled and minified JavaScript -->
+        <script src="../oxygen-webhelp/resources/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="../oxygen-webhelp/template/resources/js/wt_default.js" type="text/javascript"></script>
+        <!-- Expand/collapse support -->
+        <script src="../oxygen-webhelp/template/resources/js/wt_expand.js" type="text/javascript"></script>
+        
+    </body>
+</html>

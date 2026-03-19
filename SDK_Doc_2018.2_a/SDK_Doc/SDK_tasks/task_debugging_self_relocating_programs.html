@@ -1,0 +1,229 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" xml:lang="en-us" lang="en-us">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />        
+      <meta name="copyright" content="(C) Copyright 2018" /><meta name="DC.rights.owner" content="(C) Copyright 2018" /><meta name="DC.Type" content="task" /><meta name="DC.Title" content="Debugging Self-relocating Programs" /><meta name="abstract" content="" /><meta name="description" content="System debugger supports source level debugging of self-relocating programs, like u-boot. A self-relocating program is a program which relocates its own code and data sections, during run time. The ..." /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_Xilinxsystemdebugger.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_recommend_debug_use.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/sdk_c_debug_run_configuration.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_target_connections.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_tcf_supported_design_flows.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_tcf_multiproc_debugging.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_tcf_remote_debug.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_viewing_mem_contents.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_viewing_IP_register_details.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_osawaredebug.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_xen-aware_debug.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_references/reference_multicable_multidevice.html" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.tutorial" /><meta name="dictionary_reference" content="com.ibm.eou.tmtool.domainDictionary.core" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.cshelp" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.messaging" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.taxonomyContributions" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.troubleshooting" /><meta name="vis_node" content="com.ibm.ut.ditamap.domainDictionary.dita.concept" /><meta name="vis_labels" content="com.ibm.eou.tmtool.domainAttribute.core.name" /><meta name="vis_zoom" content="2" /><meta name="vis_view" content="com.ibm.eou.tmtool.representation.outline" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="task_vsm_jvr_gv" /><title>Debugging Self-relocating Programs</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style type="text/css">
+		<!--
+		BODY { 
+		  margin: 0px; 
+		}
+		-->
+		<!--
+		img.banner{ 
+		width: 550px;
+		height: 106px;
+		background-image: url('./oxygen-webhelp/template/resources/images/sdsoc_header.png');
+		background-repeat:no-repeat;
+		text-align: left;
+		}
+		@media (max-width: 100em) {
+		img.banner {
+		visibility:hidden;
+		}
+		} -->
+		</style>			
+      <script>
+          function debug(msg, object){
+              console.log(msg, object);
+          }
+          function executeQuery(){
+              $('#searchForm').submit();
+              return true;
+          }
+      </script>
+      
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css" />
+          
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_responsive_topic.css" />
+          
+        <!-- Latest compiled and minified Bootstrap CSS -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/bootstrap/css/bootstrap.min.css" />
+
+        <!-- Bootstrap Optional theme -->
+        <link rel="stylesheet" href="../oxygen-webhelp/resources/bootstrap/css/bootstrap-theme.min.css" />
+
+        <!-- Changes and comments, as side-notes  -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/p-side-notes.css" />
+
+
+        <!-- Template default styles  -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/resources/css/wt_default.css" />
+        
+        <!-- Expand-collapse support styles  -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/resources/css/wt_expand.css" />
+        
+
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/localization/strings.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/localization.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/parseuri.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script>
+        <!-- Skin resources -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/variants/tree/SDK/skin.css" />
+        <!-- EXM-36950 - Expand the args.hdf parameter here -->
+        
+        
+    </head>
+
+    <body onload="highlightSearchTerm()" class="wh_topic_page frmBody" id="task_vsm_jvr_gv">
+        <!-- EXM-36950 - Expand the args.hdr parameter here -->
+        
+        
+        <!-- &header; -->
+		<div class="top_header">
+		<div class=" wh_publication_title "><a href="../index.html"><span class="title">Using Xilinx SDK</span></a></div></div> 		
+        <hr />			
+        <div class=" wh_search_input "><form id="searchForm" method="get" action="../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" /><button type="submit" class="wh_search_button"><span>Search</span></button></div></form></div>
+      
+        <div class="container">
+            <div class="row">
+
+                <nav class="wh_tools hidden-print">
+                    <div class=" wh_breadcrumb "><ol class="hidden-print"><li><span class="home"><a href="../index.html"><span>Home</span></a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_Xilinxsystemdebugger.html">Working with XSDB</a></span></li><li class="active"><span class="topicref">Debugging Self-relocating Programs</span></li></ol></div>
+
+                    <div class="wh_right_tools hidden-sm hidden-xs">
+                        <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  </span></div>
+						<!--<a href="javascript:var url = window.location.toString();window.location = url.replace(/www.xilinx.com/, 'japan.xilinx.com');" title="View page in Japanese" class="glyphicon glyphicon-globe"></a>-->
+                        <div class=" wh_print_link print "><a href="javascript:window.print();" title="Print this page"></a></div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="wh_content_area">
+					<div class="row">
+                    <nav role="navigation" class="col-lg-4 col-md-4 col-sm-4 col-xs-12 navbar" id="wh_side_toc">
+                        <div class=" wh_side_toc "><ul class="hidden-print"><li><span class="topicref"><a href="../sdk_getting_started/sdk_getting_started.html#sdk_getting_started">Getting Started with Xilinx SDK</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_hwcomponents.html">Embedded Hardware Components</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_hwspec.html">Hardware Platform Specification</a></span></li><li><span class="topicref"><a href="../SDK_tasks/sdk_o_project_creation.html">Working with Projects</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_bsp_internal.html">Board Support Packages (SDK)</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_Xilinxsystemdebugger.html">Working with XSDB</a></span><ul class="nav nav-list"><li><span class="topicref"><a href="../SDK_tasks/sdk_t_recommend_debug_use.html">Recommended Debugger Usage</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_debug_run_configuration.html">Launch Configurations</a></span></li><li><span class="topicref"><a href="../SDK_tasks/sdk_t_target_connections.html">Target Connections</a></span></li><li><span class="topicref"><a href="../SDK_tasks/sdk_t_tcf_supported_design_flows.html">System Debugger Supported Design Flows</a></span></li><li><span class="topicref"><a href="../SDK_tasks/sdk_t_tcf_multiproc_debugging.html">Multi-Processor Debugging with System Debugger</a></span></li><li><span class="topicref"><a href="../SDK_tasks/sdk_t_tcf_remote_debug.html">Using a Remote Host with System Debugger</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_viewing_mem_contents.html">Viewing Memory Contents</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_viewing_IP_register_details.html">Viewing IP Register Details</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_osawaredebug.html">OS Aware Debugging</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_xen-aware_debug.html">Xen Aware Debugging</a></span></li><li class="active"><span class="topicref">Debugging Self-relocating Programs</span></li><li><span class="topicref"><a href="../SDK_references/reference_multicable_multidevice.html">Multi-Cable and Multi-Device Support</a></span></li></ul></li><li><span class="topicref"><a href="../xsct/intro/xsct_introduction.html">Working with XSCT</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_over_profile.html">Software Profiling</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_performance_analysis.html">Performance Analysis</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_whatsnew.html">What’s New in Xilinx SDK v2018.2</a></span></li><li><span class="topicref"><a href="../SDK_references/reference_limitations_faqs.html">Limitations, Known Issues and FAQs</a></span></li><li><span class="topicref"><a href="../book/SDK_book_legal.html">Please Read: Important Legal Notices</a></span></li></ul></div>
+                    </nav> 					
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Debugging Self-relocating Programs</h1>
+
+    
+    <div class="body taskbody"><p class="shortdesc"></p>
+
+        <section class="section context">
+            <p class="p">System debugger supports source level debugging of self-relocating programs, like u-boot. A self-relocating program is a program which relocates its own code and data sections, during run time. The debug information available in such files doesn't provide details about where the program sections would be relocated to. Due to this reason, you must provide additional information to the debugger, about the address to which program sections will be relocated to. This can be done in two ways.</p>
+
+        </section>
+
+        <ol class="ol steps"><li class="li step stepexpand">
+                <span class="ph cmd">Update the system debugger launch configuration to provide the address to which program sections are relocated.</span>
+                <ol type="a" class="ol substeps" id="task_vsm_jvr_gv__substeps_llw_qvr_gv">
+                    <li class="li substep substepexpand">
+                        <span class="ph cmd">Select <span class="ph menucascade"><span class="ph uicontrol">Run</span> &gt; <span class="ph uicontrol">Debug Configurations</span></span> to launch the system debugger launch configuration.</span>
+                    </li>
+
+                    <li class="li substep substepexpand">
+                        <span class="ph cmd">Click the <span class="ph uicontrol">Application</span> tab and select the application you wish to download.</span>
+                    </li>
+
+                    <li class="li substep substepexpand">
+                        <span class="ph cmd">Select the <span class="ph uicontrol">This is a self-relocating application</span> checkbox. </span>
+                    </li>
+
+                    <li class="li substep substepexpand">
+                        <span class="ph cmd">Enter the address to which all the program sections will be relocated in the <span class="ph uicontrol">Relative address to which the program sections are relocated</span> textbox. </span>
+                        <div class="itemgroup info">
+                            <br /><img class="image" id="task_vsm_jvr_gv__image_uhr_swr_gv" src="../images/debug_self_relocate_program_launchconf.png" height="544" width="1007" /><br />
+                        </div>
+                    </li>
+
+                    <li class="li substep substepexpand">
+                        <span class="ph cmd">Launch the debug configuration. When the program sections are relocated during runtime, the debugger will have enough information to support source level debugging of the relocated sections.</span>
+                        <div class="itemgroup info">
+                            <br /><img class="image" id="task_vsm_jvr_gv__image_uhr_swr_rs" src="../images/debug_self_relocating_prog_debugview.png" height="523" width="671" /><br />
+                        </div>
+                    </li>
+
+                </ol>
+
+                <div class="itemgroup info"><div class="note note"><span class="notetitle">Note:</span> This method is supported only when the 'Debug Type' is set to 'Standalone' in the 'Target Setup' tab of the debug configuration.</div>
+</div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Alternatively, you can also use the <span class="keyword cmdname">memmap</span> command in XSDB to provide the address to which the program sections are relocated. <span class="keyword cmdname">memmap</span> command in XSDB can be used to add symbol files to the debugger. This is useful for debuggin the applications which are already running on the target. For example, boot from flash. In case of relocatable <span class="ph filepath">.ELF</span> files, you can use the <span class="keyword cmdname">-relocate-section-map</span> option, to provide the relocate address.</span>
+                <div class="itemgroup info">
+                    <pre class="pre codeblock"><code>xsdb% targets 2
+ 1 APU
+   2 ARM Cortex-A9 MPCore #0 (Suspended)
+   3 ARM Cortex-A9 MPCore #1 (Suspended)
+ 4 xc7z020
+xsdb% targets 2
+xsdb% memmap -reloc 0x3bf37000 -file u-boot
+
+xsdb% stop
+Info: ARM Cortex-A9 MPCore #0 (target 2) Stopped at 0x3ff7b478 (Suspended)
+xsdb% bt
+ 0 0x3ff7b478 __udelay()+1005809800: lib/time.c, line 91
+ 1 0x3ff7b4ac udelay()+1005809696: lib/time.c, line 104
+ 2 0x3ff5d878 genphy_update_link()+1005809860: drivers/net/phy/phy.c, line 250
+ 3 0x3ff5df84 m88e1118_startup()+1005809712: drivers/net/phy/marvell.c, line 356
+ 4 0x3ff5d154 zynq_gem_init()+1005810192: drivers/net/zynq_gem.c, line 402
+ 5 0x3ff7dc58 eth_init()+1005809720: net/eth.c, line 886
+ 6 0x3ff7e0e4 net_loop()+1005809728: net/net.c, line 407
+ 7 0x3ff46330 netboot_common()+1005809972: common/cmd_net.c, line 230
+ 8 0x3ff46520 do_tftpb()+1005809708: common/cmd_net.c, line 33
+ 9 0x3ff5295c cmd_process()+1005809824: common/command.c, line 493
+ 10 0x3ff5295c cmd_process()+1005809824: common/command.c, line 493
+ 11 0x3ff3b710 run_list_real()+1005811444: common/cli_hush.c, line 1656
+ 12 0x3ff3b710 run_list_real()+1005811444: common/cli_hush.c, line 1656
+ 13 0x3ff3be3c parse_stream_outer()+1005811244: common/cli_hush.c, line 2003
+ 14 0x3ff3be3c parse_stream_outer()+1005811244: common/cli_hush.c, line 2003
+ 15 0x3ff3b008 parse_string_outer()+1005809872: common/cli_hush.c, line 3254
+ 16 0x3ff3b6b8 run_list_real()+1005811356: common/cli_hush.c, line 1617
+ 17 0x3ff3b6b8 run_list_real()+1005811356: common/cli_hush.c, line 1617
+ 18 0x3ff3be3c parse_stream_outer()+1005811244: common/cli_hush.c, line 2003
+ 19 0x3ff3be3c parse_stream_outer()+1005811244: common/cli_hush.c, line 2003
+ 20 0x3ff3afd0 parse_string_outer()+1005809816: common/cli_hush.c, line 3248
+ 21 0x3ff5140c do_run()+1005809740: common/cli.c, line 131
+ 22 0x3ff5295c cmd_process()+1005809824: common/command.c, line 493
+ 23 0x3ff5295c cmd_process()+1005809824: common/command.c, line 493
+ 24 0x3ff3b710 run_list_real()+1005811444: common/cli_hush.c, line 1656
+ 25 0x3ff3b710 run_list_real()+1005811444: common/cli_hush.c, line 1656
+ 26 0x3ff3be3c parse_stream_outer()+1005811244: common/cli_hush.c, line 2003
+ 27 0x3ff3be3c parse_stream_outer()+1005811244: common/cli_hush.c, line 2003
+ 28 0x3ff3b008 parse_string_outer()+1005809872: common/cli_hush.c, line 3254
+ 29 0x3ff3b6b8 run_list_real()+1005811356: common/cli_hush.c, line 1617
+ 30 0x3ff3b6b8 run_list_real()+1005811356: common/cli_hush.c, line 1617
+ 31 0x3ff3be3c parse_stream_outer()+1005811244: common/cli_hush.c, line 2003
+ 32 0x3ff3be3c parse_stream_outer()+1005811244: common/cli_hush.c, line 2003
+ 33 0x3ff3afd0 parse_string_outer()+1005809816: common/cli_hush.c, line 3248
+ 34 0x3ff39ab4 main_loop()+1005809724: common/main.c, line 85
+ 35 0x3ff3c4f4 run_main_loop()+1005809672: common/board_r.c, line 675
+ 36 0x3ff73b54 initcall_run_list()+1005809716: lib/initcall.c, line 27
+ 37 0x3ff3c66c board_init_r()+1005809676: common/board_r.c, line 908
+ 38 0x3ff3837c clbss_l()+1005809688: arch/arm/lib/crt0.S, line 174
+ 39 unknown-pc
+</code></pre>
+                </div>
+            </li>
+</ol>
+
+    </div>
+
+</article></main></div>
+                        
+                        <div class=" wh_related_links "><nav role="navigation" class="related-links"><div class="linklist linklist relinfo relconcepts"><strong>Related concepts</strong><br /><div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/sdk_c_debug_run_configuration.html" title="Launch Configurations">Launch Configurations</a></div><div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_viewing_mem_contents.html" title="Viewing Memory Contents">Viewing Memory Contents</a></div><div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_viewing_IP_register_details.html" title="Viewing IP Register Details">Viewing IP Register Details</a></div><div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_osawaredebug.html" title="OS Aware Debugging">OS Aware Debugging</a></div><div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_xen-aware_debug.html" title="Xen Aware Debugging">Xen Aware Debugging</a></div></div><div class="linklist linklist relinfo"><strong>Related information</strong><br /><div class="related_link"><a class="navheader_parent_path" href="../SDK_references/reference_multicable_multidevice.html" title="Multi-Cable and Multi-Device Support">Multi-Cable and Multi-Device Support</a></div></div><div class="linklist linklist relinfo reltasks"><strong>Related tasks</strong><br /><div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_recommend_debug_use.html" title="Recommended Debugger Usage">Recommended Debugger Usage</a></div><div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_target_connections.html" title="Target Connections">Target Connections</a></div><div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_tcf_supported_design_flows.html" title="System Debugger Supported Design Flows">System Debugger Supported Design Flows</a></div><div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_tcf_multiproc_debugging.html" title="Multi-Processor Debugging with System Debugger">Multi-Processor Debugging with System Debugger</a></div><div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_tcf_remote_debug.html" title="Using a Remote Host with System Debugger">Using a Remote Host with System Debugger</a></div></div></nav></div>
+                        
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div> <nav class="navbar navbar-default wh_footer">
+  <div class=" footer-container text-center ">Copyright &copy; 2010-2018 Xilinx Inc.<br/>UG782 (v2018.2) 6 June 2018</div>
+</nav>
+ <!-- Latest compiled and minified JavaScript -->
+        <script src="../oxygen-webhelp/resources/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="../oxygen-webhelp/template/resources/js/wt_default.js" type="text/javascript"></script>
+        <!-- Expand/collapse support -->
+        <script src="../oxygen-webhelp/template/resources/js/wt_expand.js" type="text/javascript"></script>
+        
+    </body>
+</html>

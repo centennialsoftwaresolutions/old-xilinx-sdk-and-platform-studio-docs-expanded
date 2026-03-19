@@ -1,0 +1,213 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" xml:lang="en" lang="en">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="description" content="You can create a C or C++ standalone application project by using the New Application Project wizard. To create a project: Click File &gt; New &gt; Application Project . The New Application Project dialog ..." /><meta name="copyright" content="(C) Copyright 2018" /><meta name="DC.rights.owner" content="(C) Copyright 2018" /><meta name="DC.Type" content="task" /><meta name="DC.Title" content="Creating a Standalone Application Project" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/sdk_c_projects.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_create_new_linux_appln.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/task_create_user_template_app.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_references/sdk_u_zynq_dram.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_tasks/sdk_t_opencv_template.html" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.tutorial" /><meta name="dictionary_reference" content="com.ibm.eou.tmtool.domainDictionary.core" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.cshelp" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.messaging" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.taxonomyContributions" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.troubleshooting" /><meta name="vis_node" content="com.ibm.ut.ditamap.domainDictionary.dita.concept" /><meta name="vis_labels" content="com.ibm.eou.tmtool.domainAttribute.core.name" /><meta name="vis_zoom" content="2" /><meta name="vis_view" content="com.ibm.eou.tmtool.representation.outline" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="sdk_t_create_new_appln" /><meta name="DC.Language" content="en" /><title>Creating a Standalone Application Project</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style type="text/css">
+		<!--
+		BODY { 
+		  margin: 0px; 
+		}
+		-->
+		<!--
+		img.banner{ 
+		width: 550px;
+		height: 106px;
+		background-image: url('./oxygen-webhelp/template/resources/images/sdsoc_header.png');
+		background-repeat:no-repeat;
+		text-align: left;
+		}
+		@media (max-width: 100em) {
+		img.banner {
+		visibility:hidden;
+		}
+		} -->
+		</style>			
+      <script>
+          function debug(msg, object){
+              console.log(msg, object);
+          }
+          function executeQuery(){
+              $('#searchForm').submit();
+              return true;
+          }
+      </script>
+      
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css" />
+          
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_responsive_topic.css" />
+          
+        <!-- Latest compiled and minified Bootstrap CSS -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/bootstrap/css/bootstrap.min.css" />
+
+        <!-- Bootstrap Optional theme -->
+        <link rel="stylesheet" href="../oxygen-webhelp/resources/bootstrap/css/bootstrap-theme.min.css" />
+
+        <!-- Changes and comments, as side-notes  -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/p-side-notes.css" />
+
+
+        <!-- Template default styles  -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/resources/css/wt_default.css" />
+        
+        <!-- Expand-collapse support styles  -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/resources/css/wt_expand.css" />
+        
+
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/localization/strings.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/localization.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/parseuri.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script>
+        <!-- Skin resources -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/variants/tree/SDK/skin.css" />
+        <!-- EXM-36950 - Expand the args.hdf parameter here -->
+        
+        
+    </head>
+
+    <body onload="highlightSearchTerm()" class="wh_topic_page frmBody" id="sdk_t_create_new_appln">
+        <!-- EXM-36950 - Expand the args.hdr parameter here -->
+        
+        
+        <!-- &header; -->
+		<div class="top_header">
+		<div class=" wh_publication_title "><a href="../index.html"><span class="title">Using Xilinx SDK</span></a></div></div> 		
+        <hr />			
+        <div class=" wh_search_input "><form id="searchForm" method="get" action="../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" /><button type="submit" class="wh_search_button"><span>Search</span></button></div></form></div>
+      
+        <div class="container">
+            <div class="row">
+
+                <nav class="wh_tools hidden-print">
+                    <div class=" wh_breadcrumb "><ol class="hidden-print"><li><span class="home"><a href="../index.html"><span>Home</span></a></span></li><li><span class="topicref"><a href="../SDK_tasks/sdk_o_project_creation.html">Working with Projects</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_projects.html">SDK Application Projects</a></span></li><li class="active"><span class="topicref">Creating a Standalone Application Project</span></li></ol></div>
+
+                    <div class="wh_right_tools hidden-sm hidden-xs">
+                        <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  </span></div>
+						<!--<a href="javascript:var url = window.location.toString();window.location = url.replace(/www.xilinx.com/, 'japan.xilinx.com');" title="View page in Japanese" class="glyphicon glyphicon-globe"></a>-->
+                        <div class=" wh_print_link print "><a href="javascript:window.print();" title="Print this page"></a></div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="wh_content_area">
+					<div class="row">
+                    <nav role="navigation" class="col-lg-4 col-md-4 col-sm-4 col-xs-12 navbar" id="wh_side_toc">
+                        <div class=" wh_side_toc "><ul class="hidden-print"><li><span class="topicref"><a href="../sdk_getting_started/sdk_getting_started.html#sdk_getting_started">Getting Started with Xilinx SDK</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_hwcomponents.html">Embedded Hardware Components</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_hwspec.html">Hardware Platform Specification</a></span></li><li><span class="topicref"><a href="../SDK_tasks/sdk_o_project_creation.html">Working with Projects</a></span><ul class="nav nav-list"><li><span class="topicref"><a href="../SDK_concepts/sdk_c_projects.html">SDK Application Projects</a></span><ul class="nav nav-list"><li class="active"><span class="topicref">Creating a Standalone Application Project</span></li><li><span class="topicref"><a href="../SDK_tasks/sdk_t_create_new_linux_appln.html">Creating a Linux Application Project</a></span></li><li><span class="topicref"><a href="../SDK_tasks/task_create_user_template_app.html">Creating a User Template Application</a></span></li><li><span class="topicref"><a href="../SDK_references/sdk_u_zynq_dram.html">Zynq DRAM Diagnostics Test</a></span></li><li><span class="topicref"><a href="../SDK_tasks/sdk_t_opencv_template.html">Using the OpenCV Template Application</a></span></li></ul></li><li><span class="topicref"><a href="../SDK_tasks/sdk_t_create_new_libproj.html">Creating a Library Project</a></span></li><li><span class="topicref"><a href="../SDK_tasks/Using_custom_libraries.html">Using Custom Libraries in Application Projects</a></span></li><li><span class="topicref"><a href="../SDK_tasks/sdk_t_create_zynq_boot_image.html">Creating a Zynq Boot Image for an Application</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_autosyncofswprojects.html">Auto-Synchronizing Software Projects</a></span></li><li><span class="topicref"><a href="../SDK_tasks/sdk_t_retarget_another_project.html">Re-Targeting a Software Project</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_project_filtering.html">Filtering Projects</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_build.html">Building Projects</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_over_dbg.html">Debugging Projects</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_over_run.html">Running Projects</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_o_share.html">Sharing and Archiving Software Projects</a></span></li></ul></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_bsp_internal.html">Board Support Packages (SDK)</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_Xilinxsystemdebugger.html">Working with XSDB</a></span></li><li><span class="topicref"><a href="../xsct/intro/xsct_introduction.html">Working with XSCT</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_over_profile.html">Software Profiling</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_performance_analysis.html">Performance Analysis</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_whatsnew.html">What’s New in Xilinx SDK v2018.2</a></span></li><li><span class="topicref"><a href="../SDK_references/reference_limitations_faqs.html">Limitations, Known Issues and FAQs</a></span></li><li><span class="topicref"><a href="../book/SDK_book_legal.html">Please Read: Important Legal Notices</a></span></li></ul></div>
+                    </nav> 					
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="sdk_t_create_new_appln__bd294539">
+
+<h1 class="title topictitle1" id="sdk_t_create_new_appln__bd294539">Creating a Standalone Application Project</h1>
+
+<div class="body taskbody"><section class="section context">
+<p class="p">You can create a C or C++ standalone application project by using the <span class="ph uicontrol">New Application
+          Project</span> wizard.</p>
+
+<p class="p">To create a project:</p>
+
+</section>
+<ol class="ol steps"><li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">File &gt; New &gt; Application Project</strong>. The New Application
+                    Project dialog box appears.</span>
+                <div class="itemgroup info">
+                    <div class="note note"><span class="notetitle">Note:</span>  This is equivalent to clicking on <strong class="ph b">File &gt; New &gt; Project</strong> to
+                        open the New Project wizard, selecting <strong class="ph b">Xilinx &gt; Application
+                            Project</strong>, and clicking <strong class="ph b">Next. </strong></div>
+
+                    <br /><img class="image" src="../images/sdk_t_create_new_appln-1.png" height="693" width="524" /><br />
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Type a project name into the <strong class="ph b">Project Name</strong> field.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select the location for the project. You can use the default location as
+                    displayed in the <strong class="ph b">Location</strong> field by leaving the <strong class="ph b">Use default
+                        location</strong> check box selected. Otherwise, click the check box and type or
+                    browse to the directory location.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">The <strong class="ph b">OS Platform</strong> allows you to select which operating system you will be
+                    writing code for. Select <strong class="ph b">standalone</strong>.</span>
+                <div class="itemgroup info"><div class="note note"><span class="notetitle">Note:</span> This selection alters what templates
+                    you view in the next screen and what supporting code is provided in your
+                    project.</div>
+</div>
+            </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Select the <strong class="ph b">Hardware Platform</strong> XML or HDF file, if it was not specified
+          earlier.</span>
+        <div class="itemgroup info">If you have not build hardware yet, you can select one of the pre-defined platforms
+          from the drop-down. Alternatively, you can drag and drop an existing hardware
+          specification XML/HDF file or search for one by clicking the <strong class="ph b">New</strong> button and create
+          a new hardware project. After completing the new hardware project creation, you are
+          returned to the <strong class="ph b">New Application Project</strong> dialog box.</div>
+      </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">From the <strong class="ph b">Processor</strong> drop-down list, select the processor for which you
+                    want to build the application. This is an important step when there are multiple
+                    processors in your design such as any Zynq® PS.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select your preferred language: <strong class="ph b">C</strong>or <strong class="ph b">C++</strong>.</span>
+            </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Select the compiler: <span class="ph uicontrol">64-bit</span> or
+          <span class="ph uicontrol">32-bit</span>.</span>
+      </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select a Board Support Package. You can select to create a new customizable BSP
+                    for this application, or you can select an existing BSP.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">Next</strong> to advance to the <strong class="ph b">Templates</strong> screen.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">SDK provides useful sample applications listed in <strong class="ph b">Templates</strong> dialog box
+                    that you can use to create your project. The <strong class="ph b">Description</strong> box displays a
+                    brief description of the selected sample application. When you use a sample
+                    application for your project, SDK creates the required source and header files
+                    and linker script.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select the desired template. If you want to create a blank project, select
+                        the<strong class="ph b"> Empty Application.</strong> You can then add C files to the project, after
+                    the project is created.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">Finish</strong> to create your application project and board support
+                    package (if it does not exist).</span>
+                <div class="itemgroup info">
+                    <div class="note note"><span class="notetitle">Note:</span> Xilinx recommends that you use Managed Make flow rather than Standard Make
+                        C/C++ unless you are comfortable working with make files.</div>
+
+                </div>
+            </li>
+</ol>
+
+</div>
+</article></main></div>
+                        
+                        <div class=" wh_related_links "><nav role="navigation" class="related-links"><div class="linklist linklist relinfo"><strong>Related information</strong><br /><div class="related_link"><a class="navheader_parent_path" href="../SDK_references/sdk_u_zynq_dram.html" title="Zynq DRAM Diagnostics Test">Zynq DRAM Diagnostics Test</a></div></div><div class="linklist linklist relinfo reltasks"><strong>Related tasks</strong><br /><div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_create_new_linux_appln.html" title="Creating a Linux Application Project">Creating a Linux Application Project</a></div><div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/task_create_user_template_app.html" title="Creating a User Template Application">Creating a User Template Application</a></div><div class="related_link"><a class="navheader_parent_path" href="../SDK_tasks/sdk_t_opencv_template.html" title="Using the OpenCV Template Application">Using the OpenCV Template Application</a></div></div></nav></div>
+                        
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div> <nav class="navbar navbar-default wh_footer">
+  <div class=" footer-container text-center ">Copyright &copy; 2010-2018 Xilinx Inc.<br/>UG782 (v2018.2) 6 June 2018</div>
+</nav>
+ <!-- Latest compiled and minified JavaScript -->
+        <script src="../oxygen-webhelp/resources/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="../oxygen-webhelp/template/resources/js/wt_default.js" type="text/javascript"></script>
+        <!-- Expand/collapse support -->
+        <script src="../oxygen-webhelp/template/resources/js/wt_expand.js" type="text/javascript"></script>
+        
+    </body>
+</html>
