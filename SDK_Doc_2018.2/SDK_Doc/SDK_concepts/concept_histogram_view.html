@@ -1,0 +1,323 @@
+﻿
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" xml:lang="en-us" lang="en-us">
+    <head><meta name="robots" content="noindex, nofollow" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />        
+      <meta name="copyright" content="(C) Copyright 2018" /><meta name="DC.rights.owner" content="(C) Copyright 2018" /><meta name="DC.Type" content="concept" /><meta name="DC.Title" content="Histogram View" /><meta name="abstract" content="" /><meta name="description" content="The Histogram View displays the trace events (counters data) distribution with respect to time. When performance analysis is running, this view is dynamically updated as the events are received. The ..." /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_working_with_performance_analysis_perspective.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_project_explorer_view.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_events_editor.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_colors_view.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_filters_view.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_time_chart_view.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_analysis_view.html" /><meta name="DC.Relation" scheme="URI" content="../SDK_concepts/concept_performance_session_mngr.html" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.tutorial" /><meta name="dictionary_reference" content="com.ibm.eou.tmtool.domainDictionary.core" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.cshelp" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.messaging" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.taxonomyContributions" /><meta name="dictionary_reference" content="com.ibm.ut.ditamap.domainDictionary.dita.troubleshooting" /><meta name="vis_node" content="com.ibm.ut.ditamap.domainDictionary.dita.concept" /><meta name="vis_labels" content="com.ibm.eou.tmtool.domainAttribute.core.name" /><meta name="vis_zoom" content="2" /><meta name="vis_view" content="com.ibm.eou.tmtool.representation.outline" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="concept_afm_zt3_ht" /><title>Histogram View</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style type="text/css">
+		<!--
+		BODY { 
+		  margin: 0px; 
+		}
+		-->
+		<!--
+		img.banner{ 
+		width: 550px;
+		height: 106px;
+		background-image: url('./oxygen-webhelp/template/resources/images/sdsoc_header.png');
+		background-repeat:no-repeat;
+		text-align: left;
+		}
+		@media (max-width: 100em) {
+		img.banner {
+		visibility:hidden;
+		}
+		} -->
+		</style>			
+      <script>
+          function debug(msg, object){
+              console.log(msg, object);
+          }
+          function executeQuery(){
+              $('#searchForm').submit();
+              return true;
+          }
+      </script>
+      
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css" />
+          
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_responsive_topic.css" />
+          
+        <!-- Latest compiled and minified Bootstrap CSS -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/bootstrap/css/bootstrap.min.css" />
+
+        <!-- Bootstrap Optional theme -->
+        <link rel="stylesheet" href="../oxygen-webhelp/resources/bootstrap/css/bootstrap-theme.min.css" />
+
+        <!-- Changes and comments, as side-notes  -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/p-side-notes.css" />
+
+
+        <!-- Template default styles  -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/resources/css/wt_default.css" />
+        
+        <!-- Expand-collapse support styles  -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/resources/css/wt_expand.css" />
+        
+
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/localization/strings.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/localization.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/parseuri.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script>
+        <!-- Skin resources -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/variants/tree/SDK/skin.css" />
+        <!-- EXM-36950 - Expand the args.hdf parameter here -->
+        
+        
+    </head>
+
+    <body onload="highlightSearchTerm()" class="wh_topic_page frmBody" id="concept_afm_zt3_ht">
+        <!-- EXM-36950 - Expand the args.hdr parameter here -->
+        
+        
+        <!-- &header; -->
+		<div class="top_header">
+		<div class=" wh_publication_title "><a href="../index.html"><span class="title">Using Xilinx SDK</span></a></div></div> 		
+        <hr />			
+        <div class=" wh_search_input "><form id="searchForm" method="get" action="../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" /><button type="submit" class="wh_search_button"><span>Search</span></button></div></form></div>
+      
+        <div class="container">
+            <div class="row">
+
+                <nav class="wh_tools hidden-print">
+                    <div class=" wh_breadcrumb "><ol class="hidden-print"><li><span class="home"><a href="../index.html"><span>Home</span></a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_performance_analysis.html">Performance Analysis</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_working_with_performance_analysis_perspective.html">Working with Performance Analysis Perspective</a></span></li><li class="active"><span class="topicref">Histogram View</span></li></ol></div>
+
+                    <div class="wh_right_tools hidden-sm hidden-xs">
+                        <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  </span></div>
+						<!--<a href="javascript:var url = window.location.toString();window.location = url.replace(/www.xilinx.com/, 'japan.xilinx.com');" title="View page in Japanese" class="glyphicon glyphicon-globe"></a>-->
+                        <div class=" wh_print_link print "><a href="javascript:window.print();" title="Print this page"></a></div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="wh_content_area">
+					<div class="row">
+                    <nav role="navigation" class="col-lg-4 col-md-4 col-sm-4 col-xs-12 navbar" id="wh_side_toc">
+                        <div class=" wh_side_toc "><ul class="hidden-print"><li><span class="topicref"><a href="../sdk_getting_started/sdk_getting_started.html#sdk_getting_started">Getting Started with Xilinx SDK</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_hwcomponents.html">Embedded Hardware Components</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_hwspec.html">Hardware Platform Specification</a></span></li><li><span class="topicref"><a href="../SDK_tasks/sdk_o_project_creation.html">Working with Projects</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_bsp_internal.html">Board Support Packages (SDK)</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_Xilinxsystemdebugger.html">Working with XSDB</a></span></li><li><span class="topicref"><a href="../xsct/intro/xsct_introduction.html">Working with XSCT</a></span></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_over_profile.html">Software Profiling</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_performance_analysis.html">Performance Analysis</a></span><ul class="nav nav-list"><li><span class="topicref"><a href="../SDK_concepts/concept_working_with_performance_analysis_perspective.html">Working with Performance Analysis Perspective</a></span><ul class="nav nav-list"><li><span class="topicref"><a href="../SDK_concepts/concept_project_explorer_view.html">Project Explorer View</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_events_editor.html">Events Editor</a></span></li><li class="active"><span class="topicref">Histogram View</span></li><li><span class="topicref"><a href="../SDK_concepts/concept_colors_view.html">Colors View</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_filters_view.html">Filters View</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_time_chart_view.html">Time Chart View</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_analysis_view.html">Analysis Views</a></span></li><li><span class="topicref"><a href="../SDK_concepts/concept_performance_session_mngr.html">Performance Session Manager</a></span></li></ul></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_spm_over_spm.html">System Performance Modeling</a></span></li></ul></li><li><span class="topicref"><a href="../SDK_concepts/sdk_c_whatsnew.html">What’s New in Xilinx SDK v2018.2</a></span></li><li><span class="topicref"><a href="../SDK_references/reference_limitations_faqs.html">Limitations, Known Issues and FAQs</a></span></li><li><span class="topicref"><a href="../book/SDK_book_legal.html">Please Read: Important Legal Notices</a></span></li></ul></div>
+                    </nav> 					
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+ <h1 class="title topictitle1" id="ariaid-title1">Histogram View</h1>
+
+ 
+ <div class="body conbody"><p class="shortdesc"></p>
+
+  <p class="p">The Histogram View displays the trace events (counters data) distribution with respect to time. When performance analysis is running, this view is dynamically updated as the events are received.</p>
+
+  <br /><img class="image" id="concept_afm_zt3_ht__image_sn4_c53_ht" src="../images/histogram_view.png" height="106" width="638" /><br />
+  <p class="p" id="concept_afm_zt3_ht__p_ugb_d53_ht">The controls on the view are described in the table below.</p>
+
+  
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="concept_afm_zt3_ht__table_uvb_f53_ht" class="table" frame="border" border="1" rules="all"><colgroup><col style="width:50%" /><col style="width:50%" /></colgroup><thead class="thead" style="text-align:left;">
+     <tr>
+      <th class="entry cellrowborder" id="d8248e49">Control</th>
+
+      <th class="entry cellrowborder" id="d8248e52">Description</th>
+
+     </tr>
+
+    </thead>
+<tbody class="tbody">
+     <tr>
+      <td class="entry cellrowborder" headers="d8248e49 ">Selection Start</td>
+
+      <td class="entry cellrowborder" headers="d8248e52 ">Displays the start time of the current selection</td>
+
+     </tr>
+
+     <tr>
+      <td class="entry cellrowborder" headers="d8248e49 ">Selection End</td>
+
+      <td class="entry cellrowborder" headers="d8248e52 ">Displays the end time of the current selection</td>
+
+     </tr>
+
+     <tr>
+      <td class="entry cellrowborder" headers="d8248e49 ">Window Span</td>
+
+      <td class="entry cellrowborder" headers="d8248e52 ">Displays the current zoom window size in seconds</td>
+
+     </tr>
+
+    </tbody>
+</table>
+</div>
+
+  <p class="p" id="concept_afm_zt3_ht__p_jrx_353_ht">The controls can be used to modify their respective value. After validation, the other controls and views will be synchronized and updated accordingly. To modify both selection times simultaneously, press the <span class="ph uicontrol">link</span> icon which disables the <span class="ph uicontrol">Selection End</span> control input.</p>
+
+  <p class="p" id="concept_afm_zt3_ht__p_f2h_m53_ht">The large (full) histogram, at the bottom, shows the event distribution over the trace. It also has a smaller semi-transparent orange window, with a cross-hair, that shows the current zoom window.</p>
+
+  <p class="p" id="concept_afm_zt3_ht__p_g2h_m53_ht">The smaller (zoom) histogram, on top right, corresponds to the current zoom window, a sub-range of the event set.</p>
+
+  <p class="p" id="concept_afm_zt3_ht__p_h2h_m53_ht">The x-axis of each histogram corresponds to the event timestamps. The start time and end time of the histogram range is displayed. The y-axis shows the maximum number of events in the corresponding histogram bars.</p>
+
+  <p class="p" id="concept_afm_zt3_ht__p_i2h_m53_ht">The vertical blue line(s) show the current selection time (or range). If applicable, the region in the selection range will be shaded.</p>
+
+  <p class="p" id="concept_afm_zt3_ht__p_tpf_n53_ht">The table below lists the mouse actions that can be used to control the histogram.</p>
+
+  
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="concept_afm_zt3_ht__table_cjw_453_ht" class="table" frame="border" border="1" rules="all"><colgroup><col style="width:50%" /><col style="width:50%" /></colgroup><thead class="thead" style="text-align:left;">
+     <tr>
+      <th class="entry cellrowborder" id="d8248e126">Mouse Action</th>
+
+      <th class="entry cellrowborder" id="d8248e129">Action Performed</th>
+
+     </tr>
+
+    </thead>
+<tbody class="tbody">
+     <tr>
+      <td class="entry cellrowborder" headers="d8248e126 ">Left-click</td>
+
+      <td class="entry cellrowborder" headers="d8248e129 ">Sets a selection time</td>
+
+     </tr>
+
+     <tr>
+      <td class="entry cellrowborder" headers="d8248e126 ">Left-drag</td>
+
+      <td class="entry cellrowborder" headers="d8248e129 ">Sets a selection range</td>
+
+     </tr>
+
+     <tr>
+      <td class="entry cellrowborder" headers="d8248e126 ">Shift+Left-click or drag</td>
+
+      <td class="entry cellrowborder" headers="d8248e129 ">Extend or shrink the selection range</td>
+
+     </tr>
+
+     <tr>
+      <td class="entry cellrowborder" headers="d8248e126 ">Middle-click or CTRL+Left-click</td>
+
+      <td class="entry cellrowborder" headers="d8248e129 ">Centers the zoom window</td>
+
+     </tr>
+
+     <tr>
+      <td class="entry cellrowborder" headers="d8248e126 ">Middle-drag or CTRL+left-drag</td>
+
+      <td class="entry cellrowborder" headers="d8248e129 ">Moves the zoom window</td>
+
+     </tr>
+
+     <tr>
+      <td class="entry cellrowborder" headers="d8248e126 ">Right-drag</td>
+
+      <td class="entry cellrowborder" headers="d8248e129 ">Sets the zoom window</td>
+
+     </tr>
+
+     <tr>
+      <td class="entry cellrowborder" headers="d8248e126 ">SHIFT+Right-click or drag</td>
+
+      <td class="entry cellrowborder" headers="d8248e129 ">Extend or shrink the zoom window</td>
+
+     </tr>
+
+     <tr>
+      <td class="entry cellrowborder" headers="d8248e126 ">Mouse wheel up</td>
+
+      <td class="entry cellrowborder" headers="d8248e129 ">Zoom in</td>
+
+     </tr>
+
+     <tr>
+      <td class="entry cellrowborder" headers="d8248e126 ">Mouse wheel dowm</td>
+
+      <td class="entry cellrowborder" headers="d8248e129 ">Zoom out</td>
+
+     </tr>
+
+    </tbody>
+</table>
+</div>
+
+  <p class="p" id="concept_afm_zt3_ht__p_fvh_2v3_ht">Hovering the mouse over an histogram bar pops up an information window that displays the start/end time of the corresponding bar, as well as the number of events it represents. If the mouse is over the selection range, the selection span in seconds is displayed.</p>
+
+  <p class="p" id="concept_afm_zt3_ht__p_esn_gv3_ht">The table below lists the keys and the action performed when they are used in the <span class="ph uicontrol">Histogram</span> view.</p>
+
+  
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="concept_afm_zt3_ht__table_dvc_kv3_ht" class="table" frame="border" border="1" rules="all"><colgroup><col style="width:50%" /><col style="width:50%" /></colgroup><thead class="thead" style="text-align:left;">
+     <tr>
+      <th class="entry cellrowborder" id="d8248e243">Key</th>
+
+      <th class="entry cellrowborder" id="d8248e246">Action Performed</th>
+
+     </tr>
+
+    </thead>
+<tbody class="tbody">
+     <tr>
+      <td class="entry cellrowborder" headers="d8248e243 ">Left Arrow</td>
+
+      <td class="entry cellrowborder" headers="d8248e246 ">Moves the current event to the previous non-empty bar.</td>
+
+     </tr>
+
+     <tr>
+      <td class="entry cellrowborder" headers="d8248e243 ">Right Arrow</td>
+
+      <td class="entry cellrowborder" headers="d8248e246 ">Moves the current event to the next non-empty bar.</td>
+
+     </tr>
+
+     <tr>
+      <td class="entry cellrowborder" headers="d8248e243 ">Home</td>
+
+      <td class="entry cellrowborder" headers="d8248e246 ">Sets the current time to the first non-empty bar.</td>
+
+     </tr>
+
+     <tr>
+      <td class="entry cellrowborder" headers="d8248e243 ">End</td>
+
+      <td class="entry cellrowborder" headers="d8248e246 ">Sets the current time to the last non-empty histogram bar.</td>
+
+     </tr>
+
+     <tr>
+      <td class="entry cellrowborder" headers="d8248e243 ">Plus (+)</td>
+
+      <td class="entry cellrowborder" headers="d8248e246 ">Zoom in</td>
+
+     </tr>
+
+     <tr>
+      <td class="entry cellrowborder" headers="d8248e243 ">Minus (-)</td>
+
+      <td class="entry cellrowborder" headers="d8248e246 ">Zoom out</td>
+
+     </tr>
+
+    </tbody>
+</table>
+</div>
+
+ </div>
+
+</article></main></div>
+                        
+                        <div class=" wh_related_links "><nav role="navigation" class="related-links"><div class="linklist linklist relinfo relconcepts"><strong>Related concepts</strong><br /><div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_project_explorer_view.html" title="Project Explorer View">Project Explorer View</a></div><div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_events_editor.html" title="Events Editor">Events Editor</a></div><div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_colors_view.html" title="Colors View">Colors View</a></div><div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_filters_view.html" title="Filters View">Filters View</a></div><div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_time_chart_view.html" title="Time Chart View">Time Chart View</a></div><div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_analysis_view.html" title="Analysis Views">Analysis Views</a></div><div class="related_link"><a class="navheader_parent_path" href="../SDK_concepts/concept_performance_session_mngr.html" title="Performance Session Manager">Performance Session Manager</a></div></div></nav></div>
+                        
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div> <nav class="navbar navbar-default wh_footer">
+  <div class=" footer-container text-center ">Copyright &copy; 2010-2018 Xilinx Inc.<br/>UG782 (v2018.2) 6 June 2018</div>
+</nav>
+ <!-- Latest compiled and minified JavaScript -->
+        <script src="../oxygen-webhelp/resources/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="../oxygen-webhelp/template/resources/js/wt_default.js" type="text/javascript"></script>
+        <!-- Expand/collapse support -->
+        <script src="../oxygen-webhelp/template/resources/js/wt_expand.js" type="text/javascript"></script>
+        
+    </body>
+</html>
