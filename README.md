@@ -52,7 +52,7 @@ Provides searchable access to legacy Xilinx SDK and Platform Studio documentatio
 - [SDK_Doc_2017.1](SDK_Doc_2017.1/SDK_Doc)
 - [SDK_Doc_2017.2](SDK_Doc_2017.2/SDK_Doc)
 - [SDK_Doc_2017.3](SDK_Doc_2017.3/SDK_Doc)
-- [SDK_Doc_2017.4_Apr](SDK_Doc_2017.3.Apr/SDK_Doc)
+- [SDK_Doc_2017.4_Apr](SDK_Doc_2017.4.Apr/SDK_Doc)
 
 # Why?
 
